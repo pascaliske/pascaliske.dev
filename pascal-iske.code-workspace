@@ -1,0 +1,22 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "./src/app/components"
+        },
+        {
+            "path": "./src/app/pages"
+        },
+        {
+            "path": "./src/app/services"
+        }
+    ],
+    "settings": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "tslint.autoFixOnSave": true
+    }
+}

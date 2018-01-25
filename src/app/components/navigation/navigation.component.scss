@@ -1,0 +1,6 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-navigation';
+
+@include cmp-base($component) {
+}
