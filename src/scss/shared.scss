@@ -12,4 +12,6 @@
 @import 'mixins/component';
 
 // external libraries
+@import '../../node_modules/normalize-scss/sass/normalize';
 @import '../../node_modules/susy/sass/susy';
+@import '../../node_modules/font-awesome/scss/font-awesome'
