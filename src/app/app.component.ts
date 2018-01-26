@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Title } from '@angular/platform-browser'
 
 @Component({
     selector: 'cmp-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core'
 })
 export class AppComponent {
     public title = 'cmp'
+
+    public constructor(private titleService: Title) {}
+
+    public setTitle(title: string) {
+        this.titleService.setTitle(title)
+    }
 }

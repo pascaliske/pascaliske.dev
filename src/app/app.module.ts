@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
+import { BrowserModule, Title } from '@angular/platform-browser'
 import { ServiceWorkerModule } from '@angular/service-worker'
 
 import { environment } from '../environments/environment'
@@ -19,7 +19,7 @@ import { AboutPageModule } from './pages/about-page/about-page.module'
         HomePageModule,
         AboutPageModule
     ],
-    providers: [],
+    providers: [Title],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
