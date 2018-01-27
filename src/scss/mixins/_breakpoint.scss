@@ -1,5 +1,10 @@
 @mixin use-breakpoint($name) {
-    $breakpoints: ( phablet: 320px, tablet: 768px, desktop: 1024px ) !default;
+    $breakpoints: (
+        desktop: 1280px,
+        tablet: 1024px,
+        mini-tablet: 768px,
+        phablet: 320px,
+    ) !default;
 
     @if map-has-key($breakpoints, $name) {
         @media (min-width: map-get($breakpoints, $name)) {
