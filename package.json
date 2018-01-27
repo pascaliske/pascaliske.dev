@@ -29,6 +29,7 @@
     "core-js": "^2.4.1",
     "decko": "^1.2.0",
     "font-awesome": "^4.7.0",
+    "intersection-observer": "^0.5.0",
     "normalize-scss": "^7.0.0",
     "rxjs": "^5.5.6",
     "susy": "^3.0.2",
