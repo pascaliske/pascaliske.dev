@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, HostListener } from '@angular/core'
 import { Title } from '@angular/platform-browser'
+import { BreakpointService } from './services/breakpoint/breakpoint.service'
 
 @Component({
     selector: 'cmp-root',
@@ -9,9 +10,14 @@ import { Title } from '@angular/platform-browser'
 export class AppComponent {
     public title = 'cmp'
 
-    public constructor(private titleService: Title) {}
+    public constructor(private titleService: Title, private breakpointService: BreakpointService) {}
 
     public setTitle(title: string) {
         this.titleService.setTitle(title)
+    }
+
+    @HostListener('window:resize', ['$event'])
+    public onResize(event): void {
+        this.breakpointService.handleResize(event)
     }
 }

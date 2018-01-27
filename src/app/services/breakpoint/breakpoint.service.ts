@@ -1,0 +1,156 @@
+import { Injectable, EventEmitter } from '@angular/core'
+import { debounce } from 'decko'
+
+export interface Breakpoint {
+    id: string
+    start?: number
+    end?: number
+}
+
+export enum Breakpoints {
+    DESKTOP = 'desktop',
+    TABLET = 'tablet',
+    MINI_TABLET = 'mini-tablet',
+    PHABLET = 'phablet',
+    MOBILE = 'mobile'
+}
+
+export interface ResizeState {
+    width: number
+    height: number
+}
+
+@Injectable()
+export class BreakpointService {
+    private readonly breakpoints: Array<Breakpoint> = []
+    private current: Breakpoint
+    public resizeChange: EventEmitter<ResizeState> = new EventEmitter()
+    public breakpointChange: EventEmitter<Breakpoint> = new EventEmitter()
+
+    /**
+     * Initializes the breakpoint service.
+     *
+     * @returns {BreakpointService}
+     */
+    public constructor() {
+        this.breakpoints.push({
+            id: Breakpoints.DESKTOP,
+            start: 1280
+        })
+        this.breakpoints.push({
+            id: Breakpoints.TABLET,
+            start: 1024,
+            end: 1279
+        })
+        this.breakpoints.push({
+            id: Breakpoints.MINI_TABLET,
+            start: 768,
+            end: 1023
+        })
+        this.breakpoints.push({
+            id: Breakpoints.PHABLET,
+            start: 320,
+            end: 767
+        })
+        this.breakpoints.push({
+            id: Breakpoints.MOBILE,
+            end: 320
+        })
+
+        this.current = this.fetchBreakpoint()
+    }
+
+    /**
+     * Fetches the current breakpoint
+     *
+     * @returns {Breakpoint}
+     */
+    private fetchBreakpoint(): Breakpoint {
+        // match the breakpoints against window dimensions
+        for (const item of this.breakpoints) {
+            const query: Array<string> = []
+
+            if (item.start) {
+                query.push(`(min-width: ${item.start}px)`)
+            }
+
+            if (item.end) {
+                query.push(`(max-width: ${item.end}px)`)
+            }
+
+            if (window.matchMedia && window.matchMedia(query.join(' and ')).matches) {
+                return item
+            }
+        }
+    }
+
+    /**
+     * Handles the browsers resize event and emits the correct breakpoint events.
+     *
+     * @param {Event} event - The browser resize event.
+     * @returns {void}
+     */
+    @debounce(100)
+    public handleResize(event: Event): void {
+        const current: Breakpoint = this.fetchBreakpoint()
+        const dimensions: ResizeState = {
+            height: document.documentElement.clientHeight,
+            width: window.innerWidth
+        }
+
+        // did the breakpoint change also?
+        if (this.current !== current) {
+            this.current = current
+
+            // this.log.info('[BreakpointService] - breakpoint changed', this.current)
+            this.breakpointChange.emit(this.current)
+        }
+
+        // this.log.info('[BreakpointService] - resized', dimensions)
+        this.resizeChange.emit(dimensions)
+    }
+
+    /**
+     * Checks if we are on a mobile device right now.
+     *
+     * @returns {boolean}
+     */
+    public isMobile(): boolean {
+        // tslint:disable-next-line:max-line-length
+        const regex = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i
+
+        if (regex.test(navigator.userAgent)) {
+            return true
+        }
+
+        return false
+    }
+
+    /**
+     * Evaluates if the given breakpoint is larger or same as the current one.
+     *
+     * @param {Breakpoints} id
+     * @returns {boolean}
+     */
+    public isLarger(id: Breakpoints): boolean {
+        if (!this.current) {
+            return false
+        }
+
+        return this.current.start >= this.breakpoints.find(item => item.id === id).start
+    }
+
+    /**
+     * Evaluates if the given breakpoint is equal to the current one.
+     *
+     * @param {Breakpoints} id
+     * @returns {boolean}
+     */
+    public isEqual(id: Breakpoints): boolean {
+        if (!this.current) {
+            return false
+        }
+
+        return this.current >= this.breakpoints.find(item => item.id === id)
+    }
+}

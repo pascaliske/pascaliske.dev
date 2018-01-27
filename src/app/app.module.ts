@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 
+import { BreakpointService } from './services/breakpoint/breakpoint.service'
 @NgModule({
     declarations: [AppComponent],
     imports: [
@@ -19,7 +20,7 @@ import { AboutPageModule } from './pages/about-page/about-page.module'
         HomePageModule,
         AboutPageModule
     ],
-    providers: [Title],
+    providers: [Title, BreakpointService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
