@@ -11,6 +11,8 @@ import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
+import { ScrollService } from './services/scroll/scroll.service'
+
 @NgModule({
     declarations: [AppComponent],
     imports: [
@@ -20,7 +22,7 @@ import { BreakpointService } from './services/breakpoint/breakpoint.service'
         HomePageModule,
         AboutPageModule
     ],
-    providers: [Title, BreakpointService],
+    providers: [Title, BreakpointService, ScrollService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
