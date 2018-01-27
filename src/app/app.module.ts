@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule, Title } from '@angular/platform-browser'
 import { ServiceWorkerModule } from '@angular/service-worker'
+import { HttpClientModule } from '@angular/common/http'
 
 import { environment } from '../environments/environment'
 
@@ -18,6 +19,7 @@ import { ScrollService } from './services/scroll/scroll.service'
     imports: [
         BrowserModule,
         ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+        HttpClientModule,
         AppRoutingModule,
         HomePageModule,
         AboutPageModule
