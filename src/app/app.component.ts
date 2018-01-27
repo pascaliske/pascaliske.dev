@@ -11,6 +11,12 @@ import { ScrollService } from './services/scroll/scroll.service'
 export class AppComponent {
     public title = 'cmp'
 
+    public progress: any = {
+        color: '#2d333d',
+        thick: true,
+        speed: 250
+    }
+
     public constructor(
         private titleService: Title,
         private breakpointService: BreakpointService,
