@@ -1,0 +1,30 @@
+/**
+ * Mixin for injecting font specific styles.
+
+ * Available types are:
+ * - regular
+ * - bold
+ * - light
+ * - italic
+ *
+ * @param {string} $name
+ */
+@mixin use-font($name) {
+    @if $name == regular {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 500;
+    }
+    @else if $name == bold {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 900;
+    }
+    @else if $name == light {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 300;
+    }
+    @else if $name == italic {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
