@@ -1,0 +1,16 @@
+@include normalize();
+
+* {
+    @include use-font(regular);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+}
