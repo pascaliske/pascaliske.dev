@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "cmp",
       "styles": [
-        "scss/styles.scss"
+        "scss/common.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
