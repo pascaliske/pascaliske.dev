@@ -1,0 +1,41 @@
+/**
+ * Font Awesome settings
+ */
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts';
+
+/**
+ * Text styles.
+ *
+ * Available types are:
+ * - regular
+ * - bold
+ * - light
+ * - italic
+ */
+$font-settings: (
+    regular: (
+        font-family: ('Open Sans', Arial, sans-serif),
+        font-weight: 500
+    ),
+    bold: (
+        font-family: ('Open Sans', Arial, sans-serif),
+        font-weight: 900
+    ),
+    light: (
+        font-family: ('Open Sans', Arial, sans-serif),
+        font-weight: 300
+    ),
+    italic: (
+        font-family: ('Open Sans', Arial, sans-serif),
+        font-weight: 400,
+        font-style: italic
+    )
+);
+
+/**
+ * Text styles
+ *
+ * Available types are:
+ * - title
+ */
+$text-settings: ();

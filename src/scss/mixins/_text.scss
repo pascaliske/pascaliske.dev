@@ -1,30 +1,48 @@
 /**
  * Mixin for injecting font specific styles.
-
- * Available types are:
- * - regular
- * - bold
- * - light
- * - italic
  *
  * @param {string} $name
  */
 @mixin use-font($name) {
-    @if $name == regular {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 500;
+    @if (not map-has-key($font-settings, $name)) {
+        @error 'use-font: invalid font setting #{$name}';
     }
-    @else if $name == bold {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 900;
+
+    @include map-as-properties(map-get($font-settings, $name));
+}
+
+/**
+ * Mixin for injecting text specific styles.
+ *
+ * @param {string} $name
+ */
+
+@mixin use-text($name) {
+    @if (not map-has-key($text-settings, $name)) {
+        @error 'use-text : invalid text setting #{$name}';
     }
-    @else if $name == light {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 300;
+
+    $settings: map-get($text-settings, $name);
+    $all-settings: map-get($settings, all);
+
+    @if (map-has-key($all-settings, font-settings)) {
+        @include use-font(map-get($all-settings, font-settings));
     }
-    @else if $name == italic {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-weight: 400;
-        font-style: italic;
+    @include map-as-properties($all-settings, '', font-settings spacing-settings);
+
+    @each $breakpoint-name, $breakpoint in $breakpoint-settings {
+        @if (map-has-key($settings, $breakpoint-name)) {
+            @include use-breakpoint($breakpoint-name) {
+                @include map-as-properties(map-get($settings, $breakpoint-name), '', font-settings spacing-settings);
+            }
+        }
+    }
+
+    @each $breakpoint-name, $properties in $settings {
+        @if (str-slice($breakpoint-name, 0, 6)=='custom') {
+            @include use-breakpoint($breakpoint-name) {
+                @include map-as-properties(map-get($settings, $breakpoint-name), $ignore: (min-width, max-width));
+            }
+        }
     }
 }

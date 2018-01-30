@@ -1,0 +1,41 @@
+@include normalize();
+
+* {
+    @include use-font(regular);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+input,
+textarea {
+    outline: none;
+    background-color: initial;
+    -webkit-appearance: none;
+}
