@@ -4,6 +4,9 @@
             "path": "."
         },
         {
+            "path": "./src/app"
+        },
+        {
             "path": "./src/app/components"
         },
         {
