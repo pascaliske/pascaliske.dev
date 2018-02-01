@@ -23,6 +23,11 @@
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
-        "tslint.autoFixOnSave": true
+        "tslint.autoFixOnSave": true,
+        "[scss]": {
+            "editor.formatOnPaste": false,
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        }
     }
 }
