@@ -1,4 +1,7 @@
 <div class="cmp-header">
-    header works!
-    <cmp-logo></cmp-logo>
+    <div class="cmp-header__wrapper">
+        <cmp-logo class="cmp-header__logo"></cmp-logo>
+        <cmp-headline-h1 class="cmp-header__title" [text]="title"></cmp-headline-h1>
+    </div>
+    <cmp-navigation class="cmp-header__navigation"></cmp-navigation>
 </div>

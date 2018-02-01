@@ -1,2 +1,36 @@
-.cmp-header {
+@import '../../../scss/shared';
+
+$component: 'cmp-header';
+
+@include cmp-base($component) {
+    &__wrapper {
+        width: 100vw;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $color-primary;
+    }
+
+    &__title {
+        color: $color-white1;
+    }
+
+    @include use-breakpoint(mini-tablet) {
+        position: sticky;
+        top: -300px;
+
+        &__wrapper {
+            flex-direction: row;
+        }
+
+        &__logo {
+            margin-right: 20px;
+        }
+
+        &__title {
+            margin-left: 20px;
+        }
+    }
 }
