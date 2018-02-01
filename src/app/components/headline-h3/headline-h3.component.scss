@@ -1,0 +1,6 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-headline-h3';
+
+@include cmp-base($component) {
+}
