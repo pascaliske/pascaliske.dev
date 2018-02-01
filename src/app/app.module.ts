@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { BrowserModule, Title } from '@angular/platform-browser'
+import { BrowserModule } from '@angular/platform-browser'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { HttpClientModule } from '@angular/common/http'
 import { NgProgressModule } from '@ngx-progressbar/core'
@@ -15,7 +15,9 @@ import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
+import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
+import { ViewportService } from './services/viewport/viewport.service'
 
 @NgModule({
     declarations: [AppComponent],
@@ -30,7 +32,7 @@ import { ScrollService } from './services/scroll/scroll.service'
         HomePageModule,
         AboutPageModule
     ],
-    providers: [Title, BreakpointService, ScrollService],
+    providers: [BreakpointService, TitleService, ScrollService, ViewportService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
