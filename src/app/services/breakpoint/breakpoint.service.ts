@@ -1,12 +1,29 @@
 import { Injectable, EventEmitter } from '@angular/core'
 import { debounce } from 'decko'
 
+/**
+ * Interface describing a breakpoint.
+ */
 export interface Breakpoint {
+    /**
+     * The breakpoint id.
+     */
     id: string
+
+    /**
+     * Minimal viewport width of the breakpoint.
+     */
     start?: number
+
+    /**
+     * Maximum viewport width of the breakpoint.
+     */
     end?: number
 }
 
+/**
+ * Enumeration of all available breakpoints.
+ */
 export enum Breakpoints {
     DESKTOP = 'desktop',
     TABLET = 'tablet',
@@ -15,17 +32,56 @@ export enum Breakpoints {
     MOBILE = 'mobile'
 }
 
+/**
+ * Interface describing the current resize state.
+ */
 export interface ResizeState {
+    /**
+     * The current width of the viewport.
+     */
     width: number
+
+    /**
+     * The current height of the viewport.
+     */
     height: number
 }
 
+/**
+ * Injectable service for enabling components to subscribe to breakpoint and resize changes.
+ *
+ * - subscribe `resizeChange` for viewport resize changes, it emits {@link ResizeState}
+ * - subscribe `breakpointChange` for breakpoint changes, it emits {@link Breakpoint}
+ */
 @Injectable()
 export class BreakpointService {
-    private readonly breakpoints: Array<Breakpoint> = []
-    private current: Breakpoint
+    /**
+     * EventEmitter for resize changes, it emits {@link ResizeState}
+     *
+     * @param {EventEmitter<ResizeState>} scrollChange
+     */
     public resizeChange: EventEmitter<ResizeState> = new EventEmitter()
+
+    /**
+     * EventEmitter for breakpoint changes, it emits {@link Breakpoint}
+     *
+     * @param {EventEmitter<Breakpoint>} breakpointChange
+     */
     public breakpointChange: EventEmitter<Breakpoint> = new EventEmitter()
+
+    /**
+     * Array containing all breakpoints and their size values.
+     *
+     * @param {Array<Breakpoint>}
+     */
+    private readonly breakpoints: Array<Breakpoint> = []
+
+    /**
+     * The current breakpoint.
+     *
+     * @param {Breakpoint}
+     */
+    private current: Breakpoint
 
     /**
      * Initializes the breakpoint service.
@@ -57,31 +113,8 @@ export class BreakpointService {
             end: 320
         })
 
-        this.current = this.fetchBreakpoint()
-    }
-
-    /**
-     * Fetches the current breakpoint
-     *
-     * @returns {Breakpoint}
-     */
-    private fetchBreakpoint(): Breakpoint {
-        // match the breakpoints against window dimensions
-        for (const item of this.breakpoints) {
-            const query: Array<string> = []
-
-            if (item.start) {
-                query.push(`(min-width: ${item.start}px)`)
-            }
-
-            if (item.end) {
-                query.push(`(max-width: ${item.end}px)`)
-            }
-
-            if (window.matchMedia && window.matchMedia(query.join(' and ')).matches) {
-                return item
-            }
-        }
+        // fetch current breakpoint
+        this.current = this.determineBreakpoint()
     }
 
     /**
@@ -92,7 +125,7 @@ export class BreakpointService {
      */
     @debounce(100)
     public handleResize(event: Event): void {
-        const current: Breakpoint = this.fetchBreakpoint()
+        const current: Breakpoint = this.determineBreakpoint()
         const dimensions: ResizeState = {
             height: document.documentElement.clientHeight,
             width: window.innerWidth
@@ -152,5 +185,29 @@ export class BreakpointService {
         }
 
         return this.current >= this.breakpoints.find(item => item.id === id)
+    }
+
+    /**
+     * Determines the current breakpoint.
+     *
+     * @returns {Breakpoint}
+     */
+    private determineBreakpoint(): Breakpoint {
+        // match the breakpoints against window dimensions
+        for (const item of this.breakpoints) {
+            const query: Array<string> = []
+
+            if (item.start) {
+                query.push(`(min-width: ${item.start}px)`)
+            }
+
+            if (item.end) {
+                query.push(`(max-width: ${item.end}px)`)
+            }
+
+            if (window.matchMedia && window.matchMedia(query.join(' and ')).matches) {
+                return item
+            }
+        }
     }
 }
