@@ -15,12 +15,16 @@ const routes: Routes = [
             {
                 path: 'about',
                 component: AboutPageComponent
+            },
+            {
+                path: '**',
+                redirectTo: 'home'
             }
         ]
     },
     {
         path: '**',
-        redirectTo: '/en/home'
+        redirectTo: 'en'
     }
 ]
 
