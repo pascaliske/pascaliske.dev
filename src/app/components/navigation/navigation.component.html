@@ -1,10 +1,32 @@
-<div class="cmp-navigation">
-    <ul class="cmp-navigation__list">
-        <li class="cmp-navigation__item">
-            <a href="/en/home">Home</a>
-        </li>
-        <li class="cmp-navigation__item">
-            <a href="/en/about">About</a>
-        </li>
-    </ul>
+<div class="cmp-navigation" [ngClass]="{'cmp-navigation--open': mobile && mobileOpen}">
+    <cmp-navigation-button (open)="toggleMobileOpen($event)" *ngIf="mobile"></cmp-navigation-button>
+    <div class="cmp-navigation__wrapper">
+        <ul class="cmp-navigation__list">
+            <li class="cmp-navigation__item" [routerLinkActive]="'cmp-navigation__item--active'">
+                <a class="cmp-navigation__link" [routerLink]="'/en/home'">
+                    <span class="cmp-navigation__text">Home</span>
+                </a>
+            </li>
+            <li class="cmp-navigation__item" [routerLinkActive]="'cmp-navigation__item--active'">
+                <a class="cmp-navigation__link" [routerLink]="'/en/about'">
+                    <span class="cmp-navigation__text">About</span>
+                </a>
+            </li>
+            <li class="cmp-navigation__item" [routerLinkActive]="'cmp-navigation__item--active'">
+                <a class="cmp-navigation__link" [routerLink]="'/en/references'">
+                    <span class="cmp-navigation__text">References</span>
+                </a>
+            </li>
+            <li class="cmp-navigation__item" [routerLinkActive]="'cmp-navigation__item--active'">
+                <a class="cmp-navigation__link" [routerLink]="'/en/blog'">
+                    <span class="cmp-navigation__text">Blog</span>
+                </a>
+            </li>
+            <li class="cmp-navigation__item" [routerLinkActive]="'cmp-navigation__item--active'">
+                <a class="cmp-navigation__link" [routerLink]="'/en/contact'">
+                    <span class="cmp-navigation__text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
