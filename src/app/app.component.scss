@@ -1,3 +1,5 @@
-.app {
+@import '../scss/shared';
 
-}
+$component: 'cmp-root';
+
+@include cmp-base($component) {}
