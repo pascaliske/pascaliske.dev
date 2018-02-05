@@ -1,7 +1,9 @@
 import { Component, HostListener } from '@angular/core'
+import { Router, RouterEvent, NavigationStart, NavigationEnd } from '@angular/router'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
+import 'rxjs/add/operator/filter'
 
 /**
  * AppComponent
@@ -15,20 +17,34 @@ import { ScrollService } from './services/scroll/scroll.service'
 })
 export class AppComponent {
     /**
+     * The current state of the application.
+     *
+     * @param {boolean} activated
+     */
+    public activated: boolean = false
+
+    /**
      * Initializes the AppComponent.
      *
+     * @param {Router} router
      * @param {BreakpointService} breakpointService
      * @param {TitleService} titleService
      * @param {ScrollService} scrollService
      * @returns {AppComponent}
      */
     public constructor(
+        private router: Router,
         private breakpointService: BreakpointService,
         private titleService: TitleService,
         private scrollService: ScrollService
     ) {
         this.titleService.setDivider('//')
         this.titleService.setSuffix('Pascal Iske')
+        this.router.events
+            .filter(event => event instanceof NavigationEnd)
+            .subscribe((event: NavigationEnd) => {
+                setTimeout(() => this.show(), 200)
+            })
     }
 
     /**
@@ -51,5 +67,14 @@ export class AppComponent {
     @HostListener('window:scroll', ['$event'])
     public onScroll(event: Event): void {
         this.scrollService.handleScroll(event)
+    }
+
+    /**
+     * Hides the application before loading.
+     *
+     * @returns {void}
+     */
+    private show(): void {
+        this.activated = true
     }
 }

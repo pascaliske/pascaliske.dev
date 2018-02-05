@@ -1,4 +1,6 @@
-<div class="cmp-root">
+<div class="cmp-root" [ngClass]="{'cmp-root--activated': activated}">
     <ng-progress [color]="'#fff'" [thick]="true" [speed]="250" [spinner]="false"></ng-progress>
-    <router-outlet></router-outlet>
+    <div class="cmp-root__wrapper">
+        <router-outlet></router-outlet>
+    </div>
 </div>
