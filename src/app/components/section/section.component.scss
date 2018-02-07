@@ -1,0 +1,41 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-section';
+
+@include cmp-base($component) {
+    &__wrapper {
+        width: 100vw;
+        margin: 0 auto;
+        padding: 40px $grid-mobile-padding;
+
+        @include use-breakpoint(mini-tablet) {
+            padding: 40px;
+            padding: 80px $grid-desktop-padding;
+        }
+    }
+
+    &__content {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: opacity .6s, transform .6s;
+    }
+}
+
+@include cmp-modifier($component, 'activated') {
+    &__content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@include cmp-modifier($component, 'wide') {
+    &__wrapper {
+        max-width: 100vw;
+    }
+}
+
+@include cmp-modifier($component, 'even') {
+    &__wrapper {
+        background: rgba($color-white2, .4);
+    }
+}
