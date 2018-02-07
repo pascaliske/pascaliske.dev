@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-page-header';
+
+@include cmp-base($component) {
+    border-bottom: 1px $color-white2 dashed;
+}
