@@ -1,0 +1,13 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-language-switch';
+
+@include cmp-base($component) {
+    &__language {
+        display: inline-block;
+
+        &:not(:last-of-type)::after {
+            content: ' // ';
+        }
+    }
+}
