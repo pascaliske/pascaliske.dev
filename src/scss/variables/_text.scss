@@ -42,4 +42,26 @@ $font-settings: (
  * Available types are:
  * - title
  */
-$text-settings: ();
+$text-settings: (
+    title: (
+        all: (
+            font-settings: bold,
+            font-size: 80px,
+            line-height: 82px
+        )
+    ),
+    subtitle: (
+        all: (
+            font-settings: light,
+            font-size: 29px,
+            line-height: 45px
+        )
+    ),
+    code: (
+        all: (
+            font-settings: monospace,
+            font-size: 16px,
+            line-height: 18px
+        )
+    )
+);
