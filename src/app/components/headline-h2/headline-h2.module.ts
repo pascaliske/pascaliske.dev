@@ -4,6 +4,7 @@ import { HeadlineH2Component } from './headline-h2.component'
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [HeadlineH2Component]
+    declarations: [HeadlineH2Component],
+    exports: [HeadlineH2Component]
 })
 export class HeadlineH2Module {}
