@@ -5,29 +5,54 @@ $component: 'cmp-header';
 @include cmp-base($component) {
     &__wrapper {
         width: 100vw;
-        height: 340px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background: $color-primary;
+
+        @include use-breakpoint(mini-tablet) {
+            height: 340px;
+        }
+
+        @include use-breakpoint(desktop) {
+            height: 400px;
+        }
     }
 
     &__title,
     &__subtitle {
         color: $color-white1;
+        opacity: 0;
+        transition: opacity .8s, transform .8s;
     }
 
     &__title {
         @include use-text(title);
+        transform: translateX(-5%);
     }
 
     &__subtitle {
         @include use-text(subtitle);
+        transform: translateX(5%);
     }
 
     @include use-breakpoint(mini-tablet) {
         position: sticky;
         top: -340px;
+        z-index: 999;
+    }
+
+    @include use-breakpoint(desktop) {
+        top: -400px;
+    }
+}
+
+@include cmp-modifier($component, 'activated') {
+    &__title,
+    &__subtitle {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
