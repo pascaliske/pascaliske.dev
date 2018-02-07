@@ -29,6 +29,10 @@ $font-settings: (
         font-family: ('Open Sans', Arial, sans-serif),
         font-weight: 400,
         font-style: italic
+    ),
+    monospace: (
+        font-family: ('Source Code Pro', monospace, sans-serif),
+        font-weight: 400
     )
 );
 
