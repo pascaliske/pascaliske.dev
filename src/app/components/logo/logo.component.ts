@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
+
+export enum LogoThemes {
+    LIGHT = 'light',
+    DARK = 'dark'
+}
 
 @Component({
     selector: 'cmp-logo',
@@ -6,6 +11,10 @@ import { Component, OnInit } from '@angular/core'
     styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
+    @Input() public theme: LogoThemes = LogoThemes.LIGHT
+
+    @Input() public round: boolean = false
+
     public constructor() {}
 
     public ngOnInit() {}
