@@ -1,0 +1,6 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-link';
+
+@include cmp-base($component) {
+}
