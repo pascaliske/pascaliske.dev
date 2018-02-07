@@ -2,6 +2,10 @@
  * Grid settings
  */
 $susy: (
-    columns: (1 1 1 1 1 1 1 1 1 1 1 1),
-    gutters: 1/10
+    columns: susy-repeat(12),
+    gutters: 1/12
 );
+
+$grid-debug: false;
+$grid-desktop-padding: span(2) + gutter();
+$grid-mobile-padding: 20px;
