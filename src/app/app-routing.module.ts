@@ -10,6 +10,11 @@ const routes: Routes = [
         path: ':language',
         children: [
             {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'home'
+            },
+            {
                 path: 'home',
                 component: HomePageComponent
             },
