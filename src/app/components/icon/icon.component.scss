@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-icon';
+
+@include cmp-base($component) {
+    display: inline;
+}
