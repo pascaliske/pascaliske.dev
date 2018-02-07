@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core'
 export class HeaderComponent implements OnInit {
     public title: string = 'Pascal Iske'
 
+    public subtitle: string = 'Frontend and Web Development'
+
     public constructor() {}
 
     public ngOnInit(): void {}

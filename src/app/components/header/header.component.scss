@@ -5,7 +5,7 @@ $component: 'cmp-header';
 @include cmp-base($component) {
     &__wrapper {
         width: 100vw;
-        height: 300px;
+        height: 340px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,24 +13,21 @@ $component: 'cmp-header';
         background: $color-primary;
     }
 
-    &__title {
+    &__title,
+    &__subtitle {
         color: $color-white1;
+    }
+
+    &__title {
+        @include use-text(title);
+    }
+
+    &__subtitle {
+        @include use-text(subtitle);
     }
 
     @include use-breakpoint(mini-tablet) {
         position: sticky;
-        top: -300px;
-
-        &__wrapper {
-            flex-direction: row;
-        }
-
-        &__logo {
-            margin-right: 20px;
-        }
-
-        &__title {
-            margin-left: 20px;
-        }
+        top: -340px;
     }
 }
