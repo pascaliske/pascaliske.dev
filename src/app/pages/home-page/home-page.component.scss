@@ -1,3 +1,7 @@
-.cmp-homepage {
+@import '../../../scss/shared';
 
+$component: 'cmp-home-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
 }
