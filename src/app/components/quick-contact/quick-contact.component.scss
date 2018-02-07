@@ -1,0 +1,6 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-quick-contact';
+
+@include cmp-base($component) {
+}
