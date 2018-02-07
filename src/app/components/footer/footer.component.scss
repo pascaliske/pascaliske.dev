@@ -1,3 +1,14 @@
-.cmp-footer {
+@import '../../../scss/shared';
 
+$component: 'cmp-footer';
+
+@include cmp-base($component) {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px $grid-mobile-padding 0;
+    background: $color-white2;
+
+    @include use-breakpoint(mini-tablet) {
+        padding: 20px $grid-desktop-padding 0;
+    }
 }
