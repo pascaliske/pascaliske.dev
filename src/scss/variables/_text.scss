@@ -46,6 +46,10 @@ $text-settings: (
     title: (
         all: (
             font-settings: bold,
+            font-size: 52px,
+            line-height: 54px
+        ),
+        mini-tablet: (
             font-size: 80px,
             line-height: 82px
         )
@@ -53,8 +57,12 @@ $text-settings: (
     subtitle: (
         all: (
             font-settings: light,
+            font-size: 19px,
+            line-height: 23px
+        ),
+        mini-tablet: (
             font-size: 29px,
-            line-height: 45px
+            line-height: 33px
         )
     ),
     code: (
