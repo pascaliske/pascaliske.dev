@@ -58,6 +58,7 @@ $component: 'cmp-navigation';
 
     &__text {
         @include use-text(code);
+        opacity: .5;
 
         &::before {
             content: '<';
@@ -66,6 +67,10 @@ $component: 'cmp-navigation';
         &::after {
             content: ' />';
         }
+    }
+
+    &__item--active &__text {
+        opacity: 1;
     }
 
     @include use-breakpoint(mini-tablet) {
