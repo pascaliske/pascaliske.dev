@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 import { BreakpointService, Breakpoints } from '../../services/breakpoint/breakpoint.service'
 import 'rxjs/add/operator/takeWhile'
 
@@ -9,17 +9,26 @@ import 'rxjs/add/operator/takeWhile'
     styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit, OnDestroy {
+    public language: string
+
     public mobile: boolean = false
 
     public mobileOpen: boolean = false
 
     private alive: boolean = true
 
-    public constructor(public router: Router, public breakpointService: BreakpointService) {
+    public constructor(
+        public router: Router,
+        public route: ActivatedRoute,
+        public breakpointService: BreakpointService
+    ) {
         this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
     }
 
     public ngOnInit() {
+        this.route.paramMap
+            .takeWhile(() => this.alive)
+            .subscribe(params => (this.language = params.get('language')))
         this.breakpointService.breakpointChange
             .takeWhile(() => this.alive)
             .subscribe(() => this.onBreakpointChange())

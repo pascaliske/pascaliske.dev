@@ -19,6 +19,11 @@ $component: 'cmp-navigation';
         top: 0;
         left: 0;
         transform: translateX(-100%);
+
+        @include use-breakpoint(mini-tablet) {
+            padding-left: $grid-desktop-padding;
+            padding-right: $grid-desktop-padding;
+        }
     }
 
     &__list,
@@ -49,6 +54,18 @@ $component: 'cmp-navigation';
         width: 100%;
         height: 100%;
         color: inherit;
+    }
+
+    &__text {
+        @include use-text(code);
+
+        &::before {
+            content: '<';
+        }
+
+        &::after {
+            content: ' />';
+        }
     }
 
     @include use-breakpoint(mini-tablet) {
