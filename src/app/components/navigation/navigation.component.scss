@@ -31,7 +31,7 @@ $component: 'cmp-navigation';
         color: rgba($color-white1, .6);
         background: $color-primary;
         transform: translateX(0%);
-        transition: transform .25s, opacity .25s;
+        transition: transform .2s, opacity .2s;
         opacity: 0;
 
         &--active {
@@ -41,7 +41,7 @@ $component: 'cmp-navigation';
 
     @for $i from 1 through 10 {
         &__item:nth-child(#{$i}) {
-            transition-delay: #{($i - 1) * 0.15}s
+            transition-delay: #{($i - 1) * 0.08}s
         }
     }
 
