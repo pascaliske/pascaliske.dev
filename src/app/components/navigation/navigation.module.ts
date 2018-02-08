@@ -8,7 +8,7 @@ import { NavigationButtonModule } from '../navigation-button/navigation-button.m
 import { NavigationComponent } from './navigation.component'
 
 @NgModule({
-    imports: [CommonModule, TranslateModule.forChild(), RouterModule, NavigationButtonModule],
+    imports: [CommonModule, RouterModule, TranslateModule.forChild(), NavigationButtonModule],
     declarations: [NavigationComponent],
     exports: [NavigationComponent]
 })
