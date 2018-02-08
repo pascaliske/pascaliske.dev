@@ -7,10 +7,19 @@ import { Router, ActivatedRoute } from '@angular/router'
     styleUrls: ['./footer-meta.component.scss']
 })
 export class FooterMetaComponent implements OnInit {
-    public year: string = '2018'
+    public language: string
+
+    public year: number = new Date().getFullYear()
+
+    private alive: boolean = true
+
     public constructor(public router: Router, public route: ActivatedRoute) {}
 
-    public ngOnInit() {}
+    public ngOnInit() {
+        this.route.paramMap
+            .takeWhile(() => this.alive)
+            .subscribe(params => (this.language = params.get('language')))
+    }
 
     public changeLanguage(language: string): void {
         const { path } = this.route.snapshot.url[0]

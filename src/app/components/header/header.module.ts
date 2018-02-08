@@ -7,7 +7,7 @@ import { NavigationModule } from '../navigation/navigation.module'
 import { HeaderComponent } from './header.component'
 
 @NgModule({
-    imports: [CommonModule, NavigationModule],
+    imports: [CommonModule, TranslateModule.forChild(), NavigationModule],
     declarations: [HeaderComponent],
     exports: [HeaderComponent]
 })

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { TranslateModule } from '@ngx-translate/core'
 
 import { HeaderModule } from '../../components/header/header.module'
 import { PageHeaderModule } from '../../components/page-header/page-header.module'
@@ -12,6 +13,7 @@ import { AboutPageComponent } from './about-page.component'
 @NgModule({
     imports: [
         CommonModule,
+        TranslateModule.forChild(),
         HeaderModule,
         PageHeaderModule,
         SectionModule,
