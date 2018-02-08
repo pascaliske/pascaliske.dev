@@ -7,8 +7,18 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 
 const routes: Routes = [
     {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'en'
+    },
+    {
         path: ':language',
         children: [
+            {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'home'
+            },
             {
                 path: 'home',
                 component: HomePageComponent
@@ -22,10 +32,6 @@ const routes: Routes = [
                 component: NotFoundPageComponent
             }
         ]
-    },
-    {
-        path: '**',
-        redirectTo: 'en'
     }
 ]
 
