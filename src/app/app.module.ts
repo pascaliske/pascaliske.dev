@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module'
+import { SignInPageModule } from './pages/sign-in-page/sign-in-page.module'
+import { SignOutPageModule } from './pages/sign-out-page/sign-out-page.module'
 
 import { AuthService } from './services/auth/auth.service'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
@@ -37,7 +39,9 @@ import { ViewportService } from './services/viewport/viewport.service'
         AppRoutingModule,
         HomePageModule,
         AboutPageModule,
-        NotFoundPageModule
+        NotFoundPageModule,
+        SignInPageModule,
+        SignOutPageModule
     ],
     providers: [AuthService, BreakpointService, TitleService, ScrollService, ViewportService],
     bootstrap: [AppComponent]
