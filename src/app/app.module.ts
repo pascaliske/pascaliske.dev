@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { AngularFireModule } from 'angularfire2'
+import { AngularFireAuthModule } from 'angularfire2/auth'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { HttpClientModule } from '@angular/common/http'
 import { NgProgressModule } from '@ngx-progressbar/core'
@@ -24,6 +26,8 @@ import { ViewportService } from './services/viewport/viewport.service'
     declarations: [AppComponent],
     imports: [
         BrowserModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireAuthModule,
         ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
         HttpClientModule,
         NgProgressModule.forRoot(),
