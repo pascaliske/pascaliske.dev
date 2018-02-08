@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { Component, OnInit, OnDestroy } from '@angular/core'
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
+
 import { TitleService } from '../../services/title/title.service'
 
 @Component({
@@ -7,13 +8,30 @@ import { TitleService } from '../../services/title/title.service'
     templateUrl: './home-page.component.html',
     styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
-    public title: string = 'Startseite'
+export class HomePageComponent implements OnInit, OnDestroy {
+    public title: string
 
-    public constructor(private titleService: TitleService, public route: ActivatedRoute) {
-        this.titleService.setTitle(this.title)
-        this.route.paramMap.subscribe(params => console.log(params))
+    private alive: boolean = true
+
+    public constructor(private translate: TranslateService, private titleService: TitleService) {
+        this.translate
+            .get('PAGE_TITLE_HOME')
+            .takeWhile(() => this.alive)
+            .subscribe(translation => {
+                this.title = translation
+                this.titleService.setTitle(translation)
+            })
+        this.translate.onLangChange
+            .takeWhile(() => this.alive)
+            .subscribe((event: LangChangeEvent) => {
+                this.title = event.translations.PAGE_TITLE_ABOUT
+                this.titleService.setTitle(event.translations.PAGE_TITLE_HOME)
+            })
     }
 
     public ngOnInit() {}
+
+    public ngOnDestroy() {
+        this.alive = false
+    }
 }
