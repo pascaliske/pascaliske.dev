@@ -1,4 +1,9 @@
 {
   "TITLE": "Pascal Iske",
   "SUBTITLE": "Frontend and Web Development",
+  "NAVIGATION_HOME": "Startseite",
+  "NAVIGATION_ABOUT": "Über mich",
+  "NAVIGATION_REFERENCES": "Referenzen",
+  "NAVIGATION_BLOG": "Blog",
+  "NAVIGATION_CONTACT": "Kontakt",
 }
