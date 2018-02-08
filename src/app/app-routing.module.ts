@@ -14,14 +14,6 @@ const routes: Routes = [
         redirectTo: 'en'
     },
     {
-        path: 'signin',
-        component: SignInPageComponent
-    },
-    {
-        path: 'signout',
-        component: SignOutPageComponent
-    },
-    {
         path: ':language',
         children: [
             {
@@ -36,6 +28,14 @@ const routes: Routes = [
             {
                 path: 'about',
                 component: AboutPageComponent
+            },
+            {
+                path: 'signin',
+                component: SignInPageComponent
+            },
+            {
+                path: 'signout',
+                component: SignOutPageComponent
             },
             {
                 path: '**',

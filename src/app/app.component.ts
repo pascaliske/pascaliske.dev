@@ -61,7 +61,7 @@ export class AppComponent {
                 }
 
                 this.translateService.use(language)
-                setTimeout(() => this.show(), 200)
+                setTimeout(() => this.show(), 400)
             })
     }
 
@@ -88,7 +88,7 @@ export class AppComponent {
     }
 
     /**
-     * Hides the application before loading.
+     * Shows the application after loading.
      *
      * @returns {void}
      */

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
+
 import { TitleService } from '../../services/title/title.service'
 
 @Component({
@@ -7,13 +9,32 @@ import { TitleService } from '../../services/title/title.service'
     templateUrl: './sign-out-page.component.html',
     styleUrls: ['./sign-out-page.component.scss']
 })
-export class SignOutPageComponent implements OnInit {
-    public title: string = 'Sign out'
+export class SignOutPageComponent implements OnDestroy {
+    public title: string
 
-    public constructor(private titleService: TitleService, public route: ActivatedRoute) {
-        this.titleService.setTitle(this.title)
-        this.route.paramMap.subscribe(params => console.log(params))
+    private alive: boolean = true
+
+    public constructor(
+        private translate: TranslateService,
+        private titleService: TitleService,
+        public route: ActivatedRoute
+    ) {
+        this.translate
+            .get('PAGE_TITLE_SIGNOUT')
+            .takeWhile(() => this.alive)
+            .subscribe(translation => {
+                this.title = translation
+                this.titleService.setTitle(translation)
+            })
+        this.translate.onLangChange
+            .takeWhile(() => this.alive)
+            .subscribe((event: LangChangeEvent) => {
+                this.title = event.translations.PAGE_TITLE_SIGNOUT
+                this.titleService.setTitle(event.translations.PAGE_TITLE_SIGNOUT)
+            })
     }
 
-    public ngOnInit() {}
+    public ngOnDestroy() {
+        this.alive = false
+    }
 }

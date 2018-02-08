@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
 import { TitleService } from '../../services/title/title.service'
@@ -8,7 +8,7 @@ import { TitleService } from '../../services/title/title.service'
     templateUrl: './about-page.component.html',
     styleUrls: ['./about-page.component.scss']
 })
-export class AboutPageComponent implements OnInit, OnDestroy {
+export class AboutPageComponent implements OnDestroy {
     public title: string
 
     private alive: boolean = true
@@ -28,8 +28,6 @@ export class AboutPageComponent implements OnInit, OnDestroy {
                 this.titleService.setTitle(event.translations.PAGE_TITLE_ABOUT)
             })
     }
-
-    public ngOnInit() {}
 
     public ngOnDestroy() {
         this.alive = false

@@ -1,21 +1,28 @@
-import { Component, OnInit, AfterViewInit, Input } from '@angular/core'
+import { Component, AfterViewInit, Input } from '@angular/core'
 
 @Component({
     selector: 'cmp-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements AfterViewInit {
+    /**
+     * Controls the active state of the component.
+     *
+     * @param {boolean}
+     */
     public activated: boolean = false
 
-    public title: string = 'Pascal Iske'
-
-    public subtitle: string = 'Frontend and Web Development'
-
+    /**
+     * Initializes the component.
+     */
     public constructor() {}
 
-    public ngOnInit(): void {}
-
+    /**
+     * Activate the component
+     *
+     * @returns {void}
+     */
     public ngAfterViewInit(): void {
         setTimeout(() => (this.activated = true), 0)
     }
