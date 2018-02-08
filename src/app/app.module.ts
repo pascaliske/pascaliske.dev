@@ -17,6 +17,7 @@ import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module'
 
+import { AuthService } from './services/auth/auth.service'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
@@ -38,7 +39,7 @@ import { ViewportService } from './services/viewport/viewport.service'
         AboutPageModule,
         NotFoundPageModule
     ],
-    providers: [BreakpointService, TitleService, ScrollService, ViewportService],
+    providers: [AuthService, BreakpointService, TitleService, ScrollService, ViewportService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
