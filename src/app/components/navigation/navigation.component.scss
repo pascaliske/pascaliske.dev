@@ -23,7 +23,8 @@ $component: 'cmp-navigation';
 
         @include use-breakpoint(mini-tablet) {
             height: 45px;
-            position: relative;
+            position: sticky;
+            top: 0;
             background: $color-white1;
             border-bottom: 1px rgba($color-grey1, .3) solid;
             transform: none;

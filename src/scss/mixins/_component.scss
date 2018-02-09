@@ -1,4 +1,8 @@
-@mixin cmp-base($component) {
+@mixin cmp-base($component, $host: block) {
+    :host {
+        display: $host;
+    }
+
     .#{$component} {
         @content;
     }

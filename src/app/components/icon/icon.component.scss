@@ -2,6 +2,6 @@
 
 $component: 'cmp-icon';
 
-@include cmp-base($component) {
+@include cmp-base($component, inline-block) {
     display: inline;
 }
