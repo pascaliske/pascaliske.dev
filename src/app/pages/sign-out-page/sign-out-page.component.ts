@@ -1,5 +1,4 @@
 import { Component, OnDestroy } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
 import { TitleService } from '../../services/title/title.service'
@@ -16,8 +15,7 @@ export class SignOutPageComponent implements OnDestroy {
 
     public constructor(
         private translate: TranslateService,
-        private titleService: TitleService,
-        public route: ActivatedRoute
+        private titleService: TitleService
     ) {
         this.translate
             .get('PAGE_TITLE_SIGNOUT')

@@ -1,5 +1,4 @@
 import { Component, OnDestroy } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
 import { TitleService } from '../../services/title/title.service'
@@ -14,11 +13,7 @@ export class SignInPageComponent implements OnDestroy {
 
     private alive: boolean = true
 
-    public constructor(
-        private translate: TranslateService,
-        private titleService: TitleService,
-        public route: ActivatedRoute
-    ) {
+    public constructor(private translate: TranslateService, private titleService: TitleService) {
         this.translate
             .get('PAGE_TITLE_SIGNIN')
             .takeWhile(() => this.alive)
