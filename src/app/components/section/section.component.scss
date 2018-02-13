@@ -6,11 +6,10 @@ $component: 'cmp-section';
     &__wrapper {
         width: 100vw;
         margin: 0 auto;
-        padding: 40px $grid-mobile-padding;
+        padding: 20px $grid-mobile-padding;
 
         @include use-breakpoint(mini-tablet) {
-            padding: 40px;
-            padding: 80px $grid-desktop-padding;
+            padding: 40px $grid-desktop-padding;
         }
     }
 
@@ -36,6 +35,6 @@ $component: 'cmp-section';
 
 @include cmp-modifier($component, 'even') {
     &__wrapper {
-        background: rgba($color-white2, .4);
+        background: rgba($color-white2, .5);
     }
 }
