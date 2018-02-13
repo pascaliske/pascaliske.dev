@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
-import { TitleService } from '../../services/title/title.service'
+import { TitleService } from '../../../services/title/title.service'
 
 @Component({
     selector: 'cmp-about-page',
