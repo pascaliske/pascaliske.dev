@@ -1,4 +1,4 @@
-<a class="cmp-link" [routerLink]="href">
+<a class="cmp-link" [routerLink]="href" [ngClass]="{'cmp-link--inline': inline}">
     <span class="cmp-link__text" *ngIf="inline">{{text}}</span>
     <ng-content *ngIf="!inline"></ng-content>
 </a>

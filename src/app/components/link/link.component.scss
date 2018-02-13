@@ -2,5 +2,10 @@
 
 $component: 'cmp-link';
 
-@include cmp-base($component) {
+@include cmp-base($component, inline-block) {
+    position: relative;
+}
+
+@include cmp-modifier($component, inline) {
+
 }

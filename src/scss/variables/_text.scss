@@ -1,4 +1,14 @@
 /**
+ * Base font settings
+ */
+$base-font-size: 16px;
+$base-font-ratio: 1.25;
+$modularscale: (
+    base: $base-font-size,
+    ratio: $base-font-ratio
+);
+
+/**
  * Font Awesome settings
  */
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts';
@@ -51,7 +61,7 @@ $text-settings: (
         ),
         mini-tablet: (
             font-size: 80px,
-            line-height: 83px
+            line-height: 86px
         )
     ),
     subtitle: (
@@ -65,11 +75,61 @@ $text-settings: (
             line-height: 33px
         )
     ),
+    headline-h1: (
+        all: (
+            font-settings: bold,
+            font-size: ms(5),
+            line-height: 1.25
+        )
+    ),
+    headline-h2: (
+        all: (
+            font-settings: bold,
+            font-size: ms(4),
+            line-height: 1.25
+        )
+    ),
+    headline-h3: (
+        all: (
+            font-settings: bold,
+            font-size: ms(3),
+            line-height: 1.5
+        )
+    ),
+    headline-h4: (
+        all: (
+            font-settings: bold,
+            font-size: ms(2),
+            line-height: 1.5
+        )
+    ),
+    headline-h5: (
+        all: (
+            font-settings: bold,
+            font-size: ms(1),
+            line-height: 1.6
+        )
+    ),
+    headline-h6: (
+        all: (
+            font-settings: bold,
+            font-size: ms(0),
+            line-height: 2,
+            text-transform: uppercase
+        )
+    ),
+    copy: (
+        all: (
+            font-settings: regular,
+            font-size: ms(0),
+            line-height: 1.5
+        )
+    ),
     code: (
         all: (
             font-settings: monospace,
-            font-size: 16px,
-            line-height: 18px
+            font-size: ms(-1),
+            line-height: 1.5
         )
     )
 );

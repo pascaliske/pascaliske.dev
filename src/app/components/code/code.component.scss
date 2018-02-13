@@ -1,0 +1,95 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-code';
+
+@include cmp-base($component) {
+    margin-bottom: 20px;
+    display: block;
+
+    &__code {
+        @include use-text(code);
+        margin: 0;
+        padding: 20px;
+        color: #abb2bf;
+        background: $color-primary;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            height: 10px;
+            background: $color-grey2;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-grey1;
+        }
+    }
+
+    &__comment,
+    &__quote {
+        color: #5c6370;
+        font-style: italic;
+    }
+
+    &__doctag,
+    &__keyword,
+    &__formula {
+        color: #c678dd;
+    }
+
+    &__section,
+    &__name,
+    &__selector-tag,
+    &__deletion,
+    &__subst {
+        color: #e06c75;
+    }
+
+    &__literal {
+        color: #56b6c2;
+    }
+
+    &__string,
+    &__regexp,
+    &__addition,
+    &__attribute,
+    &__meta-string {
+        color: #98c379;
+    }
+
+    &__built_in,
+    &__class &__title {
+        color: #e6c07b;
+    }
+
+    &__attr,
+    &__variable,
+    &__template-variable,
+    &__type,
+    &__selector-class,
+    &__selector-attr,
+    &__selector-pseudo,
+    &__number {
+        color: #d19a66;
+    }
+
+    &__symbol,
+    &__bullet,
+    &__link,
+    &__meta,
+    &__selector-id,
+    &__title {
+        color: #61aeee;
+    }
+
+    &__emphasis {
+        font-style: italic;
+    }
+
+    &__strong {
+        font-weight: bold;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+}

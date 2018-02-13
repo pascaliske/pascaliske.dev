@@ -1,0 +1,8 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-headline-h3';
+
+@include cmp-base($component) {
+    @include use-text(headline-h3);
+    margin-bottom: 15px;
+}

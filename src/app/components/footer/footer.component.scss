@@ -4,8 +4,12 @@ $component: 'cmp-footer';
 
 @include cmp-base($component) {
     width: 100vw;
+    height: $footer-height;
     margin: 0 auto;
     padding: 20px $grid-mobile-padding 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background: $color-white2;
 
     @include use-breakpoint(mini-tablet) {

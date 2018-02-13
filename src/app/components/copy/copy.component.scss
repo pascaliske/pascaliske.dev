@@ -1,6 +1,7 @@
 @import '../../../scss/shared';
 
-$component: 'cmp-headline-h2';
+$component: 'cmp-copy';
 
 @include cmp-base($component) {
+    @include use-text(copy);
 }

@@ -1,0 +1,8 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-headline-h5';
+
+@include cmp-base($component) {
+    @include use-text(headline-h5);
+    margin-bottom: 15px;
+}
