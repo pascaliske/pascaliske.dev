@@ -16,8 +16,7 @@ import { HeaderModule } from './components/header/header.module'
 import { HomePageModule } from './pages/home-page/home-page.module'
 import { AboutPageModule } from './pages/about-page/about-page.module'
 import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module'
-import { SignInPageModule } from './pages/sign-in-page/sign-in-page.module'
-import { SignOutPageModule } from './pages/sign-out-page/sign-out-page.module'
+import { AuthModule } from './pages/auth/auth.module'
 import { AuthService } from './services/auth/auth.service'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
@@ -55,8 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         HomePageModule,
         AboutPageModule,
         NotFoundPageModule,
-        SignInPageModule,
-        SignOutPageModule
+        AuthModule,
     ],
     providers: [
         AuthService,

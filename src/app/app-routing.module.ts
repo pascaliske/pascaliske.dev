@@ -4,14 +4,32 @@ import { RouterModule, Routes } from '@angular/router'
 import { HomePageComponent } from './pages/home-page/home-page.component'
 import { AboutPageComponent } from './pages/about-page/about-page.component'
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component'
-import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component'
-import { SignOutPageComponent } from './pages/sign-out-page/sign-out-page.component'
+import { SignInPageComponent } from './pages/auth/sign-in-page/sign-in-page.component'
+import { SignOutPageComponent } from './pages/auth/sign-out-page/sign-out-page.component'
 
 const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
         redirectTo: 'en'
+    },
+    {
+        path: 'auth',
+        children: [
+            {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'clients'
+            },
+            {
+                path: 'signin',
+                component: SignInPageComponent
+            },
+            {
+                path: 'signout',
+                component: SignOutPageComponent
+            }
+        ]
     },
     {
         path: ':language',
@@ -28,14 +46,6 @@ const routes: Routes = [
             {
                 path: 'about',
                 component: AboutPageComponent
-            },
-            {
-                path: 'signin',
-                component: SignInPageComponent
-            },
-            {
-                path: 'signout',
-                component: SignOutPageComponent
             },
             {
                 path: '**',

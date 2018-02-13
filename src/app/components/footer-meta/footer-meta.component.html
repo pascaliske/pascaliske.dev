@@ -9,10 +9,10 @@
                 <cmp-link [href]="['/', language, 'privacy']" [text]="'FOOTER_META_PRIVACY'|translate"></cmp-link>
             </li>
             <li class="cmp-footer-meta__link">
-                <a [routerLink]="['/', language, 'signin']">{{'FOOTER_META_SIGNIN'|translate}}</a>
+                <a routerLink="/auth/signin">{{'FOOTER_META_SIGNIN'|translate}}</a>
             </li>
             <li class="cmp-footer-meta__link">
-                <a [routerLink]="['/', language, 'signout']">{{'FOOTER_META_SIGNOUT'|translate}}</a>
+                <a routerLink="/auth/signout">{{'FOOTER_META_SIGNOUT'|translate}}</a>
             </li>
         </ul>
     </div>
