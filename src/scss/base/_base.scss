@@ -1,8 +1,12 @@
 @include normalize();
 
 * {
-    @include use-font(regular);
     box-sizing: border-box;
+}
+
+html,
+body {
+    @include use-font(regular);
 }
 
 a {
@@ -35,13 +39,12 @@ button {
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
     -webkit-appearance: none;
 }
 
 input,
 textarea {
-    outline: none;
+    outline: 0;
     background-color: initial;
     -webkit-appearance: none;
 }
