@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-copy';
+
+@include cmp-base($component) {
+    @include use-text(copy);
+}
