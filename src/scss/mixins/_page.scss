@@ -1,7 +1,16 @@
 @mixin cmp-page() {
+    min-height: calc(100vh - 400px);
+    position: relative;
+    padding-bottom: $footer-height;
+
     &__navigation {
         position: sticky;
         top: 0;
         z-index: 999;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
     }
 }
