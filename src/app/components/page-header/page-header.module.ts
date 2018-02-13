@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PageHeaderComponent } from './page-header.component'
 
+import { HeadlinesModule } from '../headlines/headlines.module'
 import { SectionModule } from '../section/section.module'
-import { HeadlineH3Module } from '../headline-h3/headline-h3.module'
 
 @NgModule({
-    imports: [CommonModule, SectionModule, HeadlineH3Module],
+    imports: [CommonModule, HeadlinesModule, SectionModule],
     declarations: [PageHeaderComponent],
     exports: [PageHeaderComponent]
 })
