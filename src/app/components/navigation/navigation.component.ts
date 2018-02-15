@@ -35,7 +35,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     public ngOnInit() {
         this.route.paramMap
             .takeWhile(() => this.alive)
-            .subscribe(params => (this.language = params.get('language')))
+            .subscribe(params => (this.language = params.get('language') || 'en'))
         this.breakpointService.breakpointChange
             .takeWhile(() => this.alive)
             .subscribe(() => this.onBreakpointChange())

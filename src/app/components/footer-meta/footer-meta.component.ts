@@ -50,7 +50,7 @@ export class FooterMetaComponent implements OnInit {
     public ngOnInit(): void {
         this.route.paramMap
             .takeWhile(() => this.alive)
-            .subscribe(params => (this.language = params.get('language')))
+            .subscribe(params => (this.language = params.get('language') || 'en'))
     }
 
     /**
