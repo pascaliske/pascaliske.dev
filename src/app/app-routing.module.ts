@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { AuthComponent } from './pages/auth/auth.component'
 import { SignInPageComponent } from './pages/auth/sign-in-page/sign-in-page.component'
 import { SignOutPageComponent } from './pages/auth/sign-out-page/sign-out-page.component'
+import { ClientsPageComponent } from './pages/auth/clients-page/clients-page.component'
 import { SiteComponent } from './pages/site/site.component'
 import { HomePageComponent } from './pages/site/home-page/home-page.component'
 import { AboutPageComponent } from './pages/site/about-page/about-page.component'
@@ -31,6 +32,10 @@ const routes: Routes = [
             {
                 path: 'signout',
                 component: SignOutPageComponent
+            },
+            {
+                path: 'clients',
+                component: ClientsPageComponent
             }
         ]
     },
