@@ -1,15 +1,11 @@
 import { Component, HostListener } from '@angular/core'
-import {
-    Router,
-    RouterEvent,
-    NavigationStart,
-    NavigationEnd,
-    ActivatedRoute
-} from '@angular/router'
+import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
+
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
+
 import 'rxjs/add/operator/filter'
 
 /**
@@ -48,19 +44,11 @@ export class AppComponent {
         private scrollService: ScrollService
     ) {
         this.translateService.setDefaultLang('en')
-        this.translateService.use('en')
         this.titleService.setDivider('//')
         this.titleService.setSuffix('Pascal Iske')
         this.router.events
             .filter(event => event instanceof NavigationEnd)
             .subscribe((event: NavigationEnd) => {
-                let language: string = 'en'
-
-                if (event.url.split('/').length > 2) {
-                    language = event.url.split('/')[1]
-                }
-
-                this.translateService.use(language)
                 setTimeout(() => this.show(), 400)
             })
     }

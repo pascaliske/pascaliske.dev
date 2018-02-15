@@ -1,0 +1,20 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-site';
+
+@include cmp-base($component) {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: $footer-height;
+
+    &__navigation {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+    }
+}

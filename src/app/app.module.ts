@@ -12,7 +12,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { environment } from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module'
-import { HeaderModule } from './components/header/header.module'
 import { AuthModule } from './pages/auth/auth.module'
 import { SiteModule } from './pages/site/site.module'
 import { AuthService } from './services/auth/auth.service'
@@ -48,7 +47,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireAuthModule,
         AppRoutingModule,
-        HeaderModule,
         AuthModule,
         SiteModule
     ],

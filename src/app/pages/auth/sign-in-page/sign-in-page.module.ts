@@ -4,7 +4,6 @@ import { TranslateModule } from '@ngx-translate/core'
 
 import { PageHeaderModule } from '../../../components/page-header/page-header.module'
 import { SectionModule } from '../../../components/section/section.module'
-import { FooterModule } from '../../../components/footer/footer.module'
 
 import { SignInPageComponent } from './sign-in-page.component'
 
@@ -13,8 +12,7 @@ import { SignInPageComponent } from './sign-in-page.component'
         CommonModule,
         TranslateModule.forChild(),
         PageHeaderModule,
-        SectionModule,
-        FooterModule
+        SectionModule
     ],
     declarations: [SignInPageComponent]
 })

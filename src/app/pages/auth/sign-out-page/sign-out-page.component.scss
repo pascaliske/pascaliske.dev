@@ -1,0 +1,7 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-sign-out-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
+}
