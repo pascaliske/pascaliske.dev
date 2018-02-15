@@ -7,8 +7,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
-import { AngularFireModule } from 'angularfire2'
-import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { environment } from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module'
@@ -44,8 +42,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         NgProgressModule.forRoot(),
         NgProgressHttpModule,
         NgProgressRouterModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFireAuthModule,
         AppRoutingModule,
         AuthModule,
         SiteModule
