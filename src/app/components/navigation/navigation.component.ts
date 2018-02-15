@@ -1,7 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Component, OnInit, OnDestroy, Input } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { BreakpointService, Breakpoints } from '../../services/breakpoint/breakpoint.service'
 import 'rxjs/add/operator/takeWhile'
+
+export interface NavigationItem {
+    route: string
+    label: string
+    options?: {
+        decorated?: boolean
+        fixedWidth?: boolean
+    }
+}
 
 @Component({
     selector: 'cmp-navigation',
@@ -9,6 +18,8 @@ import 'rxjs/add/operator/takeWhile'
     styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit, OnDestroy {
+    @Input() public items: Array<NavigationItem> = []
+
     public language: string
 
     public mobile: boolean = false
