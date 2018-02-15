@@ -14,6 +14,7 @@ import { ClientsPageModule } from './clients-page/clients-page.module'
 import { SignInPageModule } from './sign-in-page/sign-in-page.module'
 import { SignOutPageModule } from './sign-out-page/sign-out-page.module'
 
+import { AuthGuard } from './auth.guard'
 import { AuthComponent } from './auth.component'
 
 @NgModule({

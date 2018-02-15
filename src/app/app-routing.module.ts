@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
+import { AuthGuard } from './pages/auth/auth.guard'
 import { AuthComponent } from './pages/auth/auth.component'
 import { SignInPageComponent } from './pages/auth/sign-in-page/sign-in-page.component'
 import { SignOutPageComponent } from './pages/auth/sign-out-page/sign-out-page.component'
@@ -35,6 +36,7 @@ const routes: Routes = [
             },
             {
                 path: 'clients',
+                canActivate: [AuthGuard],
                 component: ClientsPageComponent
             }
         ]
