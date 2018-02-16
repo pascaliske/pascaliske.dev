@@ -27,14 +27,10 @@ export class AuthGuard implements CanActivate {
      * @returns {Observable<boolean>|Promise<boolean>|boolean}
      */
     public canActivate(): Observable<boolean> | Promise<boolean> | boolean {
-        return this.authService.user
-            .take(1)
-            .map(user => !!(user && user.uid))
-            .do(signedIn => {
-                if (!signedIn) {
-                    console.log('==> not allowed to visit this page, redirecting to "/auth/signin"')
-                    this.router.navigate(['/auth/signin'])
-                }
-            })
+        return this.authService.isSignedIn().do(allowed => {
+            if (!allowed) {
+                this.router.navigate(['/auth/signin'])
+            }
+        })
     }
 }

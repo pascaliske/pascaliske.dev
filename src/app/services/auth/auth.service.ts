@@ -71,6 +71,15 @@ export class AuthService {
     }
 
     /**
+     * Returns the current user auth state as observable.
+     *
+     * @returns {Observable<boolean>}
+     */
+    public isSignedIn(): Observable<boolean> {
+        return this.auth.authState.take(1).map(state => !!state)
+    }
+
+    /**
      * Persists the user data in an firebase document.
      *
      * @param {User} user
