@@ -1,21 +1,21 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
-import { TitleService } from '../../services/title/title.service'
+import { TitleService } from '../../../services/title/title.service'
 
 @Component({
-    selector: 'cmp-home-page',
-    templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.scss']
+    selector: 'cmp-sign-in-page',
+    templateUrl: './sign-in-page.component.html',
+    styleUrls: ['./sign-in-page.component.scss']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
+export class SignInPageComponent implements OnDestroy {
     public title: string
 
     private alive: boolean = true
 
     public constructor(private translate: TranslateService, private titleService: TitleService) {
         this.translate
-            .get('PAGE_TITLE_HOME')
+            .get('PAGE_TITLE_SIGNIN')
             .takeWhile(() => this.alive)
             .subscribe(translation => {
                 this.title = translation
@@ -24,12 +24,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
         this.translate.onLangChange
             .takeWhile(() => this.alive)
             .subscribe((event: LangChangeEvent) => {
-                this.title = event.translations.PAGE_TITLE_ABOUT
-                this.titleService.setTitle(event.translations.PAGE_TITLE_HOME)
+                this.title = event.translations.PAGE_TITLE_SIGNIN
+                this.titleService.setTitle(event.translations.PAGE_TITLE_SIGNIN)
             })
     }
-
-    public ngOnInit() {}
 
     public ngOnDestroy() {
         this.alive = false

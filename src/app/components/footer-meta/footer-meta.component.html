@@ -3,10 +3,16 @@
         <div class="cmp-footer-meta__copyright">&copy; {{year}} Pascal Iske</div>
         <ul class="cmp-footer-meta__links">
             <li class="cmp-footer-meta__link">
-                <cmp-link [href]="['/', language, 'imprint']" [text]="'FOOTER_META_IMPRINT'|translate"></cmp-link>
+                <cmp-link [target]="['/', language, 'imprint']" [text]="'FOOTER_META_IMPRINT'|translate"></cmp-link>
             </li>
             <li class="cmp-footer-meta__link">
-                <cmp-link [href]="['/', language, 'privacy']" [text]="'FOOTER_META_PRIVACY'|translate"></cmp-link>
+                <cmp-link [target]="['/', language, 'privacy']" [text]="'FOOTER_META_PRIVACY'|translate"></cmp-link>
+            </li>
+            <li class="cmp-footer-meta__link">
+                <a routerLink="/auth/signin">{{'FOOTER_META_SIGNIN'|translate}}</a>
+            </li>
+            <li class="cmp-footer-meta__link">
+                <a routerLink="/auth/signout">{{'FOOTER_META_SIGNOUT'|translate}}</a>
             </li>
         </ul>
     </div>

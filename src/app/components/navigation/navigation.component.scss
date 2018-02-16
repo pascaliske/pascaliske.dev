@@ -88,6 +88,11 @@ $component: 'cmp-navigation';
                 border-color: $color-primary;
                 color: $color-primary;
             }
+
+            &--fixed {
+                width: 80px;
+                flex: initial;
+            }
         }
     }
 
@@ -114,11 +119,11 @@ $component: 'cmp-navigation';
         font-size: 18px;
         opacity: .5;
 
-        &::before {
+        &--decorated::before {
             content: '<';
         }
 
-        &::after {
+        &--decorated::after {
             content: ' />';
         }
 

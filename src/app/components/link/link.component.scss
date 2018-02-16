@@ -4,6 +4,7 @@ $component: 'cmp-link';
 
 @include cmp-base($component, inline-block) {
     position: relative;
+    cursor: pointer;
 }
 
 @include cmp-modifier($component, inline) {

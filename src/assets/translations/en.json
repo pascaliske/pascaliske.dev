@@ -6,10 +6,17 @@
   "NAVIGATION_REFERENCES": "References",
   "NAVIGATION_BLOG": "Blog",
   "NAVIGATION_CONTACT": "Contact",
+  "NAVIGATION_BACK": "← Back",
+  "NAVIGATION_CLIENTS": "Clients",
   "PAGE_TITLE_HOME": "Home",
   "PAGE_TITLE_ABOUT": "About",
+  "PAGE_TITLE_SIGNIN": "Sign in",
+  "PAGE_TITLE_SIGNOUT": "Sign out",
+  "PAGE_TITLE_CLIENTS": "Clients",
   "FOOTER_META_IMPRINT": "Imprint",
   "FOOTER_META_PRIVACY": "Privacy",
+  "FOOTER_META_SIGNIN": "Sign in",
+  "FOOTER_META_SIGNOUT": "Sign out",
   "FOOTER_LANGUAGE_ENGLISH": "English",
   "FOOTER_LANGUAGE_GERMAN": "German"
 }
