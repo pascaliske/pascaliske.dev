@@ -11,7 +11,7 @@ import { HomePageComponent } from './pages/site/home-page/home-page.component'
 import { AboutPageComponent } from './pages/site/about-page/about-page.component'
 import { NotFoundPageComponent } from './pages/site/not-found-page/not-found-page.component'
 
-const routes: Routes = [
+export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
