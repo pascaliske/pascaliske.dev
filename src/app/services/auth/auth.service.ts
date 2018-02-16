@@ -4,6 +4,8 @@ import { AngularFireAuth } from 'angularfire2/auth'
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/switchMap'
+import 'rxjs/add/operator/take'
+import 'rxjs/add/operator/map'
 
 /**
  * Interface describing a authenticated user.
