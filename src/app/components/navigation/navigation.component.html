@@ -1,9 +1,9 @@
 <div class="cmp-navigation" [ngClass]="{'cmp-navigation--open': mobile && mobileOpen}">
-    <cmp-navigation-button (open)="toggleMobileOpen($event)" *ngIf="mobile"></cmp-navigation-button>
+    <cmp-navigation-button [state]="mobileOpen" (open)="toggleMobileOpen($event)" *ngIf="mobile"></cmp-navigation-button>
     <div class="cmp-navigation__wrapper">
         <ul class="cmp-navigation__list">
             <li class="cmp-navigation__item" routerLinkActive="cmp-navigation__item--active" [routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: language }" *ngFor="let item of items" [ngClass]="{'cmp-navigation__item--fixed': item.options?.fixedWidth}">
-                <a class="cmp-navigation__link" [routerLink]="item.route">
+                <a class="cmp-navigation__link" [routerLink]="item.route" (click)="toggleMobileOpen()">
                     <span class="cmp-navigation__text" [ngClass]="{'cmp-navigation__text--decorated': item.options?.decorated}">{{item.label|translate}}</span>
                 </a>
             </li>

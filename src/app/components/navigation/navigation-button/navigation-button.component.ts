@@ -6,9 +6,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
     styleUrls: ['./navigation-button.component.scss']
 })
 export class NavigationButtonComponent implements OnInit {
-    @Output() public open: EventEmitter<boolean> = new EventEmitter()
+    @Input() public state: boolean = false
 
-    public state: boolean = false
+    @Output() public open: EventEmitter<boolean> = new EventEmitter()
 
     public constructor() {}
 
