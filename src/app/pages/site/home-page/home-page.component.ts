@@ -24,7 +24,7 @@ export class HomePageComponent implements OnDestroy {
         this.translate.onLangChange
             .takeWhile(() => this.alive)
             .subscribe((event: LangChangeEvent) => {
-                this.title = event.translations.PAGE_TITLE_ABOUT
+                this.title = event.translations.PAGE_TITLE_HOME
                 this.titleService.setTitle(event.translations.PAGE_TITLE_HOME)
             })
     }
