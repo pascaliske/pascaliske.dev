@@ -1,0 +1,6 @@
+<div class="cmp-notifications">
+    <div class="cmp-notifications__item cmp-notifications__item--{{item.type}}" *ngFor="let item of items | async">
+        <span class="cmp-notifications__text">{{item.text}}</span>
+        <button class="cmp-notifications__button" (click)="dismiss(item.id)">Delete</button>
+    </div>
+</div>

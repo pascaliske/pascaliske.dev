@@ -1,0 +1,45 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-notifications';
+
+@include cmp-base($component) {
+    &__item {
+        min-width: 450px;
+        height: 80px;
+        padding: 15px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        color: $color-white1;
+        background-color: $color-primary;
+        border: 1px rgba($color-white1, .1) solid;
+        opacity: .6;
+        transition: opacity .15s;
+        cursor: pointer;
+        z-index: 9999;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @for $i from 0 through 4 {
+            &:nth-child(#{$i + 1}) {
+                bottom: 20px + (80px + 20px) * $i;
+            }
+        }
+
+        &--warning {
+            background-color: $color-orange;
+        }
+
+        &--error {
+            background-color: $color-red;
+        }
+    }
+
+    &__text {
+        flex: 1;
+    }
+}
