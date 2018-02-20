@@ -4,8 +4,9 @@ import { Router } from '@angular/router'
 /**
  * LinkComponent
  *
- * - embed `<cmp-link target="" text=""></cmp-link>` for displaying internal links
- * - embed `<cmp-link url="" text=""></cmp-link>` for displaying external links
+ * - use `<cmp-link target="">Text</cmp-link>` for displaying internal links
+ * - use `<cmp-link url="">Text</cmp-link>` for displaying external links
+ * - use `<cmp-link url="" text="Text" [inline]="true"></cmp-link>` for inline links
  */
 @Component({
     selector: 'cmp-link',
@@ -19,6 +20,13 @@ export class LinkComponent {
      * @param {string} text
      */
     @Input() public text: string
+
+    /**
+     * The link icon.
+     *
+     * @param {string} icon
+     */
+    @Input() public icon: string
 
     /**
      * The external link target.
