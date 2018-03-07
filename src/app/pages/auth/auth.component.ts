@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
-import { TranslateService } from '@ngx-translate/core'
-
+import { LanguageService } from '../../services/language/language.service'
 import { NavigationItem } from '../../components/navigation/navigation.component'
 
 /**
@@ -15,14 +14,6 @@ import { NavigationItem } from '../../components/navigation/navigation.component
 })
 export class AuthComponent {
     public pages: Array<NavigationItem> = [
-        {
-            route: '/',
-            label: 'NAVIGATION_BACK',
-            options: {
-                fixedWidth: true,
-                decorated: false
-            }
-        },
         {
             route: 'clients',
             label: 'NAVIGATION_CLIENTS',
@@ -42,10 +33,7 @@ export class AuthComponent {
     /**
      * Initializes the auth component.
      *
-     * @param {TranslateService} translateService
      * @returns {AuthComponent}
      */
-    public constructor(private translateService: TranslateService) {
-        this.translateService.use('en')
-    }
+    public constructor() {}
 }

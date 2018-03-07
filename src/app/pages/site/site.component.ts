@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute, NavigationEnd, ParamMap } from '@angular/router'
-import { TranslateService } from '@ngx-translate/core'
+import { filter, switchMap } from 'rxjs/operators'
+import { LanguageService, Language } from '../../services/language/language.service'
 import { NavigationItem } from '../../components/navigation/navigation.component'
 
 /**
@@ -63,15 +64,15 @@ export class SiteComponent {
     public constructor(
         private router: Router,
         private route: ActivatedRoute,
-        private translateService: TranslateService
+        private languageService: LanguageService
     ) {
-        this.translateService.setDefaultLang('en')
-        this.translateService.use('en')
         this.router.events
-            .filter(event => event instanceof NavigationEnd)
-            .switchMap(event => this.route.paramMap)
+            .pipe(
+                filter(event => event instanceof NavigationEnd),
+                switchMap(event => this.route.paramMap)
+            )
             .subscribe((params: ParamMap) => {
-                this.translateService.use(params.get('language') || 'en')
+                this.languageService.language = params.get('language') as Language
             })
     }
 }

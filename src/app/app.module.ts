@@ -7,21 +7,18 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
-
 import { environment } from '../environments/environment'
-
 import { AppRoutingModule } from './app-routing.module'
 import { AuthModule } from './pages/auth/auth.module'
 import { SiteModule } from './pages/site/site.module'
 import { NotificationsModule } from './components/notifications/notifications.module'
-
 import { AuthService } from './services/auth/auth.service'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
 import { ViewportService } from './services/viewport/viewport.service'
 import { NotificationService } from './services/notification/notification.service'
-
+import { LanguageService } from './services/language/language.service'
 import { AppComponent } from './app.component'
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -59,6 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ScrollService,
         ViewportService,
         NotificationService,
+        LanguageService
     ],
     bootstrap: [AppComponent]
 })
