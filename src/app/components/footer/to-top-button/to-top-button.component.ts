@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
     selector: 'cmp-to-top-button',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core'
     styleUrls: ['./to-top-button.component.scss']
 })
 export class ToTopButtonComponent {
+    /**
+     * The duration of the scroll to top animation.
+     *
+     * @param {number} duration
+     */
+    @Input() public duration: number = 400
+
     /**
      * Initializes the component.
      *
@@ -19,6 +26,20 @@ export class ToTopButtonComponent {
      * @returns {void}
      */
     public scrollToTop(): void {
-        window.scroll(0, 0)
+        const distance = window.scrollY
+        const step = Math.PI / (this.duration / 15)
+        const cosinus = distance / 2
+
+        let counter = 0
+        let margin
+        const scrollInterval = setInterval(() => {
+            if (window.scrollY !== 0) {
+                counter = counter + 1
+                margin = cosinus - cosinus * Math.cos(counter * step)
+                window.scrollTo(0, distance - margin)
+            } else {
+                clearInterval(scrollInterval)
+            }
+        }, 15)
     }
 }

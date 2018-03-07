@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-import { Router, ActivatedRoute } from '@angular/router'
+import { Component } from '@angular/core'
+import { Router } from '@angular/router'
+import { LanguageService } from '../../../services/language/language.service'
 
 /**
  * FooterMetaComponent
@@ -11,14 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router'
     templateUrl: './footer-meta.component.html',
     styleUrls: ['./footer-meta.component.scss']
 })
-export class FooterMetaComponent implements OnInit {
-    /**
-     * The current language.
-     *
-     * @param {string}
-     */
-    public language: string
-
+export class FooterMetaComponent {
     /**
      * The current year.
      *
@@ -27,41 +21,11 @@ export class FooterMetaComponent implements OnInit {
     public year: number = new Date().getFullYear()
 
     /**
-     * Controls if the observebales in this class shoulb be unsubscribed.
-     *
-     * @param {boolean}
-     */
-    private alive: boolean = true
-
-    /**
      * Initializes the component.
      *
      * @param {Router} router
-     * @param {ActivatedRoute} route
+     * @param {LanguageService} languageService
      * @returns {FooterMetaComponent}
      */
-    public constructor(public router: Router, public route: ActivatedRoute) {}
-
-    /**
-     * Fetches the current language and injects it in the component.
-     *
-     * @returns {void}
-     */
-    public ngOnInit(): void {
-        this.route.paramMap
-            .takeWhile(() => this.alive)
-            .subscribe(params => (this.language = params.get('language') || 'en'))
-    }
-
-    /**
-     * Navigates to the current page in the given language.
-     *
-     * @param {string} language - The new language.
-     * @returns {void}
-     */
-    public changeLanguage(language: string): void {
-        const { path } = this.route.snapshot.url[0]
-
-        this.router.navigate(['/', language, path])
-    }
+    public constructor(public router: Router, public languageService: LanguageService) {}
 }

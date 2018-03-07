@@ -1,10 +1,10 @@
 <div class="cmp-language-switch" *ngIf="!isAuthPath()">
     <ul class="cmp-language-switch__languages">
         <li class="cmp-language-switch__language">
-            <a class="cmp-language-switch__link" [routerLink]="['/', 'en', path]">{{'FOOTER_LANGUAGE_ENGLISH'|translate}}</a>
+            <cmp-link class="cmp-language-switch__link" [target]="['/en', path]" [inline]="true" [text]="'FOOTER_LANGUAGE_ENGLISH'|translate"></cmp-link>
         </li>
         <li class="cmp-language-switch__language">
-            <a class="cmp-language-switch__link" [routerLink]="['/', 'de', path]">{{'FOOTER_LANGUAGE_GERMAN'|translate}}</a>
+            <cmp-link class="cmp-language-switch__link" [target]="['/de', path]" [inline]="true" [text]="'FOOTER_LANGUAGE_GERMAN'|translate"></cmp-link>
         </li>
     </ul>
 </div>

@@ -12,7 +12,7 @@ $component: 'cmp-footer';
     justify-content: flex-end;
     background: $color-white2;
 
-    @include use-breakpoint(mini-tablet) {
+    @include use-breakpoint(desktop) {
         padding: 20px $grid-desktop-padding 0;
     }
 }
