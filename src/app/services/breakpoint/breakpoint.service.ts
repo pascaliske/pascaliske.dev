@@ -1,4 +1,5 @@
-import { Injectable, EventEmitter } from '@angular/core'
+import { Injectable } from '@angular/core'
+import { Subject } from 'rxjs/Subject'
 import { debounce } from 'decko'
 
 /**
@@ -50,24 +51,24 @@ export interface ResizeState {
 /**
  * Injectable service for enabling components to subscribe to breakpoint and resize changes.
  *
- * - subscribe `resizeChange` for viewport resize changes, it emits {@link ResizeState}
+ * - subscribe `resize$` for viewport resize changes, it emits {@link ResizeState}
  * - subscribe `breakpointChange` for breakpoint changes, it emits {@link Breakpoint}
  */
 @Injectable()
 export class BreakpointService {
     /**
-     * EventEmitter for resize changes, it emits {@link ResizeState}
+     * Subject for resize changes, it emits {@link ResizeState}
      *
-     * @param {EventEmitter<ResizeState>} scrollChange
+     * @param {Subject<ResizeState>} resize$
      */
-    public resizeChange: EventEmitter<ResizeState> = new EventEmitter()
+    public resize$: Subject<ResizeState> = new Subject()
 
     /**
-     * EventEmitter for breakpoint changes, it emits {@link Breakpoint}
+     * Subject for breakpoint changes, it emits {@link Breakpoint}
      *
-     * @param {EventEmitter<Breakpoint>} breakpointChange
+     * @param {Subject<Breakpoint>} breakpoint$
      */
-    public breakpointChange: EventEmitter<Breakpoint> = new EventEmitter()
+    public breakpoint$: Subject<Breakpoint> = new Subject()
 
     /**
      * Array containing all breakpoints and their size values.
@@ -131,16 +132,18 @@ export class BreakpointService {
             width: window.innerWidth
         }
 
-        // did the breakpoint change also?
+        // check if the breakpoint changed too
         if (this.current !== current) {
             this.current = current
 
-            // this.log.info('[BreakpointService] - breakpoint changed', this.current)
-            this.breakpointChange.emit(this.current)
+            // emit the new breakpoint
+            console.log('breakpoint changed:', current)
+            this.breakpoint$.next(current)
         }
 
-        // this.log.info('[BreakpointService] - resized', dimensions)
-        this.resizeChange.emit(dimensions)
+        // emit the new resize state
+        console.log('resized:', dimensions)
+        this.resize$.next(dimensions)
     }
 
     /**

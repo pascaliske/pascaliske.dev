@@ -1,4 +1,5 @@
-import { Injectable, EventEmitter } from '@angular/core'
+import { Injectable } from '@angular/core'
+import { Subject } from 'rxjs/Subject'
 import { debounce } from 'decko'
 
 /**
@@ -24,11 +25,11 @@ export interface ScrollState {
 @Injectable()
 export class ScrollService {
     /**
-     * EventEmitter for scroll changes.
+     * Subject for scroll changes.
      *
-     * @param {EventEmitter<ScrollState>} scrollChange
+     * @param {Subject<ScrollState>} scrollChange
      */
-    public scrollChange: EventEmitter<ScrollState> = new EventEmitter()
+    public scrollstate$: Subject<ScrollState> = new Subject()
 
     /**
      * Initializes the scroll service.
@@ -45,7 +46,7 @@ export class ScrollService {
      */
     @debounce(100)
     public handleScroll(event: Event): void {
-        this.scrollChange.emit({
+        this.scrollstate$.next({
             scrollX: window.scrollX,
             scrollY: window.scrollY
         })

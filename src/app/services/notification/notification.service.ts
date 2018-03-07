@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore'
 import { Observable } from 'rxjs/Observable'
+import { map } from 'rxjs/operators'
 
 /**
  * Types of notifications.
@@ -45,9 +46,9 @@ export class NotificationService {
         return this.store
             .collection<Notification>('/notifications', ref => ref.limit(5))
             .valueChanges()
-            .map((items: Array<Notification>, index) => {
-                return items.filter(item => item.dismissed === false)
-            })
+            .pipe(
+                map((items: Array<Notification>) => items.filter(item => item.dismissed === false))
+            )
     }
 
     /**

@@ -3,9 +3,8 @@ import { Router } from '@angular/router'
 import { AngularFireAuth } from 'angularfire2/auth'
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs/Observable'
-import 'rxjs/add/operator/switchMap'
-import 'rxjs/add/operator/take'
-import 'rxjs/add/operator/map'
+import { take, map, switchMap } from 'rxjs/operators'
+import { of } from 'rxjs/observable/of'
 
 /**
  * Interface describing a authenticated user.
@@ -28,7 +27,7 @@ export class AuthService {
      *
      * @param {Observable<user>} user
      */
-    public user: Observable<User>
+    public user$: Observable<User>
 
     /**
      * Initializes the auth service.
@@ -41,13 +40,15 @@ export class AuthService {
         private auth: AngularFireAuth,
         private store: AngularFirestore
     ) {
-        this.user = this.auth.authState.switchMap(user => {
-            if (!user) {
-                return Observable.of(null)
-            }
+        this.user$ = this.auth.authState.pipe(
+            switchMap(user => {
+                if (!user) {
+                    return of(null)
+                }
 
-            return this.store.doc<User>(`users/${user.uid}`).valueChanges()
-        })
+                return this.store.doc<User>(`users/${user.uid}`).valueChanges()
+            })
+        )
     }
 
     /**
