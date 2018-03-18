@@ -7,21 +7,19 @@ $component: 'cmp-section';
         width: 100vw;
         margin: 0 auto;
         padding: 20px $grid-mobile-padding;
+        border-bottom: 1px $color-white2 dashed;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: opacity .6s, transform .6s;
 
         @include use-breakpoint(mini-tablet) {
             padding: 40px $grid-desktop-padding;
         }
     }
-
-    &__content {
-        transform: translateY(30px);
-        opacity: 0;
-        transition: opacity .6s, transform .6s;
-    }
 }
 
 @include cmp-modifier($component, 'activated') {
-    &__content {
+    &__wrapper {
         transform: translateY(0);
         opacity: 1;
     }
