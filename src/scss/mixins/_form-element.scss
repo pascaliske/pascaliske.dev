@@ -98,7 +98,7 @@
         height: 22px;
         line-height: 22px;
         padding: 5px 0 0 0;
-        resize: vertical;
+        resize: none;
         transition: height .2s;
     }
 
@@ -148,12 +148,12 @@
 
     &--filled &__control,
     &--focus &__control {
-        min-height: 100px;
+        min-height: 150px;
     }
 
     &--filled &__input,
     &--focus &__input {
-        height: 100px;
+        height: 150px;
     }
 
     &--focus &__line::after {
@@ -163,7 +163,7 @@
 }
 
 @mixin cmp-form-button() {
-    margin-top: 40px;
+    margin-top: 15px;
     margin-left: 20px;
     transition: opacity .2s;
     cursor: pointer;
@@ -174,8 +174,12 @@
 
     &--disabled {
         opacity: .6;
-        pointer-events: none;
         user-select: none;
+        cursor: not-allowed;
+    }
+
+    &--disabled &__button {
+        pointer-events: none;
     }
 }
 
