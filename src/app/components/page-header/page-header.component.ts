@@ -1,14 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
     selector: 'cmp-page-header',
     templateUrl: './page-header.component.html',
     styleUrls: ['./page-header.component.scss']
 })
-export class PageHeaderComponent implements OnInit {
+export class PageHeaderComponent {
     @Input() public title: string
 
-    public constructor() {}
+    @Input() public copy: string
 
-    public ngOnInit() {}
+    public constructor() {}
 }
