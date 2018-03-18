@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
+import { LanguageService } from '../../services/language/language.service'
 
 @Component({
     selector: 'cmp-quick-contact',
     templateUrl: './quick-contact.component.html',
     styleUrls: ['./quick-contact.component.scss']
 })
-export class QuickContactComponent implements OnInit {
-    public constructor() {}
-
-    public ngOnInit() {}
+export class QuickContactComponent {
+    /**
+     * Initializes the component.
+     *
+     * @param {LanguageService} languageService
+     * @returns {FooterMetaComponent}
+     */
+    public constructor(public languageService: LanguageService) {}
 }

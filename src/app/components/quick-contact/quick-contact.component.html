@@ -1,20 +1,25 @@
-<div class="cmp-quick-contact">
-    <ul class="cmp-quick-contact__socials">
-        <li class="cmp-quick-contact__item">
-            <cmp-icon class="cmp-quick-contact__item-icon" name="twitter"></cmp-icon>
-            <cmp-link class="cmp-quick-contact__item-text" text="Twitter" url="https://twitter.com/pascaliske"></cmp-link>
-        </li>
-        <li class="cmp-quick-contact__item">
-            <cmp-icon class="cmp-quick-contact__item-icon" name="xing"></cmp-icon>
-            <cmp-link class="cmp-quick-contact__item-text" text="Xing" url="https://www.xing.com/profile/Pascal_Iske"></cmp-link>
-        </li>
-        <li class="cmp-quick-contact__item">
-            <cmp-icon class="cmp-quick-contact__item-icon" name="linkedin"></cmp-icon>
-            <cmp-link class="cmp-quick-contact__item-text" text="LinkedIn" url="http://linkedin.com"></cmp-link>
-        </li>
-        <li class="cmp-quick-contact__item">
-            <cmp-icon class="cmp-quick-contact__item-icon" name="github"></cmp-icon>
-            <cmp-link class="cmp-quick-contact__item-text" text="GitHub" url="https://github.com/pascaliske"></cmp-link>
-        </li>
-    </ul>
-</div>
+<blockquote class="cmp-quick-contact">
+    <div class="cmp-quick-contact__content">
+        <p class="cmp-quick-contact__text" [innerHTML]="'QUICK_CONTACT_TEXT'|translate"></p>
+        <ul class="cmp-quick-contact__socials">
+            <li class="cmp-quick-contact__item" *ngIf="(languageService.language$  | async) as language">
+                <cmp-link class="cmp-quick-contact__item-link" [target]="['/', language, 'contact']" [text]="'QUICK_CONTACT_LINK_CONTACTFORM'|translate" icon="wpforms"></cmp-link>
+            </li>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" url="mailto:info@pascal-iske.de" [text]="'QUICK_CONTACT_LINK_EMAIL'|translate" icon="envelope"></cmp-link>
+            </li>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" url="https://twitter.com/pascaliske" [text]="'QUICK_CONTACT_LINK_TWITTER'|translate" icon="twitter"></cmp-link>
+            </li>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" url="https://www.xing.com/profile/Pascal_Iske" [text]="'QUICK_CONTACT_LINK_XING'|translate" icon="xing"></cmp-link>
+            </li>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" url="http://linkedin.com" [text]="'QUICK_CONTACT_LINK_LINKEDIN'|translate" icon="linkedin"></cmp-link>
+            </li>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" url="https://github.com/pascaliske" [text]="'QUICK_CONTACT_LINK_GITHUB'|translate" icon="github"></cmp-link>
+            </li>
+        </ul>
+    </div>
+</blockquote>
