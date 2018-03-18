@@ -1,0 +1,184 @@
+@mixin cmp-form-element() {
+    @include use-text(copy);
+    margin-top: 40px;
+    margin-bottom: 5px;
+
+    &__errors {
+        margin-top: 10px;
+    }
+}
+
+@mixin cmp-form-input() {
+    &__control {
+        height: 35px;
+        line-height: 35px;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        transition: color .2s;
+    }
+
+    &__label {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-primary;
+        opacity: .5;
+        transition: all .2s;
+        pointer-events: none;
+    }
+
+    &__line {
+        &::before,
+        &::after {
+            height: 4px;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            display: block;
+            opacity: .2;
+            transition: width .2s, opacity .2s, background .2s;
+            content: ' ';
+        }
+
+        &::before {
+            width: 100%;
+            background: rgba($color-grey1, .8);
+        }
+
+        &::after {
+            width: 0;
+            background: $color-primary;
+        }
+    }
+
+    &--filled &__label,
+    &--focus &__label {
+        font-size: ms(-1);
+        height: 15px;
+        line-height: 15px;
+        top: -15px;
+    }
+
+    &--focus &__line::after {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &--invalid &__label,
+    &--invalid &__input {
+        color: $color-red;
+    }
+
+    &--invalid &__line::before,
+    &--invalid &__line::after {
+        background: $color-red;
+    }
+}
+
+@mixin cmp-form-textarea() {
+    &__control {
+        min-height: 35px;
+        line-height: 35px;
+        margin-top: 20px;
+        position: relative;
+        transition: min-height .2s;
+    }
+
+    &__input {
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        padding: 5px 0 0 0;
+        resize: vertical;
+        transition: height .2s;
+    }
+
+    &__label {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-primary;
+        opacity: .5;
+        transition: all .2s;
+        pointer-events: none;
+    }
+
+    &__line {
+        &::before,
+        &::after {
+            height: 4px;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            display: block;
+            opacity: .2;
+            transition: width .2s, opacity .2s, background .2s;
+            content: ' ';
+        }
+
+        &::before {
+            width: 100%;
+            background: rgba($color-grey1, .8);
+        }
+
+        &::after {
+            width: 0;
+            background: $color-primary;
+        }
+    }
+
+    &--filled &__label,
+    &--focus &__label {
+        font-size: ms(-1);
+        height: 15px;
+        line-height: 15px;
+        top: -15px;
+    }
+
+    &--filled &__control,
+    &--focus &__control {
+        min-height: 100px;
+    }
+
+    &--filled &__input,
+    &--focus &__input {
+        height: 100px;
+    }
+
+    &--focus &__line::after {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@mixin cmp-form-button() {
+    margin-top: 40px;
+    margin-left: 20px;
+    transition: opacity .2s;
+    cursor: pointer;
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &--disabled {
+        opacity: .6;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+@mixin cmp-form-error() {
+
+}

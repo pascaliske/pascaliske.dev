@@ -1,0 +1,40 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-email';
+
+@include cmp-base($component, block) {
+    @include cmp-form-element();
+    @include cmp-form-input();
+
+    &__suggestions {
+        width: 100%;
+        max-height: 250px;
+        position: absolute;
+        margin-top: 5px;
+        overflow-y: scroll;
+        z-index: 998;
+    }
+
+    &__suggestion-list {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background: $color-white2;
+        color: $color-primary;
+    }
+
+    &__suggestion-item {
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        position: relative;
+        cursor: pointer;
+        pointer-events: all;
+        user-select: none;
+        z-index: 999;
+    }
+
+    &__input:focus ~ &__suggestions {
+        display: block;
+    }
+}

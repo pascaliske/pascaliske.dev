@@ -1,0 +1,17 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-column';
+
+@include cmp-base($component, block) {
+    &--flex {
+        display: flex;
+    }
+
+    &--align-left {
+        justify-content: flex-start;
+    }
+
+    &--align-right {
+        justify-content: flex-end;
+    }
+}

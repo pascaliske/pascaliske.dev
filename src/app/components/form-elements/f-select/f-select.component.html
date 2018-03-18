@@ -1,0 +1,15 @@
+<div class="cmp-f-select" [ngClass]="getClasses('cmp-f-select')">
+    <div class="cmp-f-select__control">
+        <select class="cmp-f-select__input" [id]="name" [name]="name" [ngModel]="model" (ngModelChange)="modelChange.emit($event)" [formControl]="fc" (focus)="focusIn()" (focusout)="focusOut()">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <label class="cmp-f-select__label" [for]="name">{{label}}</label>
+        <span class="cmp-f-select__line"></span>
+        <span class="cmp-f-select__icon">
+            <i class="fa fa-chevron-down"></i>
+        </span>
+    </div>
+    <cmp-f-error class="cmp-f-select__errors" [fc]="fc" [messages]="messages" ></cmp-f-error>
+</div>

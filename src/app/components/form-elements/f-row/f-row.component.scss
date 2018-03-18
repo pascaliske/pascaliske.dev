@@ -1,0 +1,60 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-row';
+
+@include cmp-base($component, block) {
+    display: flex;
+    flex-direction: row;
+
+    &--layout-1 > *,
+    &--layout-1-1 > *,
+    &--layout-1-2 > *,
+    &--layout-2-1 > *,
+    &--layout-1-1-1 > * {
+        display: block;
+    }
+
+    &--layout-1 > * {
+        width: span(12);
+    }
+
+    &--layout-1-1 > * {
+        width: span(6);
+
+        &:first-child {
+            margin-right: gutter();
+        }
+    }
+
+    &--layout-1-2 {
+        &:first-child {
+            width: span(4);
+            margin-right: gutter();
+        }
+
+        &:last-child {
+            width: span(8);
+            margin-left: gutter();
+        }
+    }
+
+    &--layout-2-1 {
+        &:first-child {
+            width: span(8);
+            margin-right: gutter();
+        }
+
+        &:last-child {
+            width: span(4);
+            margin-left: gutter();
+        }
+    }
+
+    &--layout-1-1-1 > * {
+        width: span(4);
+
+        &:nth-child(n):not(:last-child) {
+            margin-right: gutter();
+        }
+    }
+}

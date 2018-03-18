@@ -1,0 +1,9 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-error';
+
+@include cmp-base($component, block) {
+    @include cmp-form-element();
+    @include cmp-form-error();
+    margin: 0;
+}

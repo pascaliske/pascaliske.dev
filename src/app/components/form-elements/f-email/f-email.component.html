@@ -1,0 +1,13 @@
+<div class="cmp-f-email" [ngClass]="getClasses('cmp-f-email')">
+    <div class="cmp-f-email__control">
+        <input class="cmp-f-email__input" type="email" [id]="name" [name]="name" [ngModel]="model" (ngModelChange)="modelChange.emit($event)" [formControl]="fc" [autocomplete]="autocomplete" (keyup)="suggest($event)" (focus)="focusIn()" (focusout)="focusOut()" #inputField />
+        <label class="cmp-f-email__label" [for]="name">{{label}}</label>
+        <span class="cmp-f-email__line"></span>
+        <div class="cmp-f-email__suggestions" *ngIf="(suggestions$ | async) as items">
+            <div class="cmp-f-email__suggestion-list" *ngIf="items.length > 0">
+                <div class="cmp-f-email__suggestion-item" (click)="use($event)" *ngFor="let item of items">{{item}}</div>
+            </div>
+        </div>
+    </div>
+    <cmp-f-error class="cmp-f-email__errors" [fc]="fc" [messages]="messages" ></cmp-f-error>
+</div>

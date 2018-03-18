@@ -1,0 +1,35 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-button';
+
+@include cmp-base($component, block) {
+    @include cmp-form-button();
+
+    &__button {
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+@include cmp-modifier($component, 'primary') {
+    &__button {
+        background: rgba($color-primary, .6);
+        color: $color-white1;
+        transition: background .2s;
+
+        &:hover {
+            background: $color-primary;
+        }
+    }
+}
+
+@include cmp-modifier($component, 'secondary') {
+    &__button {
+        background: $color-white2;
+        color: $color-primary;
+    }
+}
+
+@include cmp-modifier($component, 'disabled') {
+
+}

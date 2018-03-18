@@ -1,0 +1,5 @@
+<div class="cmp-f-error">
+    <div class="cmp-f-error__errors" *ngIf="messages && fc.touched && !fc.valid && (fc.errors|objectKeys) as errors">
+        <div *ngFor="let error of errors" [innerHTML]="messages[error]"></div>
+    </div>
+</div>
