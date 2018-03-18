@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
-import { Router, ActivatedRoute, Route } from '@angular/router'
+import { Router, ActivatedRoute, Route, UrlSegment, NavigationEnd } from '@angular/router'
+import { filter, switchMap } from 'rxjs/operators'
 import { routes } from '../../../app-routing.module'
 
 @Component({
@@ -8,15 +9,22 @@ import { routes } from '../../../app-routing.module'
     styleUrls: ['./language-switch.component.scss']
 })
 export class LanguageSwitchComponent {
-    public path: string = 'home'
+    public path: string
 
-    public constructor(public route: ActivatedRoute) {
-        this.path = this.route.snapshot.firstChild.url[0].path
+    public constructor(private router: Router, public route: ActivatedRoute) {
+        this.router.events
+            .pipe(
+                filter(event => event instanceof NavigationEnd),
+                switchMap(() => this.route.firstChild.url)
+            )
+            .subscribe(([urlSegment]: Array<UrlSegment>) => {
+                this.path = urlSegment.path
+            })
     }
 
     public isAuthPath(): boolean {
         const { children } = routes.find(item => item.path === 'auth')
 
-        return !!children.find(item => item.path.includes(this.path))
+        return !!children.find(item => item.path === this.path)
     }
 }
