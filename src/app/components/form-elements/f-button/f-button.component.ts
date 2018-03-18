@@ -11,13 +11,15 @@ export class FButtonComponent {
 
     @Input() public text: string
 
-    @Input() public theme: string
+    @Input() public theme: string = ''
 
     @Input() public disabled: boolean = false
 
     public constructor() {}
 
     public getThemeModifiers(): object {
-        return this.theme.split(',').reduce((p, c) => ({ [`cmp-f-button--${c}`]: true, ...p }), {})
+        return this.theme
+            .split(',')
+            .reduce((prev, current) => ({ [`cmp-f-button--${current}`]: true, ...prev }), {})
     }
 }
