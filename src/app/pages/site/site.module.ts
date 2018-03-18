@@ -6,6 +6,11 @@ import { NavigationModule } from '../../components/navigation/navigation.module'
 import { FooterModule } from '../../components/footer/footer.module'
 import { HomePageModule } from './home-page/home-page.module'
 import { AboutPageModule } from './about-page/about-page.module'
+import { ReferencesPageModule } from './references-page/references-page.module'
+import { BlogPageModule } from './blog-page/blog-page.module'
+import { ContactPageModule } from './contact-page/contact-page.module'
+import { ImprintPageModule } from './imprint-page/imprint-page.module'
+import { PrivacyPageModule } from './privacy-page/privacy-page.module'
 import { NotFoundPageModule } from './not-found-page/not-found-page.module'
 
 import { SiteComponent } from './site.component'
@@ -19,6 +24,11 @@ import { SiteComponent } from './site.component'
         FooterModule,
         HomePageModule,
         AboutPageModule,
+        ReferencesPageModule,
+        BlogPageModule,
+        ContactPageModule,
+        ImprintPageModule,
+        PrivacyPageModule,
         NotFoundPageModule
     ],
     declarations: [SiteComponent]

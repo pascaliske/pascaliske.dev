@@ -1,0 +1,7 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-contact-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
+}

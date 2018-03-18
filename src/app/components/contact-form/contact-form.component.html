@@ -1,0 +1,46 @@
+<div class="cmp-contact-form">
+    <div class="cmp-contact-form__information">
+        <cmp-headline-h4 text="Form Model"></cmp-headline-h4>
+        <cmp-code [code]="contactForm.valid"></cmp-code>
+        <cmp-code [code]="contactForm.value"></cmp-code>
+
+        <cmp-headline-h4 text="Data Model"></cmp-headline-h4>
+        <cmp-code [code]="model"></cmp-code>
+    </div>
+    <form class="cmp-contact-form__form" [formGroup]="contactForm" (submit)="submit($event)">
+        <cmp-f-row>
+            <cmp-f-column>
+                <cmp-f-input name="name" label="Name" [(model)]="model.name" [fc]="name" autocomplete="name"></cmp-f-input>
+            </cmp-f-column>
+        </cmp-f-row>
+        <cmp-f-row>
+            <cmp-f-column>
+                <cmp-f-email name="email" label="E-Mail" [(model)]="model.email" [fc]="email" autocomplete="email"></cmp-f-email>
+            </cmp-f-column>
+        </cmp-f-row>
+        <cmp-f-row>
+            <cmp-f-column>
+                <cmp-f-phone name="phone" label="Phone" [(model)]="model.phone" [fc]="phone" autocomplete="phone"></cmp-f-phone>
+            </cmp-f-column>
+        </cmp-f-row>
+
+        <cmp-f-row>
+            <cmp-f-column>
+                <cmp-f-input name="subject" label="Subject" [(model)]="model.subject" [fc]="subject"></cmp-f-input>
+            </cmp-f-column>
+        </cmp-f-row>
+
+        <cmp-f-row>
+            <cmp-f-column>
+                <cmp-f-text-area name="message" label="Message" [(model)]="model.message" [fc]="message"></cmp-f-text-area>
+            </cmp-f-column>
+        </cmp-f-row>
+
+        <cmp-f-row>
+            <cmp-f-column [flex]="true" align="right">
+                <cmp-f-button text="Reset" theme="secondary" [disabled]="contactForm.invalid" (click)="reset()"></cmp-f-button>
+                <cmp-f-button text="Submit" type="submit" theme="primary" [disabled]="contactForm.invalid"></cmp-f-button>
+            </cmp-f-column>
+        </cmp-f-row>
+    </form>
+</div>

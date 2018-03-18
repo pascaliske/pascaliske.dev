@@ -1,0 +1,20 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-contact-form';
+
+@include cmp-base($component, block) {
+    display: flex;
+
+    &__information,
+    &__form {
+        flex: 1;
+    }
+
+    &__information {
+        margin-right: 10px;
+    }
+
+    &__form {
+        margin-left: 10px;
+    }
+}
