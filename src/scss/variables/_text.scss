@@ -125,6 +125,13 @@ $text-settings: (
             line-height: 1.5
         )
     ),
+    copy-bold: (
+        all: (
+            font-settings: bold,
+            font-size: ms(0),
+            line-height: 1.5
+        )
+    ),
     code: (
         all: (
             font-settings: monospace,
