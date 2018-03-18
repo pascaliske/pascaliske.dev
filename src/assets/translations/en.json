@@ -33,5 +33,20 @@
   "FOOTER_META_SIGNIN": "Sign in",
   "FOOTER_META_SIGNOUT": "Sign out",
   "FOOTER_LANGUAGE_ENGLISH": "English",
-  "FOOTER_LANGUAGE_GERMAN": "German"
+  "FOOTER_LANGUAGE_GERMAN": "German",
+  "HOME_PAGE_WELCOME_HEADLINE": "Welcome!",
+  "HOME_PAGE_WELCOME_COPY": "Are you looking for a website for your small business, easy to edit but still in a beautiful and clean design? Do you need an effective, inexpensive web appearance? Then you'd better watch out for an independent developer.",
+  "HOME_PAGE_DETAILS_HEADLINE": "You're exactly right here!",
+  "HOME_PAGE_DETAILS_COPY": "I'm offering websites in modern design with all those useful features, that empower your small business or your club to be present in the internet, even better than before! For your website I'll be using <a href=\"http://wordpress.org/\">WordPress</a> under the hood, one of the most commonly used <a href=\"https://en.wikipedia.org/wiki/Content_management_system\">Content-Management-Systems</a> in the world. This enables you to easily manage your site's contents by yourself after the initial launch.<br /><br />Long story short: I'll combine your individual and uniqe design-wishes with the comfort and the simplicity of a worldwide acknowledged system.<br /><br />When building a client's website, it is really important to me that I can fulfill all requirements and wishes of the client, so that you're truly satisfied with the result of my work!<br /><br />Curious? On this page you'll find some of my references and here you may get more information about me.",
+  "HOME_PAGE_DETAILS_GET_STARTED": "Are you ready to start? Click here!",
+  "ABOUT_PAGE_BIO_HEADLINE": "Bio",
+  "ABOUT_PAGE_BIO_COPY": "For nearly ten years I'm developing websites. First beside school, later I registered a small one-man-business, named 'PI-Webdesign'. Now I'm working in a big and renowned digital agency.<br /> <br />In my opinion modern website designs of course also include Responsive Design for different mobile devices.",
+  "ABOUT_PAGE_TECHNICALLY_HEADLINE": "To technically?",
+  "ABOUT_PAGE_TECHNICALLY_COPY": "No problem! You do not have to care about these technical terms. Because finally it is my job to build your website with this knowledge.",
+  "ABOUT_PAGE_ADVANTAGES_HEADLINE": "Advantages",
+  "ABOUT_PAGE_ADVANTAGES_COPY": "Benefit from professional experience combined with indiviual consulting of an independent developer.",
+  "ABOUT_PAGE_EXAMPLES_HEADLINE": "Examples",
+  "ABOUT_PAGE_EXAMPLES_COPY": "You can find some of my references on this page.",
+  "REFERENCES_PAGE_INTRO_COPY": "On this page you'll find some of my references. Sites I've realized over the last few years. Besides that I've listed a few special and interesting things about state-of-the-art websites.<br /><br />For more information about the projects, just click the button More details beneath each project. There you'll find a better depiction and some characteristic features of the appropriate website.",
+  "BLOG_PAGE_INTRO_COPY": "There are no posts available at this time. Please come back later!"
 }

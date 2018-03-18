@@ -1,6 +1,22 @@
 <div class="cmp-about-page">
     <cmp-page-header [title]="title"></cmp-page-header>
-    <cmp-section [id]="'quick-contact'">
+    <cmp-section id="bio">
+        <cmp-headline-h4 [text]="'ABOUT_PAGE_BIO_HEADLINE'|translate"></cmp-headline-h4>
+        <cmp-copy [text]="'ABOUT_PAGE_BIO_COPY'|translate"></cmp-copy>
+    </cmp-section>
+    <cmp-section id="technically">
+        <cmp-headline-h4 [text]="'ABOUT_PAGE_TECHNICALLY_HEADLINE'|translate"></cmp-headline-h4>
+        <cmp-copy [text]="'ABOUT_PAGE_TECHNICALLY_COPY'|translate"></cmp-copy>
+    </cmp-section>
+    <cmp-section id="advantages">
+        <cmp-headline-h4 [text]="'ABOUT_PAGE_ADVANTAGES_HEADLINE'|translate"></cmp-headline-h4>
+        <cmp-copy [text]="'ABOUT_PAGE_ADVANTAGES_COPY'|translate"></cmp-copy>
+    </cmp-section>
+    <cmp-section id="examples">
+        <cmp-headline-h4 [text]="'ABOUT_PAGE_EXAMPLES_HEADLINE'|translate"></cmp-headline-h4>
+        <cmp-copy [text]="'ABOUT_PAGE_EXAMPLES_COPY'|translate"></cmp-copy>
+    </cmp-section>
+    <cmp-section id="quick-contact">
         <cmp-quick-contact></cmp-quick-contact>
     </cmp-section>
 </div>
