@@ -3,5 +3,13 @@
 $component: 'cmp-copy';
 
 @include cmp-base($component) {
-    @include use-text(copy);
+    &__text {
+        @include use-text(copy);
+    }
+}
+
+@include cmp-modifier($component, 'bold') {
+    &__text {
+        @include use-text(copy-bold);
+    }
 }

@@ -6,7 +6,15 @@ import { Component, Input } from '@angular/core'
     styleUrls: ['./copy.component.scss']
 })
 export class CopyComponent {
+    @Input() public theme: string = ''
+
     @Input() public text: string
 
     public constructor() {}
+
+    public getThemeModifiers(): object {
+        return this.theme
+            .split(',')
+            .reduce((prev, current) => ({ [`cmp-copy--${current}`]: true, ...prev }), {})
+    }
 }
