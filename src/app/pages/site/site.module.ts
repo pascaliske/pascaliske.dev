@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-
 import { AppRoutingModule } from '../../app-routing.module'
 import { HeaderModule } from '../../components/header/header.module'
 import { NavigationModule } from '../../components/navigation/navigation.module'
