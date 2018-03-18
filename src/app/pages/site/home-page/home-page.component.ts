@@ -1,35 +1,16 @@
-import { Component, OnDestroy } from '@angular/core'
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
-import { takeWhile } from 'rxjs/operators'
+import { Component } from '@angular/core'
+import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../services/title/title.service'
+import { Page } from '../../page'
 
 @Component({
     selector: 'cmp-home-page',
     templateUrl: './home-page.component.html',
     styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnDestroy {
-    public title: string
-
-    private alive: boolean = true
-
-    public constructor(private translate: TranslateService, private titleService: TitleService) {
-        this.translate
-            .get('PAGE_TITLE_HOME')
-            .pipe(takeWhile(() => this.alive))
-            .subscribe(translation => {
-                this.title = translation
-                this.titleService.setTitle(translation)
-            })
-        this.translate.onLangChange
-            .pipe(takeWhile(() => this.alive))
-            .subscribe((event: LangChangeEvent) => {
-                this.title = event.translations.PAGE_TITLE_HOME
-                this.titleService.setTitle(event.translations.PAGE_TITLE_HOME)
-            })
-    }
-
-    public ngOnDestroy() {
-        this.alive = false
+export class HomePageComponent extends Page {
+    public constructor(public translate: TranslateService, public titleService: TitleService) {
+        super(translate, titleService)
+        this.fetchTitle('PAGE_TITLE_HOME')
     }
 }
