@@ -1,12 +1,10 @@
 import { Component, HostListener } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
-
+import { filter } from 'rxjs/operators'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
-
-import 'rxjs/add/operator/filter'
 
 /**
  * AppComponent
@@ -47,7 +45,7 @@ export class AppComponent {
         this.titleService.setDivider('//')
         this.titleService.setSuffix('Pascal Iske')
         this.router.events
-            .filter(event => event instanceof NavigationEnd)
+            .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe((event: NavigationEnd) => {
                 setTimeout(() => this.show(), 400)
             })

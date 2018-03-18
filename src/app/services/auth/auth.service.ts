@@ -79,7 +79,7 @@ export class AuthService {
      * @returns {Observable<boolean>}
      */
     public isSignedIn(): Observable<boolean> {
-        return this.auth.authState.take(1).map(state => !!state)
+        return this.auth.authState.pipe(take(1), map(state => !!state))
     }
 
     /**
