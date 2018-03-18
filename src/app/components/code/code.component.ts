@@ -1,11 +1,4 @@
-import {
-    Component,
-    AfterViewInit,
-    ViewEncapsulation,
-    Input,
-    ElementRef,
-    ViewChild
-} from '@angular/core'
+import { Component, ViewEncapsulation, Input } from '@angular/core'
 import * as hljs from 'highlight.js'
 
 @Component({
@@ -14,7 +7,7 @@ import * as hljs from 'highlight.js'
     styleUrls: ['./code.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class CodeComponent implements AfterViewInit {
+export class CodeComponent {
     /**
      * Input property to specify the code language.
      *
@@ -25,52 +18,39 @@ export class CodeComponent implements AfterViewInit {
     /**
      * Input property to inject the code itself.
      *
-     * @param {string} language - The code.
+     * @param {any} language - The code.
      */
-    @Input() public code: string
-
-    /**
-     * Element reference to the code block.
-     *
-     * @param {ElementRef} codeRef - An reference to the dom elment.
-     */
-    @ViewChild('codeRef') private codeRef: ElementRef
+    @Input() public code: any
 
     /**
      * Initializes the component and configures highlight js.
      *
-     * @param {ElementRef} element - The root element of the component.
      * @returns {CodeComponent}
      */
-    public constructor(private element: ElementRef) {
+    public constructor() {
         hljs.configure({
             classPrefix: 'cmp-code__'
         })
     }
 
     /**
-     * Parses the code with highlight js and injects the result into the dom reference.
-     *
-     * @returns {void}
-     */
-    public ngAfterViewInit(): void {
-        this.codeRef.nativeElement.innerHTML = this.parse(this.language, this.code)
-    }
-
-    /**
      * Highlights the given code for the given language or detects the language itself.
      *
-     * @param {string} language - The language to highlight for.
-     * @param {string} code - The code to highlight.
+     * @param {any} code - The code to highlight.
      * @returns {string}
      */
-    private parse(language: string, code: string): string {
+    public parse(code: any): string {
+        // auto parse non string values
+        if (typeof code !== 'string') {
+            code = JSON.stringify(code, null, 2)
+        }
+
         // auto detect language
-        if (!language || language === '') {
-            return hljs.highlightAuto(this.code).value
+        if (!this.language || this.language === '') {
+            return hljs.highlightAuto(code).value
         }
 
         // highlight code for given language
-        return hljs.highlight(language, this.code).value
+        return hljs.highlight(this.language, code).value
     }
 }
