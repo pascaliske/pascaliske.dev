@@ -11,6 +11,7 @@ import { Page } from '../../page'
 export class ReferencesPageComponent extends Page {
     public constructor(public translate: TranslateService, public titleService: TitleService) {
         super(translate, titleService)
+
         this.fetchTitle('PAGE_TITLE_REFERENCES')
     }
 }
