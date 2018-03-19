@@ -60,6 +60,26 @@ textarea {
 }
 
 .md {
+    &-link {
+        @include link();
+        display: inline-block;
+
+        &__text::after {
+            bottom: -1px;
+        }
+    }
+
+    &-list {
+        &__item {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        &__item > * {
+            margin-left: -5px;
+        }
+    }
+
     &-bold {
         @include use-font(bold);
         color: $color-primary;

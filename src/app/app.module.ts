@@ -32,6 +32,17 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     renderer.strong = (text: string): string => `<strong class="md-bold">${text}</strong>`
     renderer.em = (text: string): string => `<em class="md-italic">${text}</em>`
     renderer.hr = (): string => '<div class="md-divider"></div>'
+    renderer.link = (href: string, title: string, text: string): string => {
+        const content: string = `<span class="md-link__text">${text}</span>`
+        return `<a class="md-link" href="${href}" title="${title}">${content}</a>`
+    }
+    renderer.list = (body: string, ordered: boolean): string => {
+        if (ordered) {
+            return `<ol class="md-list ordered">${body}</ol>`
+        }
+        return `<ul class="md-list">${body}</ul>`
+    }
+    renderer.listitem = (text: string): string => `<li class="md-list__item">${text}</li>`
 
     return {
         gfm: true,
