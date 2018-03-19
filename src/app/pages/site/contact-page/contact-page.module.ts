@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { ReactiveFormsModule } from '@angular/forms'
 import { TranslateModule } from '@ngx-translate/core'
-import { SectionModule } from '../../../components/section/section.module'
 import { PageHeaderModule } from '../../../components/page-header/page-header.module'
-import { ContactFormModule } from '../../../components/contact-form/contact-form.module'
+import { SectionModule } from '../../../components/section/section.module'
+import { HeadlinesModule } from '../../../components/headlines/headlines.module'
+import { CopyModule } from '../../../components/copy/copy.module'
+import { FormElementsModule } from '../../../components/form-elements/form-elements.module'
+import { CodeModule } from '../../../components/code/code.module'
 import { ContactPageComponent } from './contact-page.component'
 
 @NgModule({
     imports: [
         CommonModule,
+        ReactiveFormsModule,
         TranslateModule.forChild(),
-        SectionModule,
         PageHeaderModule,
-        ContactFormModule
+        SectionModule,
+        HeadlinesModule,
+        CopyModule,
+        FormElementsModule,
+        CodeModule
     ],
     declarations: [ContactPageComponent]
 })

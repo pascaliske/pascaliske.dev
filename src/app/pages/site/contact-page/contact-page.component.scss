@@ -4,4 +4,21 @@ $component: 'cmp-contact-page';
 
 @include cmp-base($component) {
     @include cmp-page();
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__information,
+    &__form {
+        flex: 1;
+    }
+
+    &__information {
+        margin-right: 20px;
+    }
+
+    &__form {
+        margin-left: 20px;
+    }
 }
