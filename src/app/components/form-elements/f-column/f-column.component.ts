@@ -1,19 +1,16 @@
-import { Component, Input } from '@angular/core'
-
-export enum FColumnAlign {
-    LEFT = 'left',
-    RIGHT = 'right'
-}
+import { Component, ViewEncapsulation, Input } from '@angular/core'
+import { Alignments } from './typings'
 
 @Component({
     selector: 'cmp-f-column',
     templateUrl: './f-column.component.html',
-    styleUrls: ['./f-column.component.scss']
+    styleUrls: ['./f-column.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class FColumnComponent {
     @Input() public flex: boolean = false
 
-    @Input() public align: FColumnAlign = FColumnAlign.LEFT
+    @Input() public align: Alignments = 'left'
 
     public constructor() {}
 }

@@ -9,9 +9,17 @@ $component: 'cmp-f-column';
 
     &--align-left {
         justify-content: flex-start;
+
+        & > *:not(:last-child) {
+            margin-right: 20px;
+        }
     }
 
     &--align-right {
         justify-content: flex-end;
+
+        & > *:not(:first-child) {
+            margin-left: 20px;
+        }
     }
 }
