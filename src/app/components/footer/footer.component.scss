@@ -4,15 +4,21 @@ $component: 'cmp-footer';
 
 @include cmp-base($component) {
     width: 100vw;
-    height: $footer-height;
+    height: $footer-height-mobile;
     margin: 0 auto;
-    padding: 20px $grid-mobile-padding 0;
+    padding-left: $grid-mobile-padding;
+    padding-right: $grid-mobile-padding;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     border-top: 1px $color-white2 solid;
 
+    @include use-breakpoint(mini-tablet) {
+        height: $footer-height-mini-tablet;
+    }
+
     @include use-breakpoint(desktop) {
-        padding: 20px $grid-desktop-padding 0;
+        padding-left: $grid-desktop-padding;
+        padding-right: $grid-desktop-padding;
     }
 }

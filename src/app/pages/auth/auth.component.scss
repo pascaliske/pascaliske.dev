@@ -5,7 +5,11 @@ $component: 'cmp-auth';
 @include cmp-base($component) {
     min-height: 100vh;
     position: relative;
-    padding-bottom: ($footer-height - 1);
+    padding-bottom: ($footer-height-mobile - 1);
+
+    @include use-breakpoint(mini-tablet) {
+        padding-bottom: ($footer-height-mini-tablet - 1);
+    }
 
     &__navigation {
         position: sticky;
