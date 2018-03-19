@@ -137,12 +137,10 @@ export class BreakpointService {
             this.current = current
 
             // emit the new breakpoint
-            console.log('breakpoint changed:', current)
             this.breakpoint$.next(current)
         }
 
         // emit the new resize state
-        console.log('resized:', dimensions)
         this.resize$.next(dimensions)
     }
 
