@@ -32,7 +32,7 @@ export class HeaderComponent implements AfterViewInit {
      * @returns {void}
      */
     public ngAfterViewInit(): void {
-        setTimeout(() => this.fadeIn(), 600)
+        setTimeout(() => this.fadeIn(), 100)
     }
 
     /**
@@ -42,6 +42,13 @@ export class HeaderComponent implements AfterViewInit {
      */
     private fadeIn(): void {
         const timeline = new TimelineLite()
+
+        timeline.add(
+            TweenLite.to(this.titleRef.nativeElement, 0.4, {
+                stroke: 'rgba(255, 255, 255, 1)'
+            }),
+            0
+        )
 
         timeline.add(
             TweenLite.to(this.titleRef.nativeElement, 1.6, {

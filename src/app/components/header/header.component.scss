@@ -29,8 +29,8 @@ $component: 'cmp-header';
 
     &__title {
         @include use-text(title);
-        fill: rgba(255, 255, 255, 0);
-        stroke: $color-white1;
+        fill: rgba($color-white1, 0);
+        stroke: rgba($color-white1, 0);
         stroke-width: 1px;
         stroke-dasharray: 100%;
         stroke-dashoffset: 100%;
