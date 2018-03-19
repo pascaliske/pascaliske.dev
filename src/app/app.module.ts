@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
+import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { environment } from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { AuthModule } from './pages/auth/auth.module'
@@ -23,6 +24,20 @@ import { AppComponent } from './app.component'
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, '/assets/translations/')
+}
+
+export function MarkdownOptionsFactory(): MarkedOptions {
+    const renderer = new MarkedRenderer()
+
+    renderer.strong = (text: string): string => `<strong class="md-bold">${text}</strong>`
+    renderer.em = (text: string): string => `<em class="md-italic">${text}</em>`
+    renderer.hr = (): string => '<div class="md-divider"></div>'
+
+    return {
+        gfm: true,
+        tables: true,
+        renderer: renderer
+    }
 }
 
 @NgModule({
@@ -43,6 +58,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         NgProgressModule.forRoot(),
         NgProgressHttpModule,
         NgProgressRouterModule,
+        MarkdownModule.forRoot({
+            provide: MarkedOptions,
+            useFactory: MarkdownOptionsFactory
+        }),
         AppRoutingModule,
         AuthModule,
         SiteModule,
