@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core'
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core'
+import { TimelineLite, TweenLite } from 'gsap'
 
 @Component({
     selector: 'cmp-header',
@@ -7,11 +8,18 @@ import { Component, AfterViewInit } from '@angular/core'
 })
 export class HeaderComponent implements AfterViewInit {
     /**
-     * Controls the active state of the component.
+     * Element reference of the title element.
      *
-     * @param {boolean}
+     * @param {ElementRef}
      */
-    public activated: boolean = false
+    @ViewChild('titleRef') public titleRef: ElementRef
+
+    /**
+     * Element reference of the title element.
+     *
+     * @param {ElementRef}
+     */
+    @ViewChild('subtitleRef') public subtitleRef: ElementRef
 
     /**
      * Initializes the component.
@@ -24,6 +32,39 @@ export class HeaderComponent implements AfterViewInit {
      * @returns {void}
      */
     public ngAfterViewInit(): void {
-        setTimeout(() => (this.activated = true), 600)
+        setTimeout(() => this.fadeIn(), 600)
+    }
+
+    /**
+     * Fades the title and subtitle in.
+     *
+     * @returns {void}
+     */
+    private fadeIn(): void {
+        const timeline = new TimelineLite()
+
+        timeline.add(
+            TweenLite.to(this.titleRef.nativeElement, 1.6, {
+                opacity: 1,
+                x: 0,
+                strokeDashoffset: 0
+            }),
+            0
+        )
+
+        timeline.add(
+            TweenLite.to(this.titleRef.nativeElement, 1, {
+                fill: 'rgba(255, 255, 255, 1)'
+            }),
+            0.6
+        )
+
+        timeline.add(
+            TweenLite.to(this.subtitleRef.nativeElement, 1.6, {
+                opacity: 1,
+                x: 0
+            }),
+            0
+        )
     }
 }

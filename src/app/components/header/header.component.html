@@ -1,6 +1,8 @@
-<div class="cmp-header" [ngClass]="{'cmp-header--activated': activated}">
+<div class="cmp-header">
     <div class="cmp-header__wrapper">
-        <h1 class="cmp-header__title">{{'TITLE'|translate}}</h1>
-        <h2 class="cmp-header__subtitle">{{'SUBTITLE'|translate}}</h2>
+        <svg class="cmp-header__title" width="430" height="90" #titleRef>
+            <svg:text transform="matrix(1 0 0 1 -5 80)">{{'TITLE'|translate}}</svg:text>
+        </svg>
+        <h2 class="cmp-header__subtitle" #subtitleRef>{{'SUBTITLE'|translate}}</h2>
     </div>
 </div>
