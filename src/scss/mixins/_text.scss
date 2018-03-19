@@ -1,3 +1,38 @@
+@mixin link() {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgba($color-secondary, .6);
+    transition: color .2s;
+    cursor: pointer;
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &__text::after {
+        width: 0;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        background-color: #61718c;
+        transition: width .2s, left .2s;
+        content: ' ';
+    }
+
+    &:hover {
+        color: #61718c;
+    }
+
+    &:hover &__text::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
 /**
  * Mixin for injecting font specific styles.
  *
