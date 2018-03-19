@@ -1,4 +1,8 @@
 <div class="cmp-clients-page">
     <cmp-page-header [title]="title"></cmp-page-header>
-    <cmp-section></cmp-section>
+    <cmp-section>
+        <div class="user" *ngIf="(authService.user | async) as user">
+            <pre>{{user|json}}</pre>
+        </div>
+    </cmp-section>
 </div>

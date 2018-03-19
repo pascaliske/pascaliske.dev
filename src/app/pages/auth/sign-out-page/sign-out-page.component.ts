@@ -1,35 +1,28 @@
-import { Component, OnDestroy } from '@angular/core'
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
-import { takeWhile } from 'rxjs/operators'
+import { Component } from '@angular/core'
+import { Router } from '@angular/router'
+import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../services/title/title.service'
+import { AuthService } from '../../../services/auth/auth.service'
+import { Page } from '../../page'
 
 @Component({
     selector: 'cmp-sign-out-page',
     templateUrl: './sign-out-page.component.html',
     styleUrls: ['./sign-out-page.component.scss']
 })
-export class SignOutPageComponent implements OnDestroy {
-    public title: string
+export class SignOutPageComponent extends Page {
+    public constructor(
+        public router: Router,
+        public translate: TranslateService,
+        public titleService: TitleService,
+        public authService: AuthService
+    ) {
+        super(translate, titleService)
 
-    private alive: boolean = true
-
-    public constructor(private translate: TranslateService, private titleService: TitleService) {
-        this.translate
-            .get('PAGE_TITLE_SIGNOUT')
-            .pipe(takeWhile(() => this.alive))
-            .subscribe(translation => {
-                this.title = translation
-                this.titleService.setTitle(translation)
-            })
-        this.translate.onLangChange
-            .pipe(takeWhile(() => this.alive))
-            .subscribe((event: LangChangeEvent) => {
-                this.title = event.translations.PAGE_TITLE_SIGNOUT
-                this.titleService.setTitle(event.translations.PAGE_TITLE_SIGNOUT)
-            })
+        this.fetchTitle('PAGE_TITLE_SIGNOUT')
     }
-
-    public ngOnDestroy(): void {
-        this.alive = false
+    public signout(): void {
+        this.authService.signout()
+        this.router.navigate(['/'])
     }
 }
