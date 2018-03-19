@@ -129,7 +129,7 @@ $text-settings: (
             font-settings: regular,
             font-size: ms(0),
             line-height: 1.6,
-            color: rgba($color-primary, .6)
+            color: rgba($color-primary, .8)
         )
     ),
     copy-bold: (
@@ -137,7 +137,7 @@ $text-settings: (
             font-settings: bold,
             font-size: ms(0),
             line-height: 1.6,
-            color: rgba($color-primary, .8)
+            color: $color-primary
         )
     ),
     code: (
