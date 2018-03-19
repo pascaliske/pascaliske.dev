@@ -10,7 +10,7 @@ $component: 'cmp-footer';
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: $color-white2;
+    border-top: 1px $color-white2 solid;
 
     @include use-breakpoint(desktop) {
         padding: 20px $grid-desktop-padding 0;

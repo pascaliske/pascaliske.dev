@@ -26,7 +26,7 @@ $component: 'cmp-navigation';
             position: sticky;
             top: 0;
             background: $color-white1;
-            border-bottom: 1px rgba($color-grey1, .3) solid;
+            border-bottom: 1px $color-white2 solid;
             transform: none;
             overflow-y: hidden;
             opacity: 1;
