@@ -2,11 +2,6 @@ import { Component, Input, ElementRef, OnInit } from '@angular/core'
 import { ViewportService } from '../../services/viewport/viewport.service'
 import { takeWhile } from 'rxjs/operators'
 
-export enum SectionStates {
-    ACTIVATED = 'cmp-section--activated',
-    DEACTIVATED = 'cmp-section--deactivated'
-}
-
 @Component({
     selector: 'cmp-section',
     templateUrl: './section.component.html',
