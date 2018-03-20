@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core'
-import { bind } from 'decko'
+import { Observable } from 'rxjs/Observable'
+import { Subject } from 'rxjs/Subject'
+import { finalize } from 'rxjs/operators'
+import { autobind } from 'core-decorators'
 
 /**
  * ViewportService
@@ -25,11 +28,11 @@ export class ViewportService {
     private observer: IntersectionObserver
 
     /**
-     * The elements to observe.
+     * Subject for handling callback calls for subscribers.
      *
-     * @param {Array<any>} elements
+     * @param {Observable<IntersectionObserverEntry>} callback$
      */
-    private elements: Array<any> = []
+    private callback$: Subject<IntersectionObserverEntry> = new Subject()
 
     /**
      * Initializes the ViewportService.
@@ -44,15 +47,13 @@ export class ViewportService {
      * Registers the given element to the IntersectionObserver.
      *
      * @param {Element} element - The element to observe.
-     * @param {Function} callback - The callback for observation events.
-     * @returns {void}
+     * @returns {Observable<IntersectionObserverEntry>}
      */
-    public observe(element: Element, callback: (entry: any) => void): void {
-        this.elements.push({
-            element: element,
-            callback: callback
-        })
+    public observe(element: Element): Observable<IntersectionObserverEntry> {
         this.observer.observe(element)
+        return this.callback$
+            .pipe(finalize(() => this.observer.unobserve(element)))
+            .filter((entry: IntersectionObserverEntry) => entry.target === element)
     }
 
     /**
@@ -61,11 +62,8 @@ export class ViewportService {
      * @param {Array<IntersectionObserverEntry>} entries -
      * @returns {void}
      */
-    @bind
+    @autobind
     private handler(entries: Array<IntersectionObserverEntry>): void {
-        entries.forEach(entry => {
-            const { callback } = this.elements.find(item => item.element === entry.target)
-            callback(entry)
-        })
+        entries.forEach(entry => this.callback$.next(entry))
     }
 }

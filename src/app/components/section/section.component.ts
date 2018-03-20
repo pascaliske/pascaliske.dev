@@ -1,5 +1,6 @@
 import { Component, Input, ElementRef, OnInit } from '@angular/core'
 import { ViewportService } from '../../services/viewport/viewport.service'
+import { takeWhile } from 'rxjs/operators'
 
 export enum SectionStates {
     ACTIVATED = 'cmp-section--activated',
@@ -23,11 +24,14 @@ export class SectionComponent implements OnInit {
     public constructor(private element: ElementRef, private viewportService: ViewportService) {}
 
     public ngOnInit(): void {
-        this.viewportService.observe(this.element.nativeElement, entry => {
-            if (entry.isIntersecting) {
-                this.show()
-            }
-        })
+        const sub = this.viewportService
+            .observe(this.element.nativeElement)
+            .pipe(takeWhile(() => this.alive))
+            .subscribe((entry: IntersectionObserverEntry) => {
+                if (entry.isIntersecting) {
+                    this.show()
+                }
+            })
     }
 
     private show(): void {
