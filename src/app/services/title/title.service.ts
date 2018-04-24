@@ -14,65 +14,38 @@ export class TitleService {
      *
      * @param {string}
      */
-    private divider: string = '|'
+    public divider: string = '|'
 
     /**
      * The title prefix.
      *
      * @param {string}
      */
-    private prefix: string = ''
+    public prefix: string = ''
 
     /**
      * The title suffix.
      *
      * @param {string}
      */
-    private suffix: string = ''
+    public suffix: string = ''
 
     /**
      * Initializes the TitleService.
      *
-     * @param {Title} title - The angular browser title service.
+     * @param {Title} browserTitle - The angular browser title service.
      * @returns {TitleService}
      */
-    public constructor(private title: Title) {}
-
-    /**
-     * Change the default divider.
-     *
-     * @param {string} divider - The divider to use.
-     */
-    public setDivider(divider: string): void {
-        this.divider = divider
-    }
-
-    /**
-     * Sets an optional prefix for the title.
-     *
-     * @param {string} prefix - The prefix to set.
-     */
-    public setPrefix(prefix: string): void {
-        this.prefix = prefix
-    }
-
-    /**
-     * Sets an optional suffix for the title.
-     *
-     * @param {string} suffix - The suffix to set.
-     */
-    public setSuffix(suffix: string): void {
-        this.suffix = suffix
-    }
+    public constructor(private browserTitle: Title) {}
 
     /**
      * Sets a new title to the current HTML document.
      *
-     * @param {string} title - The new title for the document.
+     * @param {string} value - The new title for the document.
      * @returns {string}
      */
-    public setTitle(title: string): void {
-        this.title.setTitle(this.prepare(title))
+    public set title(value: string) {
+        this.browserTitle.setTitle(this.prepare(value))
     }
 
     /**
@@ -80,8 +53,8 @@ export class TitleService {
      *
      * @returns {string}
      */
-    public getTitle(): string {
-        return this.title.getTitle()
+    public get title(): string {
+        return this.browserTitle.getTitle()
     }
 
     /**

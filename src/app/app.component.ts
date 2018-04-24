@@ -42,8 +42,8 @@ export class AppComponent {
         private scrollService: ScrollService
     ) {
         this.translateService.setDefaultLang('en')
-        this.titleService.setDivider('//')
-        this.titleService.setSuffix('Pascal Iske')
+        this.titleService.divider = '//'
+        this.titleService.suffix = 'Pascal Iske'
         this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe((event: NavigationEnd) => {
