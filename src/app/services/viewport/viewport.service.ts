@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs/Observable'
-import { Subject } from 'rxjs/Subject'
+import { Observable, Subject } from 'rxjs'
 import { finalize, filter } from 'rxjs/operators'
 import { autobind } from 'core-decorators'
 

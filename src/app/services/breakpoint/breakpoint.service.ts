@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Subject } from 'rxjs/Subject'
-import { fromEvent } from 'rxjs/observable/fromEvent'
+import { Subject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
 import { debounce } from 'decko'
 

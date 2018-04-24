@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
-import { BehaviorSubject } from 'rxjs/BehaviorSubject'
+import { BehaviorSubject } from 'rxjs'
 
 export enum Language {
     EN = 'en',
