@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core'
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore'
-import { Observable } from 'rxjs/Observable'
-import { map } from 'rxjs/operators'
 
 /**
  * Types of notifications.
@@ -32,43 +29,14 @@ export class NotificationService {
     /**
      * Initializes the notification service.
      *
-     * @param {AngularFirestore} store
      * @returns {NotificationService}
      */
-    public constructor(private store: AngularFirestore) {}
-
-    /**
-     * Returns all existing notifications.
-     *
-     * @returns {Observable<Array<Notification>>}
-     */
-    public get notifications(): Observable<Array<Notification>> {
-        return this.store
-            .collection<Notification>('/notifications', ref => ref.limit(5))
-            .valueChanges()
-            .pipe(
-                map((items: Array<Notification>) => items.filter(item => item.dismissed === false))
-            )
-    }
+    public constructor() {}
 
     /**
      * Sends a new notification to the user.
      *
      * @param {Notification} notification
      */
-    public send(notification: Notification): void {
-        this.store.collection('/notifications').add(notification)
-    }
-
-    /**
-     * Dismisses the given notification.
-     *
-     * @param {string} id - The id of the notification to be dismissed.
-     * @returns {void}
-     */
-    public dismiss(id: string): void {
-        this.store.doc<Notification>(`/notifications/${id}`).update({
-            dismissed: true
-        })
-    }
+    public send(notification: Notification): void {}
 }
