@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../services/title/title.service'
-import { Page } from '../../page'
+import { Page } from '../page'
 
 @Component({
     selector: 'cmp-privacy-page',

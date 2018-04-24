@@ -1,7 +1,7 @@
 import { OnDestroy } from '@angular/core'
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
 import { takeWhile } from 'rxjs/operators'
-import { TitleService } from '../services/title/title.service'
+import { TitleService } from '../../services/title/title.service'
 
 export class Page implements OnDestroy {
     public title: string
@@ -16,13 +16,13 @@ export class Page implements OnDestroy {
             .pipe(takeWhile(() => this.alive))
             .subscribe(translation => {
                 this.title = translation
-                this.titleService.setTitle(translation)
+                this.titleService.title = translation
             })
         this.translate.onLangChange
             .pipe(takeWhile(() => this.alive))
             .subscribe((event: LangChangeEvent) => {
                 this.title = event.translations[key]
-                this.titleService.setTitle(event.translations[key])
+                this.titleService.title = event.translations[key]
             })
     }
 

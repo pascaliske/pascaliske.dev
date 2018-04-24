@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { TitleService } from '../../../services/title/title.service'
-import { Page } from '../../page'
+import { Page } from '../page'
 import { ContactFormModel } from './typings'
 
 @Component({
