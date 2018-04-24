@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { Router, ActivatedRoute, NavigationEnd, ParamMap } from '@angular/router'
-import { filter, switchMap } from 'rxjs/operators'
+import { filter, switchMap, takeWhile } from 'rxjs/operators'
 import { LanguageService, Language } from '../../services/language/language.service'
 import { NavigationItem } from '../../components/navigation/navigation.component'
 
@@ -14,7 +14,7 @@ import { NavigationItem } from '../../components/navigation/navigation.component
     templateUrl: './site.component.html',
     styleUrls: ['./site.component.scss']
 })
-export class SiteComponent {
+export class SiteComponent implements OnDestroy {
     public pages: Array<NavigationItem> = [
         {
             route: 'home',
@@ -53,6 +53,8 @@ export class SiteComponent {
         }
     ]
 
+    private alive: boolean = true
+
     /**
      * Initializes the site component.
      *
@@ -68,11 +70,16 @@ export class SiteComponent {
     ) {
         this.router.events
             .pipe(
+                takeWhile(() => this.alive),
                 filter(event => event instanceof NavigationEnd),
                 switchMap(event => this.route.paramMap)
             )
             .subscribe((params: ParamMap) => {
                 this.languageService.language = params.get('language') as Language
             })
+    }
+
+    public ngOnDestroy(): void {
+        this.alive = false
     }
 }
