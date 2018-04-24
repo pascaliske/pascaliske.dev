@@ -5,7 +5,8 @@
     "rxjs-tslint-rules"
   ],
   "rulesDirectory": [
-    "node_modules/codelyzer"
+    "node_modules/codelyzer",
+    "node_modules/rxjs-tslint"
   ],
   "rules": {
     "array-type": [
@@ -29,7 +30,6 @@
     "forin": true,
     "import-blacklist": [
       true,
-      "rxjs",
       "rxjs/Rx"
     ],
     "import-spacing": true,
@@ -139,6 +139,10 @@
       ],
       "severity": "error"
     },
+    "rxjs-proper-imports": true,
+    "rxjs-pipeable-operators-only": true,
+    "rxjs-no-static-observable-methods": true,
+    "rxjs-collapse-imports": true,
     "semicolon": [
       true,
       "never"
