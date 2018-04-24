@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format": "prettier --config .prettierrc --write src/**/*.ts",
-    "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"PI - Webdesign\" --theme laravel --port 4201"
+    "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201"
   },
   "private": true,
   "dependencies": {
