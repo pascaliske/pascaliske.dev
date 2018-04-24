@@ -11,7 +11,6 @@ import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { environment } from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { SiteModule } from './pages/site/site.module'
-import { NotificationsModule } from './components/notifications/notifications.module'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
@@ -72,8 +71,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             useFactory: MarkdownOptionsFactory
         }),
         AppRoutingModule,
-        SiteModule,
-        NotificationsModule
+        SiteModule
     ],
     providers: [
         TranslateService,
@@ -81,7 +79,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         TitleService,
         ScrollService,
         ViewportService,
-        NotificationService,
         LanguageService
     ],
     bootstrap: [AppComponent]
