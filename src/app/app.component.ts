@@ -1,8 +1,7 @@
-import { Component, HostListener } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
-import { filter } from 'rxjs/operators'
-import { BreakpointService } from './services/breakpoint/breakpoint.service'
+import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './services/title/title.service'
 
 /**
@@ -15,7 +14,7 @@ import { TitleService } from './services/title/title.service'
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
     /**
      * The current state of the application.
      *
@@ -23,40 +22,33 @@ export class AppComponent {
      */
     public activated: boolean = false
 
+    private alive: boolean = true
+
     /**
      * Initializes the AppComponent.
      *
      * @param {Router} router
      * @param {TranslateService} translateService
-     * @param {BreakpointService} breakpointService
      * @param {TitleService} titleService
      * @returns {AppComponent}
      */
     public constructor(
         private router: Router,
         private translateService: TranslateService,
-        private breakpointService: BreakpointService,
-        private titleService: TitleService,
+        private titleService: TitleService
     ) {
         this.translateService.setDefaultLang('en')
         this.titleService.divider = '//'
         this.titleService.suffix = 'Pascal Iske'
         this.router.events
-            .pipe(filter(event => event instanceof NavigationEnd))
+            .pipe(takeWhile(() => this.alive), filter(event => event instanceof NavigationEnd))
             .subscribe((event: NavigationEnd) => {
                 setTimeout(() => this.show(), 400)
             })
     }
 
-    /**
-     * Pipes the window resize event to the BreakpointService.
-     *
-     * @param {Event} event
-     * @returns {void}
-     */
-    @HostListener('window:resize', ['$event'])
-    public onResize(event: Event): void {
-        this.breakpointService.handleResize(event)
+    public ngOnDestroy(): void {
+        this.alive = false
     }
 
     /**

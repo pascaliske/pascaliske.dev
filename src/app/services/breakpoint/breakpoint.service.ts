@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Subject } from 'rxjs/Subject'
+import { fromEvent } from 'rxjs/observable/fromEvent'
+import { share, debounceTime } from 'rxjs/operators'
 import { debounce } from 'decko'
 
 /**
@@ -114,34 +116,8 @@ export class BreakpointService {
             end: 320
         })
 
-        // fetch current breakpoint
-        this.current = this.determineBreakpoint()
-    }
-
-    /**
-     * Handles the browsers resize event and emits the correct breakpoint events.
-     *
-     * @param {Event} event - The browser resize event.
-     * @returns {void}
-     */
-    @debounce(100)
-    public handleResize(event: Event): void {
-        const current: Breakpoint = this.determineBreakpoint()
-        const dimensions: ResizeState = {
-            height: document.documentElement.clientHeight,
-            width: window.innerWidth
-        }
-
-        // check if the breakpoint changed too
-        if (this.current !== current) {
-            this.current = current
-
-            // emit the new breakpoint
-            this.breakpoint$.next(current)
-        }
-
-        // emit the new resize state
-        this.resize$.next(dimensions)
+        // determine current breakpoint and subscribe to resize changes
+        this.handleResize()
     }
 
     /**
@@ -186,6 +162,38 @@ export class BreakpointService {
         }
 
         return this.current >= this.breakpoints.find(item => item.id === id)
+    }
+
+    /**
+     * Listens to the browsers resize event and emits the correct breakpoint events.
+     *
+     * @returns {void}
+     */
+    private handleResize(): void {
+        // fetch current breakpoint
+        this.current = this.determineBreakpoint()
+
+        // listen to resize events
+        fromEvent(window, 'resize')
+            .pipe(share(), debounceTime(15))
+            .subscribe(event => {
+                const current: Breakpoint = this.determineBreakpoint()
+                const dimensions: ResizeState = {
+                    height: document.documentElement.clientHeight,
+                    width: window.innerWidth
+                }
+
+                // check if the breakpoint changed too
+                if (this.current !== current) {
+                    this.current = current
+
+                    // emit the new breakpoint
+                    this.breakpoint$.next(current)
+                }
+
+                // emit the new resize state
+                this.resize$.next(dimensions)
+            })
     }
 
     /**
