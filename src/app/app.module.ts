@@ -10,10 +10,8 @@ import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { environment } from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module'
-import { AuthModule } from './pages/auth/auth.module'
 import { SiteModule } from './pages/site/site.module'
 import { NotificationsModule } from './components/notifications/notifications.module'
-import { AuthService } from './services/auth/auth.service'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
@@ -74,12 +72,10 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             useFactory: MarkdownOptionsFactory
         }),
         AppRoutingModule,
-        AuthModule,
         SiteModule,
         NotificationsModule
     ],
     providers: [
-        AuthService,
         TranslateService,
         BreakpointService,
         TitleService,

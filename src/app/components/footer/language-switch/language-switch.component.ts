@@ -21,10 +21,4 @@ export class LanguageSwitchComponent {
                 this.path = urlSegment.path
             })
     }
-
-    public isAuthPath(): boolean {
-        const { children } = routes.find(item => item.path === 'auth')
-
-        return !!children.find(item => item.path === this.path)
-    }
 }
