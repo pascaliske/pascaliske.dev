@@ -34,12 +34,12 @@ $component: 'cmp-header';
         stroke-width: 1px;
         stroke-dasharray: 100%;
         stroke-dashoffset: 100%;
-        transform: translateX(-5%);
+        transform: translateX(-20px);
     }
 
     &__subtitle {
         @include use-text(subtitle);
-        transform: translateX(5%);
+        transform: translateX(20px);
     }
 
     @include use-breakpoint(mini-tablet) {

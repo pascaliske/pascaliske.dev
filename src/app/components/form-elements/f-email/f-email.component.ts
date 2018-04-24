@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core'
-import { BehaviorSubject } from 'rxjs/BehaviorSubject'
+import { BehaviorSubject } from 'rxjs'
 import * as fuzzysearch from 'fuzzysearch'
 import { FormElement } from '../form-element'
 
@@ -55,7 +55,7 @@ export class FEmailComponent extends FormElement {
     public use(event: Event): void {
         console.log('==>', event)
 
-        const parts = this.model.split('@')
+        const parts = this.fc.value.split('@')
         const input = parts.slice(0, parts.length - 1).join('@')
         const suggestion = (event.target as HTMLElement).innerText
 
