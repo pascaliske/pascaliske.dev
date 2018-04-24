@@ -1,11 +1,5 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { AuthGuard } from './pages/auth/auth.guard'
-import { AuthComponent } from './pages/auth/auth.component'
-import { SignInPageComponent } from './pages/auth/sign-in-page/sign-in-page.component'
-import { SignOutPageComponent } from './pages/auth/sign-out-page/sign-out-page.component'
-import { ClientsPageComponent } from './pages/auth/clients-page/clients-page.component'
-import { InvoicesPageComponent } from './pages/auth/invoices-page/invoices-page.component'
 import { SiteComponent } from './pages/site/site.component'
 import { HomePageComponent } from './pages/site/home-page/home-page.component'
 import { AboutPageComponent } from './pages/site/about-page/about-page.component'
@@ -21,35 +15,6 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         redirectTo: 'en'
-    },
-    {
-        path: 'auth',
-        component: AuthComponent,
-        children: [
-            {
-                path: '',
-                pathMatch: 'full',
-                redirectTo: 'clients'
-            },
-            {
-                path: 'signin',
-                component: SignInPageComponent
-            },
-            {
-                path: 'signout',
-                component: SignOutPageComponent
-            },
-            {
-                path: 'clients',
-                canActivate: [AuthGuard],
-                component: ClientsPageComponent
-            },
-            {
-                path: 'invoices',
-                canActivate: [AuthGuard],
-                component: InvoicesPageComponent
-            }
-        ]
     },
     {
         path: ':language',
