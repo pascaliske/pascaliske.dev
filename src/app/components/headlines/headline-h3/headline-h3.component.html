@@ -1,3 +1,5 @@
 <h3 class="cmp-headline-h3">
-    {{text}}
+    <cmp-icon class="cmp-headline-h3__icon" [name]="icon" *ngIf="icon && iconPosition === 'left'"></cmp-icon>
+    <span class="cmp-headline-h3__text">{{text}}</span>
+    <cmp-icon class="cmp-headline-h3__icon" [name]="icon" *ngIf="icon && iconPosition === 'right'"></cmp-icon>
 </h3>

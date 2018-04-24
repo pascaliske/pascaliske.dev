@@ -1,14 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component } from '@angular/core'
+import { Headline } from '../headline'
 
 @Component({
     selector: 'cmp-headline-h3',
     templateUrl: './headline-h3.component.html',
     styleUrls: ['./headline-h3.component.scss']
 })
-export class HeadlineH3Component implements OnInit {
-    @Input() public text: string
-
-    public constructor() {}
-
-    public ngOnInit() {}
-}
+export class HeadlineH3Component extends Headline {}

@@ -1,12 +1,9 @@
-import { Component, Input } from '@angular/core'
+import { Component } from '@angular/core'
+import { Headline } from '../headline'
 
 @Component({
     selector: 'cmp-headline-h4',
     templateUrl: './headline-h4.component.html',
     styleUrls: ['./headline-h4.component.scss']
 })
-export class HeadlineH4Component {
-    @Input() public text: string
-
-    public constructor() {}
-}
+export class HeadlineH4Component extends Headline {}
