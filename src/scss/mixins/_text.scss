@@ -33,6 +33,19 @@
     }
 }
 
+@mixin list() {
+    @include use-text(copy);
+}
+
+@mixin list-item() {
+    list-style-type: square;
+    list-style-position: inside;
+
+    & > * {
+        margin-left: -5px;
+    }
+}
+
 /**
  * Mixin for injecting font specific styles.
  *

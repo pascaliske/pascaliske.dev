@@ -69,12 +69,28 @@
  *
  * @param $width
  * @param $height
+ * @param $where
  */
-@mixin maintain-aspect-ratio($width, $height) {
-    &::before {
-        content: '';
-        display: block;
-        padding-top: ($height / $width) * 100%;
+@mixin maintain-aspect-ratio($width, $height, $where: after) {
+    $padding: padding-bottom;
+    @if ($where == before) {
+        $padding: padding-top;
+    }
+
+    position: relative;
+
+    &::#{$where} {
         width: 100%;
+        #{$padding}: ($height / $width) * 100%;
+        display: block;
+        content: '';
+    }
+
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }

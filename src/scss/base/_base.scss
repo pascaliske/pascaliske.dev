@@ -70,13 +70,10 @@ textarea {
     }
 
     &-list {
-        &__item {
-            list-style-type: square;
-            list-style-position: inside;
-        }
+        @include list();
 
-        &__item > * {
-            margin-left: -5px;
+        &__item {
+            @include list-item();
         }
     }
 
