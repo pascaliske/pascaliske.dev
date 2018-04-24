@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core'
@@ -15,7 +16,6 @@ import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
 import { ScrollService } from './services/scroll/scroll.service'
 import { ViewportService } from './services/viewport/viewport.service'
-import { NotificationService } from './services/notification/notification.service'
 import { LanguageService } from './services/language/language.service'
 import { AppComponent } from './app.component'
 
@@ -52,6 +52,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     declarations: [AppComponent],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         ServiceWorkerModule.register('/ngsw-worker.js', {
             enabled: environment.production
         }),
