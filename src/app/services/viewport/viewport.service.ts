@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs/Observable'
 import { Subject } from 'rxjs/Subject'
-import { finalize } from 'rxjs/operators'
+import { finalize, filter } from 'rxjs/operators'
 import { autobind } from 'core-decorators'
 
 /**
@@ -51,9 +51,10 @@ export class ViewportService {
      */
     public observe(element: Element): Observable<IntersectionObserverEntry> {
         this.observer.observe(element)
-        return this.callback$
-            .pipe(finalize(() => this.observer.unobserve(element)))
-            .filter((entry: IntersectionObserverEntry) => entry.target === element)
+        return this.callback$.pipe(
+            filter((entry: IntersectionObserverEntry) => entry.target === element),
+            finalize(() => this.observer.unobserve(element))
+        )
     }
 
     /**
