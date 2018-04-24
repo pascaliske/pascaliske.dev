@@ -7,10 +7,6 @@ export class FormElement {
 
     @Input() public label: string
 
-    @Input() public model: string
-
-    @Output() public modelChange: EventEmitter<string> = new EventEmitter()
-
     @Input() public fc: AbstractControl
 
     @Input() public messages: FormErrorMessages
@@ -33,7 +29,7 @@ export class FormElement {
         return {
             [prefixed('focus')]: this.focus,
             [prefixed('required')]: this.fc,
-            [prefixed('filled')]: this.model && this.model !== '',
+            [prefixed('filled')]: this.fc.value && this.fc.value !== '',
             [prefixed('invalid')]: this.fc.touched && !this.fc.valid
         }
     }

@@ -3,7 +3,6 @@ import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { TitleService } from '../../../services/title/title.service'
 import { Page } from '../page'
-import { ContactFormModel } from './typings'
 
 @Component({
     selector: 'cmp-contact-page',
@@ -12,14 +11,6 @@ import { ContactFormModel } from './typings'
 })
 export class ContactPageComponent extends Page {
     public contactForm: FormGroup
-
-    public model: ContactFormModel = {
-        name: null,
-        email: null,
-        phone: null,
-        subject: null,
-        message: null
-    }
 
     public constructor(
         private formBuilder: FormBuilder,
@@ -31,11 +22,11 @@ export class ContactPageComponent extends Page {
         this.fetchTitle('PAGE_TITLE_CONTACT')
 
         this.contactForm = this.formBuilder.group({
-            name: [null, [Validators.required]],
+            name: null,
             email: [null, [Validators.required, Validators.email]],
-            phone: [null],
-            subject: [null, Validators.required],
-            message: [null, Validators.required]
+            phone: null,
+            subject: null,
+            message: null
         })
     }
 
@@ -61,6 +52,7 @@ export class ContactPageComponent extends Page {
 
     public submit(): void {
         console.log('==> submit form', this.contactForm.value)
+        this.contactForm.reset()
     }
 
     public reset(): void {

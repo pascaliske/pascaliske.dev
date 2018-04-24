@@ -1,6 +1,6 @@
 <div class="cmp-f-text-area" [ngClass]="getClasses('cmp-f-text-area')">
     <div class="cmp-f-text-area__control">
-        <textarea class="cmp-f-text-area__input" [id]="name" [name]="name" [ngModel]="model" (ngModelChange)="modelChange.emit($event)" [formControl]="fc" (focus)="focusIn()" (focusout)="focusOut()"></textarea>
+        <textarea class="cmp-f-text-area__input" [id]="name" [name]="name" [formControl]="fc" (focus)="focusIn()" (focusout)="focusOut()"></textarea>
         <label class="cmp-f-text-area__label" [for]="name">{{label}}</label>
         <span class="cmp-f-text-area__line"></span>
     </div>
