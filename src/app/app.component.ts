@@ -4,7 +4,6 @@ import { TranslateService } from '@ngx-translate/core'
 import { filter } from 'rxjs/operators'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
 import { TitleService } from './services/title/title.service'
-import { ScrollService } from './services/scroll/scroll.service'
 
 /**
  * AppComponent
@@ -31,7 +30,6 @@ export class AppComponent {
      * @param {TranslateService} translateService
      * @param {BreakpointService} breakpointService
      * @param {TitleService} titleService
-     * @param {ScrollService} scrollService
      * @returns {AppComponent}
      */
     public constructor(
@@ -39,7 +37,6 @@ export class AppComponent {
         private translateService: TranslateService,
         private breakpointService: BreakpointService,
         private titleService: TitleService,
-        private scrollService: ScrollService
     ) {
         this.translateService.setDefaultLang('en')
         this.titleService.divider = '//'
@@ -60,17 +57,6 @@ export class AppComponent {
     @HostListener('window:resize', ['$event'])
     public onResize(event: Event): void {
         this.breakpointService.handleResize(event)
-    }
-
-    /**
-     * Pipes the window scroll event to the ScrollService.
-     *
-     * @param {Event} event
-     * @returns {void}
-     */
-    @HostListener('window:scroll', ['$event'])
-    public onScroll(event: Event): void {
-        this.scrollService.handleScroll(event)
     }
 
     /**

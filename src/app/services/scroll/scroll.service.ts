@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Subject } from 'rxjs/Subject'
-import { debounce } from 'decko'
+import { fromEvent } from 'rxjs/observable/fromEvent'
+import { share } from 'rxjs/operators'
 
 /**
  * Interface describing the current scroll state.
@@ -36,19 +37,24 @@ export class ScrollService {
      *
      * @returns {ScrollService}
      */
-    public constructor() {}
+    public constructor() {
+        this.handleScroll()
+    }
 
     /**
      * Handles the browsers scroll event and emits it to subscribed components.
      *
-     * @param {Event} event - The browser scroll event.
      * @returns {void}
      */
-    @debounce(100)
-    public handleScroll(event: Event): void {
-        this.scrollstate$.next({
-            scrollX: window.scrollX,
-            scrollY: window.scrollY
-        })
+    public handleScroll(): void {
+        // listen to resize events
+        fromEvent(window, 'scroll')
+            .pipe(share())
+            .subscribe((event: Event) => {
+                this.scrollstate$.next({
+                    scrollX: window.scrollX,
+                    scrollY: window.scrollY
+                })
+            })
     }
 }
