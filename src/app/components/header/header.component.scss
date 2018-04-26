@@ -29,12 +29,17 @@ $component: 'cmp-header';
 
     &__title {
         @include use-text(title);
+        width: 278px;
         fill: rgba($color-white1, 0);
         stroke: rgba($color-white1, 0);
         stroke-width: 1px;
         stroke-dasharray: 100%;
         stroke-dashoffset: 100%;
         transform: translateX(-20px);
+
+        @include use-breakpoint(mini-tablet) {
+            width: 430px;
+        }
     }
 
     &__subtitle {

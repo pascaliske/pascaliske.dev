@@ -7,6 +7,11 @@ $component: 'cmp-contact-page';
 
     &__wrapper {
         display: flex;
+        flex-direction: column;
+
+        @include use-breakpoint(mini-tablet) {
+            flex-direction: row;
+        }
     }
 
     &__information,
@@ -15,10 +20,17 @@ $component: 'cmp-contact-page';
     }
 
     &__information {
-        margin-right: 20px;
+        margin-bottom: 20px;
+
+        @include use-breakpoint(mini-tablet) {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
     }
 
     &__form {
-        margin-left: 20px;
+        @include use-breakpoint(mini-tablet) {
+            margin-left: 20px;
+        }
     }
 }
