@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
+import { TranslateModule } from '@ngx-translate/core'
 import { SharedModule } from '../../shared/shared.module'
 import { IconModule } from '../icon/icon.module'
 import { FRowComponent } from './f-row/f-row.component'
@@ -16,7 +17,13 @@ import { FErrorComponent } from './f-error/f-error.component'
 import { FExplanationComponent } from './f-explanation/f-explanation.component'
 
 @NgModule({
-    imports: [CommonModule, ReactiveFormsModule, SharedModule, IconModule],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        TranslateModule.forChild(),
+        SharedModule,
+        IconModule
+    ],
     declarations: [
         FRowComponent,
         FColumnComponent,

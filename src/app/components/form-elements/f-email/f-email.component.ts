@@ -1,19 +1,14 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import * as fuzzysearch from 'fuzzysearch'
-import { FormElement } from '../form-element'
-import { FValidationMessage } from '../typings'
+import { FInputComponent } from '../f-input/f-input.component'
 
 @Component({
     selector: 'cmp-f-email',
     templateUrl: './f-email.component.html',
     styleUrls: ['./f-email.component.scss']
 })
-export class FEmailComponent extends FormElement {
-    @Input() public validation: Array<FValidationMessage> = []
-
-    @Input() public explanation: Array<string> = []
-
+export class FEmailComponent extends FInputComponent {
     @ViewChild('inputField') public inputRef: ElementRef
 
     public suggestions$: BehaviorSubject<Array<string>> = new BehaviorSubject([])

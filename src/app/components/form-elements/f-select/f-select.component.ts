@@ -1,14 +1,9 @@
-import { Component, Input } from '@angular/core'
-import { FormElement } from '../form-element'
-import { FValidationMessage } from '../typings'
+import { Component } from '@angular/core'
+import { FInputComponent } from '../f-input/f-input.component'
 
 @Component({
     selector: 'cmp-f-select',
     templateUrl: './f-select.component.html',
     styleUrls: ['./f-select.component.scss']
 })
-export class FSelectComponent extends FormElement {
-    @Input() public validation: Array<FValidationMessage> = []
-
-    @Input() public explanation: Array<string> = []
-}
+export class FSelectComponent extends FInputComponent {}
