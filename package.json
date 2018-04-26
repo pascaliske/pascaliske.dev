@@ -6,7 +6,7 @@
     "serve": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint pascal-iske",
     "e2e": "ng e2e",
     "format": "prettier --config .prettierrc --write src/**/*.ts",
     "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201"
