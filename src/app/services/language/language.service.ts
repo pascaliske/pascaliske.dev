@@ -19,4 +19,8 @@ export class LanguageService {
         this.translateService.use(language)
         this.language$.next(language)
     }
+
+    public get language(): Language {
+        return this.language$.getValue() as Language
+    }
 }
