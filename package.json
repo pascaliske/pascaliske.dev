@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}",
     "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201",
-    "deploy:staging": "yarn run build && rsync --force --delete --recursive dist/* pi@tempel.uberspace.de:html/"
+    "deploy:staging": "yarn run build && rsync -raz --force --delete dist/ pi@tempel.uberspace.de:html/"
   },
   "private": true,
   "dependencies": {
