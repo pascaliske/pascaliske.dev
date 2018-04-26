@@ -182,6 +182,8 @@
 @mixin cmp-form-error() {
     margin-top: 10px;
     margin-bottom: 5px;
+    color: $color-red;
+    opacity: .5;
 }
 
 @mixin cmp-form-explanation() {}
