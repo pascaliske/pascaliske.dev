@@ -22,6 +22,11 @@
                 "output": "/assets"
               },
               {
+                "glob": ".htaccess",
+                "input": "src",
+                "output": "/"
+              },
+              {
                 "glob": "favicon.ico",
                 "input": "src",
                 "output": "/"
