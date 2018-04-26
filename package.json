@@ -6,10 +6,11 @@
     "serve": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint pascal-iske",
+    "lint": "ng lint pascal-iske --fix",
     "e2e": "ng e2e",
-    "format": "prettier --config .prettierrc --write src/**/*.ts",
-    "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201"
+    "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}",
+    "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201",
+    "deploy:staging": "yarn run build && rsync --force --delete --recursive dist/* pi@tempel.uberspace.de:html/"
   },
   "private": true,
   "dependencies": {
