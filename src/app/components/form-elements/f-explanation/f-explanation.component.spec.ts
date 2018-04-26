@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FEmailComponent } from './f-email.component'
+import { FExplanationComponent } from './f-explanation.component'
 
-describe('FEmailComponent', () => {
-    let component: FEmailComponent
-    let fixture: ComponentFixture<FEmailComponent>
+describe('FExplanationComponent', () => {
+    let component: FExplanationComponent
+    let fixture: ComponentFixture<FExplanationComponent>
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FEmailComponent]
+            declarations: [FExplanationComponent]
         }).compileComponents()
     }))
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(FEmailComponent)
+        fixture = TestBed.createComponent(FExplanationComponent)
         component = fixture.componentInstance
         fixture.detectChanges()
     })

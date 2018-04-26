@@ -1,0 +1,7 @@
+<div class="cmp-f-explanation">
+  <div class="cmp-f-explanation__messages" *ngIf="messages.length > 0">
+      <div class="cmp-f-explanation__message" *ngFor="let message of messages">
+          <div class="cmp-f-explanation__message" [innerHTML]="message"></div>
+      </div>
+  </div>
+</div>

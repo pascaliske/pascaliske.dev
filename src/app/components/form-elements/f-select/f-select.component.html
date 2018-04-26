@@ -5,11 +5,14 @@
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
         </select>
-        <label class="cmp-f-select__label" [for]="name">{{label}}</label>
+        <label class="cmp-f-select__label" [for]="name">
+            {{label}}<span class="cmp-f-select__required" *ngIf="isRequired()">*</span>
+        </label>
         <span class="cmp-f-select__line"></span>
         <span class="cmp-f-select__icon">
             <i class="fa fa-chevron-down"></i>
         </span>
     </div>
-    <cmp-f-error class="cmp-f-select__errors" [fc]="fc" [messages]="messages" ></cmp-f-error>
+    <cmp-f-explanation class="cmp-f-phone__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-select__errors" [fc]="fc" [messages]="validation" ></cmp-f-error>
 </div>

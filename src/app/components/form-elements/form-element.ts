@@ -1,6 +1,6 @@
 import { Input, Output, EventEmitter } from '@angular/core'
 import { AbstractControl } from '@angular/forms'
-import { FormErrorMessages } from './f-error/f-error.component'
+// import { FValidationConfig, FValidationMessage } from './typings'
 
 export class FormElement {
     @Input() public name: string
@@ -9,7 +9,9 @@ export class FormElement {
 
     @Input() public fc: AbstractControl
 
-    @Input() public messages: FormErrorMessages
+    // @Input() public validation: Array<FValidationMessage> = []
+
+    // @Input() public explanation: Array<string> = []
 
     @Input() public autocomplete: string
 
@@ -28,10 +30,15 @@ export class FormElement {
 
         return {
             [prefixed('focus')]: this.focus,
-            [prefixed('required')]: this.fc,
+            [prefixed('required')]: this.isRequired(),
             [prefixed('filled')]: this.fc.value && this.fc.value !== '',
             [prefixed('invalid')]: this.fc.touched && !this.fc.valid
         }
+    }
+
+    public isRequired(): boolean {
+        // return this.validation.find(item => item.type === 'required') !== undefined
+        return false
     }
 
     public focusIn(): void {

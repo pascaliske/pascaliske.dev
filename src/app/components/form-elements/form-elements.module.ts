@@ -13,6 +13,7 @@ import { FSelectComponent } from './f-select/f-select.component'
 import { FTextAreaComponent } from './f-text-area/f-text-area.component'
 import { FPasswordComponent } from './f-password/f-password.component'
 import { FErrorComponent } from './f-error/f-error.component'
+import { FExplanationComponent } from './f-explanation/f-explanation.component'
 
 @NgModule({
     imports: [CommonModule, ReactiveFormsModule, SharedModule, IconModule],
@@ -26,7 +27,8 @@ import { FErrorComponent } from './f-error/f-error.component'
         FSelectComponent,
         FTextAreaComponent,
         FPasswordComponent,
-        FErrorComponent
+        FErrorComponent,
+        FExplanationComponent
     ],
     exports: [
         FRowComponent,

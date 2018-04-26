@@ -2,6 +2,7 @@ import { Component, Input, ViewChild, ElementRef } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import * as fuzzysearch from 'fuzzysearch'
 import { FormElement } from '../form-element'
+import { FValidationMessage } from '../typings'
 
 @Component({
     selector: 'cmp-f-email',
@@ -9,6 +10,10 @@ import { FormElement } from '../form-element'
     styleUrls: ['./f-email.component.scss']
 })
 export class FEmailComponent extends FormElement {
+    @Input() public validation: Array<FValidationMessage> = []
+
+    @Input() public explanation: Array<string> = []
+
     @ViewChild('inputField') public inputRef: ElementRef
 
     public suggestions$: BehaviorSubject<Array<string>> = new BehaviorSubject([])
@@ -45,8 +50,6 @@ export class FEmailComponent extends FormElement {
             const matches = this.providers.filter(item => fuzzysearch(value[2], item))
 
             this.suggestions$.next(matches)
-
-            console.log('==> suggesting domains for email input', value[2], matches)
         } else {
             this.suggestions$.next([])
         }
@@ -61,7 +64,6 @@ export class FEmailComponent extends FormElement {
 
         this.suggestions$.next([])
         this.fc.setValue(`${input}@${suggestion}`)
-        console.log('==>', `${input}@${suggestion}`)
     }
 
     public focusOut(): void {

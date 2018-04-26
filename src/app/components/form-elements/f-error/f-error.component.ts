@@ -1,9 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { AbstractControl } from '@angular/forms'
-
-export interface FormErrorMessages {
-    [key: string]: string
-}
+import { FValidationMessage } from '../typings'
 
 @Component({
     selector: 'cmp-f-error',
@@ -13,7 +10,7 @@ export interface FormErrorMessages {
 export class FErrorComponent {
     @Input() public fc: AbstractControl
 
-    @Input() public messages: FormErrorMessages
+    @Input() public messages: Array<FValidationMessage>
 
     public constructor() {}
 }
