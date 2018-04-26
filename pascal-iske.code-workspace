@@ -23,6 +23,10 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "tslint.autoFixOnSave": true,
+        "[json]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
         "[scss]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
