@@ -2,8 +2,8 @@
     <div class="cmp-quick-contact__content">
         <p class="cmp-quick-contact__text" [innerHTML]="'QUICK_CONTACT_TEXT'|translate"></p>
         <ul class="cmp-quick-contact__socials">
-            <li class="cmp-quick-contact__item" *ngIf="(languageService.language$  | async) as language">
-                <cmp-link class="cmp-quick-contact__item-link" [target]="['/', language, 'contact']" [text]="'QUICK_CONTACT_LINK_CONTACTFORM'|translate" icon="wpforms"></cmp-link>
+            <li class="cmp-quick-contact__item">
+                <cmp-link class="cmp-quick-contact__item-link" [target]="['/', languageService.language, 'contact']" [text]="'QUICK_CONTACT_LINK_CONTACTFORM'|translate" icon="wpforms"></cmp-link>
             </li>
             <li class="cmp-quick-contact__item">
                 <cmp-link class="cmp-quick-contact__item-link" url="mailto:info@pascal-iske.de" [text]="'QUICK_CONTACT_LINK_EMAIL'|translate" icon="envelope"></cmp-link>
