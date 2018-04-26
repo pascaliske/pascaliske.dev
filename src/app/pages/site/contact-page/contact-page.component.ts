@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { TitleService } from '../../../services/title/title.service'
+import { FValidationConfig } from '../../../components/form-elements/typings'
 import { Page } from '../page'
 
 @Component({
@@ -11,6 +12,19 @@ import { Page } from '../page'
 })
 export class ContactPageComponent extends Page {
     public contactForm: FormGroup
+
+    public validation: FValidationConfig = {
+        email: [
+            {
+                type: 'required',
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED'
+            },
+            {
+                type: 'email',
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL'
+            }
+        ]
+    }
 
     public constructor(
         private formBuilder: FormBuilder,
@@ -50,9 +64,9 @@ export class ContactPageComponent extends Page {
         return this.contactForm.get('message')
     }
 
-    public submit(): void {
+    public submit(event: Event): void {
         console.log('==> submit form', this.contactForm.value)
-        this.contactForm.reset()
+        this.reset()
     }
 
     public reset(): void {

@@ -58,5 +58,7 @@
   "CONTACT_PAGE_FORM_LABEL_SUBJECT": "Betreff",
   "CONTACT_PAGE_FORM_LABEL_MESSAGE": "Nachricht",
   "CONTACT_PAGE_FORM_LABEL_RESET": "Zurücksetzen",
-  "CONTACT_PAGE_FORM_LABEL_SUBMIT": "Senden"
+  "CONTACT_PAGE_FORM_LABEL_SUBMIT": "Senden",
+  "CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED": "Dieses Feld ist ein Pflichtfeld!",
+  "CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL": "Bitte geben Sie eine gültige E-Mail Adresse ein!"
 }
