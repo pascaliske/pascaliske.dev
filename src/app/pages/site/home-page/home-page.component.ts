@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../services/title/title.service'
+import { LanguageService } from '../../../services/language/language.service'
 import { Page } from '../page'
 
 @Component({
@@ -9,7 +10,11 @@ import { Page } from '../page'
     styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent extends Page {
-    public constructor(public translate: TranslateService, public titleService: TitleService) {
+    public constructor(
+        public translate: TranslateService,
+        public titleService: TitleService,
+        public languageService: LanguageService
+    ) {
         super(translate, titleService)
 
         this.fetchTitle('PAGE_TITLE_HOME')
