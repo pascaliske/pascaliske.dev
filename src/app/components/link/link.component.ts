@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
 import { Router } from '@angular/router'
 
 /**
@@ -11,7 +11,8 @@ import { Router } from '@angular/router'
 @Component({
     selector: 'cmp-link',
     templateUrl: './link.component.html',
-    styleUrls: ['./link.component.scss']
+    styleUrls: ['./link.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LinkComponent {
     /**
