@@ -6,14 +6,14 @@ $component: 'cmp-section';
     &__wrapper {
         width: 100vw;
         margin: 0 auto;
-        padding: 20px $grid-mobile-padding 80px;
+        padding: 20px $grid-mobile-padding;
         border-bottom: 1px $color-white2 dashed;
         transform: translateY(30px);
         opacity: 0;
         transition: opacity .6s, transform .6s;
 
         @include use-breakpoint(mini-tablet) {
-            padding: 40px $grid-desktop-padding 80px;
+            padding: 40px $grid-desktop-padding;
         }
     }
 }
