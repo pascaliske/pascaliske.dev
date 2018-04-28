@@ -27,6 +27,10 @@
             "editor.formatOnSave": false,
             "editor.formatOnType": false
         },
+        "[jsonc]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
         "[scss]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
