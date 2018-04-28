@@ -84,11 +84,28 @@
     rxjs "^6.0.0-beta.3"
     source-map "^0.5.6"
 
+"@angular-devkit/core@0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.5.9.tgz#3041e5084628868d95e94352f300ab3e3839b264"
+  dependencies:
+    ajv "~6.4.0"
+    chokidar "^1.7.0"
+    rxjs "^6.0.0-beta.3"
+    source-map "^0.5.6"
+
 "@angular-devkit/schematics@0.5.7":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.5.7.tgz#a3780798147451d2455960060c22d7b499655e4a"
   dependencies:
     "@angular-devkit/core" "0.5.7"
+    "@ngtools/json-schema" "^1.1.0"
+    rxjs "^6.0.0-beta.3"
+
+"@angular-devkit/schematics@0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.5.9.tgz#b6b26ed091f4079cf5dd4a8c87895ff982a8da73"
+  dependencies:
+    "@angular-devkit/core" "0.5.9"
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^6.0.0-beta.3"
 
@@ -180,6 +197,15 @@
     domino "^2.0.1"
     tslib "^1.9.0"
     xhr2 "^0.1.4"
+
+"@angular/pwa@^0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.5.9.tgz#0c32d87b3eea7e685dd8b87834669c6a028adf7d"
+  dependencies:
+    "@angular-devkit/core" "0.5.9"
+    "@angular-devkit/schematics" "0.5.9"
+    "@schematics/angular" "0.5.9"
+    typescript "~2.6.2"
 
 "@angular/router@^6.0.0-rc.5":
   version "6.0.0-rc.5"
@@ -291,6 +317,14 @@
   dependencies:
     "@angular-devkit/core" "0.5.7"
     "@angular-devkit/schematics" "0.5.7"
+    typescript ">=2.6.2 <2.8"
+
+"@schematics/angular@0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.5.9.tgz#40051344a097754c4ab8b0fe393420cc5ee5588b"
+  dependencies:
+    "@angular-devkit/core" "0.5.9"
+    "@angular-devkit/schematics" "0.5.9"
     typescript ">=2.6.2 <2.8"
 
 "@schematics/update@0.5.7":
@@ -7119,6 +7153,10 @@ typescript@2.8.1:
 "typescript@>=2.6.2 <2.8", typescript@^2.4.2, typescript@~2.7.0, typescript@~2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
+
+typescript@~2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 uglify-es@^3.3.4:
   version "3.3.9"
