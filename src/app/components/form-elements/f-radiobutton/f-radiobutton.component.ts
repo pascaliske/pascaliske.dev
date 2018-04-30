@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { FInputComponent } from '../f-input/f-input.component'
-import { FRadiobuttonOption } from './typings'
+import { FRadiobuttonOption } from '../typings'
 
 @Component({
     selector: 'cmp-f-radiobutton',
