@@ -16,6 +16,7 @@ import { FPasswordComponent } from './f-password/f-password.component'
 import { FCheckboxComponent } from './f-checkbox/f-checkbox.component'
 import { FErrorComponent } from './f-error/f-error.component'
 import { FExplanationComponent } from './f-explanation/f-explanation.component'
+import { FRadiobuttonComponent } from './f-radiobutton/f-radiobutton.component'
 
 @NgModule({
     imports: [
@@ -36,6 +37,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FTextAreaComponent,
         FPasswordComponent,
         FCheckboxComponent,
+        FRadiobuttonComponent,
         FErrorComponent,
         FExplanationComponent
     ],
@@ -50,6 +52,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FTextAreaComponent,
         FPasswordComponent,
         FCheckboxComponent,
+        FRadiobuttonComponent,
         FErrorComponent,
         FExplanationComponent
     ]
