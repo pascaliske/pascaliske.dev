@@ -62,9 +62,8 @@ $component: 'cmp-footer-meta';
         display: inline-block;
     }
 
-    &__link:not(:last-of-type)::after {
-        color: rgba($color-secondary, .4);
-        content: ' // ';
+    &__link {
+        @include seperator();
     }
 
     &__languages {

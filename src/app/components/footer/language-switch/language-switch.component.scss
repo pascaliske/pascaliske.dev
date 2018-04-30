@@ -4,11 +4,7 @@ $component: 'cmp-language-switch';
 
 @include cmp-base($component) {
     &__language {
+        @include seperator();
         display: inline-block;
-
-        &:not(:last-of-type)::after {
-            color: rgba($color-secondary, .4);
-            content: ' // ';
-        }
     }
 }
