@@ -1,6 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms'
 import { TitleService } from '../../../services/title/title.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
 import { Page } from '../page'
@@ -10,7 +10,7 @@ import { Page } from '../page'
     templateUrl: './contact-page.component.html',
     styleUrls: ['./contact-page.component.scss']
 })
-export class ContactPageComponent extends Page {
+export class ContactPageComponent extends Page implements OnInit {
     public contactForm: FormGroup
 
     public validation: FValidationConfig = {
@@ -27,6 +27,7 @@ export class ContactPageComponent extends Page {
     }
 
     public constructor(
+        private changeDetectorRef: ChangeDetectorRef,
         private formBuilder: FormBuilder,
         public translate: TranslateService,
         public titleService: TitleService
@@ -34,14 +35,18 @@ export class ContactPageComponent extends Page {
         super(translate, titleService)
 
         this.fetchTitle('PAGE_TITLE_CONTACT')
+    }
 
+    public ngOnInit(): void {
         this.contactForm = this.formBuilder.group({
             name: null,
-            email: [null, [Validators.required, Validators.email]],
+            email: null,
             phone: null,
             subject: null,
-            message: null
+            message: null,
+            policy: null
         })
+        this.changeDetectorRef.detectChanges()
     }
 
     public get name() {

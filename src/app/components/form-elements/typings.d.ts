@@ -1,10 +1,10 @@
-export interface FValidationMessage {
+export interface FValidation {
     type: string
     message: string
 }
 
 export interface FValidationConfig {
-    [key: string]: Array<FValidationMessage>
+    [key: string]: Array<FValidation>
 }
 
 export interface FExplanationConfig {

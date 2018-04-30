@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { AbstractControl } from '@angular/forms'
-import { FValidationMessage } from '../typings'
+import { FValidation } from '../typings'
 
 @Component({
     selector: 'cmp-f-error',
@@ -10,7 +10,7 @@ import { FValidationMessage } from '../typings'
 export class FErrorComponent {
     @Input() public fc: AbstractControl
 
-    @Input() public messages: Array<FValidationMessage>
+    @Input() public messages: Array<FValidation>
 
     public constructor() {}
 }
