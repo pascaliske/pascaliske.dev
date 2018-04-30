@@ -179,6 +179,54 @@
     }
 }
 
+@mixin cmp-form-checkbox() {
+    &__control {
+        height: 35px;
+        line-height: 35px;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__symbol {
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        border: 3px $color-primary solid;
+        opacity: .5;
+        transition: background-color .4s, opacity .4s;
+    }
+
+    &__check {
+        stroke-dasharray: 130px 130px;
+        stroke-dashoffset: 130px;
+        transition: stroke-dashoffset 1s;
+        transition-delay: .2s;
+    }
+
+    &__label {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 50px;
+        opacity: .5;
+    }
+
+    &--filled &__symbol {
+        opacity: 1;
+        background-color: $color-primary;
+    }
+
+    &--filled &__check {
+        stroke-dashoffset: 0;
+    }
+}
+
 @mixin cmp-form-error() {
     margin-top: 10px;
     margin-bottom: 5px;
