@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --aot --build-optimizer --stats-json",
     "test": "ng test",
     "lint": "ng lint pascal-iske --fix",
     "e2e": "ng e2e",
