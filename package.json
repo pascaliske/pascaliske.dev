@@ -34,6 +34,7 @@
     "core-decorators": "^0.20.0",
     "core-js": "^2.5.5",
     "decko": "^1.2.0",
+    "flatpickr": "^4.4.4",
     "font-awesome": "^4.7.0",
     "fuzzysearch": "^1.0.3",
     "highlight.js": "^9.12.0",

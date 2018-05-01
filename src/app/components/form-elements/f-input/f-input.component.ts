@@ -1,20 +1,20 @@
-import { Component, Input } from '@angular/core'
-import { AbstractControl } from '@angular/forms'
-import { FValidationMessage } from '../typings'
+import { Component, OnInit, Input } from '@angular/core'
+import { AbstractControl, ValidatorFn, Validators } from '@angular/forms'
+import { FValidation } from '../typings'
 
 @Component({
     selector: 'cmp-f-input',
     templateUrl: './f-input.component.html',
     styleUrls: ['./f-input.component.scss']
 })
-export class FInputComponent {
+export class FInputComponent implements OnInit {
     @Input() public name: string
 
     @Input() public label: string
 
     @Input() public fc: AbstractControl
 
-    @Input() public validation: Array<FValidationMessage> = []
+    @Input() public validation: Array<FValidation> = []
 
     @Input() public explanation: Array<string> = []
 
@@ -25,6 +25,10 @@ export class FInputComponent {
     public focus: boolean = false
 
     public constructor() {}
+
+    public ngOnInit(): void {
+        this.setValidators()
+    }
 
     public getClasses(baseClass: string): object {
         if (!this.fc) {
@@ -42,7 +46,7 @@ export class FInputComponent {
     }
 
     public isRequired(): boolean {
-        return this.validation.find(item => item.type === 'required') !== undefined
+        return !!this.validation.find(({ type }) => type === 'required' || type === 'requiredTrue')
     }
 
     public focusIn(): void {
@@ -51,5 +55,17 @@ export class FInputComponent {
 
     public focusOut(): void {
         this.focus = false
+    }
+
+    private setValidators(): void {
+        const validators: Array<ValidatorFn> = []
+
+        this.validation.forEach(({ type }) => {
+            if (Validators[type] && typeof Validators[type] === 'function') {
+                validators.push(Validators[type])
+            }
+        })
+
+        this.fc.setValidators(validators)
     }
 }

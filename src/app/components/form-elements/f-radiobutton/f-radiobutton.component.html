@@ -1,0 +1,12 @@
+<div class="cmp-f-radiobutton" [ngClass]="getClasses('cmp-f-radiobutton')">
+    <div class="cmp-f-radiobutton__control" [ngClass]="{'cmp-f-radiobutton__control--checked': option.checked}" (click)="setValue(i)" *ngFor="let option of options; let i = index">
+        <svg class="cmp-f-radiobutton__symbol" width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+            <svg:circle class="cmp-f-radiobutton__circle" cx="17.5" cy="17.5" fill="#fff" />
+        </svg>
+        <label class="cmp-f-radiobutton__label" [for]="name">
+            {{label}}<span class="cmp-f-radiobutton__required" *ngIf="isRequired()">*</span>
+        </label>
+    </div>
+    <cmp-f-explanation class="cmp-f-phone__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-radiobutton__errors" [fc]="fc" [messages]="validation" ></cmp-f-error>
+</div>

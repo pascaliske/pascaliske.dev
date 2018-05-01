@@ -18,4 +18,8 @@ $component: 'cmp-f-select';
     &__input:active ~ &__icon {
         color: red;
     }
+
+    &__placeholder {
+        color: rgba($color-grey1, .8);
+    }
 }

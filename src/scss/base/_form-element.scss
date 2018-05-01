@@ -1,0 +1,46 @@
+.flatpickr {
+    &-calendar {
+        &.arrowTop {
+            margin-top: 15px;
+        }
+
+        &.arrowBottom {
+            margin-top: -35px;
+        }
+    }
+
+    &-months,
+    &-months &-month,
+    &-months &-prev-month,
+    &-months &-next-month,
+    &-current-month {
+        height: 40px;
+    }
+
+    &-months &-prev-month,
+    &-months &-next-month {
+        line-height: 30px;
+    }
+
+    &-current-month {
+        padding-top: 9px;
+    }
+
+    &-weekwrapper &-weekday,
+    &-rContainer &-weekdays {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    &-day {
+        margin-bottom: 5px;
+        padding-right: 1px;
+        line-height: 38px;
+
+        &.selected,
+        &.selected:hover {
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+}
