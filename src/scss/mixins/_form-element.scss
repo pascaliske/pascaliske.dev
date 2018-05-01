@@ -159,6 +159,28 @@
     }
 }
 
+@mixin cmp-form-date() {
+    &__calendar {
+        margin-top: 5px;
+
+        /deep/ .pika-single {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: initial;
+            border-color: rgba($color-grey1, .2);
+
+            &.is-hidden {
+                display: none;
+            }
+        }
+
+        /deep/ .pika-lendar {
+            float: none;
+        }
+    }
+}
+
 @mixin cmp-form-button() {
     margin-top: 15px;
     transition: opacity .2s;
