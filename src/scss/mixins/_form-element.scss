@@ -265,12 +265,12 @@
         opacity: .5;
     }
 
-    &--filled &__control--checked &__symbol {
+    &__control--checked &__symbol {
         opacity: 1;
         background-color: $color-primary;
     }
 
-    &--filled &__control--checked &__circle {
+    &__control--checked &__circle {
         r: 9;
     }
 }
