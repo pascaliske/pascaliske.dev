@@ -34,6 +34,7 @@
     "core-decorators": "^0.20.0",
     "core-js": "^2.5.5",
     "decko": "^1.2.0",
+    "flatpickr": "^4.4.4",
     "font-awesome": "^4.7.0",
     "fuzzysearch": "^1.0.3",
     "highlight.js": "^9.12.0",
@@ -41,7 +42,6 @@
     "modularscale-sass": "^3.0.5",
     "ngx-markdown": "^1.5.2",
     "normalize-scss": "^7.0.1",
-    "pikaday": "^1.7.0",
     "rxjs": "^6.0.0",
     "susy": "^3.0.3",
     "zone.js": "^0.8.26"
@@ -57,7 +57,6 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.0.0",
-    "@types/pikaday": "^1.6.3",
     "codelyzer": "^4.3.0",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",

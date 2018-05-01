@@ -5,5 +5,4 @@ $component: 'cmp-f-date';
 @include cmp-base($component, block) {
     @include cmp-form-element();
     @include cmp-form-input();
-    @include cmp-form-date();
 }

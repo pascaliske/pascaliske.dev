@@ -10,8 +10,9 @@
 // external libraries
 @import '../../node_modules/normalize-scss/sass/normalize';
 @import '../../node_modules/font-awesome/scss/font-awesome';
-@import '../../node_modules/pikaday/scss/pikaday';
+@import '../../node_modules/flatpickr/dist/flatpickr.min.css';
 
 // app related stuff
 @import 'base/base';
 @import 'base/fonts';
+@import 'base/form-element';

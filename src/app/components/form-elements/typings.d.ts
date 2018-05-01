@@ -24,6 +24,8 @@ export interface FRadiobuttonOption {
     checked: boolean
 }
 
+export interface FDateOptions {}
+
 export interface FValidationConfig {
     [key: string]: Array<FValidation>
 }
