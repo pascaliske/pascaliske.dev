@@ -81,6 +81,26 @@
     }
 }
 
+@mixin cmp-form-password() {
+    &__toggle {
+        height: 100%;
+        position: absolute;
+        top: 2px;
+        right: 10px;
+        color: $color-primary;
+        opacity: .5;
+        transition: opacity .2s;
+    }
+
+    &--visible &__input {
+        color: rgba($color-grey1, .8);
+    }
+
+    &--visible &__toggle {
+        opacity: 1;
+    }
+}
+
 @mixin cmp-form-textarea() {
     &__control {
         min-height: 35px;
