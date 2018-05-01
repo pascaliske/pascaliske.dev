@@ -9,10 +9,10 @@ export enum Language {
 
 @Injectable()
 export class LanguageService {
-    public language$: BehaviorSubject<string> = new BehaviorSubject(Language.EN)
+    public language$: BehaviorSubject<Language> = new BehaviorSubject(Language.EN)
 
     public constructor(private translateService: TranslateService) {
-        this.translateService.setDefaultLang(Language.EN)
+        this.translateService.setDefaultLang(this.language)
     }
 
     public set language(language: Language) {
