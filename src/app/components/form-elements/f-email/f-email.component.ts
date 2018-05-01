@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef } from '@angular/core'
+import { Component, ViewChild, ElementRef } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import * as fuzzysearch from 'fuzzysearch'
 import { FInputComponent } from '../f-input/f-input.component'
