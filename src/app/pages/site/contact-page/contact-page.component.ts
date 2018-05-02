@@ -41,10 +41,8 @@ export class ContactPageComponent extends Page implements OnInit {
         this.contactForm = this.formBuilder.group({
             name: null,
             email: null,
-            phone: null,
             subject: null,
-            message: null,
-            policy: null
+            message: null
         })
         this.changeDetectorRef.detectChanges()
     }
@@ -55,10 +53,6 @@ export class ContactPageComponent extends Page implements OnInit {
 
     public get email() {
         return this.contactForm.get('email')
-    }
-
-    public get phone() {
-        return this.contactForm.get('phone')
     }
 
     public get subject() {
