@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core'
+import camelCase from 'lodash-es/camelCase'
+import upperFirst from 'lodash-es/upperFirst'
 import { DynamicComponentsDirective } from './dynamic-components.directive'
 import { ComponentManifest, ComponentFactory } from './typings'
 
@@ -25,17 +27,18 @@ export class DynamicComponentsComponent implements OnInit {
      * @returns {boolean}
      */
     private appendComponent(manifest: ComponentManifest): boolean {
-        const component = this.getComponent(manifest.componentName)
+        const name = this.getComponentName(manifest.componentName)
+        const component = this.getComponent(name)
 
         if (!component) {
-            console.log(`Unkown component name: ${manifest.componentName}`)
+            console.log(`Unkown component name: ${name}`)
             return false
         }
 
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component)
         const componentRef: any = this.hostRef.viewContainerRef.createComponent(componentFactory)
 
-        if (Object.entries(manifest.params).length > 0) {
+        if (manifest.params && Object.entries(manifest.params).length > 0) {
             Object.entries(manifest.params).forEach(([key, value]) => {
                 componentRef.instance[key] = value
             })
@@ -46,6 +49,14 @@ export class DynamicComponentsComponent implements OnInit {
         }
 
         return true
+    }
+
+    private getComponentName(name: string): string {
+        if (!name.includes('-')) {
+            return null
+        }
+
+        return `${upperFirst(camelCase(name.replace('cmp-', '')))}Component`
     }
 
     /**
