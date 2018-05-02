@@ -1,8 +1,8 @@
 {
-  "name": "pascal-iske",
-  "short_name": "pascal-iske",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Pascal Iske",
+  "short_name": "Pascal Iske",
+  "theme_color": "#2d333d",
+  "background_color": "#ffffff",
   "display": "browser",
   "scope": "/",
   "start_url": "/",

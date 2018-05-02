@@ -72,7 +72,7 @@ export class SiteComponent implements OnDestroy {
             .pipe(
                 takeWhile(() => this.alive),
                 filter(event => event instanceof NavigationEnd),
-                switchMap(event => this.route.paramMap)
+                switchMap(() => this.route.paramMap)
             )
             .subscribe((params: ParamMap) => {
                 this.languageService.language = params.get('language') as Language

@@ -49,7 +49,7 @@ export class ScrollService {
         // listen to resize events
         fromEvent(window, 'scroll')
             .pipe(share())
-            .subscribe((event: Event) => {
+            .subscribe(() => {
                 this.scrollstate$.next({
                     scrollX: window.scrollX,
                     scrollY: window.scrollY

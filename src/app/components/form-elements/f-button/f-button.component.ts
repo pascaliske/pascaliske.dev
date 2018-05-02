@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core'
-import { FInputComponent } from '../f-input/f-input.component'
 
 @Component({
     selector: 'cmp-f-button',

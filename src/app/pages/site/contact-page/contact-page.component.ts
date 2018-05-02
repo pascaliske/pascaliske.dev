@@ -63,7 +63,7 @@ export class ContactPageComponent extends Page implements OnInit {
         return this.contactForm.get('message')
     }
 
-    public submit(event: Event): void {
+    public submit(): void {
         console.log('==> submit form', this.contactForm.value)
         this.reset()
     }
