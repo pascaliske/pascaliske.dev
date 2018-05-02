@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Subject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
-import { debounce } from 'decko'
 
 /**
  * Interface describing a breakpoint.
@@ -175,7 +174,7 @@ export class BreakpointService {
         // listen to resize events
         fromEvent(window, 'resize')
             .pipe(share(), debounceTime(15))
-            .subscribe(event => {
+            .subscribe(() => {
                 const current: Breakpoint = this.determineBreakpoint()
                 const dimensions: ResizeState = {
                     height: document.documentElement.clientHeight,

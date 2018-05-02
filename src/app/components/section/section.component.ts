@@ -19,7 +19,7 @@ export class SectionComponent implements OnInit {
     public constructor(private element: ElementRef, private viewportService: ViewportService) {}
 
     public ngOnInit(): void {
-        const sub = this.viewportService
+        this.viewportService
             .observe(this.element.nativeElement)
             .pipe(takeWhile(() => this.alive))
             .subscribe((entry: IntersectionObserverEntry) => {

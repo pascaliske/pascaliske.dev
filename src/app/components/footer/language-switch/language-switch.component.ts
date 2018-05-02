@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
-import { Router, ActivatedRoute, Route, UrlSegment, NavigationEnd } from '@angular/router'
+import { Router, ActivatedRoute, UrlSegment, NavigationEnd } from '@angular/router'
 import { filter, switchMap } from 'rxjs/operators'
-import { routes } from '../../../app-routing.module'
 
 @Component({
     selector: 'cmp-language-switch',
