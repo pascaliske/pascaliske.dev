@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
-import { AbstractControl, ValidatorFn, Validators } from '@angular/forms'
+import { AbstractControl, FormControl, ValidatorFn, Validators } from '@angular/forms'
 import { FValidation } from '../typings'
 
 @Component({
@@ -14,7 +14,7 @@ export class FInputComponent implements OnInit {
 
     @Input() public label: string
 
-    @Input() public fc: AbstractControl
+    @Input() public fc: AbstractControl = new FormControl()
 
     @Input() public validation: Array<FValidation> = []
 
