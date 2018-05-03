@@ -27,8 +27,16 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         SharedModule.registerDynamicComponents([
             FRowComponent,
             FColumnComponent,
+            FInputComponent,
             FEmailComponent,
-            FDateComponent
+            FPhoneComponent,
+            FButtonComponent,
+            FSelectComponent,
+            FTextAreaComponent,
+            FPasswordComponent,
+            FDateComponent,
+            FCheckboxComponent,
+            FRadiobuttonComponent
         ]),
         IconModule
     ],
