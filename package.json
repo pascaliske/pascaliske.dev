@@ -43,6 +43,7 @@
     "modularscale-sass": "^3.0.5",
     "ngx-markdown": "^1.5.2",
     "normalize-scss": "^7.0.1",
+    "raven-js": "^3.24.2",
     "rxjs": "^6.0.0",
     "susy": "^3.0.3",
     "zone.js": "^0.8.26"
@@ -59,6 +60,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/lodash-es": "^4.17.0",
     "@types/node": "~10.0.0",
+    "@types/raven-js": "^3.10.0",
     "codelyzer": "^4.3.0",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
