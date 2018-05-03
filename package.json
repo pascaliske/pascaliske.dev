@@ -31,6 +31,7 @@
     "@ngx-progressbar/router": "^4.3.0",
     "@ngx-translate/core": "^10.0.1",
     "@ngx-translate/http-loader": "^3.0.1",
+    "classlist.js": "^1.1.20150312",
     "core-decorators": "^0.20.0",
     "core-js": "^2.5.5",
     "decko": "^1.2.0",
@@ -46,6 +47,7 @@
     "raven-js": "^3.24.2",
     "rxjs": "^6.0.0",
     "susy": "^3.0.3",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

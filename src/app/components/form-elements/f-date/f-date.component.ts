@@ -16,6 +16,8 @@ import { FDateOptions } from '../typings'
     styleUrls: ['./f-date.component.scss']
 })
 export class FDateComponent extends FInputComponent implements AfterViewInit, OnDestroy {
+    public static readonly cmpName: string = 'FDateComponent'
+
     @Input() public options: Partial<FDateOptions> = {}
 
     @ViewChild('inputRef') public inputRef: ElementRef

@@ -8,6 +8,8 @@ import { FSelectPlaceholder, FSelectOption } from '../typings'
     styleUrls: ['./f-select.component.scss']
 })
 export class FSelectComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FSelectComponent'
+
     @Input() public placeholder: FSelectPlaceholder
 
     @Input() public options: Array<FSelectOption> = []

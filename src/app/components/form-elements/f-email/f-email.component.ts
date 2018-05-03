@@ -9,6 +9,8 @@ import { FInputComponent } from '../f-input/f-input.component'
     styleUrls: ['./f-email.component.scss']
 })
 export class FEmailComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FEmailComponent'
+
     @ViewChild('inputField') public inputRef: ElementRef
 
     public suggestions$: BehaviorSubject<Array<string>> = new BehaviorSubject([])
