@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule, ErrorHandler } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ServiceWorkerModule } from '@angular/service-worker'
@@ -10,6 +10,7 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { environment } from '../environments/environment'
+import { RavenErrorHandler } from './raven'
 import { AppRoutingModule } from './app-routing.module'
 import { SiteModule } from './pages/site/site.module'
 import { BreakpointService } from './services/breakpoint/breakpoint.service'
@@ -75,6 +76,10 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         SiteModule
     ],
     providers: [
+        {
+            provide: ErrorHandler,
+            useClass: RavenErrorHandler
+        },
         TranslateService,
         BreakpointService,
         TitleService,
