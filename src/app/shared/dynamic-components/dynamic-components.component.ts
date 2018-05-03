@@ -30,7 +30,6 @@ export class DynamicComponentsComponent implements OnInit {
         const id = this.resolveComponentName(manifest.componentName)
         const component = this.resolveComponentFactory(id)
 
-        console.log(id)
         if (!component) {
             console.log(`Unkown component: ${id}`)
             return
