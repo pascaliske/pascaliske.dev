@@ -5,9 +5,13 @@ export interface ComponentManifestParams {
 export interface ComponentManifest {
     componentName: string
     params?: ComponentManifestParams
-    data?: any
+    children?: Array<ComponentManifest>
 }
 
 export interface ComponentFactory {
     new (...args: Array<any>): {}
+}
+
+export interface ComponentRef {
+    instance: any
 }

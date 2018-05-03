@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@
 import camelCase from 'lodash-es/camelCase'
 import upperFirst from 'lodash-es/upperFirst'
 import { DynamicComponentsDirective } from './dynamic-components.directive'
-import { ComponentManifest, ComponentFactory } from './typings'
+import { ComponentManifest, ComponentFactory, ComponentRef } from './typings'
 
 @Component({
     selector: 'cmp-dynamic-components',
@@ -17,55 +17,78 @@ export class DynamicComponentsComponent implements OnInit {
     public constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
     public ngOnInit(): void {
-        this.components.forEach(item => this.appendComponent(item))
+        this.components.forEach(item => this.resolveComponent(item))
     }
 
     /**
-     * Appends a new component to the container element.
+     * Resolves dynamic components and its children.
      *
      * @param {ComponentManifest} manifest
-     * @returns {boolean}
+     * @returns {ComponentRef}
      */
-    private appendComponent(manifest: ComponentManifest): boolean {
-        const name = this.getComponentName(manifest.componentName)
-        const component = this.getComponent(name)
+    private resolveComponent(manifest: ComponentManifest): ComponentRef {
+        const id = this.resolveComponentName(manifest.componentName)
+        const component = this.resolveComponentFactory(id)
 
+        console.log(id)
         if (!component) {
-            console.log(`Unkown component name: ${name}`)
-            return false
+            console.log(`Unkown component: ${id}`)
+            return
         }
 
-        const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component)
-        const componentRef: any = this.hostRef.viewContainerRef.createComponent(componentFactory)
+        // pre resolve children components
+        let children: Array<any>
+        if (manifest.children && manifest.children.length > 0) {
+            children = manifest.children.map(child => this.resolveComponent(child))
+            children = children.filter(child => child !== undefined)
+            children = [children.map(child => child.location.nativeElement)]
+        }
 
+        // resolve actual factory and create its component
+        const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component)
+        const componentRef: ComponentRef = this.hostRef.viewContainerRef.createComponent(
+            componentFactory,
+            0,
+            undefined,
+            children
+        )
+
+        // inject params to instance
         if (manifest.params && Object.entries(manifest.params).length > 0) {
             Object.entries(manifest.params).forEach(([key, value]) => {
                 componentRef.instance[key] = value
             })
         }
 
-        if (manifest.data) {
-            componentRef.instance.data = manifest.data
-        }
-
-        return true
+        return componentRef
     }
 
-    private getComponentName(name: string): string {
+    /**
+     * Resolves a component name from the manifest.
+     *
+     * @param {string} name
+     * @returns {string}
+     */
+    private resolveComponentName(name: string): string {
         if (!name.includes('-')) {
             return null
         }
 
-        return `${upperFirst(camelCase(name.replace('cmp-', '')))}Component`
+        // remove prefix and suffix if available
+        name = name.replace('cmp', '')
+        name = name.replace('component', '')
+
+        // transform name and append suffix
+        return `${upperFirst(camelCase(name))}Component`
     }
 
     /**
-     * Return component based on string name. Only imported components will be found.
+     * Resolves a components factory by component name.
      *
      * @param {string} name
      * @returns {ComponentFactory}
      */
-    private getComponent(name: string): ComponentFactory {
+    private resolveComponentFactory(name: string): ComponentFactory {
         const factories: Array<ComponentFactory> = Array.from(
             this.componentFactoryResolver['_factories'].keys()
         )
