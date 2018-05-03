@@ -1,0 +1,8 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-radiobutton';
+
+@include cmp-base($component, block) {
+    @include cmp-form-element();
+    @include cmp-form-radiobutton();
+}

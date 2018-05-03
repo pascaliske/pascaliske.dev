@@ -27,6 +27,11 @@
                 "output": "/"
               },
               {
+                "glob": "manifest.json",
+                "input": "src",
+                "output": "/"
+              },
+              {
                 "glob": "favicon.ico",
                 "input": "src",
                 "output": "/"

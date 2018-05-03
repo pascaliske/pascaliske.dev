@@ -169,8 +169,8 @@
     "directive-selector": [
       true,
       "attribute",
-      "cmp",
-      "camelCase"
+      null,
+      "kebab-case"
     ],
     "component-selector": [
       true,

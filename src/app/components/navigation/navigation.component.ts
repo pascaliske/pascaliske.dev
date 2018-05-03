@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
-import { LanguageService } from '../../services/language/language.service'
 import { BreakpointService, Breakpoints } from '../../services/breakpoint/breakpoint.service'
 import { takeWhile } from 'rxjs/operators'
 

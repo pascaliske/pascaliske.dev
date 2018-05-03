@@ -1,10 +1,24 @@
-import { NgModule } from '@angular/core'
+import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ObjectKeysPipe } from '../pipes/object-keys/object-keys.pipe'
+import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component'
+import { DynamicComponentsDirective } from './dynamic-components/dynamic-components.directive'
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [ObjectKeysPipe],
-    exports: [ObjectKeysPipe]
+    declarations: [DynamicComponentsComponent, DynamicComponentsDirective],
+    exports: [DynamicComponentsComponent, DynamicComponentsDirective]
 })
-export class SharedModule {}
+export class SharedModule {
+    public static registerDynamicComponents(components: Array<any>) {
+        return {
+            ngModule: SharedModule,
+            providers: [
+                {
+                    provide: ANALYZE_FOR_ENTRY_COMPONENTS,
+                    useValue: components,
+                    multi: true
+                }
+            ]
+        }
+    }
+}

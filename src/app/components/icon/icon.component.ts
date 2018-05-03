@@ -7,6 +7,8 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IconComponent {
+    public static readonly cmpName: string = 'IconComponent'
+
     @Input() public name: string
 
     public constructor() {}

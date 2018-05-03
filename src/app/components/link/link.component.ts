@@ -15,6 +15,8 @@ import { Router } from '@angular/router'
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LinkComponent {
+    public static readonly cmpName: string = 'LinkComponent'
+
     /**
      * The link text.
      *

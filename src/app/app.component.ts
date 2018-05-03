@@ -42,7 +42,7 @@ export class AppComponent implements OnDestroy {
         this.titleService.suffix = 'Pascal Iske'
         this.router.events
             .pipe(takeWhile(() => this.alive), filter(event => event instanceof NavigationEnd))
-            .subscribe((event: NavigationEnd) => {
+            .subscribe(() => {
                 setTimeout(() => this.show(), 400)
             })
     }

@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef } from '@angular/core'
+import { Component, ViewChild, ElementRef } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import * as fuzzysearch from 'fuzzysearch'
 import { FInputComponent } from '../f-input/f-input.component'
@@ -9,6 +9,8 @@ import { FInputComponent } from '../f-input/f-input.component'
     styleUrls: ['./f-email.component.scss']
 })
 export class FEmailComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FEmailComponent'
+
     @ViewChild('inputField') public inputRef: ElementRef
 
     public suggestions$: BehaviorSubject<Array<string>> = new BehaviorSubject([])
@@ -32,27 +34,24 @@ export class FEmailComponent extends FInputComponent {
         'me.com',
         'msn.com',
         'online.de',
+        'outlook.com',
         't-online.de',
         'web.de',
         'yahoo.com',
         'yahoo.de'
     ]
 
-    public suggest(event: Event): void {
+    public suggest(event: KeyboardEvent): void {
         const value = (event.target as HTMLInputElement).value.match(/(.*)@(.*)/)
 
         if (value && value.length > 2 && value[2] && value[2].length > 0) {
-            const matches = this.providers.filter(item => fuzzysearch(value[2], item))
-
-            this.suggestions$.next(matches)
+            this.suggestions$.next(this.providers.filter(item => fuzzysearch(value[2], item)))
         } else {
             this.suggestions$.next([])
         }
     }
 
     public use(event: Event): void {
-        console.log('==>', event)
-
         const parts = this.fc.value.split('@')
         const input = parts.slice(0, parts.length - 1).join('@')
         const suggestion = (event.target as HTMLElement).innerText

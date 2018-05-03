@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core'
-import { Layouts } from './typings'
+import { FRowLayouts } from '../typings'
 
 @Component({
     selector: 'cmp-f-row',
@@ -8,7 +8,9 @@ import { Layouts } from './typings'
     encapsulation: ViewEncapsulation.None
 })
 export class FRowComponent {
-    @Input() public layout: Layouts = '1'
+    public static readonly cmpName: string = 'FRowComponent'
+
+    @Input() public layout: FRowLayouts = '1'
 
     public constructor() {}
 }

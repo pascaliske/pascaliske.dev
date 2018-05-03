@@ -12,6 +12,7 @@ $component: 'cmp-footer';
     flex-direction: column;
     justify-content: flex-end;
     border-top: 1px $color-white2 solid;
+    background-color: $color-white1;
 
     @include use-breakpoint(mini-tablet) {
         height: $footer-height-mini-tablet;
