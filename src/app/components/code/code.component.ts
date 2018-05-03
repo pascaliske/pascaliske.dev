@@ -8,6 +8,8 @@ import * as hljs from 'highlight.js'
     encapsulation: ViewEncapsulation.None
 })
 export class CodeComponent {
+    public static readonly cmpName: string = 'CodeComponent'
+
     /**
      * Input property to specify the code language.
      *

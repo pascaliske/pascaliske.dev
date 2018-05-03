@@ -9,6 +9,7 @@ export interface ComponentManifest {
 }
 
 export interface ComponentFactory {
+    readonly cmpName: string
     new (...args: Array<any>): {}
 }
 

@@ -7,6 +7,8 @@ import { LanguageService } from '../../services/language/language.service'
     styleUrls: ['./quick-contact.component.scss']
 })
 export class QuickContactComponent {
+    public static readonly cmpName: string = 'QuickContactComponent'
+
     /**
      * Initializes the component.
      *

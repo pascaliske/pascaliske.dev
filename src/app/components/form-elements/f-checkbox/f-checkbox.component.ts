@@ -6,4 +6,6 @@ import { FInputComponent } from '../f-input/f-input.component'
     templateUrl: './f-checkbox.component.html',
     styleUrls: ['./f-checkbox.component.scss']
 })
-export class FCheckboxComponent extends FInputComponent {}
+export class FCheckboxComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FCheckboxComponent'
+}

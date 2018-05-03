@@ -7,4 +7,6 @@ import { Headline } from '../headline'
     styleUrls: ['./headline-h4.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeadlineH4Component extends Headline {}
+export class HeadlineH4Component extends Headline {
+    public static readonly cmpName: string = 'HeadlineH4Component'
+}

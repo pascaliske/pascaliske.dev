@@ -8,6 +8,8 @@ import { FColumnAlignments } from '../typings'
     encapsulation: ViewEncapsulation.None
 })
 export class FColumnComponent {
+    public static readonly cmpName: string = 'FColumnComponent'
+
     @Input() public flex: boolean = false
 
     @Input() public align: FColumnAlignments = 'left'

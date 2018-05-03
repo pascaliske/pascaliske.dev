@@ -8,6 +8,8 @@ import { FValidation } from '../typings'
     styleUrls: ['./f-input.component.scss']
 })
 export class FInputComponent implements OnInit {
+    public static readonly cmpName: string = 'FInputComponent'
+
     @Input() public name: string
 
     @Input() public label: string

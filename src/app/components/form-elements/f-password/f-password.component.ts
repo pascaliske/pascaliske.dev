@@ -7,6 +7,8 @@ import { FInputComponent } from '../f-input/f-input.component'
     styleUrls: ['./f-password.component.scss']
 })
 export class FPasswordComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FPasswordComponent'
+
     public type: 'text' | 'password' = 'password'
 
     public visible: boolean = false

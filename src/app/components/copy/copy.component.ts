@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core'
     styleUrls: ['./copy.component.scss']
 })
 export class CopyComponent {
+    public static readonly cmpName: string = 'CopyComponent'
+
     @Input() public theme: string = ''
 
     @Input() public text: string

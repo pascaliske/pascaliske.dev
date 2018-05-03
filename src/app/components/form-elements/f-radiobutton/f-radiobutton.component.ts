@@ -8,6 +8,8 @@ import { FRadiobuttonOption } from '../typings'
     styleUrls: ['./f-radiobutton.component.scss']
 })
 export class FRadiobuttonComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FRadiobuttonComponent'
+
     @Input() public options: Array<FRadiobuttonOption> = []
 
     public setValue(index: number): void {

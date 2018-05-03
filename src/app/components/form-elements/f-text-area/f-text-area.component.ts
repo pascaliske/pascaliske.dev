@@ -6,4 +6,6 @@ import { FInputComponent } from '../f-input/f-input.component'
     templateUrl: './f-text-area.component.html',
     styleUrls: ['./f-text-area.component.scss']
 })
-export class FTextAreaComponent extends FInputComponent {}
+export class FTextAreaComponent extends FInputComponent {
+    public static readonly cmpName: string = 'FTextAreaComponent'
+}

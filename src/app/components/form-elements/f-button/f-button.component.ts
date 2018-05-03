@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core'
     styleUrls: ['./f-button.component.scss']
 })
 export class FButtonComponent {
+    public static readonly cmpName: string = 'FButtonComponent'
+
     @Input() public type: string = 'button'
 
     @Input() public text: string
