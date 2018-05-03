@@ -24,7 +24,12 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         CommonModule,
         ReactiveFormsModule,
         TranslateModule.forChild(),
-        SharedModule,
+        SharedModule.registerDynamicComponents([
+            FRowComponent,
+            FColumnComponent,
+            FEmailComponent,
+            FDateComponent
+        ]),
         IconModule
     ],
     declarations: [
