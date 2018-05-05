@@ -26,31 +26,52 @@ export const routes: Routes = [
             },
             {
                 path: 'home',
-                component: HomePageComponent
+                component: HomePageComponent,
+                data: {
+                    title: 'PAGE_TITLE_HOME'
+                }
             },
             {
                 path: 'about',
-                component: AboutPageComponent
+                component: AboutPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_ABOUT'
+                }
             },
             {
                 path: 'references',
-                component: ReferencesPageComponent
+                component: ReferencesPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_REFERENCES'
+                }
             },
             {
                 path: 'blog',
-                component: BlogPageComponent
+                component: BlogPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_BLOG'
+                }
             },
             {
                 path: 'contact',
-                component: ContactPageComponent
+                component: ContactPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_CONTACT'
+                }
             },
             {
                 path: 'imprint',
-                component: ImprintPageComponent
+                component: ImprintPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_IMPRINT'
+                }
             },
             {
                 path: 'privacy',
-                component: PrivacyPageComponent
+                component: PrivacyPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_PRIVACY'
+                }
             },
             {
                 path: '**',
