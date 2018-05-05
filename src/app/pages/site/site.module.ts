@@ -11,7 +11,6 @@ import { BlogPageModule } from './blog-page/blog-page.module'
 import { ContactPageModule } from './contact-page/contact-page.module'
 import { ImprintPageModule } from './imprint-page/imprint-page.module'
 import { PrivacyPageModule } from './privacy-page/privacy-page.module'
-import { NotFoundPageModule } from './not-found-page/not-found-page.module'
 
 import { SiteComponent } from './site.component'
 
@@ -28,8 +27,7 @@ import { SiteComponent } from './site.component'
         BlogPageModule,
         ContactPageModule,
         ImprintPageModule,
-        PrivacyPageModule,
-        NotFoundPageModule
+        PrivacyPageModule
     ],
     declarations: [SiteComponent]
 })
