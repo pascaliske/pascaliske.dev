@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { SharedModule } from '../../shared/shared.module'
 import { AppRoutingModule } from '../../app-routing.module'
 import { HeaderModule } from '../../components/header/header.module'
 import { NavigationModule } from '../../components/navigation/navigation.module'
@@ -16,7 +16,7 @@ import { SiteComponent } from './site.component'
 
 @NgModule({
     imports: [
-        CommonModule,
+        SharedModule,
         AppRoutingModule,
         HeaderModule,
         NavigationModule,
