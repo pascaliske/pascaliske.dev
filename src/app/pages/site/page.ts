@@ -1,32 +1,37 @@
-import { OnDestroy } from '@angular/core'
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
-import { takeWhile } from 'rxjs/operators'
+import { ActivatedRoute } from '@angular/router'
+import { TranslateService } from '@ngx-translate/core'
+import { takeWhile, switchMap } from 'rxjs/operators'
 import { TitleService } from '../../services/title/title.service'
 
-export class Page implements OnDestroy {
+export class Page {
     public title: string
 
-    private alive: boolean = true
+    protected alive: boolean = true
 
-    public constructor(public translate: TranslateService, public titleService: TitleService) {}
-
-    public fetchTitle(key: string): void {
-        this.translate
-            .get(key)
-            .pipe(takeWhile(() => this.alive))
-            .subscribe(translation => {
-                this.title = translation
-                this.titleService.title = translation
-            })
-        this.translate.onLangChange
-            .pipe(takeWhile(() => this.alive))
-            .subscribe((event: LangChangeEvent) => {
-                this.title = event.translations[key]
-                this.titleService.title = event.translations[key]
-            })
+    public constructor(
+        public route: ActivatedRoute,
+        public translate: TranslateService,
+        public titleService: TitleService
+    ) {
+        this.fetchTitle()
     }
 
-    public ngOnDestroy(): void {
-        this.alive = false
+    private fetchTitle(): void {
+        this.route.data
+            .pipe(takeWhile(() => this.alive), switchMap(data => this.translate.get(data.title)))
+            .subscribe(translated => {
+                this.title = translated
+                this.titleService.title = translated
+            })
+        this.translate.onLangChange
+            .pipe(
+                takeWhile(() => this.alive),
+                switchMap(() => this.route.data),
+                switchMap(data => this.translate.get(data.title))
+            )
+            .subscribe(translated => {
+                this.title = translated
+                this.titleService.title = translated
+            })
     }
 }

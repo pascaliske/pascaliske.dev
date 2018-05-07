@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { TitleService } from '../../../services/title/title.service'
@@ -10,7 +11,7 @@ import { Page } from '../page'
     templateUrl: './contact-page.component.html',
     styleUrls: ['./contact-page.component.scss']
 })
-export class ContactPageComponent extends Page implements OnInit {
+export class ContactPageComponent extends Page implements OnInit, OnDestroy {
     public contactForm: FormGroup
 
     public validation: FValidationConfig = {
@@ -29,12 +30,11 @@ export class ContactPageComponent extends Page implements OnInit {
     public constructor(
         private changeDetectorRef: ChangeDetectorRef,
         private formBuilder: FormBuilder,
+        public route: ActivatedRoute,
         public translate: TranslateService,
         public titleService: TitleService
     ) {
-        super(translate, titleService)
-
-        this.fetchTitle('PAGE_TITLE_CONTACT')
+        super(route, translate, titleService)
     }
 
     public ngOnInit(): void {
@@ -45,6 +45,10 @@ export class ContactPageComponent extends Page implements OnInit {
             message: null
         })
         this.changeDetectorRef.detectChanges()
+    }
+
+    public ngOnDestroy(): void {
+        this.alive = false
     }
 
     public get name() {

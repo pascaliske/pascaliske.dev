@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../services/title/title.service'
 import { Page } from '../page'
@@ -8,10 +9,16 @@ import { Page } from '../page'
     templateUrl: './imprint-page.component.html',
     styleUrls: ['./imprint-page.component.scss']
 })
-export class ImprintPageComponent extends Page {
-    public constructor(public translate: TranslateService, public titleService: TitleService) {
-        super(translate, titleService)
+export class ImprintPageComponent extends Page implements OnDestroy {
+    public constructor(
+        public route: ActivatedRoute,
+        public translate: TranslateService,
+        public titleService: TitleService
+    ) {
+        super(route, translate, titleService)
+    }
 
-        this.fetchTitle('PAGE_TITLE_IMPRINT')
+    public ngOnDestroy(): void {
+        this.alive = false
     }
 }

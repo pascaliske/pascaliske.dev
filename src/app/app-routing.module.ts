@@ -8,7 +8,6 @@ import { BlogPageComponent } from './pages/site/blog-page/blog-page.component'
 import { ContactPageComponent } from './pages/site/contact-page/contact-page.component'
 import { ImprintPageComponent } from './pages/site/imprint-page/imprint-page.component'
 import { PrivacyPageComponent } from './pages/site/privacy-page/privacy-page.component'
-import { NotFoundPageComponent } from './pages/site/not-found-page/not-found-page.component'
 
 export const routes: Routes = [
     {
@@ -27,35 +26,56 @@ export const routes: Routes = [
             },
             {
                 path: 'home',
-                component: HomePageComponent
+                component: HomePageComponent,
+                data: {
+                    title: 'PAGE_TITLE_HOME'
+                }
             },
             {
                 path: 'about',
-                component: AboutPageComponent
+                component: AboutPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_ABOUT'
+                }
             },
             {
                 path: 'references',
-                component: ReferencesPageComponent
+                component: ReferencesPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_REFERENCES'
+                }
             },
             {
                 path: 'blog',
-                component: BlogPageComponent
+                component: BlogPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_BLOG'
+                }
             },
             {
                 path: 'contact',
-                component: ContactPageComponent
+                component: ContactPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_CONTACT'
+                }
             },
             {
                 path: 'imprint',
-                component: ImprintPageComponent
+                component: ImprintPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_IMPRINT'
+                }
             },
             {
                 path: 'privacy',
-                component: PrivacyPageComponent
+                component: PrivacyPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_PRIVACY'
+                }
             },
             {
                 path: '**',
-                component: NotFoundPageComponent
+                redirectTo: 'home'
             }
         ]
     }

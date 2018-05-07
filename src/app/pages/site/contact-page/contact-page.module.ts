@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
-import { TranslateModule } from '@ngx-translate/core'
+import { SharedModule } from '../../../shared/shared.module'
 import { PageHeaderModule } from '../../../components/page-header/page-header.module'
 import { SectionModule } from '../../../components/section/section.module'
 import { HeadlinesModule } from '../../../components/headlines/headlines.module'
@@ -12,9 +11,8 @@ import { ContactPageComponent } from './contact-page.component'
 
 @NgModule({
     imports: [
-        CommonModule,
         ReactiveFormsModule,
-        TranslateModule.forChild(),
+        SharedModule,
         PageHeaderModule,
         SectionModule,
         HeadlinesModule,
