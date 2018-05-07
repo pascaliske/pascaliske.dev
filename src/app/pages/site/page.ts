@@ -1,9 +1,11 @@
 import { ActivatedRoute } from '@angular/router'
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core'
-import { takeWhile } from 'rxjs/operators'
+import { TranslateService } from '@ngx-translate/core'
+import { takeWhile, switchMap } from 'rxjs/operators'
 import { TitleService } from '../../services/title/title.service'
 
 export class Page {
+    public title: string
+
     protected alive: boolean = true
 
     public constructor(
@@ -11,15 +13,25 @@ export class Page {
         public translate: TranslateService,
         public titleService: TitleService
     ) {
-        this.fetchTitle(this.route.snapshot.data.title)
+        this.fetchTitle()
     }
 
-    private fetchTitle(key: string): void {
-        this.titleService.title = this.translate.instant(key)
+    private fetchTitle(): void {
+        this.route.data
+            .pipe(takeWhile(() => this.alive), switchMap(data => this.translate.get(data.title)))
+            .subscribe(translated => {
+                this.title = translated
+                this.titleService.title = translated
+            })
         this.translate.onLangChange
-            .pipe(takeWhile(() => this.alive))
-            .subscribe((event: LangChangeEvent) => {
-                this.titleService.title = event.translations[key]
+            .pipe(
+                takeWhile(() => this.alive),
+                switchMap(() => this.route.data),
+                switchMap(data => this.translate.get(data.title))
+            )
+            .subscribe(translated => {
+                this.title = translated
+                this.titleService.title = translated
             })
     }
 }
