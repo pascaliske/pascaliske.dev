@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 import { TranslateModule } from '@ngx-translate/core'
 import { SharedModule } from '../../shared/shared.module'
-import { NavigationButtonModule } from './navigation-button/navigation-button.module'
 import { NavigationComponent } from './navigation.component'
+import { NavigationButtonComponent } from './navigation-button/navigation-button.component'
 
 @NgModule({
     imports: [
@@ -12,9 +12,9 @@ import { NavigationComponent } from './navigation.component'
         RouterModule,
         TranslateModule.forChild(),
         SharedModule.registerDynamicComponents([NavigationComponent]),
-        NavigationButtonModule
     ],
     declarations: [NavigationComponent],
+    declarations: [NavigationComponent, NavigationButtonComponent],
     exports: [NavigationComponent]
 })
 export class NavigationModule {}
