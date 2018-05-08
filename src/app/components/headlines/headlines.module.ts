@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { SharedModule } from '../../shared/shared.module'
 import { IconModule } from '../icon/icon.module'
 import { HeadlineH1Component } from './headline-h1/headline-h1.component'
@@ -11,7 +10,6 @@ import { HeadlineH6Component } from './headline-h6/headline-h6.component'
 
 @NgModule({
     imports: [
-        CommonModule,
         SharedModule.registerDynamicComponents([
             HeadlineH1Component,
             HeadlineH2Component,

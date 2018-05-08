@@ -6,7 +6,6 @@ import { SectionModule } from '../../../components/section/section.module'
 import { HeadlinesModule } from '../../../components/headlines/headlines.module'
 import { CopyModule } from '../../../components/copy/copy.module'
 import { FormElementsModule } from '../../../components/form-elements/form-elements.module'
-import { CodeModule } from '../../../components/code/code.module'
 import { ContactPageComponent } from './contact-page.component'
 
 @NgModule({
@@ -17,8 +16,7 @@ import { ContactPageComponent } from './contact-page.component'
         SectionModule,
         HeadlinesModule,
         CopyModule,
-        FormElementsModule,
-        CodeModule
+        FormElementsModule
     ],
     declarations: [ContactPageComponent]
 })

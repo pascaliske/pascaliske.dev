@@ -1,13 +1,20 @@
 import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { TranslateModule } from '@ngx-translate/core'
+import { MarkdownModule } from 'ngx-markdown'
 import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component'
 import { DynamicComponentsDirective } from './dynamic-components/dynamic-components.directive'
 
 @NgModule({
-    imports: [CommonModule, TranslateModule],
+    imports: [CommonModule, TranslateModule, MarkdownModule],
     declarations: [DynamicComponentsComponent, DynamicComponentsDirective],
-    exports: [CommonModule, TranslateModule, DynamicComponentsComponent, DynamicComponentsDirective]
+    exports: [
+        CommonModule,
+        TranslateModule,
+        MarkdownModule,
+        DynamicComponentsComponent,
+        DynamicComponentsDirective
+    ]
 })
 export class SharedModule {
     public static registerDynamicComponents(components: Array<any>) {
