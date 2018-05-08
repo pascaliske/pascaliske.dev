@@ -1,11 +1,14 @@
 {
-  "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "pascal-iske": {
       "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -13,8 +16,8 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
@@ -146,14 +149,14 @@
       }
     }
   },
-  "cli": {},
+  "defaultProject": "pascal-iske",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "cmp",
       "styleext": "scss"
     },
     "@schematics/angular:directive": {
-      "prefix": "cmp"
+      "prefix": ""
     }
   }
 }
