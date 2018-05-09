@@ -63,9 +63,9 @@ export class FInputComponent implements OnInit {
     private setValidators(): void {
         const validators: Array<ValidatorFn> = []
 
-        this.validation.forEach(({ type }) => {
+        this.validation.forEach(({ type, value }) => {
             if (Validators[type] && typeof Validators[type] === 'function') {
-                validators.push(Validators[type])
+                validators.push(value ? Validators[type](value) : Validators[type])
             }
         })
 
