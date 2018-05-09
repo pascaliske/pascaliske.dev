@@ -1,5 +1,14 @@
 export interface FValidation {
-    type: string
+    type:
+        | 'min'
+        | 'max'
+        | 'required'
+        | 'requiredTrue'
+        | 'email'
+        | 'minLength'
+        | 'maxLength'
+        | 'pattern'
+    value?: string | number
     message: string
 }
 

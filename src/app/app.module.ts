@@ -20,7 +20,7 @@ import { ViewportService } from './services/viewport/viewport.service'
 import { LanguageService } from './services/language/language.service'
 import { AppComponent } from './app.component'
 
-export function HttpLoaderFactory(http: HttpClient) {
+export function TranslationLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, '/assets/translations/')
 }
 
@@ -61,7 +61,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
+                useFactory: TranslationLoaderFactory,
                 deps: [HttpClient]
             }
         }),

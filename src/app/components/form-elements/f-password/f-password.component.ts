@@ -1,10 +1,11 @@
-import { Component } from '@angular/core'
+import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { FInputComponent } from '../f-input/f-input.component'
 
 @Component({
     selector: 'cmp-f-password',
     templateUrl: './f-password.component.html',
-    styleUrls: ['./f-password.component.scss']
+    styleUrls: ['./f-password.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FPasswordComponent extends FInputComponent {
     public static readonly cmpName: string = 'FPasswordComponent'

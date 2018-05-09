@@ -1,11 +1,12 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core'
+import { Component, ViewEncapsulation, Input, ChangeDetectionStrategy } from '@angular/core'
 import * as hljs from 'highlight.js'
 
 @Component({
     selector: 'cmp-code',
     templateUrl: './code.component.html',
     styleUrls: ['./code.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CodeComponent {
     public static readonly cmpName: string = 'CodeComponent'

@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
 
 @Component({
     selector: 'cmp-f-button',
     templateUrl: './f-button.component.html',
-    styleUrls: ['./f-button.component.scss']
+    styleUrls: ['./f-button.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FButtonComponent {
     public static readonly cmpName: string = 'FButtonComponent'

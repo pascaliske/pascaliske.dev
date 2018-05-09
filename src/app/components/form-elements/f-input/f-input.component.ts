@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core'
 import { AbstractControl, FormControl, ValidatorFn, Validators } from '@angular/forms'
 import { FValidation } from '../typings'
 
 @Component({
     selector: 'cmp-f-input',
     templateUrl: './f-input.component.html',
-    styleUrls: ['./f-input.component.scss']
+    styleUrls: ['./f-input.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FInputComponent implements OnInit {
     public static readonly cmpName: string = 'FInputComponent'
@@ -62,9 +63,9 @@ export class FInputComponent implements OnInit {
     private setValidators(): void {
         const validators: Array<ValidatorFn> = []
 
-        this.validation.forEach(({ type }) => {
+        this.validation.forEach(({ type, value }) => {
             if (Validators[type] && typeof Validators[type] === 'function') {
-                validators.push(Validators[type])
+                validators.push(value ? Validators[type](value) : Validators[type])
             }
         })
 
