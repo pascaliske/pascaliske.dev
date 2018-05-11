@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
-import { BreakpointService, Breakpoints } from '../../services/breakpoint/breakpoint.service'
 import { takeWhile } from 'rxjs/operators'
+import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
 
 export interface NavigationItem {
     route: string

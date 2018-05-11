@@ -15,7 +15,7 @@ import { Locale, CustomLocale } from 'flatpickr/dist/types/locale'
 import { english } from 'flatpickr/dist/l10n/default'
 import { German } from 'flatpickr/dist/l10n/de'
 import { FInputComponent } from '../f-input/f-input.component'
-import { LanguageService, Language } from '../../../services/language/language.service'
+import { LanguageService, Language } from '../../../shared/language/language.service'
 import { FDateOptions } from '../typings'
 
 @Component({

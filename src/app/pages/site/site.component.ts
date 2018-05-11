@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core'
 import { Router, ActivatedRoute, NavigationEnd, ParamMap } from '@angular/router'
 import { filter, switchMap, takeWhile } from 'rxjs/operators'
-import { LanguageService, Language } from '../../services/language/language.service'
+import { LanguageService, Language } from '../../shared/language/language.service'
 import { NavigationItem } from '../../components/navigation/navigation.component'
 
 /**

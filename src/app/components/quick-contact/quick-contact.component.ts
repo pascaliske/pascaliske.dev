@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { LanguageService } from '../../services/language/language.service'
+import { LanguageService } from '../../shared/language/language.service'
 
 @Component({
     selector: 'cmp-quick-contact',

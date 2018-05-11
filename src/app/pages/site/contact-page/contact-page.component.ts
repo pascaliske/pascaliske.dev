@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { TitleService } from '../../../services/title/title.service'
+import { TitleService } from '../../../shared/title/title.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
 import { Page } from '../page'
 

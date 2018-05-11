@@ -1,8 +1,8 @@
 import { Component, OnDestroy } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
-import { TitleService } from '../../../services/title/title.service'
-import { LanguageService } from '../../../services/language/language.service'
+import { TitleService } from '../../../shared/title/title.service'
+import { LanguageService } from '../../../shared/language/language.service'
 import { Page } from '../page'
 
 @Component({

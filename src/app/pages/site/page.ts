@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { takeWhile, switchMap } from 'rxjs/operators'
-import { TitleService } from '../../services/title/title.service'
+import { TitleService } from '../../shared/title/title.service'
 
 export class Page {
     public title: string

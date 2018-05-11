@@ -13,7 +13,7 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'en'
+        redirectTo: 'en',
     },
     {
         path: ':language',
@@ -22,68 +22,68 @@ export const routes: Routes = [
             {
                 path: '',
                 pathMatch: 'full',
-                redirectTo: 'home'
+                redirectTo: 'home',
             },
             {
                 path: 'home',
                 component: HomePageComponent,
                 data: {
-                    title: 'PAGE_TITLE_HOME'
-                }
+                    title: 'PAGE_TITLE_HOME',
+                },
             },
             {
                 path: 'about',
                 component: AboutPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_ABOUT'
-                }
+                    title: 'PAGE_TITLE_ABOUT',
+                },
             },
             {
                 path: 'references',
                 component: ReferencesPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_REFERENCES'
-                }
+                    title: 'PAGE_TITLE_REFERENCES',
+                },
             },
             {
                 path: 'blog',
                 component: BlogPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_BLOG'
-                }
+                    title: 'PAGE_TITLE_BLOG',
+                },
             },
             {
                 path: 'contact',
                 component: ContactPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_CONTACT'
-                }
+                    title: 'PAGE_TITLE_CONTACT',
+                },
             },
             {
                 path: 'imprint',
                 component: ImprintPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_IMPRINT'
-                }
+                    title: 'PAGE_TITLE_IMPRINT',
+                },
             },
             {
                 path: 'privacy',
                 component: PrivacyPageComponent,
                 data: {
-                    title: 'PAGE_TITLE_PRIVACY'
-                }
+                    title: 'PAGE_TITLE_PRIVACY',
+                },
             },
             {
                 path: '**',
-                redirectTo: 'home'
-            }
-        ]
-    }
+                redirectTo: 'home',
+            },
+        ],
+    },
 ]
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
-    declarations: []
+    declarations: [],
 })
 export class AppRoutingModule {}

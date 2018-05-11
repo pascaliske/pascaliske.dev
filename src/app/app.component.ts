@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { filter, takeWhile } from 'rxjs/operators'
-import { TitleService } from './services/title/title.service'
+import { TitleService } from './shared/title/title.service'
 
 /**
  * AppComponent
@@ -12,7 +12,7 @@ import { TitleService } from './services/title/title.service'
 @Component({
     selector: 'cmp-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnDestroy {
     /**
@@ -35,7 +35,7 @@ export class AppComponent implements OnDestroy {
     public constructor(
         private router: Router,
         private translateService: TranslateService,
-        private titleService: TitleService
+        private titleService: TitleService,
     ) {
         this.translateService.setDefaultLang('en')
         this.titleService.divider = '//'

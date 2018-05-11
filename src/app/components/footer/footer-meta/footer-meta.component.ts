@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { LanguageService } from '../../../services/language/language.service'
+import { LanguageService } from '../../../shared/language/language.service'
 
 /**
  * FooterMetaComponent

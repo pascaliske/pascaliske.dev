@@ -3,6 +3,17 @@ import { Subject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
 
 /**
+ * Enumeration of all available breakpoints.
+ */
+export enum Breakpoints {
+    DESKTOP = 'desktop',
+    TABLET = 'tablet',
+    MINI_TABLET = 'mini-tablet',
+    PHABLET = 'phablet',
+    MOBILE = 'mobile'
+}
+
+/**
  * Interface describing a breakpoint.
  */
 export interface Breakpoint {
@@ -20,17 +31,6 @@ export interface Breakpoint {
      * Maximum viewport width of the breakpoint.
      */
     end?: number
-}
-
-/**
- * Enumeration of all available breakpoints.
- */
-export enum Breakpoints {
-    DESKTOP = 'desktop',
-    TABLET = 'tablet',
-    MINI_TABLET = 'mini-tablet',
-    PHABLET = 'phablet',
-    MOBILE = 'mobile'
 }
 
 /**
