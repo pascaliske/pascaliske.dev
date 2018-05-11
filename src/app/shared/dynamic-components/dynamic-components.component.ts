@@ -17,7 +17,7 @@ export class DynamicComponentsComponent implements OnInit {
     public constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
     public ngOnInit(): void {
-        this.components.forEach(item => this.resolveComponent(item))
+        this.components.reverse().forEach(item => this.resolveComponent(item))
     }
 
     /**
