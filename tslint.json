@@ -120,24 +120,6 @@
       "single"
     ],
     "radix": true,
-    "rxjs-no-add": {
-      "options": [
-        {
-          "allowObservables": false,
-          "allowOperators": false
-        }
-      ],
-      "severity": "error"
-    },
-    "rxjs-no-patched": {
-      "options": [
-        {
-          "allowObservables": false,
-          "allowOperators": false
-        }
-      ],
-      "severity": "error"
-    },
     "semicolon": [
       true,
       "never"
