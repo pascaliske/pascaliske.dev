@@ -6,13 +6,11 @@ describe('FColumnComponent', () => {
     let component: FColumnComponent
     let fixture: ComponentFixture<FColumnComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FColumnComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FColumnComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FColumnComponent)

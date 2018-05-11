@@ -8,9 +8,9 @@ import { QuickContactComponent } from './quick-contact.component'
     imports: [
         SharedModule.registerDynamicComponents([QuickContactComponent]),
         LinkModule,
-        IconModule
+        IconModule,
     ],
     declarations: [QuickContactComponent],
-    exports: [QuickContactComponent]
+    exports: [QuickContactComponent],
 })
 export class QuickContactModule {}

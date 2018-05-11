@@ -7,6 +7,6 @@ import { PrivacyPageComponent } from './privacy-page.component'
 
 @NgModule({
     imports: [SharedModule, PageHeaderModule, SectionModule, QuickContactModule],
-    declarations: [PrivacyPageComponent]
+    declarations: [PrivacyPageComponent],
 })
 export class PrivacyPageModule {}

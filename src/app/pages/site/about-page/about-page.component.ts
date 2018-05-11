@@ -7,13 +7,13 @@ import { Page } from '../page'
 @Component({
     selector: 'cmp-about-page',
     templateUrl: './about-page.component.html',
-    styleUrls: ['./about-page.component.scss']
+    styleUrls: ['./about-page.component.scss'],
 })
 export class AboutPageComponent extends Page implements OnDestroy {
     public constructor(
         public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
         super(route, translate, titleService)
     }

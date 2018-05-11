@@ -5,6 +5,6 @@ import { SectionComponent } from './section.component'
 @NgModule({
     imports: [SharedModule.registerDynamicComponents([SectionComponent])],
     declarations: [SectionComponent],
-    exports: [SectionComponent]
+    exports: [SectionComponent],
 })
 export class SectionModule {}

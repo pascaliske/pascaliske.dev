@@ -6,13 +6,11 @@ describe('ImprintPageComponent', () => {
     let component: ImprintPageComponent
     let fixture: ComponentFixture<ImprintPageComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [ImprintPageComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ImprintPageComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ImprintPageComponent)

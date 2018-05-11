@@ -14,7 +14,7 @@ export interface NavigationItem {
 @Component({
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss']
+    styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit, OnDestroy {
     @Input() public items: Array<NavigationItem> = []

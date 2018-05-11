@@ -52,7 +52,7 @@ export class ScrollService {
             .subscribe(() => {
                 this.scrollstate$.next({
                     scrollX: window.scrollX,
-                    scrollY: window.scrollY
+                    scrollY: window.scrollY,
                 })
             })
     }

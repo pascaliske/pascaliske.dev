@@ -5,7 +5,7 @@ import { TitleService } from './title.service'
 describe('TitleService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [TitleService]
+            providers: [TitleService],
         })
     })
 
@@ -13,6 +13,6 @@ describe('TitleService', () => {
         'should be created',
         inject([TitleService], (service: TitleService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

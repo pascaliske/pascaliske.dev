@@ -9,6 +9,6 @@ import { HeaderComponent } from './header.component'
 @NgModule({
     imports: [CommonModule, TranslateModule.forChild(), NavigationModule],
     declarations: [HeaderComponent],
-    exports: [HeaderComponent]
+    exports: [HeaderComponent],
 })
 export class HeaderModule {}

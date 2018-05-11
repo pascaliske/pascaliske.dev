@@ -7,6 +7,6 @@ import { BlogPageComponent } from './blog-page.component'
 
 @NgModule({
     imports: [SharedModule, PageHeaderModule, SectionModule, QuickContactModule],
-    declarations: [BlogPageComponent]
+    declarations: [BlogPageComponent],
 })
 export class BlogPageModule {}

@@ -6,13 +6,11 @@ describe('FInputComponent', () => {
     let component: FInputComponent
     let fixture: ComponentFixture<FInputComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FInputComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FInputComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FInputComponent)

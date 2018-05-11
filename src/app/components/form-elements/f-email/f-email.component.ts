@@ -7,7 +7,7 @@ import { FInputComponent } from '../f-input/f-input.component'
     selector: 'cmp-f-email',
     templateUrl: './f-email.component.html',
     styleUrls: ['./f-email.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FEmailComponent extends FInputComponent {
     public static readonly cmpName: string = 'FEmailComponent'
@@ -39,7 +39,7 @@ export class FEmailComponent extends FInputComponent {
         't-online.de',
         'web.de',
         'yahoo.com',
-        'yahoo.de'
+        'yahoo.de',
     ]
 
     public suggest(event: KeyboardEvent): void {

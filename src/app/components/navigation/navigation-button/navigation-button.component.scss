@@ -12,7 +12,7 @@ $component: 'cmp-navigation-button';
     outline: 0;
     cursor: pointer;
     background: $color-primary;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     z-index: 999;
 
     &__icon,
@@ -23,7 +23,7 @@ $component: 'cmp-navigation-button';
         position: absolute;
         display: block;
         background: $color-white1;
-        transition: all .3s;
+        transition: all 0.3s;
     }
 
     &__icon {

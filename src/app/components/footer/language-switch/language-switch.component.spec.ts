@@ -6,13 +6,11 @@ describe('LanguageSwitchComponent', () => {
     let component: LanguageSwitchComponent
     let fixture: ComponentFixture<LanguageSwitchComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [LanguageSwitchComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [LanguageSwitchComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(LanguageSwitchComponent)

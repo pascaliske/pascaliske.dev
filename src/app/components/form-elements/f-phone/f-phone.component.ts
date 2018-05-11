@@ -5,7 +5,7 @@ import { FInputComponent } from '../f-input/f-input.component'
     selector: 'cmp-f-phone',
     templateUrl: './f-phone.component.html',
     styleUrls: ['./f-phone.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FPhoneComponent extends FInputComponent {
     public static readonly cmpName: string = 'FPhoneComponent'

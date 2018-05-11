@@ -6,13 +6,11 @@ describe('FRowComponent', () => {
     let component: FRowComponent
     let fixture: ComponentFixture<FRowComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FRowComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FRowComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FRowComponent)

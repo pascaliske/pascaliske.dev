@@ -7,6 +7,6 @@ import { ReferencesPageComponent } from './references-page.component'
 
 @NgModule({
     imports: [SharedModule, PageHeaderModule, SectionModule, QuickContactModule],
-    declarations: [ReferencesPageComponent]
+    declarations: [ReferencesPageComponent],
 })
 export class ReferencesPageModule {}

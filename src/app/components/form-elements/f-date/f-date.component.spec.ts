@@ -8,7 +8,7 @@ describe('FDateComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FDateComponent]
+            declarations: [FDateComponent],
         }).compileComponents()
     }))
 

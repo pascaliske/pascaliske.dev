@@ -12,7 +12,7 @@ import { Router } from '@angular/router'
     selector: 'cmp-link',
     templateUrl: './link.component.html',
     styleUrls: ['./link.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LinkComponent {
     public static readonly cmpName: string = 'LinkComponent'

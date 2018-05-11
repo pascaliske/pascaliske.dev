@@ -5,7 +5,7 @@ import { FColumnAlignments } from '../typings'
     selector: 'cmp-f-column',
     templateUrl: './f-column.component.html',
     styleUrls: ['./f-column.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 export class FColumnComponent {
     public static readonly cmpName: string = 'FColumnComponent'

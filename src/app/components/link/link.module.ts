@@ -7,6 +7,6 @@ import { LinkComponent } from './link.component'
 @NgModule({
     imports: [RouterModule, SharedModule.registerDynamicComponents([LinkComponent]), IconModule],
     declarations: [LinkComponent],
-    exports: [LinkComponent]
+    exports: [LinkComponent],
 })
 export class LinkModule {}

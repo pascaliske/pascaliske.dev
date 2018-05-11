@@ -6,13 +6,11 @@ describe('ContactPageComponent', () => {
     let component: ContactPageComponent
     let fixture: ComponentFixture<ContactPageComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [ContactPageComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ContactPageComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ContactPageComponent)

@@ -6,13 +6,11 @@ describe('PrivacyPageComponent', () => {
     let component: PrivacyPageComponent
     let fixture: ComponentFixture<PrivacyPageComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [PrivacyPageComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [PrivacyPageComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PrivacyPageComponent)

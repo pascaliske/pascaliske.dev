@@ -11,7 +11,7 @@ export class Page {
     public constructor(
         public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
         this.fetchTitle()
     }
@@ -27,7 +27,7 @@ export class Page {
             .pipe(
                 takeWhile(() => this.alive),
                 switchMap(() => this.route.data),
-                switchMap(data => this.translate.get(data.title))
+                switchMap(data => this.translate.get(data.title)),
             )
             .subscribe(translated => {
                 this.title = translated

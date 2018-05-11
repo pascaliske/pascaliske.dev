@@ -16,9 +16,9 @@ import { HeadlineH6Component } from './headline-h6/headline-h6.component'
             HeadlineH3Component,
             HeadlineH4Component,
             HeadlineH5Component,
-            HeadlineH6Component
+            HeadlineH6Component,
         ]),
-        IconModule
+        IconModule,
     ],
     declarations: [
         HeadlineH1Component,
@@ -26,7 +26,7 @@ import { HeadlineH6Component } from './headline-h6/headline-h6.component'
         HeadlineH3Component,
         HeadlineH4Component,
         HeadlineH5Component,
-        HeadlineH6Component
+        HeadlineH6Component,
     ],
     exports: [
         HeadlineH1Component,
@@ -34,7 +34,7 @@ import { HeadlineH6Component } from './headline-h6/headline-h6.component'
         HeadlineH3Component,
         HeadlineH4Component,
         HeadlineH5Component,
-        HeadlineH6Component
-    ]
+        HeadlineH6Component,
+    ],
 })
 export class HeadlinesModule {}

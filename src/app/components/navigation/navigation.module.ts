@@ -7,6 +7,6 @@ import { NavigationButtonComponent } from './navigation-button/navigation-button
 @NgModule({
     imports: [RouterModule, SharedModule.registerDynamicComponents([NavigationComponent])],
     declarations: [NavigationComponent, NavigationButtonComponent],
-    exports: [NavigationComponent]
+    exports: [NavigationComponent],
 })
 export class NavigationModule {}

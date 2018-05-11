@@ -5,6 +5,6 @@ import { CodeComponent } from './code.component'
 @NgModule({
     imports: [SharedModule.registerDynamicComponents([CodeComponent])],
     declarations: [CodeComponent],
-    exports: [CodeComponent]
+    exports: [CodeComponent],
 })
 export class CodeModule {}

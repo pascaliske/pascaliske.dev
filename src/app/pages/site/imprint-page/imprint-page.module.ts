@@ -7,6 +7,6 @@ import { ImprintPageComponent } from './imprint-page.component'
 
 @NgModule({
     imports: [SharedModule, PageHeaderModule, SectionModule, QuickContactModule],
-    declarations: [ImprintPageComponent]
+    declarations: [ImprintPageComponent],
 })
 export class ImprintPageModule {}

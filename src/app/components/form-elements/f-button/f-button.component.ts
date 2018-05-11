@@ -4,7 +4,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     selector: 'cmp-f-button',
     templateUrl: './f-button.component.html',
     styleUrls: ['./f-button.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FButtonComponent {
     public static readonly cmpName: string = 'FButtonComponent'

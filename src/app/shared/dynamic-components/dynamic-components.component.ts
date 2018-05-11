@@ -7,7 +7,7 @@ import { ComponentManifest, ComponentFactory, ComponentRef } from './typings'
 @Component({
     selector: 'cmp-dynamic-components',
     templateUrl: './dynamic-components.component.html',
-    styleUrls: ['./dynamic-components.component.scss']
+    styleUrls: ['./dynamic-components.component.scss'],
 })
 export class DynamicComponentsComponent implements OnInit {
     @Input() public components: Array<ComponentManifest> = []
@@ -49,7 +49,7 @@ export class DynamicComponentsComponent implements OnInit {
             componentFactory,
             0,
             undefined,
-            children
+            children,
         )
 
         // inject params to instance
@@ -89,7 +89,7 @@ export class DynamicComponentsComponent implements OnInit {
      */
     private resolveComponentFactory(name: string): ComponentFactory {
         const factories: Array<ComponentFactory> = Array.from(
-            this.componentFactoryResolver['_factories'].keys()
+            this.componentFactoryResolver['_factories'].keys(),
         )
 
         return factories.find(item => item.cmpName === name)

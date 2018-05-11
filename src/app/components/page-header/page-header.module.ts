@@ -10,9 +10,9 @@ import { PageHeaderComponent } from './page-header.component'
         SharedModule.registerDynamicComponents([PageHeaderComponent]),
         SectionModule,
         HeadlinesModule,
-        CopyModule
+        CopyModule,
     ],
     declarations: [PageHeaderComponent],
-    exports: [PageHeaderComponent]
+    exports: [PageHeaderComponent],
 })
 export class PageHeaderModule {}

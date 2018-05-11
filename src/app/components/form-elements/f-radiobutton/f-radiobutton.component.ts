@@ -6,7 +6,7 @@ import { FRadiobuttonOption } from '../typings'
     selector: 'cmp-f-radiobutton',
     templateUrl: './f-radiobutton.component.html',
     styleUrls: ['./f-radiobutton.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FRadiobuttonComponent extends FInputComponent {
     public static readonly cmpName: string = 'FRadiobuttonComponent'

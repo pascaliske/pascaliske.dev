@@ -32,9 +32,9 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
             FPasswordComponent,
             FDateComponent,
             FCheckboxComponent,
-            FRadiobuttonComponent
+            FRadiobuttonComponent,
         ]),
-        IconModule
+        IconModule,
     ],
     declarations: [
         FRowComponent,
@@ -50,7 +50,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FCheckboxComponent,
         FRadiobuttonComponent,
         FErrorComponent,
-        FExplanationComponent
+        FExplanationComponent,
     ],
     exports: [
         FRowComponent,
@@ -66,7 +66,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FCheckboxComponent,
         FRadiobuttonComponent,
         FErrorComponent,
-        FExplanationComponent
-    ]
+        FExplanationComponent,
+    ],
 })
 export class FormElementsModule {}

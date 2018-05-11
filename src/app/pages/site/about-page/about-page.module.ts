@@ -14,8 +14,8 @@ import { AboutPageComponent } from './about-page.component'
         SectionModule,
         HeadlinesModule,
         CopyModule,
-        QuickContactModule
+        QuickContactModule,
     ],
-    declarations: [AboutPageComponent]
+    declarations: [AboutPageComponent],
 })
 export class AboutPageModule {}

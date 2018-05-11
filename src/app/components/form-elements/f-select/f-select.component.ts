@@ -6,7 +6,7 @@ import { FSelectPlaceholder, FSelectOption } from '../typings'
     selector: 'cmp-f-select',
     templateUrl: './f-select.component.html',
     styleUrls: ['./f-select.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FSelectComponent extends FInputComponent {
     public static readonly cmpName: string = 'FSelectComponent'

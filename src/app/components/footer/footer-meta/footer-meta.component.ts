@@ -10,7 +10,7 @@ import { LanguageService } from '../../../shared/language/language.service'
 @Component({
     selector: 'cmp-footer-meta',
     templateUrl: './footer-meta.component.html',
-    styleUrls: ['./footer-meta.component.scss']
+    styleUrls: ['./footer-meta.component.scss'],
 })
 export class FooterMetaComponent {
     /**

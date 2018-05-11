@@ -16,8 +16,8 @@ import { ContactPageComponent } from './contact-page.component'
         SectionModule,
         HeadlinesModule,
         CopyModule,
-        FormElementsModule
+        FormElementsModule,
     ],
-    declarations: [ContactPageComponent]
+    declarations: [ContactPageComponent],
 })
 export class ContactPageModule {}

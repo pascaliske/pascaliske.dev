@@ -5,7 +5,7 @@ import { ScrollService } from './scroll.service'
 describe('ScrollService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [ScrollService]
+            providers: [ScrollService],
         })
     })
 
@@ -13,6 +13,6 @@ describe('ScrollService', () => {
         'should be created',
         inject([ScrollService], (service: ScrollService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

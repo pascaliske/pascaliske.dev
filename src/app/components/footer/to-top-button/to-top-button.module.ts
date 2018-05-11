@@ -5,6 +5,6 @@ import { ToTopButtonComponent } from './to-top-button.component'
 @NgModule({
     imports: [CommonModule],
     declarations: [ToTopButtonComponent],
-    exports: [ToTopButtonComponent]
+    exports: [ToTopButtonComponent],
 })
 export class ToTopButtonModule {}

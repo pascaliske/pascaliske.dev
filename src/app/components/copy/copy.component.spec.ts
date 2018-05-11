@@ -6,13 +6,11 @@ describe('CopyComponent', () => {
     let component: CopyComponent
     let fixture: ComponentFixture<CopyComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [CopyComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [CopyComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(CopyComponent)

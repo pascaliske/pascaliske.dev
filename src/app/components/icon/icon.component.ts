@@ -4,7 +4,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     selector: 'cmp-icon',
     templateUrl: './icon.component.html',
     styleUrls: ['./icon.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
     public static readonly cmpName: string = 'IconComponent'

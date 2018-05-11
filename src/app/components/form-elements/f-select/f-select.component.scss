@@ -11,8 +11,8 @@ $component: 'cmp-f-select';
         position: absolute;
         top: 0;
         right: 10px;
-        color: rgba($color-grey1, .8);
-        opacity: .4;
+        color: rgba($color-grey1, 0.8);
+        opacity: 0.4;
     }
 
     &__input:active ~ &__icon {
@@ -20,6 +20,6 @@ $component: 'cmp-f-select';
     }
 
     &__placeholder {
-        color: rgba($color-grey1, .8);
+        color: rgba($color-grey1, 0.8);
     }
 }

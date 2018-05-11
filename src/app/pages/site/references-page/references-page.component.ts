@@ -7,13 +7,13 @@ import { Page } from '../page'
 @Component({
     selector: 'cmp-references-page',
     templateUrl: './references-page.component.html',
-    styleUrls: ['./references-page.component.scss']
+    styleUrls: ['./references-page.component.scss'],
 })
 export class ReferencesPageComponent extends Page implements OnDestroy {
     public constructor(
         public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
         super(route, translate, titleService)
     }

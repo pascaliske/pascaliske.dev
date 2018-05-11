@@ -5,7 +5,7 @@ import { FRowLayouts } from '../typings'
     selector: 'cmp-f-row',
     templateUrl: './f-row.component.html',
     styleUrls: ['./f-row.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 export class FRowComponent {
     public static readonly cmpName: string = 'FRowComponent'

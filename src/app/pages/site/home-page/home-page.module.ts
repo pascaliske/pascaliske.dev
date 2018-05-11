@@ -16,8 +16,8 @@ import { HomePageComponent } from './home-page.component'
         HeadlinesModule,
         LinkModule,
         CopyModule,
-        QuickContactModule
+        QuickContactModule,
     ],
-    declarations: [HomePageComponent]
+    declarations: [HomePageComponent],
 })
 export class HomePageModule {}

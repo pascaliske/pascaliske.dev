@@ -27,8 +27,8 @@ import { SiteComponent } from './site.component'
         BlogPageModule,
         ContactPageModule,
         ImprintPageModule,
-        PrivacyPageModule
+        PrivacyPageModule,
     ],
-    declarations: [SiteComponent]
+    declarations: [SiteComponent],
 })
 export class SiteModule {}

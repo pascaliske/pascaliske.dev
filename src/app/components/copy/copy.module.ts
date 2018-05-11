@@ -5,6 +5,6 @@ import { CopyComponent } from './copy.component'
 @NgModule({
     imports: [SharedModule.registerDynamicComponents([CopyComponent])],
     declarations: [CopyComponent],
-    exports: [CopyComponent]
+    exports: [CopyComponent],
 })
 export class CopyModule {}

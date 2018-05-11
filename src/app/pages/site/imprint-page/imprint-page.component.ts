@@ -7,13 +7,13 @@ import { Page } from '../page'
 @Component({
     selector: 'cmp-imprint-page',
     templateUrl: './imprint-page.component.html',
-    styleUrls: ['./imprint-page.component.scss']
+    styleUrls: ['./imprint-page.component.scss'],
 })
 export class ImprintPageComponent extends Page implements OnDestroy {
     public constructor(
         public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
         super(route, translate, titleService)
     }

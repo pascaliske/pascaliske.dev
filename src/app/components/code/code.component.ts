@@ -6,7 +6,7 @@ import * as hljs from 'highlight.js'
     templateUrl: './code.component.html',
     styleUrls: ['./code.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CodeComponent {
     public static readonly cmpName: string = 'CodeComponent'
@@ -32,7 +32,7 @@ export class CodeComponent {
      */
     public constructor() {
         hljs.configure({
-            classPrefix: 'cmp-code__'
+            classPrefix: 'cmp-code__',
         })
     }
 

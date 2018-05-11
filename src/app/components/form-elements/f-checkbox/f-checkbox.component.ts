@@ -5,7 +5,7 @@ import { FInputComponent } from '../f-input/f-input.component'
     selector: 'cmp-f-checkbox',
     templateUrl: './f-checkbox.component.html',
     styleUrls: ['./f-checkbox.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FCheckboxComponent extends FInputComponent {
     public static readonly cmpName: string = 'FCheckboxComponent'

@@ -8,6 +8,6 @@ import { LanguageSwitchComponent } from './language-switch.component'
 @NgModule({
     imports: [CommonModule, RouterModule, TranslateModule.forChild(), LinkModule],
     declarations: [LanguageSwitchComponent],
-    exports: [LanguageSwitchComponent]
+    exports: [LanguageSwitchComponent],
 })
 export class LanguageSwitchModule {}

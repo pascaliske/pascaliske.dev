@@ -5,7 +5,7 @@ import {
     Input,
     ViewChild,
     ElementRef,
-    ChangeDetectionStrategy
+    ChangeDetectionStrategy,
 } from '@angular/core'
 import { takeWhile } from 'rxjs/operators'
 import flatpickr from 'flatpickr'
@@ -22,7 +22,7 @@ import { FDateOptions } from '../typings'
     selector: 'cmp-f-date',
     templateUrl: './f-date.component.html',
     styleUrls: ['./f-date.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FDateComponent extends FInputComponent implements AfterViewInit, OnDestroy {
     public static readonly cmpName: string = 'FDateComponent'
@@ -62,7 +62,7 @@ export class FDateComponent extends FInputComponent implements AfterViewInit, On
             defaultDate: this.selected || null,
             locale: locale,
             weekNumbers: true,
-            onChange: value => (this.selected = value[0])
+            onChange: value => (this.selected = value[0]),
         }
 
         this.destroyFlatpickr()

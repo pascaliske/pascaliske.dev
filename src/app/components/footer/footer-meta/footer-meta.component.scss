@@ -43,7 +43,7 @@ $component: 'cmp-footer-meta';
 
     &__copyright {
         margin-top: 15px;
-        color: rgba($color-secondary, .6);
+        color: rgba($color-secondary, 0.6);
 
         @include use-breakpoint(mini-tablet) {
             margin-top: 0;
@@ -52,7 +52,7 @@ $component: 'cmp-footer-meta';
 
         &::after {
             @include use-breakpoint(mini-tablet) {
-                color: rgba($color-secondary, .4);
+                color: rgba($color-secondary, 0.4);
                 content: ' // ';
             }
         }

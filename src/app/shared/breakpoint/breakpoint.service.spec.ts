@@ -5,7 +5,7 @@ import { BreakpointService } from './breakpoint.service'
 describe('BreakpointService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [BreakpointService]
+            providers: [BreakpointService],
         })
     })
 
@@ -13,6 +13,6 @@ describe('BreakpointService', () => {
         'should be created',
         inject([BreakpointService], (service: BreakpointService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

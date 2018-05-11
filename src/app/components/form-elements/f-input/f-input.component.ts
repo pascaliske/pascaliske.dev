@@ -6,7 +6,7 @@ import { FValidation } from '../typings'
     selector: 'cmp-f-input',
     templateUrl: './f-input.component.html',
     styleUrls: ['./f-input.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FInputComponent implements OnInit {
     public static readonly cmpName: string = 'FInputComponent'
@@ -44,7 +44,7 @@ export class FInputComponent implements OnInit {
             [prefixed('focus')]: this.focus,
             [prefixed('filled')]: this.fc.value && this.fc.value !== '',
             [prefixed('invalid')]: this.fc.touched && !this.fc.valid,
-            [prefixed('required')]: this.isRequired()
+            [prefixed('required')]: this.isRequired(),
         }
     }
 

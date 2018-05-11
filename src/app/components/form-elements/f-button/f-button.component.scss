@@ -13,9 +13,9 @@ $component: 'cmp-f-button';
 
 @include cmp-modifier($component, 'primary') {
     &__button {
-        background: rgba($color-primary, .6);
+        background: rgba($color-primary, 0.6);
         color: $color-white1;
-        transition: background .2s;
+        transition: background 0.2s;
 
         &:hover {
             background: $color-primary;
@@ -31,5 +31,4 @@ $component: 'cmp-f-button';
 }
 
 @include cmp-modifier($component, 'disabled') {
-
 }

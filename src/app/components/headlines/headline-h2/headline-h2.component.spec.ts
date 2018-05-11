@@ -6,13 +6,11 @@ describe('HeadlineH2Component', () => {
     let component: HeadlineH2Component
     let fixture: ComponentFixture<HeadlineH2Component>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [HeadlineH2Component]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [HeadlineH2Component],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(HeadlineH2Component)

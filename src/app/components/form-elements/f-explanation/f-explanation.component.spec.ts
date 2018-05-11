@@ -8,7 +8,7 @@ describe('FExplanationComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FExplanationComponent]
+            declarations: [FExplanationComponent],
         }).compileComponents()
     }))
 

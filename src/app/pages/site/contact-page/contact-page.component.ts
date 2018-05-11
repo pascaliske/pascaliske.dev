@@ -9,7 +9,7 @@ import { Page } from '../page'
 @Component({
     selector: 'cmp-contact-page',
     templateUrl: './contact-page.component.html',
-    styleUrls: ['./contact-page.component.scss']
+    styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent extends Page implements OnInit, OnDestroy {
     public contactForm: FormGroup
@@ -18,13 +18,13 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         email: [
             {
                 type: 'required',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED'
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED',
             },
             {
                 type: 'email',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL'
-            }
-        ]
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL',
+            },
+        ],
     }
 
     public constructor(
@@ -32,7 +32,7 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         private formBuilder: FormBuilder,
         public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
         super(route, translate, titleService)
     }
@@ -42,7 +42,7 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
             name: null,
             email: null,
             subject: null,
-            message: null
+            message: null,
         })
         this.changeDetectorRef.detectChanges()
     }

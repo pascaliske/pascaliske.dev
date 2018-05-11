@@ -8,14 +8,14 @@ import { Page } from '../page'
 @Component({
     selector: 'cmp-home-page',
     templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.scss']
+    styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent extends Page implements OnDestroy {
     public constructor(
         public route: ActivatedRoute,
         public translate: TranslateService,
         public titleService: TitleService,
-        public languageService: LanguageService
+        public languageService: LanguageService,
     ) {
         super(route, translate, titleService)
     }

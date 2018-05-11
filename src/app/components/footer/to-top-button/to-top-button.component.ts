@@ -4,7 +4,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     selector: 'cmp-to-top-button',
     templateUrl: './to-top-button.component.html',
     styleUrls: ['./to-top-button.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToTopButtonComponent {
     /**

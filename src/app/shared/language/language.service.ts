@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs'
 
 export enum Language {
     EN = 'en',
-    DE = 'de'
+    DE = 'de',
 }
 
 @Injectable()

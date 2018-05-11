@@ -6,13 +6,11 @@ describe('FPhoneComponent', () => {
     let component: FPhoneComponent
     let fixture: ComponentFixture<FPhoneComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FPhoneComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FPhoneComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FPhoneComponent)

@@ -4,7 +4,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     selector: 'cmp-copy',
     templateUrl: './copy.component.html',
     styleUrls: ['./copy.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CopyComponent {
     public static readonly cmpName: string = 'CopyComponent'

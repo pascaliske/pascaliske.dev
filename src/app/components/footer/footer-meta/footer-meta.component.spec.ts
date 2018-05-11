@@ -6,13 +6,11 @@ describe('FooterMetaComponent', () => {
     let component: FooterMetaComponent
     let fixture: ComponentFixture<FooterMetaComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FooterMetaComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FooterMetaComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FooterMetaComponent)

@@ -5,7 +5,7 @@ import { FInputComponent } from '../f-input/f-input.component'
     selector: 'cmp-f-password',
     templateUrl: './f-password.component.html',
     styleUrls: ['./f-password.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FPasswordComponent extends FInputComponent {
     public static readonly cmpName: string = 'FPasswordComponent'
