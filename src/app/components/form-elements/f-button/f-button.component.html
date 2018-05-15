@@ -1,3 +1,6 @@
 <div class="cmp-f-button" [class.cmp-f-button--disabled]="disabled" [ngClass]="getThemeModifiers()">
-    <button class="cmp-f-button__button" [type]="type" [disabled]="disabled">{{text}}</button>
+    <button class="cmp-f-button__button" [type]="type" [disabled]="disabled">
+        <cmp-icon class="cmp-f-button__icon" [name]="icon" *ngIf="icon"></cmp-icon>
+        <div class="cmp-f-button__text">{{text}}</div>
+    </button>
 </div>

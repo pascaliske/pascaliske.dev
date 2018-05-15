@@ -9,6 +9,10 @@ $component: 'cmp-f-button';
         height: 40px;
         padding: 10px 20px;
     }
+
+    &__icon {
+        margin-right: 10px;
+    }
 }
 
 @include cmp-modifier($component, 'primary') {
