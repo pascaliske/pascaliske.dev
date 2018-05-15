@@ -255,21 +255,21 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-"@ngx-progressbar/core@^5.0.0-rc.0":
-  version "5.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@ngx-progressbar/core/-/core-5.0.0-rc.0.tgz#97a40e48c77841bd96fd88b5ba779d0d881757bd"
+"@ngx-progressbar/core@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/core/-/core-5.0.1.tgz#a8566384638512b7e53945a3995ccbd79ce21c31"
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-progressbar/http@^5.0.0-rc.0":
-  version "5.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@ngx-progressbar/http/-/http-5.0.0-rc.0.tgz#ad3ecdde99b64e8fb04516ba87646fe454c56884"
+"@ngx-progressbar/http@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/http/-/http-5.0.1.tgz#f8072fe56c3d36619de04ab650bf191e00f275f9"
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-progressbar/router@^5.0.0-rc.0":
-  version "5.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@ngx-progressbar/router/-/router-5.0.0-rc.0.tgz#669cff23c35d45925fd87f8918542948458c5f26"
+"@ngx-progressbar/router@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/router/-/router-5.0.1.tgz#9547b3e6fd2dd81d441818799831c22820faaec6"
   dependencies:
     tslib "^1.9.0"
 
