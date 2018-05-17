@@ -11,5 +11,7 @@ export class IconComponent {
 
     @Input() public name: string
 
+    @Input() public animate: boolean = false
+
     public constructor() {}
 }

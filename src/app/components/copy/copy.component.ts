@@ -17,7 +17,15 @@ export class CopyComponent {
 
     public getThemeModifiers(): object {
         return this.theme
+            .replace(/ +/g, '')
             .split(',')
-            .reduce((prev, current) => ({ [`cmp-copy--${current}`]: true, ...prev }), {})
+            .reverse()
+            .reduce(
+                (prev, current) => ({
+                    [`cmp-copy--${current}`]: true,
+                    ...prev,
+                }),
+                {},
+            )
     }
 }

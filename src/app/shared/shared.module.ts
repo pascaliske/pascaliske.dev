@@ -9,6 +9,8 @@ import { TitleService } from './title/title.service'
 import { ScrollService } from './scroll/scroll.service'
 import { ViewportService } from './viewport/viewport.service'
 import { LanguageService } from './language/language.service'
+import { NotificationService } from './notification/notification.service'
+import { NetworkService } from './network/network.service'
 
 @NgModule({
     imports: [CommonModule, TranslateModule, MarkdownModule],
@@ -20,6 +22,8 @@ import { LanguageService } from './language/language.service'
         ScrollService,
         ViewportService,
         LanguageService,
+        NotificationService,
+        NetworkService,
     ],
     exports: [
         CommonModule,

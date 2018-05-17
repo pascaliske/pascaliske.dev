@@ -42,7 +42,6 @@ export class TitleService {
      * Sets a new title to the current HTML document.
      *
      * @param {string} value - The new title for the document.
-     * @returns {string}
      */
     public set title(value: string) {
         this.browserTitle.setTitle(this.prepare(value))

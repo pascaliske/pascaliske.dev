@@ -1,3 +1,5 @@
+export const FORM_ELEMENTS = 'form-elements'
+
 export interface FValidation {
     type:
         | 'min'
@@ -16,6 +18,8 @@ export type FRowLayouts = '1' | '1-1' | '1-1-1' | '1-2' | '2-1'
 
 export type FColumnAlignments = 'left' | 'right'
 
+export interface FDateOptions {}
+
 export interface FSelectPlaceholder {
     label: string
     value: any
@@ -33,7 +37,7 @@ export interface FRadiobuttonOption {
     checked: boolean
 }
 
-export interface FDateOptions {}
+export type FButtonType = 'button' | 'submit'
 
 export interface FValidationConfig {
     [key: string]: Array<FValidation>

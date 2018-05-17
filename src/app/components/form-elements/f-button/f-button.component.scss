@@ -34,5 +34,19 @@ $component: 'cmp-f-button';
     }
 }
 
-@include cmp-modifier($component, 'disabled') {
+@include cmp-modifier($component, 'disabled') {}
+
+@include cmp-modifier($component, 'no-margin') {
+    &__button {
+        margin-top: 0;
+    }
+}
+
+@include cmp-modifier($component, 'small') {
+    &__button {
+        min-width: 100px;
+        height: 28px;
+        line-height: 21px;
+        padding: 4px 20px;
+    }
 }
