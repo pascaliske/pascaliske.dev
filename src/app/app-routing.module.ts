@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { RouteResolver } from './route.resolver'
 import { SiteComponent } from './pages/site/site.component'
 import { HomePageComponent } from './pages/site/home-page/home-page.component'
 import { AboutPageComponent } from './pages/site/about-page/about-page.component'
@@ -14,21 +15,33 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         redirectTo: 'en',
+        resolve: {
+            timeout: RouteResolver,
+        },
     },
     {
         path: ':language',
         component: SiteComponent,
+        resolve: {
+            timeout: RouteResolver,
+        },
         children: [
             {
                 path: '',
                 pathMatch: 'full',
                 redirectTo: 'home',
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
             {
                 path: 'home',
                 component: HomePageComponent,
                 data: {
                     title: 'PAGE_TITLE_HOME',
+                },
+                resolve: {
+                    timeout: RouteResolver,
                 },
             },
             {
@@ -37,12 +50,18 @@ export const routes: Routes = [
                 data: {
                     title: 'PAGE_TITLE_ABOUT',
                 },
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
             {
                 path: 'references',
                 component: ReferencesPageComponent,
                 data: {
                     title: 'PAGE_TITLE_REFERENCES',
+                },
+                resolve: {
+                    timeout: RouteResolver,
                 },
             },
             {
@@ -51,12 +70,18 @@ export const routes: Routes = [
                 data: {
                     title: 'PAGE_TITLE_BLOG',
                 },
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
             {
                 path: 'contact',
                 component: ContactPageComponent,
                 data: {
                     title: 'PAGE_TITLE_CONTACT',
+                },
+                resolve: {
+                    timeout: RouteResolver,
                 },
             },
             {
@@ -65,6 +90,9 @@ export const routes: Routes = [
                 data: {
                     title: 'PAGE_TITLE_IMPRINT',
                 },
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
             {
                 path: 'privacy',
@@ -72,10 +100,16 @@ export const routes: Routes = [
                 data: {
                     title: 'PAGE_TITLE_PRIVACY',
                 },
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
             {
                 path: '**',
                 redirectTo: 'home',
+                resolve: {
+                    timeout: RouteResolver,
+                },
             },
         ],
     },

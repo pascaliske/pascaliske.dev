@@ -10,6 +10,7 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { environment } from '../environments/environment'
+import { RouteResolver } from './route.resolver'
 import { RavenErrorHandler } from './raven'
 import { AppRoutingModule } from './app-routing.module'
 import { SiteModule } from './pages/site/site.module'
@@ -71,6 +72,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         SiteModule,
     ],
     providers: [
+        RouteResolver,
         {
             provide: ErrorHandler,
             useClass: RavenErrorHandler,
