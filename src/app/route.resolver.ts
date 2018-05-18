@@ -7,6 +7,6 @@ export class RouteResolver implements Resolve<any> {
     public constructor() {}
 
     public resolve(): Observable<any> {
-        return timer(5)
+        return timer(50)
     }
 }
