@@ -2,6 +2,11 @@
 
 $component: 'cmp-footer';
 
+:host {
+    position: absolute;
+    bottom: 0;
+}
+
 @include cmp-base($component) {
     width: 100vw;
     height: $footer-height-mobile;

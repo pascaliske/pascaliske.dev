@@ -10,15 +10,4 @@ $component: 'cmp-site';
     @include use-breakpoint(mini-tablet) {
         padding-bottom: ($footer-height-mini-tablet - 1);
     }
-
-    &__navigation {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
-
-    &__footer {
-        position: absolute;
-        bottom: 0;
-    }
 }
