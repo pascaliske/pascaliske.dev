@@ -3,6 +3,17 @@ import { Subject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
 
 /**
+ * Enumeration of all available breakpoints.
+ */
+export enum Breakpoints {
+    DESKTOP = 'desktop',
+    TABLET = 'tablet',
+    MINI_TABLET = 'mini-tablet',
+    PHABLET = 'phablet',
+    MOBILE = 'mobile',
+}
+
+/**
  * Interface describing a breakpoint.
  */
 export interface Breakpoint {
@@ -20,17 +31,6 @@ export interface Breakpoint {
      * Maximum viewport width of the breakpoint.
      */
     end?: number
-}
-
-/**
- * Enumeration of all available breakpoints.
- */
-export enum Breakpoints {
-    DESKTOP = 'desktop',
-    TABLET = 'tablet',
-    MINI_TABLET = 'mini-tablet',
-    PHABLET = 'phablet',
-    MOBILE = 'mobile'
 }
 
 /**
@@ -92,26 +92,26 @@ export class BreakpointService {
     public constructor() {
         this.breakpoints.push({
             id: Breakpoints.DESKTOP,
-            start: 1280
+            start: 1280,
         })
         this.breakpoints.push({
             id: Breakpoints.TABLET,
             start: 1024,
-            end: 1279
+            end: 1279,
         })
         this.breakpoints.push({
             id: Breakpoints.MINI_TABLET,
             start: 768,
-            end: 1023
+            end: 1023,
         })
         this.breakpoints.push({
             id: Breakpoints.PHABLET,
             start: 320,
-            end: 767
+            end: 767,
         })
         this.breakpoints.push({
             id: Breakpoints.MOBILE,
-            end: 320
+            end: 320,
         })
 
         // determine current breakpoint and subscribe to resize changes
@@ -178,7 +178,7 @@ export class BreakpointService {
                 const current: Breakpoint = this.determineBreakpoint()
                 const dimensions: ResizeState = {
                     height: document.documentElement.clientHeight,
-                    width: window.innerWidth
+                    width: window.innerWidth,
                 }
 
                 // check if the breakpoint changed too

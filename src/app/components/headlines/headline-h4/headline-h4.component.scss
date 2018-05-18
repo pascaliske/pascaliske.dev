@@ -6,3 +6,15 @@ $component: 'cmp-headline-h4';
     @include use-text(headline-h4);
     margin-bottom: 15px;
 }
+
+@include cmp-modifier($component, left) {
+    &__icon {
+        margin-right: 12px;
+    }
+}
+
+@include cmp-modifier($component, right) {
+    &__icon {
+        margin-left: 12px;
+    }
+}

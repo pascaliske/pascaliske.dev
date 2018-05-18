@@ -6,13 +6,11 @@ describe('ToTopButtonComponent', () => {
     let component: ToTopButtonComponent
     let fixture: ComponentFixture<ToTopButtonComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [ToTopButtonComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ToTopButtonComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ToTopButtonComponent)

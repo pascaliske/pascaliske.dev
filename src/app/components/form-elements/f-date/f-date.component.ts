@@ -1,4 +1,12 @@
-import { Component, AfterViewInit, OnDestroy, Input, ViewChild, ElementRef } from '@angular/core'
+import {
+    Component,
+    AfterViewInit,
+    OnDestroy,
+    Input,
+    ViewChild,
+    ElementRef,
+    ChangeDetectionStrategy,
+} from '@angular/core'
 import { takeWhile } from 'rxjs/operators'
 import flatpickr from 'flatpickr'
 import { Instance } from 'flatpickr/dist/types/instance'
@@ -7,13 +15,14 @@ import { Locale, CustomLocale } from 'flatpickr/dist/types/locale'
 import { english } from 'flatpickr/dist/l10n/default'
 import { German } from 'flatpickr/dist/l10n/de'
 import { FInputComponent } from '../f-input/f-input.component'
-import { LanguageService, Language } from '../../../services/language/language.service'
+import { LanguageService, Language } from '../../../shared/language/language.service'
 import { FDateOptions } from '../typings'
 
 @Component({
     selector: 'cmp-f-date',
     templateUrl: './f-date.component.html',
-    styleUrls: ['./f-date.component.scss']
+    styleUrls: ['./f-date.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FDateComponent extends FInputComponent implements AfterViewInit, OnDestroy {
     public static readonly cmpName: string = 'FDateComponent'
@@ -53,7 +62,7 @@ export class FDateComponent extends FInputComponent implements AfterViewInit, On
             defaultDate: this.selected || null,
             locale: locale,
             weekNumbers: true,
-            onChange: value => (this.selected = value[0])
+            onChange: value => (this.selected = value[0]),
         }
 
         this.destroyFlatpickr()

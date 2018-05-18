@@ -1,18 +1,18 @@
 import { TestBed, inject } from '@angular/core/testing'
 
-import { BreakpointService } from './breakpoint.service'
+import { NetworkService } from './network.service'
 
-describe('BreakpointService', () => {
+describe('NetworkService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [BreakpointService]
+            providers: [NetworkService],
         })
     })
 
     it(
         'should be created',
-        inject([BreakpointService], (service: BreakpointService) => {
+        inject([NetworkService], (service: NetworkService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

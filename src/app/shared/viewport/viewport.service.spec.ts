@@ -5,7 +5,7 @@ import { ViewportService } from './viewport.service'
 describe('ViewportService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [ViewportService]
+            providers: [ViewportService],
         })
     })
 
@@ -13,6 +13,6 @@ describe('ViewportService', () => {
         'should be created',
         inject([ViewportService], (service: ViewportService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

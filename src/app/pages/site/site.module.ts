@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { SharedModule } from '../../shared/shared.module'
 import { AppRoutingModule } from '../../app-routing.module'
 import { HeaderModule } from '../../components/header/header.module'
 import { NavigationModule } from '../../components/navigation/navigation.module'
@@ -11,13 +11,12 @@ import { BlogPageModule } from './blog-page/blog-page.module'
 import { ContactPageModule } from './contact-page/contact-page.module'
 import { ImprintPageModule } from './imprint-page/imprint-page.module'
 import { PrivacyPageModule } from './privacy-page/privacy-page.module'
-import { NotFoundPageModule } from './not-found-page/not-found-page.module'
 
 import { SiteComponent } from './site.component'
 
 @NgModule({
     imports: [
-        CommonModule,
+        SharedModule,
         AppRoutingModule,
         HeaderModule,
         NavigationModule,
@@ -29,8 +28,7 @@ import { SiteComponent } from './site.component'
         ContactPageModule,
         ImprintPageModule,
         PrivacyPageModule,
-        NotFoundPageModule
     ],
-    declarations: [SiteComponent]
+    declarations: [SiteComponent],
 })
 export class SiteModule {}

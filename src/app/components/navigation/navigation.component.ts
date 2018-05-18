@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
-import { BreakpointService, Breakpoints } from '../../services/breakpoint/breakpoint.service'
 import { takeWhile } from 'rxjs/operators'
+import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
 
 export interface NavigationItem {
     route: string
@@ -14,7 +14,7 @@ export interface NavigationItem {
 @Component({
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss']
+    styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit, OnDestroy {
     @Input() public items: Array<NavigationItem> = []

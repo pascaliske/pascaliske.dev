@@ -1,5 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
 import { Router } from '@angular/router'
+import { Alignment } from './typings'
 
 /**
  * LinkComponent
@@ -12,7 +13,7 @@ import { Router } from '@angular/router'
     selector: 'cmp-link',
     templateUrl: './link.component.html',
     styleUrls: ['./link.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LinkComponent {
     public static readonly cmpName: string = 'LinkComponent'
@@ -51,6 +52,13 @@ export class LinkComponent {
      * @param {boolean} inline
      */
     @Input() public inline: boolean = true
+
+    /**
+     * The alignment of the link inside of the conta
+     *
+     * @param {'left' | 'center' | 'right'} align
+     */
+    @Input() public align: Alignment = 'center'
 
     /**
      * Initializes the component.

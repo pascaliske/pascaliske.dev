@@ -5,7 +5,7 @@ import { LanguageService } from './language.service'
 describe('LanguageService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [LanguageService]
+            providers: [LanguageService],
         })
     })
 
@@ -13,6 +13,6 @@ describe('LanguageService', () => {
         'should be created',
         inject([LanguageService], (service: LanguageService) => {
             expect(service).toBeTruthy()
-        })
+        }),
     )
 })

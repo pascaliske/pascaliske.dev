@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
-import { TranslateModule } from '@ngx-translate/core'
 import { SharedModule } from '../../shared/shared.module'
 import { IconModule } from '../icon/icon.module'
 import { FRowComponent } from './f-row/f-row.component'
@@ -21,9 +19,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
 
 @NgModule({
     imports: [
-        CommonModule,
         ReactiveFormsModule,
-        TranslateModule.forChild(),
         SharedModule.registerDynamicComponents([
             FRowComponent,
             FColumnComponent,
@@ -36,9 +32,9 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
             FPasswordComponent,
             FDateComponent,
             FCheckboxComponent,
-            FRadiobuttonComponent
+            FRadiobuttonComponent,
         ]),
-        IconModule
+        IconModule,
     ],
     declarations: [
         FRowComponent,
@@ -54,7 +50,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FCheckboxComponent,
         FRadiobuttonComponent,
         FErrorComponent,
-        FExplanationComponent
+        FExplanationComponent,
     ],
     exports: [
         FRowComponent,
@@ -70,7 +66,7 @@ import { FExplanationComponent } from './f-explanation/f-explanation.component'
         FCheckboxComponent,
         FRadiobuttonComponent,
         FErrorComponent,
-        FExplanationComponent
-    ]
+        FExplanationComponent,
+    ],
 })
 export class FormElementsModule {}

@@ -6,13 +6,11 @@ describe('QuickContactComponent', () => {
     let component: QuickContactComponent
     let fixture: ComponentFixture<QuickContactComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [QuickContactComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [QuickContactComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(QuickContactComponent)

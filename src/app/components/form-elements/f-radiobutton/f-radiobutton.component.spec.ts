@@ -8,7 +8,7 @@ describe('FRadiobuttonComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FRadiobuttonComponent]
+            declarations: [FRadiobuttonComponent],
         }).compileComponents()
     }))
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { LanguageService } from '../../../services/language/language.service'
+import { LanguageService } from '../../../shared/language/language.service'
 
 /**
  * FooterMetaComponent
@@ -10,7 +10,7 @@ import { LanguageService } from '../../../services/language/language.service'
 @Component({
     selector: 'cmp-footer-meta',
     templateUrl: './footer-meta.component.html',
-    styleUrls: ['./footer-meta.component.scss']
+    styleUrls: ['./footer-meta.component.scss'],
 })
 export class FooterMetaComponent {
     /**

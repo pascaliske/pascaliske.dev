@@ -1,16 +1,20 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
+import { FButtonType } from '../typings'
 
 @Component({
     selector: 'cmp-f-button',
     templateUrl: './f-button.component.html',
-    styleUrls: ['./f-button.component.scss']
+    styleUrls: ['./f-button.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FButtonComponent {
     public static readonly cmpName: string = 'FButtonComponent'
 
-    @Input() public type: string = 'button'
+    @Input() public type: FButtonType = 'button'
 
     @Input() public text: string
+
+    @Input() public icon: string
 
     @Input() public theme: string = ''
 
@@ -20,7 +24,15 @@ export class FButtonComponent {
 
     public getThemeModifiers(): object {
         return this.theme
+            .replace(/ +/g, '')
             .split(',')
-            .reduce((prev, current) => ({ [`cmp-f-button--${current}`]: true, ...prev }), {})
+            .reverse()
+            .reduce(
+                (prev, current) => ({
+                    [`cmp-f-button--${current}`]: true,
+                    ...prev,
+                }),
+                {},
+            )
     }
 }

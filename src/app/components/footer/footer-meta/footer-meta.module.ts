@@ -14,9 +14,9 @@ import { FooterMetaComponent } from './footer-meta.component'
         RouterModule,
         TranslateModule.forChild(),
         LinkModule,
-        LanguageSwitchModule
+        LanguageSwitchModule,
     ],
     declarations: [FooterMetaComponent],
-    exports: [FooterMetaComponent]
+    exports: [FooterMetaComponent],
 })
 export class FooterMetaModule {}

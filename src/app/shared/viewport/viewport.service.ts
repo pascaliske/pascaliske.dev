@@ -16,7 +16,7 @@ export class ViewportService {
      * @param {IntersectionObserverInit} options
      */
     private options: IntersectionObserverInit = {
-        threshold: [0.5]
+        threshold: [0.5],
     }
 
     /**
@@ -52,7 +52,7 @@ export class ViewportService {
         this.observer.observe(element)
         return this.callback$.pipe(
             filter((entry: IntersectionObserverEntry) => entry.target === element),
-            finalize(() => this.observer.unobserve(element))
+            finalize(() => this.observer.unobserve(element)),
         )
     }
 

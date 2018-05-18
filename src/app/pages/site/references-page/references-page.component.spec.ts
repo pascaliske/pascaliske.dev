@@ -6,13 +6,11 @@ describe('ReferencesPageComponent', () => {
     let component: ReferencesPageComponent
     let fixture: ComponentFixture<ReferencesPageComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [ReferencesPageComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ReferencesPageComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ReferencesPageComponent)

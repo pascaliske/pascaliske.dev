@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { TranslateModule } from '@ngx-translate/core'
+import { SharedModule } from '../../../shared/shared.module'
 import { PageHeaderModule } from '../../../components/page-header/page-header.module'
 import { SectionModule } from '../../../components/section/section.module'
 import { HeadlinesModule } from '../../../components/headlines/headlines.module'
@@ -10,14 +9,13 @@ import { AboutPageComponent } from './about-page.component'
 
 @NgModule({
     imports: [
-        CommonModule,
-        TranslateModule.forChild(),
+        SharedModule,
         PageHeaderModule,
         SectionModule,
         HeadlinesModule,
         CopyModule,
-        QuickContactModule
+        QuickContactModule,
     ],
-    declarations: [AboutPageComponent]
+    declarations: [AboutPageComponent],
 })
 export class AboutPageModule {}

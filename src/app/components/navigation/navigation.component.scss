@@ -52,10 +52,10 @@ $component: 'cmp-navigation';
     }
 
     &__item {
-        color: rgba($color-white1, .6);
+        color: rgba($color-white1, 0.6);
         background: $color-primary;
         transform: translateX(0%);
-        transition: transform .2s, opacity .2s;
+        transition: transform 0.2s, opacity 0.2s;
         opacity: 0;
 
         &--active {
@@ -67,10 +67,10 @@ $component: 'cmp-navigation';
             height: 50px;
             padding: 0 10px 5px;
             background: $color-white1;
-            color: rgba($color-primary, .6);
+            color: rgba($color-primary, 0.6);
             opacity: 1;
             border-bottom: 5px inset rgba(0, 0, 0, 0);
-            transition: height .2s, padding-bottom .2s, border-color .15s;
+            transition: height 0.2s, padding-bottom 0.2s, border-color 0.15s;
 
             &:hover,
             &--active,
@@ -80,7 +80,7 @@ $component: 'cmp-navigation';
             }
 
             &:hover {
-                border-color: rgba($color-primary, .5);
+                border-color: rgba($color-primary, 0.5);
             }
 
             &--active,
@@ -98,7 +98,7 @@ $component: 'cmp-navigation';
 
     @for $i from 1 through 10 {
         &__item:nth-child(#{$i}) {
-            transition-delay: #{($i - 1) * 0.08}s
+            transition-delay: #{($i - 1) * 0.08}s;
         }
 
         @include use-breakpoint(mini-tablet) {
@@ -117,7 +117,7 @@ $component: 'cmp-navigation';
     &__text {
         @include use-font(monospace);
         font-size: 18px;
-        opacity: .5;
+        opacity: 0.5;
 
         &--decorated::before {
             content: '<';

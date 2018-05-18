@@ -6,13 +6,11 @@ describe('FTextAreaComponent', () => {
     let component: FTextAreaComponent
     let fixture: ComponentFixture<FTextAreaComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [FTextAreaComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [FTextAreaComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(FTextAreaComponent)

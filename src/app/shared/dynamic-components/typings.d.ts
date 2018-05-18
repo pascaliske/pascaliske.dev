@@ -1,3 +1,5 @@
+export const DYNAMIC_COMPONENTS = 'dynamic-components'
+
 export interface ComponentManifestParams {
     [key: string]: any
 }

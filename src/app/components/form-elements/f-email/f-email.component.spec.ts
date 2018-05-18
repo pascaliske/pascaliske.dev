@@ -8,7 +8,7 @@ describe('FEmailComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FEmailComponent]
+            declarations: [FEmailComponent],
         }).compileComponents()
     }))
 

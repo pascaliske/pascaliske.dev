@@ -1,40 +1,40 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { TitleService } from '../../../services/title/title.service'
+import { TitleService } from '../../../shared/title/title.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
 import { Page } from '../page'
 
 @Component({
     selector: 'cmp-contact-page',
     templateUrl: './contact-page.component.html',
-    styleUrls: ['./contact-page.component.scss']
+    styleUrls: ['./contact-page.component.scss'],
 })
-export class ContactPageComponent extends Page implements OnInit {
+export class ContactPageComponent extends Page implements OnInit, OnDestroy {
     public contactForm: FormGroup
 
     public validation: FValidationConfig = {
         email: [
             {
                 type: 'required',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED'
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED',
             },
             {
                 type: 'email',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL'
-            }
-        ]
+                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL',
+            },
+        ],
     }
 
     public constructor(
         private changeDetectorRef: ChangeDetectorRef,
         private formBuilder: FormBuilder,
+        public route: ActivatedRoute,
         public translate: TranslateService,
-        public titleService: TitleService
+        public titleService: TitleService,
     ) {
-        super(translate, titleService)
-
-        this.fetchTitle('PAGE_TITLE_CONTACT')
+        super(route, translate, titleService)
     }
 
     public ngOnInit(): void {
@@ -42,9 +42,13 @@ export class ContactPageComponent extends Page implements OnInit {
             name: null,
             email: null,
             subject: null,
-            message: null
+            message: null,
         })
         this.changeDetectorRef.detectChanges()
+    }
+
+    public ngOnDestroy(): void {
+        this.alive = false
     }
 
     public get name() {

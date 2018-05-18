@@ -10,7 +10,7 @@ $component: 'cmp-section';
         border-bottom: 1px $color-white2 dashed;
         transform: translateY(30px);
         opacity: 0;
-        transition: opacity .6s, transform .6s;
+        transition: opacity 0.6s, transform 0.6s;
 
         @include use-breakpoint(mini-tablet) {
             padding: 40px $grid-desktop-padding;
@@ -33,6 +33,6 @@ $component: 'cmp-section';
 
 @include cmp-modifier($component, 'even') {
     &__wrapper {
-        background: rgba($color-white2, .5);
+        background: rgba($color-white2, 0.5);
     }
 }

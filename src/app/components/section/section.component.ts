@@ -1,11 +1,11 @@
 import { Component, Input, ElementRef, OnInit } from '@angular/core'
-import { ViewportService } from '../../services/viewport/viewport.service'
 import { takeWhile } from 'rxjs/operators'
+import { ViewportService } from '../../shared/viewport/viewport.service'
 
 @Component({
     selector: 'cmp-section',
     templateUrl: './section.component.html',
-    styleUrls: ['./section.component.scss']
+    styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent implements OnInit {
     public static readonly cmpName: string = 'SectionComponent'

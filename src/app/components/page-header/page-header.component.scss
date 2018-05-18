@@ -2,4 +2,5 @@
 
 $component: 'cmp-page-header';
 
-@include cmp-base($component) {}
+@include cmp-base($component) {
+}

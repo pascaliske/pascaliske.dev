@@ -5,7 +5,7 @@ import { filter, switchMap } from 'rxjs/operators'
 @Component({
     selector: 'cmp-language-switch',
     templateUrl: './language-switch.component.html',
-    styleUrls: ['./language-switch.component.scss']
+    styleUrls: ['./language-switch.component.scss'],
 })
 export class LanguageSwitchComponent {
     public path: string
@@ -14,7 +14,7 @@ export class LanguageSwitchComponent {
         this.router.events
             .pipe(
                 filter(event => event instanceof NavigationEnd),
-                switchMap(() => this.route.firstChild.url)
+                switchMap(() => this.route.firstChild.url),
             )
             .subscribe(([urlSegment]: Array<UrlSegment>) => {
                 this.path = urlSegment.path

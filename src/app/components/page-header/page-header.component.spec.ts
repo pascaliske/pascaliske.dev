@@ -6,13 +6,11 @@ describe('PageHeaderComponent', () => {
     let component: PageHeaderComponent
     let fixture: ComponentFixture<PageHeaderComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [PageHeaderComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [PageHeaderComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PageHeaderComponent)

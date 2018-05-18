@@ -1,10 +1,10 @@
 import { Component } from '@angular/core'
-import { LanguageService } from '../../services/language/language.service'
+import { LanguageService } from '../../shared/language/language.service'
 
 @Component({
     selector: 'cmp-quick-contact',
     templateUrl: './quick-contact.component.html',
-    styleUrls: ['./quick-contact.component.scss']
+    styleUrls: ['./quick-contact.component.scss'],
 })
 export class QuickContactComponent {
     public static readonly cmpName: string = 'QuickContactComponent'

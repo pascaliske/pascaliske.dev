@@ -6,13 +6,11 @@ describe('NavigationButtonComponent', () => {
     let component: NavigationButtonComponent
     let fixture: ComponentFixture<NavigationButtonComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [NavigationButtonComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [NavigationButtonComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(NavigationButtonComponent)

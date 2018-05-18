@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
 
 @Component({
     selector: 'cmp-copy',
     templateUrl: './copy.component.html',
-    styleUrls: ['./copy.component.scss']
+    styleUrls: ['./copy.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CopyComponent {
     public static readonly cmpName: string = 'CopyComponent'
@@ -16,7 +17,15 @@ export class CopyComponent {
 
     public getThemeModifiers(): object {
         return this.theme
+            .replace(/ +/g, '')
             .split(',')
-            .reduce((prev, current) => ({ [`cmp-copy--${current}`]: true, ...prev }), {})
+            .reverse()
+            .reduce(
+                (prev, current) => ({
+                    [`cmp-copy--${current}`]: true,
+                    ...prev,
+                }),
+                {},
+            )
     }
 }

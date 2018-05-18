@@ -6,13 +6,11 @@ describe('LinkComponent', () => {
     let component: LinkComponent
     let fixture: ComponentFixture<LinkComponent>
 
-    beforeEach(
-        async(() => {
-            TestBed.configureTestingModule({
-                declarations: [LinkComponent]
-            }).compileComponents()
-        })
-    )
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [LinkComponent],
+        }).compileComponents()
+    }))
 
     beforeEach(() => {
         fixture = TestBed.createComponent(LinkComponent)
