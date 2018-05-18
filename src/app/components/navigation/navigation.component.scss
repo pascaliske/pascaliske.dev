@@ -2,6 +2,12 @@
 
 $component: 'cmp-navigation';
 
+:host {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 @include cmp-base($component) {
     &__wrapper,
     &__list,
