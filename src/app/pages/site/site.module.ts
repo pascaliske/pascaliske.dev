@@ -11,7 +11,7 @@ import { BlogPageModule } from './blog-page/blog-page.module'
 import { ContactPageModule } from './contact-page/contact-page.module'
 import { ImprintPageModule } from './imprint-page/imprint-page.module'
 import { PrivacyPageModule } from './privacy-page/privacy-page.module'
-
+import { DeploymentPageModule } from './deployment-page/deployment-page.module'
 import { SiteComponent } from './site.component'
 
 @NgModule({
@@ -28,6 +28,7 @@ import { SiteComponent } from './site.component'
         ContactPageModule,
         ImprintPageModule,
         PrivacyPageModule,
+        DeploymentPageModule,
     ],
     declarations: [SiteComponent],
 })

@@ -9,12 +9,20 @@ import { AboutPageComponent } from './pages/site/about-page/about-page.component
 import { ContactPageComponent } from './pages/site/contact-page/contact-page.component'
 import { ImprintPageComponent } from './pages/site/imprint-page/imprint-page.component'
 import { PrivacyPageComponent } from './pages/site/privacy-page/privacy-page.component'
+import { DeploymentPageComponent } from './pages/site/deployment-page/deployment-page.component'
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
         redirectTo: 'en',
+        resolve: {
+            timeout: RouteResolver,
+        },
+    },
+    {
+        path: 'deployment',
+        redirectTo: 'en/deployment',
         resolve: {
             timeout: RouteResolver,
         },
@@ -99,6 +107,16 @@ export const routes: Routes = [
                 component: PrivacyPageComponent,
                 data: {
                     title: 'PAGE_TITLE_PRIVACY',
+                },
+                resolve: {
+                    timeout: RouteResolver,
+                },
+            },
+            {
+                path: 'deployment',
+                component: DeploymentPageComponent,
+                data: {
+                    title: 'PAGE_TITLE_DEPLOYMENT',
                 },
                 resolve: {
                     timeout: RouteResolver,

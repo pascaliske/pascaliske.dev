@@ -251,23 +251,23 @@
     is-absolute "^1.0.0"
     is-negated-glob "^1.0.0"
 
-"@ngrx/effects@^6.0.0-beta.3":
+"@ngrx/effects@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-6.1.0.tgz#3c1e1ab1e5a86c6d9c29d4f3771e42cc9bd8576c"
 
-"@ngrx/entity@^6.0.0-beta.3":
+"@ngrx/entity@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-6.1.0.tgz#9ea34beef25e458b45638095875b2548d484df9f"
 
-"@ngrx/schematics@^6.0.0-beta.3":
+"@ngrx/schematics@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-6.1.0.tgz#4e784da5502829700895ca87d4cc5da93bf3ec84"
 
-"@ngrx/store-devtools@^6.0.0-beta.3":
+"@ngrx/store-devtools@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-6.1.0.tgz#cf65a3149628dc37badd094204484dde9ba14200"
 
-"@ngrx/store@^6.0.0-beta.3":
+"@ngrx/store@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.1.0.tgz#5b027647a797bf027912568214b10375dd75af38"
 
@@ -298,7 +298,7 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-translate/core@^10.0.1":
+"@ngx-translate/core@^10.0.2":
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-10.0.2.tgz#5eeb78f47845b476a1e892fb2fb153dbbaf72850"
   dependencies:
@@ -341,11 +341,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/gsap@^1.19.2":
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/@types/gsap/-/gsap-1.19.2.tgz#ffa045fe9ca25f18a175fac4918e17d6a7ef8d7b"
-
-"@types/highlight.js@^9.12.2":
+"@types/highlight.js@^9.12.3":
   version "9.12.3"
   resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-9.12.3.tgz#b672cfaac25cbbc634a0fd92c515f66faa18dbca"
 
@@ -353,7 +349,7 @@
   version "2.8.5"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.5.tgz#96e58872583fa80c7ea0dd29024b180d5e133678"
 
-"@types/jasmine@~2.8.7":
+"@types/jasmine@~2.8.8":
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.8.tgz#bf53a7d193ea8b03867a38bfdb4fbb0e0bf066c9"
 
@@ -363,7 +359,7 @@
   dependencies:
     "@types/jasmine" "*"
 
-"@types/lodash-es@^4.17.0":
+"@types/lodash-es@^4.17.1":
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.1.tgz#56745e5411558362aeca31def918f88f725dd29d"
   dependencies:
@@ -1563,7 +1559,7 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codelyzer@^4.3.0:
+codelyzer@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-4.4.2.tgz#af11fed6ddf9362ed5b174495467fb7315306fb1"
   dependencies:
@@ -1774,7 +1770,7 @@ core-decorators@^0.20.0:
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/core-decorators/-/core-decorators-0.20.0.tgz#605896624053af8c28efbe735c25a301a61c65c5"
 
-core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.6:
+core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.7:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -2831,7 +2827,7 @@ findit2@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/findit2/-/findit2-2.2.3.tgz#58a466697df8a6205cdfdbf395536b8bd777a5f6"
 
-flatpickr@^4.5.0:
+flatpickr@^4.5.1:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.1.tgz#f65eaf54c07538f87d6f68a67b03cf816d7fb82f"
 
@@ -4213,14 +4209,14 @@ karma-chrome-launcher@~2.2.0:
     fs-access "^1.0.0"
     which "^1.2.1"
 
-karma-coverage-istanbul-reporter@^2.0.0:
+karma-coverage-istanbul-reporter@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-2.0.1.tgz#26b969317d191c6a897c783b4ffe7831cb92e684"
   dependencies:
     istanbul-api "^1.3.1"
     minimatch "^3.0.4"
 
-karma-jasmine-html-reporter@^1.1.0:
+karma-jasmine-html-reporter@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.2.0.tgz#ddedfb40f0c0be2992d8b1367581e464d0472d15"
 
@@ -4234,7 +4230,7 @@ karma-source-map-support@^1.2.0:
   dependencies:
     source-map-support "^0.5.5"
 
-karma@~2.0.2:
+karma@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/karma/-/karma-2.0.5.tgz#3710c7a2e71b1c439313f283846d88e04e4f918c"
   dependencies:
@@ -5600,7 +5596,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.12.1:
+prettier@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.0.tgz#847c235522035fd988100f1f43cf20a7d24f9372"
 
@@ -5808,7 +5804,7 @@ raven-js@*:
   version "3.24.2"
   resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.24.2.tgz#c5cacb363b198812e80cd4c6714e5e478549ebcf"
 
-raven-js@^3.25.2:
+raven-js@^3.26.4:
   version "3.26.4"
   resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.26.4.tgz#32aae3a63a9314467a453c94c89a364ea43707be"
 
@@ -6202,7 +6198,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs-tslint-rules@^4.2.0:
+rxjs-tslint-rules@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/rxjs-tslint-rules/-/rxjs-tslint-rules-4.7.2.tgz#b06fb896ba06c0c5503a77848c3a07a2b0175ec9"
   dependencies:
@@ -6211,7 +6207,7 @@ rxjs-tslint-rules@^4.2.0:
     resolve "^1.4.0"
     tslib "^1.8.0"
 
-rxjs@^6.0.0, rxjs@^6.1.0:
+rxjs@^6.0.0, rxjs@^6.2.2:
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
   dependencies:
@@ -7170,11 +7166,11 @@ tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
-tslint-config-prettier@^1.12.0:
+tslint-config-prettier@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/tslint-config-prettier/-/tslint-config-prettier-1.14.0.tgz#860b36634e53f4c70c64c51ff3ef7fd9bbab7676"
 
-tslint@^5.10.0:
+tslint@^5.11.0:
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.11.0.tgz#98f30c02eae3cde7006201e4c33cb08b48581eed"
   dependencies:
