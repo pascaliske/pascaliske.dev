@@ -9,7 +9,7 @@ cache:
     - node_modules
 script:
   - yarn lint
-  - yarn build --progress false --base-href https://pascaliske.github.io/
+  - yarn build --progress false --base-href https://pascal-iske.de
   - echo "# [pascal-iske.de](https://pascal-iske.de)" >> dist/README.md
   - echo "This site was build automatically using Travis CI. Read more [here](https://pascal-iske.de/deployment)." >> dist/README.md
 deploy:
