@@ -9,11 +9,7 @@ import {
 } from '@angular/core'
 import { takeWhile } from 'rxjs/operators'
 import flatpickr from 'flatpickr'
-import { Instance } from 'flatpickr/dist/types/instance'
-import { BaseOptions } from 'flatpickr/dist/types/options'
-import { Locale, CustomLocale } from 'flatpickr/dist/types/locale'
-import { english } from 'flatpickr/dist/l10n/default'
-import { German } from 'flatpickr/dist/l10n/de'
+import locale from 'flatpickr/dist/l10n'
 import { FInputComponent } from '../f-input/f-input.component'
 import { LanguageService, Language } from '../../../shared/language/language.service'
 import { FDateOptions } from '../typings'
@@ -27,11 +23,13 @@ import { FDateOptions } from '../typings'
 export class FDateComponent extends FInputComponent implements AfterViewInit, OnDestroy {
     public static readonly cmpName: string = 'FDateComponent'
 
-    @Input() public options: Partial<FDateOptions> = {}
+    @Input()
+    public options: Partial<FDateOptions> = {}
 
-    @ViewChild('inputRef') public inputRef: ElementRef
+    @ViewChild('inputRef')
+    public inputRef: ElementRef
 
-    private instance: Instance
+    private instance: flatpickr.Instance
 
     private selected: Date
 
@@ -55,19 +53,18 @@ export class FDateComponent extends FInputComponent implements AfterViewInit, On
     }
 
     private initFlatpickr(language: Language): void {
-        const locale = this.fetchLocale(language)
-        const options: Partial<BaseOptions> = {
+        const options = {
             allowInput: true,
             dateFormat: 'd. F Y',
             defaultDate: this.selected || null,
-            locale: locale,
+            locale: this.fetchLocale(language),
             weekNumbers: true,
             onChange: value => (this.selected = value[0]),
         }
 
         this.destroyFlatpickr()
 
-        this.instance = flatpickr(this.inputRef.nativeElement, options) as Instance
+        this.instance = flatpickr(this.inputRef.nativeElement, options) as flatpickr.Instance
     }
 
     private destroyFlatpickr(): void {
@@ -76,13 +73,13 @@ export class FDateComponent extends FInputComponent implements AfterViewInit, On
         }
     }
 
-    private fetchLocale(language: Language): Locale | CustomLocale {
+    private fetchLocale(language: Language): flatpickr.CustomLocale {
         switch (language) {
             case 'de':
-                return German
+                return locale.de
 
             default:
-                return english
+                return locale.default
         }
     }
 }

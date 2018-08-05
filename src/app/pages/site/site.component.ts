@@ -30,20 +30,20 @@ export class SiteComponent implements OnDestroy {
                 decorated: true,
             },
         },
-        {
-            route: 'references',
-            label: 'NAVIGATION_REFERENCES',
-            options: {
-                decorated: true,
-            },
-        },
-        {
-            route: 'blog',
-            label: 'NAVIGATION_BLOG',
-            options: {
-                decorated: true,
-            },
-        },
+        // {
+        //     route: 'references',
+        //     label: 'NAVIGATION_REFERENCES',
+        //     options: {
+        //         decorated: true,
+        //     },
+        // },
+        // {
+        //     route: 'blog',
+        //     label: 'NAVIGATION_BLOG',
+        //     options: {
+        //         decorated: true,
+        //     },
+        // },
         {
             route: 'contact',
             label: 'NAVIGATION_CONTACT',
