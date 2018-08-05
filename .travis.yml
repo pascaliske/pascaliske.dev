@@ -3,7 +3,7 @@ node_js:
   - '9'
 branches:
   only:
-  - master
+  - production
 cache:
   directories:
     - node_modules
@@ -12,8 +12,9 @@ script:
   - yarn build --progress false --base-href https://pascaliske.github.io/
 deploy:
   provider: pages
+  target-branch: master
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist
   on:
-    branch: master
+    branch: production
