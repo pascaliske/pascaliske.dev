@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core'
-import { StoreModule, MetaReducer } from '@ngrx/store'
+import { CommonModule } from '@angular/common'
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ServiceWorkerModule } from '@angular/service-worker'
+import { StoreModule } from '@ngrx/store'
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { EffectsModule } from '@ngrx/effects'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
-import { storeFreeze } from 'ngrx-store-freeze'
 import { environment } from '../../environments/environment'
 import { reducers } from '../store'
-
-export const metaReducers: Array<MetaReducer<any>> = !environment.production ? [storeFreeze] : []
 
 export function MarkdownOptionsFactory(): MarkedOptions {
     const renderer = new MarkedRenderer()
@@ -38,18 +41,26 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 @NgModule({
     declarations: [],
     imports: [
-        StoreModule.forRoot(reducers, {
-            metaReducers,
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        ServiceWorkerModule.register('/ngsw-worker.js', {
+            enabled: environment.production,
         }),
+        StoreModule.forRoot(reducers),
+        StoreDevtoolsModule.instrument(),
+        EffectsModule.forRoot([]),
         NgProgressModule.forRoot(),
         NgProgressHttpModule,
         NgProgressRouterModule,
         MarkdownModule.forRoot({
-            provide: MarkedOptions,
-            useFactory: MarkdownOptionsFactory,
+            markedOptions: {
+                provide: MarkedOptions,
+                useFactory: MarkdownOptionsFactory,
+            },
         }),
     ],
-    exports: [StoreModule, NgProgressModule, MarkdownModule],
+    exports: [CommonModule, NgProgressModule, MarkdownModule],
     providers: [],
 })
 export class CoreModule {}
