@@ -149,13 +149,17 @@
       }
     }
   },
+  "cli": {
+    "packageManager": "yarn",
+    "defaultCollection": "@ngrx/schematics"
+  },
   "defaultProject": "pascal-iske",
   "schematics": {
-    "@schematics/angular:component": {
+    "@ngrx/schematics:component": {
       "prefix": "cmp",
       "styleext": "scss"
     },
-    "@schematics/angular:directive": {
+    "@ngrx/schematics:directive": {
       "prefix": ""
     }
   }

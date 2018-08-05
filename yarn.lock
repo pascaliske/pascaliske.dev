@@ -249,6 +249,26 @@
     is-absolute "^1.0.0"
     is-negated-glob "^1.0.0"
 
+"@ngrx/effects@^6.0.0-beta.3":
+  version "6.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-6.0.0-beta.3.tgz#29e70a2fee0e793e9c08cbc7657232c043f9410b"
+
+"@ngrx/entity@^6.0.0-beta.3":
+  version "6.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-6.0.0-beta.3.tgz#cada859a70eb6291f29fb51cd2c74508f90f3213"
+
+"@ngrx/schematics@^6.0.0-beta.3":
+  version "6.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-6.0.0-beta.3.tgz#e5e03cd9096a0b45e0bbbeb327379128c04e35dd"
+
+"@ngrx/store-devtools@^6.0.0-beta.3":
+  version "6.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-6.0.0-beta.3.tgz#899836165b6554c0f981054610293f6d0958d4de"
+
+"@ngrx/store@^6.0.0-beta.3":
+  version "6.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.0.0-beta.3.tgz#584e0bb69c2ea75637a2c2adfb27fc08db98dc92"
+
 "@ngtools/webpack@6.0.3":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.3.tgz#baa9caaa8b21be16c30b2b15f92eb2afb8eb04c0"
