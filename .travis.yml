@@ -9,7 +9,7 @@ cache:
     - node_modules
 script:
   - yarn lint
-  - yarn build --base-href https://pascaliske.github.io/
+  - yarn build --progress false --base-href https://pascaliske.github.io/
 deploy:
   provider: pages
   skip_cleanup: true
