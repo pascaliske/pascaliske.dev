@@ -1,0 +1,7 @@
+<div class="cmp-f-error">
+    <div class="cmp-f-error__errors" *ngIf="messages.length > 0">
+        <div class="cmp-f-error__error" *ngFor="let message of messages">
+            <div class="cmp-f-error__message" [innerHTML]="message.message|translate" *ngIf="fc.hasError(message.type) && (fc.dirty || fc.touched)"></div>
+        </div>
+    </div>
+</div>

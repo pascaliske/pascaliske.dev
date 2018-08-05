@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-
+import { RouterModule } from '@angular/router'
+import { SharedModule } from '../../shared/shared.module'
 import { NavigationComponent } from './navigation.component'
+import { NavigationButtonComponent } from './navigation-button/navigation-button.component'
 
 @NgModule({
-    imports: [CommonModule],
-    declarations: [NavigationComponent],
-    exports: [NavigationComponent]
+    imports: [RouterModule, SharedModule.registerDynamicComponents([NavigationComponent])],
+    declarations: [NavigationComponent, NavigationButtonComponent],
+    exports: [NavigationComponent],
 })
 export class NavigationModule {}

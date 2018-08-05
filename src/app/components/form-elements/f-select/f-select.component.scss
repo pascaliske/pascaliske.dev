@@ -1,0 +1,25 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-select';
+
+@include cmp-base($component, block) {
+    @include cmp-form-element();
+    @include cmp-form-input();
+
+    &__icon {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: rgba($color-grey1, 0.8);
+        opacity: 0.4;
+    }
+
+    &__input:active ~ &__icon {
+        color: red;
+    }
+
+    &__placeholder {
+        color: rgba($color-grey1, 0.8);
+    }
+}

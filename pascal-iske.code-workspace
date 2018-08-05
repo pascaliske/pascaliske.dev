@@ -4,22 +4,37 @@
             "path": "."
         },
         {
+            "path": "./src/app"
+        },
+        {
             "path": "./src/app/components"
         },
         {
             "path": "./src/app/pages"
         },
         {
-            "path": "./src/app/services"
-        },
-        {
             "path": "./src/scss"
         }
     ],
     "settings": {
-        "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
-        "tslint.autoFixOnSave": true
+        "tslint.autoFixOnSave": true,
+        "[json]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
+        "[jsonc]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
+        "[scss]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
+        "[html]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        }
     }
 }

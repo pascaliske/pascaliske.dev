@@ -1,0 +1,10 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-language-switch';
+
+@include cmp-base($component) {
+    &__language {
+        @include seperator();
+        display: inline-block;
+    }
+}

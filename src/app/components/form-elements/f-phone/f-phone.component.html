@@ -1,0 +1,11 @@
+<div class="cmp-f-phone" [ngClass]="getClasses('cmp-f-phone')">
+    <div class="cmp-f-phone__control">
+        <input class="cmp-f-phone__input" type="phone" [id]="name" [name]="name" [formControl]="fc" [autocomplete]="autocomplete" (focus)="focusIn()" (focusout)="focusOut()" />
+        <label class="cmp-f-phone__label" [for]="name">
+            {{label}}<span class="cmp-f-phone__required" *ngIf="isRequired()">*</span>
+        </label>
+        <span class="cmp-f-phone__line"></span>
+    </div>
+    <cmp-f-explanation class="cmp-f-phone__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-phone__errors" [fc]="fc" [messages]="validation"></cmp-f-error>
+</div>

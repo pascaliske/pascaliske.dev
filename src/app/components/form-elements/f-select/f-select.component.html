@@ -1,0 +1,17 @@
+<div class="cmp-f-select" [ngClass]="getClasses('cmp-f-select')">
+    <div class="cmp-f-select__control">
+        <select class="cmp-f-select__input" [id]="name" [name]="name" [formControl]="fc" (focus)="focusIn()" (focusout)="focusOut()">
+            <option class="cmp-f-select__placeholder" [disabled]="placeholder.selectable === false" [ngValue]="placeholder.value" *ngIf="placeholder">{{placeholder.label}}</option>
+            <option [ngValue]="option.value" *ngFor="let option of options">{{option.label}}</option>
+        </select>
+        <label class="cmp-f-select__label" [for]="name">
+            {{label}}<span class="cmp-f-select__required" *ngIf="isRequired()">*</span>
+        </label>
+        <span class="cmp-f-select__line"></span>
+        <span class="cmp-f-select__icon">
+            <i class="fa fa-chevron-down"></i>
+        </span>
+    </div>
+    <cmp-f-explanation class="cmp-f-phone__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-select__errors" [fc]="fc" [messages]="validation" ></cmp-f-error>
+</div>

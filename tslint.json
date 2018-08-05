@@ -1,7 +1,8 @@
 {
   "extends": [
     "tslint:latest",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "rxjs-tslint-rules"
   ],
   "rulesDirectory": [
     "node_modules/codelyzer"
@@ -28,7 +29,6 @@
     "forin": true,
     "import-blacklist": [
       true,
-      "rxjs",
       "rxjs/Rx"
     ],
     "import-spacing": true,
@@ -58,15 +58,18 @@
       true,
       {
         "order": [
-          "private-static-field",
           "public-static-field",
-          "private-instance-field",
+          "protected-static-field",
+          "private-static-field",
           "public-instance-field",
-          "private-constructor",
+          "protected-instance-field",
+          "private-instance-field",
           "public-constructor",
-          "private-instance-method",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
           "protected-instance-method",
-          "public-instance-method"
+          "private-instance-method"
         ]
       }
     ],
@@ -98,6 +101,7 @@
     "no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
+    "no-unused-variable": false,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
@@ -147,8 +151,8 @@
     "directive-selector": [
       true,
       "attribute",
-      "cmp",
-      "camelCase"
+      null,
+      "kebab-case"
     ],
     "component-selector": [
       true,

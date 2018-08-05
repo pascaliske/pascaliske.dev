@@ -1,0 +1,11 @@
+<div class="cmp-f-text-area" [ngClass]="getClasses('cmp-f-text-area')">
+    <div class="cmp-f-text-area__control">
+        <textarea class="cmp-f-text-area__input" [id]="name" [name]="name" [formControl]="fc" (focus)="focusIn()" (focusout)="focusOut()"></textarea>
+        <label class="cmp-f-text-area__label" [for]="name">
+            {{label}}<span class="cmp-f-text-area__required" *ngIf="isRequired()">*</span>
+        </label>
+        <span class="cmp-f-text-area__line"></span>
+    </div>
+    <cmp-f-explanation class="cmp-f-phone__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-text-area__errors" [fc]="fc" [messages]="validation" ></cmp-f-error>
+</div>

@@ -1,0 +1,5 @@
+<a class="cmp-link cmp-link--{{align}}" [ngClass]="{'cmp-link--inline': inline}" (click)="navigate()">
+    <cmp-icon class="cmp-link__icon" [name]="icon" *ngIf="icon"></cmp-icon>
+    <span class="cmp-link__text" *ngIf="inline">{{text}}</span>
+    <ng-content *ngIf="!inline"></ng-content>
+</a>

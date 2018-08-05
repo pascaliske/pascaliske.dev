@@ -1,0 +1,25 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-f-column';
+
+@include cmp-base($component, block) {
+    &--flex {
+        display: flex;
+    }
+
+    &--align-left {
+        justify-content: flex-start;
+
+        & > *:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &--align-right {
+        justify-content: flex-end;
+
+        & > *:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}

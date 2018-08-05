@@ -1,0 +1,11 @@
+<div class="cmp-f-date" [ngClass]="getClasses('cmp-f-date')">
+    <div class="cmp-f-date__control">
+        <input class="cmp-f-date__input" type="text" [id]="name" [name]="name" [formControl]="fc" [autocomplete]="autocomplete" (focus)="focusIn()" (focusout)="focusOut()" #inputRef />
+        <label class="cmp-f-date__label" [for]="name">
+            {{label}}<span class="cmp-f-date__required" *ngIf="isRequired()">*</span>
+        </label>
+        <span class="cmp-f-date__line"></span>
+    </div>
+    <cmp-f-explanation class="cmp-f-date__explanations" [fc]="fc" [messages]="explanation"></cmp-f-explanation>
+    <cmp-f-error class="cmp-f-date__errors" [fc]="fc" [messages]="validation"></cmp-f-error>
+</div>

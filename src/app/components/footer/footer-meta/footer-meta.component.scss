@@ -1,0 +1,77 @@
+@import '../../../../scss/shared';
+
+$component: 'cmp-footer-meta';
+
+@include cmp-base($component) {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include use-breakpoint(mini-tablet) {
+        flex-direction: row;
+    }
+
+    &__legal,
+    &__languages {
+        width: 100%;
+        text-align: center;
+
+        @include use-breakpoint(mini-tablet) {
+            width: 50vw;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include use-breakpoint(mini-tablet) {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    &__copyright,
+    &__links {
+        margin-bottom: 5px;
+
+        @include use-breakpoint(mini-tablet) {
+            margin-bottom: 0;
+            display: inline-block;
+        }
+    }
+
+    &__copyright {
+        margin-top: 15px;
+        color: rgba($color-secondary, 0.6);
+
+        @include use-breakpoint(mini-tablet) {
+            margin-top: 0;
+            margin-right: 5px;
+        }
+
+        &::after {
+            @include use-breakpoint(mini-tablet) {
+                color: rgba($color-secondary, 0.4);
+                content: ' // ';
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+    }
+
+    &__link {
+        @include seperator();
+    }
+
+    &__languages {
+        margin-bottom: 5px;
+
+        @include use-breakpoint(mini-tablet) {
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+}

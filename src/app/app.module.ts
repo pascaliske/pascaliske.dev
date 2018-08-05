@@ -1,25 +1,38 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule, Title } from '@angular/platform-browser'
-import { ServiceWorkerModule } from '@angular/service-worker'
-
-import { environment } from '../environments/environment'
-
-import { AppComponent } from './app.component'
+import { NgModule, ErrorHandler } from '@angular/core'
+import { HttpClientModule, HttpClient } from '@angular/common/http'
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+import { RavenErrorHandler } from './raven'
 import { AppRoutingModule } from './app-routing.module'
+import { CoreModule } from './core/core.module'
+import { SiteModule } from './pages/site/site.module'
+import { AppComponent } from './app.component'
 
-import { HomePageModule } from './pages/home-page/home-page.module'
-import { AboutPageModule } from './pages/about-page/about-page.module'
+export function TranslationLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http, '/assets/translations/')
+}
 
 @NgModule({
     declarations: [AppComponent],
     imports: [
-        BrowserModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: TranslationLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
         AppRoutingModule,
-        HomePageModule,
-        AboutPageModule
+        CoreModule,
+        SiteModule,
     ],
-    providers: [Title],
-    bootstrap: [AppComponent]
+    providers: [
+        {
+            provide: ErrorHandler,
+            useClass: RavenErrorHandler,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

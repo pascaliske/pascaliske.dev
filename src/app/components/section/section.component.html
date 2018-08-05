@@ -1,3 +1,8 @@
-<p>
-  section works!
-</p>
+<section class="cmp-section" [ngClass]="{'cmp-section--activated': activated, 'cmp-section--even': even}" [attr.id]="id">
+    <a class="cmp-section__anchor" [id]="id" [name]="id" *ngIf="id"></a>
+    <div class="cmp-section__wrapper">
+        <div class="cmp-section__content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</section>
