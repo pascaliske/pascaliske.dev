@@ -9,9 +9,10 @@ cache:
     - node_modules
 script:
   - yarn lint
-  - yarn build --progress false --base-href https://pascal-iske.de
-  - echo "# [pascal-iske.de](https://pascal-iske.de)" >> dist/README.md
-  - echo "This site was build automatically using Travis CI. Read more [here](https://pascal-iske.de/deployment)." >> dist/README.md
+  - yarn build --progress false --base-href https://$PROD_DOMAIN
+  - echo "# [$PROD_DOMAIN](https://$PROD_DOMAIN)" >> dist/README.md
+  - echo "[![Build Status](https://travis-ci.com/pascaliske/pascaliske.github.io.svg?branch=production)](https://travis-ci.com/pascaliske/pascaliske.github.io)" >> dist/README.md
+  - echo "This site was build automatically using Travis CI. Read more [here](https://$PROD_DOMAIN/deployment)." >> dist/README.md
 deploy:
   provider: pages
   target-branch: master
