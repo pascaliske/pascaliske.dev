@@ -3,7 +3,13 @@
     <cmp-section id="content">
         <cmp-copy>
             <markdown ngPreserveWhitespaces>
-                <!-- TODO: write deployment process -->
+                [![Build Status](https://travis-ci.com/pascaliske/pascaliske.github.io.svg?branch=production)](https://travis-ci.com/pascaliske/pascaliske.github.io)
+
+                ##### Steps
+
+                1. Pushing the latest changes to [production](https://github.com/pascaliske/pascaliske.github.io/tree/production).
+                2. Travis CI job triggered by this push builds the Angular project.
+                3. Travis CI deploys the final built to GitHub Pages using a custom domain.
             </markdown>
         </cmp-copy>
     </cmp-section>
