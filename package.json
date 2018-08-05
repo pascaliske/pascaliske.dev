@@ -46,7 +46,6 @@
     "intersection-observer": "^0.5.0",
     "lodash-es": "^4.17.10",
     "modularscale-sass": "^3.0.5",
-    "ngrx-store-freeze": "^0.2.3",
     "ngx-markdown": "^1.6.0",
     "normalize-scss": "^7.0.1",
     "raven-js": "^3.25.2",
