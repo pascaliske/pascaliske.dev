@@ -10,8 +10,8 @@ cache:
 script:
   - yarn lint
   - yarn build --progress false --base-href https://$PROD_DOMAIN
-  - echo "# [$PROD_DOMAIN](https://$PROD_DOMAIN)" >> dist/README.md
-  - echo "[![Build Status](https://travis-ci.com/pascaliske/pascaliske.github.io.svg?branch=production)](https://travis-ci.com/pascaliske/pascaliske.github.io)" >> dist/README.md
+  - echo "# [$PROD_DOMAIN](https://$PROD_DOMAIN)\n" >> dist/README.md
+  - echo "[![Build Status](https://travis-ci.com/pascaliske/pascaliske.github.io.svg?branch=production)](https://travis-ci.com/pascaliske/pascaliske.github.io)\n" >> dist/README.md
   - echo "This site was build automatically using Travis CI. Read more [here](https://$PROD_DOMAIN/deployment)." >> dist/README.md
 deploy:
   provider: pages
