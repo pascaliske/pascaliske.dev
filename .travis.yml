@@ -10,8 +10,8 @@ cache:
 script:
   - yarn lint
   - yarn build --progress false --base-href https://pascaliske.github.io/
-  - echo "# [pascal-iske.de](https://pascal-iske.de)" >> README.md
-  - echo "This site was build automatically using Travis CI. Read more [here](https://pascal-iske.de/deployment)." >> README.md
+  - echo "# [pascal-iske.de](https://pascal-iske.de)" >> dist/README.md
+  - echo "This site was build automatically using Travis CI. Read more [here](https://pascal-iske.de/deployment)." >> dist/README.md
 deploy:
   provider: pages
   target-branch: master
