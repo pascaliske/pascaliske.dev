@@ -4,6 +4,7 @@ node_js:
 branches:
   only:
   - production
+  - /^greenkeeper/.*$/
 cache:
   directories:
     - node_modules
