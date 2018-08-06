@@ -1,6 +1,6 @@
 {
   "name": "pascal-iske",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "scripts": {
     "serve": "ng serve",
