@@ -1,7 +1,0 @@
-@import '../../../../scss/shared';
-
-$component: 'cmp-deployment-page';
-
-@include cmp-base($component) {
-    @include cmp-page();
-}
