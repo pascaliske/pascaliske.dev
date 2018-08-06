@@ -8,10 +8,16 @@
     "test": "ng test",
     "lint": "ng lint pascal-iske --fix",
     "e2e": "ng e2e",
+    "check": "snyk test",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}",
     "docs": "compodoc --tsconfig tsconfig.json --output docs/ --name \"Pascal Iske\" --theme material --port 4201"
   },
   "private": true,
+  "greenkeeper": {
+    "ignore": [
+      "typescript"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "6.1.1",
     "@angular/common": "6.1.1",
@@ -66,7 +72,7 @@
     "@types/lodash-es": "^4.17.1",
     "@types/node": "~10.5.6",
     "@types/raven-js": "^3.10.0",
-    "codelyzer": "^4.4.2",
+    "codelyzer": "^4.4.3",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.5",
@@ -77,9 +83,10 @@
     "prettier": "^1.14.0",
     "protractor": "~5.4.0",
     "rxjs-tslint-rules": "^4.7.2",
+    "snyk": "^1.90.0",
     "ts-node": "~7.0.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
-    "typescript": "~3.0.1"
+    "typescript": "~2.9.2"
   }
 }
