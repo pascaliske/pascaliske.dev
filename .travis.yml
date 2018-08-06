@@ -1,24 +1,17 @@
 language: node_js
 node_js:
   - '9'
-branches:
-  only:
-  - production
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
   - yarn lint
   - yarn build --progress false --base-href https://$PROD_DOMAIN
-  - echo "# [$PROD_DOMAIN](https://$PROD_DOMAIN)\n" >> dist/README.md
-  - echo "[![Build Status](https://travis-ci.com/pascaliske/pascaliske.github.io.svg?branch=production)](https://travis-ci.com/pascaliske/pascaliske.github.io)\n" >> dist/README.md
-  - echo "This site was build automatically using Travis CI. Read more [here](https://$PROD_DOMAIN/deployment)." >> dist/README.md
 deploy:
-  provider: pages
-  target-branch: master
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  fqdn: $PROD_DOMAIN
-  local_dir: dist
+  provider: firebase
+  token:
+    secure: xxPFmbu41iRKXilPyWD86CjtoBMk8bXRGlxNCtNNTIGSAqH2L39lgACcG2tweebnuVdKv0q3hpkjONuxPtIFzRJSc9OE1sszv3XR3MzVzWJhW0GiD+u1nqPVl1ZBbG+EcLumgWNH2CPRjb4xff9nDp/YK4GoVnnfVE+mQueAfY1cNgMdjnL+RGJazrnwhAwmMJe771B4DRtc4UknCmsxHWATdiAlcB34qifxXx51AV0KfnIB5dp6I8+Tb+nsjJ8iFM1ST7y1aNWBxJcZR8qrAl1AsO/gtytqyRqdN0jChfVw2ISiwxGCj7w+LrTsec7mT9gnfNAmgyHwTkSE0r7HRn/NAm29ZsGB31xSdyZQt8q3uhCAg4uP0W5NVlqzUOu2hJ3p7NuFeMp3heGe8XKbSx8fpl4nAdRRzVx4HoN3pOvS0E6WgDtiOeie593tx/6g7RLI4IBgYAMyCwzynsi9T1E5VkOzCgjX1E5X99e6Vy5qoqob+O9xWsSKEA0p7xnW6e8crABJDSd8zhkrKok5y07ly9RY59Rs53iB2011FdqV69zkGbOvss5qMK4Huf8v5S1TvyJCe6wAg+E/iOfsr2viX4XZPc4nE+R2CXwDIhmgUFFzKE3c4B0oxHE385ixN1nwSkHFxSE6AtYG8QIsrLiV67fsf9eOoeQUiCTG4QU=
   on:
-    branch: production
+    tags: true
+    branch: master
+    node: 9
