@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { TitleService } from '../../../shared/title/title.service'
+import { ContactPageService } from './contact-page.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
 import { Page } from '../page'
 
@@ -33,6 +34,7 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         public route: ActivatedRoute,
         public translate: TranslateService,
         public titleService: TitleService,
+        private contactPageService: ContactPageService,
     ) {
         super(route, translate, titleService)
     }
@@ -69,6 +71,8 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
 
     public submit(): void {
         console.log('==> submit form', this.contactForm.value)
+
+        this.contactPageService.send(this.contactForm.value)
         this.reset()
     }
 
