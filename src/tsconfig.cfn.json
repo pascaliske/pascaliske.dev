@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist/cfn",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "typeRoots": []
+  },
+  "include": [
+    "cfn/index.ts"
+  ]
+}

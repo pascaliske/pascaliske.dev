@@ -1,0 +1,38 @@
+import * as functions from 'firebase-functions'
+import { createTransport } from 'nodemailer'
+
+// configure mail transport.
+const transport = createTransport({
+    service: 'gmail',
+    auth: {
+        user: functions.config().gmail.email,
+        pass: functions.config().gmail.password,
+    },
+})
+
+/**
+ * Sends an email with the given data.
+ *
+ * @param {Request} req
+ * @param {Response} res
+ * @returns {void}
+ */
+export const sendContactRequest = functions.https.onRequest((req, res) => {
+    const { name, email, subject, message } = req.body
+    const mail = {
+        to: 'info@pascal-iske.de',
+        from: `"${name}" <${email}>`,
+        replyTo: `"${name}" <${email}>`,
+        subject: subject,
+        html: message,
+    }
+
+    transport
+        .sendMail(mail)
+        .then(() => {
+            res.status(201).send()
+        })
+        .catch(error => {
+            res.status(500).send(error)
+        })
+})
