@@ -10,6 +10,7 @@ script:
   - yarn run lint
   - yarn run check
   - yarn run build --progress false --base-href https://$PROD_DOMAIN
+  - yarn run build-cfns
 after_script: greenkeeper-lockfile-upload
 deploy:
   provider: firebase
