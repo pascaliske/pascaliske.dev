@@ -1,5 +1,5 @@
 import { Injectable, ErrorHandler } from '@angular/core'
-import Raven from 'raven-js'
+import * as Raven from 'raven-js'
 import { environment } from '../environments/environment'
 
 // configures sentry's raven library
