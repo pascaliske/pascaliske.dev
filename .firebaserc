@@ -1,6 +1,5 @@
 {
   "projects": {
-    "production": "pascal-iske-de",
-    "default": "pascal-iske-de"
+    "production": "pascal-iske-de"
   }
 }
