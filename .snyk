@@ -1,4 +1,24 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.12.0
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:chownr:20180731':
+    - node-pre-gyp > tar > chownr:
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+    - '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+    - firebase-admin > @google-cloud/firestore > google-gax > grpc > node-pre-gyp > tar > chownr:
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+    - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
 patch: {}
