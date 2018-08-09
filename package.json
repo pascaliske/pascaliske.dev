@@ -49,7 +49,7 @@
     "core-decorators": "^0.20.0",
     "core-js": "^2.5.7",
     "decko": "^1.2.0",
-    "firebase-admin": "^5.13.1",
+    "firebase-admin": "^6.0.0",
     "flatpickr": "^4.5.1",
     "font-awesome": "^4.7.0",
     "fuzzysearch": "^1.0.3",
