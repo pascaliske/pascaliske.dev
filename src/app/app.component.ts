@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './shared/title/title.service'
+import { TrackingService } from './shared/tracking/tracking.service'
 
 /**
  * AppComponent
@@ -36,6 +37,7 @@ export class AppComponent implements OnDestroy {
         private router: Router,
         private translateService: TranslateService,
         private titleService: TitleService,
+        private trackingService: TrackingService,
     ) {
         this.translateService.setDefaultLang('en')
         this.titleService.divider = '//'
@@ -45,8 +47,9 @@ export class AppComponent implements OnDestroy {
             .subscribe((event: NavigationEnd) => {
                 setTimeout(() => this.show(), 400)
 
-                ga('set', 'page', event.urlAfterRedirects)
-                ga('send', 'pageview')
+                this.trackingService.track('pageview', {
+                    page: event.urlAfterRedirects,
+                })
             })
     }
 

@@ -11,6 +11,7 @@ import { ViewportService } from './viewport/viewport.service'
 import { LanguageService } from './language/language.service'
 import { NotificationService } from './notification/notification.service'
 import { NetworkService } from './network/network.service'
+import { TrackingService } from './tracking/tracking.service'
 
 @NgModule({
     imports: [CommonModule, TranslateModule, MarkdownModule],
@@ -24,6 +25,7 @@ import { NetworkService } from './network/network.service'
         LanguageService,
         NotificationService,
         NetworkService,
+        TrackingService,
     ],
     exports: [
         CommonModule,
