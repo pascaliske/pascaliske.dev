@@ -1,5 +1,11 @@
 import * as functions from 'firebase-functions'
+import * as cors from 'cors'
 import { createTransport } from 'nodemailer'
+
+// configure cors
+const security = cors({
+    origin: ['https://pascal-iske.de'],
+})
 
 // configure mail transport.
 const transport = createTransport({
@@ -18,21 +24,23 @@ const transport = createTransport({
  * @returns {void}
  */
 export const sendContactRequest = functions.https.onRequest((req, res) => {
-    const { name, email, subject, message } = req.body
-    const mail = {
-        to: 'info@pascal-iske.de',
-        from: `"${name}" <${email}>`,
-        replyTo: `"${name}" <${email}>`,
-        subject: subject,
-        html: message,
-    }
+    security(req, res, () => {
+        const { name, email, subject, message } = req.body
+        const mail = {
+            to: 'info@pascal-iske.de',
+            from: `"${name}" <${email}>`,
+            replyTo: `"${name}" <${email}>`,
+            subject: subject,
+            html: message,
+        }
 
-    transport
-        .sendMail(mail)
-        .then(() => {
-            res.status(201).send()
-        })
-        .catch(error => {
-            res.status(500).send(error)
-        })
+        transport
+            .sendMail(mail)
+            .then(() => {
+                res.status(201).send()
+            })
+            .catch(error => {
+                res.status(500).send(error)
+            })
+    })
 })
