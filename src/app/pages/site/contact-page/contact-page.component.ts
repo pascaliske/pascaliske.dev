@@ -70,8 +70,6 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
     }
 
     public submit(): void {
-        console.log('==> submit form', this.contactForm.value)
-
         this.contactPageService.send(this.contactForm.value)
         this.reset()
     }
