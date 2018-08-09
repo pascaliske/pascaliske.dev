@@ -1,17 +1,17 @@
 import { Injectable, ErrorHandler } from '@angular/core'
-import { config, captureException } from 'raven-js'
+import { init, captureException } from '@sentry/browser'
 import { environment } from '../environments/environment'
 
 // configures sentry's raven library
 if (environment.production) {
-    config(environment.sentry.dsn, environment.sentry.options).install()
+    init(environment.sentry)
 }
 
 /**
  * Injectable error handler for sentry.
  */
 @Injectable()
-export class RavenErrorHandler implements ErrorHandler {
+export class SentryErrorHandler implements ErrorHandler {
     /**
      * Handles any error.
      *
