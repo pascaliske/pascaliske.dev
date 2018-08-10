@@ -10,6 +10,7 @@ import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
+import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
 import { reducers } from '../store'
 
@@ -57,6 +58,29 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             markedOptions: {
                 provide: MarkedOptions,
                 useFactory: MarkdownOptionsFactory,
+            },
+        }),
+        NgcCookieConsentModule.forRoot({
+            type: 'opt-in',
+            theme: 'edgeless',
+            position: 'bottom',
+            revokeBtn: '<div class="cc-revoke cc-policy {{classes}}">Cookie Policy</div>',
+            animateRevokable: false,
+            cookie: {
+                name: 'pascal-iske.de',
+                domain: environment.cookieDomain,
+            },
+            palette: {
+                popup: {
+                    background: '#2d333d',
+                    text: '#ffffff',
+                    link: '#ffffff',
+                },
+                button: {
+                    background: '#eaeaea',
+                    text: '#2d333d',
+                    border: 'transparent',
+                },
             },
         }),
     ],
