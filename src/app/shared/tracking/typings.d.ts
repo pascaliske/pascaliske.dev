@@ -1,5 +1,16 @@
-export type TrackingEvent = 'pageview'
+export type PageViewEvent = 'pageview'
 
-export interface TrackingData {
-    [key: string]: any
+export interface PageViewEventData {
+    page: string
+    title?: string
+    location?: string
+}
+
+export type CustomEvent = 'event'
+
+export interface CustomEventData {
+    eventCategory: string
+    eventAction: string
+    eventLabel?: string
+    eventValue?: string
 }
