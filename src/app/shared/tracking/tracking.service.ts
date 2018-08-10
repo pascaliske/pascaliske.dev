@@ -37,6 +37,6 @@ export class TrackingService {
         }
 
         // send event
-        ga('send', event)
+        ga('send', { ...data, hitType: event })
     }
 }
