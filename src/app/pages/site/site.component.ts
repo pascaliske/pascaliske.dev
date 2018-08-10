@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Router, ActivatedRoute, NavigationEnd, ParamMap } from '@angular/router'
 import { filter, switchMap, takeWhile } from 'rxjs/operators'
 import { LanguageService, Language } from '../../shared/language/language.service'
@@ -14,7 +14,7 @@ import { NavigationItem } from '../../components/navigation/navigation.component
     templateUrl: './site.component.html',
     styleUrls: ['./site.component.scss'],
 })
-export class SiteComponent implements OnDestroy {
+export class SiteComponent implements OnInit, OnDestroy {
     public pages: Array<NavigationItem> = [
         {
             route: 'home',
@@ -60,14 +60,15 @@ export class SiteComponent implements OnDestroy {
      *
      * @param {Router} router
      * @param {ActivatedRoute} route
-     * @param {TranslateService} translateService
-     * @returns {SiteComponent}
+     * @param {LanguageService} languageService
      */
     public constructor(
         private router: Router,
         private route: ActivatedRoute,
         private languageService: LanguageService,
-    ) {
+    ) {}
+
+    public ngOnInit(): void {
         this.router.events
             .pipe(
                 takeWhile(() => this.alive),

@@ -92,3 +92,17 @@ textarea {
         border-bottom: 1px $color-primary solid;
     }
 }
+
+.cc-policy.cc-revoke.cc-bottom {
+    height: 39px;
+    line-height: 27px;
+    right: 0;
+    left: initial;
+    border-radius: 0;
+    background-color: $color-white1;
+    color: rgba($color-primary, .3);
+}
+
+.cc-banner.cc-theme-edgeless .cc-btn {
+    outline: 0;
+}

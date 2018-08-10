@@ -52,5 +52,12 @@
   "CONTACT_PAGE_FORM_LABEL_RESET": "Reset",
   "CONTACT_PAGE_FORM_LABEL_SUBMIT": "Submit",
   "CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED": "This field is required!",
-  "CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL": "Please enter a valid email address!"
+  "CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL": "Please enter a valid email address!",
+  "COOKIE_CONSENT_REVOKE_BUTTON": "Cookie Settings",
+  "COOKIE_CONSENT_BANNER_HEADER": "Cookies",
+  "COOKIE_CONSENT_BANNER_MESSAGE": "This website uses cookies.",
+  "COOKIE_CONSENT_BANNER_DISMISS": "Dismiss",
+  "COOKIE_CONSENT_BANNER_ALLOW": "Allow",
+  "COOKIE_CONSENT_BANNER_DENY": "Deny",
+  "COOKIE_CONSENT_BANNER_LINK": "https://pascal-iske.de/en/privacy"
 }

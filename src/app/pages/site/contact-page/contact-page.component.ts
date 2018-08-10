@@ -3,8 +3,9 @@ import { ActivatedRoute } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { TitleService } from '../../../shared/title/title.service'
-import { ContactPageService } from './contact-page.service'
+import { TrackingService } from '../../../shared/tracking/tracking.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
+import { ContactPageService } from './contact-page.service'
 import { Page } from '../page'
 
 @Component({
@@ -35,6 +36,7 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         public translate: TranslateService,
         public titleService: TitleService,
         private contactPageService: ContactPageService,
+        private trackingService: TrackingService,
     ) {
         super(route, translate, titleService)
     }
@@ -71,6 +73,10 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
 
     public submit(): void {
         this.contactPageService.send(this.contactForm.value)
+        this.trackingService.track('event', {
+            eventCategory: 'contact-form',
+            eventAction: 'submit',
+        })
         this.reset()
     }
 
