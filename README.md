@@ -8,9 +8,9 @@
 | :---------------: | :---------------: | :-------------: | :-------------------: | :-------------------: | :----------------: | :---------------: |
 | Angular Framework |    TypeScript     | RxJS Extensions | ngrx State Management |  Prettier Formatting  |      SusyGrid      |      Lodash       |
 
-| ![Firebase Hosting][firebase] | ![Travis CI][travis] | ![Snyk][snyk] | ![Sentry][sentry] |
-| :---------------------------: | :------------------: | :-----------: | :---------------: |
-|       Firebase Hosting        |      Travis CI       |     Snyk      |      Sentry       |
+| ![Firebase Hosting][firebase] | ![Travis CI][travis] | ![Snyk][snyk] | ![Sentry][sentry] | ![Google Analytics][analytics] |
+| :---------------------------: | :------------------: | :-----------: | :---------------: | :----------------------------: |
+|       Firebase Hosting        |      Travis CI       |     Snyk      |      Sentry       |        Google Analytics        |
 
 and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json)...
 
@@ -27,3 +27,4 @@ and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json
 [travis]: https://travis-ci.com/images/logos/TravisCI-Mascot-1.png
 [snyk]: https://github.com/snyk/press-kit/raw/master/Logo/Symbol/Transparent%20background/symbol%402x.png
 [sentry]: https://sentry-brand.storage.googleapis.com/sentry-glyph-black.png
+[analytics]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
