@@ -69,6 +69,10 @@ export class SiteComponent implements OnInit, OnDestroy {
     ) {}
 
     public ngOnInit(): void {
+        this.route.paramMap.pipe(takeWhile(() => this.alive)).subscribe((params: ParamMap) => {
+            this.languageService.language = params.get('language') as Language
+        })
+
         this.router.events
             .pipe(
                 takeWhile(() => this.alive),
