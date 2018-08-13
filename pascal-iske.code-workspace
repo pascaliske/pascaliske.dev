@@ -17,10 +17,17 @@
         }
     ],
     "settings": {
-        "typescript.tsdk": "pascal-iske/node_modules/typescript/lib",
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/bower_components": true,
+            "**/docs": true,
+            "**/dist": true,
+            "**/e2e": true
+        },
         "tslint.autoFixOnSave": true,
+        "typescript.tsdk": "pascal-iske/node_modules/typescript/lib",
         "[json]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
