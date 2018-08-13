@@ -1,4 +1,4 @@
-import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
+import { NgModule, ModuleWithProviders, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { TranslateModule, TranslateService } from '@ngx-translate/core'
 import { MarkdownModule } from 'ngx-markdown'
@@ -36,7 +36,7 @@ import { TrackingService } from './tracking/tracking.service'
     ],
 })
 export class SharedModule {
-    public static registerDynamicComponents(components: Array<any>) {
+    public static registerDynamicComponents(components: Array<any>): ModuleWithProviders {
         return {
             ngModule: SharedModule,
             providers: [

@@ -1,23 +1,33 @@
 import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver } from '@angular/core'
-import camelCase from 'lodash-es/camelCase'
-import upperFirst from 'lodash-es/upperFirst'
+import { camelCase, upperFirst } from 'lodash-es'
 import { DynamicComponentsDirective } from './dynamic-components.directive'
 import { ComponentManifest, ComponentFactory, ComponentRef } from './typings'
 
 @Component({
     selector: 'cmp-dynamic-components',
-    templateUrl: './dynamic-components.component.html',
-    styleUrls: ['./dynamic-components.component.scss'],
+    template: '<ng-template dynamic-components-host></ng-template>',
 })
 export class DynamicComponentsComponent implements OnInit {
     @Input() public components: Array<ComponentManifest> = []
 
     @ViewChild(DynamicComponentsDirective) public hostRef: DynamicComponentsDirective
 
+    /**
+     * Initializes the component
+     *
+     * @param {ComponentFactoryResolver} componentFactoryResolver
+     */
     public constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
+    /**
+     * Initially resolves the given components.
+     *
+     * @returns {void}
+     */
     public ngOnInit(): void {
-        this.components.reverse().forEach(item => this.resolveComponent(item))
+        this.components.reverse().forEach(component => {
+            this.resolveComponent(component)
+        })
     }
 
     /**
@@ -27,7 +37,7 @@ export class DynamicComponentsComponent implements OnInit {
      * @returns {ComponentRef}
      */
     private resolveComponent(manifest: ComponentManifest): ComponentRef {
-        const id = this.resolveComponentName(manifest.componentName)
+        const id = this.formatComponentName(manifest.componentName)
         const component = this.resolveComponentFactory(id)
 
         if (!component) {
@@ -63,12 +73,12 @@ export class DynamicComponentsComponent implements OnInit {
     }
 
     /**
-     * Resolves a component name from the manifest.
+     * Formats a component name from the manifest.
      *
      * @param {string} name
      * @returns {string}
      */
-    private resolveComponentName(name: string): string {
+    private formatComponentName(name: string): string {
         if (!name.includes('-')) {
             return null
         }
