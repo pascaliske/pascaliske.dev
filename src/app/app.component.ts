@@ -6,6 +6,7 @@ import { filter, takeWhile, switchMap } from 'rxjs/operators'
 import { LanguageService } from './shared/language/language.service'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
+import { NavigationItem } from './components/navigation/navigation.component'
 
 /**
  * AppComponent
@@ -24,6 +25,44 @@ export class AppComponent implements OnInit, OnDestroy {
      * @param {boolean} activated
      */
     public activated: boolean = false
+
+    public pages: Array<NavigationItem> = [
+        {
+            route: 'home',
+            label: 'NAVIGATION_HOME',
+            options: {
+                decorated: true,
+            },
+        },
+        {
+            route: 'about',
+            label: 'NAVIGATION_ABOUT',
+            options: {
+                decorated: true,
+            },
+        },
+        // {
+        //     route: 'references',
+        //     label: 'NAVIGATION_REFERENCES',
+        //     options: {
+        //         decorated: true,
+        //     },
+        // },
+        // {
+        //     route: 'blog',
+        //     label: 'NAVIGATION_BLOG',
+        //     options: {
+        //         decorated: true,
+        //     },
+        // },
+        {
+            route: 'contact',
+            label: 'NAVIGATION_CONTACT',
+            options: {
+                decorated: true,
+            },
+        },
+    ]
 
     private alive: boolean = true
 

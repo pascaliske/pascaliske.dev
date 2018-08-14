@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-blog-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
+}

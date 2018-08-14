@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-references-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
+}

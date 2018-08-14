@@ -6,7 +6,10 @@ import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { SentryErrorHandler } from './sentry'
 import { AppRoutingModule } from './app-routing.module'
 import { CoreModule } from './core/core.module'
-import { SiteModule } from './pages/site/site.module'
+import { HeaderModule } from './components/header/header.module'
+import { NavigationModule } from './components/navigation/navigation.module'
+import { FooterModule } from './components/footer/footer.module'
+import { PagesModule } from './pages/pages.module'
 import { AppComponent } from './app.component'
 
 export function TranslationLoaderFactory(http: HttpClient) {
@@ -27,7 +30,10 @@ export function TranslationLoaderFactory(http: HttpClient) {
         NotificationsModule.forRoot(),
         AppRoutingModule,
         CoreModule,
-        SiteModule,
+        HeaderModule,
+        NavigationModule,
+        FooterModule,
+        PagesModule,
     ],
     providers: [
         {

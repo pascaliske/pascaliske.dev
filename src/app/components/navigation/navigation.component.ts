@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
 import { takeWhile } from 'rxjs/operators'
+import { LanguageService } from '../../shared/language/language.service'
 import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
 
 export interface NavigationItem {
@@ -17,7 +18,8 @@ export interface NavigationItem {
     styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit, OnDestroy {
-    @Input() public items: Array<NavigationItem> = []
+    @Input()
+    public items: Array<NavigationItem> = []
 
     public mobile: boolean = false
 
@@ -25,7 +27,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
     private alive: boolean = true
 
-    public constructor(private breakpointService: BreakpointService) {
+    public constructor(
+        public languageService: LanguageService,
+        private breakpointService: BreakpointService,
+    ) {
         this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
     }
 
