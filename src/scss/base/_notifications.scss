@@ -1,0 +1,49 @@
+.cmp-notification {
+    width: 100vw;
+    min-height: 60px;
+    position: fixed;
+    bottom: 0;
+    padding: 15px $grid-mobile-padding;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    background-color: hsl(218, 10%, 95%);
+
+    @include use-breakpoint(mini-tablet) {
+        padding: 15px $grid-desktop-padding;
+    }
+
+    &__type {
+        margin-right: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-right: 1px rgb(255, 0, 0) solid;
+        opacity: .4;
+    }
+
+    &__message {
+        height: 100%;
+        flex: 1;
+    }
+
+    // &--info {
+
+    // }
+
+    // &--success {
+
+    // }
+
+    // &--warning {
+
+    // }
+
+    // &--error {
+
+    // }
+
+    &--clickable {
+        cursor: pointer;
+    }
+}

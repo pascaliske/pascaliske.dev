@@ -40,10 +40,10 @@ export class AppComponent implements OnInit, OnDestroy {
     public constructor(
         private router: Router,
         private translateService: TranslateService,
+        private cookieConsentService: NgcCookieConsentService,
         private languageService: LanguageService,
         private titleService: TitleService,
         private trackingService: TrackingService,
-        private cookieConsentService: NgcCookieConsentService,
     ) {}
 
     public ngOnInit(): void {

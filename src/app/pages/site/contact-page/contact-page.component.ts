@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { TranslateService } from '@ngx-translate/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
+import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../../shared/title/title.service'
 import { TrackingService } from '../../../shared/tracking/tracking.service'
 import { FValidationConfig } from '../../../components/form-elements/typings'
@@ -72,6 +72,10 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
     }
 
     public submit(): void {
+        if (!this.contactForm.valid) {
+            return
+        }
+
         this.contactPageService.send(this.contactForm.value)
         this.trackingService.track('event', {
             eventCategory: 'contact-form',

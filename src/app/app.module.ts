@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { SentryErrorHandler } from './sentry'
 import { AppRoutingModule } from './app-routing.module'
 import { CoreModule } from './core/core.module'
@@ -23,6 +24,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
                 deps: [HttpClient],
             },
         }),
+        NotificationsModule.forRoot(),
         AppRoutingModule,
         CoreModule,
         SiteModule,
