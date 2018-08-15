@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "firebase": "firebase",
-    "serve": "ng serve",
+    "start": "ng serve",
     "build": "ng build --prod --aot --build-optimizer",
     "build-cfns": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "test": "ng test",
