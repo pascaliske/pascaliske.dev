@@ -6,12 +6,12 @@
   "scripts": {
     "ng": "ng",
     "firebase": "firebase",
-    "serve": "ng serve",
-    "build": "ng build --prod --aot --build-optimizer",
+    "serve": "ngw serve",
+    "build": "ngw build --prod --aot --build-optimizer",
     "build-cfns": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
-    "test": "ng test",
-    "lint": "ng lint pascal-iske --fix",
-    "e2e": "ng e2e",
+    "test": "ngw test",
+    "lint": "ngw lint pascal-iske --fix",
+    "e2e": "ngw e2e",
     "check": "snyk test",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}",
     "docs": "compodoc --tsconfig src/tsconfig.app.json --output docs/ --name \"Pascal Iske\" --theme material --hideGenerator --port 4201"
@@ -86,6 +86,8 @@
     "@types/node": "~10.7.0",
     "@types/nodemailer": "^4.6.2",
     "@types/raven-js": "^3.10.0",
+    "@types/webpack": "^4.4.9",
+    "@types/webpack-bundle-analyzer": "^2.9.2",
     "codelyzer": "^4.4.3",
     "firebase-tools": "^4.0.3",
     "jasmine-core": "~3.2.0",
@@ -95,6 +97,7 @@
     "karma-coverage-istanbul-reporter": "^2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^1.2.0",
+    "ngw": "^6.0.8",
     "prettier": "^1.14.0",
     "protractor": "~5.4.0",
     "rxjs-tslint-rules": "^4.7.2",
@@ -102,6 +105,7 @@
     "ts-node": "~7.0.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
-    "typescript": "~2.9.2"
+    "typescript": "~2.9.2",
+    "webpack-bundle-analyzer": "^2.13.1"
   }
 }
