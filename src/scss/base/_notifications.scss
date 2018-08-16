@@ -1,49 +1,39 @@
 .cmp-notification {
-    width: 100vw;
-    min-height: 60px;
-    position: fixed;
-    bottom: 0;
     padding: 15px $grid-mobile-padding;
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    background-color: hsl(218, 10%, 95%);
+    border-top: 1px rgba($color-white2, .2) solid;
 
     @include use-breakpoint(mini-tablet) {
         padding: 15px $grid-desktop-padding;
     }
 
-    &__type {
-        margin-right: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-right: 1px rgb(255, 0, 0) solid;
-        opacity: .4;
+    &__type,
+    &__message,
+    &__icon {
+        color: $color-primary;
     }
 
     &__message {
-        height: 100%;
-        flex: 1;
+        border-left: 1px $color-grey2 solid;
     }
 
-    // &--info {
+    &__icon::before,
+    &__icon::after {
+        background-color: $color-primary;
+    }
 
-    // }
+    &--info {
+        background-color: #03a9f4;
+    }
 
-    // &--success {
+    &--success {
+        background-color: $color-green;
+    }
 
-    // }
+    &--warning {
+        background-color: #ff9800;
+    }
 
-    // &--warning {
-
-    // }
-
-    // &--error {
-
-    // }
-
-    &--clickable {
-        cursor: pointer;
+    &--error {
+        background-color: #f44336;
     }
 }
