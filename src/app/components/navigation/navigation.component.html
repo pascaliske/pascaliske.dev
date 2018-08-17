@@ -1,4 +1,4 @@
-<div class="cmp-navigation" [ngClass]="{'cmp-navigation--open': mobile && mobileOpen}">
+<div [class]="classes">
     <cmp-navigation-button [(state)]="mobileOpen" *ngIf="mobile"></cmp-navigation-button>
     <div class="cmp-navigation__wrapper" *ngIf="(languageService.language$ | async) as lang">
         <ul class="cmp-navigation__list">
@@ -6,6 +6,9 @@
                 <a class="cmp-navigation__link" [routerLink]="[lang, item.route]" (click)="mobileOpen = false">
                     <span class="cmp-navigation__text" [ngClass]="{'cmp-navigation__text--decorated': item.options?.decorated}">{{item.label|translate}}</span>
                 </a>
+            </li>
+            <li class="cmp-navigation__item cmp-navigation__languages" *ngIf="mobile">
+                <cmp-language-switch></cmp-language-switch>
             </li>
         </ul>
     </div>
