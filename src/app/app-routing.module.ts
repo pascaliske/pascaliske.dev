@@ -7,12 +7,13 @@ import { AboutPageComponent } from './pages/about-page/about-page.component'
 import { ContactPageComponent } from './pages/contact-page/contact-page.component'
 import { ImprintPageComponent } from './pages/imprint-page/imprint-page.component'
 import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component'
+import { preselect } from './language'
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'en',
+        redirectTo: preselect(['en', 'de']),
     },
     {
         path: ':language',
