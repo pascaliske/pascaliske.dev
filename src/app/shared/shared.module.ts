@@ -1,6 +1,7 @@
-import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
+import { NgModule, ModuleWithProviders, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { TranslateModule, TranslateService } from '@ngx-translate/core'
+import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { MarkdownModule } from 'ngx-markdown'
 import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component'
 import { DynamicComponentsDirective } from './dynamic-components/dynamic-components.directive'
@@ -9,11 +10,11 @@ import { TitleService } from './title/title.service'
 import { ScrollService } from './scroll/scroll.service'
 import { ViewportService } from './viewport/viewport.service'
 import { LanguageService } from './language/language.service'
-import { NotificationService } from './notification/notification.service'
 import { NetworkService } from './network/network.service'
+import { TrackingService } from './tracking/tracking.service'
 
 @NgModule({
-    imports: [CommonModule, TranslateModule, MarkdownModule],
+    imports: [CommonModule, TranslateModule, NotificationsModule, MarkdownModule],
     declarations: [DynamicComponentsComponent, DynamicComponentsDirective],
     providers: [
         TranslateService,
@@ -22,19 +23,20 @@ import { NetworkService } from './network/network.service'
         ScrollService,
         ViewportService,
         LanguageService,
-        NotificationService,
         NetworkService,
+        TrackingService,
     ],
     exports: [
         CommonModule,
         TranslateModule,
+        NotificationsModule,
         MarkdownModule,
         DynamicComponentsComponent,
         DynamicComponentsDirective,
     ],
 })
 export class SharedModule {
-    public static registerDynamicComponents(components: Array<any>) {
+    public static registerDynamicComponents(components: Array<any>): ModuleWithProviders {
         return {
             ngModule: SharedModule,
             providers: [

@@ -1,7 +1,0 @@
-@import '../../../../scss/shared';
-
-$component: 'cmp-imprint-page';
-
-@include cmp-base($component) {
-    @include cmp-page();
-}

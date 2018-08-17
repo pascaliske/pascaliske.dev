@@ -2,6 +2,20 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "defaultProject": "pascal-iske",
+  "cli": {
+    "packageManager": "yarn",
+    "defaultCollection": "@ngrx/schematics"
+  },
+  "schematics": {
+    "@ngrx/schematics:component": {
+      "prefix": "cmp",
+      "styleext": "scss"
+    },
+    "@ngrx/schematics:directive": {
+      "prefix": ""
+    }
+  },
   "projects": {
     "pascal-iske": {
       "root": "",
@@ -148,20 +162,6 @@
           }
         }
       }
-    }
-  },
-  "cli": {
-    "packageManager": "yarn",
-    "defaultCollection": "@ngrx/schematics"
-  },
-  "defaultProject": "pascal-iske",
-  "schematics": {
-    "@ngrx/schematics:component": {
-      "prefix": "cmp",
-      "styleext": "scss"
-    },
-    "@ngrx/schematics:directive": {
-      "prefix": ""
     }
   }
 }

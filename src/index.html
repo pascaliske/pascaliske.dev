@@ -12,5 +12,40 @@
 </head>
 <body>
     <cmp-root></cmp-root>
+
+    <script type="application/javascript">
+        const property = 'UA-77052352-1'
+        const disable = 'ga-disable-' + property
+
+        if (document.cookie.indexOf(disable + '=true') > -1) {
+            window[disable] = true
+        }
+
+        function gaOptout() {
+            document.cookie = disable + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
+            window[disable] = true
+            alert('Das Tracking ist jetzt deaktiviert')
+        }
+
+        function init(window, document) {
+            window.GoogleAnalyticsObject = 'ga'
+            window.ga = window.ga || function() {
+                (window.ga.q = window.ga.q || []).push(arguments)
+            }
+
+            window.ga.l = 1 * new Date()
+
+            const element = document.createElement('script')
+            element.async = 1
+            element.src = 'https://www.google-analytics.com/analytics.js'
+
+            const reference = document.getElementsByTagName('script')[0]
+            reference.parentNode.insertBefore(element, reference)
+        }
+
+        init(window, document)
+        ga('create', property, 'auto')
+        ga('set', 'anonymizeIp', true)
+    </script>
 </body>
 </html>

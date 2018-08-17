@@ -1,0 +1,7 @@
+@import '../../../scss/shared';
+
+$component: 'cmp-privacy-page';
+
+@include cmp-base($component) {
+    @include cmp-page();
+}
