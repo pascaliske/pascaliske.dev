@@ -69,7 +69,6 @@ $component: 'cmp-navigation';
         }
 
         @include use-breakpoint(mini-tablet) {
-            flex: 1;
             height: 50px;
             padding: 0 10px 5px;
             background: $color-white1;
@@ -100,6 +99,13 @@ $component: 'cmp-navigation';
                 flex: initial;
             }
         }
+    }
+
+    &__languages {
+        max-height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: rgba($color-white1, 0.8);
     }
 
     @for $i from 1 through 10 {
