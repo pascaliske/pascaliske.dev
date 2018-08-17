@@ -86,7 +86,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             },
         }),
     ],
-    exports: [CommonModule, NgProgressModule, MarkdownModule],
+    exports: [CommonModule, NotificationsModule, NgProgressModule, MarkdownModule],
     providers: [],
 })
 export class CoreModule {}
