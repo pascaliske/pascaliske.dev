@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
 import { modifiers } from '@pascaliske/html-helpers'
 import { takeWhile } from 'rxjs/operators'
-import { LanguageService } from '../../shared/language/language.service'
 import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
 
 /**
@@ -54,13 +53,9 @@ export class NavigationComponent implements OnInit, OnDestroy {
     /**
      * Initializes the component.
      *
-     * @param {LanguageService} languageService
      * @param {BreakpointService} breakpointService
      */
-    public constructor(
-        public languageService: LanguageService,
-        private breakpointService: BreakpointService,
-    ) {}
+    public constructor(private breakpointService: BreakpointService) {}
 
     /**
      * Setup logic.

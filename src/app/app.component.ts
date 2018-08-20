@@ -3,10 +3,11 @@ import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { filter, takeWhile, switchMap } from 'rxjs/operators'
-import { LanguageService } from './shared/language/language.service'
+import { LanguageService, Language } from './shared/language/language.service'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
 import { NavigationItem } from './components/navigation/navigation.component'
+import { fetchLanguage } from './language'
 
 /**
  * AppComponent
@@ -90,9 +91,13 @@ export class AppComponent implements OnInit, OnDestroy {
         this.titleService.divider = '//'
         this.titleService.suffix = 'Pascal Iske'
         this.router.events
-            .pipe(takeWhile(() => this.alive), filter(event => event instanceof NavigationEnd))
+            .pipe(
+                takeWhile(() => this.alive),
+                filter(event => event instanceof NavigationEnd),
+            )
             .subscribe((event: NavigationEnd) => {
-                setTimeout(() => this.show(), 400)
+                this.fetchLanguage()
+                this.show()
 
                 this.trackingService.track('pageview', {
                     page: event.urlAfterRedirects,
@@ -138,11 +143,28 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     /**
+     * Tries to fetch the users preferred language and fallbacks to english.
+     *
+     * @returns {void}
+     */
+    private fetchLanguage(): void {
+        switch (fetchLanguage(['en', 'de'])) {
+            case 'de':
+                this.languageService.language = Language.DE
+                return
+
+            default:
+                this.languageService.language = Language.EN
+                return
+        }
+    }
+
+    /**
      * Shows the application after loading.
      *
      * @returns {void}
      */
     private show(): void {
-        this.activated = true
+        setTimeout(() => (this.activated = true), 400)
     }
 }

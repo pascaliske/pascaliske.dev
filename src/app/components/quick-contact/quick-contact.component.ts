@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { LanguageService } from '../../shared/language/language.service'
 
 @Component({
     selector: 'cmp-quick-contact',
@@ -12,8 +11,7 @@ export class QuickContactComponent {
     /**
      * Initializes the component.
      *
-     * @param {LanguageService} languageService
      * @returns {FooterMetaComponent}
      */
-    public constructor(public languageService: LanguageService) {}
+    public constructor() {}
 }

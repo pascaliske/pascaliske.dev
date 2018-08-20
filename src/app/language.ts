@@ -1,10 +1,10 @@
 /**
- * Preselects from the allowed languages.
+ * Fetch the users preferred language and filter by allowed languages.
  *
  * @param {Array<string>} allowed
  * @returns {string}
  */
-export const preselect = (allowed: Array<string> = []): string => {
+export const fetchLanguage = (allowed: Array<string> = []): string => {
     // detect users preferred language
     const lang = navigator.language.split('-')[0].toLowerCase()
 
