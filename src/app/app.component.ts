@@ -87,21 +87,17 @@ export class AppComponent implements OnInit, OnDestroy {
     ) {}
 
     public ngOnInit(): void {
-        this.translateService.setDefaultLang('en')
         this.titleService.divider = '//'
         this.titleService.suffix = 'Pascal Iske'
         this.router.events
             .pipe(
                 takeWhile(() => this.alive),
                 filter(event => event instanceof NavigationEnd),
+                map(event => this.trackPageView(event as NavigationEnd)),
+                switchMap(() => this.fetchLanguage()),
             )
-            .subscribe((event: NavigationEnd) => {
-                this.fetchLanguage()
+            .subscribe(() => {
                 this.show()
-
-                this.trackingService.track('pageview', {
-                    page: event.urlAfterRedirects,
-                })
             })
 
         this.languageService.language$
@@ -142,20 +138,24 @@ export class AppComponent implements OnInit, OnDestroy {
         this.alive = false
     }
 
+    private trackPageView(event: NavigationEnd): void {
+        this.trackingService.track('pageview', {
+            page: event.urlAfterRedirects,
+        })
+    }
+
     /**
      * Tries to fetch the users preferred language and fallbacks to english.
      *
      * @returns {void}
      */
-    private fetchLanguage(): void {
+    private fetchLanguage(): Observable<void> {
         switch (fetchLanguage(['en', 'de'])) {
             case 'de':
-                this.languageService.language = Language.DE
-                return
+                return this.languageService.change(Language.DE)
 
             default:
-                this.languageService.language = Language.EN
-                return
+                return this.languageService.change(Language.EN)
         }
     }
 

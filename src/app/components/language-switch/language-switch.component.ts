@@ -10,6 +10,6 @@ export class LanguageSwitchComponent {
     public constructor(private languageService: LanguageService) {}
 
     public change(language: Language) {
-        this.languageService.language = language
+        this.languageService.change(language)
     }
 }

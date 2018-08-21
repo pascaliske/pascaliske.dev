@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
-import { BehaviorSubject } from 'rxjs'
+import { Observable, Subject } from 'rxjs'
+import { map } from 'rxjs/operators'
 
 export enum Language {
     EN = 'en',
@@ -9,18 +10,20 @@ export enum Language {
 
 @Injectable()
 export class LanguageService {
-    public language$: BehaviorSubject<Language> = new BehaviorSubject(Language.EN)
+    public language$: Observable<Language>
+
+    private lang$: Subject<Language> = new Subject()
 
     public constructor(private translateService: TranslateService) {
-        this.translateService.setDefaultLang(this.language)
+        this.language$ = this.lang$.asObservable()
+        this.translateService.setDefaultLang(Language.EN)
     }
 
-    public set language(language: Language) {
-        this.translateService.use(language)
-        this.language$.next(language)
-    }
-
-    public get language(): Language {
-        return this.language$.getValue() as Language
+    public change(language: Language): Observable<void> {
+        return this.translateService.use(language).pipe(
+            map(() => {
+                this.lang$.next(language)
+            }),
+        )
     }
 }
