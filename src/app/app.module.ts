@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module'
 import { HeaderModule } from './components/header/header.module'
 import { NavigationModule } from './components/navigation/navigation.module'
 import { FooterModule } from './components/footer/footer.module'
+import { CookieBannerModule } from './components/cookie-banner/cookie-banner.module'
 import { PagesModule } from './pages/pages.module'
 import { AppComponent } from './app.component'
 
@@ -31,6 +32,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
         HeaderModule,
         NavigationModule,
         FooterModule,
+        CookieBannerModule,
         PagesModule,
     ],
     providers: [
