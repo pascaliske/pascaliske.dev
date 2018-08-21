@@ -9,7 +9,7 @@ import { LanguageService, Language } from '../../shared/language/language.servic
 export class LanguageSwitchComponent {
     public constructor(private languageService: LanguageService) {}
 
-    public change(language: Language) {
-        this.languageService.change(language)
+    public change(language: string) {
+        this.languageService.change(language as Language)
     }
 }
