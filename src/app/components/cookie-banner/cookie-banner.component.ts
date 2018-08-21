@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core'
 import { takeWhile, switchMap } from 'rxjs/operators'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
+import { TrackingService } from '../../shared/tracking/tracking.service'
 import { LanguageService } from '../../shared/language/language.service'
 
 @Component({
@@ -17,6 +18,7 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
         private elementRef: ElementRef,
         private translateService: TranslateService,
         private cookieConsentService: NgcCookieConsentService,
+        private trackingService: TrackingService,
         private languageService: LanguageService,
     ) {}
 
@@ -79,6 +81,16 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
 
                 this.cookieConsentService.destroy()
                 this.cookieConsentService.init(config)
+            })
+
+        this.cookieConsentService.statusChange$
+            .pipe(takeWhile(() => this.alive))
+            .subscribe(event => {
+                this.trackingService.track('event', {
+                    eventCategory: 'cookie-consent',
+                    eventAction: 'change',
+                    eventValue: event.status,
+                })
             })
     }
 
