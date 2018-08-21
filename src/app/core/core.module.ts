@@ -63,26 +63,11 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             },
         }),
         NgcCookieConsentModule.forRoot({
-            type: 'opt-in',
-            theme: 'edgeless',
-            position: 'bottom',
-            revokeBtn: '<div class="cc-revoke cc-policy {{classes}}">Cookie Policy</div>',
-            animateRevokable: false,
+            autoOpen: false,
+            autoAttach: false,
             cookie: {
                 name: 'pascal-iske.de',
                 domain: environment.cookieDomain,
-            },
-            palette: {
-                popup: {
-                    background: '#2d333d',
-                    text: '#ffffff',
-                    link: '#ffffff',
-                },
-                button: {
-                    background: '#eaeaea',
-                    text: '#2d333d',
-                    border: 'transparent',
-                },
             },
         }),
     ],
