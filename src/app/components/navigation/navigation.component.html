@@ -8,7 +8,7 @@
                 </a>
             </li>
             <li class="cmp-navigation__item cmp-navigation__languages" *ngIf="mobile">
-                <cmp-language-switch></cmp-language-switch>
+                <cmp-language-switch (changed)="mobileOpen = false"></cmp-language-switch>
             </li>
         </ul>
     </div>

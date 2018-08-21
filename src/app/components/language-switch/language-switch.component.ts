@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Output, EventEmitter } from '@angular/core'
 import { LanguageService, Language } from '../../shared/language/language.service'
 
 @Component({
@@ -7,9 +7,13 @@ import { LanguageService, Language } from '../../shared/language/language.servic
     styleUrls: ['./language-switch.component.scss'],
 })
 export class LanguageSwitchComponent {
+    @Output()
+    public changed: EventEmitter<Language> = new EventEmitter()
+
     public constructor(private languageService: LanguageService) {}
 
     public change(language: string) {
         this.languageService.change(language as Language)
+        this.changed.emit(language as Language)
     }
 }
