@@ -6,6 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
+import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
@@ -52,6 +53,11 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         StoreModule.forRoot(reducers),
         StoreDevtoolsModule.instrument(),
         EffectsModule.forRoot([]),
+        FormElementsModule.forRoot({
+            email: {
+                suggestions: true,
+            },
+        }),
         NotificationsModule,
         NgProgressModule.forRoot({
             color: '#fff',

@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, FormGroup } from '@angular/forms'
+import { FValidationConfig } from '@pascaliske/form-elements'
 import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
-import { FValidationConfig } from '../../components/form-elements/typings'
 import { ContactPageService } from './contact-page.service'
 import { Page } from '../page'
 
@@ -77,11 +77,11 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         }
 
         this.contactPageService.send(this.contactForm.value)
+        this.contactForm.reset()
         this.trackingService.track('event', {
             eventCategory: 'contact-form',
             eventAction: 'submit',
         })
-        this.reset()
     }
 
     public reset(): void {

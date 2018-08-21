@@ -485,6 +485,14 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@pascaliske/form-elements@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.0.1.tgz#65e3601bf8508155b0bbd6121afd80b9c5172a91"
+  dependencies:
+    flatpickr "^4.5.1"
+    fuzzysearch "^1.0.3"
+    tslib "^1.9.0"
+
 "@pascaliske/html-helpers@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.1.0.tgz#bc957fdabe1f98ce1fa0eb6c54550616ae539a08"

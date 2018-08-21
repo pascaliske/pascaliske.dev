@@ -5,7 +5,7 @@ import { PageHeaderModule } from '../../components/page-header/page-header.modul
 import { SectionModule } from '../../components/section/section.module'
 import { HeadlinesModule } from '../../components/headlines/headlines.module'
 import { CopyModule } from '../../components/copy/copy.module'
-import { FormElementsModule } from '../../components/form-elements/form-elements.module'
+import { FormElementsModule } from '@pascaliske/form-elements'
 import { ContactPageComponent } from './contact-page.component'
 import { ContactPageService } from './contact-page.service'
 
