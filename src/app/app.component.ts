@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router'
 import { TranslateService } from '@ngx-translate/core'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { filter, takeWhile, switchMap } from 'rxjs/operators'
+import { modifiers } from '@pascaliske/html-helpers'
 import { LanguageService, Language } from './shared/language/language.service'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
@@ -136,6 +137,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
     public ngOnDestroy(): void {
         this.alive = false
+    }
+
+    public get classes(): string {
+        return modifiers('cmp-root', {
+            activated: this.activated,
+        })
     }
 
     private trackPageView(event: NavigationEnd): void {
