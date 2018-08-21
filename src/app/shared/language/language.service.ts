@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
-import { Observable, Subject } from 'rxjs'
+import { Observable, BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
 
 export enum Language {
@@ -12,11 +12,11 @@ export enum Language {
 export class LanguageService {
     public language$: Observable<Language>
 
-    private lang$: Subject<Language> = new Subject()
+    private lang$: BehaviorSubject<Language>
 
     public constructor(private translateService: TranslateService) {
-        this.language$ = this.lang$.asObservable()
         this.translateService.setDefaultLang(Language.EN)
+        this.language$ = this.preselect([Language.EN, Language.DE])
     }
 
     public change(language: Language): Observable<void> {
@@ -25,5 +25,35 @@ export class LanguageService {
                 this.lang$.next(language)
             }),
         )
+    }
+
+    /**
+     * Tries to fetch the users preferred language and fallbacks to english.
+     *
+     * @param {Array<string>} allowed
+     * @returns {Observable<Language>}
+     */
+    private preselect(allowed: Array<string> = []): Observable<Language> {
+        // use existing behavior subject
+        if (this.lang$) {
+            console.log('==>', this.lang$)
+            return this.lang$.asObservable()
+        }
+
+        // detect users preferred language
+        const lang = navigator.language.split('-')[0].toLowerCase()
+
+        // try users language
+        if (allowed.includes(lang)) {
+            return new BehaviorSubject(lang as Language).asObservable()
+        }
+
+        // try first allowed language
+        if (allowed.length > 0) {
+            return new BehaviorSubject(allowed[0] as Language).asObservable()
+        }
+
+        // fallback to english
+        return new BehaviorSubject(Language.EN).asObservable()
     }
 }

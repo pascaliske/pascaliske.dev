@@ -1,13 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
 import { modifiers } from '@pascaliske/html-helpers'
-import { Observable } from 'rxjs'
-import { filter, takeWhile, switchMap, map } from 'rxjs/operators'
-import { LanguageService, Language } from './shared/language/language.service'
+import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
 import { NavigationItem } from './components/navigation/navigation.component'
-import { fetchLanguage } from './language'
 
 /**
  * AppComponent
@@ -71,13 +68,11 @@ export class AppComponent implements OnInit, OnDestroy {
      * Initializes the AppComponent.
      *
      * @param {Router} router
-     * @param {LanguageService} languageService
      * @param {TitleService} titleService
      * @param {TrackingService} trackingService
      */
     public constructor(
         private router: Router,
-        private languageService: LanguageService,
         private titleService: TitleService,
         private trackingService: TrackingService,
     ) {}
@@ -89,11 +84,12 @@ export class AppComponent implements OnInit, OnDestroy {
             .pipe(
                 takeWhile(() => this.alive),
                 filter(event => event instanceof NavigationEnd),
-                map(event => this.trackPageView(event as NavigationEnd)),
-                switchMap(() => this.fetchLanguage()),
             )
-            .subscribe(() => {
+            .subscribe((event: NavigationEnd) => {
                 this.show()
+                this.trackingService.track('pageview', {
+                    page: event.urlAfterRedirects,
+                })
             })
     }
 
@@ -105,27 +101,6 @@ export class AppComponent implements OnInit, OnDestroy {
         return modifiers('cmp-root', {
             activated: this.activated,
         })
-    }
-
-    private trackPageView(event: NavigationEnd): void {
-        this.trackingService.track('pageview', {
-            page: event.urlAfterRedirects,
-        })
-    }
-
-    /**
-     * Tries to fetch the users preferred language and fallbacks to english.
-     *
-     * @returns {void}
-     */
-    private fetchLanguage(): Observable<void> {
-        switch (fetchLanguage(['en', 'de'])) {
-            case 'de':
-                return this.languageService.change(Language.DE)
-
-            default:
-                return this.languageService.change(Language.EN)
-        }
     }
 
     /**
