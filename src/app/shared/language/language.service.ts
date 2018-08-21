@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core'
 import { Observable, BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
+import { TrackingService } from '../tracking/tracking.service'
 
 export enum Language {
     EN = 'en',
@@ -24,7 +25,10 @@ export class LanguageService {
      */
     private lang$: BehaviorSubject<Language>
 
-    public constructor(private translateService: TranslateService) {
+    public constructor(
+        private translateService: TranslateService,
+        private trackingService: TrackingService,
+    ) {
         this.translateService.setDefaultLang(Language.EN)
         this.language$ = this.preselect([Language.EN, Language.DE])
     }
@@ -39,6 +43,11 @@ export class LanguageService {
         return this.translateService.use(language).pipe(
             map(() => {
                 this.lang$.next(language)
+                this.trackingService.track('event', {
+                    eventCategory: 'language',
+                    eventAction: 'change',
+                    eventValue: language,
+                })
             }),
         )
     }
