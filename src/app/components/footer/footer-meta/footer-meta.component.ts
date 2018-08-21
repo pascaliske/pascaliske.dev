@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { LanguageService } from '../../../shared/language/language.service'
 
 /**
  * FooterMetaComponent
@@ -24,8 +23,7 @@ export class FooterMetaComponent {
      * Initializes the component.
      *
      * @param {Router} router
-     * @param {LanguageService} languageService
      * @returns {FooterMetaComponent}
      */
-    public constructor(public router: Router, public languageService: LanguageService) {}
+    public constructor(public router: Router) {}
 }

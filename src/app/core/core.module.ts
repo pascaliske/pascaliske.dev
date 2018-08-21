@@ -53,7 +53,14 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         StoreDevtoolsModule.instrument(),
         EffectsModule.forRoot([]),
         NotificationsModule,
-        NgProgressModule.forRoot(),
+        NgProgressModule.forRoot({
+            color: '#fff',
+            speed: 250,
+            debounceTime: 400,
+            thick: true,
+            spinner: true,
+            meteor: false,
+        }),
         NgProgressHttpModule,
         NgProgressRouterModule,
         MarkdownModule.forRoot({

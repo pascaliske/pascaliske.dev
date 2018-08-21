@@ -1,5 +1,5 @@
-<div class="cmp-root" [ngClass]="{'cmp-root--activated': activated}">
-    <ng-progress [color]="'#fff'" [thick]="true" [speed]="250" [spinner]="true" [meteor]="false"></ng-progress>
+<div [class]="classes">
+    <ng-progress></ng-progress>
     <cmp-header></cmp-header>
     <cmp-navigation [items]="pages"></cmp-navigation>
     <div class="cmp-root__wrapper">

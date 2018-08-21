@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { TranslateService } from '@ngx-translate/core'
-import { LanguageService } from '../../shared/language/language.service'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
 import { FValidationConfig } from '../../components/form-elements/typings'
@@ -35,12 +34,11 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
         private formBuilder: FormBuilder,
         public route: ActivatedRoute,
         public translateService: TranslateService,
-        public languageService: LanguageService,
         public titleService: TitleService,
         private contactPageService: ContactPageService,
         private trackingService: TrackingService,
     ) {
-        super(route, translateService, languageService, titleService)
+        super(route, translateService, titleService)
     }
 
     public ngOnInit(): void {

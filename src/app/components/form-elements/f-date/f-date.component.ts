@@ -40,8 +40,6 @@ export class FDateComponent extends FInputComponent implements AfterViewInit, On
     }
 
     public ngAfterViewInit(): void {
-        this.initFlatpickr(this.languageService.language)
-
         this.languageService.language$.pipe(takeWhile(() => this.alive)).subscribe(language => {
             this.initFlatpickr(language)
         })

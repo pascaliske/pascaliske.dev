@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
+import { modifiers } from '@pascaliske/html-helpers'
 import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
@@ -85,8 +86,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 filter(event => event instanceof NavigationEnd),
             )
             .subscribe((event: NavigationEnd) => {
-                setTimeout(() => this.show(), 400)
-
+                this.show()
                 this.trackingService.track('pageview', {
                     page: event.urlAfterRedirects,
                 })
@@ -97,12 +97,18 @@ export class AppComponent implements OnInit, OnDestroy {
         this.alive = false
     }
 
+    public get classes(): string {
+        return modifiers('cmp-root', {
+            activated: this.activated,
+        })
+    }
+
     /**
      * Shows the application after loading.
      *
      * @returns {void}
      */
     private show(): void {
-        this.activated = true
+        setTimeout(() => (this.activated = true), 400)
     }
 }
