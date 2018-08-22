@@ -34,7 +34,6 @@ export class TitleService {
      * Initializes the TitleService.
      *
      * @param {Title} browserTitle - The angular browser title service.
-     * @returns {TitleService}
      */
     public constructor(private browserTitle: Title) {}
 

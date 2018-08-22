@@ -32,7 +32,6 @@ import { TrackingService } from './tracking/tracking.service'
         NotificationsModule,
         MarkdownModule,
         DynamicComponentsComponent,
-        DynamicComponentsDirective,
     ],
 })
 export class SharedModule {

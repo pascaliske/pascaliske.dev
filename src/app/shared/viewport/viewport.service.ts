@@ -35,8 +35,6 @@ export class ViewportService {
 
     /**
      * Initializes the ViewportService.
-     *
-     * @returns {ViewportService}
      */
     public constructor() {
         this.observer = new IntersectionObserver(this.handler, this.options)
@@ -50,7 +48,8 @@ export class ViewportService {
      */
     public observe(element: Element): Observable<IntersectionObserverEntry> {
         this.observer.observe(element)
-        return this.callback$.pipe(
+
+        return this.callback$.asObservable().pipe(
             filter((entry: IntersectionObserverEntry) => entry.target === element),
             finalize(() => this.observer.unobserve(element)),
         )

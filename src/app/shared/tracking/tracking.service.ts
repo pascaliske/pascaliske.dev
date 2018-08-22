@@ -1,15 +1,29 @@
 import { Injectable } from '@angular/core'
-import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { BehaviorSubject, merge } from 'rxjs'
-import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from './typings'
+import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
+import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from './typings'
 
+/**
+ * TrackingService
+ *
+ * Injectable service for enabling components to send tracking events with Google Analytics.
+ * Use the track method to send {@link PageViewEvent}s or {@link CustomEvent}s.
+ */
 @Injectable()
 export class TrackingService {
+    /**
+     *
+     */
     private status$: BehaviorSubject<string> = new BehaviorSubject(
         this.cookieConsentService.hasConsented() ? 'allow' : 'deny',
     )
 
+    /**
+     * Initializes the TrackingService.
+     *
+     * @param {NgcCookieConsentService} cookieConsentService
+     */
     public constructor(private cookieConsentService: NgcCookieConsentService) {
         const events = [
             this.cookieConsentService.initialize$,

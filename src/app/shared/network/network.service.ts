@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject, fromEvent, merge } from 'rxjs'
-import { share, map, distinctUntilChanged, debounceTime } from 'rxjs/operators'
+import { map, distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
 
 @Injectable()
 export class NetworkService {
@@ -19,7 +19,11 @@ export class NetworkService {
         ]
 
         merge(...events)
-            .pipe(share(), distinctUntilChanged(), debounceTime(100))
+            .pipe(
+                distinctUntilChanged(),
+                debounceTime(100),
+                share(),
+            )
             .subscribe(online => {
                 this.online$.next(online)
             })
