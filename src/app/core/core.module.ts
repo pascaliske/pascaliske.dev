@@ -1,8 +1,4 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { BrowserModule } from '@angular/platform-browser'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { ServiceWorkerModule } from '@angular/service-worker'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
@@ -44,12 +40,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 @NgModule({
     declarations: [],
     imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', {
-            enabled: environment.production,
-        }),
         StoreModule.forRoot(reducers),
         StoreDevtoolsModule.instrument(),
         EffectsModule.forRoot([]),
@@ -84,7 +74,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             },
         }),
     ],
-    exports: [CommonModule, NotificationsModule, NgProgressModule, MarkdownModule],
+    exports: [NotificationsModule, NgProgressModule, MarkdownModule],
     providers: [],
 })
 export class CoreModule {}
