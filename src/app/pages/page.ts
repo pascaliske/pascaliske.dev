@@ -9,9 +9,9 @@ export class Page {
     protected alive: boolean = true
 
     public constructor(
-        public route: ActivatedRoute,
-        public translateService: TranslateService,
-        public titleService: TitleService,
+        protected route: ActivatedRoute,
+        protected translateService: TranslateService,
+        protected titleService: TitleService,
     ) {
         this.fetchTitle()
     }

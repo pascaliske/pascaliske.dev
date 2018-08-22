@@ -31,12 +31,12 @@ export class ContactPageComponent extends Page implements OnInit, OnDestroy {
 
     public constructor(
         private changeDetectorRef: ChangeDetectorRef,
+        protected route: ActivatedRoute,
         private formBuilder: FormBuilder,
-        public route: ActivatedRoute,
-        public translateService: TranslateService,
-        public titleService: TitleService,
-        private contactPageService: ContactPageService,
+        protected translateService: TranslateService,
+        protected titleService: TitleService,
         private trackingService: TrackingService,
+        private contactPageService: ContactPageService,
     ) {
         super(route, translateService, titleService)
     }
