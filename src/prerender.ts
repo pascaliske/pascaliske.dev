@@ -1,6 +1,7 @@
 import 'reflect-metadata'
 import 'zone.js/dist/zone-node'
 import * as express from 'express'
+import * as compression from 'compression'
 import chalk from 'chalk'
 import { launch } from 'puppeteer'
 import { Server } from 'http'
@@ -17,6 +18,7 @@ async function prerender(): Promise<void> {
     const dist = join(process.cwd(), 'dist', 'app')
     const index = (await readFile(join(dist, 'index.html'), 'utf8')).toString()
 
+    app.use(compression())
     app.get('*.*', express.static(join(dist)))
     app.get('*', (req, res) => {
         res.header('X-Request-Path', req.path)
