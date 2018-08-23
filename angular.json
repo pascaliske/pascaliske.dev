@@ -39,7 +39,7 @@
                 "output": "/assets"
               },
               {
-                "glob": ".htaccess",
+                "glob": "robots.txt",
                 "input": "src",
                 "output": "/"
               },
