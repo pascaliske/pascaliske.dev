@@ -1,4 +1,5 @@
 import { Component, Input, ElementRef, OnInit } from '@angular/core'
+import { modifiers } from '@pascaliske/html-helpers'
 import { takeWhile } from 'rxjs/operators'
 import { ViewportService } from '../../shared/viewport/viewport.service'
 
@@ -10,9 +11,11 @@ import { ViewportService } from '../../shared/viewport/viewport.service'
 export class SectionComponent implements OnInit {
     public static readonly cmpName: string = 'SectionComponent'
 
-    @Input() public id: string
+    @Input()
+    public id: string
 
-    @Input() public even: boolean = false
+    @Input()
+    public even: boolean = false
 
     public activated: boolean = false
 
@@ -29,6 +32,13 @@ export class SectionComponent implements OnInit {
                     this.show()
                 }
             })
+    }
+
+    public get classes(): string {
+        return modifiers('cmp-section', {
+            activated: this.activated,
+            even: this.even,
+        })
     }
 
     private show(): void {
