@@ -23,8 +23,6 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
     ) {}
 
     public ngOnInit(): void {
-        console.log('==> init')
-
         this.cookieConsentService.init({
             type: 'opt-in',
             theme: 'edgeless',
