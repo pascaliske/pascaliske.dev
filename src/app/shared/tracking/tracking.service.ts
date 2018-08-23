@@ -15,9 +15,7 @@ export class TrackingService {
     /**
      *
      */
-    private status$: BehaviorSubject<string> = new BehaviorSubject(
-        this.cookieConsentService.hasConsented() ? 'allow' : 'deny',
-    )
+    private status$: BehaviorSubject<string> = new BehaviorSubject(null)
 
     /**
      * Initializes the TrackingService.
