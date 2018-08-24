@@ -45,8 +45,11 @@ async function prerender(): Promise<void> {
                 waitUntil: 'domcontentloaded',
             })
 
-            const rendered = await page.evaluate(() => document.documentElement.outerHTML)
             const file = join(dist, `${path || 'index'}.html`)
+            const rendered = await page.evaluate(() => {
+                // manually prefix html with doctype
+                return `<!doctype html>${document.documentElement.outerHTML}`
+            })
 
             await ensureDir(dirname(file))
             await writeFile(file, rendered)
