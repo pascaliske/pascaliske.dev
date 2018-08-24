@@ -46,10 +46,7 @@ async function prerender(): Promise<void> {
             })
 
             const file = join(dist, `${path || 'index'}.html`)
-            const rendered = await page.evaluate(() => {
-                // manually prefix html with doctype
-                return `<!doctype html>${document.documentElement.outerHTML}`
-            })
+            const rendered = await page.content()
 
             await ensureDir(dirname(file))
             await writeFile(file, rendered)
