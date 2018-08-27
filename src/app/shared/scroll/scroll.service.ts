@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
-import { Subject, fromEvent } from 'rxjs'
-import { distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
+import { Subject, fromEvent, Observable, interval } from 'rxjs'
+import { distinctUntilChanged, debounceTime, share, map } from 'rxjs/operators'
 
 /**
  * Interface describing the current scroll state.
@@ -39,11 +39,27 @@ export class ScrollService {
     }
 
     /**
+     * Scrolls the viewport to the given position.
+     *
+     * @param {number} x
+     * @param {number} y
+     * @param {'auto' | 'instant' | 'smooth'} behavior
+     * @returns {void}
+     */
+    public scroll(x: number, y: number, behavior: 'auto' | 'instant' | 'smooth' = 'smooth'): void {
+        window.scrollTo({
+            behavior: behavior,
+            left: x,
+            top: y,
+        })
+    }
+
+    /**
      * Handles the browsers scroll event and emits it to subscribed components.
      *
      * @returns {void}
      */
-    public handleScroll(): void {
+    private handleScroll(): void {
         // listen to resize events
         fromEvent(window, 'scroll')
             .pipe(
