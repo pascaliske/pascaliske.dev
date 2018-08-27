@@ -23,48 +23,53 @@ export class LinkComponent {
      *
      * @param {string} text
      */
-    @Input() public text: string
+    @Input()
+    public text: string
 
     /**
      * The link icon.
      *
      * @param {string} icon
      */
-    @Input() public icon: string
+    @Input()
+    public icon: string
 
     /**
      * The external link target.
      *
      * @param {string} url
      */
-    @Input() public url: string
+    @Input()
+    public url: string
 
     /**
      * The internal link target.
      *
      * @param {Array<string>} target
      */
-    @Input() public target: Array<string>
+    @Input()
+    public target: Array<string>
 
     /**
      * Whether the link should be displayed inline or not.
      *
      * @param {boolean} inline
      */
-    @Input() public inline: boolean = true
+    @Input()
+    public inline: boolean = true
 
     /**
      * The alignment of the link inside of the conta
      *
      * @param {'left' | 'center' | 'right'} align
      */
-    @Input() public align: Alignment = 'center'
+    @Input()
+    public align: Alignment = 'center'
 
     /**
      * Initializes the component.
      *
      * @param {Router} router - The router.
-     * @returns {LinkComponent}
      */
     public constructor(private router: Router) {}
 
