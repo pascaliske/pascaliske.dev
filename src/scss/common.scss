@@ -8,10 +8,10 @@
 @import 'shared';
 
 // external libraries
-@import '../../node_modules/normalize-scss/sass/normalize';
-@import '../../node_modules/font-awesome/scss/font-awesome';
-@import '../../node_modules/flatpickr/dist/flatpickr.min.css';
-@import '../../node_modules/cookieconsent/build/cookieconsent.min.css';
+@import '~@pascaliske/form-elements/styles';
+@import '~normalize-scss/sass/normalize';
+@import '~flatpickr/dist/flatpickr.min.css';
+@import '~cookieconsent/build/cookieconsent.min.css';
 
 // app related stuff
 @import 'base/base';
@@ -20,4 +20,3 @@
 @import 'base/progressbar';
 @import 'base/notifications';
 @import 'base/fonts';
-@import 'base/form-element';

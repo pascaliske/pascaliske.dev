@@ -1,11 +1,8 @@
-import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { BrowserModule } from '@angular/platform-browser'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { ServiceWorkerModule } from '@angular/service-worker'
+import { NgModule, ErrorHandler } from '@angular/core'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
+import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { NgProgressModule } from '@ngx-progressbar/core'
 import { NgProgressHttpModule } from '@ngx-progressbar/http'
@@ -14,6 +11,7 @@ import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
 import { reducers } from '../store'
+import { SentryErrorHandler } from '../sentry'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
     const renderer = new MarkedRenderer()
@@ -43,17 +41,23 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 @NgModule({
     declarations: [],
     imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', {
-            enabled: environment.production,
-        }),
         StoreModule.forRoot(reducers),
         StoreDevtoolsModule.instrument(),
         EffectsModule.forRoot([]),
+        FormElementsModule.forRoot({
+            email: {
+                suggestions: true,
+            },
+        }),
         NotificationsModule,
-        NgProgressModule.forRoot(),
+        NgProgressModule.forRoot({
+            color: '#fff',
+            speed: 250,
+            debounceTime: 400,
+            thick: true,
+            spinner: true,
+            meteor: false,
+        }),
         NgProgressHttpModule,
         NgProgressRouterModule,
         MarkdownModule.forRoot({
@@ -63,30 +67,20 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             },
         }),
         NgcCookieConsentModule.forRoot({
-            type: 'opt-in',
-            theme: 'edgeless',
-            position: 'bottom',
-            revokeBtn: '<div class="cc-revoke cc-policy {{classes}}">Cookie Policy</div>',
-            animateRevokable: false,
+            autoOpen: false,
+            autoAttach: false,
             cookie: {
                 name: 'pascal-iske.de',
                 domain: environment.cookieDomain,
             },
-            palette: {
-                popup: {
-                    background: '#2d333d',
-                    text: '#ffffff',
-                    link: '#ffffff',
-                },
-                button: {
-                    background: '#eaeaea',
-                    text: '#2d333d',
-                    border: 'transparent',
-                },
-            },
         }),
     ],
-    exports: [CommonModule, NotificationsModule, NgProgressModule, MarkdownModule],
-    providers: [],
+    exports: [NotificationsModule, NgProgressModule, MarkdownModule],
+    providers: [
+        {
+            provide: ErrorHandler,
+            useClass: SentryErrorHandler,
+        },
+    ],
 })
 export class CoreModule {}

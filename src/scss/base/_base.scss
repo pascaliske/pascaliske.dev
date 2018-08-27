@@ -39,22 +39,9 @@ p {
 button,
 input,
 textarea,
-select,
-[type="submit"] {
-    background-color: transparent;
+select {
+    border: 0;
     outline: 0;
-    -webkit-appearance: none;
-}
-
-button,
-[type="submit"] {
-    margin: 0;
     padding: 0;
-    border: 0;
-}
-
-input,
-textarea {
-    border: 0;
-    outline: 0;
+    -webkit-appearance: none;
 }

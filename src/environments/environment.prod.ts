@@ -1,4 +1,5 @@
-import pkg from '../../package.json'
+// tslint:disable-next-line
+const pkg = require('../../package.json')
 
 export const environment = {
     production: true,

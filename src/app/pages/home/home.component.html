@@ -1,0 +1,14 @@
+<div class="cmp-home">
+    <cmp-page-header [title]="title"></cmp-page-header>
+    <cmp-section id="welcome">
+        <cmp-headline-h4 [text]="'HOME_PAGE_HEADLINE'|translate"></cmp-headline-h4>
+        <cmp-copy [text]="'HOME_PAGE_COPY'|translate"></cmp-copy>
+        <cmp-copy theme="bold">
+            <span>{{'HOME_PAGE_GET_STARTED'|translate}} </span>
+            <cmp-link [target]="['/contact']" [text]="'HOME_PAGE_GET_STARTED_LINK'|translate" [inline]="true"></cmp-link>
+        </cmp-copy>
+    </cmp-section>
+    <cmp-section id="quick-contact">
+        <cmp-quick-contact></cmp-quick-contact>
+    </cmp-section>
+</div>

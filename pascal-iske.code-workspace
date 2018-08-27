@@ -21,13 +21,14 @@
         "editor.formatOnType": true,
         "search.exclude": {
             "**/node_modules": true,
-            "**/bower_components": true,
-            "**/docs": true,
-            "**/dist": true,
-            "**/e2e": true
+            "**/dist": true
         },
         "tslint.autoFixOnSave": true,
         "typescript.tsdk": "pascal-iske/node_modules/typescript/lib",
+        "[yaml]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
         "[json]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false

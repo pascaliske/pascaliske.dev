@@ -1,4 +1,5 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core'
+import { ScrollService } from '../../../shared/scroll/scroll.service'
 
 @Component({
     selector: 'cmp-to-top-button',
@@ -7,19 +8,16 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToTopButtonComponent {
-    /**
-     * The duration of the scroll to top animation.
-     *
-     * @param {number} duration
-     */
-    @Input() public duration: number = 400
+    @HostBinding('attr.id')
+    public id: string = 'to-top-button'
+
+    @HostBinding('attr.aria-label')
+    public ariaLabel: string = 'To Top Button'
 
     /**
      * Initializes the component.
-     *
-     * @returns {ToTopButtonComponent}
      */
-    public constructor() {}
+    public constructor(private scrollService: ScrollService) {}
 
     /**
      * Scrolls the viewport to the top.
@@ -27,20 +25,6 @@ export class ToTopButtonComponent {
      * @returns {void}
      */
     public scrollToTop(): void {
-        const distance = window.scrollY
-        const step = Math.PI / (this.duration / 15)
-        const cosinus = distance / 2
-
-        let counter = 0
-        let margin
-        const scrollInterval = setInterval(() => {
-            if (window.scrollY !== 0) {
-                counter = counter + 1
-                margin = cosinus - cosinus * Math.cos(counter * step)
-                window.scrollTo(0, distance - margin)
-            } else {
-                clearInterval(scrollInterval)
-            }
-        }, 15)
+        this.scrollService.scroll(0, 0)
     }
 }

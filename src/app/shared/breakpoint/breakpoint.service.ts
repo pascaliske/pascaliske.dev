@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Subject, fromEvent } from 'rxjs'
+import { BehaviorSubject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
 
 /**
@@ -52,30 +52,54 @@ export interface ResizeState {
  * Injectable service for enabling components to subscribe to breakpoint and resize changes.
  *
  * - subscribe `resize$` for viewport resize changes, it emits {@link ResizeState}
- * - subscribe `breakpointChange` for breakpoint changes, it emits {@link Breakpoint}
+ * - subscribe `breakpoint$` for breakpoint changes, it emits {@link Breakpoint}
  */
 @Injectable()
 export class BreakpointService {
     /**
-     * Subject for resize changes, it emits {@link ResizeState}
+     * BehaviorSubject for resize changes, it emits {@link ResizeState}
      *
-     * @param {Subject<ResizeState>} resize$
+     * @param {BehaviorSubject<ResizeState>} resize$
      */
-    public resize$: Subject<ResizeState> = new Subject()
+    public resize$: BehaviorSubject<ResizeState>
 
     /**
-     * Subject for breakpoint changes, it emits {@link Breakpoint}
+     * BehaviorSubject for breakpoint changes, it emits {@link Breakpoint}
      *
-     * @param {Subject<Breakpoint>} breakpoint$
+     * @param {BehaviorSubject<Breakpoint>} breakpoint$
      */
-    public breakpoint$: Subject<Breakpoint> = new Subject()
+    public breakpoint$: BehaviorSubject<Breakpoint>
 
     /**
      * Array containing all breakpoints and their size values.
      *
      * @param {Array<Breakpoint>}
      */
-    private readonly breakpoints: Array<Breakpoint> = []
+    private readonly breakpoints: Array<Breakpoint> = [
+        {
+            id: Breakpoints.DESKTOP,
+            start: 1280,
+        },
+        {
+            id: Breakpoints.TABLET,
+            start: 1024,
+            end: 1279,
+        },
+        {
+            id: Breakpoints.MINI_TABLET,
+            start: 768,
+            end: 1023,
+        },
+        {
+            id: Breakpoints.PHABLET,
+            start: 320,
+            end: 767,
+        },
+        {
+            id: Breakpoints.MOBILE,
+            end: 320,
+        },
+    ]
 
     /**
      * The current breakpoint.
@@ -86,35 +110,10 @@ export class BreakpointService {
 
     /**
      * Initializes the breakpoint service.
-     *
-     * @returns {BreakpointService}
      */
     public constructor() {
-        this.breakpoints.push({
-            id: Breakpoints.DESKTOP,
-            start: 1280,
-        })
-        this.breakpoints.push({
-            id: Breakpoints.TABLET,
-            start: 1024,
-            end: 1279,
-        })
-        this.breakpoints.push({
-            id: Breakpoints.MINI_TABLET,
-            start: 768,
-            end: 1023,
-        })
-        this.breakpoints.push({
-            id: Breakpoints.PHABLET,
-            start: 320,
-            end: 767,
-        })
-        this.breakpoints.push({
-            id: Breakpoints.MOBILE,
-            end: 320,
-        })
-
-        // determine current breakpoint and subscribe to resize changes
+        this.resize$ = new BehaviorSubject(this.determineDimensions())
+        this.breakpoint$ = new BehaviorSubject(this.determineBreakpoint())
         this.handleResize()
     }
 
@@ -163,7 +162,7 @@ export class BreakpointService {
     }
 
     /**
-     * Listens to the browsers resize event and emits the correct breakpoint events.
+     * Listens to the browsers resize event and emits the correct breakpoint and resize events.
      *
      * @returns {void}
      */
@@ -173,13 +172,13 @@ export class BreakpointService {
 
         // listen to resize events
         fromEvent(window, 'resize')
-            .pipe(share(), debounceTime(15))
+            .pipe(
+                share(),
+                debounceTime(15),
+            )
             .subscribe(() => {
                 const current: Breakpoint = this.determineBreakpoint()
-                const dimensions: ResizeState = {
-                    height: document.documentElement.clientHeight,
-                    width: window.innerWidth,
-                }
+                const dimensions: ResizeState = this.determineDimensions()
 
                 // check if the breakpoint changed too
                 if (this.current !== current) {
@@ -195,7 +194,19 @@ export class BreakpointService {
     }
 
     /**
-     * Determines the current breakpoint.
+     * Determines the current {@link ResizeState}.
+     *
+     * @returns {ResizeState}
+     */
+    private determineDimensions(): ResizeState {
+        return {
+            height: document.documentElement.clientHeight,
+            width: window.innerWidth,
+        }
+    }
+
+    /**
+     * Determines the current {@link Breakpoint}.
      *
      * @returns {Breakpoint}
      */
