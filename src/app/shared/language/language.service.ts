@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core'
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { TranslateService } from '@ngx-translate/core'
 import { Observable, BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
@@ -12,13 +13,6 @@ export enum Language {
 @Injectable()
 export class LanguageService {
     /**
-     * The current selected language.
-     *
-     * @param {Observable<Language>}
-     */
-    public language$: Observable<Language>
-
-    /**
      * Internal subject for controlling the current selected language.
      *
      * @param {BehaviorSubject<Language>}
@@ -26,11 +20,27 @@ export class LanguageService {
     private lang$: BehaviorSubject<Language>
 
     public constructor(
+        @Inject(PLATFORM_ID) private platformId: object,
         private translateService: TranslateService,
         private trackingService: TrackingService,
     ) {
-        this.translateService.setDefaultLang(Language.EN)
-        this.language$ = this.preselect([Language.EN, Language.DE])
+        if (isPlatformBrowser(this.platformId)) {
+            const selected = this.preselect([Language.EN, Language.DE])
+
+            if (!this.lang$) {
+                this.lang$ = new BehaviorSubject(selected)
+                this.translateService.setDefaultLang(selected)
+            }
+        }
+    }
+
+    /**
+     * The current selected language.
+     *
+     * @param {Observable<Language>}
+     */
+    public get language$(): Observable<Language> {
+        return this.lang$.asObservable()
     }
 
     /**
@@ -56,29 +66,23 @@ export class LanguageService {
      * Tries to fetch the users preferred language and fallbacks to english.
      *
      * @param {Array<string>} allowed
-     * @returns {Observable<Language>}
+     * @returns {Language}
      */
-    private preselect(allowed: Array<string> = []): Observable<Language> {
-        // use existing behavior subject
-        if (this.lang$) {
-            console.log('==>', this.lang$)
-            return this.lang$.asObservable()
-        }
-
+    private preselect(allowed: Array<string> = []): Language {
         // detect users preferred language
         const lang = navigator.language.split('-')[0].toLowerCase()
 
         // try users language
         if (allowed.includes(lang)) {
-            return new BehaviorSubject(lang as Language).asObservable()
+            return lang as Language
         }
 
         // try first allowed language
         if (allowed.length > 0) {
-            return new BehaviorSubject(allowed[0] as Language).asObservable()
+            return allowed[0] as Language
         }
 
         // fallback to english
-        return new BehaviorSubject(Language.EN).asObservable()
+        return Language.EN
     }
 }

@@ -75,7 +75,31 @@ export class BreakpointService {
      *
      * @param {Array<Breakpoint>}
      */
-    private readonly breakpoints: Array<Breakpoint>
+    private readonly breakpoints: Array<Breakpoint> = [
+        {
+            id: Breakpoints.DESKTOP,
+            start: 1280,
+        },
+        {
+            id: Breakpoints.TABLET,
+            start: 1024,
+            end: 1279,
+        },
+        {
+            id: Breakpoints.MINI_TABLET,
+            start: 768,
+            end: 1023,
+        },
+        {
+            id: Breakpoints.PHABLET,
+            start: 320,
+            end: 767,
+        },
+        {
+            id: Breakpoints.MOBILE,
+            end: 320,
+        },
+    ]
 
     /**
      * The current breakpoint.
@@ -86,40 +110,10 @@ export class BreakpointService {
 
     /**
      * Initializes the breakpoint service.
-     *
-     * @returns {BreakpointService}
      */
     public constructor() {
-        this.breakpoints = [
-            {
-                id: Breakpoints.DESKTOP,
-                start: 1280,
-            },
-            {
-                id: Breakpoints.TABLET,
-                start: 1024,
-                end: 1279,
-            },
-            {
-                id: Breakpoints.MINI_TABLET,
-                start: 768,
-                end: 1023,
-            },
-            {
-                id: Breakpoints.PHABLET,
-                start: 320,
-                end: 767,
-            },
-            {
-                id: Breakpoints.MOBILE,
-                end: 320,
-            },
-        ]
-
         this.resize$ = new BehaviorSubject(this.determineDimensions())
         this.breakpoint$ = new BehaviorSubject(this.determineBreakpoint())
-
-        // determine current breakpoint and subscribe to resize changes
         this.handleResize()
     }
 
