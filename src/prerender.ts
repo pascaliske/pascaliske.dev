@@ -11,11 +11,10 @@ import { routes } from './app/app-routing.module'
 
 const port = process.env.PORT || 9000
 const host = `http://localhost:${port}`
+const dist = join(process.cwd(), 'dist', 'app')
 
-async function prerender(): Promise<void> {
+async function createServer(): Promise<Server> {
     const app = express()
-    const paths = routes.map(route => route.path)
-    const dist = join(process.cwd(), 'dist', 'app')
     const index = (await readFile(join(dist, 'index.html'), 'utf8')).toString()
 
     app.use(compression())
@@ -25,24 +24,29 @@ async function prerender(): Promise<void> {
         res.send(index)
     })
 
-    const server = await new Promise<Server>((resolve, reject) => {
+    return new Promise<Server>((resolve, reject) => {
         const self = app.listen(port, error => {
             if (error) {
                 reject(error)
             }
+
+            console.log(`==> server started at ${chalk.cyan(host)}`)
+
             resolve(self)
         })
     })
+}
 
-    console.log(`==> server started at ${chalk.cyan(host)}`)
-
+async function prerender(): Promise<void> {
+    const paths = routes.map(route => route.path)
+    const server = await createServer()
     const browser = await launch({ args: ['--no-sandbox'] })
     const page = await browser.newPage()
 
     for (const path of paths) {
         if (!path.includes('*')) {
             await page.goto(`${host}/${path}`, {
-                waitUntil: 'domcontentloaded',
+                waitUntil: 'networkidle0',
             })
 
             const file = join(dist, `${path || 'index'}.html`)

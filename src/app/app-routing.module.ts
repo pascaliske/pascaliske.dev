@@ -1,12 +1,5 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomePageComponent } from './pages/home-page/home-page.component'
-import { AboutPageComponent } from './pages/about-page/about-page.component'
-// import { ReferencesPageComponent } from './pages/references-page/references-page.component'
-// import { BlogPageComponent } from './pages/blog-page/blog-page.component'
-import { ContactPageComponent } from './pages/contact-page/contact-page.component'
-import { ImprintPageComponent } from './pages/imprint-page/imprint-page.component'
-import { PrivacyPageComponent } from './pages/privacy-page/privacy-page.component'
 
 export const routes: Routes = [
     {
@@ -16,52 +9,31 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomePageComponent,
-        data: {
-            title: 'PAGE_TITLE_HOME',
-        },
+        loadChildren: 'app/pages/home-page/home-page.module#HomePageModule',
     },
     {
         path: 'about',
-        component: AboutPageComponent,
-        data: {
-            title: 'PAGE_TITLE_ABOUT',
-        },
+        loadChildren: 'app/pages/about-page/about-page.module#AboutPageModule',
     },
     // {
     //     path: 'references',
-    //     component: ReferencesPageComponent,
-    //     data: {
-    //         title: 'PAGE_TITLE_REFERENCES',
-    //     },
+    //     loadChildren: 'app/pages/references-page/references-page.module#ReferencesPageModule',
     // },
     // {
     //     path: 'blog',
-    //     component: BlogPageComponent,
-    //     data: {
-    //         title: 'PAGE_TITLE_BLOG',
-    //     },
+    //     loadChildren: 'app/pages/blog-page/blog-page.module#BlogPageModule',
     // },
     {
         path: 'contact',
-        component: ContactPageComponent,
-        data: {
-            title: 'PAGE_TITLE_CONTACT',
-        },
+        loadChildren: 'app/pages/contact-page/contact-page.module#ContactPageModule',
     },
     {
         path: 'imprint',
-        component: ImprintPageComponent,
-        data: {
-            title: 'PAGE_TITLE_IMPRINT',
-        },
+        loadChildren: 'app/pages/imprint-page/imprint-page.module#ImprintPageModule',
     },
     {
         path: 'privacy',
-        component: PrivacyPageComponent,
-        data: {
-            title: 'PAGE_TITLE_PRIVACY',
-        },
+        loadChildren: 'app/pages/privacy-page/privacy-page.module#PrivacyPageModule',
     },
     {
         path: '**',

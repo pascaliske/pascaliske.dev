@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
 import { ReactiveFormsModule } from '@angular/forms'
 import { SharedModule } from '../../shared/shared.module'
 import { PageHeaderModule } from '../../components/page-header/page-header.module'
@@ -9,8 +10,19 @@ import { FormElementsModule } from '@pascaliske/form-elements'
 import { ContactPageComponent } from './contact-page.component'
 import { ContactPageService } from './contact-page.service'
 
+export const routes: Routes = [
+    {
+        path: '',
+        component: ContactPageComponent,
+        data: {
+            title: 'PAGE_TITLE_CONTACT',
+        },
+    },
+]
+
 @NgModule({
     imports: [
+        RouterModule.forChild(routes),
         ReactiveFormsModule,
         SharedModule,
         PageHeaderModule,
