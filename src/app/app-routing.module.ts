@@ -9,31 +9,31 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: 'app/pages/home-page/home-page.module#HomePageModule',
+        loadChildren: 'app/pages/home/home.module#HomeModule',
     },
     {
         path: 'about',
-        loadChildren: 'app/pages/about-page/about-page.module#AboutPageModule',
+        loadChildren: 'app/pages/about/about.module#AboutModule',
     },
     // {
     //     path: 'references',
-    //     loadChildren: 'app/pages/references-page/references-page.module#ReferencesPageModule',
+    //     loadChildren: 'app/pages/references/references.module#ReferencesModule',
     // },
     // {
     //     path: 'blog',
-    //     loadChildren: 'app/pages/blog-page/blog-page.module#BlogPageModule',
+    //     loadChildren: 'app/pages/blog/blog.module#BlogModule',
     // },
     {
         path: 'contact',
-        loadChildren: 'app/pages/contact-page/contact-page.module#ContactPageModule',
+        loadChildren: 'app/pages/contact/contact.module#ContactModule',
     },
     {
         path: 'imprint',
-        loadChildren: 'app/pages/imprint-page/imprint-page.module#ImprintPageModule',
+        loadChildren: 'app/pages/imprint/imprint.module#ImprintModule',
     },
     {
         path: 'privacy',
-        loadChildren: 'app/pages/privacy-page/privacy-page.module#PrivacyPageModule',
+        loadChildren: 'app/pages/privacy/privacy.module#PrivacyModule',
     },
     {
         path: '**',

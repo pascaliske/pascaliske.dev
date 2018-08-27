@@ -7,8 +7,9 @@ import { ServiceWorkerModule } from '@angular/service-worker'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { environment } from '../environments/environment'
-import { AppRoutingModule } from './app-routing.module'
 import { CoreModule } from './core/core.module'
+import { SharedModule } from './shared/shared.module'
+import { AppRoutingModule } from './app-routing.module'
 import { HeaderModule } from './components/header/header.module'
 import { NavigationModule } from './components/navigation/navigation.module'
 import { FooterModule } from './components/footer/footer.module'
@@ -20,7 +21,6 @@ export function TranslationLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-    declarations: [AppComponent],
     imports: [
         CommonModule,
         HttpClientModule,
@@ -39,13 +39,15 @@ export function TranslationLoaderFactory(http: HttpClient) {
                 deps: [HttpClient],
             },
         }),
-        AppRoutingModule,
         CoreModule,
+        SharedModule,
+        AppRoutingModule,
         HeaderModule,
         NavigationModule,
         FooterModule,
         CookieBannerModule,
     ],
+    declarations: [AppComponent],
     providers: [],
     bootstrap: [AppComponent],
 })
