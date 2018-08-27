@@ -24,12 +24,13 @@ export class LanguageService {
         private translateService: TranslateService,
         private trackingService: TrackingService,
     ) {
+        this.translateService.setDefaultLang(Language.DE)
+
         if (isPlatformBrowser(this.platformId)) {
-            const selected = this.preselect([Language.EN, Language.DE])
+            const selected = this.preselect([Language.DE, Language.EN])
 
             if (!this.lang$) {
                 this.lang$ = new BehaviorSubject(selected)
-                this.translateService.setDefaultLang(selected)
             }
         }
     }
@@ -82,7 +83,7 @@ export class LanguageService {
             return allowed[0] as Language
         }
 
-        // fallback to english
-        return Language.EN
+        // fallback to german
+        return Language.DE
     }
 }
