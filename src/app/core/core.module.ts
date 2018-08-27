@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule, ErrorHandler } from '@angular/core'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
@@ -11,6 +11,7 @@ import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
 import { reducers } from '../store'
+import { SentryErrorHandler } from '../sentry'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
     const renderer = new MarkedRenderer()
@@ -75,6 +76,11 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         }),
     ],
     exports: [NotificationsModule, NgProgressModule, MarkdownModule],
-    providers: [],
+    providers: [
+        {
+            provide: ErrorHandler,
+            useClass: SentryErrorHandler,
+        },
+    ],
 })
 export class CoreModule {}

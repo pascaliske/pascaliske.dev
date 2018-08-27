@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core'
+import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -7,7 +7,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { environment } from '../environments/environment'
-import { SentryErrorHandler } from './sentry'
 import { AppRoutingModule } from './app-routing.module'
 import { CoreModule } from './core/core.module'
 import { HeaderModule } from './components/header/header.module'
@@ -47,12 +46,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
         FooterModule,
         CookieBannerModule,
     ],
-    providers: [
-        {
-            provide: ErrorHandler,
-            useClass: SentryErrorHandler,
-        },
-    ],
+    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
