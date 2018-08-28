@@ -1,8 +1,10 @@
 {
   "hosting": {
     "public": "dist/app",
+    "trailingSlash": false,
     "ignore": [
       "firebase.json",
+      "stats.json",
       "**/.*",
       "**/node_modules/**"
     ],
@@ -14,6 +16,26 @@
       {
         "source": "/cfns/send-contact-request",
         "function": "sendContactRequest"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/(main|polyfills|runtime|scripts|styles).*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "private, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|json|txt)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
       }
     ]
   },
