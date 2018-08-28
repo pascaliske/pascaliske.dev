@@ -7,9 +7,8 @@
     "ng": "ng",
     "firebase": "firebase",
     "start": "ngw serve",
-    "build": "yarn build-app && yarn build-cfn",
-    "build-app": "ngw build --prod --aot --build-optimizer --stats-json",
-    "build-cfn": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
+    "build": "ngw build --prod --aot --build-optimizer --stats-json",
+    "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "lint": "ngw lint pascal-iske --fix",
     "check": "snyk test",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}"
