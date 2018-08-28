@@ -46,21 +46,23 @@ $component: 'cmp-to-top-button';
             }
         }
 
-        &:hover {
-            background-color: $color-primary;
-        }
-
-        &:hover .arrows {
-            top: -51px;
-        }
-
-        &:hover .arrow {
-            &--dark {
-                opacity: 0;
+        @media (hover: hover) {
+            &:hover {
+                background-color: $color-primary;
             }
 
-            &--light {
-                opacity: 1;
+            &:hover .arrows {
+                top: -51px;
+            }
+
+            &:hover .arrow {
+                &--dark {
+                    opacity: 0;
+                }
+
+                &--light {
+                    opacity: 1;
+                }
             }
         }
     }

@@ -32,13 +32,15 @@
         content: ' ';
     }
 
-    &:hover {
-        color: #61718c;
-    }
+    @media (hover: hover) {
+        &:hover {
+            color: #61718c;
+        }
 
-    &:hover &__text::after {
-        width: 100%;
-        left: 0;
+        &:hover &__text::after {
+            width: 100%;
+            left: 0;
+        }
     }
 }
 
