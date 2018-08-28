@@ -21,7 +21,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     renderer.hr = (): string => '<div class="md-divider"></div>'
     renderer.link = (href: string, title: string, text: string): string => {
         const content: string = `<span class="md-link__text">${text}</span>`
-        return `<a class="md-link" href="${href}" title="${title}">${content}</a>`
+        return `<a class="md-link" href="${href}" title="${title || text}">${content}</a>`
     }
     renderer.list = (body: string, ordered: boolean): string => {
         if (ordered) {
