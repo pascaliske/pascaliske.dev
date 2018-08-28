@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core'
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { TranslateService } from '@ngx-translate/core'
 import { Observable, BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
@@ -25,11 +26,15 @@ export class LanguageService {
      * @param {TrackingService} trackingService
      */
     public constructor(
+        @Inject(PLATFORM_ID) private platformId: object,
         private translateService: TranslateService,
         private trackingService: TrackingService,
     ) {
         this.translateService.setDefaultLang(Language.DE)
-        this.lang$ = new BehaviorSubject(this.preselect([Language.DE, Language.EN]))
+
+        if (isPlatformBrowser(this.platformId) && !this.lang$) {
+            this.lang$ = new BehaviorSubject(this.preselect([Language.DE, Language.EN]))
+        }
     }
 
     /**
