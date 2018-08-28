@@ -1,35 +1,54 @@
 import { Injectable } from '@angular/core'
-import { BehaviorSubject, fromEvent, merge } from 'rxjs'
-import { map, distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
+import { Observable, fromEvent, merge } from 'rxjs'
+import { startWith, map, distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
 
 @Injectable()
 export class NetworkService {
     /**
+     * The current online / offline state.
      *
+     * @param {Observable<boolean>}
      */
-    public online$: BehaviorSubject<boolean> = new BehaviorSubject(navigator.onLine)
+    public online$: Observable<boolean> = this.share(
+        merge(fromEvent(window, 'online'), fromEvent(window, 'offline')).pipe(
+            startWith(navigator.onLine),
+            map(() => navigator.onLine),
+        ),
+    )
 
     /**
-     * Initializes the network service.
+     * The current network speed.
+     *
+     * @param {Observable<'slow' | 'fast'>}
      */
-    public constructor() {
-        const events = [
-            fromEvent(window, 'online').pipe(map(() => true)),
-            fromEvent(window, 'offline').pipe(map(() => false)),
-        ]
+    public speed$: Observable<'slow' | 'fast'> = this.share(
+        fromEvent((navigator as any).connection, 'change').pipe(
+            startWith((navigator as any).connection.effectiveType),
+            map<any, 'slow' | 'fast'>(() => {
+                switch ((navigator as any).connection.effectiveType) {
+                    case 'slow-2g':
+                    case '2g':
+                        return 'slow'
 
-        merge(...events)
-            .pipe(
-                distinctUntilChanged(),
-                debounceTime(100),
-                share(),
-            )
-            .subscribe(online => {
-                this.online$.next(online)
-            })
-    }
+                    case '3g':
+                    case '4g':
+                        return 'fast'
+                }
+            }),
+        ),
+    )
 
-    public get online(): boolean {
-        return this.online$.getValue()
+    /**
+     * Debounces the given observable and shares it globally.
+     *
+     * @param {Observable<T>} observable
+     * @returns {Observable<T>}
+     */
+    private share<T = any>(observable: Observable<T>): Observable<T> {
+        return observable.pipe(
+            distinctUntilChanged(),
+            debounceTime(100),
+            share(),
+        )
     }
 }
