@@ -4,9 +4,9 @@
 
 ## Used frameworks, libs, tools, services...
 
-|  ![Angular][ng]   | ![TypeScript][ts] |  ![RxJS][rxjs]  |     ![ngrx][ngrx]     | ![Prettier][prettier] | ![Susy Grid][susy] | ![Lodash][lodash] |
-| :---------------: | :---------------: | :-------------: | :-------------------: | :-------------------: | :----------------: | :---------------: |
-| Angular Framework |    TypeScript     | RxJS Extensions | ngrx State Management |  Prettier Formatting  |      SusyGrid      |      Lodash       |
+|  ![Angular][ng]   | ![TypeScript][ts] |  ![RxJS][rxjs]  | ![Prettier][prettier] | ![Susy Grid][susy] | ![Lodash][lodash] |
+| :---------------: | :---------------: | :-------------: | :-------------------: | :----------------: | :---------------: |
+| Angular Framework |    TypeScript     | RxJS Extensions |  Prettier Formatting  |      SusyGrid      |      Lodash       |
 
 | ![Firebase Hosting][firebase] | ![GitHub][github] | ![Yarn][yarn] | ![Travis CI][travis] | ![Snyk][snyk] | ![Sentry][sentry] | ![Google Analytics][analytics] |
 | :---------------------------: | :---------------: | :-----------: | :------------------: | :-----------: | :---------------: | :----------------------------: |
@@ -19,7 +19,6 @@ and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json
 [ng]: https://angular.io/assets/images/logos/angular/angular.svg
 [ts]: https://github.com/remojansen/logo.ts/raw/master/ts.png
 [rxjs]: https://github.com/ReactiveX/rxjs/raw/master/doc/asset/Rx_Logo_S.png
-[ngrx]: https://avatars2.githubusercontent.com/u/16272733?v=3&s=200
 [prettier]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-wide-light.png
 [susy]: http://oddbird.net/static/images/susy/susy-logos/logo-knockout.svg
 [lodash]: https://lodash.com/assets/img/lodash.svg

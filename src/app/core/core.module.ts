@@ -1,6 +1,4 @@
 import { NgModule, ErrorHandler } from '@angular/core'
-import { StoreModule } from '@ngrx/store'
-import { EffectsModule } from '@ngrx/effects'
 import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { NgProgressModule } from '@ngx-progressbar/core'
@@ -9,7 +7,6 @@ import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
-import { reducers } from '../store'
 import { SentryErrorHandler } from '../sentry'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
@@ -31,17 +28,15 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     renderer.listitem = (text: string): string => `<li class="md-list__item">${text}</li>`
 
     return {
-        gfm: true,
-        tables: true,
         renderer: renderer,
+        tables: true,
+        gfm: true,
     }
 }
 
 @NgModule({
     declarations: [],
     imports: [
-        StoreModule.forRoot(reducers),
-        EffectsModule.forRoot([]),
         FormElementsModule.forRoot({
             email: {
                 suggestions: true,
