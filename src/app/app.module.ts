@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
-import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
+import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
@@ -24,10 +24,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
     imports: [
         CommonModule,
         HttpClientModule,
-        BrowserModule.withServerTransition({
-            appId: 'pascal-iske-server',
-        }),
-        BrowserTransferStateModule,
+        BrowserModule,
         BrowserAnimationsModule,
         ServiceWorkerModule.register('/ngsw-worker.js', {
             enabled: environment.production,

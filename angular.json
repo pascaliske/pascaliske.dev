@@ -32,7 +32,6 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "aot": true,
             "assets": [
               {
                 "glob": "**/*",
@@ -59,7 +58,9 @@
               "src/scss/common.scss"
             ],
             "scripts": [
-              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+              "node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/solid.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/brands.min.js"
             ]
           },
           "configurations": {
@@ -110,14 +111,6 @@
               "**/node_modules/**",
               "**/*.json"
             ]
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
           }
         }
       }

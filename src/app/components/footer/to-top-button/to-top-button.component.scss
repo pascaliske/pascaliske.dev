@@ -10,6 +10,7 @@ $component: 'cmp-to-top-button';
     position: absolute;
     top: 0;
     left: 50%;
+    padding: 0;
     transform: translate(-50%, -50%);
     overflow: hidden;
 
@@ -45,21 +46,23 @@ $component: 'cmp-to-top-button';
             }
         }
 
-        &:hover {
-            background-color: $color-primary;
-        }
-
-        &:hover .arrows {
-            top: -51px;
-        }
-
-        &:hover .arrow {
-            &--dark {
-                opacity: 0;
+        @media (hover: hover) {
+            &:hover {
+                background-color: $color-primary;
             }
 
-            &--light {
-                opacity: 1;
+            &:hover .arrows {
+                top: -51px;
+            }
+
+            &:hover .arrow {
+                &--dark {
+                    opacity: 0;
+                }
+
+                &--light {
+                    opacity: 1;
+                }
             }
         }
     }

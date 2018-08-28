@@ -39,9 +39,9 @@ p {
 button,
 input,
 textarea,
-select {
+select,
+[type="submit"] {
     border: 0;
     outline: 0;
-    padding: 0;
     -webkit-appearance: none;
 }
