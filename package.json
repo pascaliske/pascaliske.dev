@@ -79,6 +79,8 @@
     "ngw": "^6.0.8",
     "nodemailer": "^4.6.8",
     "prettier": "^1.14.2",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
     "rxjs-tslint-rules": "^4.7.2",
     "snyk": "^1.94.0",
     "ts-node": "~7.0.1",

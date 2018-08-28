@@ -1,6 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core'
 import { StoreModule } from '@ngrx/store'
-import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
 import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
@@ -42,7 +41,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     declarations: [],
     imports: [
         StoreModule.forRoot(reducers),
-        StoreDevtoolsModule.instrument(),
         EffectsModule.forRoot([]),
         FormElementsModule.forRoot({
             email: {
