@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Observable, Subject } from 'rxjs'
 import { finalize, filter } from 'rxjs/operators'
-import { autobind } from 'core-decorators'
+import { bind } from 'decko'
 
 /**
  * ViewportService
@@ -61,7 +61,7 @@ export class ViewportService {
      * @param {Array<IntersectionObserverEntry>} entries -
      * @returns {void}
      */
-    @autobind
+    @bind
     private handler(entries: Array<IntersectionObserverEntry>): void {
         entries.forEach(entry => this.callback$.next(entry))
     }
