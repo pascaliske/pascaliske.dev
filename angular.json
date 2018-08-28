@@ -4,16 +4,17 @@
   "newProjectRoot": "projects",
   "defaultProject": "pascal-iske",
   "cli": {
-    "packageManager": "yarn",
-    "defaultCollection": "@ngrx/schematics"
+    "packageManager": "yarn"
   },
   "schematics": {
-    "@ngrx/schematics:component": {
+    "@schematics/angular:component": {
       "prefix": "cmp",
-      "styleext": "scss"
+      "styleext": "scss",
+      "export": true
     },
-    "@ngrx/schematics:directive": {
-      "prefix": ""
+    "@schematics/angular:directive": {
+      "prefix": "",
+      "export": true
     }
   },
   "projects": {

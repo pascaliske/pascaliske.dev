@@ -1,4 +1,11 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core'
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    ChangeDetectionStrategy,
+    HostBinding,
+} from '@angular/core'
 import { modifiers } from '@pascaliske/html-helpers'
 
 @Component({
@@ -13,6 +20,12 @@ export class NavigationButtonComponent {
 
     @Output()
     public stateChange: EventEmitter<boolean> = new EventEmitter()
+
+    @HostBinding('attr.id')
+    public id: string = 'navigation-button'
+
+    @HostBinding('attr.aria-label')
+    public ariaLabel: string = 'Toggle mobile navigation'
 
     public constructor() {}
 

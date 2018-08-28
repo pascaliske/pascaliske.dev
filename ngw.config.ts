@@ -1,6 +1,9 @@
 import { Path } from '@angular-devkit/core'
 import { NormalizedBrowserBuilderSchema } from '@angular-devkit/build-angular'
+import { join } from 'path'
+import { sync } from 'glob'
 import { Configuration } from 'webpack'
+import * as PurifyCSSPlugin from 'purifycss-webpack'
 
 export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
     root: Path
@@ -11,5 +14,13 @@ export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
 const command = process.argv[2].toLowerCase()
 
 export default function(config: Configuration, options: WebpackOptions) {
+    if (command === 'build') {
+        config.plugins.push(
+            new PurifyCSSPlugin({
+                paths: sync(join(__dirname, '**/*.html')),
+            }),
+        )
+    }
+
     return config
 }

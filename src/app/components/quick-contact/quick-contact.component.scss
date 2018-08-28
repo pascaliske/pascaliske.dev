@@ -7,6 +7,7 @@ $component: 'cmp-quick-contact';
     padding: 40px;
     position: relative;
     border: 1px $color-white2 solid;
+    background-color: rgba($color-grey1, .01);
 
     @include use-breakpoint(mini-tablet) {
         margin: 40px;
@@ -30,10 +31,6 @@ $component: 'cmp-quick-contact';
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
-
-        @include use-breakpoint(desktop) {
-            // margin: 0 80px;
-        }
     }
 
     &__item {
