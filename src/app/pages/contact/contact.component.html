@@ -33,8 +33,8 @@
                 </cmp-f-row>
                 <cmp-f-row>
                     <cmp-f-column [flex]="true" align="right">
-                        <cmp-f-button [text]="'CONTACT_PAGE_FORM_LABEL_RESET'|translate" theme="secondary" [disabled]="contactForm.invalid" (click)="reset()"></cmp-f-button>
-                        <cmp-f-button [text]="'CONTACT_PAGE_FORM_LABEL_SUBMIT'|translate" type="submit" theme="primary" [disabled]="contactForm.invalid"></cmp-f-button>
+                        <cmp-f-button [text]="'CONTACT_PAGE_FORM_LABEL_RESET'|translate" [theme]="'secondary'" [disabled]="contactForm.invalid" (click)="reset()"></cmp-f-button>
+                        <cmp-f-button [text]="'CONTACT_PAGE_FORM_LABEL_SUBMIT'|translate" [type]="'submit'" [theme]="'primary'" [disabled]="contactForm.invalid"></cmp-f-button>
                     </cmp-f-column>
                 </cmp-f-row>
             </form>
