@@ -389,9 +389,9 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.1.tgz#53f349bb986ab273d601175aa1b25a655ab90ee3"
 
-"@pascaliske/form-elements@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.0.4.tgz#63dc91e56a93f767a86e4933b47c5f1184035546"
+"@pascaliske/form-elements@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.1.0.tgz#03e2381998abc335ba7d21e565f94e67ccca3d5f"
   dependencies:
     flatpickr "^4.5.1"
     fuzzysearch "^1.0.3"
