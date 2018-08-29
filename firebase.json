@@ -20,7 +20,7 @@
     ],
     "headers": [
       {
-        "source": "**/(main|polyfills|runtime|scripts|styles).*.@(js|css)",
+        "source": "**/*.@(js|css)",
         "headers": [
           {
             "key": "Cache-Control",
