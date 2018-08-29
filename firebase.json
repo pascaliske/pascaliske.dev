@@ -5,6 +5,8 @@
     "ignore": [
       "firebase.json",
       "stats.json",
+      "stats.html",
+      "3rdpartylicenses.txt",
       "**/.*",
       "**/node_modules/**"
     ],

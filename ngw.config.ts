@@ -4,6 +4,7 @@ import { join } from 'path'
 import { sync } from 'glob'
 import { Configuration } from 'webpack'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
+import * as VisualizerPlugin from 'webpack-visualizer-plugin'
 
 export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
     root: Path
@@ -18,6 +19,9 @@ export default function(config: Configuration, options: WebpackOptions) {
         config.plugins.push(
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
+            }),
+            new VisualizerPlugin({
+                filename: './stats.html',
             }),
         )
     }
