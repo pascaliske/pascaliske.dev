@@ -1,4 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
     selector: 'cmp-icon',
@@ -10,22 +11,8 @@ export class IconComponent {
     public static readonly cmpName: string = 'IconComponent'
 
     @Input()
-    public name: string
+    public icon: IconDefinition
 
     @Input()
     public animate: boolean = false
-
-    public constructor() {}
-
-    public get set(): string {
-        const [, set] = this.name.split('-').reverse()
-
-        return set ? set : 'Fas'
-    }
-
-    public get id(): any {
-        const [name] = this.name.split('-').reverse()
-
-        return name
-    }
 }
