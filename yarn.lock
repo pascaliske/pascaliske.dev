@@ -389,11 +389,11 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.1.tgz#53f349bb986ab273d601175aa1b25a655ab90ee3"
 
-"@pascaliske/form-elements@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.1.0.tgz#03e2381998abc335ba7d21e565f94e67ccca3d5f"
+"@pascaliske/form-elements@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.1.1.tgz#800bd88fe7ec9304ed710aa6187b65e09c2e4d36"
   dependencies:
-    flatpickr "^4.5.1"
+    flatpickr "4.5.0"
     fuzzysearch "^1.0.3"
     tslib "^1.9.0"
 
@@ -3497,9 +3497,9 @@ flat-arguments@^1.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isobject "^3.0.0"
 
-flatpickr@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.1.tgz#f65eaf54c07538f87d6f68a67b03cf816d7fb82f"
+flatpickr@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.0.tgz#f72c7164a1c24e3ad419e3b2209d1a2d3604724a"
 
 flush-write-stream@^1.0.0:
   version "1.0.3"
