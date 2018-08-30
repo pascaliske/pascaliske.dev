@@ -5,6 +5,8 @@
     "ignore": [
       "firebase.json",
       "stats.json",
+      "stats.html",
+      "3rdpartylicenses.txt",
       "**/.*",
       "**/node_modules/**"
     ],
@@ -20,7 +22,7 @@
     ],
     "headers": [
       {
-        "source": "**/(main|polyfills|runtime|scripts|styles).*.@(js|css)",
+        "source": "**/*.@(js|css)",
         "headers": [
           {
             "key": "Cache-Control",

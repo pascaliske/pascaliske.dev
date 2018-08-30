@@ -7,7 +7,7 @@ $component: 'cmp-quick-contact';
     padding: 40px;
     position: relative;
     border: 1px $color-white2 solid;
-    background-color: rgba($color-grey1, .01);
+    background-color: $color-white1;
 
     @include use-breakpoint(mini-tablet) {
         margin: 40px;

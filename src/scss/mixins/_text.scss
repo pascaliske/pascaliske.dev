@@ -2,7 +2,7 @@
     &:not(:last-of-type)::after {
         margin-left: 2px;
         margin-right: 6px;
-        color: rgba($color-secondary, .4);
+        color: rgba($color-secondary, .2);
         content: ' // ';
     }
 }
