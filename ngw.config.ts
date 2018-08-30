@@ -16,6 +16,7 @@ const command = process.argv[2].toLowerCase()
 
 export default function(config: Configuration, options: WebpackOptions) {
     if (command === 'build') {
+        config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
