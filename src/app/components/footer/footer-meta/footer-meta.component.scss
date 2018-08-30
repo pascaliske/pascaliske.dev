@@ -63,7 +63,7 @@ $component: 'cmp-footer-meta';
     }
 
     &__link {
-        @include seperator();
+        @include separator();
     }
 
     &__languages {
