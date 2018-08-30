@@ -1,4 +1,12 @@
 import { Component } from '@angular/core'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import {
+    faWpforms,
+    faTwitter,
+    faXing,
+    faLinkedin,
+    faGithub,
+} from '@fortawesome/free-brands-svg-icons'
 
 @Component({
     selector: 'cmp-quick-contact',
@@ -9,9 +17,14 @@ export class QuickContactComponent {
     public static readonly cmpName: string = 'QuickContactComponent'
 
     /**
-     * Initializes the component.
-     *
-     * @returns {FooterMetaComponent}
+     * Provide icons for the template.
      */
-    public constructor() {}
+    public readonly icons = {
+        faWpforms,
+        faEnvelope,
+        faTwitter,
+        faXing,
+        faLinkedin,
+        faGithub,
+    }
 }
