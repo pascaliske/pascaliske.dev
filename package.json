@@ -87,6 +87,7 @@
     "tslint-config-prettier": "^1.15.0",
     "typescript": "~2.9.2",
     "webpack": "^4.17.1",
+    "webpack-plugin-replace": "^1.1.1",
     "webpack-visualizer-plugin": "^0.1.11"
   }
 }
