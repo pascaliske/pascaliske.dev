@@ -4,7 +4,7 @@ $component: 'cmp-language-switch';
 
 @include cmp-base($component) {
     &__language {
-        @include seperator();
+        @include separator();
         display: inline-block;
     }
 }

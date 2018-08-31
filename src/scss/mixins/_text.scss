@@ -1,4 +1,4 @@
-@mixin seperator() {
+@mixin separator() {
     &:not(:last-of-type)::after {
         margin-left: 2px;
         margin-right: 6px;
