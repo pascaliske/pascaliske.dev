@@ -90,12 +90,28 @@
     rxjs "^6.0.0"
     source-map "^0.5.6"
 
+"@angular-devkit/core@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.8.0.tgz#d31c26677f7d5302e279946823933bbc95049e56"
+  dependencies:
+    ajv "~6.4.0"
+    chokidar "^2.0.3"
+    rxjs "~6.2.0"
+    source-map "^0.5.6"
+
 "@angular-devkit/schematics@0.7.5":
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.7.5.tgz#f46b121f29cb40ad6095285d27a515114a56c5d6"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
+
+"@angular-devkit/schematics@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.8.0.tgz#6f24dc1d51b548580e1300d18c3cfb53e9a07ece"
+  dependencies:
+    "@angular-devkit/core" "0.8.0"
+    rxjs "~6.2.0"
 
 "@angular/animations@^6.1.6":
   version "6.1.6"
@@ -173,13 +189,13 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/pwa@^0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.7.5.tgz#cdc7ea0352d3fa1a743b64da3fca85bc70154349"
+"@angular/pwa@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.8.0.tgz#65cf255837c197e7c0aa5d4f19a627dc9027cc5f"
   dependencies:
-    "@angular-devkit/core" "0.7.5"
-    "@angular-devkit/schematics" "0.7.5"
-    "@schematics/angular" "0.7.5"
+    "@angular-devkit/core" "0.8.0"
+    "@angular-devkit/schematics" "0.8.0"
+    "@schematics/angular" "0.8.0"
     typescript "~2.6.2"
 
 "@angular/router@^6.1.6":
@@ -496,6 +512,14 @@
   dependencies:
     "@angular-devkit/core" "0.7.5"
     "@angular-devkit/schematics" "0.7.5"
+    typescript ">=2.6.2 <2.10"
+
+"@schematics/angular@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.8.0.tgz#cc7a6b4c03746befd6252f981c771a5ff4ef1f73"
+  dependencies:
+    "@angular-devkit/core" "0.8.0"
+    "@angular-devkit/schematics" "0.8.0"
     typescript ">=2.6.2 <2.10"
 
 "@schematics/update@0.7.5":
@@ -7436,7 +7460,7 @@ rxjs-tslint-rules@^4.7.2:
     resolve "^1.4.0"
     tslib "^1.8.0"
 
-rxjs@^6.0.0, rxjs@^6.2.2:
+rxjs@^6.0.0, rxjs@^6.2.2, rxjs@~6.2.0:
   version "6.2.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
   dependencies:
