@@ -28,10 +28,10 @@
     "@angular/http": "^6.1.6",
     "@angular/platform-browser": "^6.1.6",
     "@angular/platform-browser-dynamic": "^6.1.6",
-    "@angular/pwa": "^0.7.5",
+    "@angular/pwa": "^0.8.0",
     "@angular/router": "^6.1.6",
     "@angular/service-worker": "^6.1.6",
-    "@fortawesome/angular-fontawesome": "^0.1.1",
+    "@fortawesome/angular-fontawesome": "^0.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
     "@fortawesome/free-regular-svg-icons": "^5.3.1",
@@ -60,7 +60,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.7.5",
+    "@angular-devkit/build-angular": "~0.8.0",
     "@angular/cli": "^6.1.5",
     "@angular/compiler-cli": "^6.1.6",
     "@angular/language-service": "^6.1.6",
