@@ -3,6 +3,8 @@ import { NormalizedBrowserBuilderSchema } from '@angular-devkit/build-angular'
 import { join } from 'path'
 import { sync } from 'glob'
 import { Configuration } from 'webpack'
+import * as DashboardPlugin from 'webpack-dashboard/plugin'
+import * as ReplacePlugin from 'webpack-plugin-replace'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
 import * as VisualizerPlugin from 'webpack-visualizer-plugin'
 
@@ -12,12 +14,25 @@ export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
     options: T
 }
 
+// tslint:disable-next-line
+const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
 
 export default function(config: Configuration, options: WebpackOptions) {
+    if (command === 'serve') {
+        config.plugins.push(new DashboardPlugin())
+    }
+
     if (command === 'build') {
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
+            new DashboardPlugin(),
+            new ReplacePlugin({
+                include: ['environment.ts'],
+                values: {
+                    SENTRY_RELEASE: `v${pkg.version}`,
+                },
+            }),
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
             }),
