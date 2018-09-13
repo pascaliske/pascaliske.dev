@@ -44,7 +44,7 @@
     "@pascaliske/form-elements": "^1.1.1",
     "@pascaliske/html-helpers": "^1.2.1",
     "@pascaliske/ngx-notifications": "^1.0.7",
-    "@sentry/browser": "^4.0.0-beta.12",
+    "@sentry/browser": "^4.0.0-rc.2",
     "cookieconsent": "^3.1.0",
     "core-js": "^2.5.7",
     "decko": "^1.2.0",
