@@ -10,7 +10,7 @@
     "build": "ngw build --prod --aot --build-optimizer --stats-json",
     "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "lint": "ngw lint pascal-iske --fix",
-    "check": "snyk test",
+    "check": "snyk test && snyk monitor",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}"
   },
   "private": true,
