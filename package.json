@@ -68,7 +68,7 @@
     "@types/google.analytics": "^0.0.39",
     "@types/highlight.js": "^9.12.3",
     "@types/lodash-es": "^4.17.1",
-    "@types/node": "~10.10.0",
+    "@types/node": "~10.11.0",
     "@types/webpack": "^4.4.11",
     "codelyzer": "^4.4.4",
     "cors": "^2.8.4",
