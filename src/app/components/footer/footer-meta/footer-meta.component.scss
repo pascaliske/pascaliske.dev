@@ -59,11 +59,8 @@ $component: 'cmp-footer-meta';
     }
 
     &__link {
-        display: inline-block;
-    }
-
-    &__link {
         @include separator();
+        display: inline-block;
     }
 
     &__languages {
