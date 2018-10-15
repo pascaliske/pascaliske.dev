@@ -2,7 +2,6 @@ import { Path } from '@angular-devkit/core'
 import { NormalizedBrowserBuilderSchema } from '@angular-devkit/build-angular'
 import { join } from 'path'
 import { sync } from 'glob'
-import { Configuration } from 'webpack'
 import * as DashboardPlugin from 'webpack-dashboard/plugin'
 import * as ReplacePlugin from 'webpack-plugin-replace'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
@@ -18,7 +17,7 @@ export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
 const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
 
-export default function(config: Configuration, options: WebpackOptions) {
+export default function(config) {
     if (command === 'serve') {
         config.plugins.push(new DashboardPlugin())
     }
