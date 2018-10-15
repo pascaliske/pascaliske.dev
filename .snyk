@@ -6,31 +6,46 @@ ignore:
     - node-pre-gyp > tar > chownr:
         reason: None given
         expires: '2018-10-13T07:43:34.148Z'
+      '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
     - '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-10-13T07:43:34.148Z'
-    - firebase-admin > @google-cloud/firestore > google-gax > grpc > node-pre-gyp > tar > chownr:
-        reason: None given
-        expires: '2018-09-07T22:37:46.639Z'
       '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-10-13T07:43:34.148Z'
-    - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        expires: '2018-11-14T09:04:29.979Z'
+    - firebase-admin > @google-cloud/firestore > google-gax > grpc > node-pre-gyp > tar > chownr:
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
       '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-10-13T07:43:34.148Z'
-    - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        expires: '2018-11-14T09:04:29.979Z'
+    - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
       '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-10-13T07:43:34.148Z'
+        expires: '2018-11-14T09:04:29.979Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-09-07T22:37:46.639Z'
+      node-pre-gyp > tar > chownr:
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
     - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
     - firebase-functions > firebase-admin > @google-cloud/firestore > google-gax > grpc > node-pre-gyp > tar > chownr:
         reason: None given
         expires: '2018-09-15T18:36:24.004Z'
+    - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-10-13T07:43:34.148Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-10-13T07:43:34.148Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-10-13T07:43:34.148Z'
 patch: {}
