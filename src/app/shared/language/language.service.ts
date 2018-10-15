@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { TrackingService } from '../tracking/tracking.service'
 
-export enum Language {
+export const enum Language {
     EN = 'en',
     DE = 'de',
 }
