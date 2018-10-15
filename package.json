@@ -1,7 +1,7 @@
 {
   "name": "pascal-iske",
   "description": "Angular Web App built with Travis CI and deployed with Firebase.",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "license": "MIT",
   "scripts": {
     "ng": "ngw",
