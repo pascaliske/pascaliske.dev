@@ -5,7 +5,7 @@ import { share, debounceTime } from 'rxjs/operators'
 /**
  * Enumeration of all available breakpoints.
  */
-export enum Breakpoints {
+export const enum Breakpoints {
     DESKTOP = 'desktop',
     TABLET = 'tablet',
     MINI_TABLET = 'mini-tablet',
