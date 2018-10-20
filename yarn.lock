@@ -6170,9 +6170,9 @@ ngx-cookieconsent@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.0.0.tgz#c54a2a057e1beec11bab3318800f7535b18a1f24"
 
-ngx-markdown@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-6.3.0.tgz#28619a19159dfd30e872a2725ef11aaf4c8aef23"
+ngx-markdown@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-7.0.0.tgz#c1b826b18da66159bacfb849bc04e046a442a77c"
   dependencies:
     "@types/marked" "^0.4.2"
     marked "^0.5.1"
