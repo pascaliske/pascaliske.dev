@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@angular-devkit/architect@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.10.2.tgz#1d19f305f717cd55d8560ea731cfc336edff0978"
+  dependencies:
+    "@angular-devkit/core" "7.0.2"
+    rxjs "6.3.3"
+
 "@angular-devkit/architect@0.9.0-rc.3":
   version "0.9.0-rc.3"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.9.0-rc.3.tgz#a282bb2c43ed3d06f5b201b71cd7d640b05fdd2e"
@@ -9,20 +16,20 @@
     "@angular-devkit/core" "7.0.0-rc.3"
     rxjs "6.3.3"
 
-"@angular-devkit/build-angular@^0.9.0-rc.3":
-  version "0.9.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.9.0-rc.3.tgz#367654774ee50a170b1abb55f0c2f37166e27bef"
+"@angular-devkit/build-angular@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.10.2.tgz#cdb35c444d8a5dc0486614c3e6ead755933e362e"
   dependencies:
-    "@angular-devkit/architect" "0.9.0-rc.3"
-    "@angular-devkit/build-optimizer" "0.9.0-rc.3"
-    "@angular-devkit/build-webpack" "0.9.0-rc.3"
-    "@angular-devkit/core" "7.0.0-rc.3"
-    "@ngtools/webpack" "7.0.0-rc.3"
+    "@angular-devkit/architect" "0.10.2"
+    "@angular-devkit/build-optimizer" "0.10.2"
+    "@angular-devkit/build-webpack" "0.10.2"
+    "@angular-devkit/core" "7.0.2"
+    "@ngtools/webpack" "7.0.2"
     ajv "6.5.3"
     autoprefixer "8.4.1"
     circular-dependency-plugin "5.0.2"
     clean-css "4.2.1"
-    copy-webpack-plugin "4.5.2"
+    copy-webpack-plugin "4.5.3"
     file-loader "2.0.0"
     glob "7.1.3"
     istanbul "0.4.5"
@@ -62,21 +69,21 @@
   optionalDependencies:
     node-sass "4.9.3"
 
-"@angular-devkit/build-optimizer@0.9.0-rc.3":
-  version "0.9.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.9.0-rc.3.tgz#3a44b01abbaf0dbe39d5e0d21568f2fc4a89c6e1"
+"@angular-devkit/build-optimizer@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.10.2.tgz#c00359ee8bed74b2a9ce43a5cf56287637982794"
   dependencies:
     loader-utils "1.1.0"
     source-map "0.5.6"
-    typescript "3.1.1"
+    typescript "3.1.3"
     webpack-sources "1.2.0"
 
-"@angular-devkit/build-webpack@0.9.0-rc.3":
-  version "0.9.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.9.0-rc.3.tgz#501405901edd887a0fdbd3b295076997ae0e20ec"
+"@angular-devkit/build-webpack@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.10.2.tgz#0c9044a071a0ecd495417a238587dca869a11265"
   dependencies:
-    "@angular-devkit/architect" "0.9.0-rc.3"
-    "@angular-devkit/core" "7.0.0-rc.3"
+    "@angular-devkit/architect" "0.10.2"
+    "@angular-devkit/core" "7.0.2"
     rxjs "6.3.3"
 
 "@angular-devkit/core@7.0.0-rc.3":
@@ -409,11 +416,11 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@ngtools/webpack@7.0.0-rc.3":
-  version "7.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-7.0.0-rc.3.tgz#85eac0bff29294ec3e12c6306d830c85de1e95e2"
+"@ngtools/webpack@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-7.0.2.tgz#db7441757b8c412e1b08ad0b117646e911afd4bb"
   dependencies:
-    "@angular-devkit/core" "7.0.0-rc.3"
+    "@angular-devkit/core" "7.0.2"
     enhanced-resolve "4.1.0"
     rxjs "6.3.3"
     tree-kill "1.2.0"
@@ -2511,9 +2518,9 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-copy-webpack-plugin@4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.2.tgz#d53444a8fea2912d806e78937390ddd7e632ee5c"
+copy-webpack-plugin@4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.3.tgz#14a224d205e46f7a79f7956028e1da6df2225ff2"
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
