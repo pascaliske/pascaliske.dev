@@ -40,7 +40,7 @@
     "@ngx-progressbar/http": "~5.2.0",
     "@ngx-progressbar/router": "~5.2.0",
     "@ngx-translate/core": "^10.0.2",
-    "@ngx-translate/http-loader": "^3.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "@pascaliske/form-elements": "^1.1.1",
     "@pascaliske/html-helpers": "^1.2.2",
     "@pascaliske/ngx-notifications": "^1.0.9",
