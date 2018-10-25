@@ -3705,9 +3705,9 @@ firebase-functions@^2.0.5:
     jsonwebtoken "^8.2.1"
     lodash "^4.6.1"
 
-firebase-tools@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-5.0.1.tgz#313e18fc830fb1188401f587d8bccb1cf5f01286"
+firebase-tools@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.0.0.tgz#a0820b197c3a0a8aab7bea90a2219f202632e600"
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
