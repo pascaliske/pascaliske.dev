@@ -23,16 +23,13 @@
     "files": [
       {
         "path": "dist/app/*.js",
-        "maxSize": "800kB"
+        "maxSize": "250kB"
       },
       {
         "path": "dist/cfn/*.js",
-        "maxSize": "10kB"
+        "maxSize": "5kB"
       }
-    ],
-    "ci": {
-      "trackBranches": ["master", "develop"]
-    }
+    ]
   },
   "dependencies": {
     "@angular/animations": "^7.0.1",
