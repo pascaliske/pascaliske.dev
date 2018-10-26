@@ -262,9 +262,9 @@
   dependencies:
     tslib "1.9.0"
 
-"@fortawesome/angular-fontawesome@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.2.1.tgz#8278e73b45e01496c587fb75914cad22a66fe551"
+"@fortawesome/angular-fontawesome@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.3.0.tgz#380492f186469ce03d6fdbb3ec719810f771bf62"
   dependencies:
     tslib "^1.9.0"
 
@@ -450,9 +450,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-translate/http-loader@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-3.0.1.tgz#20b0f98bc6c25321129d3e3302ab3cc489c0a42a"
+"@ngx-translate/http-loader@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-4.0.0.tgz#8a555248ad4b7d513460fcec9da25b0447962f1d"
   dependencies:
     tslib "^1.9.0"
 
@@ -558,46 +558,46 @@
     semver "5.5.1"
     semver-intersect "1.4.0"
 
-"@sentry/browser@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.1.1.tgz#9db1e765bf2afcbe0fb44b028abdf5c74d6e77b0"
+"@sentry/browser@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.2.3.tgz#8ee405ba5cad5875945ebbfd5441daa9771bff7f"
   dependencies:
-    "@sentry/core" "4.1.1"
-    "@sentry/types" "4.1.0"
-    "@sentry/utils" "4.1.1"
+    "@sentry/core" "4.2.3"
+    "@sentry/types" "4.2.3"
+    "@sentry/utils" "4.2.3"
 
-"@sentry/core@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.1.1.tgz#013ee6ee32033b9a404da5bd27f5a2417dcb1a89"
+"@sentry/core@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.2.3.tgz#58d45e0e6b3f805e9ccd2c32fdff40bc612a7f80"
   dependencies:
-    "@sentry/hub" "4.1.1"
-    "@sentry/minimal" "4.1.1"
-    "@sentry/types" "4.1.0"
-    "@sentry/utils" "4.1.1"
+    "@sentry/hub" "4.2.3"
+    "@sentry/minimal" "4.2.3"
+    "@sentry/types" "4.2.3"
+    "@sentry/utils" "4.2.3"
 
-"@sentry/hub@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.1.1.tgz#ef093fe4f42587c7868b66299584b5a9f9d67fc6"
+"@sentry/hub@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.2.3.tgz#90b84d351051cd537e36836d38dd4ae4b90617bb"
   dependencies:
-    "@sentry/types" "4.1.0"
-    "@sentry/utils" "4.1.1"
+    "@sentry/types" "4.2.3"
+    "@sentry/utils" "4.2.3"
 
-"@sentry/minimal@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.1.1.tgz#46d8a35e0d82b0903ed83dba21d8344b601145a5"
+"@sentry/minimal@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.2.3.tgz#f7cde49e797fa75df652bcb95fb06a8a4df4d7ac"
   dependencies:
-    "@sentry/hub" "4.1.1"
-    "@sentry/types" "4.1.0"
+    "@sentry/hub" "4.2.3"
+    "@sentry/types" "4.2.3"
 
-"@sentry/types@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.1.0.tgz#ebffb9857abbecaad5d1c00152a50f72ac9757a5"
+"@sentry/types@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.2.3.tgz#e53df8ac5c2419d333be8671972a2db6d34de230"
 
-"@sentry/utils@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.1.1.tgz#5624517d582c870348f234df27c509db95d4fdc6"
+"@sentry/utils@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.2.3.tgz#46119e0938308245054984303ee1b049a7ab7523"
   dependencies:
-    "@sentry/types" "4.1.0"
+    "@sentry/types" "4.2.3"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
@@ -3705,9 +3705,9 @@ firebase-functions@^2.0.5:
     jsonwebtoken "^8.2.1"
     lodash "^4.6.1"
 
-firebase-tools@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-5.0.1.tgz#313e18fc830fb1188401f587d8bccb1cf5f01286"
+firebase-tools@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.0.0.tgz#a0820b197c3a0a8aab7bea90a2219f202632e600"
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
@@ -6160,19 +6160,19 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ngw@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ngw/-/ngw-6.1.0.tgz#02f658082cf7885c725bd5980d891154853da300"
+ngw@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ngw/-/ngw-7.0.0.tgz#5910f1d33ee25d84889504f8dd67c4a935890097"
   dependencies:
-    ts-node "^5.0.0"
+    ts-node "^7.0.1"
 
 ngx-cookieconsent@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.0.0.tgz#c54a2a057e1beec11bab3318800f7535b18a1f24"
 
-ngx-markdown@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-6.3.0.tgz#28619a19159dfd30e872a2725ef11aaf4c8aef23"
+ngx-markdown@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-7.0.0.tgz#c1b826b18da66159bacfb849bc04e046a442a77c"
   dependencies:
     "@types/marked" "^0.4.2"
     marked "^0.5.1"
@@ -8368,13 +8368,6 @@ source-map-support@0.5.9, source-map-support@^0.5.5, source-map-support@^0.5.6, 
     buffer-from "^1.0.0"
     source-map "^0.6.0"
 
-source-map-support@^0.5.3:
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.8.tgz#04f5581713a8a65612d0175fbf3a01f80a162613"
-  dependencies:
-    buffer-from "^1.0.0"
-    source-map "^0.6.0"
-
 source-map-url@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
@@ -8996,20 +8989,7 @@ try-require@^1.0.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/try-require/-/try-require-1.2.1.tgz#34489a2cac0c09c1cc10ed91ba011594d4333be2"
 
-ts-node@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-5.0.1.tgz#78e5d1cb3f704de1b641e43b76be2d4094f06f81"
-  dependencies:
-    arrify "^1.0.0"
-    chalk "^2.3.0"
-    diff "^3.1.0"
-    make-error "^1.1.1"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map-support "^0.5.3"
-    yn "^2.0.0"
-
-ts-node@~7.0.1:
+ts-node@^7.0.1, ts-node@~7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
   dependencies:
