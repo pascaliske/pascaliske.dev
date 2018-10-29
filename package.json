@@ -69,6 +69,7 @@
     "@types/highlight.js": "^9.12.3",
     "@types/lodash-es": "^4.17.1",
     "@types/node": "10.12.0",
+    "@types/nodemailer": "^4.6.5",
     "@types/webpack": "^4.4.17",
     "codelyzer": "^4.5.0",
     "cors": "^2.8.4",

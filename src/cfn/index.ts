@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions'
 import * as cors from 'cors'
-import { createTransport } from 'nodemailer'
+import { createTransport, SendMailOptions } from 'nodemailer'
 
 // configure cors
 const security = cors({
@@ -26,7 +26,7 @@ const transport = createTransport({
 export const sendContactRequest = functions.https.onRequest((req, res) => {
     security(req, res, () => {
         const { name, email, subject, message } = req.body
-        const mail = {
+        const mail: SendMailOptions = {
             to: 'info@pascal-iske.de',
             from: `"${name}" <${email}>`,
             replyTo: `"${name}" <${email}>`,
