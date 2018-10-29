@@ -7,7 +7,7 @@
     "ng": "ngw",
     "firebase": "firebase",
     "bundlewatch": "bundlewatch",
-    "lighthouse": "lighthouse --quiet --chrome-flags=\"--headless\" --output-path=./report.html https://$PROD_DOMAIN && now report.html --no-clipboard",
+    "lighthouse": "lighthouse --quiet --chrome-flags=\"--headless\" --output-path=./report.html https://$PROD_DOMAIN && now report.html --token $NOW_TOKEN --no-clipboard --public",
     "start": "ngw serve",
     "build": "ngw build --prod --aot --build-optimizer --stats-json",
     "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
