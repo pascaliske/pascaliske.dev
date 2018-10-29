@@ -491,12 +491,12 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.1.tgz#53f349bb986ab273d601175aa1b25a655ab90ee3"
   integrity sha512-KU/VDjC5RwtDUZiz3d+DHXJF2lp5hB9dn552TXIyptj8SH1vXmR40mG0JgGq03IlYsOgGfcv8xrLpSQ0YUMQdA==
 
-"@pascaliske/form-elements@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.1.1.tgz#800bd88fe7ec9304ed710aa6187b65e09c2e4d36"
-  integrity sha512-FDc3E4GiV6z1Q4AZJyggcrXjam+k96gr4RXBw7BrLN3OTSRDj1tKskPdWPkydVHB1N8PGsdL0EcPoseKcEk8GQ==
+"@pascaliske/form-elements@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.0.tgz#68bf52ea46b8472193b2cb34f6d9aa5de74c9d95"
+  integrity sha512-VYt1irGKJaD4M9U+Vzb0kqv6S5UEpSqVgHVoamODUn58MLpkb+0WzqcPMp4HmkYP2/FyuiMVnk/t/MdhF5oUPA==
   dependencies:
-    flatpickr "4.5.0"
+    flatpickr "4.5.2"
     fuzzysearch "^1.0.3"
     tslib "^1.9.0"
 
@@ -4233,10 +4233,10 @@ flat-arguments@^1.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isobject "^3.0.0"
 
-flatpickr@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.0.tgz#f72c7164a1c24e3ad419e3b2209d1a2d3604724a"
-  integrity sha512-7AfaM2BVyQmFW4uBpzgoNeRUr6EZlvEh4Pnj298rEsHBq8LIZnPgRaesLORir7dATETUvoLkhrfXZdmNssma+A==
+flatpickr@4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.2.tgz#47c8ad472a096e5fb7e74b809b0703535383f20d"
+  integrity sha512-jDy4QYGpmiy7+Qk8QvKJ4spjDdxcx9cxMydmq1x427HkKWBw0qizLYeYM2F6tMcvvqGjU5VpJS55j4LnsaBblA==
 
 flush-write-stream@^1.0.0:
   version "1.0.3"
