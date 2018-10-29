@@ -25,7 +25,7 @@ and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json
 [gh]: https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png
 [ya]: https://github.com/yarnpkg/assets/raw/master/yarn-kitten-full.png
 [tr]: https://travis-ci.com/images/logos/TravisCI-Mascot-1.png
-[sk]: https://github.com/snyk/press-kit/raw/master/Logo/Symbol/Transparent%20background/symbol%402x.png
+[sk]: https://res.cloudinary.com/snyk/image/upload/v1537345897/press-kit/brand/logo-vertical-black.png
 [sy]: https://sentry-brand.storage.googleapis.com/sentry-glyph-black.png
 [lh]: https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/assets/lighthouse-logo.png
 [bw]: https://bundlewatch.io/_assets/logo-large.svg
