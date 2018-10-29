@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ngw",
     "firebase": "firebase",
-    "bundlewatch": "echo $TRAVIS_REPO_SLUG && echo $CI_REPO_NAME && bundlewatch",
+    "bundlewatch": "export CI_REPO_NAME=\"$TRAVIS_REPO_SLUG\" && bundlewatch",
     "start": "ngw serve",
     "build": "ngw build --prod --aot --build-optimizer --stats-json",
     "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
