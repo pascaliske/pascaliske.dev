@@ -4,28 +4,30 @@
 
 ## Used frameworks, libs, tools, services...
 
-|  ![Angular][ng]   | ![TypeScript][ts] |  ![RxJS][rxjs]  | ![Prettier][prettier] | ![Susy Grid][susy] | ![Lodash][lodash] |
-| :---------------: | :---------------: | :-------------: | :-------------------: | :----------------: | :---------------: |
-| Angular Framework |    TypeScript     | RxJS Extensions |  Prettier Formatting  |      SusyGrid      |      Lodash       |
+| ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Susy Grid][su] | ![Lodash][lo] |
+| :------------: | :---------------: | :---------: | :-------------: | :--------------: | :-----------: |
+|    Angular     |    TypeScript     |    RxJS     |    Prettier     |     SusyGrid     |    Lodash     |
 
-| ![Firebase Hosting][firebase] | ![GitHub][github] | ![Yarn][yarn] | ![Travis CI][travis] | ![Snyk][snyk] | ![Sentry][sentry] | ![Google Analytics][analytics] |
-| :---------------------------: | :---------------: | :-----------: | :------------------: | :-----------: | :---------------: | :----------------------------: |
-|       Firebase Hosting        |      GitHub       |     Yarn      |      Travis CI       |     Snyk      |      Sentry       |        Google Analytics        |
+| ![Firebase][fb] | ![GitHub][gh] | ![Yarn][ya] | ![Travis CI][tr] | ![Snyk][sk] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] | ![now][nw] | ![Google Analytics][ga] |
+| :-------------: | :-----------: | :---------: | :--------------: | :---------: | :-----------: | :---------------: | :-----------------: | :--------: | :---------------------: |
+|    Firebase     |    GitHub     |    Yarn     |    Travis CI     |    Snyk     |    Sentry     |    Lighthouse     |    Bundle Watch     |    Now     |    Google Analytics     |
 
 and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json)...
 
-<!-- logo links -->
-
+<!-- logos -->
 [ng]: https://angular.io/assets/images/logos/angular/angular.svg
 [ts]: https://github.com/remojansen/logo.ts/raw/master/ts.png
-[rxjs]: https://github.com/ReactiveX/rxjs/raw/master/doc/asset/Rx_Logo_S.png
-[prettier]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-wide-light.png
-[susy]: http://oddbird.net/static/images/susy/susy-logos/logo-knockout.svg
-[lodash]: https://lodash.com/assets/img/lodash.svg
-[firebase]: https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg
-[github]: https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png
-[yarn]: https://github.com/yarnpkg/assets/raw/master/yarn-kitten-full.png
-[travis]: https://travis-ci.com/images/logos/TravisCI-Mascot-1.png
-[snyk]: https://github.com/snyk/press-kit/raw/master/Logo/Symbol/Transparent%20background/symbol%402x.png
-[sentry]: https://sentry-brand.storage.googleapis.com/sentry-glyph-black.png
-[analytics]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
+[rx]: https://github.com/ReactiveX/rxjs/raw/master/doc/asset/Rx_Logo_S.png
+[pr]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-wide-light.png
+[su]: http://oddbird.net/static/images/susy/susy-logos/logo-knockout.svg
+[lo]: https://lodash.com/assets/img/lodash.svg
+[fb]: https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg
+[gh]: https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png
+[ya]: https://github.com/yarnpkg/assets/raw/master/yarn-kitten-full.png
+[tr]: https://travis-ci.com/images/logos/TravisCI-Mascot-1.png
+[sk]: https://res.cloudinary.com/snyk/image/upload/v1537345897/press-kit/brand/logo-vertical-black.png
+[sy]: https://sentry-brand.storage.googleapis.com/sentry-glyph-black.png
+[lh]: https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/assets/lighthouse-logo.png
+[bw]: https://bundlewatch.io/_assets/logo-large.svg
+[nw]: https://assets.zeit.co/image/upload/front/assets/design/zeit-black-full-logo.svg
+[ga]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
