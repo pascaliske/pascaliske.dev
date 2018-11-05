@@ -34,6 +34,10 @@ $font-settings: (
         font-family: ('Open Sans', Arial, sans-serif),
         font-weight: 400,
         font-style: italic
+    ),
+    monospace: (
+        font-family: ('Source Code Pro', monospace, sans-serif),
+        font-weight: 400
     )
 );
 
@@ -129,6 +133,13 @@ $text-settings: (
             font-size: ms(0),
             line-height: 1.6,
             color: $color-primary
+        )
+    ),
+    code: (
+        all: (
+            font-settings: monospace,
+            font-size: ms(-1),
+            line-height: 1.5
         )
     )
 );
