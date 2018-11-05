@@ -2,7 +2,6 @@ import { Path } from '@angular-devkit/core'
 import { NormalizedBrowserBuilderSchema } from '@angular-devkit/build-angular'
 import { join } from 'path'
 import { sync } from 'glob'
-import * as DashboardPlugin from 'webpack-dashboard/plugin'
 import * as ReplacePlugin from 'webpack-plugin-replace'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
 import * as VisualizerPlugin from 'webpack-visualizer-plugin'
@@ -18,14 +17,9 @@ const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
 
 export default function(config) {
-    if (command === 'serve') {
-        config.plugins.push(new DashboardPlugin())
-    }
-
     if (command === 'build') {
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
-            new DashboardPlugin(),
             new ReplacePlugin({
                 include: ['environment.ts'],
                 values: {
