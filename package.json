@@ -61,7 +61,6 @@
     "@sentry/browser": "4.2.4",
     "cookieconsent": "^3.1.0",
     "core-js": "^2.5.7",
-    "decko": "^1.2.0",
     "highlight.js": "^9.13.1",
     "intersection-observer": "^0.5.1",
     "lodash-es": "^4.17.11",
