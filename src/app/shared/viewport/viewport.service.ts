@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Observable, Subject } from 'rxjs'
 import { finalize, filter } from 'rxjs/operators'
-import { bind } from 'decko'
 
 /**
  * ViewportService
@@ -37,7 +36,7 @@ export class ViewportService {
      * Initializes the ViewportService.
      */
     public constructor() {
-        this.observer = new IntersectionObserver(this.handler, this.options)
+        this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
     }
 
     /**
@@ -61,7 +60,6 @@ export class ViewportService {
      * @param {Array<IntersectionObserverEntry>} entries -
      * @returns {void}
      */
-    @bind
     private handler(entries: Array<IntersectionObserverEntry>): void {
         entries.forEach(entry => this.callback$.next(entry))
     }
