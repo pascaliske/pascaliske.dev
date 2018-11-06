@@ -4,7 +4,7 @@
   "description": "Angular Web App built with Travis CI and deployed with Firebase.",
   "theme_color": "#2d333d",
   "background_color": "#ffffff",
-  "display": "browser",
+  "display": "minimal-ui",
   "scope": "/",
   "start_url": "/",
   "icons": [
