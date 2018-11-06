@@ -13,7 +13,9 @@ script:
   - yarn run check
   - yarn run build --progress false --base-href https://$PROD_DOMAIN
   - yarn run bundlewatch
-after_deploy: yarn run lighthouse
+after_deploy:
+  - yarn run report:generate
+  - yarn run report:upload
 after_script: greenkeeper-lockfile-upload
 deploy:
   provider: firebase
