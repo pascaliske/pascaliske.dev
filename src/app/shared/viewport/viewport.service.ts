@@ -7,7 +7,9 @@ import { finalize, filter } from 'rxjs/operators'
  *
  * Injectable service for enabling components to check if they're visible in the viewport.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class ViewportService {
     /**
      * An object with options for the IntersectionObserver.

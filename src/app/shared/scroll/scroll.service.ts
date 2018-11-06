@@ -22,7 +22,9 @@ export interface ScrollState {
  *
  * Subscribe the subject `scrollstate`, it emits the current {@link ScrollState}.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class ScrollService {
     /**
      * Subject for scroll changes.

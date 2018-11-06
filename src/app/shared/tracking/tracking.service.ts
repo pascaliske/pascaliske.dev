@@ -11,7 +11,9 @@ import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from '
  * Injectable service for enabling components to send tracking events with Google Analytics.
  * Use the track method to send {@link PageViewEvent}s or {@link CustomEvent}s.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class TrackingService {
     /**
      *

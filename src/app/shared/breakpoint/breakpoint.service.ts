@@ -54,7 +54,9 @@ export interface ResizeState {
  * - subscribe `resize$` for viewport resize changes, it emits {@link ResizeState}
  * - subscribe `breakpoint$` for breakpoint changes, it emits {@link Breakpoint}
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class BreakpointService {
     /**
      * BehaviorSubject for resize changes, it emits {@link ResizeState}
