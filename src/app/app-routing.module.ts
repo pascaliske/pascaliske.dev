@@ -15,14 +15,6 @@ export const routes: Routes = [
         path: 'about',
         loadChildren: 'app/pages/about/about.module#AboutModule',
     },
-    // {
-    //     path: 'references',
-    //     loadChildren: 'app/pages/references/references.module#ReferencesModule',
-    // },
-    // {
-    //     path: 'blog',
-    //     loadChildren: 'app/pages/blog/blog.module#BlogModule',
-    // },
     {
         path: 'contact',
         loadChildren: 'app/pages/contact/contact.module#ContactModule',

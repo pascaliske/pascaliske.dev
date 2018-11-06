@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { TranslateModule } from '@ngx-translate/core'
-
+import { SharedModule } from '../../shared/shared.module'
 import { NavigationModule } from '../navigation/navigation.module'
-
 import { HeaderComponent } from './header.component'
 
 @NgModule({
-    imports: [CommonModule, TranslateModule.forChild(), NavigationModule],
+    imports: [SharedModule, NavigationModule],
     declarations: [HeaderComponent],
     exports: [HeaderComponent],
 })

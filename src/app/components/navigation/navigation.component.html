@@ -4,11 +4,8 @@
         <ul class="cmp-navigation__list">
             <li class="cmp-navigation__item" routerLinkActive="cmp-navigation__item--active" [ngClass]="{'cmp-navigation__item--fixed': item.options?.fixedWidth}" *ngFor="let item of items">
                 <a class="cmp-navigation__link" [routerLink]="[item.route]" (click)="mobileOpen = false">
-                    <span class="cmp-navigation__text" [ngClass]="{'cmp-navigation__text--decorated': item.options?.decorated}">{{item.label|translate}}</span>
+                    <span class="cmp-navigation__text" [ngClass]="{'cmp-navigation__text--decorated': item.options?.decorated}">{{item.label}}</span>
                 </a>
-            </li>
-            <li class="cmp-navigation__item cmp-navigation__languages" *ngIf="mobile">
-                <cmp-language-switch (changed)="mobileOpen = false"></cmp-language-switch>
             </li>
         </ul>
     </div>

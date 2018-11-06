@@ -3,38 +3,38 @@
     <cmp-section [id]="'contact-form'">
         <div class="cmp-contact__wrapper">
             <div class="cmp-contact__information">
-                <cmp-headline-h4 [text]="'CONTACT_PAGE_INFO_HEADLINE1'|translate"></cmp-headline-h4>
-                <cmp-copy [text]="'CONTACT_PAGE_INFO_COPY1'|translate"></cmp-copy>
+                <cmp-headline-h4 [text]="'Got curious?'"></cmp-headline-h4>
+                <cmp-copy [text]="'Let us talk about your project!\n\nYou can contact me by mail at info@pascal-iske.de. Alternatively, you can use the contact form on the right side of this page.'"></cmp-copy>
 
-                <cmp-headline-h4 [text]="'CONTACT_PAGE_INFO_HEADLINE2'|translate"></cmp-headline-h4>
-                <cmp-copy [text]="'CONTACT_PAGE_INFO_COPY2'|translate"></cmp-copy>
+                <cmp-headline-h4 [text]="'Social Media'"></cmp-headline-h4>
+                <cmp-copy [text]="'You can find me also on:\n\n- [Twitter](https://twitter.com/pascaliske)\n- [Xing](https://www.xing.com/profile/Pascal_Iske)\n- [LinkedIn](https://de.linkedin.com/in/pascaliske)\n- [GitHub](https://github.com/pascaliske)'"></cmp-copy>
             </div>
             <form class="cmp-contact__form" [formGroup]="contactForm" (submit)="submit()">
-                <cmp-headline-h4 [text]="'CONTACT_PAGE_FORM_HEADLINE'|translate"></cmp-headline-h4>
+                <cmp-headline-h4 [text]="'Contact form'"></cmp-headline-h4>
                 <cmp-f-row>
                     <cmp-f-column>
-                        <cmp-f-input name="name" [label]="'CONTACT_PAGE_FORM_LABEL_NAME'|translate" [fc]="name" autocomplete="name"></cmp-f-input>
+                        <cmp-f-input name="name" [label]="'Name'" [fc]="name" autocomplete="name"></cmp-f-input>
                     </cmp-f-column>
                 </cmp-f-row>
                 <cmp-f-row>
                     <cmp-f-column>
-                        <cmp-f-email name="email" [label]="'CONTACT_PAGE_FORM_LABEL_EMAIL'|translate" [fc]="email" [validation]="validation['email']" autocomplete="email"></cmp-f-email>
+                        <cmp-f-email name="email" [label]="'Mail'" [fc]="email" [validation]="validation['email']" autocomplete="email"></cmp-f-email>
                     </cmp-f-column>
                 </cmp-f-row>
                 <cmp-f-row>
                     <cmp-f-column>
-                        <cmp-f-input name="subject" [label]="'CONTACT_PAGE_FORM_LABEL_SUBJECT'|translate" [fc]="subject"></cmp-f-input>
+                        <cmp-f-input name="subject" [label]="'Subject'" [fc]="subject"></cmp-f-input>
                     </cmp-f-column>
                 </cmp-f-row>
                 <cmp-f-row>
                     <cmp-f-column>
-                        <cmp-f-text-area name="message" [label]="'CONTACT_PAGE_FORM_LABEL_MESSAGE'|translate" [fc]="message"></cmp-f-text-area>
+                        <cmp-f-text-area name="message" [label]="'Message'" [fc]="message"></cmp-f-text-area>
                     </cmp-f-column>
                 </cmp-f-row>
                 <cmp-f-row>
                     <cmp-f-column [flex]="true" align="right">
-                        <cmp-f-button [label]="'CONTACT_PAGE_FORM_LABEL_RESET'|translate" [theme]="'secondary'" [disabled]="contactForm.invalid" (click)="reset()"></cmp-f-button>
-                        <cmp-f-button [label]="'CONTACT_PAGE_FORM_LABEL_SUBMIT'|translate" [type]="'submit'" [theme]="'primary'" [disabled]="contactForm.invalid"></cmp-f-button>
+                        <cmp-f-button [label]="'Reset'" [theme]="'secondary'" [disabled]="contactForm.invalid" (click)="reset()"></cmp-f-button>
+                        <cmp-f-button [label]="'Submit'" [type]="'submit'" [theme]="'primary'" [disabled]="contactForm.invalid"></cmp-f-button>
                     </cmp-f-column>
                 </cmp-f-row>
             </form>

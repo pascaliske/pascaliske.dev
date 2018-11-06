@@ -15,7 +15,7 @@ export const routes: Routes = [
         path: '',
         component: ContactComponent,
         data: {
-            title: 'PAGE_TITLE_CONTACT',
+            title: 'Contact',
         },
     },
 ]

@@ -54,8 +54,6 @@
     "@ngx-progressbar/core": "~5.2.1",
     "@ngx-progressbar/http": "~5.2.1",
     "@ngx-progressbar/router": "~5.2.1",
-    "@ngx-translate/core": "^11.0.0",
-    "@ngx-translate/http-loader": "^4.0.0",
     "@pascaliske/form-elements": "^1.2.0",
     "@pascaliske/html-helpers": "^1.2.2",
     "@pascaliske/ngx-notifications": "^1.0.10",
