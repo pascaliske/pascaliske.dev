@@ -671,9 +671,9 @@
   version "10.7.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.7.1.tgz#b704d7c259aa40ee052eec678758a68d07132a2e"
 
-"@types/node@10.12.2":
-  version "10.12.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.2.tgz#d77f9faa027cadad9c912cd47f4f8b07b0fb0864"
+"@types/node@10.12.3":
+  version "10.12.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.3.tgz#3918b73ceed484e58367be5acb79d1775239e393"
 
 "@types/node@^8.0.53":
   version "8.10.26"
@@ -6286,9 +6286,9 @@ normalize-url@2.0.1:
     query-string "^5.0.1"
     sort-keys "^2.0.0"
 
-now@^11.5.2:
-  version "11.5.2"
-  resolved "https://registry.yarnpkg.com/now/-/now-11.5.2.tgz#d91f7f6665ebea5e3a9b96c72215aab2b81fe42e"
+now@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/now/-/now-12.0.0.tgz#634c84e74b4d9d92f910e8b06a3de7007ed89e94"
 
 npm-bundled@^1.0.1:
   version "1.0.5"
