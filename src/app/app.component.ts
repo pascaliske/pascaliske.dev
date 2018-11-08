@@ -27,35 +27,21 @@ export class AppComponent implements OnInit, OnDestroy {
     public pages: Array<NavigationItem> = [
         {
             route: 'home',
-            label: 'NAVIGATION_HOME',
+            label: 'Home',
             options: {
                 decorated: true,
             },
         },
         {
             route: 'about',
-            label: 'NAVIGATION_ABOUT',
+            label: 'About',
             options: {
                 decorated: true,
             },
         },
-        // {
-        //     route: 'references',
-        //     label: 'NAVIGATION_REFERENCES',
-        //     options: {
-        //         decorated: true,
-        //     },
-        // },
-        // {
-        //     route: 'blog',
-        //     label: 'NAVIGATION_BLOG',
-        //     options: {
-        //         decorated: true,
-        //     },
-        // },
         {
             route: 'contact',
-            label: 'NAVIGATION_CONTACT',
+            label: 'Contact',
             options: {
                 decorated: true,
             },

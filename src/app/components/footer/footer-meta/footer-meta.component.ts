@@ -4,7 +4,7 @@ import { Router } from '@angular/router'
 /**
  * FooterMetaComponent
  *
- * Displays copyright info, legal links and the language switch.
+ * Displays copyright info and legal links.
  */
 @Component({
     selector: 'cmp-footer-meta',
@@ -23,7 +23,6 @@ export class FooterMetaComponent {
      * Initializes the component.
      *
      * @param {Router} router
-     * @returns {FooterMetaComponent}
      */
     public constructor(public router: Router) {}
 }

@@ -3,9 +3,10 @@ import 'zone.js/dist/zone-node'
 import * as express from 'express'
 import * as compression from 'compression'
 import chalk from 'chalk'
-import { launch } from 'puppeteer'
+import { promisify } from 'util'
 import { Server } from 'http'
 import { join, dirname } from 'path'
+import { launch } from 'puppeteer'
 import { readFile, ensureDir, writeFile } from 'fs-extra'
 import { routes } from './app/app-routing.module'
 
@@ -59,8 +60,8 @@ async function prerender(): Promise<void> {
         }
     }
 
-    browser.close()
-    server.close()
+    await browser.close()
+    await promisify(server.close)
 }
 
 prerender()

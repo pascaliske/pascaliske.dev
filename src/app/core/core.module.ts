@@ -1,7 +1,4 @@
 import { NgModule, ErrorHandler } from '@angular/core'
-import { StoreModule } from '@ngrx/store'
-import { StoreDevtoolsModule } from '@ngrx/store-devtools'
-import { EffectsModule } from '@ngrx/effects'
 import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { NgProgressModule } from '@ngx-progressbar/core'
@@ -10,7 +7,6 @@ import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
-import { reducers } from '../store'
 import { SentryErrorHandler } from '../sentry'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
@@ -21,7 +17,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     renderer.hr = (): string => '<div class="md-divider"></div>'
     renderer.link = (href: string, title: string, text: string): string => {
         const content: string = `<span class="md-link__text">${text}</span>`
-        return `<a class="md-link" href="${href}" title="${title}">${content}</a>`
+        return `<a class="md-link" href="${href}" title="${title || text}">${content}</a>`
     }
     renderer.list = (body: string, ordered: boolean): string => {
         if (ordered) {
@@ -32,18 +28,15 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     renderer.listitem = (text: string): string => `<li class="md-list__item">${text}</li>`
 
     return {
-        gfm: true,
-        tables: true,
         renderer: renderer,
+        tables: true,
+        gfm: true,
     }
 }
 
 @NgModule({
     declarations: [],
     imports: [
-        StoreModule.forRoot(reducers),
-        StoreDevtoolsModule.instrument(),
-        EffectsModule.forRoot([]),
         FormElementsModule.forRoot({
             email: {
                 suggestions: true,

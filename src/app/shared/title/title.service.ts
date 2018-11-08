@@ -7,7 +7,9 @@ import { Title } from '@angular/platform-browser'
  * - call `.setTitle()` for setting a new title
  * - call `.getTitle()` for getting the current title
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class TitleService {
     /**
      * The title divider.

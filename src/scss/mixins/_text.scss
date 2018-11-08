@@ -1,8 +1,8 @@
-@mixin seperator() {
+@mixin separator() {
     &:not(:last-of-type)::after {
         margin-left: 2px;
         margin-right: 6px;
-        color: rgba($color-secondary, .4);
+        color: rgba($color-secondary, .2);
         content: ' // ';
     }
 }
@@ -13,7 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: rgba($color-secondary, .6);
+    color: rgba($color-secondary, .8);
     transition: color .2s;
     cursor: pointer;
 
@@ -27,19 +27,20 @@
         position: absolute;
         left: 50%;
         bottom: -5px;
-        background-color: #61718c;
-        transition: width .2s, left .2s;
+        background-color: transparent;
+        transition: width .2s, left .2s, background-color .2s;
         content: ' ';
     }
 
     @media (hover: hover) {
         &:hover {
-            color: #61718c;
+            color: $color-secondary;
         }
 
         &:hover &__text::after {
             width: 100%;
             left: 0;
+            background-color: $color-secondary;
         }
     }
 }

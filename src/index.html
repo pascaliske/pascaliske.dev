@@ -9,10 +9,16 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com/analytics.js" as="script" crossorigin />
 </head>
 <body>
     <cmp-root>
-        <noscript>Please enable JavaScript as it is needed for correctly displaying this page!</noscript>
+        <!-- initial loader -->
+        <style type="text/css">.loader,.noscript{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;}.noscript{top:80px;text-align:center;}</style>
+        <noscript class="noscript">Please enable JavaScript as it is needed for correctly displaying this page!</noscript>
+        <svg class="loader" width="57" height="57" xmlns="http://www.w3.org/2000/svg" stroke="#2d333d"><g transform="translate(1 1)" stroke-width="2" fill="none" fill-rule="evenodd"><circle cx="5" cy="50" r="5"><animate attributeName="cy" begin="0s" dur="2.2s" values="50;5;50;50" calcMode="linear" repeatCount="indefinite"/><animate attributeName="cx" begin="0s" dur="2.2s" values="5;27;49;5" calcMode="linear" repeatCount="indefinite"/></circle><circle cx="27" cy="5" r="5"><animate attributeName="cy" begin="0s" dur="2.2s" from="5" to="5" values="5;50;50;5" calcMode="linear" repeatCount="indefinite"/><animate attributeName="cx" begin="0s" dur="2.2s" from="27" to="27" values="27;49;5;27" calcMode="linear" repeatCount="indefinite"/></circle><circle cx="49" cy="50" r="5"><animate attributeName="cy" begin="0s" dur="2.2s" values="50;50;5;50" calcMode="linear" repeatCount="indefinite"/><animate attributeName="cx" from="49" to="49" begin="0s" dur="2.2s" values="49;5;27;49" calcMode="linear" repeatCount="indefinite"/></circle></g></svg>
     </cmp-root>
 
     <script type="application/javascript">
@@ -23,13 +29,12 @@
             window[disable] = true
         }
 
-        function gaOptout() {
+        function gaOut() {
             document.cookie = disable + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
             window[disable] = true
-            alert('Das Tracking ist jetzt deaktiviert')
         }
 
-        function init(window, document) {
+        function gaInit(window, document) {
             window.GoogleAnalyticsObject = 'ga'
             window.ga = window.ga || function() {
                 (window.ga.q = window.ga.q || []).push(arguments)
@@ -43,11 +48,10 @@
 
             const reference = document.getElementsByTagName('script')[0]
             reference.parentNode.insertBefore(element, reference)
-        }
 
-        init(window, document)
-        ga('create', property, 'auto')
-        ga('set', 'anonymizeIp', true)
+            ga('create', property, 'auto')
+            ga('set', 'anonymizeIp', true)
+        }
     </script>
 </body>
 </html>

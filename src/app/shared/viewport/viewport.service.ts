@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core'
 import { Observable, Subject } from 'rxjs'
 import { finalize, filter } from 'rxjs/operators'
-import { bind } from 'decko'
 
 /**
  * ViewportService
  *
  * Injectable service for enabling components to check if they're visible in the viewport.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class ViewportService {
     /**
      * An object with options for the IntersectionObserver.
@@ -37,7 +38,7 @@ export class ViewportService {
      * Initializes the ViewportService.
      */
     public constructor() {
-        this.observer = new IntersectionObserver(this.handler, this.options)
+        this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
     }
 
     /**
@@ -61,7 +62,6 @@ export class ViewportService {
      * @param {Array<IntersectionObserverEntry>} entries -
      * @returns {void}
      */
-    @bind
     private handler(entries: Array<IntersectionObserverEntry>): void {
         entries.forEach(entry => this.callback$.next(entry))
     }

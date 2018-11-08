@@ -14,8 +14,6 @@ export class NavigationButtonComponent {
     @Output()
     public stateChange: EventEmitter<boolean> = new EventEmitter()
 
-    public constructor() {}
-
     public get classes(): string {
         return modifiers('cmp-navigation-button', {
             open: this.state,

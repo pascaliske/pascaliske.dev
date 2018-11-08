@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core'
+import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { ScrollService } from '../../../shared/scroll/scroll.service'
 
 @Component({
@@ -8,12 +8,6 @@ import { ScrollService } from '../../../shared/scroll/scroll.service'
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToTopButtonComponent {
-    @HostBinding('attr.id')
-    public id: string = 'to-top-button'
-
-    @HostBinding('attr.aria-label')
-    public ariaLabel: string = 'To Top Button'
-
     /**
      * Initializes the component.
      */

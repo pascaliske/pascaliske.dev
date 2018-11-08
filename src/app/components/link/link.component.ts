@@ -1,5 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
 import { Router } from '@angular/router'
+import { modifiers } from '@pascaliske/html-helpers'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { Alignment } from './typings'
 
 /**
@@ -27,12 +29,20 @@ export class LinkComponent {
     public text: string
 
     /**
-     * The link icon.
+     * The link title.
      *
-     * @param {string} icon
+     * @param {string} title
      */
     @Input()
-    public icon: string
+    public title: string
+
+    /**
+     * The link icon.
+     *
+     * @param {IconDefinition} icon
+     */
+    @Input()
+    public icon: IconDefinition
 
     /**
      * The external link target.
@@ -90,5 +100,18 @@ export class LinkComponent {
         }
 
         return
+    }
+
+    /**
+     * Returns the css classes for the root element.
+     *
+     * @returns {string}
+     */
+    public get classes(): string {
+        return modifiers('cmp-link', {
+            [this.align]: true,
+            inline: this.inline,
+            icon: !!this.icon,
+        })
     }
 }

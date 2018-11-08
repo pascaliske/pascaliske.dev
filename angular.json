@@ -4,16 +4,17 @@
   "newProjectRoot": "projects",
   "defaultProject": "pascal-iske",
   "cli": {
-    "packageManager": "yarn",
-    "defaultCollection": "@ngrx/schematics"
+    "packageManager": "yarn"
   },
   "schematics": {
-    "@ngrx/schematics:component": {
+    "@schematics/angular:component": {
       "prefix": "cmp",
-      "styleext": "scss"
+      "styleext": "scss",
+      "export": true
     },
-    "@ngrx/schematics:directive": {
-      "prefix": ""
+    "@schematics/angular:directive": {
+      "prefix": "",
+      "export": true
     }
   },
   "projects": {
@@ -57,11 +58,7 @@
             "styles": [
               "src/scss/common.scss"
             ],
-            "scripts": [
-              "node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js",
-              "node_modules/@fortawesome/fontawesome-free/js/solid.min.js",
-              "node_modules/@fortawesome/fontawesome-free/js/brands.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
