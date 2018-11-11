@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { HttpClientModule } from '@angular/common/http'
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
 import { CoreModule } from './core/core.module'
@@ -22,7 +21,6 @@ import { AppComponent } from './app.component'
             appId: 'pascal-iske-server',
         }),
         BrowserTransferStateModule,
-        BrowserAnimationsModule,
         ServiceWorkerModule.register('/ngsw-worker.js', {
             enabled: environment.production,
         }),
@@ -35,7 +33,7 @@ import { AppComponent } from './app.component'
         CookieBannerModule,
     ],
     declarations: [AppComponent],
-    providers: [],
+    exports: [AppComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
