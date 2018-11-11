@@ -10,11 +10,10 @@
     "report:generate": "lighthouse --quiet --chrome-flags=\"--headless\" --output-path=./report.html https://$PROD_DOMAIN",
     "report:upload": "now report.html --token $NOW_TOKEN --no-clipboard --public",
     "start": "ngw serve",
-    "build": "yarn build:app && yarn build:server && yarn build:cfn && yarn prerender",
+    "build": "yarn run build:app && yarn run build:server",
     "build:app": "ngw build --prod --aot --build-optimizer --stats-json",
     "build:server": "ngw run pascal-iske:server",
-    "build:cfn": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
-    "prerender": "ts-node src/prerender.ts",
+    "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json && ts-node src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix",
     "check": "snyk test && snyk monitor",
     "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}"
