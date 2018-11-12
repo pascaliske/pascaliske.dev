@@ -4,6 +4,7 @@
     "outDir": "../dist/cfn",
     "baseUrl": "./",
     "module": "commonjs",
+    "target": "es2017",
     "typeRoots": []
   },
   "include": [
