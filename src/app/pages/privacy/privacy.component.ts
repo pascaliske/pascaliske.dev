@@ -1,6 +1,5 @@
 import { Component, OnDestroy } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../shared/title/title.service'
 import { Page } from '../page'
 
@@ -10,12 +9,8 @@ import { Page } from '../page'
     styleUrls: ['./privacy.component.scss'],
 })
 export class PrivacyComponent extends Page implements OnDestroy {
-    public constructor(
-        protected route: ActivatedRoute,
-        protected translateService: TranslateService,
-        protected titleService: TitleService,
-    ) {
-        super(route, translateService, titleService)
+    public constructor(protected route: ActivatedRoute, protected titleService: TitleService) {
+        super(route, titleService)
     }
 
     public ngOnDestroy(): void {

@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/app",
+    "cleanUrls": true,
     "trailingSlash": false,
     "ignore": [
       "firebase.json",
@@ -11,10 +12,6 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      },
       {
         "source": "/cfns/send-contact-request",
         "function": "sendContactRequest"
