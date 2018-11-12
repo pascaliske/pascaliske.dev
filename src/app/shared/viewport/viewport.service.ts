@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core'
-import { Observable, Subject } from 'rxjs'
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
+import { Observable, Subject, EMPTY } from 'rxjs'
 import { finalize, filter } from 'rxjs/operators'
 
 /**
@@ -37,8 +38,10 @@ export class ViewportService {
     /**
      * Initializes the ViewportService.
      */
-    public constructor() {
-        this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
+    public constructor(@Inject(PLATFORM_ID) private platformId) {
+        if (isPlatformBrowser(this.platformId)) {
+            this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
+        }
     }
 
     /**
@@ -48,6 +51,10 @@ export class ViewportService {
      * @returns {Observable<IntersectionObserverEntry>}
      */
     public observe(element: Element): Observable<IntersectionObserverEntry> {
+        if (!isPlatformBrowser(this.platformId)) {
+            return EMPTY
+        }
+
         this.observer.observe(element)
 
         return this.callback$.asObservable().pipe(
