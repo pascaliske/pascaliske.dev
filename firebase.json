@@ -31,6 +31,15 @@
         "source": "**/*",
         "headers": [
           {
+            "key": "X-Xss-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      },
+      {
+        "source": "**/*",
+        "headers": [
+          {
             "key": "X-Content-Type-Options",
             "value": "nosniff"
           }
