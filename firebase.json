@@ -19,6 +19,15 @@
     ],
     "headers": [
       {
+        "source": "**/*",
+        "headers": [
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(js|css)",
         "headers": [
           {
