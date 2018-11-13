@@ -19,7 +19,7 @@
     ],
     "headers": [
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "X-Frame-Options",
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "X-Xss-Protection",
@@ -37,7 +37,7 @@
         ]
       },
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "X-Content-Type-Options",
@@ -46,7 +46,7 @@
         ]
       },
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "Referrer-Policy",
