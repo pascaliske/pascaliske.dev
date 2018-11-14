@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:chownr:20180731':
@@ -8,31 +8,31 @@ ignore:
         expires: '2018-10-13T07:43:34.148Z'
       '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-11-14T09:04:29.979Z'
+        expires: '2018-12-14T19:44:45.842Z'
     - '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-10-13T07:43:34.148Z'
       '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-11-14T09:04:29.979Z'
+        expires: '2018-12-14T19:44:45.842Z'
     - firebase-admin > @google-cloud/firestore > google-gax > grpc > node-pre-gyp > tar > chownr:
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
       '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-11-14T09:04:29.979Z'
+        expires: '2018-12-14T19:44:45.842Z'
     - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
       '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
-        expires: '2018-11-14T09:04:29.979Z'
+        expires: '2018-12-14T19:44:45.842Z'
     - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
       node-pre-gyp > tar > chownr:
         reason: None given
-        expires: '2018-11-14T09:04:29.979Z'
+        expires: '2018-12-14T19:44:45.842Z'
     - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-09-07T22:37:46.639Z'
@@ -48,4 +48,19 @@ ignore:
     - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
         reason: None given
         expires: '2018-10-13T07:43:34.148Z'
+    - '@angular/pwa > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
+    - '@angular/pwa > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
+    - '@angular/pwa > @schematics/angular > @angular-devkit/schematics > @angular-devkit/core > chokidar > fsevents > node-pre-gyp > tar > chownr':
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
+    - node-pre-gyp > tar > chownr:
+        reason: None given
+        expires: '2018-11-14T09:04:29.979Z'
 patch: {}
