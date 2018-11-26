@@ -1,6 +1,6 @@
 .cmp-notification {
     padding: 15px $grid-mobile-padding;
-    border-top: 1px rgba($color-white2, .2) solid;
+    border-top: 1px rgba($color-white2, 0.2) solid;
 
     @include use-breakpoint(mini-tablet) {
         padding: 15px $grid-desktop-padding;

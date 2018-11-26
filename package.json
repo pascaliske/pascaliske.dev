@@ -16,7 +16,7 @@
     "postbuild": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json && ts-node src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix",
     "check": "snyk test && snyk monitor",
-    "format": "prettier --config .prettierrc --write src/**/**.{ts,scss,md}"
+    "format": "prettier --config .prettierrc --write \"**/*.{ts,scss,md}\""
   },
   "private": true,
   "greenkeeper": {
