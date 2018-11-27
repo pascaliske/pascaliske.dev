@@ -522,46 +522,51 @@
     semver "5.5.1"
     semver-intersect "1.4.0"
 
-"@sentry/browser@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.3.0.tgz#07660b2b17b12a6d8953be20eb8efaa8683fafb9"
+"@sentry/browser@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.4.0.tgz#278632e94a83e43f9ef87f89fd7e42a89516118f"
   dependencies:
-    "@sentry/core" "4.3.0"
-    "@sentry/types" "4.3.0"
-    "@sentry/utils" "4.3.0"
+    "@sentry/core" "4.4.0"
+    "@sentry/types" "4.4.0"
+    "@sentry/utils" "4.4.0"
+    tslib "^1.9.3"
 
-"@sentry/core@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.3.0.tgz#f51f86b380637b5f2348cd35fdb96c224023c103"
+"@sentry/core@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.4.0.tgz#32caf17751cbd50345214d7bb61d498d51bb13c5"
   dependencies:
-    "@sentry/hub" "4.3.0"
-    "@sentry/minimal" "4.3.0"
-    "@sentry/types" "4.3.0"
-    "@sentry/utils" "4.3.0"
+    "@sentry/hub" "4.4.0"
+    "@sentry/minimal" "4.4.0"
+    "@sentry/types" "4.4.0"
+    "@sentry/utils" "4.4.0"
+    tslib "^1.9.3"
 
-"@sentry/hub@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.3.0.tgz#ed7731583d81664057de73e3221a393116362b04"
+"@sentry/hub@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.4.0.tgz#9aa47ce9143cbd44de6ac1aeddd2a6532517673c"
   dependencies:
-    "@sentry/types" "4.3.0"
-    "@sentry/utils" "4.3.0"
+    "@sentry/types" "4.4.0"
+    "@sentry/utils" "4.4.0"
+    tslib "^1.9.3"
 
-"@sentry/minimal@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.3.0.tgz#d83826e713d54c95d4986187d223ef1fabc4e1ed"
+"@sentry/minimal@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.4.0.tgz#e2c19296312311851704bb5d61f6892253ae52e6"
   dependencies:
-    "@sentry/hub" "4.3.0"
-    "@sentry/types" "4.3.0"
+    "@sentry/hub" "4.4.0"
+    "@sentry/types" "4.4.0"
+    tslib "^1.9.3"
 
-"@sentry/types@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.3.0.tgz#a5cec425764a72a0817329ac212c5ce085ecdd05"
+"@sentry/types@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.4.0.tgz#99e662c1b9955f293e2673433a1c84b50db1ed64"
 
-"@sentry/utils@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.3.0.tgz#4d278b55deb6175ada2a78b56716aa2df97cd389"
+"@sentry/utils@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.4.0.tgz#1e81f8849763477bb32707d6eba60897c9de9044"
   dependencies:
-    "@sentry/types" "4.3.0"
+    "@sentry/types" "4.4.0"
+    tslib "^1.9.3"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
