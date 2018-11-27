@@ -466,10 +466,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@pascaliske/form-elements@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.0.tgz#68bf52ea46b8472193b2cb34f6d9aa5de74c9d95"
-  integrity sha512-VYt1irGKJaD4M9U+Vzb0kqv6S5UEpSqVgHVoamODUn58MLpkb+0WzqcPMp4HmkYP2/FyuiMVnk/t/MdhF5oUPA==
+"@pascaliske/form-elements@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.1.tgz#319799f6f3e345bc2581aff8389a8a90d882886a"
+  integrity sha512-OF+IfJKzhJHfPkHUsjZx1TlDaGAO+hy8qoN/T9B1/IOs64wgDn/2AdjFoxXZdufsdHjjqPL6AUbQJ28RbUkg2Q==
   dependencies:
     flatpickr "4.5.2"
     fuzzysearch "^1.0.3"
@@ -482,12 +482,12 @@
   dependencies:
     classnames "^2.2.6"
 
-"@pascaliske/ngx-notifications@^1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.0.10.tgz#09b7dd00b5791de1ddde28291798d7fad4bcc9fb"
-  integrity sha512-ebuib8UI3fhyS0QSLSg+ZqiIXExwTRFTn0kO+WukebDS2sPa68csZ0kejWn5L/cb2IbMV+YJSvMCfQw1RNZWWw==
+"@pascaliske/ngx-notifications@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.0.11.tgz#613676887b3ef5373ced2e4f07081e85a7306276"
+  integrity sha512-DdbAQ/Zm8QNcJN6NgpYe1W4JjkCBlHEg6c0FoSZ77KjfZQvTxahGFAtNk7JbZksHzv8kMHEXl63QaQyqCVmLnw==
   dependencies:
-    marked "^0.5.1"
+    marked "^0.5.2"
     tslib "^1.9.0"
     uuid "^3.3.2"
 
@@ -6341,6 +6341,11 @@ marked@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.1.tgz#062f43b88b02ee80901e8e8d8e6a620ddb3aa752"
   integrity sha512-iUkBZegCZou4AdwbKTwSW/lNDcz5OuRSl3qdcl31Ia0B2QPG0Jn+tKblh/9/eP9/6+4h27vpoh8wel/vQOV0vw==
+
+marked@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.2.tgz#3efdb27b1fd0ecec4f5aba362bddcd18120e5ba9"
+  integrity sha512-fdZvBa7/vSQIZCi4uuwo2N3q+7jJURpMVCcbaX0S1Mg65WZ5ilXvC67MviJAsdjqqgD+CEq4RKo5AYGgINkVAA==
 
 marky@^1.2.0:
   version "1.2.1"
