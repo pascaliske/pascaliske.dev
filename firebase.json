@@ -68,6 +68,15 @@
         ]
       },
       {
+        "source": "**/*",
+        "headers": [
+          {
+            "key": "Feature-Policy",
+            "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr '*'; usb 'none'; vr 'none';"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(js|css)",
         "headers": [
           {
