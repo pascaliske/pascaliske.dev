@@ -15,6 +15,10 @@
       {
         "source": "/cfns/send-contact-request",
         "function": "sendContactRequest"
+      },
+      {
+        "source": "/cfns/send-csp-report",
+        "function": "sendCspReport"
       }
     ],
     "headers": [
