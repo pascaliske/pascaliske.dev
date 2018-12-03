@@ -8,11 +8,16 @@
  * @return {Map} - Updated map
  */
 @function map-deep-set($map, $keys...) {
-    $map-list: ($map,);
+    $map-list: ($map);
     $result: null;
 
     @if length($keys) == 2 {
-        @return map-merge($map, (nth($keys, 1): nth($keys, -1)));
+        @return map-merge(
+            $map,
+            (
+                nth($keys, 1): nth($keys, -1),
+            )
+        );
     }
 
     @for $i from 1 through length($keys) - 2 {
@@ -20,7 +25,12 @@
     }
 
     @for $i from length($map-list) through 1 {
-        $result: map-merge(nth($map-list, $i), (nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result)));
+        $result: map-merge(
+            nth($map-list, $i),
+            (
+                nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result),
+            )
+        );
     }
 
     @return $result;
@@ -57,7 +67,10 @@
 @mixin map-as-properties($map, $prefix: '', $ignore: none, $include: all) {
     @if ($map) {
         @each $property, $value in $map {
-            @if (($ignore == none or not index($ignore, $property)) and ($include == all or index($include, $property))) {
+            @if (
+                ($ignore == none or not index($ignore, $property)) and
+                    ($include == all or index($include, $property))
+            ) {
                 #{$prefix}#{$property}: $value;
             }
         }

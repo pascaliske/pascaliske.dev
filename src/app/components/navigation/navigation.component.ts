@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core'
+import { Component, OnInit, OnDestroy, Input, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { modifiers } from '@pascaliske/html-helpers'
 import { takeWhile } from 'rxjs/operators'
 import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
@@ -55,7 +56,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
      *
      * @param {BreakpointService} breakpointService
      */
-    public constructor(private breakpointService: BreakpointService) {}
+    public constructor(
+        @Inject(PLATFORM_ID) private platformId,
+        private breakpointService: BreakpointService,
+    ) {}
 
     /**
      * Setup logic.
@@ -63,6 +67,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * @returns {void}
      */
     public ngOnInit(): void {
+        if (isPlatformBrowser(this.platformId)) {
+            this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
+        }
+
         this.breakpointService.breakpoint$.pipe(takeWhile(() => this.alive)).subscribe(() => {
             this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
         })

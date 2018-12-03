@@ -11,9 +11,14 @@ before_script: greenkeeper-lockfile-update
 script:
   - yarn run lint
   - yarn run check
-  - yarn run build --progress false --base-href https://$PROD_DOMAIN
+  - yarn run build:app --progress false --base-href https://$PROD_DOMAIN
+  - yarn run build:server --progress false
+  - yarn run build:cfn
+  - yarn run build:prerender
   - yarn run bundlewatch
-after_deploy: yarn run lighthouse
+after_deploy:
+  - yarn run report:generate
+  - yarn run report:upload
 after_script: greenkeeper-lockfile-upload
 deploy:
   provider: firebase
