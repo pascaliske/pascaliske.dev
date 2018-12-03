@@ -1,4 +1,5 @@
-import { NgModule, ErrorHandler } from '@angular/core'
+import { NgModule } from '@angular/core'
+import { SentryModule } from '@pascaliske/ngx-sentry'
 import { FormElementsModule } from '@pascaliske/form-elements'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { NgProgressModule } from '@ngx-progressbar/core'
@@ -7,7 +8,6 @@ import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
 import { environment } from '../../environments/environment'
-import { SentryErrorHandler } from '../sentry'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
     const renderer = new MarkedRenderer()
@@ -37,6 +37,10 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 @NgModule({
     declarations: [],
     imports: [
+        SentryModule.forRoot({
+            enabled: environment.production,
+            sentry: environment.sentry,
+        }),
         FormElementsModule.forRoot({
             email: {
                 suggestions: true,
@@ -69,11 +73,5 @@ export function MarkdownOptionsFactory(): MarkedOptions {
         }),
     ],
     exports: [NotificationsModule, NgProgressModule, MarkdownModule],
-    providers: [
-        {
-            provide: ErrorHandler,
-            useClass: SentryErrorHandler,
-        },
-    ],
 })
 export class CoreModule {}
