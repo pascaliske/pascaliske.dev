@@ -23,7 +23,7 @@ export default function(config) {
             new ReplacePlugin({
                 include: ['environment.ts'],
                 values: {
-                    SENTRY_RELEASE: `v${pkg.version}`,
+                    RELEASE: `v${pkg.version}`,
                 },
             }),
             new PurifyCSSPlugin({
