@@ -5,6 +5,9 @@ import { AppBrowserModule } from './app/app.browser.module'
 import { environment } from './environments/environment'
 
 if (environment.production) {
+    // log app version on startup
+    console.log(environment.release)
+
     enableProdMode()
 }
 
