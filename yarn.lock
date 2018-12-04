@@ -491,10 +491,10 @@
     tslib "^1.9.0"
     uuid "^3.3.2"
 
-"@pascaliske/ngx-sentry@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-1.0.0.tgz#d4c389c14cf16f7bf61a3dc08bdf0cd0e8d34acc"
-  integrity sha512-TCGRwyzUr3Lc1oHCmwLOj/9AmxVrC4ddueIp0QglTNtK9r4bjGvofZukWghaXiZSSTa9pQDHaqsbfg0PfB17lg==
+"@pascaliske/ngx-sentry@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-1.1.0.tgz#22cb7ce45aa98b9e5b27e781aadf46e1f324e067"
+  integrity sha512-VOLjafc4jxFtFxfqTDEoCgBSaRrB339Kl+tdEpJncKA4e1Oa/IjemiavlZrlIKW2CRk7iE6/DEA0ItrZM7nHzA==
   dependencies:
     "@sentry/browser" "^4.4.1"
     tslib "^1.9.0"
@@ -4020,10 +4020,10 @@ firebase-functions@^2.1.0:
     jsonwebtoken "^8.2.1"
     lodash "^4.6.1"
 
-firebase-tools@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.1.1.tgz#94a57f2d22de618431cc1235606d5958abf37aeb"
-  integrity sha512-0UOdv2BTadzCwuskoYSOAZnXy0K09AyMnVAO2eCEcikZcRimrAzzQMXiUFcRLUxav/V1gDMxjv3RgLE6gKC5jw==
+firebase-tools@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.1.2.tgz#2940a8f54282f0c474b2a0dd84c2adcab0900f8f"
+  integrity sha512-51nU5XhF/XUAnBSQmTo0yYJXoyEcY34AiqMXL9jj7pkeo/vuYxLaYaB946V0ne+pEkbbfVwsts9t0Lt4L847dA==
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
@@ -9033,10 +9033,10 @@ snyk-config@2.2.0:
     lodash "^4.17.5"
     nconf "^0.10.0"
 
-snyk-docker-plugin@1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.13.0.tgz#6477cb9cb87b320bb2ae958e29bf675a45166785"
-  integrity sha512-cPFrHgIQI0fy+w6Zuo6ubi4VOgYb+vnP6+fXMILaDFCUysrZhGX1oaiO8JGcvyhHDN9KF0GhIolClSezhWS2Cw==
+snyk-docker-plugin@1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.13.1.tgz#4d5ad62fe76b03e36b2c414b9576e67daef21f73"
+  integrity sha512-rhVPwMryfGanLXeDoDzjQabGq8VlEPSkvDvraiOhm/F9o5E4zam6vDlVQXsYVRb4ydVKPLgux2ejWyFiG6shFA==
   dependencies:
     debug "^3"
     dockerfile-ast "0.0.12"
@@ -9175,10 +9175,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.113.0:
-  version "1.113.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.113.0.tgz#2eace0b4cfcc25f90392afa537ce95654aeae4b6"
-  integrity sha512-M2Zvtfp6T5XLE9Wn7LwD+COdanvc6pOeEcbOtg/rBudqmMDNyeqt7ENT/GJ80xtCH+a1MmlwShjiHuA6x95xeQ==
+snyk@^1.114.0:
+  version "1.114.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.114.0.tgz#1ecb4c681cdeb647037a6c0b1dda4c9b2c49faad"
+  integrity sha512-qfCN9qbUtJs7zv0GnAoHEYSXRAea+nTtI2UspMsJofXWW0hdLCFXglDokHqE5Q0iCYuUblOj6WElGU+xHOWcRA==
   dependencies:
     "@snyk/dep-graph" "1.1.2"
     "@snyk/gemfile" "1.1.0"
@@ -9198,7 +9198,7 @@ snyk@^1.113.0:
     recursive-readdir "^2.2.2"
     semver "^5.5.0"
     snyk-config "2.2.0"
-    snyk-docker-plugin "1.13.0"
+    snyk-docker-plugin "1.13.1"
     snyk-go-plugin "1.6.0"
     snyk-gradle-plugin "2.1.1"
     snyk-module "1.9.1"
@@ -10583,10 +10583,10 @@ webpack@4.23.1:
     watchpack "^1.5.0"
     webpack-sources "^1.3.0"
 
-webpack@^4.26.1:
-  version "4.26.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.26.1.tgz#ff3a9283d363c07b3494dfa702d08f4f2ef6cb39"
-  integrity sha512-i2oOvEvuvLLSuSCkdVrknaxAhtUZ9g+nLSoHCWV0gDzqGX2DXaCrMmMUpbRsTSSLrUqAI56PoEiyMUZIZ1msug==
+webpack@^4.27.0:
+  version "4.27.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.27.0.tgz#1db66f03f0239bf797827f0580f53a41abd4067c"
+  integrity sha512-y77EQNIlsB9fUGgpLv/ZzmH+Yd9DgyIF9omX9RFavR5ZFM6HxFm6sqkbBXYxpjbKej9K6hD+Y8qEVg2rWdI2gg==
   dependencies:
     "@webassemblyjs/ast" "1.7.11"
     "@webassemblyjs/helper-module-context" "1.7.11"
