@@ -23,7 +23,8 @@ export default function(config) {
             new ReplacePlugin({
                 include: ['environment.ts'],
                 values: {
-                    RELEASE: `v${pkg.version}`,
+                    VERSION: `v${pkg.version}`,
+                    SENTRY_RELEASE: `v${pkg.version}`,
                 },
             }),
             new PurifyCSSPlugin({
@@ -31,6 +32,18 @@ export default function(config) {
             }),
             new VisualizerPlugin({
                 filename: './stats.html',
+            }),
+        )
+    }
+
+    if (command === 'run') {
+        config.plugins.push(
+            new ReplacePlugin({
+                include: ['environment.ts'],
+                values: {
+                    VERSION: `v${pkg.version}`,
+                    SENTRY_RELEASE: `v${pkg.version}`,
+                },
             }),
         )
     }

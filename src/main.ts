@@ -6,7 +6,7 @@ import { environment } from './environments/environment'
 
 if (environment.production) {
     // log app version on startup
-    console.log(environment.release)
+    console.log(environment.version)
 
     enableProdMode()
 }
