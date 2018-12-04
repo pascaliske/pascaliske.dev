@@ -3,7 +3,7 @@ const pkg = require('../../package.json')
 
 export const environment = {
     production: false,
-    release: `v${pkg.version}`,
+    version: `v${pkg.version}`,
     cfnBaseUrl: 'https://us-central1-pascal-iske-de.cloudfunctions.net',
     cookieDomain: 'localhost',
     sentry: {
