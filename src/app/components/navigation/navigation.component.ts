@@ -8,8 +8,9 @@ import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoi
  * Representation of an navigation item.
  */
 export interface NavigationItem {
-    route: string
     label: string
+    route?: string
+    url?: string
     options?: {
         decorated?: boolean
         fixedWidth?: boolean
@@ -40,9 +41,9 @@ export class NavigationComponent implements OnInit, OnDestroy {
     /**
      * Represents the current open/close state of the mobile navigation.
      *
-     * @param {boolean} mobileOpen
+     * @param {boolean} open
      */
-    public mobileOpen: boolean = false
+    public open: boolean = false
 
     /**
      * Lifecycle control property.
@@ -92,7 +93,31 @@ export class NavigationComponent implements OnInit, OnDestroy {
      */
     public get classes(): string {
         return modifiers('cmp-navigation', {
-            open: this.mobile && this.mobileOpen,
+            open: this.mobile && this.open,
+        })
+    }
+
+    /**
+     * Returns the item classes.
+     *
+     * @param {NavigationItem}
+     * @returns {string}
+     */
+    public getItemClasses(item: NavigationItem): string {
+        return modifiers('cmp-navigation__item', {
+            fixed: item.options && item.options.fixedWidth,
+        })
+    }
+
+    /**
+     * Returns the link classes.
+     *
+     * @param {NavigationItem}
+     * @returns {string}
+     */
+    public getLinkClasses(item: NavigationItem): string {
+        return modifiers('cmp-navigation__text', {
+            decorated: item.options && item.options.decorated,
         })
     }
 }
