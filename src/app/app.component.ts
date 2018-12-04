@@ -26,22 +26,29 @@ export class AppComponent implements OnInit, OnDestroy {
 
     public pages: Array<NavigationItem> = [
         {
-            route: 'home',
             label: 'Home',
+            route: 'home',
             options: {
                 decorated: true,
             },
         },
         {
-            route: 'about',
             label: 'About',
+            route: 'about',
             options: {
                 decorated: true,
             },
         },
         {
-            route: 'contact',
+            label: 'Blog',
+            url: 'https://medium.com/pascal-iske',
+            options: {
+                decorated: true,
+            },
+        },
+        {
             label: 'Contact',
+            route: 'contact',
             options: {
                 decorated: true,
             },
