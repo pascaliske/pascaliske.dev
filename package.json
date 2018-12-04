@@ -12,7 +12,7 @@
     "start": "ngw serve",
     "build": "yarn run build:app && yarn run build:server && yarn run build:cfn && yarn run build:prerender",
     "build:app": "ngw build --prod --aot --build-optimizer --stats-json",
-    "build:server": "ngw run pascal-iske:server",
+    "build:server": "ngw run pascal-iske:server --configuration production",
     "build:cfn": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "build:prerender": "ts-node src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix",
