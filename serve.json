@@ -2,13 +2,19 @@
   "public": "dist/app",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "index.html"
+    }
+  ],
   "headers": [
     {
-      "source": "**/*",
+      "source": "**",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; connect-src 'self' sentry.io; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' www.google-analytics.com 'sha256-NfLWBsQFRCVaPqTzsyqH+up8K4fd01oz/9ALl1M2CkY='; img-src 'self' www.google-analytics.com; font-src fonts.gstatic.com; object-src 'none'; report-uri https://sentry.io/api/1200530/security/?sentry_key=da20741e2b93497caba31ff22a6290bc&sentry_environment=production;"
+          "value": "default-src 'self'; connect-src 'self' sentry.io; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' www.google-analytics.com 'sha256-NfLWBsQFRCVaPqTzsyqH+up8K4fd01oz/9ALl1M2CkY='; img-src 'self' www.google-analytics.com; font-src fonts.gstatic.com; object-src 'none';;"
         }
       ]
     },
@@ -49,29 +55,11 @@
       ]
     },
     {
-      "source": "**/*",
+      "source": "**",
       "headers": [
         {
           "key": "Feature-Policy",
           "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr *; usb 'none'; vr 'none';"
-        }
-      ]
-    },
-    {
-      "source": "**/*.@(js|css)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "private, max-age=31536000"
-        }
-      ]
-    },
-    {
-      "source": "**/*.@(jpg|jpeg|gif|png|json|txt)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=86400"
         }
       ]
     }

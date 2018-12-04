@@ -23,7 +23,7 @@
     ],
     "headers": [
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "Content-Security-Policy",
@@ -68,7 +68,7 @@
         ]
       },
       {
-        "source": "**/*",
+        "source": "**",
         "headers": [
           {
             "key": "Feature-Policy",
