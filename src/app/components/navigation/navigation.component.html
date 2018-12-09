@@ -6,7 +6,7 @@
                 <a class="cmp-navigation__link" [routerLink]="[item.route]" (click)="open = false" *ngIf="item.route">
                     <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{item.label}}</span>
                 </a>
-                <a class="cmp-navigation__link" target="_blank" [href]="item.url" *ngIf="item.url">
+                <a class="cmp-navigation__link" target="_blank" rel="noopener" [href]="item.url" *ngIf="item.url">
                     <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{item.label}}</span>
                 </a>
             </li>
