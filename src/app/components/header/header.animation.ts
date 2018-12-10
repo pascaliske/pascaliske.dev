@@ -1,6 +1,6 @@
 import { trigger, state, style, transition, group, animate } from '@angular/animations'
 
-export const animation = [
+export const animations = [
     trigger('title', [
         state(
             'fadeIn',
