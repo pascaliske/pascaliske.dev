@@ -64,7 +64,7 @@
     "@pascaliske/html-helpers": "^1.2.2",
     "@pascaliske/ngx-notifications": "^1.0.11",
     "@pascaliske/ngx-sentry": "^1.1.0",
-    "@sentry/browser": "4.4.1",
+    "@sentry/browser": "4.4.2",
     "cookieconsent": "^3.1.0",
     "core-js": "^2.6.0",
     "highlight.js": "^9.13.1",
