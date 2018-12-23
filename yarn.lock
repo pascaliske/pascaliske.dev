@@ -459,10 +459,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-progressbar/router@~5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@ngx-progressbar/router/-/router-5.2.1.tgz#d0c847126b885db800cd16d354d32f39b7f7f075"
-  integrity sha512-iJeO+dFOkc7rvAkfsldt7oGaSkiGePng2T/Pewu37qdUmszvsbJVt9NKLlp1cDWiluORVxpRs4j65TNYd76uHw==
+"@ngx-progressbar/router@~5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/router/-/router-5.3.0.tgz#9cac7256882e27b9e823fda0cb8612fe6117782b"
+  integrity sha512-mOt7ptJA1sCZatA7e/pSNdTbsZM5rwNjduz5IViyL2wqhfwEQ70tJScaOfXKGBs4yajKEHRNaxWXksZqweEehA==
   dependencies:
     tslib "^1.9.0"
 
