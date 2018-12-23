@@ -1,7 +1,7 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
 import { Observable, Subject, EMPTY } from 'rxjs'
-import { finalize, filter } from 'rxjs/operators'
+import { filter, distinctUntilChanged, finalize } from 'rxjs/operators'
 
 /**
  * ViewportService
@@ -59,6 +59,7 @@ export class ViewportService {
 
         return this.callback$.asObservable().pipe(
             filter((entry: IntersectionObserverEntry) => entry.target === element),
+            distinctUntilChanged(),
             finalize(() => this.observer.unobserve(element)),
         )
     }
