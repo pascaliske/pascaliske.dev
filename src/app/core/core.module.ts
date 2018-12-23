@@ -47,7 +47,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             },
         }),
         NotificationsModule,
-        NgProgressModule.forRoot({
+        NgProgressModule.withConfig({
             color: '#fff',
             speed: 250,
             debounceTime: 400,
