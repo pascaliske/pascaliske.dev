@@ -452,10 +452,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-progressbar/http@~5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@ngx-progressbar/http/-/http-5.2.1.tgz#0301e11a65451fa071499066e4660cd151ba8ec9"
-  integrity sha512-mUWrI88LNuMAzyz9enfdqILwuqdpXFriZ2m8ji582sVjfV0SoMuKviyhk4p4tfKGZvUnzepImBrC+wBNgjJehw==
+"@ngx-progressbar/http@~5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/http/-/http-5.3.0.tgz#7dc9a64497cdfb03191ddf72394e15eab8b2437f"
+  integrity sha512-7QyKT4H3O1jLY5Mh+lqJi+c9m5XpEUEwSH/9F3DMkKXN/5ggZzaMmx8e2nCuqcWZKLjB1r5mvciYZ3NdocXWFg==
   dependencies:
     tslib "^1.9.0"
 
