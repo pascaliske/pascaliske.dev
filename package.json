@@ -102,7 +102,7 @@
     "fs-extra": "^7.0.1",
     "lighthouse": "^4.0.0-alpha.2-3.2.1",
     "ngw": "^7.0.0",
-    "nodemailer": "^4.7.0",
+    "nodemailer": "^5.0.0",
     "now": "^12.1.14",
     "prettier": "^1.15.3",
     "purify-css": "^1.2.5",
