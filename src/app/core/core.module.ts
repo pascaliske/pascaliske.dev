@@ -35,7 +35,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 }
 
 @NgModule({
-    declarations: [],
     imports: [
         SentryModule.forRoot({
             enabled: environment.production,

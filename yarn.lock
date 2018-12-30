@@ -10547,11 +10547,6 @@ webpack-merge@4.1.4:
   dependencies:
     lodash "^4.17.5"
 
-webpack-plugin-replace@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/webpack-plugin-replace/-/webpack-plugin-replace-1.1.1.tgz#9816647fefc98a7d1700f93f2b4b6f481cf20161"
-  integrity sha1-mBZkf+/Jin0XAPk/K0tvSBzyAWE=
-
 webpack-sources@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.2.0.tgz#18181e0d013fce096faf6f8e6d41eeffffdceac2"
