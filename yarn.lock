@@ -482,12 +482,11 @@
   dependencies:
     classnames "^2.2.6"
 
-"@pascaliske/ngx-notifications@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.0.11.tgz#613676887b3ef5373ced2e4f07081e85a7306276"
-  integrity sha512-DdbAQ/Zm8QNcJN6NgpYe1W4JjkCBlHEg6c0FoSZ77KjfZQvTxahGFAtNk7JbZksHzv8kMHEXl63QaQyqCVmLnw==
+"@pascaliske/ngx-notifications@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.1.0.tgz#4bbcb8f1cebfe7cbdf3ccf99b7b0751ec1cc2377"
+  integrity sha512-Q5bMEXQ7iBkw55KNup9YvqNcKtH3G9OooNhiChZYGjEIljvLo2CUFUFy/d50wh4YvguUejHXOpT0aOSt8Jf4ew==
   dependencies:
-    marked "^0.5.2"
     tslib "^1.9.0"
     uuid "^3.3.2"
 
@@ -6415,6 +6414,11 @@ marked@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.2.tgz#3efdb27b1fd0ecec4f5aba362bddcd18120e5ba9"
   integrity sha512-fdZvBa7/vSQIZCi4uuwo2N3q+7jJURpMVCcbaX0S1Mg65WZ5ilXvC67MviJAsdjqqgD+CEq4RKo5AYGgINkVAA==
+
+marked@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.0.tgz#a18d01cfdcf8d15c3c455b71c8329e5e0f01faa1"
+  integrity sha512-HduzIW2xApSXKXJSpCipSxKyvMbwRRa/TwMbepmlZziKdH8548WSoDP4SxzulEKjlo8BE39l+2fwJZuRKOln6g==
 
 marky@^1.2.0:
   version "1.2.1"
