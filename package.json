@@ -70,7 +70,6 @@
     "highlight.js": "^9.13.1",
     "intersection-observer": "^0.5.1",
     "lodash-es": "^4.17.11",
-    "marked": "^0.6.0",
     "modularscale-sass": "^3.0.8",
     "ngx-cookieconsent": "^2.0.0",
     "ngx-markdown": "^7.0.3",

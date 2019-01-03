@@ -7,7 +7,6 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http'
 import { NgProgressRouterModule } from '@ngx-progressbar/router'
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown'
 import { NgcCookieConsentModule } from 'ngx-cookieconsent'
-import { parse } from 'marked'
 import { environment } from '../../environments/environment'
 
 export function MarkdownOptionsFactory(): MarkedOptions {
@@ -35,12 +34,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     }
 }
 
-export function markdownParser(src: string): string {
-    return parse(src, {
-        gfm: true,
-    })
-}
-
 @NgModule({
     imports: [
         SentryModule.forRoot({
@@ -52,9 +45,7 @@ export function markdownParser(src: string): string {
                 suggestions: true,
             },
         }),
-        NotificationsModule.forRoot({
-            markdown: markdownParser,
-        }),
+        NotificationsModule.forRoot(),
         NgProgressModule.withConfig({
             color: '#fff',
             speed: 250,
