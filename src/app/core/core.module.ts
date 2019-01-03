@@ -35,7 +35,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 }
 
 @NgModule({
-    declarations: [],
     imports: [
         SentryModule.forRoot({
             enabled: environment.production,
@@ -46,8 +45,8 @@ export function MarkdownOptionsFactory(): MarkedOptions {
                 suggestions: true,
             },
         }),
-        NotificationsModule,
-        NgProgressModule.forRoot({
+        NotificationsModule.forRoot(),
+        NgProgressModule.withConfig({
             color: '#fff',
             speed: 250,
             debounceTime: 400,

@@ -9,6 +9,10 @@ body {
     @include use-font(regular);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }

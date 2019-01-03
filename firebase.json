@@ -11,6 +11,18 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/de/*",
+        "destination": "/",
+        "type": 302
+      },
+      {
+        "source": "/en/*",
+        "destination": "/",
+        "type": 302
+      }
+    ],
     "rewrites": [
       {
         "source": "/cfns/send-contact-request",
