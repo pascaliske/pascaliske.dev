@@ -521,10 +521,10 @@
   dependencies:
     tslib "^1.9.3"
 
-"@pascaliske/ngx-sentry@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-1.1.0.tgz#22cb7ce45aa98b9e5b27e781aadf46e1f324e067"
-  integrity sha512-VOLjafc4jxFtFxfqTDEoCgBSaRrB339Kl+tdEpJncKA4e1Oa/IjemiavlZrlIKW2CRk7iE6/DEA0ItrZM7nHzA==
+"@pascaliske/ngx-sentry@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-1.2.1.tgz#0bb8a35c9c79f840be541a5c00e444bd4195f0da"
+  integrity sha512-9B3YS2kHmiOsIL4TKlQaxhPDNKRzXNLIGq/+sC3y31hbPr/SJrSPaiprLJVYQ+wYTqEwrHPPAqV8Mbx5jImM6A==
   dependencies:
     "@sentry/browser" "^4.4.1"
     tslib "^1.9.0"
