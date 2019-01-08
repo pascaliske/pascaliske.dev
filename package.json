@@ -103,7 +103,7 @@
     "lighthouse": "^4.0.0-alpha.2-3.2.1",
     "ngw": "^7.0.0",
     "nodemailer": "^5.0.0",
-    "now": "^12.1.14",
+    "now": "^13.0.0",
     "prettier": "^1.15.3",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
