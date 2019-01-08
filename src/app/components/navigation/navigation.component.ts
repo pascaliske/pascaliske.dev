@@ -29,7 +29,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * @param {Array<NavigationItem>}
      */
     @Input()
-    public items: Array<NavigationItem> = []
+    public items: NavigationItem[] = []
 
     /**
      * Represents the current breakpoint state of the navigation.

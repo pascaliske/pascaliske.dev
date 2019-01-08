@@ -11,7 +11,7 @@ import { DynamicComponentsDirective } from './dynamic-components/dynamic-compone
     exports: [CommonModule, NotificationsModule, MarkdownModule, DynamicComponentsComponent],
 })
 export class SharedModule {
-    public static registerDynamicComponents(components: Array<any>): ModuleWithProviders {
+    public static registerDynamicComponents(components: any[]): ModuleWithProviders {
         return {
             ngModule: SharedModule,
             providers: [

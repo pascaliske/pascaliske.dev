@@ -64,7 +64,7 @@ export class TitleService {
      * @returns {string} The final title
      */
     private prepare(title: string): string {
-        const parts: Array<string> = []
+        const parts: string[] = []
 
         // prepend optional prefix
         if (this.prefix !== '') {

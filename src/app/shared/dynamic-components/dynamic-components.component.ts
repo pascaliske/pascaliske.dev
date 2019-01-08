@@ -8,7 +8,7 @@ import { ComponentManifest, ComponentFactory, ComponentRef } from './typings'
     template: '<ng-template dynamic-components-host></ng-template>',
 })
 export class DynamicComponentsComponent implements OnInit {
-    @Input() public components: Array<ComponentManifest> = []
+    @Input() public components: ComponentManifest[] = []
 
     @ViewChild(DynamicComponentsDirective) public hostRef: DynamicComponentsDirective
 
@@ -46,7 +46,7 @@ export class DynamicComponentsComponent implements OnInit {
         }
 
         // pre resolve children components
-        let children: Array<any>
+        let children: any[]
         if (manifest.children && manifest.children.length > 0) {
             children = manifest.children.map(child => this.resolveComponent(child))
             children = children.filter(child => child !== undefined)
@@ -98,7 +98,7 @@ export class DynamicComponentsComponent implements OnInit {
      * @returns {ComponentFactory}
      */
     private resolveComponentFactory(name: string): ComponentFactory {
-        const factories: Array<ComponentFactory> = Array.from(
+        const factories: ComponentFactory[] = Array.from(
             this.componentFactoryResolver['_factories'].keys(),
         )
 

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
      */
     public activated: boolean = false
 
-    public pages: Array<NavigationItem> = [
+    public pages: NavigationItem[] = [
         {
             label: 'Home',
             route: 'home',
