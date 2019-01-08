@@ -7105,10 +7105,10 @@ normalize-url@2.0.1:
     query-string "^5.0.1"
     sort-keys "^2.0.0"
 
-now@^12.1.14:
-  version "12.1.14"
-  resolved "https://registry.yarnpkg.com/now/-/now-12.1.14.tgz#3f56bce02df505eb668343baf2cecf57ca1cc10c"
-  integrity sha512-DsEvELqGbxwKMHI3Xpf+CoAeIsvj0bKOCoOXmaf8F6cAAh9N20DhTFl1wFGylpjPgd3lj8SGfQuiSbpUV5CTjQ==
+now@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/now/-/now-13.0.0.tgz#094e36f95e711e77c345161e3cc533d9465b2f9f"
+  integrity sha512-d44hZ2Hmf7+rjk/eNLpRt5ZBkR0QOktwCH4e3LvCGVvGOw5Wltal9Nia5P4Rv4KqmPQ6La7bxq8sJyBjgdG3sQ==
 
 npm-bundled@^1.0.1:
   version "1.0.5"
@@ -9092,10 +9092,10 @@ snyk-config@2.2.0:
     lodash "^4.17.5"
     nconf "^0.10.0"
 
-snyk-docker-plugin@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.14.0.tgz#4f79a102908450bf32ff6db8391a72897d3eb8f1"
-  integrity sha512-bmhKHGwm0CIVOJD98uIuqGACbsuqjlwnj/Ybek+nlZowLqHyjhOUYQISPzjIwWbF1wpYf4Av6MzbCx9HsNPFIg==
+snyk-docker-plugin@1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.17.0.tgz#19f3d0dd4e05740d77662e2879603fdf3cf31f58"
+  integrity sha512-bRY8v9nieRWke4i3/KCFnAE0OCUcvN+v4cyZxecdULBwug+KmF1eOzofgatIJT4O58fqIoa+GCAzXxO+d0H0/A==
   dependencies:
     debug "^3"
     dockerfile-ast "0.0.12"
@@ -9235,10 +9235,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.120.0:
-  version "1.120.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.120.0.tgz#7ef0687c2b1fca4c72d52d40f2fe9bc827e01f80"
-  integrity sha512-9V2UMBDWMtiNOfFTj8oIEl+nAyvF9mFJEoROSzmm3K04CM9o1Y3wjjZE4pifhC0PsenpYtIJfv2tgtYBB46gHw==
+snyk@^1.121.0:
+  version "1.121.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.121.0.tgz#ce34be37ba3d9c4de42136be322cafcce682bbca"
+  integrity sha512-2VhONL6A0SuJt6F6sYj9iwnxuRhed/bCBHYRMlHzUz0YPBWzlRABaLQ2bRoufH++5y5yLmwyZM0adBAomWiLuQ==
   dependencies:
     "@snyk/dep-graph" "1.1.2"
     "@snyk/gemfile" "1.1.0"
@@ -9258,7 +9258,7 @@ snyk@^1.120.0:
     recursive-readdir "^2.2.2"
     semver "^5.5.0"
     snyk-config "2.2.0"
-    snyk-docker-plugin "1.14.0"
+    snyk-docker-plugin "1.17.0"
     snyk-go-plugin "1.6.1"
     snyk-gradle-plugin "2.1.2"
     snyk-module "1.9.1"
