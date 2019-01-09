@@ -2,12 +2,32 @@
     <cmp-navigation-button [(state)]="open" *ngIf="mobile"></cmp-navigation-button>
     <div class="cmp-navigation__wrapper">
         <ul class="cmp-navigation__list">
-            <li class="cmp-navigation__item" routerLinkActive="cmp-navigation__item--active" [class]="getItemClasses(item)" *ngFor="let item of items">
-                <a class="cmp-navigation__link" [routerLink]="[item.route]" (click)="open = false" *ngIf="item.route">
-                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{item.label}}</span>
+            <li
+                class="cmp-navigation__item"
+                routerLinkActive="cmp-navigation__item--active"
+                [class]="getItemClasses(item)"
+                *ngFor="let item of items"
+            >
+                <a
+                    class="cmp-navigation__link"
+                    [routerLink]="[item.route]"
+                    (click)="open = false"
+                    *ngIf="item.route"
+                >
+                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{
+                        item.label
+                    }}</span>
                 </a>
-                <a class="cmp-navigation__link" target="_blank" rel="noopener" [href]="item.url" *ngIf="item.url">
-                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{item.label}}</span>
+                <a
+                    class="cmp-navigation__link"
+                    target="_blank"
+                    rel="noopener"
+                    [href]="item.url"
+                    *ngIf="item.url"
+                >
+                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{
+                        item.label
+                    }}</span>
                 </a>
             </li>
         </ul>
