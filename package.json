@@ -28,13 +28,12 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,scss,html,md}": [
-      "yarn run format",
-      "yarn run lint",
+      "prettier --config .prettierrc --write ",
       "git add"
     ]
   },
