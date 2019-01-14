@@ -23,7 +23,8 @@
   "private": true,
   "greenkeeper": {
     "ignore": [
-      "typescript"
+      "typescript",
+      "webpack"
     ]
   },
   "husky": {
