@@ -78,7 +78,7 @@ export class BreakpointService {
      *
      * @param {Array<Breakpoint>}
      */
-    private readonly breakpoints: Array<Breakpoint> = [
+    private readonly breakpoints: Breakpoint[] = [
         {
             id: Breakpoints.DESKTOP,
             start: 1280,
@@ -218,7 +218,7 @@ export class BreakpointService {
     private determineBreakpoint(): Breakpoint {
         // match the breakpoints against window dimensions
         for (const item of this.breakpoints) {
-            const query: Array<string> = []
+            const query: string[] = []
 
             if (item.start) {
                 query.push(`(min-width: ${item.start}px)`)

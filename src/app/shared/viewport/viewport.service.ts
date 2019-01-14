@@ -70,7 +70,7 @@ export class ViewportService {
      * @param {Array<IntersectionObserverEntry>} entries -
      * @returns {void}
      */
-    private handler(entries: Array<IntersectionObserverEntry>): void {
+    private handler(entries: IntersectionObserverEntry[]): void {
         entries.forEach(entry => this.callback$.next(entry))
     }
 }

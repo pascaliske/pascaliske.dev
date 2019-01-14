@@ -48,10 +48,10 @@ export class ScrollService {
      *
      * @param {number} x
      * @param {number} y
-     * @param {'auto' | 'instant' | 'smooth'} behavior
+     * @param {'auto' | 'smooth'} behavior
      * @returns {void}
      */
-    public scroll(x: number, y: number, behavior: 'auto' | 'instant' | 'smooth' = 'smooth'): void {
+    public scroll(x: number, y: number, behavior: 'auto' | 'smooth' = 'smooth'): void {
         window.scrollTo({
             behavior: behavior,
             left: x,

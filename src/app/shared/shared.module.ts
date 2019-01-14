@@ -2,16 +2,13 @@ import { NgModule, ModuleWithProviders, ANALYZE_FOR_ENTRY_COMPONENTS } from '@an
 import { CommonModule } from '@angular/common'
 import { NotificationsModule } from '@pascaliske/ngx-notifications'
 import { MarkdownModule } from 'ngx-markdown'
-import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component'
-import { DynamicComponentsDirective } from './dynamic-components/dynamic-components.directive'
 
 @NgModule({
     imports: [CommonModule, NotificationsModule, MarkdownModule],
-    declarations: [DynamicComponentsComponent, DynamicComponentsDirective],
-    exports: [CommonModule, NotificationsModule, MarkdownModule, DynamicComponentsComponent],
+    exports: [CommonModule, NotificationsModule, MarkdownModule],
 })
 export class SharedModule {
-    public static registerDynamicComponents(components: Array<any>): ModuleWithProviders {
+    public static registerDynamicComponents(components: any[]): ModuleWithProviders {
         return {
             ngModule: SharedModule,
             providers: [
