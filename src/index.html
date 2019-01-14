@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <base href="/" />
+    <title>Pascal Iske</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="Description" content="Angular Web App built with Travis CI and deployed with Firebase." />
+    <meta name="description" content="Angular Web App built with Travis CI and deployed with Firebase." />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com/analytics.js" as="script" crossorigin />
 </head>
 <body>
     <cmp-root>
@@ -29,13 +30,12 @@
             window[disable] = true
         }
 
-        function gaOptout() {
+        function gaOut() {
             document.cookie = disable + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
             window[disable] = true
-            alert('Das Tracking ist jetzt deaktiviert')
         }
 
-        function init(window, document) {
+        function gaInit(window, document) {
             window.GoogleAnalyticsObject = 'ga'
             window.ga = window.ga || function() {
                 (window.ga.q = window.ga.q || []).push(arguments)
@@ -49,11 +49,10 @@
 
             const reference = document.getElementsByTagName('script')[0]
             reference.parentNode.insertBefore(element, reference)
-        }
 
-        init(window, document)
-        ga('create', property, 'auto')
-        ga('set', 'anonymizeIp', true)
+            ga('create', property, 'auto')
+            ga('set', 'anonymizeIp', true)
+        }
     </script>
 </body>
 </html>

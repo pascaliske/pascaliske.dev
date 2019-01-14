@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
 import { modifiers } from '@pascaliske/html-helpers'
-import { TranslateService } from '@ngx-translate/core'
 import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './shared/title/title.service'
 import { TrackingService } from './shared/tracking/tracking.service'
@@ -25,38 +24,31 @@ export class AppComponent implements OnInit, OnDestroy {
      */
     public activated: boolean = false
 
-    public pages: Array<NavigationItem> = [
+    public pages: NavigationItem[] = [
         {
+            label: 'Home',
             route: 'home',
-            label: 'NAVIGATION_HOME',
             options: {
                 decorated: true,
             },
         },
         {
+            label: 'About',
             route: 'about',
-            label: 'NAVIGATION_ABOUT',
             options: {
                 decorated: true,
             },
         },
-        // {
-        //     route: 'references',
-        //     label: 'NAVIGATION_REFERENCES',
-        //     options: {
-        //         decorated: true,
-        //     },
-        // },
-        // {
-        //     route: 'blog',
-        //     label: 'NAVIGATION_BLOG',
-        //     options: {
-        //         decorated: true,
-        //     },
-        // },
         {
+            label: 'Blog',
+            url: 'https://medium.com/pascal-iske',
+            options: {
+                decorated: true,
+            },
+        },
+        {
+            label: 'Contact',
             route: 'contact',
-            label: 'NAVIGATION_CONTACT',
             options: {
                 decorated: true,
             },
@@ -74,7 +66,6 @@ export class AppComponent implements OnInit, OnDestroy {
      */
     public constructor(
         private router: Router,
-        private translateService: TranslateService,
         private titleService: TitleService,
         private trackingService: TrackingService,
     ) {}
@@ -93,10 +84,6 @@ export class AppComponent implements OnInit, OnDestroy {
                     page: event.urlAfterRedirects,
                 })
             })
-
-        this.translateService.onLangChange.pipe(takeWhile(() => this.alive)).subscribe(event => {
-            document.querySelector('html').setAttribute('lang', event.lang)
-        })
     }
 
     public ngOnDestroy(): void {

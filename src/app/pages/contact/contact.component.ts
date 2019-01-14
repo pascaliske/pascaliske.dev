@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { FValidationConfig } from '@pascaliske/form-elements'
-import { TranslateService } from '@ngx-translate/core'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
 import { ContactService } from './contact.service'
@@ -20,11 +19,11 @@ export class ContactComponent extends Page implements OnInit, OnDestroy {
         email: [
             {
                 type: 'required',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_REQUIRED',
+                message: 'This field is required!',
             },
             {
                 type: 'email',
-                message: 'CONTACT_PAGE_FORM_EMAIL_VALIDATION_EMAIL',
+                message: 'Please enter a valid email address!',
             },
         ],
     }
@@ -33,12 +32,11 @@ export class ContactComponent extends Page implements OnInit, OnDestroy {
         private changeDetectorRef: ChangeDetectorRef,
         protected route: ActivatedRoute,
         private formBuilder: FormBuilder,
-        protected translateService: TranslateService,
         protected titleService: TitleService,
         private trackingService: TrackingService,
         private contactService: ContactService,
     ) {
-        super(route, translateService, titleService)
+        super(route, titleService)
     }
 
     public ngOnInit(): void {

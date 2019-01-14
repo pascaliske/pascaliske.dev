@@ -11,7 +11,7 @@ export const routes: Routes = [
         path: '',
         component: PrivacyComponent,
         data: {
-            title: 'PAGE_TITLE_PRIVACY',
+            title: 'Privacy',
         },
     },
 ]

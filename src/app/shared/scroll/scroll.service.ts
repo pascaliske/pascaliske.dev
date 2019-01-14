@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core'
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { Subject, fromEvent } from 'rxjs'
 import { distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
 
@@ -22,7 +23,9 @@ export interface ScrollState {
  *
  * Subscribe the subject `scrollstate`, it emits the current {@link ScrollState}.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class ScrollService {
     /**
      * Subject for scroll changes.
@@ -34,8 +37,10 @@ export class ScrollService {
     /**
      * Initializes the scroll service.
      */
-    public constructor() {
-        this.handleScroll()
+    public constructor(@Inject(PLATFORM_ID) private platformId) {
+        if (isPlatformBrowser(this.platformId)) {
+            this.handleScroll()
+        }
     }
 
     /**
@@ -43,10 +48,10 @@ export class ScrollService {
      *
      * @param {number} x
      * @param {number} y
-     * @param {'auto' | 'instant' | 'smooth'} behavior
+     * @param {'auto' | 'smooth'} behavior
      * @returns {void}
      */
-    public scroll(x: number, y: number, behavior: 'auto' | 'instant' | 'smooth' = 'smooth'): void {
+    public scroll(x: number, y: number, behavior: 'auto' | 'smooth' = 'smooth'): void {
         window.scrollTo({
             behavior: behavior,
             left: x,

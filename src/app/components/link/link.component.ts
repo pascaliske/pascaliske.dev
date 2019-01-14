@@ -58,7 +58,7 @@ export class LinkComponent {
      * @param {Array<string>} target
      */
     @Input()
-    public target: Array<string>
+    public target: string[]
 
     /**
      * Whether the link should be displayed inline or not.

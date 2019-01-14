@@ -11,6 +11,7 @@ $component: 'cmp-header';
         align-items: center;
         justify-content: center;
         background: $color-primary;
+        cursor: pointer;
 
         @include use-breakpoint(mini-tablet) {
             height: $header-height-mini-tablet;

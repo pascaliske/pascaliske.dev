@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core'
-import { BehaviorSubject, fromEvent } from 'rxjs'
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
+import { Subject, fromEvent } from 'rxjs'
 import { share, debounceTime } from 'rxjs/operators'
 
 /**
@@ -54,28 +55,30 @@ export interface ResizeState {
  * - subscribe `resize$` for viewport resize changes, it emits {@link ResizeState}
  * - subscribe `breakpoint$` for breakpoint changes, it emits {@link Breakpoint}
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class BreakpointService {
     /**
-     * BehaviorSubject for resize changes, it emits {@link ResizeState}
+     * Subject for resize changes, it emits {@link ResizeState}
      *
-     * @param {BehaviorSubject<ResizeState>} resize$
+     * @param {Subject<ResizeState>} resize$
      */
-    public resize$: BehaviorSubject<ResizeState>
+    public resize$: Subject<ResizeState> = new Subject()
 
     /**
-     * BehaviorSubject for breakpoint changes, it emits {@link Breakpoint}
+     * Subject for breakpoint changes, it emits {@link Breakpoint}
      *
-     * @param {BehaviorSubject<Breakpoint>} breakpoint$
+     * @param {Subject<Breakpoint>} breakpoint$
      */
-    public breakpoint$: BehaviorSubject<Breakpoint>
+    public breakpoint$: Subject<Breakpoint> = new Subject()
 
     /**
      * Array containing all breakpoints and their size values.
      *
      * @param {Array<Breakpoint>}
      */
-    private readonly breakpoints: Array<Breakpoint> = [
+    private readonly breakpoints: Breakpoint[] = [
         {
             id: Breakpoints.DESKTOP,
             start: 1280,
@@ -111,10 +114,10 @@ export class BreakpointService {
     /**
      * Initializes the breakpoint service.
      */
-    public constructor() {
-        this.resize$ = new BehaviorSubject(this.determineDimensions())
-        this.breakpoint$ = new BehaviorSubject(this.determineBreakpoint())
-        this.handleResize()
+    public constructor(@Inject(PLATFORM_ID) private platformId) {
+        if (isPlatformBrowser(this.platformId)) {
+            this.handleResize()
+        }
     }
 
     /**
@@ -167,8 +170,10 @@ export class BreakpointService {
      * @returns {void}
      */
     private handleResize(): void {
-        // fetch current breakpoint
+        // initially fetch current state
         this.current = this.determineBreakpoint()
+        this.resize$.next(this.determineDimensions())
+        this.breakpoint$.next(this.determineBreakpoint())
 
         // listen to resize events
         fromEvent(window, 'resize')
@@ -213,7 +218,7 @@ export class BreakpointService {
     private determineBreakpoint(): Breakpoint {
         // match the breakpoints against window dimensions
         for (const item of this.breakpoints) {
-            const query: Array<string> = []
+            const query: string[] = []
 
             if (item.start) {
                 query.push(`(min-width: ${item.start}px)`)

@@ -10,11 +10,24 @@
     "@schematics/angular:component": {
       "prefix": "cmp",
       "styleext": "scss",
+      "spec": false,
       "export": true
     },
     "@schematics/angular:directive": {
       "prefix": "",
+      "spec": false,
       "export": true
+    },
+    "@schematics/angular:pipe": {
+      "spec": false,
+      "export": true
+    },
+    "@schematics/angular:module": {
+      "spec": false
+    },
+    "@schematics/angular:service": {
+      "spec": false,
+      "flat": false
     }
   },
   "projects": {
@@ -22,8 +35,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
+      "prefix": "cmp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -58,7 +70,12 @@
             "styles": [
               "src/scss/common.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -92,12 +109,6 @@
             }
           }
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "pascal-iske:build"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -108,6 +119,24 @@
               "**/node_modules/**",
               "**/*.json"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }

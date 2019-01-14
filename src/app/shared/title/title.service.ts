@@ -7,7 +7,9 @@ import { Title } from '@angular/platform-browser'
  * - call `.setTitle()` for setting a new title
  * - call `.getTitle()` for getting the current title
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class TitleService {
     /**
      * The title divider.
@@ -62,7 +64,7 @@ export class TitleService {
      * @returns {string} The final title
      */
     private prepare(title: string): string {
-        const parts: Array<string> = []
+        const parts: string[] = []
 
         // prepend optional prefix
         if (this.prefix !== '') {

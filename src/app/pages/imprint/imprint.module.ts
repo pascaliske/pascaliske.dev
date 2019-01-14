@@ -14,7 +14,7 @@ export const routes: Routes = [
         path: '',
         component: ImprintComponent,
         data: {
-            title: 'PAGE_TITLE_IMPRINT',
+            title: 'Imprint',
         },
     },
 ]

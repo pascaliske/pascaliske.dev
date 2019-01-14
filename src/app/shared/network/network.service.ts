@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core'
 import { Observable, fromEvent, merge } from 'rxjs'
 import { startWith, map, distinctUntilChanged, debounceTime, share } from 'rxjs/operators'
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class NetworkService {
     /**
      * The current online / offline state.

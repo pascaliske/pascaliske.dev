@@ -3,7 +3,7 @@
  */
 $susy: (
     columns: susy-repeat(12),
-    gutters: 1/12
+    gutters: 1/12,
 );
 $grid-debug: false;
 $grid-desktop-padding: span(2) + gutter();

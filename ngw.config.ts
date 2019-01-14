@@ -2,10 +2,11 @@ import { Path } from '@angular-devkit/core'
 import { NormalizedBrowserBuilderSchema } from '@angular-devkit/build-angular'
 import { join } from 'path'
 import { sync } from 'glob'
+import { Configuration } from 'webpack'
 import * as DashboardPlugin from 'webpack-dashboard/plugin'
-import * as ReplacePlugin from 'webpack-plugin-replace'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
 import * as VisualizerPlugin from 'webpack-visualizer-plugin'
+import * as ContentReplacePlugin from 'content-replace-webpack-plugin'
 
 export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
     root: Path
@@ -17,21 +18,12 @@ export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
 const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
 
-export default function(config) {
-    if (command === 'serve') {
-        config.plugins.push(new DashboardPlugin())
-    }
+export default function(config: Configuration): Configuration {
+    config.plugins.push(new DashboardPlugin())
 
     if (command === 'build') {
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
-            new DashboardPlugin(),
-            new ReplacePlugin({
-                include: ['environment.ts'],
-                values: {
-                    SENTRY_RELEASE: `v${pkg.version}`,
-                },
-            }),
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
             }),
@@ -40,6 +32,16 @@ export default function(config) {
             }),
         )
     }
+
+    config.plugins.push(
+        new ContentReplacePlugin({
+            rules: {
+                '*': (bundle: string) => {
+                    return bundle.replace(new RegExp('APP_VERSION', 'g'), `v${pkg.version}`)
+                },
+            },
+        }),
+    )
 
     return config
 }

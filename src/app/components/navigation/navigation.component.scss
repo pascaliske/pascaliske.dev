@@ -101,13 +101,6 @@ $component: 'cmp-navigation';
         }
     }
 
-    &__languages {
-        max-height: 50px;
-        line-height: 50px;
-        text-align: center;
-        color: rgba($color-white1, 0.8);
-    }
-
     @for $i from 1 through 10 {
         &__item:nth-child(#{$i}) {
             transition-delay: #{($i - 1) * 0.08}s;

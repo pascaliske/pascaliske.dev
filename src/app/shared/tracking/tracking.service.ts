@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'
 import { BehaviorSubject, merge } from 'rxjs'
+import { first, filter } from 'rxjs/operators'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
 import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from './typings'
@@ -10,12 +11,14 @@ import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from '
  * Injectable service for enabling components to send tracking events with Google Analytics.
  * Use the track method to send {@link PageViewEvent}s or {@link CustomEvent}s.
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class TrackingService {
     /**
      *
      */
-    private status$: BehaviorSubject<string> = new BehaviorSubject(null)
+    private status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(null)
 
     /**
      * Initializes the TrackingService.
@@ -31,6 +34,23 @@ export class TrackingService {
         merge(...events).subscribe(event => {
             this.status$.next(event.status)
         })
+
+        this.status$
+            .pipe(
+                filter(status => status !== null),
+                first(),
+            )
+            .subscribe(status => {
+                switch (status) {
+                    case 'allow':
+                        gaInit(window, document)
+                        break
+
+                    case 'deny':
+                        gaOut()
+                        break
+                }
+            })
     }
 
     /**

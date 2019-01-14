@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/app",
+    "cleanUrls": true,
     "trailingSlash": false,
     "ignore": [
       "firebase.json",
@@ -10,17 +11,83 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/de/*",
+        "destination": "/",
+        "type": 302
       },
+      {
+        "source": "/en/*",
+        "destination": "/",
+        "type": 302
+      }
+    ],
+    "rewrites": [
       {
         "source": "/cfns/send-contact-request",
         "function": "sendContactRequest"
+      },
+      {
+        "source": "/cfns/send-csp-report",
+        "function": "sendCspReport"
       }
     ],
     "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; connect-src 'self' sentry.io fonts.googleapis.com fonts.gstatic.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' www.google-analytics.com 'sha256-NfLWBsQFRCVaPqTzsyqH+up8K4fd01oz/9ALl1M2CkY='; img-src 'self' www.google-analytics.com; font-src fonts.gstatic.com; object-src 'none'; report-uri https://sentry.io/api/1200530/security/?sentry_key=da20741e2b93497caba31ff22a6290bc&sentry_environment=production;"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Xss-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Feature-Policy",
+            "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr *; usb 'none'; vr 'none';"
+          }
+        ]
+      },
       {
         "source": "**/*.@(js|css)",
         "headers": [

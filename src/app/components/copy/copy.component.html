@@ -1,6 +1,4 @@
 <div class="cmp-copy" [ngClass]="getThemeModifiers()">
-    <p class="cmp-copy__text" [innerHTML]="text|markdown" *ngIf="text"></p>
-    <p class="cmp-copy__text" *ngIf="!text">
-        <ng-content></ng-content>
-    </p>
+    <p class="cmp-copy__text" [innerHTML]="text | markdown" *ngIf="text"></p>
+    <p class="cmp-copy__text" *ngIf="!text"><ng-content></ng-content></p>
 </div>

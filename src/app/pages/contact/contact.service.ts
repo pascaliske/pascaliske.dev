@@ -18,7 +18,7 @@ export class ContactService {
      * @returns {void}
      */
     public send(data: ContactFormData): void {
-        this.http.post(`${environment.cfnBaseUrl}/sendContactRequest`, data).subscribe(
+        this.http.post(`${environment.cfnBaseUrl}/send-contact-request`, data).subscribe(
             () => {
                 this.notificationsService.success(`I'll reach out to you as soon as I can!`)
             },
