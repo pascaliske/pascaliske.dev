@@ -18,7 +18,8 @@
     "build:prerender": "ts-node src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix",
     "check": "snyk test && snyk monitor",
-    "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\""
+    "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
+    "changelog": "standard-changelog"
   },
   "private": true,
   "greenkeeper": {
