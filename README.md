@@ -2,6 +2,12 @@
 
 [![GitHub Tag](https://img.shields.io/github/tag/pascaliske/pascal-iske.de.svg?style=flat-square)](https://github.com/pascaliske/pascal-iske.de) [![Travis CI](https://img.shields.io/travis/com/pascaliske/pascal-iske.de/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/pascal-iske.de) [![Known Vulnerabilities](https://snyk.io/test/github/pascaliske/pascal-iske.de/badge.svg?style=flat-square)](https://snyk.io/test/github/pascaliske/pascal-iske.de) [![Greenkeeper](https://badges.greenkeeper.io/pascaliske/pascal-iske.de.svg?style=flat-square)](https://greenkeeper.io) [![CodeFactor](https://www.codefactor.io/repository/github/pascaliske/pascal-iske.de/badge)](https://www.codefactor.io/repository/github/pascaliske/pascal-iske.de) [![Website Status](https://img.shields.io/website-up-down-green-red/http/pascal-iske.de.svg?style=flat-square)](https://pascal-iske.de) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
+This is my personal website.
+
+I created this public repository to test some really cool tools I found online. The website is built with Angular and performance in mind. I manage the deployment and hosting automatically through TravisCI and Firebase while all dependencies are automatically managed by Greenkeeper. For security reasons I test all dependencies with Snyk for vulnerabilities. Error tracking is enabled through Sentry.
+
+Have fun discovering the source code! 🙂
+
 ## Used frameworks, libs, tools, services...
 
 | ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Susy Grid][su] | ![Lodash][lo] |
