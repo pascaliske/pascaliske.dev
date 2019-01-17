@@ -95,6 +95,7 @@
     "normalize-scss": "^7.0.1",
     "rxjs": "^6.3.3",
     "susy": "^3.0.5",
+    "tslib": "^1.9.3",
     "zone.js": "^0.8.28"
   },
   "devDependencies": {
