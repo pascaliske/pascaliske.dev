@@ -142,7 +142,7 @@
     "tslint-config-prettier": "^1.17.0",
     "typescript": "~3.2.4",
     "webpack": "4.29.0",
-    "webpack-dashboard": "^2.0.0",
+    "webpack-dashboard": "^2.1.0",
     "webpack-visualizer-plugin": "^0.1.11"
   }
 }
