@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ngw",
     "firebase": "firebase",
-    "bundlewatch": "bundlewatch",
+    "bundlewatch": "bundlewatch --config .bundlewatchrc.json",
     "report:generate": "lighthouse --quiet --chrome-flags=\"--headless\" --output-path=./report.html https://$PROD_DOMAIN",
     "report:upload": "now report.html --token $NOW_TOKEN --no-clipboard --public",
     "start": "ngw serve",
@@ -26,36 +26,6 @@
     "ignore": [
       "typescript",
       "webpack"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"],
-    "rules": {
-      "header-max-length": [2, "always", 100]
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{ts,scss,html,md}": [
-      "prettier --config .prettierrc --write ",
-      "git add"
-    ]
-  },
-  "bundlewatch": {
-    "files": [
-      {
-        "path": "dist/app/*.js",
-        "maxSize": "250kB"
-      },
-      {
-        "path": "dist/cfn/*.js",
-        "maxSize": "5kB"
-      }
     ]
   },
   "dependencies": {
