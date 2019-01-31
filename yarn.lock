@@ -120,6 +120,14 @@
     "@angular-devkit/core" "7.2.3"
     rxjs "6.3.3"
 
+"@angular-devkit/schematics@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-7.3.0.tgz#112c1f59ff2778157aff6fb7484a6c132d4156ac"
+  integrity sha512-glOduymftH0LmJhITWgWUJK8QCDUltgTZ943/OyArIvLXTLL/8zCb+G6xL+3k33EQjwJicgQ3WIjonJmeTK/Ww==
+  dependencies:
+    "@angular-devkit/core" "7.3.0"
+    rxjs "6.3.3"
+
 "@angular/animations@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.2.2.tgz#a81e4fa60de2e33ec462b43af122a66926df72fb"
@@ -222,14 +230,14 @@
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/pwa@^0.12.3":
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.12.3.tgz#da74f4bdfddaa1eb48c311f9f64f3033be02f7f3"
-  integrity sha512-mUiU+71xOir2A0LKoY5zenwFCtazb18dP5WgJK9IxxiFDVvoHdAS/QO702WqMTWMNucmoYuPrWkC1Ceb7d+uxQ==
+"@angular/pwa@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.13.0.tgz#4ee1be75e4104dd82c32d2351df7667d270ec0d0"
+  integrity sha512-E1rOMduecaUw6sZfm5u3nFWi2B90SD6NriGjciVTcKCjPmHKeIWmpWGhVdgGEzCbg1Gxj8ZhsvvBjJzfbDPF6g==
   dependencies:
-    "@angular-devkit/core" "7.2.3"
-    "@angular-devkit/schematics" "7.2.3"
-    "@schematics/angular" "7.2.3"
+    "@angular-devkit/core" "7.3.0"
+    "@angular-devkit/schematics" "7.3.0"
+    "@schematics/angular" "7.3.0"
     parse5-html-rewriting-stream "5.1.0"
     rxjs "6.3.3"
 
@@ -769,6 +777,15 @@
   dependencies:
     "@angular-devkit/core" "7.2.3"
     "@angular-devkit/schematics" "7.2.3"
+    typescript "3.2.2"
+
+"@schematics/angular@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-7.3.0.tgz#0ed0af8250f767ceb42a3f658888697d95381569"
+  integrity sha512-fOjP/3Rz+Nqrgc+YVaiN88uhPX0FZgUjmMKgMp06lc3xmoc1ScGxoz8AF1fV50Zkvh0Etykzy1LTUczzEUJQqw==
+  dependencies:
+    "@angular-devkit/core" "7.3.0"
+    "@angular-devkit/schematics" "7.3.0"
     typescript "3.2.2"
 
 "@schematics/update@0.12.3":
