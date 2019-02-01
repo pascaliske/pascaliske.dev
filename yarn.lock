@@ -421,38 +421,38 @@
   dependencies:
     tslib "^1.9.0"
 
-"@fortawesome/fontawesome-common-types@^0.2.13":
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.13.tgz#17f3d30c53732f07a765199c3cf93b4834e8cfde"
-  integrity sha512-Qy1eMKylnbsCRXod8C4CfwqlNtLU7OkJiLsFJZlHY4rY9ky2VYUKNnRj0b+3lnGwA1dWNY+pI0XWbP/mrLCohw==
+"@fortawesome/fontawesome-common-types@^0.2.14":
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.14.tgz#0eb86a77ac88e8c12c48591735283f0bf0ea5606"
+  integrity sha512-LOcvERCI96KioXSIfOYN4IATv2ROJOyf72dYnpoWfOIkuyLp45oMej1kL03kYdzvktLCzYhykgHwiu6nkg9Xbw==
 
-"@fortawesome/fontawesome-svg-core@^1.2.13":
-  version "1.2.13"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.13.tgz#1d0923b9692fc10b9a4fa047d504da5d9941639e"
-  integrity sha512-1Q0grmELVTBDbk/Jo4dRCptkYMQjikPEcoPo+eZS+oLVowv1afP4177m4gvqMwdk3l+9KYoiMBJzfY2qDbs+Dg==
+"@fortawesome/fontawesome-svg-core@^1.2.14":
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.14.tgz#48fde5fbfa223cffd5fac9c0402cfbe87605a7d0"
+  integrity sha512-T1qCqkwm9PuvK53J64D1ovfrOTa1kG+SrHNj5cFst/rrskhCnbxpRdbqFIdc/thmXC0ebBX8nOUyja2/mrxe4g==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.13"
+    "@fortawesome/fontawesome-common-types" "^0.2.14"
 
-"@fortawesome/free-brands-svg-icons@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.7.0.tgz#00a53f80fd38a58e5cd510357b3f49bbae6d49d8"
-  integrity sha512-MA4FLVKfuamBlfkRznoAOHyCywGj0MToDyomvtpuJeB9BqNBPDQ/TpGTyRZ8TEyHqo8ejjjACXYjr2fIEB7FZA==
+"@fortawesome/free-brands-svg-icons@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.7.1.tgz#20711fe4d6a459161d052171169baa175b90fca1"
+  integrity sha512-YU+np8UJGjHUmzfGS5yyK0wWR0QHbx5lTFRSylBfEkm8QXvOkRxB03sUhOSIWVXU7iPiePuqrsglQRgxoG4nrw==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.13"
+    "@fortawesome/fontawesome-common-types" "^0.2.14"
 
-"@fortawesome/free-regular-svg-icons@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.7.0.tgz#b0127111924a2506cb6313dfcb140f0cbc9e35b1"
-  integrity sha512-q6u0JTCr8T8RDRYytVcPg/RvPXv67fVcxSa/pdF59OAF5scM03QakX+W+x0vuaWvrpUwU0VK2AXJzSYnBUNpJA==
+"@fortawesome/free-regular-svg-icons@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.7.1.tgz#eab182769eef910f961ed4c3a581ebd9934b4b38"
+  integrity sha512-JFLJ4M11lZEfi+bmfJdWGVUe5fvmr5k/bqshN7VbJZvEJ6i12Yr6uaByQUM0U1tgw+hJkd8xAwVvKxpJ2HDVTA==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.13"
+    "@fortawesome/fontawesome-common-types" "^0.2.14"
 
-"@fortawesome/free-solid-svg-icons@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.7.0.tgz#a5cc69f1b99ed50e78a8bd75c4b6bf74c8224b6a"
-  integrity sha512-bWHNC9Mho8gJ/MFmnc+u6af0jXtdgNWdL6mxHE2lrPsSUGTBCr7AcYeTf+f0Q7JZDjIy/kW8FKpHcfuesScK5A==
+"@fortawesome/free-solid-svg-icons@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.7.1.tgz#df41b8643383862a2af93456e7129e5ffc0fb7ae"
+  integrity sha512-5V/Q+JoPzuiIHW2JwmZGvE9bHguvNJKa7611DPo51uIvYv9LweX/SnDF+HC23X2W5T3myHhnGi+EZJTmidAmyg==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.13"
+    "@fortawesome/fontawesome-common-types" "^0.2.14"
 
 "@google-cloud/common@^0.17.0":
   version "0.17.0"
@@ -707,25 +707,26 @@
     fuzzysearch "^1.0.3"
     tslib "^1.9.0"
 
-"@pascaliske/html-helpers@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.2.2.tgz#ba8ceb55ab50518b9df0d8cdf3baf5eb503eec64"
-  integrity sha512-YmZBd8YVVLc9gCGDnciA1etc07vZFFPq44kiaR3YnOnvIHdnSfkcYBFOCasrR3NkKMer0CCAvjFvWThvEwnvvQ==
+"@pascaliske/html-helpers@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.2.3.tgz#9a18db022942587d7aea608869315f2da3c9495c"
+  integrity sha512-PfU1ZGmmCiYhwJ5d6oC2JWi0sEkRRVsNqJ5dwiRdQiKeNly0gaRvl1qvNIl1XREWtVh3BfkfFBTu8zBce7H91A==
   dependencies:
     classnames "^2.2.6"
+    tslib "^1.9.3"
 
-"@pascaliske/ngx-notifications@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.1.0.tgz#4bbcb8f1cebfe7cbdf3ccf99b7b0751ec1cc2377"
-  integrity sha512-Q5bMEXQ7iBkw55KNup9YvqNcKtH3G9OooNhiChZYGjEIljvLo2CUFUFy/d50wh4YvguUejHXOpT0aOSt8Jf4ew==
+"@pascaliske/ngx-notifications@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.2.0.tgz#a4355e8eede61831dd1f350412fa135b0965f88c"
+  integrity sha512-vUu7UWpjGjm/nCqL54GezLkrT/8lTufDcHXf1uXZv+ll+IkuMWrk4fZzpGkuC5nd0nKSGXOe6cfHy7F1rHzfIA==
   dependencies:
     tslib "^1.9.0"
     uuid "^3.3.2"
 
-"@pascaliske/ngx-prerenderer@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-1.0.1.tgz#fcf8af22138ecdaa09b7f68c4aa1558feafc4c4b"
-  integrity sha512-4Ewy3A4MbSgsdueYXEmLuQOiqmO931XAGNJ1eJY7ruCvLqWiy5ChzoxRNkA4XjvJT5m5xcu+IQyUX2hfPGL1Nw==
+"@pascaliske/ngx-prerenderer@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-1.0.2.tgz#4b40f9cba90ff3d37f301f5486f36faf8dbc79e8"
+  integrity sha512-tV4tVlc5RoH5KGs1bxi51w2mKS7yZZhIQfHM/eXhJJCuN5b+gmZtyX6980E8bGLpqZ1t7Me/tgYmkNiO45OqLQ==
   dependencies:
     tslib "^1.9.3"
 
@@ -984,11 +985,6 @@
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/google.analytics/-/google.analytics-0.0.39.tgz#19a952003dbf3c7373d655a5c3203b4726b8b802"
   integrity sha512-AwVtVYACQg26MJz+752H6uskn53BR7eilCOHksUGkzobZNKc7O3RFTJrbD3yKAluXy6favVdynnr9btijjcakQ==
-
-"@types/highlight.js@^9.12.3":
-  version "9.12.3"
-  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-9.12.3.tgz#b672cfaac25cbbc634a0fd92c515f66faa18dbca"
-  integrity sha512-pGF/zvYOACZ/gLGWdQH8zSwteQS1epp68yRcVLJMgUck/MjEn/FBYmPub9pXT8C1e4a8YZfHo1CKyV8q1vKUnQ==
 
 "@types/jsonwebtoken@^7.2.6":
   version "7.2.8"
@@ -5489,11 +5485,6 @@ hash.js@^1.0.0, hash.js@^1.0.3:
   dependencies:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
-
-highlight.js@^9.13.1:
-  version "9.13.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.13.1.tgz#054586d53a6863311168488a0f58d6c505ce641e"
-  integrity sha512-Sc28JNQNDzaH6PORtRLMvif9RSn1mYuOoX3omVjnb0+HbpPygU2ALBI0R/wsiqCb4/fcp07Gdo8g+fhtFrQl6A==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"

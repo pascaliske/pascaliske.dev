@@ -1,3 +1,13 @@
+## [1.4.12](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.11...v1.4.12) (2019-02-01)
+
+
+### Bug Fixes
+
+* **code:** remove code component ([a6c07a7](https://github.com/pascaliske/pascal-iske.de/commit/a6c07a7))
+* **universal:** remove log outputs ([68511ca](https://github.com/pascaliske/pascal-iske.de/commit/68511ca))
+
+
+
 ## [1.4.11](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.10...v1.4.11) (2019-02-01)
 
 
