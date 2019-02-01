@@ -74,7 +74,7 @@
     "@angular/compiler-cli": "^7.2.2",
     "@angular/language-service": "^7.2.2",
     "@commitlint/cli": "^7.4.0",
-    "@commitlint/config-conventional": "^7.3.1",
+    "@commitlint/config-conventional": "^7.5.0",
     "@pascaliske/ngx-prerenderer": "^1.0.1",
     "@types/cors": "^2.8.4",
     "@types/fs-extra": "^5.0.4",
