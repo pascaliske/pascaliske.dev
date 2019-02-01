@@ -698,10 +698,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@pascaliske/form-elements@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.2.tgz#c9efeba5c582ae1f3eccd44d84d491cca60fbbac"
-  integrity sha512-OWd+IEUjdKgmRQ7BONL8mbhiPZlilLFEsW2NyeWv0QVwAH+Xrqx0VNIjb1hqEbqQ/7Zgcl4WaNs8rvqaaPHmZA==
+"@pascaliske/form-elements@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.4.tgz#92047ee9f123e118e2e06be9fc4417f9c29da27e"
+  integrity sha512-vmhUVGNM/smUfS7FiOCeAKvs1X5fpWJR4J+qRKU4Xzlmo1bjjlXy3I4lhZ8QHQGsKODfI7OX49EPHMfPDiUO5g==
   dependencies:
     flatpickr "4.5.2"
     fuzzysearch "^1.0.3"
