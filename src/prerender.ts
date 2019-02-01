@@ -12,11 +12,7 @@ enableProdMode()
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('../dist/server/main')
 const prerender = create(renderModuleFactory, provideModuleMap)
 
-prerender(routes, AppServerModuleNgFactory, LAZY_MODULE_MAP)
-    .then(() => {
-        console.log('==> done')
-    })
-    .catch(error => {
-        console.log(error)
-        process.exit(1)
-    })
+prerender(routes, AppServerModuleNgFactory, LAZY_MODULE_MAP).catch(error => {
+    console.log(error)
+    process.exit(1)
+})
