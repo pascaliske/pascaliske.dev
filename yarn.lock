@@ -1978,11 +1978,6 @@ bl@^1.0.0:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
 
-blessed@^0.1.81:
-  version "0.1.81"
-  resolved "https://registry.yarnpkg.com/blessed/-/blessed-0.1.81.tgz#f962d687ec2c369570ae71af843256e6d0ca1129"
-  integrity sha1-+WLWh+wsNpVwrnGvhDJW5tDKESk=
-
 blob@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
@@ -7801,6 +7796,11 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
+neo-blessed@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/neo-blessed/-/neo-blessed-0.2.0.tgz#30f9495fdd104494402b62c6273a9c9b82de4f2b"
+  integrity sha512-C2kC4K+G2QnNQFXUIxTQvqmrdSIzGTX1ZRKeDW6ChmvPRw8rTkTEJzbEQHiHy06d36PCl/yMOCjquCRV8SpSQw==
+
 netmask@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/netmask/-/netmask-1.0.6.tgz#20297e89d86f6f6400f250d9f4f6b4c1945fcd35"
@@ -11701,18 +11701,18 @@ webpack-core@^0.6.8:
     source-list-map "~0.1.7"
     source-map "~0.4.1"
 
-webpack-dashboard@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/webpack-dashboard/-/webpack-dashboard-2.1.0.tgz#b5f0ffec686a5a7efa36f4757eee79acb273fd9f"
-  integrity sha512-psG8JInvWSGEreLX9wbaWZq2hsf2cxUYYwUyOTtzcommLOqJ/z0B9JD/cJNN/bNZNbS3XidgEqwKsqFd3BQpnQ==
+webpack-dashboard@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-dashboard/-/webpack-dashboard-3.0.0.tgz#14b2374841efd9b28d0368f07a38bc1af43970e1"
+  integrity sha512-OtqccZJLR9CPbn86p6iwXWrseh944AkNj0AzrNvC7j4x+yHjmX1dlDpyo1f35GwY6F9eBWpMffUoGeWrFjLNUA==
   dependencies:
-    blessed "^0.1.81"
     commander "^2.15.1"
     cross-spawn "^6.0.5"
     filesize "^3.6.1"
     handlebars "^4.0.11"
     inspectpack "^4.0.0"
     most "^1.7.3"
+    neo-blessed "^0.2.0"
     socket.io "^2.1.1"
     socket.io-client "^2.1.1"
 
