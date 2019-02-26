@@ -4,7 +4,7 @@ import { SharedModule } from '../../shared/shared.module'
 import { IconComponent } from './icon.component'
 
 @NgModule({
-    imports: [FontAwesomeModule, SharedModule.registerDynamicComponents([IconComponent])],
+    imports: [FontAwesomeModule, SharedModule],
     declarations: [IconComponent],
     exports: [IconComponent],
 })

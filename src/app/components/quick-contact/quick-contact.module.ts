@@ -5,11 +5,7 @@ import { IconModule } from '../icon/icon.module'
 import { QuickContactComponent } from './quick-contact.component'
 
 @NgModule({
-    imports: [
-        SharedModule.registerDynamicComponents([QuickContactComponent]),
-        LinkModule,
-        IconModule,
-    ],
+    imports: [SharedModule, LinkModule, IconModule],
     declarations: [QuickContactComponent],
     exports: [QuickContactComponent],
 })

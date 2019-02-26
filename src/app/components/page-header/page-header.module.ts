@@ -6,12 +6,7 @@ import { CopyModule } from '../copy/copy.module'
 import { PageHeaderComponent } from './page-header.component'
 
 @NgModule({
-    imports: [
-        SharedModule.registerDynamicComponents([PageHeaderComponent]),
-        SectionModule,
-        HeadlinesModule,
-        CopyModule,
-    ],
+    imports: [SharedModule, SectionModule, HeadlinesModule, CopyModule],
     declarations: [PageHeaderComponent],
     exports: [PageHeaderComponent],
 })
