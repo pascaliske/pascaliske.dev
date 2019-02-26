@@ -25,7 +25,8 @@
   "greenkeeper": {
     "ignore": [
       "typescript",
-      "webpack"
+      "webpack",
+      "rxjs"
     ]
   },
   "dependencies": {
