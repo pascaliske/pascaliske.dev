@@ -45,6 +45,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "es5BrowserSupport": true,
             "assets": [
               {
                 "glob": "**/*",
