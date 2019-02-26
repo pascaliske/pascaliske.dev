@@ -72,7 +72,7 @@
     "@angular/cli": "^7.3.0",
     "@angular/compiler-cli": "^7.2.3",
     "@angular/language-service": "^7.2.3",
-    "@commitlint/cli": "^7.5.0",
+    "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@pascaliske/ngx-prerenderer": "^1.0.2",
     "@types/cors": "^2.8.4",
@@ -103,14 +103,14 @@
     "purifycss-webpack": "^0.7.0",
     "rxjs-tslint-rules": "^4.16.2",
     "serve": "^10.1.1",
-    "snyk": "^1.124.0",
+    "snyk": "^1.126.0",
     "standard-changelog": "^2.0.6",
     "ts-node": "~8.0.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "~3.2.4",
     "webpack": "4.29.0",
-    "webpack-dashboard": "^2.1.0",
+    "webpack-dashboard": "^3.0.0",
     "webpack-visualizer-plugin": "^0.1.11"
   }
 }
