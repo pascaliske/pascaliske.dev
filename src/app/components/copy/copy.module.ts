@@ -3,7 +3,7 @@ import { SharedModule } from '../../shared/shared.module'
 import { CopyComponent } from './copy.component'
 
 @NgModule({
-    imports: [SharedModule.registerDynamicComponents([CopyComponent])],
+    imports: [SharedModule],
     declarations: [CopyComponent],
     exports: [CopyComponent],
 })

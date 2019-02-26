@@ -5,7 +5,7 @@ import { IconModule } from '../icon/icon.module'
 import { LinkComponent } from './link.component'
 
 @NgModule({
-    imports: [RouterModule, SharedModule.registerDynamicComponents([LinkComponent]), IconModule],
+    imports: [RouterModule, SharedModule, IconModule],
     declarations: [LinkComponent],
     exports: [LinkComponent],
 })

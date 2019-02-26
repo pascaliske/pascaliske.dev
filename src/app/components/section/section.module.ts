@@ -3,7 +3,7 @@ import { SharedModule } from '../../shared/shared.module'
 import { SectionComponent } from './section.component'
 
 @NgModule({
-    imports: [SharedModule.registerDynamicComponents([SectionComponent])],
+    imports: [SharedModule],
     declarations: [SectionComponent],
     exports: [SectionComponent],
 })

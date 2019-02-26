@@ -3,10 +3,8 @@ node_js:
   - '11'
   - '10'
 cache: yarn
-before_install: yarn global add greenkeeper-lockfile@1
 install:
-  - yarn install
-before_script: greenkeeper-lockfile-update
+  - yarn install --frozen-lockfile
 script:
   - yarn run lint
   - yarn run check
@@ -18,7 +16,6 @@ script:
 after_deploy:
   - yarn run report:generate
   - yarn run report:upload
-after_script: greenkeeper-lockfile-upload
 deploy:
   provider: firebase
   token:

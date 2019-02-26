@@ -9,17 +9,7 @@ import { HeadlineH5Component } from './headline-h5/headline-h5.component'
 import { HeadlineH6Component } from './headline-h6/headline-h6.component'
 
 @NgModule({
-    imports: [
-        SharedModule.registerDynamicComponents([
-            HeadlineH1Component,
-            HeadlineH2Component,
-            HeadlineH3Component,
-            HeadlineH4Component,
-            HeadlineH5Component,
-            HeadlineH6Component,
-        ]),
-        IconModule,
-    ],
+    imports: [SharedModule, IconModule],
     declarations: [
         HeadlineH1Component,
         HeadlineH2Component,
