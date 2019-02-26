@@ -1,3 +1,17 @@
+## [1.4.13](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.12...v1.4.13) (2019-02-26)
+
+
+### Bug Fixes
+
+* remove legacy dynamic component registration ([82acab0](https://github.com/pascaliske/pascal-iske.de/commit/82acab0))
+
+
+### Features
+
+* **polyfills:** enable automatic polyfilling for es5 browser support ([7810dd5](https://github.com/pascaliske/pascal-iske.de/commit/7810dd5))
+
+
+
 ## [1.4.12](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.11...v1.4.12) (2019-02-01)
 
 
