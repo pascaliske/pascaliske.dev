@@ -22,13 +22,6 @@
     "changelog": "standard-changelog --release-count 1"
   },
   "private": true,
-  "greenkeeper": {
-    "ignore": [
-      "typescript",
-      "webpack",
-      "rxjs"
-    ]
-  },
   "dependencies": {
     "@angular/animations": "^7.2.6",
     "@angular/common": "^7.2.6",
