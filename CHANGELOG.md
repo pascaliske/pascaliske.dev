@@ -1,3 +1,12 @@
+## [1.4.14](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.13...v1.4.14) (2019-03-07)
+
+
+### Bug Fixes
+
+* **tracking:** move typings into file directly ([a21f348](https://github.com/pascaliske/pascal-iske.de/commit/a21f348))
+
+
+
 ## [1.4.13](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.12...v1.4.13) (2019-02-26)
 
 
