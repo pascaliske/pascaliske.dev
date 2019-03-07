@@ -2,18 +2,18 @@
     &-link {
         @include link();
         display: inline-block;
+    }
 
-        &__text::after {
-            bottom: -1px;
-        }
+    &-link__text::after {
+        bottom: -1px;
     }
 
     &-list {
         @include list();
+    }
 
-        &__item {
-            @include list-item();
-        }
+    &-list__item {
+        @include list-item();
     }
 
     &-bold {

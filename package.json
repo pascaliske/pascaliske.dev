@@ -16,7 +16,7 @@
     "build:server": "ngw run pascal-iske:server --configuration production",
     "build:cfn": "tsc --project src/tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "build:prerender": "ts-node --require esm src/prerender.ts",
-    "lint": "ngw lint pascal-iske --fix",
+    "lint": "ngw lint pascal-iske --fix && stylelint src/**/*.scss",
     "check": "snyk test && snyk monitor",
     "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
     "changelog": "standard-changelog"
@@ -100,6 +100,8 @@
     "serve": "^10.1.2",
     "snyk": "^1.136.1",
     "standard-changelog": "^2.0.7",
+    "stylelint": "^9.10.1",
+    "stylelint-config-sass-guidelines": "^5.3.0",
     "ts-node": "~8.0.3",
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.18.0",
