@@ -53,7 +53,7 @@
     list-style-type: square;
     list-style-position: inside;
 
-    & > *:first-child {
+    > *:first-child {
         margin-left: -5px;
     }
 }
