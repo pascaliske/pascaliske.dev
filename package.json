@@ -19,7 +19,7 @@
     "lint": "ngw lint pascal-iske --fix",
     "check": "snyk test && snyk monitor",
     "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
-    "changelog": "standard-changelog --release-count 1"
+    "changelog": "standard-changelog"
   },
   "private": true,
   "dependencies": {
