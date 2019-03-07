@@ -3,7 +3,22 @@ import { BehaviorSubject, merge } from 'rxjs'
 import { first, filter } from 'rxjs/operators'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
-import { PageViewEvent, PageViewEventData, CustomEvent, CustomEventData } from './typings'
+
+export type PageViewEvent = 'pageview'
+export type CustomEvent = 'event'
+
+export interface PageViewEventData {
+    page: string
+    title?: string
+    location?: string
+}
+
+export interface CustomEventData {
+    eventCategory: string
+    eventAction: string
+    eventLabel?: string
+    eventValue?: string
+}
 
 /**
  * TrackingService
