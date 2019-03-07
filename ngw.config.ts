@@ -22,6 +22,7 @@ export default function(config: Configuration): Configuration {
     config.plugins.push(new DashboardPlugin())
 
     if (command === 'build') {
+        config.resolve.alias['@sentry/browser'] = '@sentry/browser/esm'
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
             new PurifyCSSPlugin({
