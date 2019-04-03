@@ -97,7 +97,7 @@
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "rxjs-tslint-rules": "^4.18.1",
-    "serve": "^10.1.2",
+    "serve": "^11.0.0",
     "snyk": "^1.136.1",
     "standard-changelog": "^2.0.7",
     "ts-node": "~8.0.3",
