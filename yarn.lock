@@ -683,13 +683,11 @@
   dependencies:
     tslib "^1.9.0"
 
-"@pascaliske/form-elements@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-1.2.5.tgz#e527a6214bc6e18984378cd45e0631c991a32f81"
-  integrity sha512-GKLKd4fCQOgJczHxPUxyBXtzEdDSRwhi+AjHyjpGr2sJgp3Y5I1ojoDy4QEyDrNJQdbGLqmkz/LYMtyDo+uffg==
+"@pascaliske/form-elements@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-2.0.0.tgz#3e1e12cc5566c946c88ad50360bc6fec2418fbb9"
+  integrity sha512-PJuKGWW4wY3Iefsvn8Nmc7CcjWde+4XE44PkjsBMuAzt0zIGEkr7GIkZaJgpTgaCnF44A7cSas3iF4Wu73B2Xw==
   dependencies:
-    flatpickr "4.5.4"
-    fuzzysearch "^1.0.3"
     tslib "^1.9.0"
 
 "@pascaliske/html-helpers@^1.2.3":
@@ -4647,11 +4645,6 @@ flat-arguments@^1.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isobject "^3.0.0"
 
-flatpickr@4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.4.tgz#7d46fc539d2a97daf80ac261994d4b45d5a4e5f6"
-  integrity sha512-AZOu3l6jUJtNofUKW4UGf9R5wKoLBb52VcQJhbL88G1sekJiXTPqqWJyZwGShjIMFjAIgnajEPglRd2fv/FaYg==
-
 flush-write-stream@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
@@ -4835,11 +4828,6 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
-
-fuzzysearch@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/fuzzysearch/-/fuzzysearch-1.0.3.tgz#dffc80f6d6b04223f2226aa79dd194231096d008"
-  integrity sha1-3/yA9tawQiPyImqnndGUIxCW0Ag=
 
 g-status@^2.0.2:
   version "2.0.2"
