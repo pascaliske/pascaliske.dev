@@ -715,10 +715,10 @@
   dependencies:
     tslib "^1.9.3"
 
-"@pascaliske/ngx-sentry@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-1.4.0.tgz#53a5c69bd24626d520855e9640f9c0071cc16498"
-  integrity sha512-rC4H/yKq1TqfFKKvgSjnM7Nki3MPbIsTg9xK9TszuH1KrW00QNfr+sUQUDgf3l7caHWImzgeYGMRzu3zF76Ssg==
+"@pascaliske/ngx-sentry@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-2.0.0.tgz#66e49983cd06f0694c49775a236c44851a79ca2f"
+  integrity sha512-kI133/YpTaXeigAce9y06F5riu1KDvoHYU1zj6XOZsqwkGkcVr5wpoDjkTa2YU2ZoG1EWZbU1YND0RVnJS77Hw==
   dependencies:
     tslib "^1.9.0"
 
