@@ -1,4 +1,4 @@
-@import '../../../../scss/shared';
+@import 'shared';
 
 $component: 'cmp-navigation-button';
 
@@ -16,8 +16,8 @@ $component: 'cmp-navigation-button';
     z-index: 999;
 
     &__icon,
-    &__icon:before,
-    &__icon:after {
+    &__icon::before,
+    &__icon::after {
         width: 25px;
         height: 3.5px;
         position: absolute;
@@ -31,16 +31,16 @@ $component: 'cmp-navigation-button';
         left: 10px;
     }
 
-    &__icon:before,
-    &__icon:after {
+    &__icon::before,
+    &__icon::after {
         content: '';
     }
 
-    &__icon:before {
+    &__icon::before {
         top: -10px;
     }
 
-    &__icon:after {
+    &__icon::after {
         top: 10px;
     }
 
@@ -54,16 +54,16 @@ $component: 'cmp-navigation-button';
         background: transparent;
     }
 
-    &__icon:before,
-    &__icon:after {
+    &__icon::before,
+    &__icon::after {
         top: 0;
     }
 
-    &__icon:before {
+    &__icon::before {
         transform: rotate(-45deg);
     }
 
-    &__icon:after {
+    &__icon::after {
         transform: rotate(45deg);
     }
 }

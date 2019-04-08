@@ -33,10 +33,12 @@ li {
 }
 
 p {
+    /* stylelint-disable property-no-vendor-prefix */
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
+    /* stylelint-enable property-no-vendor-prefix */
     margin-bottom: 10px;
 }
 
@@ -47,5 +49,7 @@ select,
 [type='submit'] {
     border: 0;
     outline: 0;
+    /* stylelint-disable property-no-vendor-prefix */
     -webkit-appearance: none;
+    /* stylelint-enable property-no-vendor-prefix */
 }

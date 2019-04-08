@@ -172,5 +172,5 @@ ignore:
   SNYK-JS-MARKED-73637:
     - ngx-markdown > marked:
         reason: None given
-        expires: '2019-03-28T11:00:47.200Z'
+        expires: '2019-05-06T20:56:50.712Z'
 patch: {}

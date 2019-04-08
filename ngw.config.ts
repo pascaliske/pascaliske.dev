@@ -23,6 +23,7 @@ export default function(config: Configuration): Configuration {
 
     if (command === 'build') {
         config.resolve.alias['@sentry/browser'] = '@sentry/browser/esm'
+        config.resolve.alias['flatpickr'] = 'flatpickr/dist/flatpickr.min'
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
             new PurifyCSSPlugin({

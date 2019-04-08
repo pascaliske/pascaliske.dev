@@ -1,3 +1,12 @@
+## [1.4.15](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.14...v1.4.15) (2019-04-08)
+
+
+### Bug Fixes
+
+* **package:** update nodemailer to version 6.0.0 ([484d445](https://github.com/pascaliske/pascal-iske.de/commit/484d445))
+
+
+
 ## [1.4.14](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.13...v1.4.14) (2019-03-07)
 
 
