@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { FValidation } from '@pascaliske/form-elements'
@@ -12,7 +12,7 @@ import { Page } from '../page'
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent extends Page implements OnInit, OnDestroy {
+export class ContactComponent extends Page implements OnInit {
     public contactForm: FormGroup
 
     public validation: Record<string, FValidation[]> = {
@@ -49,10 +49,6 @@ export class ContactComponent extends Page implements OnInit, OnDestroy {
         this.changeDetectorRef.detectChanges()
     }
 
-    public ngOnDestroy(): void {
-        this.alive = false
-    }
-
     public get name() {
         return this.contactForm.get('name')
     }
@@ -69,7 +65,7 @@ export class ContactComponent extends Page implements OnInit, OnDestroy {
         return this.contactForm.get('message')
     }
 
-    public submit(): void {
+    public send(): void {
         if (!this.contactForm.valid) {
             return
         }
