@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { FValidationConfig } from '@pascaliske/form-elements'
+import { FValidation } from '@pascaliske/form-elements'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
 import { ContactService } from './contact.service'
@@ -15,7 +15,7 @@ import { Page } from '../page'
 export class ContactComponent extends Page implements OnInit, OnDestroy {
     public contactForm: FormGroup
 
-    public validation: FValidationConfig = {
+    public validation: Record<string, FValidation[]> = {
         email: [
             {
                 type: 'required',
