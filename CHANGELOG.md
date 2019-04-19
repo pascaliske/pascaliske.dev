@@ -1,3 +1,12 @@
+## [1.4.17](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.16...v1.4.17) (2019-04-19)
+
+
+### Bug Fixes
+
+* **contact:** fix submit button style and clean-up code ([106b265](https://github.com/pascaliske/pascal-iske.de/commit/106b265))
+
+
+
 ## [1.4.16](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.15...v1.4.16) (2019-04-08)
 
 
