@@ -9,8 +9,9 @@
   },
   "ignore": [
     "@types/node",
+    "core-js",
     "typescript",
-    "webpack",
-    "rxjs"
+    "rxjs",
+    "zone.js"
   ]
 }
