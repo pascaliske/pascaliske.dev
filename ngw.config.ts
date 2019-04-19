@@ -34,6 +34,7 @@ export default function(config: Configuration): Configuration {
                 release: `v${pkg.version}`,
                 include: 'dist/app',
                 ignore: ['node_modules', 'ngw.config.ts'],
+                dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
             }),
             new VisualizerPlugin({
                 filename: './stats.html',
