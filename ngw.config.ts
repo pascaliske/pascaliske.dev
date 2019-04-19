@@ -6,6 +6,7 @@ import { Configuration } from 'webpack'
 import * as DashboardPlugin from 'webpack-dashboard/plugin'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
 import * as VisualizerPlugin from 'webpack-visualizer-plugin'
+import * as SentryWebpackPlugin from '@sentry/webpack-plugin'
 import * as ContentReplacePlugin from 'content-replace-webpack-plugin'
 
 export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
@@ -28,6 +29,11 @@ export default function(config: Configuration): Configuration {
         config.plugins.push(
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
+            }),
+            new SentryWebpackPlugin({
+                release: `v${pkg.version}`,
+                include: 'dist/app',
+                ignore: ['node_modules', 'ngw.config.ts'],
             }),
             new VisualizerPlugin({
                 filename: './stats.html',

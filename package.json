@@ -72,6 +72,7 @@
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@pascaliske/ngx-prerenderer": "^1.1.0",
+    "@sentry/webpack-plugin": "^1.6.2",
     "@types/cors": "^2.8.4",
     "@types/fs-extra": "^5.0.5",
     "@types/google.analytics": "^0.0.39",

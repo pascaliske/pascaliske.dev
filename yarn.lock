@@ -959,6 +959,18 @@
     "@sentry/utils" "5.0.5"
     tslib "^1.9.3"
 
+"@sentry/cli@^1.35.5":
+  version "1.41.1"
+  resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-1.41.1.tgz#4470d4079e895553bcd8689bad1aa1018455c2cb"
+  integrity sha512-bcsud8ZMNIskmm8COPdyco4qy8VI5YxknRuidqoecyjZ+76IU9dCd8NwJlrYoPNTcM/7gfbRQQFkY2mU/LLrGQ==
+  dependencies:
+    fs-copy-file-sync "^1.1.1"
+    https-proxy-agent "^2.2.1"
+    mkdirp "^0.5.1"
+    node-fetch "^2.1.2"
+    progress "2.0.0"
+    proxy-from-env "^1.0.0"
+
 "@sentry/core@5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.0.5.tgz#415f61c2d0ef442e5cce1e1ab60321d115daea40"
@@ -1000,6 +1012,13 @@
   dependencies:
     "@sentry/types" "5.0.5"
     tslib "^1.9.3"
+
+"@sentry/webpack-plugin@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.6.2.tgz#47b1a43f7e691c1c8dc45677f7380c5e1aa6596d"
+  integrity sha512-OZ4ISH0xAP6dTHpQ3xFnIa35o+rVKZxcoCn0a41rfgM+XFdXMtw3yc+nsRHkuRpbzWzXUIisBqbBm5KcEark4A==
+  dependencies:
+    "@sentry/cli" "^1.35.5"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
@@ -5158,6 +5177,11 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
+fs-copy-file-sync@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/fs-copy-file-sync/-/fs-copy-file-sync-1.1.1.tgz#11bf32c096c10d126e5f6b36d06eece776062918"
+  integrity sha512-2QY5eeqVv4m2PfyMiEuy9adxNP+ajf+8AR05cEi+OAzPcOj90hvFImeZhTmKLBgSd9EvG33jsD7ZRxsx9dThkQ==
+
 fs-extra@^0.23.1:
   version "0.23.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.23.1.tgz#6611dba6adf2ab8dc9c69fab37cddf8818157e3d"
@@ -8447,7 +8471,7 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@^2.2.0:
+node-fetch@^2.1.2, node-fetch@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
   integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
@@ -9589,6 +9613,11 @@ process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
+
+progress@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
+  integrity sha1-ihvjZr+Pwj2yvSPxDG/pILQ4nR8=
 
 progress@^2.0.0:
   version "2.0.3"
