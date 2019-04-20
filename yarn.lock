@@ -8695,10 +8695,10 @@ node-sass@4.11.0:
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
 
-nodemailer@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.1.0.tgz#81a918857f2f157b66bdaca528b83682505ba98f"
-  integrity sha512-mzKGT5Q1PY84v6oRVjy88ymMDLUbPqvIr26n9Uy3j2nXzdhKWx1z4GLSHOyX8655zMkQng1MFR3lK+cE1egS6Q==
+nodemailer@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.1.1.tgz#09e88ef4b3646f01089c5d84d007b872141fb575"
+  integrity sha512-/x5MRIh56VyuuhLfcz+DL2SlBARpZpgQIf2A4Ao4hMb69MHSgDIMPwYmFwesGT1lkRDZ0eBSoym5+JoIZ3N+cQ==
 
 "nomnom@>= 1.5.x":
   version "1.8.1"
@@ -9625,13 +9625,13 @@ postcss-selector-parser@^5.0.0:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-sorting@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-4.1.0.tgz#a107f0bf3852977fa64e4442bc340c88d5aacdb3"
-  integrity sha512-r4T2oQd1giURJdHQ/RMb72dKZCuLOdWx2B/XhXN1Y1ZdnwXsKH896Qz6vD4tFy9xSjpKNYhlZoJmWyhH/7JUQw==
+postcss-sorting@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-5.0.0.tgz#4e4ce0a554c17d78d4287f08f792db8992bf62b5"
+  integrity sha512-m25mKLNq0fPAyZFElQ1hngRDFQDMlc+9ZwoWsL8oix6i1GsBzIxyke6sDeY9BXee7L86z4tex01fcH/9wTj3Jg==
   dependencies:
-    lodash "^4.17.4"
-    postcss "^7.0.0"
+    lodash "^4.17.11"
+    postcss "^7.0.14"
 
 postcss-syntax@^0.36.2:
   version "0.36.2"
@@ -10613,10 +10613,10 @@ rx-lite@^3.1.2:
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
   integrity sha1-Gc5QLKVyZl87ZHsQk5+X/RYV8QI=
 
-rxjs-tslint-rules@^4.22.0:
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/rxjs-tslint-rules/-/rxjs-tslint-rules-4.22.0.tgz#51fe2ff5b8b735e4df52e4de814e767b10f81ec5"
-  integrity sha512-t6SSGsEOYB18cjrOVXdheEnAQDnZlgo81KZt3zm5xHxkdFGrIMP4dX90hyezEfCCiFVuRiUyIa6cz2SGqyqo8w==
+rxjs-tslint-rules@^4.22.1:
+  version "4.22.1"
+  resolved "https://registry.yarnpkg.com/rxjs-tslint-rules/-/rxjs-tslint-rules-4.22.1.tgz#cdfc049d352410145b8f63b3d1a56e54f8db4395"
+  integrity sha512-rbi18cHfXxmXx7zHqNKOY+cID7VHFaogwmcLnEx3X3CKMt9R1xgWgulglSOjo0ViP27nDyEOFDdJut5VgVn4JQ==
   dependencies:
     "@phenomnomnominal/tsquery" "^3.0.0"
     decamelize "^3.0.0"
@@ -11104,10 +11104,10 @@ snyk-nodejs-lockfile-parser@1.13.0:
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-snyk-nuget-plugin@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/snyk-nuget-plugin/-/snyk-nuget-plugin-1.9.1.tgz#e45c34ec8efbc998401ae8bb6eeedff7c19bf3e7"
-  integrity sha512-UtLKb8P4HOWSGwbHV3rbfGYvhmxP4l3oGrZ2EVbVE9XQz9R5pbEESAWqVJGPUj2JmdqjWasitRXJo23hqxAEzA==
+snyk-nuget-plugin@1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/snyk-nuget-plugin/-/snyk-nuget-plugin-1.9.2.tgz#e06b114e3a7b029d127480f23739042b297c2b13"
+  integrity sha512-62muXgrn3oSSMsWT7foBQDqKBFgbXc4XIrZDmzFE0lyuchDYGLM14BO5erAMUbbc/xffXyQaAHi8d1R8LGvf5Q==
   dependencies:
     debug "^3.1.0"
     jszip "^3.1.5"
@@ -11203,10 +11203,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.151.1:
-  version "1.151.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.151.1.tgz#8485666c199e78846aca5f2f71dcb10d4fecf5f2"
-  integrity sha512-J0mPRzQjIGkoFrEry1GhrhqhL7KL1ecD/Y6z40uLiX0TxBDOBYiN9+0EF9R+MjzeGyGEHfYqdQEz69z0dm7RDQ==
+snyk@^1.151.2:
+  version "1.151.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.151.2.tgz#f97fde670ececf056cce9954f743c8567992be91"
+  integrity sha512-SLkNuossK94e6mci4ryBPpeTZLh2oyKO/uOKH1jVoReMTUaKJ9RqZxvApCKlrkziUBPWD11MJIQ1FSY915yptQ==
   dependencies:
     "@snyk/dep-graph" "1.4.1"
     "@snyk/gemfile" "1.2.0"
@@ -11232,7 +11232,7 @@ snyk@^1.151.1:
     snyk-module "1.9.1"
     snyk-mvn-plugin "2.0.1"
     snyk-nodejs-lockfile-parser "1.13.0"
-    snyk-nuget-plugin "1.9.1"
+    snyk-nuget-plugin "1.9.2"
     snyk-php-plugin "1.5.2"
     snyk-policy "1.13.5"
     snyk-python-plugin "1.9.2"
@@ -11884,22 +11884,22 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint-config-sass-guidelines@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-5.4.0.tgz#82f02ab6231f10564105d4fc192ca6cc75fede36"
-  integrity sha512-+etE2MuxbIy4GXdfqJS2y0/K6I04opnpiKFFmbICd8STxCiP/ZkNDBM3Os69ckr+dB2yIXnqMOwRtoMahS20Gg==
+stylelint-config-sass-guidelines@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-6.0.0.tgz#e81a5452a52be2578dbb570a56dde1216514b6b6"
+  integrity sha512-roE+YUYTdB7Ald36fv/ZjSYhPJvyI9/24ZDn4M9O8fzrefl1hDvBGWKg1MHJ0a8d5s0a6LNP004WINcWouVlHA==
   dependencies:
-    stylelint-order ">=1.0.0"
+    stylelint-order "^3.0.0"
     stylelint-scss "^3.4.0"
 
-stylelint-order@>=1.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-2.1.0.tgz#fc64625c26b93755773bd67c1203381194aded04"
-  integrity sha512-8oX4Y3Bh4e3s9e7nnYJkeyYg5yx8Fa7wwTNXJcabPrNqavK9FqZ3zNJFvCJFn+v5qTngvVWsh33DpOP2BdroBg==
+stylelint-order@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-3.0.0.tgz#ec44afb93a3183dcf8c91540d4486de776250506"
+  integrity sha512-CaK3ebU5qSDY4aQZ5yA5uCL1jjAeK+TQeyKcH1w1O/wxC1GjM6JCv0msrA3Wno29F1jW/1UoWIsRFeo7hk9gtg==
   dependencies:
-    lodash "^4.17.10"
-    postcss "^7.0.2"
-    postcss-sorting "^4.1.0"
+    lodash "^4.17.11"
+    postcss "^7.0.14"
+    postcss-sorting "^5.0.0"
 
 stylelint-scss@^3.4.0:
   version "3.5.4"
