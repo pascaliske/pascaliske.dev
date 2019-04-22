@@ -19,7 +19,8 @@
     "build:prerender": "ts-node --require esm src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix && stylelint src/**/*.scss",
     "check": "snyk test && snyk monitor",
-    "e2e": "ngw serve && wait-on http://localhost:4200 && cypress run --record --parallel",
+    "e2e": "cypress verify && start-server-and-test serve http-get://localhost:4200 e2e:task",
+    "e2e:task": "cypress run --record --parallel",
     "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
     "changelog": "standard-changelog"
   },
@@ -108,6 +109,7 @@
     "serve": "^11.0.0",
     "snyk": "^1.151.2",
     "standard-changelog": "^2.0.7",
+    "start-server-and-test": "^1.7.13",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0",
     "ts-loader": "^5.4.3",
@@ -115,7 +117,6 @@
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.2.4",
-    "wait-on": "^3.2.0",
     "webpack": "4.30.0",
     "webpack-dashboard": "^3.0.3",
     "webpack-visualizer-plugin": "^0.1.11"
