@@ -19,7 +19,7 @@
     "build:prerender": "ts-node --require esm src/prerender.ts",
     "lint": "ngw lint pascal-iske --fix && stylelint src/**/*.scss",
     "check": "snyk test && snyk monitor",
-    "e2e": "cypress verify && start-server-and-test serve http-get://localhost:4200 e2e:task",
+    "e2e": "cypress verify && start-server-and-test start http-get://localhost:4200 e2e:task",
     "e2e:task": "cypress run --record --parallel",
     "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
     "changelog": "standard-changelog"
