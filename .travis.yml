@@ -3,13 +3,14 @@ node_js:
   - '11'
   - '10'
 cache: yarn
-install:
-  - if [[ "$TRAVIS_PULL_REQUEST_BRANCH" == *"greenkeeper"* ]]; then yarn install; else yarn install --frozen-lockfile; fi
-script:
+before_install:
   - echo "$TRAVIS_BRANCH"
   - echo "$TRAVIS_PULL_REQUEST"
   - echo "$TRAVIS_PULL_REQUEST_BRANCH"
   - exit 1
+install:
+  - if [[ "$TRAVIS_PULL_REQUEST_BRANCH" == *"greenkeeper"* ]]; then yarn install; else yarn install --frozen-lockfile; fi
+script:
   - yarn run lint
   - yarn run check
   - yarn run build:app --progress false --base-href https://$PROD_DOMAIN
