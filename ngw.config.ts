@@ -30,12 +30,6 @@ export default function(config: Configuration): Configuration {
             new PurifyCSSPlugin({
                 paths: sync(join(__dirname, '**/*.html')),
             }),
-            new SentryWebpackPlugin({
-                release: `v${pkg.version}`,
-                include: 'dist/app',
-                ignore: ['node_modules', 'ngw.config.ts'],
-                dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
-            }),
             new VisualizerPlugin({
                 filename: './stats.html',
             }),
@@ -51,6 +45,17 @@ export default function(config: Configuration): Configuration {
             },
         }),
     )
+
+    if (command === 'build' && process.env.TRAVIS_TAG && process.env.TRAVIS_TAG.length > 0) {
+        config.plugins.push(
+            new SentryWebpackPlugin({
+                release: `v${pkg.version}`,
+                include: 'dist/app',
+                ignore: ['node_modules', 'ngw.config.ts'],
+                dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
+            }),
+        )
+    }
 
     return config
 }
