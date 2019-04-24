@@ -106,7 +106,7 @@
     "snyk": "^1.151.1",
     "standard-changelog": "^2.0.7",
     "stylelint": "^10.0.1",
-    "stylelint-config-sass-guidelines": "^5.4.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
     "ts-node": "~8.1.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
