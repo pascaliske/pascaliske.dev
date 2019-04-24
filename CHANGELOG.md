@@ -1,3 +1,12 @@
+## [1.4.18](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.17...v1.4.18) (2019-04-24)
+
+
+### Bug Fixes
+
+* **package:** update intersection-observer to version 0.6.0 ([a938558](https://github.com/pascaliske/pascal-iske.de/commit/a938558))
+
+
+
 ## [1.4.17](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.16...v1.4.17) (2019-04-19)
 
 
