@@ -91,7 +91,7 @@
     "firebase-admin": "^7.3.0",
     "firebase-functions": "^2.3.0",
     "firebase-tools": "^6.7.1",
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^8.0.0",
     "husky": "^2.0.0",
     "lighthouse": "^5.0.0",
     "lint-staged": "^8.1.5",
