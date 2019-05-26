@@ -12491,13 +12491,13 @@ ts-node@^7.0.1:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-ts-node@~8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.1.0.tgz#8c4b37036abd448577db22a061fd7a67d47e658e"
-  integrity sha512-34jpuOrxDuf+O6iW1JpgTRDFynUZ1iEqtYruBqh35gICNjN8x+LpVcPAcwzLPi9VU6mdA3ym+x233nZmZp445A==
+ts-node@~8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.2.0.tgz#4a89754b00560bb24cd54526e1685fa38c45f240"
+  integrity sha512-m8XQwUurkbYqXrKqr3WHCW310utRNvV5OnRVeISeea7LoCWVcdfeB/Ntl8JYWFh+WRoUAdBgESrzKochQt7sMw==
   dependencies:
     arg "^4.1.0"
-    diff "^3.1.0"
+    diff "^4.0.1"
     make-error "^1.1.1"
     source-map-support "^0.5.6"
     yn "^3.0.0"
