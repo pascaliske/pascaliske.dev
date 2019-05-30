@@ -8567,10 +8567,10 @@ ngx-cookieconsent@^2.2.0:
   resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.2.0.tgz#a689f738c7085bf43e6d675f318a01cb5e4b6282"
   integrity sha512-+yxUV8cpKBrsdm8F2K1Bkcv07GM3L86L1gpKOE/y7abWhxuQdjP2e/a56ijsvOTIAqIyWC2EPk/O8xHwnCB+5Q==
 
-ngx-markdown@^7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-7.1.5.tgz#27fe3b88e3e3494c0ad778123b959c189e76452f"
-  integrity sha512-boL1eQkdHHwVQuLsRF4eaIxuBx2PoJidO/YStLU2a0u6Q7VCjaZI09oSPgsAmsDjJ/Hu7ZWGPv475H7BGJ8iCw==
+ngx-markdown@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-8.0.1.tgz#71c97eeaa913ac4f0bdbdad5f8bd8b6ceaf831ca"
+  integrity sha512-PtV2o/77GTGhRv5m8GcgIP8nXjNQqBaAn9GTxsr1zveV9r8IpFRdHgHEDx4ijCOhxxu5+LONsCXbLV1dOS8/Pw==
   dependencies:
     "@types/marked" "^0.6.0"
     marked "^0.6.0"
