@@ -31,7 +31,7 @@ module.exports = config => {
             new SentryWebpackPlugin({
                 release: `v${pkg.version}`,
                 include: 'dist/app',
-                ignore: ['node_modules', 'ngw.config.ts'],
+                ignore: ['node_modules', 'webpack.config.js'],
                 dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
             }),
         )
