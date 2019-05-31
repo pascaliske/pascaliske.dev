@@ -6,6 +6,6 @@
     "module": "commonjs"
   },
   "angularCompilerOptions": {
-    "entryModule": "app/app.server.module#AppServerModule"
+    "entryModule": "src/app/app.server.module#AppServerModule"
   }
 }
