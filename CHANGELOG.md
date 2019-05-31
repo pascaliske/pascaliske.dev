@@ -1,3 +1,34 @@
+## [1.4.18](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.17...v1.4.18) (2019-04-24)
+
+
+### Bug Fixes
+
+* **package:** update intersection-observer to version 0.6.0 ([a938558](https://github.com/pascaliske/pascal-iske.de/commit/a938558))
+
+
+
+## [1.4.17](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.16...v1.4.17) (2019-04-19)
+
+
+### Bug Fixes
+
+* **contact:** fix submit button style and clean-up code ([106b265](https://github.com/pascaliske/pascal-iske.de/commit/106b265))
+
+
+
+## [1.4.16](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.15...v1.4.16) (2019-04-08)
+
+
+
+## [1.4.15](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.14...v1.4.15) (2019-04-08)
+
+
+### Bug Fixes
+
+* **package:** update nodemailer to version 6.0.0 ([484d445](https://github.com/pascaliske/pascal-iske.de/commit/484d445))
+
+
+
 ## [1.4.14](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.13...v1.4.14) (2019-03-07)
 
 

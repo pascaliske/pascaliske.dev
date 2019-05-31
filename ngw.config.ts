@@ -6,6 +6,7 @@ import { Configuration } from 'webpack'
 import * as DashboardPlugin from 'webpack-dashboard/plugin'
 import * as PurifyCSSPlugin from 'purifycss-webpack'
 import * as VisualizerPlugin from 'webpack-visualizer-plugin'
+import * as SentryWebpackPlugin from '@sentry/webpack-plugin'
 import * as ContentReplacePlugin from 'content-replace-webpack-plugin'
 
 export interface WebpackOptions<T = NormalizedBrowserBuilderSchema> {
@@ -23,6 +24,7 @@ export default function(config: Configuration): Configuration {
 
     if (command === 'build') {
         config.resolve.alias['@sentry/browser'] = '@sentry/browser/esm'
+        config.resolve.alias['flatpickr'] = 'flatpickr/dist/flatpickr.min'
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
             new PurifyCSSPlugin({
@@ -43,6 +45,17 @@ export default function(config: Configuration): Configuration {
             },
         }),
     )
+
+    if (command === 'build' && process.env.TRAVIS_TAG && process.env.TRAVIS_TAG.length > 0) {
+        config.plugins.push(
+            new SentryWebpackPlugin({
+                release: `v${pkg.version}`,
+                include: 'dist/app',
+                ignore: ['node_modules', 'ngw.config.ts'],
+                dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
+            }),
+        )
+    }
 
     return config
 }
