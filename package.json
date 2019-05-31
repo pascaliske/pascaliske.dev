@@ -71,7 +71,7 @@
     "@angular/compiler-cli": "^7.2.14",
     "@angular/language-service": "^7.2.14",
     "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "@pascaliske/ngx-prerenderer": "^1.1.0",
     "@sentry/cli": "^1.41.1",
     "@sentry/webpack-plugin": "^1.6.2",
