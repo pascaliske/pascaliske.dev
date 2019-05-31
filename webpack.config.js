@@ -1,8 +1,5 @@
-// const { sync } = require('glob')
-// const { join } = require('path')
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-// const PurifyCSSPlugin = require('purifycss-webpack')
 const VisualizerPlugin = require('webpack-visualizer-plugin')
 const SentryWebpackPlugin = require('@sentry/webpack-plugin')
 
@@ -17,9 +14,6 @@ module.exports = config => {
         config.resolve.alias['flatpickr'] = 'flatpickr/dist/flatpickr.min'
         config.resolve.alias['marked'] = 'marked/marked.min'
         config.plugins.push(
-            // new PurifyCSSPlugin({
-            //     paths: sync(join(__dirname, '**/*.html')),
-            // }),
             new VisualizerPlugin({
                 filename: './stats.html',
             }),
