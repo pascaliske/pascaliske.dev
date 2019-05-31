@@ -70,7 +70,7 @@
     "@angular/cli": "^7.3.8",
     "@angular/compiler-cli": "^7.2.14",
     "@angular/language-service": "^7.2.14",
-    "@commitlint/cli": "^7.5.2",
+    "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@pascaliske/ngx-prerenderer": "^1.1.0",
     "@sentry/cli": "^1.41.1",
