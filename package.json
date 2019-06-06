@@ -77,7 +77,7 @@
     "@sentry/webpack-plugin": "^1.6.2",
     "@types/cors": "^2.8.4",
     "@types/fs-extra": "^7.0.0",
-    "@types/google.analytics": "^0.0.39",
+    "@types/google.analytics": "^0.0.40",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "10.12.18",
     "@types/nodemailer": "^6.1.0",
