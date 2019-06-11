@@ -1514,7 +1514,7 @@
     "@sentry/utils" "5.4.0"
     tslib "^1.9.3"
 
-"@sentry/cli@^1.35.5", "@sentry/cli@^1.44.3":
+"@sentry/cli@^1.44.3":
   version "1.44.3"
   resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-1.44.3.tgz#69934597a3abae65f5f3082296417a7c4416b4a8"
   integrity sha512-TnQEyV7mM/nM4/2n6QQm7oq486JRT/2kRJkhWlJrzqK/tNtsEoxlwarkZzbfAUJI2OIoHcxn74jhEPD58wwvvg==
@@ -1567,13 +1567,6 @@
   dependencies:
     "@sentry/types" "5.4.0"
     tslib "^1.9.3"
-
-"@sentry/webpack-plugin@^1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.6.2.tgz#47b1a43f7e691c1c8dc45677f7380c5e1aa6596d"
-  integrity sha512-OZ4ISH0xAP6dTHpQ3xFnIa35o+rVKZxcoCn0a41rfgM+XFdXMtw3yc+nsRHkuRpbzWzXUIisBqbBm5KcEark4A==
-  dependencies:
-    "@sentry/cli" "^1.35.5"
 
 "@snyk/dep-graph@1.4.1":
   version "1.4.1"
