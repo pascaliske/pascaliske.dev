@@ -17,7 +17,7 @@ script:
   - yarn run build:cfn
   - yarn run build:prerender
   - yarn run bundlewatch
-  - yarn run e2e --parallel
+  - yarn run e2e
 after_deploy:
   - node_modules/.bin/lighthouse --quiet --chrome-flags="--headless" --output-path=./report.html https://$PROD_DOMAIN
   - node_modules/.bin/now report.html --token $NOW_TOKEN --no-clipboard --public
