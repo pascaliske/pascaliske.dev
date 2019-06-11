@@ -11,7 +11,7 @@
     "report:upload": "now report.html --token $NOW_TOKEN --no-clipboard --public",
     "sentry:commits": "sentry-cli releases new $TRAVIS_TAG && sentry-cli releases set-commits --auto $TRAVIS_TAG",
     "start": "ng serve",
-    "start:local": "serve --config serve.json --listen 4201 --no-clipboard",
+    "start:local": "serve --config serve.json --listen 4200 --no-clipboard",
     "build": "yarn run build:app && yarn run build:server && yarn run build:cfn && yarn run build:prerender",
     "build:app": "ng build --prod --stats-json",
     "build:server": "ng run pascal-iske:server:production",
@@ -19,7 +19,7 @@
     "build:prerender": "ts-node --require esm src/prerender.ts",
     "lint": "ng lint pascal-iske --fix && stylelint src/**/*.scss",
     "check": "snyk test && snyk monitor",
-    "e2e": "cypress verify && start-server-and-test start:local http://localhost:4201 'cypress run --record'",
+    "e2e": "cypress verify && start-server-and-test start:local http://localhost:4200 'cypress run --record'",
     "format": "prettier --config .prettierrc --write \"src/**/*.{ts,scss,html,md}\"",
     "changelog": "standard-changelog"
   },
