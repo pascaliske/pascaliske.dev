@@ -75,7 +75,7 @@
     "@pascaliske/ngx-prerenderer": "^2.0.0",
     "@sentry/cli": "^1.41.1",
     "@sentry/webpack-plugin": "^1.6.2",
-    "@types/cors": "^2.8.4",
+    "@types/cors": "^2.8.5",
     "@types/fs-extra": "^7.0.0",
     "@types/google.analytics": "^0.0.40",
     "@types/lodash-es": "^4.17.3",
