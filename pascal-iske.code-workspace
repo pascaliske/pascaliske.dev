@@ -14,6 +14,10 @@
         },
         {
             "path": "./src/scss"
+        },
+        {
+            "name": "tests",
+            "path": "./cypress/integration"
         }
     ],
     "settings": {
