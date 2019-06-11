@@ -5,7 +5,7 @@ addons:
   chrome: stable
 cache: yarn
 install:
-  - if [[ "$TRAVIS_BRANCH" == *"greenkeeper"* ]] || [[ "$TRAVIS_PULL_REQUEST_BRANCH" == *"greenkeeper"* ]]; then yarn install; else yarn install --frozen-lockfile; fi
+  - if [[ "$TRAVIS_BRANCH" == *"dependabot"* ]] || [[ "$TRAVIS_PULL_REQUEST_BRANCH" == *"dependabot"* ]]; then yarn install; else yarn install --frozen-lockfile; fi
 script:
   - yarn run lint
   - yarn run check
