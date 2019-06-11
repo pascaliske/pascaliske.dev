@@ -1,7 +1,6 @@
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const VisualizerPlugin = require('webpack-visualizer-plugin')
-const SentryWebpackPlugin = require('@sentry/webpack-plugin')
 
 const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
@@ -25,17 +24,6 @@ module.exports = config => {
             APP_VERSION: JSON.stringify(`v${pkg.version}`),
         }),
     )
-
-    if (command === 'build' && process.env.TRAVIS_TAG && process.env.TRAVIS_TAG.length > 0) {
-        config.plugins.push(
-            new SentryWebpackPlugin({
-                release: `v${pkg.version}`,
-                include: 'dist/app',
-                ignore: ['node_modules', 'webpack.config.js'],
-                dryRun: !process.env.TRAVIS_TAG || process.env.TRAVIS_TAG.length === 0,
-            }),
-        )
-    }
 
     return config
 }
