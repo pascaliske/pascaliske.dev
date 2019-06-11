@@ -1,7 +1,11 @@
 /// <reference types="Cypress" />
 
-context('Actions', () => {
+context('Home', () => {
+    beforeEach(() => {
+        //
+    })
+
     it('successfully loads home', () => {
-        cy.visit('/')
+        cy.visit('/home')
     })
 })
