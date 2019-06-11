@@ -19,13 +19,12 @@
     "settings": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
-        "tslint.autoFixOnSave": true,
-        "prettier.ignorePath": "pascal-iske/.prettierignore",
+        "prettier.ignorePath": ".prettierignore",
         "search.exclude": {
             "**/node_modules": true,
             "**/dist": true
         },
-        "typescript.tsdk": "pascal-iske/node_modules/typescript/lib",
+        "typescript.tsdk": "node_modules/typescript/lib",
         "[yaml]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
