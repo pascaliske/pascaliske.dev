@@ -1,7 +1,8 @@
 language: node_js
 node_js:
-  - '11'
-  - '10'
+  - '12'
+addons:
+  chrome: stable
 cache:
   yarn: true
   directories:
@@ -29,7 +30,7 @@ deploy:
   on:
     tags: true
     branch: master
-    node: 11
+    node: 12
 env:
   global:
     - secure: QY+1MYVMPURyBBojv89X2CFMpXTIHPDaDgscT4D3ONm5pEeQLU1TNG9IQWcJzlCJb3xpwibROYCFo8cwwnSmGK0zapFRJaceAXtXwY6RwCtBpUw4AbPpI1zJb1ch+Gj3glHEH2T6TY0LbyGa5ZWdeW8Ppwo7u5X++W9F+kLcp+z+jAXvEeVynZ4aE9rgz+j7DdJrNzVGelCQNBGBlns4vyTdJxLfjSHzg58F5Yzrbn9PshtV9imMMkYdYVOTulTuNbEKDYltUKpASrT4Nz5eEV6k5l+VtqL6GCmB2pM0vUtI5Z6BciWBRePm0UiGpYUGqO+Wd3D+c95r5RP6j3W7sNIhYCItScGuQuUGlg219qJW9nSYZ6VISpX24v59PBr8wOyJEr14AlwtohFylm5gXiqYsthdHXOV7IEODanzcrht43gF7GGpQ8OZb5bw5bWL9euJ72BqEG+5CQAnGrM2L3yjVYjdOwSSqGK1uJvbv0t5+TZI3bAMFdHVG5oJFpj1nudgmBHgt715HVP1jTayPdd23S97tfd7Um8r6eKKFfh/0x7fFW4K2kvPzx8qr972uF5LpzuO1BGU82XDf0nm1AH8kNXvfFuOeniC05SEvpcSC4GgzfZWap3eOds7HNvPJXmKlJMBpdm+Hvgx70BN0oGKJlfRIqWm+H21c3Sybbs=

@@ -9,23 +9,23 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: 'app/pages/home/home.module#HomeModule',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
     },
     {
         path: 'about',
-        loadChildren: 'app/pages/about/about.module#AboutModule',
+        loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
     },
     {
         path: 'contact',
-        loadChildren: 'app/pages/contact/contact.module#ContactModule',
+        loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
     },
     {
         path: 'imprint',
-        loadChildren: 'app/pages/imprint/imprint.module#ImprintModule',
+        loadChildren: () => import('./pages/imprint/imprint.module').then(m => m.ImprintModule),
     },
     {
         path: 'privacy',
-        loadChildren: 'app/pages/privacy/privacy.module#PrivacyModule',
+        loadChildren: () => import('./pages/privacy/privacy.module').then(m => m.PrivacyModule),
     },
     {
         path: '**',
