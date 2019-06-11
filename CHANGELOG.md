@@ -1,3 +1,22 @@
+# [1.5.0](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.18...v1.5.0) (2019-06-11)
+
+
+### Bug Fixes
+
+* **app-routing:** use dynamic import for lazy loading routing modules ([3752728](https://github.com/pascaliske/pascal-iske.de/commit/3752728))
+* **package:** update firebase-admin to version 8.0.0 ([0e034f8](https://github.com/pascaliske/pascal-iske.de/commit/0e034f8))
+* **package:** update intersection-observer to version 0.7.0 ([5a3e829](https://github.com/pascaliske/pascal-iske.de/commit/5a3e829))
+* **package:** update ngx-markdown to version 8.0.2 ([1000aae](https://github.com/pascaliske/pascal-iske.de/commit/1000aae))
+
+
+### Features
+
+* **fonts:** enable display swap on all google fonts ([56d91a6](https://github.com/pascaliske/pascal-iske.de/commit/56d91a6)), closes [#234](https://github.com/pascaliske/pascal-iske.de/issues/234)
+* compatibility update for angular v8 ([8b3e8ed](https://github.com/pascaliske/pascal-iske.de/commit/8b3e8ed)), closes [#266](https://github.com/pascaliske/pascal-iske.de/issues/266) [#267](https://github.com/pascaliske/pascal-iske.de/issues/267) [#268](https://github.com/pascaliske/pascal-iske.de/issues/268) [#270](https://github.com/pascaliske/pascal-iske.de/issues/270)
+* **e2e:** implement cypress e2e testing ([6fe8651](https://github.com/pascaliske/pascal-iske.de/commit/6fe8651))
+
+
+
 ## [1.4.18](https://github.com/pascaliske/pascal-iske.de/compare/v1.4.17...v1.4.18) (2019-04-24)
 
 
