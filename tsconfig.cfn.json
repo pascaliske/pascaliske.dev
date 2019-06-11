@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../dist/cfn",
+    "outDir": "./dist/cfn",
     "baseUrl": "./",
     "module": "commonjs",
     "target": "es2017",
