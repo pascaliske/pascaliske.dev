@@ -22,7 +22,7 @@
     "changelog": "standard-changelog"
   },
   "private": true,
-  "resolutions": {
+  "optionalDependencies": {
     "fsevents": "1.2.9"
   },
   "dependencies": {
