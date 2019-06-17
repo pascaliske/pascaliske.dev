@@ -2537,10 +2537,10 @@ axe-core@3.2.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.2.2.tgz#b06d6e9ae4636d706068843272bfaeed3fe97362"
   integrity sha512-gAy4kMSPpuRJV3mwictJqlg5LhE84Vw2CydKdC4tvrLhR6+G3KW51zbL/vYujcLA2jvWOq3HMHrVeNuw+mrLVA==
 
-axios@^0.18.0:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
-  integrity sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==
+axios@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+  integrity sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==
   dependencies:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
@@ -3016,12 +3016,12 @@ bun@^0.0.12:
   dependencies:
     readable-stream "~1.0.32"
 
-bundlewatch@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.2.1.tgz#3bf5279f49c098c7b27c31f7c172397154eb2e65"
-  integrity sha512-H8zE5K/0+eJqjOb3aebLIJoUjLqSM4URavKISuQOaDij0OCW2fA/ZFSjftBHhlvv7x8tej1vDL0YlBxUyRC3ag==
+bundlewatch@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.2.5.tgz#c5fd76fb29ca2e324cf3282733fbc7be07863fc0"
+  integrity sha512-woAzcef9345Y9yC3lxkkKDZfjIbAV7jGt8Je4FL9WlkS6R3n/39v2cIfivkgN2zRDH9l88sRuWxvyvgr9U90Gg==
   dependencies:
-    axios "^0.18.0"
+    axios "^0.19.0"
     bytes "^3.0.0"
     chalk "^2.4.0"
     commander "^2.15.1"
