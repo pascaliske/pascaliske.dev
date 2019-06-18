@@ -2,13 +2,16 @@ language: node_js
 node_js:
   - '12'
 addons:
+  apt:
+    packages:
+      - libgconf-2-4
   chrome: stable
 cache:
   yarn: true
   directories:
     - "~/.cache"
 install:
-  - if [[ "$TRAVIS_BRANCH" == *"dependabot"* ]] || [[ "$TRAVIS_PULL_REQUEST_BRANCH" == *"dependabot"* ]]; then yarn install; else yarn install --frozen-lockfile; fi
+  - yarn install --frozen-lockfile
 script:
   - yarn run lint
   - yarn run check
