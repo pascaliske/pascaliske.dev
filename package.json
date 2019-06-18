@@ -23,7 +23,7 @@
   },
   "private": true,
   "optionalDependencies": {
-    "fsevents": "1.2.9"
+    "fsevents": "2.0.7"
   },
   "dependencies": {
     "@angular/animations": "^8.0.1",
