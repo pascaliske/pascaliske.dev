@@ -78,7 +78,7 @@
     "@commitlint/config-conventional": "^8.0.0",
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@pascaliske/ngx-prerenderer": "^2.0.0",
-    "@sentry/cli": "^1.44.4",
+    "@sentry/cli": "^1.45.0",
     "@types/fs-extra": "^7.0.0",
     "@types/google.analytics": "^0.0.40",
     "@types/lodash-es": "^4.17.3",
