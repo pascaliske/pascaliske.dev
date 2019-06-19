@@ -1398,13 +1398,13 @@
     tslib "^1.9.0"
     uuid "^3.3.2"
 
-"@pascaliske/ngx-prerenderer@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-2.0.0.tgz#d6185c3aa1db97d91c5daa1e6172a69ccf2f656d"
-  integrity sha512-4Mt9eRbd7BlUJgGH/jv2VrI6OF5NAga+4UOsxDgoErYCrPPJWT2JOxQo4JGMP0qaQoYlO/m6wxENDve27SfbAw==
+"@pascaliske/ngx-prerenderer@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-2.0.1.tgz#543f0aa34114a73d0fcc4a1e98476ed52295e154"
+  integrity sha512-FmSnAAUi7aatCbUcjaVwqZ/KVt89a6162RBq3eTU/rLyndZu9p6mY5f+fbr4sRROZrVSasN0isZXPNhQ3vJIyQ==
   dependencies:
     mkdirp "^0.5.1"
-    tslib "^1.9.3"
+    tslib "^1.10.0"
   optionalDependencies:
     chalk "^2.4.2"
 
