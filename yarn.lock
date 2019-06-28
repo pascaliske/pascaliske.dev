@@ -1409,10 +1409,10 @@
   optionalDependencies:
     chalk "^2.4.2"
 
-"@pascaliske/ngx-sentry@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-2.1.2.tgz#d5b4c0a001f71dc017fd5ed9b5e29f7858e2f703"
-  integrity sha512-jRMwt2rBoFTllotugqAkbti2tYvTcu/iaxskisXjeDvDtIyRLK/ESJiOSJP9/G9HWnwtOxksf+eUVxNQQ1cN6Q==
+"@pascaliske/ngx-sentry@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-2.1.3.tgz#2b3338d2ea75ac21a085a315e87fb048d1638183"
+  integrity sha512-xIcEY9+UNca2FksRwSIrKcy4UA75ATd22sui3j8LQ+mKwHCZ4J1TEn51Nky/iIpgk/iRD79d0A8fg77iJg4l2g==
   dependencies:
     tslib "^1.9.0"
 
