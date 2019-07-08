@@ -61,7 +61,7 @@
     "lodash-es": "^4.17.11",
     "modularscale-sass": "^3.0.8",
     "ngx-cookieconsent": "^2.2.3",
-    "ngx-markdown": "^8.0.2",
+    "ngx-markdown": "^8.1.0",
     "normalize-scss": "^7.0.1",
     "rxjs": "^6.5.2",
     "susy": "^3.0.5",
