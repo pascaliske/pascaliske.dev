@@ -73,7 +73,7 @@
     "@angular-devkit/build-angular": "^0.801.1",
     "@angular/cli": "^8.1.1",
     "@angular/compiler-cli": "^8.1.1",
-    "@angular/language-service": "^8.1.1",
+    "@angular/language-service": "^8.1.2",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@cypress/webpack-preprocessor": "^4.1.0",
