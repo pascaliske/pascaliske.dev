@@ -23,6 +23,9 @@
     "changelog": "standard-changelog"
   },
   "private": true,
+  "engines": {
+    "node": "10.x"
+  },
   "optionalDependencies": {
     "fsevents": "1.2.9"
   },
