@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/app",
-      "use": "@now/static"
+      "src": "package.json",
+      "use": "@now/static-build"
     }
   ]
 }

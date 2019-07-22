@@ -15,6 +15,7 @@
     "build:server": "ng run pascal-iske:server:production",
     "build:cfn": "tsc --project tsconfig.cfn.json && cp src/cfn/package.json dist/cfn/package.json",
     "build:prerender": "ts-node --require esm src/prerender.ts",
+    "now-build": "yarn run build",
     "lint": "ng lint pascal-iske --fix && stylelint src/**/*.scss",
     "check": "snyk test; snyk monitor",
     "e2e": "cypress verify && start-server-and-test start:local http://localhost:4200 'cypress run --record false'",
