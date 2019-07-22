@@ -24,7 +24,7 @@
   },
   "private": true,
   "engines": {
-    "node": "10.x"
+    "node": ">=10.0.0"
   },
   "optionalDependencies": {
     "fsevents": "1.2.9"
