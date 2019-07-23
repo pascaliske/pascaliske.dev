@@ -1,6 +1,7 @@
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const VisualizerPlugin = require('webpack-visualizer-plugin')
+const PacktrackerPlugin = require('@packtracker/webpack-plugin')
 
 const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
@@ -23,6 +24,9 @@ module.exports = config => {
         new DefinePlugin({
             APP_VERSION: JSON.stringify(`v${pkg.version}`),
         }),
+        new PacktrackerPlugin({
+            upload: process.env.CI === 'true',
+        })
     )
 
     return config
