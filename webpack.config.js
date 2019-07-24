@@ -17,6 +17,10 @@ module.exports = config => {
             new VisualizerPlugin({
                 filename: './stats.html',
             }),
+            new PacktrackerPlugin({
+                branch: process.env.TRAVIS_BRANCH,
+                upload: process.env.CI === 'true',
+            })
         )
     }
 
@@ -24,10 +28,6 @@ module.exports = config => {
         new DefinePlugin({
             APP_VERSION: JSON.stringify(`v${pkg.version}`),
         }),
-        new PacktrackerPlugin({
-            branch: process.env.TRAVIS_BRANCH,
-            upload: process.env.CI === 'true',
-        })
     )
 
     return config
