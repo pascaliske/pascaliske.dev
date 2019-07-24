@@ -25,6 +25,7 @@ module.exports = config => {
             APP_VERSION: JSON.stringify(`v${pkg.version}`),
         }),
         new PacktrackerPlugin({
+            branch: process.env.TRAVIS_BRANCH,
             upload: process.env.CI === 'true',
         })
     )
