@@ -1,6 +1,7 @@
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const VisualizerPlugin = require('webpack-visualizer-plugin')
+const PacktrackerPlugin = require('@packtracker/webpack-plugin')
 
 const pkg = require('./package.json')
 const command = process.argv[2].toLowerCase()
@@ -16,6 +17,10 @@ module.exports = config => {
             new VisualizerPlugin({
                 filename: './stats.html',
             }),
+            new PacktrackerPlugin({
+                branch: process.env.TRAVIS_BRANCH,
+                upload: process.env.CI === 'true',
+            })
         )
     }
 
