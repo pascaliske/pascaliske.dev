@@ -1381,10 +1381,10 @@
     tiny-json-http "^7.0.2"
     webpack-bundle-analyzer "^3.3.2"
 
-"@pascaliske/form-elements@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-2.2.1.tgz#4917966dc7dcbe5b6cf3477eda4700550b28bd30"
-  integrity sha512-RDgmE0nvhfU6LnvNTGAEFwXbsmFpOYfOpzMUyIBICZjZEsW5dOuEd+xSRmPhjOGJjdS7d67oA4+ggbhPo16F6A==
+"@pascaliske/form-elements@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-2.3.0.tgz#4212c1b7d47743ba65c453fb5185b91a8ffefa93"
+  integrity sha512-R6opMLEuJJgHbmgSA0J8a9P0S+LSEZ97s/CxsZVmJC3sC5tX0E8z3ulC+JaALiT9oUzfOlZypJjjw3V45BjOyg==
   dependencies:
     tslib "^1.9.0"
 
