@@ -43,7 +43,7 @@
     "@angular/router": "^8.1.2",
     "@angular/service-worker": "^8.1.2",
     "@fortawesome/angular-fontawesome": "^0.4.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/fontawesome-svg-core": "^1.2.20",
     "@fortawesome/free-brands-svg-icons": "^5.10.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.10.0",
