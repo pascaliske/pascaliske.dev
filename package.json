@@ -83,7 +83,7 @@
     "@cypress/webpack-preprocessor": "^4.1.0",
     "@packtracker/webpack-plugin": "^2.1.2",
     "@pascaliske/ngx-prerenderer": "^2.0.3",
-    "@sentry/cli": "^1.47.0",
+    "@sentry/cli": "^1.47.1",
     "@types/fs-extra": "^8.0.0",
     "@types/google.analytics": "^0.0.40",
     "@types/lodash-es": "^4.17.3",
