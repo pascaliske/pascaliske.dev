@@ -110,7 +110,7 @@
     "rxjs-tslint-rules": "^4.24.3",
     "serve": "^11.1.0",
     "snyk": "^1.211.0",
-    "standard-changelog": "^2.0.11",
+    "standard-changelog": "^2.0.13",
     "start-server-and-test": "^1.9.1",
     "stylelint": "^10.1.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
