@@ -105,7 +105,7 @@
     "lighthouse": "^5.2.0",
     "lint-staged": "^9.2.1",
     "nodemailer": "^6.3.0",
-    "now": "^15.8.7",
+    "now": "^16.1.1",
     "prettier": "^1.18.2",
     "rxjs-tslint-rules": "^4.24.3",
     "serve": "^11.1.0",
