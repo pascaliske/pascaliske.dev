@@ -58,7 +58,7 @@
     "@sentry/browser": "^5.6.1",
     "@types/cors": "^2.8.5",
     "cookieconsent": "^3.1.1",
-    "core-js": "^3.2.0",
+    "core-js": "^3.2.1",
     "flatpickr": "^4.6.2",
     "fuzzysearch": "^1.0.3",
     "intersection-observer": "^0.7.0",
