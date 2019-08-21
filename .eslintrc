@@ -1,0 +1,9 @@
+{
+  "extends": "@pascaliske/eslint-config",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "APP_VERSION": "readonly"
+  }
+}
