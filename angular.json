@@ -96,7 +96,7 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "serviceWorker": true,
-              "subresourceIntegrity": true,
+              "subresourceIntegrity": false,
               "statsJson": true,
               "fileReplacements": [
                 {
