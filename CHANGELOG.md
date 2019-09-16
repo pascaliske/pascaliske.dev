@@ -1,3 +1,16 @@
+## [1.5.8](https://github.com/pascaliske/pascal-iske.de/compare/v1.5.7...v1.5.8) (2019-09-12)
+
+
+### Bug Fixes
+
+* **angular:** disable subresource integrity ([2cbabb6](https://github.com/pascaliske/pascal-iske.de/commit/2cbabb6))
+
+
+
+## [1.5.7](https://github.com/pascaliske/pascal-iske.de/compare/v1.5.6...v1.5.7) (2019-08-29)
+
+
+
 ## [1.5.6](https://github.com/pascaliske/pascal-iske.de/compare/v1.5.5...v1.5.6) (2019-07-25)
 
 
