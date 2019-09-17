@@ -112,7 +112,7 @@
     "standard-changelog": "^2.0.13",
     "start-server-and-test": "^1.10.2",
     "stylelint": "^10.1.0",
-    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-config-sass-guidelines": "^6.1.0",
     "ts-loader": "^6.1.0",
     "ts-node": "~8.4.1",
     "tslint": "^5.20.0",
