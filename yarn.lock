@@ -101,17 +101,6 @@
     rxjs "6.4.0"
     webpack-merge "4.2.1"
 
-"@angular-devkit/core@8.3.5":
-  version "8.3.5"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.5.tgz#d1b58df73a379e29f3ddc1cb36cf29d8e476786e"
-  integrity sha512-ag7Nr94wQUqCFtZjw+rMET+djGBmLk989Id5lLWViW99g4XFeS+e45mJv3JYRzF218+6EdicZz0DGQRYHekVeg==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
-
 "@angular-devkit/core@8.3.6":
   version "8.3.6"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.6.tgz#6ad4787e3cb8b03234a194dd53e12cf054a4169c"
@@ -5776,10 +5765,10 @@ flat-cache@^2.0.1:
     rimraf "2.6.3"
     write "1.0.3"
 
-flatpickr@^4.6.2:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.2.tgz#50e1b4fc84fbf67c5b0919ba3ddc330221f126da"
-  integrity sha512-bRfBPyxohUQWgCTg6jPALUO1t/x+sRJ/S/RVti/NzYvHqGRpCAesKSWKLzOuLmpu+vGHfXBld4SXvOCLFgYb+g==
+flatpickr@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
+  integrity sha512-007VucCkqNOMMb9ggRLNuJowwaJcyOh4sKAFcdGfahfGc7JQbf94zSzjdBq/wVyHWUEs5o3+idhFZ0wbZMRmVQ==
 
 flatted@^2.0.0:
   version "2.0.0"
