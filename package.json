@@ -110,7 +110,7 @@
     "serve": "^11.2.0",
     "snyk": "^1.230.5",
     "standard-changelog": "^2.0.13",
-    "start-server-and-test": "^1.10.3",
+    "start-server-and-test": "^1.10.4",
     "stylelint": "^11.0.0",
     "stylelint-config-sass-guidelines": "^6.1.0",
     "ts-loader": "^6.2.0",
