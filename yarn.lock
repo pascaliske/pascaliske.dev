@@ -9250,10 +9250,10 @@ ngx-cookieconsent@^2.2.3:
   resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.2.3.tgz#52b44f37557b74841cd332905c94b72bb29fdd82"
   integrity sha512-vg7M4XZSTFRAQq20M0YVJdz5OkXIu0t0MSYos0vvu7oblaEivQstA1Mg5bO7OJYp+oFoTEefWhvO2nCiyHn9SQ==
 
-ngx-markdown@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-8.2.0.tgz#4ad622d8222946735f107942015a8a2c80e4a192"
-  integrity sha512-4sWz08Hjqvz35OGtSUcfnO9grkkC7+agRlsVZxi2xpYbkmFiRk7cMKGVfRFe+tqzjOxKi1j3BwUG+x2tAGpVlA==
+ngx-markdown@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-8.2.1.tgz#53bafde382aa69ae6787abf0d72bf63bc028105a"
+  integrity sha512-59LG8rEoOwDsZyyJckp+QDnW/c5wMaRpNkb6TWktlBVTfQKyAYHr6BuSskVbZ4y8nsj54UQg0CDFLBOfUiqOwA==
   dependencies:
     "@types/marked" "^0.6.5"
     katex "^0.11.1"
