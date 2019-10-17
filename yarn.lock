@@ -101,6 +101,17 @@
     rxjs "6.4.0"
     webpack-merge "4.2.1"
 
+"@angular-devkit/core@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.10.tgz#c7aa228e31f10c0cdf8ae4b8cbb391a6a63860a2"
+  integrity sha512-qDqgOGOL3arCTF3u7DRCWGKhcU1N6d1Bb1ynBh1b30krLIQbZTXRToz5VovN4sxOvxN8xV0NjFaXpsRAIC2QfQ==
+  dependencies:
+    ajv "6.10.2"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.3"
+    rxjs "6.4.0"
+    source-map "0.7.3"
+
 "@angular-devkit/core@8.3.9":
   version "8.3.9"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.9.tgz#72093bdbef278077f15f66423e2abc6bd2104d0a"
@@ -111,6 +122,14 @@
     magic-string "0.25.3"
     rxjs "6.4.0"
     source-map "0.7.3"
+
+"@angular-devkit/schematics@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.10.tgz#9a124b55468a8ba6c4faa52e8e5713615dd6d8cc"
+  integrity sha512-uK9HHPuEuBBXhuAPejSiU/vPkS3VmaC/G1nHZTbuAYGtaJsZYIM23hCHtYOWYldHTrDPeseXNqgPaReGVHgNHQ==
+  dependencies:
+    "@angular-devkit/core" "8.3.10"
+    rxjs "6.4.0"
 
 "@angular-devkit/schematics@8.3.9":
   version "8.3.9"
@@ -224,14 +243,14 @@
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/pwa@^0.803.9":
-  version "0.803.9"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.9.tgz#332f15b89f81ce6f379235e32734d14e38715022"
-  integrity sha512-x3PMgEVGLolFQ+e5Pj9ppcm3KwSGhut6Ibe6Zy3H9p064H76FSgGrh/PlatUHHAtWHVe2GYb3p7RKXqRrwsK+g==
+"@angular/pwa@^0.803.10":
+  version "0.803.10"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.10.tgz#9da7d974f074505598d2087375df825fa8f9c72a"
+  integrity sha512-M6bQl4XrGgqWC8oesdy9isJ2EOa0RFeCzORjRj3v7/fWfbcLm6k1U1E6d/n6zzOSkZEpdu8UsYOyxdD5doPMSg==
   dependencies:
-    "@angular-devkit/core" "8.3.9"
-    "@angular-devkit/schematics" "8.3.9"
-    "@schematics/angular" "8.3.9"
+    "@angular-devkit/core" "8.3.10"
+    "@angular-devkit/schematics" "8.3.10"
+    "@schematics/angular" "8.3.10"
     parse5-html-rewriting-stream "5.1.0"
 
 "@angular/router@^8.2.6":
@@ -1575,6 +1594,14 @@
   integrity sha512-MI4Xx6LHs4Webyvi6EbspgyAb4D2Q2VtnCQ1blOJcoLS6mVa8lNN2rkIy1CVxfTUpoyIbCTkXES1rLXztFD1lg==
   dependencies:
     any-observable "^0.3.0"
+
+"@schematics/angular@8.3.10":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.10.tgz#64481f682c4912ca79c5b7223aec6f6f0cd106a8"
+  integrity sha512-vo99YWjhW3VxZpRBa+et4Pz74AzA4mI3mxXVddXUftvDqZ9QLR4G1+blNOYwVTTEoOsPD+czBErzO2X16AIo4Q==
+  dependencies:
+    "@angular-devkit/core" "8.3.10"
+    "@angular-devkit/schematics" "8.3.10"
 
 "@schematics/angular@8.3.9":
   version "8.3.9"
