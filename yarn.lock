@@ -100,17 +100,6 @@
     "@angular-devkit/core" "8.3.13"
     rxjs "6.4.0"
 
-"@angular-devkit/core@8.3.12":
-  version "8.3.12"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.12.tgz#0b6303c2a810d9212d2cc4fa7f9e75f03025b63a"
-  integrity sha512-zqhhpdy4jfanxSUssTxkZAUIfpQV9G/CG+dvdqvBeQK0nppcH8a+8pIB91v8KjIbGErH1y3YXiYjAIsWwJd7RQ==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
-
 "@angular-devkit/core@8.3.13":
   version "8.3.13"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.13.tgz#8139de9eaaf0b56d62589b0b876bbe8d21d9ba7f"
@@ -12025,10 +12014,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.237.0:
-  version "1.237.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.237.0.tgz#104f7c224d405c17a2ddbc9b3ba68e0c8c544cea"
-  integrity sha512-kXBtKZJhNkX0t3+sig04aREZNq3jhOwd59pMKs8RIHOX/pqx8IId3MilB9sDqyXz3/u35G+6CBHlOgUZ9YowsQ==
+snyk@^1.237.1:
+  version "1.237.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.237.1.tgz#ffb5d76dab6d3caa84d359d8b4bcbd463d9b19c2"
+  integrity sha512-pBs6Gb1N2YHsX/BJdyj6xsaBJkS4XqiaOGXiEcFaS6Fjx8VDpN2peLn6TrhOzcILGAIjSdBCD1P85zm85Dcouw==
   dependencies:
     "@snyk/cli-interface" "^2.0.3"
     "@snyk/dep-graph" "1.12.0"
