@@ -106,7 +106,7 @@
     "nodemailer": "^6.3.1",
     "now": "^16.4.4",
     "prettier": "^1.18.2",
-    "rxjs-tslint-rules": "^4.25.0",
+    "rxjs-tslint-rules": "^4.26.1",
     "serve": "^11.2.0",
     "snyk": "^1.240.0",
     "standard-changelog": "^2.0.15",
