@@ -138,6 +138,14 @@
     "@angular-devkit/core" "8.3.17"
     rxjs "6.4.0"
 
+"@angular-devkit/schematics@8.3.18":
+  version "8.3.18"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.18.tgz#946eedb52194cb1f29216eaf6942075d12394d11"
+  integrity sha512-J9sf/6cSUx2kdXppo/69uZ1gBeM5fcXfnP7MCJCVnsk09QCD9Kr+Xeh8h4WEmLtne7XzI9dcCttHQ5WDNuRulA==
+  dependencies:
+    "@angular-devkit/core" "8.3.18"
+    rxjs "6.4.0"
+
 "@angular/animations@^8.2.6":
   version "8.2.6"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.2.6.tgz#f453493c2dd88294911fb1e32a659606621226f2"
@@ -243,14 +251,14 @@
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/pwa@^0.803.17":
-  version "0.803.17"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.17.tgz#c70147f4c19383032e481cc6b34e7ec9b097793d"
-  integrity sha512-3BY1LMYo3lfYqG8PsW46rrTFEmXHinzhC5Ic+OKea4tJv4fCFV0UIEBTVx4SRScb1ytuBhBVywfH37waHftXUA==
+"@angular/pwa@^0.803.18":
+  version "0.803.18"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.18.tgz#4594d8bd2a824870f63a2e2b6da8fd5ec854e37c"
+  integrity sha512-KF40VDrjrl6iktU/7UBEAIOyEDmXm1sANdzLjynKwETpUExnoZ8k942KMChagVBtWJY8BrXo0EdWw1Kx6/4UmQ==
   dependencies:
-    "@angular-devkit/core" "8.3.17"
-    "@angular-devkit/schematics" "8.3.17"
-    "@schematics/angular" "8.3.17"
+    "@angular-devkit/core" "8.3.18"
+    "@angular-devkit/schematics" "8.3.18"
+    "@schematics/angular" "8.3.18"
     parse5-html-rewriting-stream "5.1.0"
 
 "@angular/router@^8.2.6":
@@ -1602,6 +1610,14 @@
   dependencies:
     "@angular-devkit/core" "8.3.17"
     "@angular-devkit/schematics" "8.3.17"
+
+"@schematics/angular@8.3.18":
+  version "8.3.18"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.18.tgz#314e17ba21925895e43e3c0ac864d9d98a30333d"
+  integrity sha512-3cQYcmzsWD/MnqauoSozIu1R7DJvty13BH6+XIorEfguWqOwOwgNIWLMsa0iIcy0+TV3vWFI0KZpCKup2u/I1Q==
+  dependencies:
+    "@angular-devkit/core" "8.3.18"
+    "@angular-devkit/schematics" "8.3.18"
 
 "@schematics/update@0.803.17":
   version "0.803.17"
