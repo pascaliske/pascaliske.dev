@@ -123,14 +123,6 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.19":
-  version "8.3.19"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.19.tgz#a3b78a90486028b86b139eff8b5e9c5f0fab6497"
-  integrity sha512-sHZMRypW5ZMvla8uMOTsAYHwPiBpShz31tJzd7F07gs9hpj3J05FZ3nL+ZVdt25YzdCUPaFPQKyVx2YfjGyJAw==
-  dependencies:
-    "@angular-devkit/core" "8.3.19"
-    rxjs "6.4.0"
-
 "@angular-devkit/schematics@8.3.20":
   version "8.3.20"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.20.tgz#80e7c31ebfd8f7f8500bfa1cae5c39980b962d6a"
@@ -244,14 +236,14 @@
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/pwa@^0.803.19":
-  version "0.803.19"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.19.tgz#4cf925710c17ec28ff0d5d11abdf4196d753b03e"
-  integrity sha512-Jw1/VFpkx8S4MzODCYk8kemSTR/V5PFccpp1Y7KpElH8WlLUd7ON6vcR1WqQ2Dd6h4GcKmMzRe3oA6XGAgxYag==
+"@angular/pwa@^0.803.20":
+  version "0.803.20"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.803.20.tgz#47231cdcd0cc107e6b692406d5bcfcb7a2ed9a05"
+  integrity sha512-AcgRzOI/So7LyaxDF6R0bwTAh3604+6on3rwN92SYQtFcLMkUfZ1Stwbei5rrrU5SxCyx1njx4312fnOhVDR6A==
   dependencies:
-    "@angular-devkit/core" "8.3.19"
-    "@angular-devkit/schematics" "8.3.19"
-    "@schematics/angular" "8.3.19"
+    "@angular-devkit/core" "8.3.20"
+    "@angular-devkit/schematics" "8.3.20"
+    "@schematics/angular" "8.3.20"
     parse5-html-rewriting-stream "5.1.0"
 
 "@angular/router@^8.2.6":
@@ -1627,14 +1619,6 @@
   integrity sha512-MI4Xx6LHs4Webyvi6EbspgyAb4D2Q2VtnCQ1blOJcoLS6mVa8lNN2rkIy1CVxfTUpoyIbCTkXES1rLXztFD1lg==
   dependencies:
     any-observable "^0.3.0"
-
-"@schematics/angular@8.3.19":
-  version "8.3.19"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.19.tgz#0584ecb2e59bb5b1cdade9bf788bb7b483c066bc"
-  integrity sha512-fwhvK+IzNxfznh5yQAbkkmyrdydoOQFoBvMWNsi4pneZRu0kKrnQim5FLjx2mJQArfxvJUgCMiZZ1Ze0TzVK+g==
-  dependencies:
-    "@angular-devkit/core" "8.3.19"
-    "@angular-devkit/schematics" "8.3.19"
 
 "@schematics/angular@8.3.20":
   version "8.3.20"
