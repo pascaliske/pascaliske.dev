@@ -102,7 +102,7 @@
     "fs-extra": "^8.1.0",
     "husky": "^4.2.1",
     "lighthouse": "^5.6.0",
-    "lint-staged": "^10.0.3",
+    "lint-staged": "^10.0.4",
     "nodemailer": "^6.4.2",
     "now": "^16.7.3",
     "prettier": "^1.19.1",
