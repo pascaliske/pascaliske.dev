@@ -94,7 +94,7 @@
     "chalk": "^3.0.0",
     "codelyzer": "^5.2.1",
     "cors": "^2.8.5",
-    "cypress": "^3.8.3",
+    "cypress": "^4.0.0",
     "esm": "^3.2.25",
     "firebase-admin": "^8.9.2",
     "firebase-functions": "^3.3.0",
