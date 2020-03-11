@@ -3319,20 +3319,20 @@ bun@^0.0.12:
   dependencies:
     readable-stream "~1.0.32"
 
-bundlewatch@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.2.5.tgz#c5fd76fb29ca2e324cf3282733fbc7be07863fc0"
-  integrity sha512-woAzcef9345Y9yC3lxkkKDZfjIbAV7jGt8Je4FL9WlkS6R3n/39v2cIfivkgN2zRDH9l88sRuWxvyvgr9U90Gg==
+bundlewatch@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.2.6.tgz#b9f9a3e04e6b0b0823cc8b5af9e24b3f931582ab"
+  integrity sha512-J/j1f8Wqro1AdY4oFvFvIsQTM+fEkV0p7RPv9l0xgevUxETnjF7sFSW32mIEeF245RvdczETUu7bInDsO5uaLg==
   dependencies:
     axios "^0.19.0"
     bytes "^3.0.0"
     chalk "^2.4.0"
     commander "^2.15.1"
     glob "^7.1.2"
-    gzip-size "^4.0.0"
+    gzip-size "^5.1.1"
     jsonpack "^1.1.5"
     lodash.merge "^4.6.1"
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^6.0.0"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -6745,15 +6745,7 @@ gtoken@^4.1.0:
     jws "^3.1.5"
     mime "^2.2.0"
 
-gzip-size@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-4.1.0.tgz#8ae096257eabe7d69c45be2b67c448124ffb517c"
-  integrity sha1-iuCWJX6r59acRb4rZ8RIEk/7UXw=
-  dependencies:
-    duplexer "^0.1.1"
-    pify "^3.0.0"
-
-gzip-size@^5.0.0:
+gzip-size@^5.0.0, gzip-size@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-5.1.1.tgz#cb9bee692f87c0612b232840a873904e4c135274"
   integrity sha512-FNHi6mmoHvs1mxZAds4PpdCS6QG8B4C1krxJsMutgxl5t3+GlRTzzI3NEkifXx2pVsOvJdOGSmIgDhQ55FwdPA==
@@ -11022,6 +11014,15 @@ read-pkg-up@^3.0.0:
     find-up "^2.0.0"
     read-pkg "^3.0.0"
 
+read-pkg-up@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-6.0.0.tgz#da75ce72762f2fa1f20c5a40d4dd80c77db969e3"
+  integrity sha512-odtTvLl+EXo1eTsMnoUHRmg/XmXdTkwXVxy4VFE9Kp6cCq7b3l7QMdBndND3eAFzrbSAXC/WCUOQQ9rLjifKZw==
+  dependencies:
+    find-up "^4.0.0"
+    read-pkg "^5.1.1"
+    type-fest "^0.5.0"
+
 read-pkg-up@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-7.0.1.tgz#f3a6135758459733ae2b95638056e1854e7ef507"
@@ -11049,7 +11050,7 @@ read-pkg@^3.0.0:
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
 
-read-pkg@^5.2.0:
+read-pkg@^5.1.1, read-pkg@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-5.2.0.tgz#7bf295438ca5a33e56cd30e053b34ee7250c93cc"
   integrity sha512-Ug69mNOpfvKDAc2Q8DRpMjjzdtrnv9HcSMX+4VsZxD1aZ6ZzrIE7rlzXBtWTyhULSMKg076AW6WR5iZpD0JiOg==
@@ -13551,7 +13552,7 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-fest@^0.5.2:
+type-fest@^0.5.0, type-fest@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.5.2.tgz#d6ef42a0356c6cd45f49485c3b6281fc148e48a2"
   integrity sha512-DWkS49EQKVX//Tbupb9TFa19c7+MK1XmzkrZUR8TAktmE/DizXoaoJV6TZ/tSIPXipqNiRI6CyAe7x69Jb6RSw==
