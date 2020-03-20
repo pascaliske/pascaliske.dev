@@ -103,7 +103,7 @@
     "husky": "^4.2.3",
     "lighthouse": "^5.6.0",
     "lint-staged": "^10.0.8",
-    "nodemailer": "^6.4.5",
+    "nodemailer": "^6.4.6",
     "now": "^17.0.4",
     "prettier": "^1.19.1",
     "rxjs-tslint-rules": "^4.29.2",
