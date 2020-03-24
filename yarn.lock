@@ -1569,10 +1569,10 @@
     classnames "^2.2.6"
     tslib "^1.10.0"
 
-"@pascaliske/ngx-notifications@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.4.0.tgz#119e16a3f3ad1e41bda1587b0e2d8b18d8997d0a"
-  integrity sha512-x+Sf0Ex0Dth1D4YzF6G7JAqOme+jbXDG0fKw7mP4X4G36WVZ5M5P3VPmou13q0HB2cCkxwdnghoNgUyruUua1w==
+"@pascaliske/ngx-notifications@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.4.1.tgz#4f4505eae76445df615352b24ed83ea9785e9d7d"
+  integrity sha512-wu6kS9I9LwBL9lBhFnGCBh5Own9LUZ1RhlGfU05Aa1+u3UAFgfw4ov0df4ZBN6XWauf45IXcv5fcOrVCpueBmw==
   dependencies:
     uuid "^3.3.2"
 
