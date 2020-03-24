@@ -51,7 +51,7 @@
     "@ngx-progressbar/router": "~5.3.2",
     "@pascaliske/form-elements": "^2.4.3",
     "@pascaliske/html-helpers": "^1.5.7",
-    "@pascaliske/ngx-notifications": "^1.4.0",
+    "@pascaliske/ngx-notifications": "^1.4.2",
     "@pascaliske/ngx-sentry": "^2.2.2",
     "@sentry/browser": "^5.15.0",
     "@types/cors": "^2.8.6",
