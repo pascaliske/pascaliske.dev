@@ -1,6 +1,6 @@
 import * as cors from 'cors'
 import { config, https } from 'firebase-functions'
-import { Request, Response } from 'express'
+import { Response } from 'express'
 import { createTransport } from 'nodemailer'
 
 // configure cors
@@ -24,25 +24,24 @@ const transport = createTransport({
  * @param {Response} res
  * @returns {HttpsFunction}
  */
-export const sendContactRequest = https.onRequest(async (req: Request, res: Response) => {
+export const sendContactRequest = https.onRequest((req: any, res: Response) => {
     // only allow same-origin requests
     security(req, res, () => {})
 
-    try {
-        const { name, email, subject, message } = req.body
-
-        await transport.sendMail({
+    transport
+        .sendMail({
             to: 'info@pascal-iske.de',
-            from: `"${name}" <${email}>`,
-            replyTo: `"${name}" <${email}>`,
-            subject: subject,
-            html: message,
+            from: `"${req.body.name}" <${req.body.email}>`,
+            replyTo: `"${req.body.name}" <${req.body.email}>`,
+            subject: req.body.subject,
+            html: req.body.message,
         })
-
-        res.status(201).send()
-    } catch (error) {
-        res.status(500).send(error)
-    }
+        .then(() => {
+            res.status(201).send()
+        })
+        .catch(error => {
+            res.status(500).send(error)
+        })
 })
 
 /**
@@ -52,28 +51,26 @@ export const sendContactRequest = https.onRequest(async (req: Request, res: Resp
  * @param {Response} res
  * @returns {HttpsFunction}
  */
-export const sendCspReport = https.onRequest(async (req: Request, res: Response) => {
+export const sendCspReport = https.onRequest((req: any, res: Response) => {
     // only allow same-origin requests
     security(req, res, () => {})
 
-    try {
-        // try parsing the data
-        const data = JSON.parse(req.body)
+    // try parsing the data
+    const data = JSON.parse(req.body)
 
-        if (!data || data.length === 0) {
-            throw new Error('empty')
-        }
+    if (!data || data.length === 0) {
+        return res.status(204).send()
+    }
 
-        await transport.sendMail({
+    transport
+        .sendMail({
             to: 'info@pascal-iske.de',
             from: `"Pascal Iske" <info@pascal-iske.de>`,
             replyTo: `"Pascal Iske" <info@pascal-iske.de>`,
             subject: '[warn] csp violation report',
             html: `<pre>${JSON.stringify(data, null, 2)}</pre>`,
         })
-
-        res.status(204).send()
-    } catch (error) {
-        res.status(204).send()
-    }
+        .finally(() => {
+            res.status(204).send()
+        })
 })

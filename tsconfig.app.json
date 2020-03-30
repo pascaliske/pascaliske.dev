@@ -11,6 +11,7 @@
     "enableIvy": false
   },
   "exclude": [
-    "src/prerender.ts"
+    "src/prerender.ts",
+    "src/cfn/index.ts"
   ]
 }
