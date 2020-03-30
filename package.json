@@ -85,7 +85,7 @@
     "@types/fs-extra": "^8.1.0",
     "@types/google.analytics": "^0.0.40",
     "@types/lodash-es": "^4.17.3",
-    "@types/node": "13.9.3",
+    "@types/node": "13.9.6",
     "@types/nodemailer": "^6.4.0",
     "@types/webpack": "^4.41.8",
     "bump-cli": "^1.1.3",
