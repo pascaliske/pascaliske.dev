@@ -29,7 +29,6 @@ export function MarkdownOptionsFactory(): MarkedOptions {
 
     return {
         renderer: renderer,
-        tables: true,
         gfm: true,
     }
 }
