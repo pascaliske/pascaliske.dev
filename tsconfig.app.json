@@ -7,8 +7,7 @@
     "types": [],
     "typeRoots": ["src/typings.d.ts"]
   },
-  "angularCompilerOptions": {
-    "enableIvy": false
-  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/typings.d.ts"],
   "exclude": ["src/prerender.ts", "src/cfn/index.ts"]
 }
