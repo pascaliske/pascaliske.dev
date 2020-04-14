@@ -10,8 +10,5 @@
   "angularCompilerOptions": {
     "enableIvy": false
   },
-  "exclude": [
-    "src/prerender.ts",
-    "src/cfn/index.ts"
-  ]
+  "exclude": ["src/prerender.ts", "src/cfn/index.ts"]
 }

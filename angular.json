@@ -67,14 +67,10 @@
                 "output": "/"
               }
             ],
-            "styles": [
-              "src/scss/common.scss"
-            ],
+            "styles": ["src/scss/common.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/scss"
-              ]
+              "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -125,10 +121,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "tsconfig.app.json",
-            "exclude": [
-              "**/node_modules/**",
-              "**/*.json"
-            ]
+            "exclude": ["**/node_modules/**", "**/*.json"]
           }
         },
         "server": {
@@ -138,9 +131,7 @@
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json",
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/scss"
-              ]
+              "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
               "path": "webpack.config.js"
