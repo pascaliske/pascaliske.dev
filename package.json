@@ -4,6 +4,7 @@
   "version": "1.5.8",
   "license": "MIT",
   "scripts": {
+    "postinstall": "ngcc",
     "ng": "ng",
     "bump": "bump package.json --yes",
     "firebase": "firebase",
