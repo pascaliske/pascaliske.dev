@@ -14,7 +14,6 @@ install:
   - yarn install --frozen-lockfile
 script:
   - yarn run lint
-  - yarn run check
   - yarn run build:app --progress false --base-href https://$PROD_DOMAIN
   - yarn run build:server --progress false
   - yarn run build:cfn
