@@ -66,11 +66,7 @@ export class ScrollService {
      */
     private handleScroll(): void {
         fromEvent(window, 'scroll')
-            .pipe(
-                distinctUntilChanged(),
-                debounceTime(100),
-                share(),
-            )
+            .pipe(distinctUntilChanged(), debounceTime(100), share())
             .subscribe(() => {
                 this.scrollstate$.next({
                     scrollX: window.scrollX,

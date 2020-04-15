@@ -47,10 +47,6 @@ export class NetworkService {
      * @returns {Observable<T>}
      */
     private share<T = any>(observable: Observable<T>): Observable<T> {
-        return observable.pipe(
-            distinctUntilChanged(),
-            debounceTime(100),
-            share(),
-        )
+        return observable.pipe(distinctUntilChanged(), debounceTime(100), share())
     }
 }

@@ -1,3 +1,4 @@
+// tslint:disable:no-var-requires
 import 'reflect-metadata'
 import 'zone.js/dist/zone-node'
 import { enableProdMode } from '@angular/core'
@@ -7,7 +8,6 @@ import { create } from '@pascaliske/ngx-prerenderer'
 
 enableProdMode()
 
-// tslint:disable-next-line
 const { routes } = require('./app/app-routing.module')
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('../dist/server/main')
 const prerender = create(renderModuleFactory, provideModuleMap)

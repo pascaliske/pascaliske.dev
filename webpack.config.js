@@ -20,7 +20,7 @@ module.exports = config => {
             new PacktrackerPlugin({
                 branch: process.env.TRAVIS_BRANCH,
                 upload: process.env.CI === 'true',
-            })
+            }),
         )
     }
 

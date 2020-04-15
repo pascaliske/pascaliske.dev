@@ -9,24 +9,24 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "cmp",
-      "styleext": "scss",
-      "spec": false,
+      "style": "scss",
+      "skipTests": true,
       "export": true
     },
     "@schematics/angular:directive": {
       "prefix": "",
-      "spec": false,
+      "skipTests": true,
       "export": true
     },
     "@schematics/angular:pipe": {
-      "spec": false,
+      "skipTests": true,
       "export": true
     },
     "@schematics/angular:module": {
-      "spec": false
+      "skipTests": true
     },
     "@schematics/angular:service": {
-      "spec": false,
+      "skipTests": true,
       "flat": false
     }
   },
@@ -67,14 +67,10 @@
                 "output": "/"
               }
             ],
-            "styles": [
-              "src/scss/common.scss"
-            ],
+            "styles": ["src/scss/common.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/scss"
-              ]
+              "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -125,10 +121,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "tsconfig.app.json",
-            "exclude": [
-              "**/node_modules/**",
-              "**/*.json"
-            ]
+            "exclude": ["**/node_modules/**", "**/*.json"]
           }
         },
         "server": {
@@ -138,9 +131,7 @@
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json",
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/scss"
-              ]
+              "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
               "path": "webpack.config.js"

@@ -22,13 +22,13 @@ script:
   - yarn run bundlewatch
   - yarn run e2e
 after_deploy:
-  - node_modules/.bin/lighthouse --quiet --chrome-flags="--headless" --output-path=./report.html https://$PROD_DOMAIN
-  - node_modules/.bin/now report.html --token $NOW_TOKEN --no-clipboard --public
-  - node_modules/.bin/sentry-cli releases new "$TRAVIS_TAG"
-  - node_modules/.bin/sentry-cli releases set-commits --auto "$TRAVIS_TAG"
-  - node_modules/.bin/sentry-cli releases files "$TRAVIS_TAG" upload-sourcemaps ./dist --no-rewrite
-  - node_modules/.bin/sentry-cli releases deploys "$TRAVIS_TAG" new -e production
-  - node_modules/.bin/sentry-cli releases finalize "$TRAVIS_TAG"
+  - yarn run lighthouse --output-path=./report.html https://$PROD_DOMAIN
+  - yarn run now report.html --token $NOW_TOKEN --no-clipboard --public
+  - yarn run sentry-cli releases new "$TRAVIS_TAG"
+  - yarn run sentry-cli releases set-commits --auto "$TRAVIS_TAG"
+  - yarn run sentry-cli releases files "$TRAVIS_TAG" upload-sourcemaps ./dist --no-rewrite
+  - yarn run sentry-cli releases deploys "$TRAVIS_TAG" new -e production
+  - yarn run sentry-cli releases finalize "$TRAVIS_TAG"
 deploy:
   provider: firebase
   token:
