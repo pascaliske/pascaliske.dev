@@ -1,3 +1,7 @@
+## [1.6.2](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.1...v1.6.2) (2020-04-17)
+
+
+
 ## [1.6.1](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.0...v1.6.1) (2020-04-17)
 
 
