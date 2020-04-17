@@ -1,1 +1,6 @@
+.github
+.vscode
+dist
 src/index.html
+report.html
+CHANGELOG.md

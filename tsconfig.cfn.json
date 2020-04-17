@@ -7,7 +7,5 @@
     "target": "es2017",
     "typeRoots": []
   },
-  "include": [
-    "src/cfn/index.ts"
-  ]
+  "include": ["src/cfn/index.ts"]
 }

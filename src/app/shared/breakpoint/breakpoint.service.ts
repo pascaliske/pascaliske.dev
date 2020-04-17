@@ -177,10 +177,7 @@ export class BreakpointService {
 
         // listen to resize events
         fromEvent(window, 'resize')
-            .pipe(
-                share(),
-                debounceTime(15),
-            )
+            .pipe(share(), debounceTime(15))
             .subscribe(() => {
                 const current: Breakpoint = this.determineBreakpoint()
                 const dimensions: ResizeState = this.determineDimensions()

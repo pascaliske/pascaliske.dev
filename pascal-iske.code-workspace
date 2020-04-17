@@ -32,18 +32,6 @@
         "[yaml]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
-        },
-        "[html]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false
-        },
-        "[json]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false
-        },
-        "[jsonc]": {
-            "editor.formatOnSave": false,
-            "editor.formatOnType": false
         }
     }
 }
