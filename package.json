@@ -128,7 +128,7 @@
     "start-server-and-test": "^1.11.0",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "ts-loader": "^7.0.1",
+    "ts-loader": "^7.0.2",
     "ts-node": "~8.9.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
