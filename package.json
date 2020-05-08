@@ -124,7 +124,7 @@
     "prettier": "^2.0.5",
     "rxjs-tslint-rules": "^4.31.0",
     "serve": "^11.3.0",
-    "standard-changelog": "^2.0.21",
+    "standard-changelog": "^2.0.24",
     "start-server-and-test": "^1.11.0",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.0.0",
