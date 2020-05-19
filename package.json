@@ -91,7 +91,7 @@
     "@angular/language-service": "^9.1.7",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@cypress/webpack-preprocessor": "^5.4.0",
+    "@cypress/webpack-preprocessor": "^5.4.1",
     "@packtracker/webpack-plugin": "^2.2.0",
     "@pascaliske/ngx-prerenderer": "^2.0.4",
     "@pascaliske/prettier-config": "^1.0.2",
