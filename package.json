@@ -101,7 +101,7 @@
     "@types/express-serve-static-core": "4.17.5",
     "@types/fs-extra": "^9.0.1",
     "@types/lodash-es": "^4.17.3",
-    "@types/node": "14.0.9",
+    "@types/node": "14.0.10",
     "@types/nodemailer": "^6.4.0",
     "@types/webpack": "^4.41.17",
     "bump-cli": "^1.1.3",
