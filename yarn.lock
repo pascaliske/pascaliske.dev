@@ -6151,10 +6151,10 @@ firebase-functions@^3.6.2:
     express "^4.17.1"
     lodash "^4.17.14"
 
-firebase-tools@^8.4.1:
-  version "8.4.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.4.1.tgz#1f015c9496f4241a8a67a1f6376e68b1547d4d89"
-  integrity sha512-kiC5KXQdQ2ksRRJEZ5dXsLHRPGwR5Y1nEpTtJly91cs7mASIi4tzpVnX5pF1WXZsa323jXkY9elNUPw7fWvvog==
+firebase-tools@^8.4.2:
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-8.4.2.tgz#19f27ceea878e075cb45dde083bd232d3b739916"
+  integrity sha512-Kk3MKpM8+fZf1p+KzXBq1UDZxWBy+MWR6RFvj8L1xgoabsESMGbTgamJZfM1IWU3JJQFDH1fF8aPI5CvwXTr/A==
   dependencies:
     "@google-cloud/pubsub" "^1.7.0"
     JSONStream "^1.2.1"
@@ -10642,16 +10642,7 @@ plist@^3.0.1:
     xmlbuilder "^9.0.7"
     xmldom "0.1.x"
 
-portfinder@^1.0.23:
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.25.tgz#254fd337ffba869f4b9d37edc298059cb4d35eca"
-  integrity sha512-6ElJnHBbxVA1XSLgBp7G1FiCkQdlqGzuF7DswL5tcea+E8UpuvPU7beVAjjRwCioTS9ZluNbu+ZyRvgTsmqEBg==
-  dependencies:
-    async "^2.6.2"
-    debug "^3.1.1"
-    mkdirp "^0.5.1"
-
-portfinder@^1.0.26:
+portfinder@^1.0.23, portfinder@^1.0.26:
   version "1.0.26"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.26.tgz#475658d56ca30bed72ac7f1378ed350bd1b64e70"
   integrity sha512-Xi7mKxJHHMI3rIUrnm/jjUgwhbYMkp/XKEcZX3aG4BrumLpq3nmoQMX+ClYnDZnZ/New7IatC1no5RX0zo1vXQ==
