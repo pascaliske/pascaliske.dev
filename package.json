@@ -112,7 +112,7 @@
     "cypress": "^4.8.0",
     "esm": "^3.2.25",
     "firebase-admin": "^8.12.1",
-    "firebase-functions": "^3.6.2",
+    "firebase-functions": "^3.7.0",
     "firebase-tools": "^8.4.2",
     "fs-extra": "^9.0.1",
     "husky": "^4.2.5",
