@@ -59,7 +59,8 @@ export const sendCspReport = https.onRequest((req: any, res: Response) => {
     const data = JSON.parse(req.body)
 
     if (!data || data.length === 0) {
-        return res.status(204).send()
+        res.status(204).send()
+        return
     }
 
     transport

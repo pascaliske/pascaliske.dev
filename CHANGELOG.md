@@ -1,3 +1,42 @@
+# [2.0.0](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.2...v2.0.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* **cfn:** do not return a value ([884c68c](https://github.com/pascaliske/pascal-iske.de/commit/884c68cb15bff9458dbef1743bebea1b768ec247))
+
+
+
+## [1.6.2](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.1...v1.6.2) (2020-04-17)
+
+
+
+## [1.6.1](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.0...v1.6.1) (2020-04-17)
+
+
+
+# [1.6.0](https://github.com/pascaliske/pascal-iske.de/compare/v1.5.8...v1.6.0) (2020-04-17)
+
+
+### Bug Fixes
+
+* **core:** remove deprecated marked option ([afb4123](https://github.com/pascaliske/pascal-iske.de/commit/afb412378cd638f2d0336907122c37c03b5a1f98))
+* **headlines:** use component decorator for inheritance ([f950367](https://github.com/pascaliske/pascal-iske.de/commit/f950367c02d9981f8d61552ca3e2c815f1f0d3a9))
+* fix build issues for cloud functions ([61b2bd8](https://github.com/pascaliske/pascal-iske.de/commit/61b2bd888e282315e5d6c301df443df62e5d831d))
+
+
+### Features
+
+* **angular:** enable ivy compiler ([7d96926](https://github.com/pascaliske/pascal-iske.de/commit/7d96926aa8215fd93920df3377332aec6a067a83))
+* upgrade to angular v9 ([1fc456c](https://github.com/pascaliske/pascal-iske.de/commit/1fc456c181753b342339976c5470af74018b8cb9))
+
+
+### Reverts
+
+* Revert "docs(readme): update logos and badges" ([7daa058](https://github.com/pascaliske/pascal-iske.de/commit/7daa0589e68aef7fa23368dd78fb5b04a77a4e91))
+
+
+
 ## [1.5.8](https://github.com/pascaliske/pascal-iske.de/compare/v1.5.7...v1.5.8) (2019-09-12)
 
 
