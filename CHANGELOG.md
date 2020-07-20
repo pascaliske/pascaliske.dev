@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.2...v2.0.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* **cfn:** do not return a value ([884c68c](https://github.com/pascaliske/pascal-iske.de/commit/884c68cb15bff9458dbef1743bebea1b768ec247))
+
+
+
 ## [1.6.2](https://github.com/pascaliske/pascal-iske.de/compare/v1.6.1...v1.6.2) (2020-04-17)
 
 
