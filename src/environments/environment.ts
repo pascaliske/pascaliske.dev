@@ -4,7 +4,7 @@ export const environment = {
     cfnBaseUrl: 'https://us-central1-pascal-iske-de.cloudfunctions.net',
     cookieDomain: 'localhost',
     sentry: {
-        dsn: 'https://da20741e2b93497caba31ff22a6290bc@sentry.io/1200530',
+        dsn: 'https://b2fb4d1579aa45c696dea2ff5734dbcd@o84378.ingest.sentry.io/5353451',
         environment: 'development',
         release: `pascal-iske-de@${APP_VERSION}`,
     },
