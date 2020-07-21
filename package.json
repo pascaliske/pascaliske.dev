@@ -120,7 +120,7 @@
     "lighthouse": "^6.1.1",
     "lint-staged": "^10.2.11",
     "nodemailer": "^6.4.10",
-    "now": "^19.1.2",
+    "now": "^19.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rxjs-tslint-rules": "^4.34.0",
