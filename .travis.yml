@@ -23,11 +23,11 @@ script:
 after_deploy:
   - yarn run lighthouse --output-path=./report.html https://$PROD_DOMAIN
   - yarn run now report.html --token $NOW_TOKEN --no-clipboard --public
-  - yarn run sentry-cli releases new "$TRAVIS_TAG"
-  - yarn run sentry-cli releases set-commits --auto "$TRAVIS_TAG"
-  - yarn run sentry-cli releases files "$TRAVIS_TAG" upload-sourcemaps ./dist --no-rewrite
-  - yarn run sentry-cli releases deploys "$TRAVIS_TAG" new -e production
-  - yarn run sentry-cli releases finalize "$TRAVIS_TAG"
+  # - yarn run sentry-cli releases new "$TRAVIS_TAG"
+  # - yarn run sentry-cli releases set-commits --auto "$TRAVIS_TAG"
+  # - yarn run sentry-cli releases files "$TRAVIS_TAG" upload-sourcemaps ./dist --no-rewrite
+  # - yarn run sentry-cli releases deploys "$TRAVIS_TAG" new -e production
+  # - yarn run sentry-cli releases finalize "$TRAVIS_TAG"
 deploy:
   provider: firebase
   token:
