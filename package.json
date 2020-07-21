@@ -1,7 +1,7 @@
 {
   "name": "pascal-iske",
   "description": "Angular Web App built with Travis CI and deployed with Firebase.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
     "postinstall": "ngcc --tsconfig tsconfig.base.json",
@@ -77,7 +77,7 @@
     "lodash-es": "^4.17.15",
     "modularscale-sass": "^3.0.10",
     "ngx-cookieconsent": "^2.2.3",
-    "ngx-markdown": "^10.0.0",
+    "ngx-markdown": "^10.1.0",
     "normalize-scss": "^7.0.1",
     "rxjs": "^6.6.0",
     "susy": "^3.0.6",
@@ -102,7 +102,7 @@
     "@types/express-serve-static-core": "4.17.5",
     "@types/fs-extra": "^9.0.1",
     "@types/lodash-es": "^4.17.3",
-    "@types/node": "14.0.23",
+    "@types/node": "14.0.24",
     "@types/nodemailer": "^6.4.0",
     "@types/webpack": "^4.41.21",
     "bump-cli": "^1.1.3",
