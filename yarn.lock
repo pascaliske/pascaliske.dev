@@ -1840,10 +1840,12 @@
   optionalDependencies:
     chalk "^3.0.0"
 
-"@pascaliske/ngx-sentry@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-2.2.2.tgz#a2adf4690a55a6095e4e4c7f47f6e9643b5b6dcf"
-  integrity sha512-MPXLUI04KVCdi9nyR51f/b7hlNerh2+menjFfxLJFQcXsiT4VWRRKkIvQw+M36sDOQiNDOmvuLFTJFKSdiCkuQ==
+"@pascaliske/ngx-sentry@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-sentry/-/ngx-sentry-2.3.1.tgz#411b0e1ef230c41f2ba5b3ddc6fe901fa67f896b"
+  integrity sha512-buUFTa1nTvRqsrhM4Ynh8bkSjz6NeEGgeSDB37D6nu+JZG0kOCewwdveHVYG2tcBpwGycBBpHcpziBOv/4G1Wg==
+  dependencies:
+    tslib "^2.0.0"
 
 "@pascaliske/prettier-config@^1.1.0":
   version "1.1.0"
