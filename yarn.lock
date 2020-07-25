@@ -1808,12 +1808,12 @@
     tiny-json-http "^7.1.2"
     webpack-bundle-analyzer "^3.4.1"
 
-"@pascaliske/form-elements@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-2.6.0.tgz#52e34b7f8428521f948c25caf7f05cb252669a08"
-  integrity sha512-4TKIkTpwb/GsawDkhFgQmaxDhB1ZSTG6n3cV/1RCNSHnqaf2hrxFkx4Cx1W9BpydytJ4tRjqJbN1RGNBJbUijg==
+"@pascaliske/form-elements@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/form-elements/-/form-elements-2.7.0.tgz#50f94c27c4ffa59a60197a2a90079cc07f89646b"
+  integrity sha512-wk32ri416wUmrG/xtVBmD5m4uC8B0GTencXOaVJ5z+NiWm6zxm/IjYEkokg3LSl/7Lyg4PWAsZc7OPiq8MoYQg==
   dependencies:
-    tslib "^1.10.0"
+    tslib "^2.0.0"
 
 "@pascaliske/html-helpers@^1.5.8":
   version "1.5.8"
