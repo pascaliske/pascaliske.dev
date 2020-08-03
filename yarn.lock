@@ -1823,11 +1823,12 @@
     classnames "^2.2.6"
     tslib "^1.11.1"
 
-"@pascaliske/ngx-notifications@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.4.2.tgz#d4562fac592c7d8185718d5cd5d46d24a42a3e5f"
-  integrity sha512-L8sBfqAHX30vaxNtCI90T/bQZMi8eBfthHrBSPLSNBXqKZZJJDe9MBUwrwU3X3rbQooc/1JxvoRVv/ceooXK1A==
+"@pascaliske/ngx-notifications@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-1.5.2.tgz#e6097fc38d56c7884e35dbc0c31ccd1f933a69f8"
+  integrity sha512-JtzbD0KYa5qXaevJTea4umlVSfwU9dmtMHTPAWWPvWe/L69/ZZGg9FUi/j8WP3ywG3RL61EVtAdlZTt+leWvkQ==
   dependencies:
+    tslib "^2.0.0"
     uuid "^3.3.2"
 
 "@pascaliske/ngx-prerenderer@^2.0.4":
