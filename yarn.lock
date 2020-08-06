@@ -4423,7 +4423,7 @@ concat-stream@^2.0.0:
     readable-stream "^3.0.2"
     typedarray "^0.0.6"
 
-configstore@^3.0.0, configstore@^3.1.1:
+configstore@^3.0.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/configstore/-/configstore-3.1.2.tgz#c6f25defaeef26df12dd33414b001fe81a543f8f"
   integrity sha512-vtv5HtGjcYUgFrXc6Kx747B83MRRVS5R1VTEQoXvuP+kMI+if6uywV0nDGoiydJRy4yk7h9od5Og0kxx4zUXmw==
@@ -8558,10 +8558,10 @@ join-path@^1.1.1:
     url-join "0.0.1"
     valid-url "^1"
 
-jpeg-js@0.1.2, jpeg-js@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.1.2.tgz#135b992c0575c985cfa0f494a3227ed238583ece"
-  integrity sha1-E1uZLAV1yYXPoPSUoyJ+0jhYPs4=
+jpeg-js@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.4.1.tgz#937a3ae911eb6427f151760f8123f04c8bfe6ef7"
+  integrity sha512-jA55yJiB5tCXEddos8JBbvW+IMrqY0y1tjjx9KNVtA+QPmu7ND5j0zkKopClpUTsaETL135uOM2XfcYG4XRjmw==
 
 js-base64@^2.1.8:
   version "2.6.3"
@@ -8955,14 +8955,14 @@ lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
     debug "^2.6.8"
     marky "^1.2.0"
 
-lighthouse@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-6.1.1.tgz#a029fbe80e3413d7e201412086f07bdd414a7541"
-  integrity sha512-H/ulIcKGMCmgGlK8dDngo72ehBg8WBr2eGW47MN+SAneYoUQmQO41vGo8f7UG9l2oCyabBETEJO4R7yew3XF8g==
+lighthouse@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-6.2.0.tgz#d87ae66bd148ab0e428081f3506df65f2c567a69"
+  integrity sha512-N6E+YJAMmYL4vEP653dK6qGXaCmeFV8wQ+vimsULs0PYCU5M25GX646+Lm7W6v8qN3sZ+ZFRs7O3T4ZxEHKPbA==
   dependencies:
     axe-core "3.5.5"
     chrome-launcher "^0.13.3"
-    configstore "^3.1.1"
+    configstore "^5.0.1"
     cssstyle "1.2.1"
     details-element-polyfill "^2.4.0"
     http-link-header "^0.8.0"
@@ -8970,7 +8970,7 @@ lighthouse@^6.1.1:
     intl "^1.2.5"
     intl-messageformat "^4.4.0"
     intl-pluralrules "^1.0.3"
-    jpeg-js "0.1.2"
+    jpeg-js "^0.4.1"
     js-library-detector "^5.7.0"
     jsonld "^1.5.0"
     jsonlint-mod "^1.7.5"
@@ -8981,13 +8981,14 @@ lighthouse@^6.1.1:
     metaviewport-parser "0.2.0"
     open "^6.4.0"
     parse-cache-control "1.0.1"
+    ps-list "^7.2.0"
     raven "^2.2.1"
     rimraf "^2.6.1"
     robots-parser "^2.0.1"
     semver "^5.3.0"
-    speedline-core "1.4.2"
-    third-party-web "^0.11.1"
-    update-notifier "^2.5.0"
+    speedline-core "^1.4.3"
+    third-party-web "^0.12.1"
+    update-notifier "^4.1.0"
     ws "3.3.2"
     yargs "3.32.0"
     yargs-parser "^18.1.3"
@@ -11840,6 +11841,11 @@ prr@~1.0.1:
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
   integrity sha1-0/wRS6BplaRexok/SEzrHXj19HY=
 
+ps-list@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/ps-list/-/ps-list-7.2.0.tgz#3d110e1de8249a4b178c9b1cf2a215d1e4e42fc0"
+  integrity sha512-v4Bl6I3f2kJfr5o80ShABNHAokIgY+wFDTQfE+X3zWYgSGQOCBeYptLZUpoOALBqO5EawmDN/tjTldJesd0ujQ==
+
 ps-tree@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ps-tree/-/ps-tree-1.2.0.tgz#5e7425b89508736cdd4f2224d028f7bb3f722ebd"
@@ -13438,14 +13444,14 @@ speed-measure-webpack-plugin@1.3.3:
   dependencies:
     chalk "^2.0.1"
 
-speedline-core@1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/speedline-core/-/speedline-core-1.4.2.tgz#bb061444a218d67b4cd52f63a262386197b90c8a"
-  integrity sha512-9/5CApkKKl6bS6jJ2D0DQllwz/1xq3cyJCR6DLgAQnkj5djCuq8NbflEdD2TI01p8qzS9qaKjzxM9cHT11ezmg==
+speedline-core@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/speedline-core/-/speedline-core-1.4.3.tgz#4d6e7276e2063c2d36a375cb25a523ac73475319"
+  integrity sha512-DI7/OuAUD+GMpR6dmu8lliO2Wg5zfeh+/xsdyJZCzd8o5JgFUjCeLsBDuZjIQJdwXS3J0L/uZYrELKYqx+PXog==
   dependencies:
     "@types/node" "*"
     image-ssim "^0.2.0"
-    jpeg-js "^0.1.2"
+    jpeg-js "^0.4.1"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
@@ -14242,10 +14248,10 @@ text-hex@1.0.x:
   resolved "https://registry.yarnpkg.com/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
   integrity sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==
 
-third-party-web@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/third-party-web/-/third-party-web-0.11.1.tgz#4b5b176f0014be696002c104d76f40692318aec9"
-  integrity sha512-PBS478cWhvCM8seuloomV5lGHvu2qMOCj8gq8wKOApdfAaGh9l2rYZkdsBDaQyQg/6plov3uodc6sZ/3c1lu/g==
+third-party-web@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/third-party-web/-/third-party-web-0.12.1.tgz#f5b09c1403000b28241f445401c590de52670ab7"
+  integrity sha512-cdZaoOuZ+lN/lPLYGBlEqgIvtQ/3dt4OcgJ6euTQ/sljUcnWj/RgLIkIdXOWdKXsJav4aPgiygOyJd/Ife813A==
 
 throttleit@^1.0.0:
   version "1.0.0"
