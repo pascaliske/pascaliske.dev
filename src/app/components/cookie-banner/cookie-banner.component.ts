@@ -27,7 +27,7 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
             revokeBtn: '<div class="cc-revoke cc-policy {{classes}}">Cookie Settings</div>',
             animateRevokable: false,
             cookie: {
-                name: 'pascal-iske.de',
+                name: 'pascaliske.dev',
                 domain: environment.cookieDomain,
             },
             palette: {
@@ -48,7 +48,7 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
                 dismiss: 'Dismiss',
                 allow: 'Allow',
                 deny: 'Deny',
-                link: 'https://pascal-iske.de/en/privacy',
+                link: 'https://pascaliske.dev/en/privacy',
             },
         })
 
