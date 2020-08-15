@@ -65,7 +65,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
             autoOpen: false,
             autoAttach: false,
             cookie: {
-                name: 'pascal-iske.de',
+                name: 'pascaliske.dev',
                 domain: environment.cookieDomain,
             },
         }),

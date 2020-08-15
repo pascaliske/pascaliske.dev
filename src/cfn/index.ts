@@ -5,7 +5,7 @@ import { createTransport } from 'nodemailer'
 
 // configure cors
 const security = cors({
-    origin: ['https://pascal-iske.de'],
+    origin: ['https://pascaliske.dev'],
 })
 
 // configure mail transport.
@@ -30,7 +30,7 @@ export const sendContactRequest = https.onRequest((req: any, res: Response) => {
 
     transport
         .sendMail({
-            to: 'info@pascal-iske.de',
+            to: 'info@pascaliske.dev',
             from: `"${req.body.name}" <${req.body.email}>`,
             replyTo: `"${req.body.name}" <${req.body.email}>`,
             subject: req.body.subject,
@@ -65,9 +65,9 @@ export const sendCspReport = https.onRequest((req: any, res: Response) => {
 
     transport
         .sendMail({
-            to: 'info@pascal-iske.de',
-            from: `"Pascal Iske" <info@pascal-iske.de>`,
-            replyTo: `"Pascal Iske" <info@pascal-iske.de>`,
+            to: 'info@pascaliske.dev',
+            from: `"Pascal Iske" <info@pascaliske.dev>`,
+            replyTo: `"Pascal Iske" <info@pascaliske.dev>`,
             subject: '[warn] csp violation report',
             html: `<pre>${JSON.stringify(data, null, 2)}</pre>`,
         })
