@@ -122,7 +122,7 @@
     "nodemailer": "^6.4.11",
     "now": "^19.2.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.0",
     "rxjs-tslint-rules": "^4.34.0",
     "serve": "^11.3.2",
     "standard-changelog": "^2.0.24",
