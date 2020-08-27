@@ -117,7 +117,7 @@
     "firebase-tools": "^8.9.2",
     "fs-extra": "^9.0.1",
     "husky": "^4.2.5",
-    "lighthouse": "^6.2.0",
+    "lighthouse": "^6.3.0",
     "lint-staged": "^10.2.13",
     "nodemailer": "^6.4.11",
     "now": "^19.2.0",
