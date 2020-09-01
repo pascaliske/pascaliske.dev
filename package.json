@@ -127,7 +127,7 @@
     "serve": "^11.3.2",
     "standard-changelog": "^2.0.24",
     "start-server-and-test": "^1.11.3",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "ts-loader": "^8.0.3",
     "ts-node": "~9.0.0",
