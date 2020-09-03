@@ -96,7 +96,7 @@
     "@packtracker/webpack-plugin": "^2.3.0",
     "@pascaliske/ngx-prerenderer": "^2.0.4",
     "@pascaliske/prettier-config": "^1.1.0",
-    "@sentry/cli": "^1.55.2",
+    "@sentry/cli": "^1.56.0",
     "@types/cors": "^2.8.7",
     "@types/express": "4.17.7",
     "@types/express-serve-static-core": "4.17.5",
