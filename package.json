@@ -114,7 +114,7 @@
     "esm": "^3.2.25",
     "firebase-admin": "^9.1.1",
     "firebase-functions": "^3.11.0",
-    "firebase-tools": "^8.9.2",
+    "firebase-tools": "^8.10.0",
     "fs-extra": "^9.0.1",
     "husky": "^4.2.5",
     "lighthouse": "^6.3.0",
