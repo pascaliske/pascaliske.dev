@@ -119,7 +119,7 @@
     "husky": "^4.3.0",
     "lighthouse": "^6.3.0",
     "lint-staged": "^10.4.0",
-    "nodemailer": "^6.4.11",
+    "nodemailer": "^6.4.12",
     "now": "^20.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
