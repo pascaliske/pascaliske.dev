@@ -126,7 +126,7 @@
     "rxjs-tslint-rules": "^4.34.3",
     "serve": "^11.3.2",
     "standard-changelog": "^2.0.24",
-    "start-server-and-test": "^1.11.4",
+    "start-server-and-test": "^1.11.5",
     "stylelint": "^13.7.2",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "ts-loader": "^8.0.4",
