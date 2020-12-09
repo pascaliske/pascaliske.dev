@@ -112,7 +112,7 @@
     "cors": "^2.8.5",
     "cypress": "^6.1.0",
     "esm": "^3.2.25",
-    "firebase-admin": "^9.4.1",
+    "firebase-admin": "^9.4.2",
     "firebase-functions": "^3.13.0",
     "firebase-tools": "^8.18.0",
     "fs-extra": "^9.0.1",
