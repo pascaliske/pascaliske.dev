@@ -71,7 +71,7 @@
     "choices.js": "^9.0.1",
     "cookieconsent": "^3.1.1",
     "core-js": "^3.8.1",
-    "flatpickr": "^4.6.6",
+    "flatpickr": "^4.6.7",
     "fuzzysearch": "^1.0.3",
     "intersection-observer": "^0.12.0",
     "lodash-es": "^4.17.15",
