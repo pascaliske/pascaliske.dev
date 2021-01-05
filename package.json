@@ -41,7 +41,7 @@
     "@types/sinon": "7.5.1"
   },
   "optionalDependencies": {
-    "fsevents": "2.3.0"
+    "fsevents": "2.3.1"
   },
   "dependencies": {
     "@angular/animations": "^10.0.4",
