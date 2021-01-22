@@ -6520,10 +6520,10 @@ firebase-functions@^3.13.1:
     express "^4.17.1"
     lodash "^4.17.14"
 
-firebase-tools@^9.2.1:
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-9.2.1.tgz#484ed2f492ea2abd2d341b9dafb0e585f4e9f229"
-  integrity sha512-sD4wfB5hs/8IKXV6AJOmkpvXf/St7gVc9QeW4Qz21PG7CkirgRf6FqcYkPKtBcro4wfj48dihnYx/IO1+XPTGg==
+firebase-tools@^9.2.2:
+  version "9.2.2"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-9.2.2.tgz#2379721a862ba537f830fb8072ca0bf70388a114"
+  integrity sha512-AFjf7S9NjEM+u8ZByJEKASxRG1g+LLg/A0CrzA3V91P92MN+8cyrCigEs7mCdtFknLaShrCgzROyo/OEwd4xdA==
   dependencies:
     "@google-cloud/pubsub" "^2.7.0"
     JSONStream "^1.2.1"
@@ -15309,12 +15309,7 @@ ws@^6.0.0, ws@^6.2.1:
   dependencies:
     async-limiter "~1.0.0"
 
-ws@^7.2.3:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.2.3.tgz#a5411e1fb04d5ed0efee76d26d5c46d830c39b46"
-  integrity sha512-HTDl9G9hbkNDk98naoR/cHDws7+EyYMOdL1BmjsZXRUjf7d+MficC4B7HLUPlSiho0vg+CWKrGIt/VJBd1xunQ==
-
-ws@~7.4.2:
+ws@^7.2.3, ws@~7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.2.tgz#782100048e54eb36fe9843363ab1c68672b261dd"
   integrity sha512-T4tewALS3+qsrpGI/8dqNMLIVdq/g/85U98HPMa6F0m6xTbvhXU6RCQLqPH3+SlomNV/LdY6RXEbBpMH6EOJnA==
