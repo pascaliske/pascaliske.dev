@@ -74,7 +74,7 @@
     "flatpickr": "^4.6.9",
     "fuzzysearch": "^1.0.3",
     "intersection-observer": "^0.12.0",
-    "lodash-es": "^4.17.20",
+    "lodash-es": "^4.17.21",
     "modularscale-sass": "^3.0.10",
     "ngx-cookieconsent": "^2.2.3",
     "ngx-markdown": "^10.1.1",
