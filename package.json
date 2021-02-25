@@ -79,7 +79,7 @@
     "ngx-cookieconsent": "^2.2.3",
     "ngx-markdown": "^10.1.1",
     "normalize-scss": "^7.0.1",
-    "rxjs": "^6.6.3",
+    "rxjs": "^6.6.4",
     "susy": "^3.0.6",
     "tslib": "^2.1.0",
     "zone.js": "~0.10.2"
