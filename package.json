@@ -53,7 +53,7 @@
     "@angular/platform-browser-dynamic": "^10.0.4",
     "@angular/platform-server": "^10.0.4",
     "@angular/router": "^10.0.4",
-    "@angular/service-worker": "^10.0.4",
+    "@angular/service-worker": "^11.2.6",
     "@fortawesome/angular-fontawesome": "^0.7.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
