@@ -100,7 +100,7 @@
     "@types/cors": "^2.8.10",
     "@types/express": "4.17.11",
     "@types/express-serve-static-core": "4.17.19",
-    "@types/fs-extra": "^9.0.8",
+    "@types/fs-extra": "^9.0.9",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "14.14.36",
     "@types/nodemailer": "^6.4.1",
