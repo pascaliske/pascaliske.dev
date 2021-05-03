@@ -1869,13 +1869,13 @@
   dependencies:
     tslib "^2.0.0"
 
-"@pascaliske/html-helpers@^1.5.8":
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.5.8.tgz#d8a61704967b960d06b7dd605ae6686d93ae7b07"
-  integrity sha512-Mrce8TpSylLqtfPNJtJqMLaZHSoJhSkmquWpg1DZ5nlBvYJzEw4Iyp1KjLlmBNq5MfuK7gwuiXPsT3RJdLnTyA==
+"@pascaliske/html-helpers@^1.5.9":
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.5.9.tgz#bfffcb31400d53a8225013ffc9d91aea6370806e"
+  integrity sha512-xP7LNOUJbHmf/NV05c656zcU8Z0MLDM3vb/8J1GCGmzER0u6kfK7FlGpKOiBhN045zYiWFHe1Y9g6SxnV8k4qQ==
   dependencies:
-    classnames "^2.2.6"
-    tslib "^1.11.1"
+    classnames "^2.3.1"
+    tslib "^2.2.0"
 
 "@pascaliske/ngx-notifications@^1.5.2":
   version "1.5.2"
@@ -4010,10 +4010,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-stack@^2.0.0:
   version "2.2.0"
