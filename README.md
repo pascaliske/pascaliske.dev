@@ -1,6 +1,6 @@
-# [pascaliske.dev](https://pascal-iske.de)
+# [pascaliske.dev](https://pascaliske.dev)
 
-[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/pascal-iske.de.svg?style=flat-square)](https://github.com/pascaliske/pascal-iske.de) [![Travis CI](https://img.shields.io/travis/com/pascaliske/pascal-iske.de/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/pascal-iske.de) [![Known Vulnerabilities](https://snyk.io/test/github/pascaliske/pascal-iske.de/badge.svg?style=flat-square)](https://snyk.io/test/github/pascaliske/pascal-iske.de) [![CodeFactor](https://www.codefactor.io/repository/github/pascaliske/pascal-iske.de/badge?style=flat-square)](https://www.codefactor.io/repository/github/pascaliske/pascal-iske.de) [![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fpascal-iske.de&style=flat-square)](https://pascal-iske.de) [![Website Status](https://img.shields.io/website-up-down-green-red/http/pascal-iske.de.svg?style=flat-square)](https://pascal-iske.de) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=pascaliske/pascal-iske.de&style=flat-square)](https://dependabot.com/) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
+[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/pascaliske.dev.svg?style=flat-square)](https://github.com/pascaliske/pascaliske.dev) [![Travis CI](https://img.shields.io/travis/com/pascaliske/pascaliske.dev/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/pascaliske.dev) [![Known Vulnerabilities](https://snyk.io/test/github/pascaliske/pascaliske.dev/badge.svg?style=flat-square)](https://snyk.io/test/github/pascaliske/pascaliske.dev) [![CodeFactor](https://www.codefactor.io/repository/github/pascaliske/pascaliske.dev/badge?style=flat-square)](https://www.codefactor.io/repository/github/pascaliske/pascaliske.dev) [![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fpascaliske.dev&style=flat-square)](https://pascaliske.dev) [![Website Status](https://img.shields.io/website-up-down-green-red/http/pascaliske.dev.svg?style=flat-square)](https://pascaliske.dev) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=pascaliske/pascaliske.dev&style=flat-square)](https://dependabot.com/) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
 This is my personal website.
 
@@ -18,7 +18,7 @@ Have fun discovering the source code! 🙂
 | :-------------: | :-----------: | :---------------: | :---------: | :--------------: | :---------: | :-----------: | :---------------: | :-----------------: | :--------: | :---------------------: |
 |    Firebase     |    GitHub     |    Dependabot     |    Yarn     |    Travis CI     |    Snyk     |    Sentry     |    Lighthouse     |    Bundle Watch     |    Now     |    Google Analytics     |
 
-and [more](https://github.com/pascaliske/pascal-iske.de/blob/master/package.json)...
+and [more](https://github.com/pascaliske/pascaliske.dev/blob/master/package.json)...
 
 <!-- logos -->
 

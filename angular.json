@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "defaultProject": "pascal-iske",
+  "defaultProject": "pascaliske-dev",
   "cli": {
     "packageManager": "yarn"
   },
@@ -31,7 +31,7 @@
     }
   },
   "projects": {
-    "pascal-iske": {
+    "pascaliske-dev": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -109,11 +109,11 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "pascal-iske:build"
+            "browserTarget": "pascaliske-dev:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pascal-iske:build:production"
+              "browserTarget": "pascaliske-dev:build:production"
             }
           }
         },
