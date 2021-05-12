@@ -242,10 +242,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-server@^10.0.4":
-  version "10.2.5"
-  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-10.2.5.tgz#c4f7dee6c2986f37f48c423ca84d59cb79ed108f"
-  integrity sha512-T8DDvSp9s6iNQ9UE+ELsoeNUWqMkAl2LcChTYvJsqTEo4pbN/8m9JItN4Trc8nzfkWFEg8hPTAODGQKFHczNGw==
+"@angular/platform-server@^11.2.13":
+  version "11.2.13"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-11.2.13.tgz#e7552e3f429fb3f3506b4c45489aec9abf4d00e2"
+  integrity sha512-9WEIK0GHbbUwT9HNa2VCYLMrSxgsCMGkQ7XHQISLcVeHHb3yz/I0D0GRJfOVulpCOfwsgepQ/GJgeXMeuz2vTg==
   dependencies:
     domino "^2.1.2"
     tslib "^2.0.0"
