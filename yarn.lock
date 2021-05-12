@@ -251,10 +251,10 @@
     tslib "^2.0.0"
     xhr2 "^0.2.0"
 
-"@angular/router@^10.0.4":
-  version "10.2.5"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.2.5.tgz#acc75a29ab0b54c8ebad7d2a896986a59d7d99ec"
-  integrity sha512-AtSMB/d4V+pw/FL4G/mWWoiJJtZ/075TqsGW7uEFKgxS6Gh2kalv6BTMlXVG5GO+2oU0lsuDvguq5E7Atbak3Q==
+"@angular/router@^11.2.13":
+  version "11.2.13"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-11.2.13.tgz#aab59dbc24f5be3ff6b5252e0bd8e57212d1604e"
+  integrity sha512-Fae/ViC4Ho2rGF5wQLrnJcucuhVGx29QqZs2K0C6sj4UUNRUzYWZknnGWqRj3Z9ft7XIi38Q2yCkSc76iS1aqQ==
   dependencies:
     tslib "^2.0.0"
 
@@ -14859,10 +14859,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
