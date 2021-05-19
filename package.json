@@ -89,7 +89,7 @@
     "@angular-devkit/build-angular": "~0.1002.0",
     "@angular/cli": "^10.2.0",
     "@angular/compiler-cli": "^10.0.4",
-    "@angular/language-service": "^10.2.3",
+    "@angular/language-service": "^12.0.1",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@cypress/webpack-preprocessor": "^5.8.0",
