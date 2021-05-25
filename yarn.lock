@@ -1726,10 +1726,10 @@
     tslib "^2.0.0"
     uuid "^3.3.2"
 
-"@pascaliske/ngx-prerenderer@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-2.0.5.tgz#fa58cd971556fcacbdb3f10a8c73a4f1d3596aef"
-  integrity sha512-jHLWT1yl33O/MeKObHL8KA7YSSug6+GCujD6mDCEdnjradisQEq+/qU6lfKLWzcH3bkkC/2U8o5NVPcVPz11nA==
+"@pascaliske/ngx-prerenderer@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-prerenderer/-/ngx-prerenderer-2.0.6.tgz#d6797bff771d2fbe78d523f85a1a785fa82edceb"
+  integrity sha512-1+Dnc7Ly9VT/abzCyQMAKBUoiR9Ydfmt8pX/OYi0Wh9PJwS8+114GfsxJH/m6gtRv2LztPMMbhc3hC6TlT8AnQ==
   dependencies:
     mkdirp "^1.0.4"
     tslib "^2.2.0"
