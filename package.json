@@ -95,7 +95,7 @@
     "@cypress/webpack-preprocessor": "^5.8.0",
     "@packtracker/webpack-plugin": "^2.3.0",
     "@pascaliske/ngx-prerenderer": "^2.0.5",
-    "@pascaliske/prettier-config": "^1.1.1",
+    "@pascaliske/prettier-config": "^1.1.2",
     "@sentry/cli": "^1.64.2",
     "@types/cors": "^2.8.10",
     "@types/express": "4.17.11",
