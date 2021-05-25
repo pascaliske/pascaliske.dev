@@ -37,7 +37,7 @@
   "resolutions": {
     "@types/chai": "4.2.7",
     "@types/express": "4.17.12",
-    "@types/express-serve-static-core": "4.17.19",
+    "@types/express-serve-static-core": "4.17.20",
     "@types/sinon": "7.5.1"
   },
   "optionalDependencies": {
@@ -99,7 +99,7 @@
     "@sentry/cli": "^1.64.2",
     "@types/cors": "^2.8.10",
     "@types/express": "4.17.12",
-    "@types/express-serve-static-core": "4.17.19",
+    "@types/express-serve-static-core": "4.17.20",
     "@types/fs-extra": "^9.0.11",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "15.6.1",
