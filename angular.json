@@ -70,7 +70,7 @@
               "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
-              "path": "webpack.config.js"
+              "path": "webpack.config.ts"
             }
           },
           "configurations": {
@@ -97,7 +97,7 @@
                 }
               ],
               "customWebpackConfig": {
-                "path": "webpack.config.js"
+                "path": "webpack.config.ts"
               }
             }
           }
@@ -130,7 +130,7 @@
               "includePaths": ["src/scss"]
             },
             "customWebpackConfig": {
-              "path": "webpack.config.js"
+              "path": "webpack.config.ts"
             }
           },
           "configurations": {
@@ -142,7 +142,7 @@
                 }
               ],
               "customWebpackConfig": {
-                "path": "webpack.config.js"
+                "path": "webpack.config.ts"
               }
             }
           }

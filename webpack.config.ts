@@ -1,12 +1,14 @@
-const DefinePlugin = require('webpack/lib/DefinePlugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
-const VisualizerPlugin = require('webpack-visualizer-plugin2')
-const PacktrackerPlugin = require('@packtracker/webpack-plugin')
+/// <reference types="node" />
 
-const pkg = require('./package.json')
-const command = process.argv[2].toLowerCase()
+import { Configuration, DefinePlugin } from 'webpack'
+import * as DashboardPlugin from 'webpack-dashboard/plugin'
+import * as VisualizerPlugin from 'webpack-visualizer-plugin2'
+import * as PacktrackerPlugin from '@packtracker/webpack-plugin'
+import { name, version } from './package.json'
 
-module.exports = config => {
+export default (config: Configuration): Configuration => {
+    const command = process.argv?.[2]?.toLowerCase()
+
     config.plugins.push(new DashboardPlugin())
 
     if (command === 'build') {
@@ -27,7 +29,8 @@ module.exports = config => {
 
     config.plugins.push(
         new DefinePlugin({
-            APP_VERSION: JSON.stringify(`v${pkg.version}`),
+            APP_ID: JSON.stringify(name),
+            APP_VERSION: JSON.stringify(`v${version}`),
         }),
     )
 
