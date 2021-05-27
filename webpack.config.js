@@ -1,6 +1,6 @@
 const DefinePlugin = require('webpack/lib/DefinePlugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-const VisualizerPlugin = require('webpack-visualizer-plugin')
+const VisualizerPlugin = require('webpack-visualizer-plugin2')
 const PacktrackerPlugin = require('@packtracker/webpack-plugin')
 
 const pkg = require('./package.json')
@@ -10,6 +10,7 @@ module.exports = config => {
     config.plugins.push(new DashboardPlugin())
 
     if (command === 'build') {
+        config.resolve.alias = {}
         config.resolve.alias['@sentry/browser'] = '@sentry/browser/esm'
         config.resolve.alias['flatpickr'] = 'flatpickr/dist/flatpickr.min'
         config.resolve.alias['marked'] = 'marked/marked.min'

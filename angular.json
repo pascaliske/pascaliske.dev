@@ -22,9 +22,6 @@
       "skipTests": true,
       "export": true
     },
-    "@schematics/angular:module": {
-      "skipTests": true
-    },
     "@schematics/angular:service": {
       "skipTests": true,
       "flat": false
@@ -85,7 +82,6 @@
                 "scripts": true,
                 "styles": false
               },
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
