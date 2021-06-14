@@ -20,7 +20,20 @@ jobs:
 
       # test
       - run: yarn run lint
-      - run: yarn run e2e
+      - uses: cypress-io/github-action@v2
+        with:
+          build: yarn run build:app
+          start: yarn run serve --config serve.json --listen 4200 --no-clipboard
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
 
       # build
       - run: yarn run build:app --progress false --base-href https://${{ secrets.PROD_DOMAIN }}

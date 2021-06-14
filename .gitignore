@@ -36,6 +36,7 @@ testem.log
 /docs
 report.html
 cypress/videos
+cypress/screenshots
 
 # e2e
 /e2e
