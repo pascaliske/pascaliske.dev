@@ -5,12 +5,7 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "ngcc",
-    "ng": "ng",
-    "bump": "bump package.json --yes",
-    "firebase": "firebase",
     "lighthouse": "lighthouse --quiet --chrome-flags=\"--headless\"",
-    "sentry-cli": "sentry-cli",
-    "now": "now",
     "bundlewatch": "bundlewatch --config .bundlewatchrc.json",
     "start": "ng serve --ssl",
     "build": "run-s build:app build:server build:prerender build:cfn",
