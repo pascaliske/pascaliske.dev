@@ -18,7 +18,7 @@ import { AppComponent } from './app.component'
         CommonModule,
         HttpClientModule,
         BrowserModule.withServerTransition({
-            appId: 'pascal-iske-server',
+            appId: 'pascaliske-dev-server',
         }),
         BrowserTransferStateModule,
         ServiceWorkerModule.register('/ngsw-worker.js', {

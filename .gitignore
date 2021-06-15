@@ -36,6 +36,7 @@ testem.log
 /docs
 report.html
 cypress/videos
+cypress/screenshots
 
 # e2e
 /e2e
@@ -43,4 +44,3 @@ cypress/videos
 # System Files
 .DS_Store
 Thumbs.db
-*.code-workspace

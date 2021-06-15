@@ -13,6 +13,7 @@ $component: 'cmp-to-top-button';
     padding: 0;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    background-color: transparent;
 
     &__icon {
         width: 100%;
