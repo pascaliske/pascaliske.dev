@@ -1,0 +1,46 @@
+name: Test App
+on: [push]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
+    steps:
+      # checkout
+      - uses: actions/checkout@v2
+
+      # prepare
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --frozen-lockfile
+
+      # test
+      - run: yarn run lint
+      - uses: cypress-io/github-action@v2
+        with:
+          command: yarn run e2e --headless --parallel --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore
+
+      # build
+      - run: yarn run build:app --progress false
+      - run: yarn run build:server --progress false
+      - run: yarn run build:cfn
+      - run: yarn run build:prerender
+      - run: yarn run bundlewatch

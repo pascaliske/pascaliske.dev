@@ -75,7 +75,14 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
               "sourceMap": {
                 "hidden": true,
@@ -116,7 +123,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": ["tsconfig.app.json", "cypress/tsconfig.json"],
             "exclude": ["**/node_modules/**", "**/*.json"]
           }
         },
@@ -144,6 +151,30 @@
               "customWebpackConfig": {
                 "path": "webpack.config.ts"
               }
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "pascaliske-dev:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pascaliske-dev:serve:production"
+            }
+          }
+        },
+        "cypress": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "pascaliske-dev:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pascaliske-dev:serve:production"
             }
           }
         }

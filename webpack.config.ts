@@ -21,7 +21,7 @@ export default (config: Configuration): Configuration => {
                 filename: './stats.html',
             }),
             new PacktrackerPlugin({
-                branch: process.env.TRAVIS_BRANCH,
+                branch: process.env.GITHUB_REF.replace('refs/heads/', ''),
                 upload: process.env.CI === 'true',
             }),
         )
