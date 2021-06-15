@@ -4,20 +4,20 @@ import { first, filter } from 'rxjs/operators'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
 
-export type PageViewEvent = 'pageview'
+export type PageViewEvent = 'page_view'
 export type CustomEvent = 'event'
 
 export interface PageViewEventData {
-    page: string
-    title?: string
-    location?: string
+    page_path: string
+    page_title?: string
+    page_location?: string
 }
 
 export interface CustomEventData {
-    eventCategory: string
-    eventAction: string
-    eventLabel?: string
-    eventValue?: string
+    event_category: string
+    event_action: string
+    event_label?: string
+    value?: string
 }
 
 /**
@@ -58,18 +58,18 @@ export class TrackingService {
             .subscribe(status => {
                 switch (status) {
                     case 'allow':
-                        gaInit(window, document)
+                        gtagInit(window, document)
                         break
 
                     case 'deny':
-                        gaOut()
+                        gtagOut()
                         break
                 }
             })
     }
 
     /**
-     * Sends a tracking event to analytics.
+     * Sends a tracking event to Google Analytics.
      *
      * @param {PageViewEvent | CustomEvent} event
      * @param {PageViewEventData | CustomEventData} data
@@ -84,6 +84,6 @@ export class TrackingService {
         }
 
         // send event
-        ga('send', { ...data, hitType: event })
+        gtag('event', event, data)
     }
 }

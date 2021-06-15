@@ -8,6 +8,9 @@ declare const APP_ID: string
  */
 declare const APP_VERSION: string
 
-declare var ga: (event: string, options: any) => void
-declare var gaInit: (window: Window, document: Document) => void
-declare var gaOut: () => void
+/**
+ * Google Analytics Functions.
+ */
+declare var gtag: (event: string, eventName: string, options: Record<string, any>) => void
+declare var gtagInit: (window: Window, document: Document) => void
+declare var gtagOut: () => void

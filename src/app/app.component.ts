@@ -80,8 +80,8 @@ export class AppComponent implements OnInit, OnDestroy {
             )
             .subscribe((event: NavigationEnd) => {
                 this.show()
-                this.trackingService.track('pageview', {
-                    page: event.urlAfterRedirects,
+                this.trackingService.track('page_view', {
+                    page_path: event.urlAfterRedirects,
                 })
             })
     }

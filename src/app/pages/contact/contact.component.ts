@@ -73,8 +73,8 @@ export class ContactComponent extends Page implements OnInit {
         this.contactService.send(this.contactForm.value)
         this.contactForm.reset()
         this.trackingService.track('event', {
-            eventCategory: 'contact-form',
-            eventAction: 'submit',
+            event_category: 'contact-form',
+            event_action: 'submit',
         })
     }
 
