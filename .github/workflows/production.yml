@@ -5,7 +5,7 @@ on:
       - '*'
 
 env:
-  PROD_DOMAIN: https://pascaliske.dev
+  PROD_DOMAIN: pascaliske.dev
 
 jobs:
   deploy:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: ${{ env.PROD_DOMAIN }}
+      url: https://${{ env.PROD_DOMAIN }}
     steps:
       # checkout
       - uses: actions/checkout@v2
