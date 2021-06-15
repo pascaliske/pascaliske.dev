@@ -29,12 +29,12 @@ export class ContactComponent extends Page implements OnInit {
     }
 
     public constructor(
-        private changeDetectorRef: ChangeDetectorRef,
+        private readonly changeDetectorRef: ChangeDetectorRef,
         protected route: ActivatedRoute,
-        private formBuilder: FormBuilder,
+        private readonly formBuilder: FormBuilder,
         protected titleService: TitleService,
-        private trackingService: TrackingService,
-        private contactService: ContactService,
+        private readonly trackingService: TrackingService,
+        private readonly contactService: ContactService,
     ) {
         super(route, titleService)
     }

@@ -33,14 +33,16 @@ export class TrackingService {
     /**
      *
      */
-    private status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(null)
+    private readonly status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(
+        null,
+    )
 
     /**
      * Initializes the TrackingService.
      *
      * @param {NgcCookieConsentService} cookieConsentService
      */
-    public constructor(private cookieConsentService: NgcCookieConsentService) {
+    public constructor(private readonly cookieConsentService: NgcCookieConsentService) {
         const events = [
             this.cookieConsentService.initialize$,
             this.cookieConsentService.statusChange$,

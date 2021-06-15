@@ -1,4 +1,3 @@
-// tslint:disable:no-var-requires
 import 'reflect-metadata'
 import 'zone.js/node'
 import { enableProdMode } from '@angular/core'

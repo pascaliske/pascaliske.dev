@@ -37,7 +37,7 @@ export class ScrollService {
     /**
      * Initializes the scroll service.
      */
-    public constructor(@Inject(PLATFORM_ID) private platformId) {
+    public constructor(@Inject(PLATFORM_ID) private readonly platformId) {
         if (isPlatformBrowser(this.platformId)) {
             this.handleScroll()
         }
@@ -53,7 +53,7 @@ export class ScrollService {
      */
     public scroll(x: number, y: number, behavior: 'auto' | 'smooth' = 'smooth'): void {
         window.scrollTo({
-            behavior: behavior,
+            behavior,
             left: x,
             top: y,
         })

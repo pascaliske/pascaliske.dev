@@ -17,7 +17,7 @@ export class ViewportService {
      *
      * @param {IntersectionObserverInit} options
      */
-    private options: IntersectionObserverInit = {
+    private readonly options: IntersectionObserverInit = {
         threshold: [0.5],
     }
 
@@ -26,19 +26,19 @@ export class ViewportService {
      *
      * @param {IntersectionObserver} observer
      */
-    private observer: IntersectionObserver
+    private readonly observer: IntersectionObserver
 
     /**
      * Subject for handling callback calls for subscribers.
      *
      * @param {Observable<IntersectionObserverEntry>} callback$
      */
-    private callback$: Subject<IntersectionObserverEntry> = new Subject()
+    private readonly callback$: Subject<IntersectionObserverEntry> = new Subject()
 
     /**
      * Initializes the ViewportService.
      */
-    public constructor(@Inject(PLATFORM_ID) private platformId) {
+    public constructor(@Inject(PLATFORM_ID) private readonly platformId) {
         if (isPlatformBrowser(this.platformId)) {
             this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
         }
