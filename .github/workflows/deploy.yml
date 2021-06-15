@@ -22,8 +22,7 @@ jobs:
       - run: yarn run lint
       - uses: cypress-io/github-action@v2
         with:
-          build: yarn run build:app
-          start: yarn run serve --config serve.json --listen 4200 --no-clipboard
+          command: yarn run e2e --headless --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
