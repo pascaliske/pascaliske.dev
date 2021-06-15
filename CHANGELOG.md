@@ -1,3 +1,19 @@
+# [2.2.0](https://github.com/pascaliske/pascaliske.dev/compare/v2.1.0...v2.2.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* disable automatic critical css inlining for now ([2ad467e](https://github.com/pascaliske/pascaliske.dev/commit/2ad467e63b5a5cd8eedd96496b0f725f597fde1b))
+* **to-top-button:** hide background of to top button ([725d310](https://github.com/pascaliske/pascaliske.dev/commit/725d310fa542f702d2afcb9bbdd5e8a37d27e179))
+
+
+### Features
+
+* switch to github actions based firebase deployment ([5ae1fb6](https://github.com/pascaliske/pascaliske.dev/commit/5ae1fb6a5ccc208936a8587dead1e84f94602d3e))
+* use github action for e2e testing ([e40cb1f](https://github.com/pascaliske/pascaliske.dev/commit/e40cb1f6abc3e338b773117b497bf829ec84c0ec))
+
+
+
 # [2.1.0](https://github.com/pascaliske/pascal-iske.de/compare/v2.0.3...v2.1.0) (2020-08-15)
 
 
