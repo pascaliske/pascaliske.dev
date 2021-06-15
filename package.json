@@ -4,6 +4,7 @@
   "version": "2.1.0",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "postinstall": "ngcc",
     "lighthouse": "lighthouse --quiet --chrome-flags=\"--headless\"",
     "bundlewatch": "bundlewatch --config .bundlewatchrc.json",
