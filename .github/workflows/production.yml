@@ -4,13 +4,16 @@ on:
     tags:
       - '*'
 
+env:
+  PROD_DOMAIN: https://pascaliske.dev
+
 jobs:
   deploy:
     name: Production
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: ${{ secrets.PROD_DOMAIN }}
+      url: ${{ env.PROD_DOMAIN }}
     steps:
       # checkout
       - uses: actions/checkout@v2
@@ -43,7 +46,7 @@ jobs:
           if-no-files-found: ignore
 
       # build
-      - run: yarn run build:app --progress false --base-href https://${{ secrets.PROD_DOMAIN }}
+      - run: yarn run build:app --progress false --base-href https://${{ env.PROD_DOMAIN }}
       - run: yarn run build:server --progress false
       - run: yarn run build:cfn
       - run: yarn run build:prerender
@@ -57,7 +60,7 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           channelId: live
 
-      # - run: yarn run lighthouse --output-path=./report.html https://${{ secrets.PROD_DOMAIN }}
+      # - run: yarn run lighthouse --output-path=./report.html https://${{ env.PROD_DOMAIN }}
       # - run: yarn run now report.html --token ${{ secrets.NOW_TOKEN }} --no-clipboard --public
       # - run: yarn run sentry-cli releases new "$TRAVIS_TAG"
       # - run: yarn run sentry-cli releases set-commits --auto "$TRAVIS_TAG"
