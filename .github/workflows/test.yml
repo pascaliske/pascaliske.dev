@@ -1,8 +1,9 @@
-name: Test site
+name: Test App
 on: [push]
 
 jobs:
   test:
+    name: Test
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

@@ -1,4 +1,4 @@
-name: Deploy site
+name: Deploy App
 on:
   push:
     tags:
@@ -6,6 +6,7 @@ on:
 
 jobs:
   deploy:
+    name: Production
     runs-on: ubuntu-latest
     steps:
       # checkout
