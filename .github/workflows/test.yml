@@ -39,7 +39,7 @@ jobs:
           if-no-files-found: ignore
 
       # build
-      - run: yarn run build:app --progress false --base-href https://${{ secrets.PROD_DOMAIN }}
+      - run: yarn run build:app --progress false
       - run: yarn run build:server --progress false
       - run: yarn run build:cfn
       - run: yarn run build:prerender
