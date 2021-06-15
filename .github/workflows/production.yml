@@ -8,6 +8,9 @@ jobs:
   deploy:
     name: Production
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ secrets.PROD_DOMAIN }}
     steps:
       # checkout
       - uses: actions/checkout@v2
