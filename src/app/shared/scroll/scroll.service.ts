@@ -51,6 +51,7 @@ export class ScrollService {
      * @param {'auto' | 'smooth'} behavior
      * @returns {void}
      */
+    // eslint-disable-next-line id-length
     public scroll(x: number, y: number, behavior: 'auto' | 'smooth' = 'smooth'): void {
         window.scrollTo({
             behavior,

@@ -79,7 +79,10 @@ export class TrackingService {
      */
     public track(event: PageViewEvent, data: PageViewEventData): void
     public track(event: CustomEvent, data: CustomEventData): void
-    public track(event: PageViewEvent | CustomEvent, data: PageViewEventData | CustomEventData) {
+    public track(
+        event: PageViewEvent | CustomEvent,
+        data: PageViewEventData | CustomEventData,
+    ): void {
         // track only in production and if cookie consent is given
         if (!environment.production || this.status$.getValue() !== 'allow') {
             return

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
 import 'reflect-metadata'
 import 'zone.js/node'
 import { enableProdMode } from '@angular/core'
@@ -11,6 +12,6 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('../dist/server/ma
 const prerender = create(renderModuleFactory, null)
 
 prerender(routes, AppServerModuleNgFactory, LAZY_MODULE_MAP).catch(error => {
-    console.log(error)
+    console.error(error)
     process.exit(1)
 })

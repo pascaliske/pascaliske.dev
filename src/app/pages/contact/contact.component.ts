@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, AbstractControl, FormGroup } from '@angular/forms'
 import { FValidation } from '@pascaliske/form-elements'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
@@ -49,19 +49,19 @@ export class ContactComponent extends Page implements OnInit {
         this.changeDetectorRef.detectChanges()
     }
 
-    public get name() {
+    public get name(): AbstractControl {
         return this.contactForm.get('name')
     }
 
-    public get email() {
+    public get email(): AbstractControl {
         return this.contactForm.get('email')
     }
 
-    public get subject() {
+    public get subject(): AbstractControl {
         return this.contactForm.get('subject')
     }
 
-    public get message() {
+    public get message(): AbstractControl {
         return this.contactForm.get('message')
     }
 

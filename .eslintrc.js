@@ -18,4 +18,19 @@ module.exports = {
         gtagInit: 'readonly',
         gtagOut: 'readonly',
     },
+    rules: {
+        camelcase: [
+            'error',
+            {
+                allow: [
+                    'page_path',
+                    'page_title',
+                    'page_location',
+                    'event_category',
+                    'event_action',
+                    'event_label',
+                ],
+            },
+        ],
+    },
 }

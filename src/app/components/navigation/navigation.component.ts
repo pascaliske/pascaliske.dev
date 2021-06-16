@@ -105,7 +105,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      */
     public getItemClasses(item: NavigationItem): string {
         return modifiers('cmp-navigation__item', {
-            fixed: item.options && item.options.fixedWidth,
+            fixed: item.options?.fixedWidth,
         })
     }
 
@@ -117,7 +117,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      */
     public getLinkClasses(item: NavigationItem): string {
         return modifiers('cmp-navigation__text', {
-            decorated: item.options && item.options.decorated,
+            decorated: item.options?.decorated,
         })
     }
 }

@@ -6,7 +6,7 @@ import { environment } from './environments/environment'
 
 if (environment.production) {
     // log app version on startup
-    console.log(environment.version)
+    console.info(environment.version)
 
     enableProdMode()
 }
@@ -14,5 +14,5 @@ if (environment.production) {
 document.addEventListener('DOMContentLoaded', () => {
     platformBrowserDynamic()
         .bootstrapModule(AppBrowserModule)
-        .catch(err => console.log(err))
+        .catch(err => console.error(err))
 })

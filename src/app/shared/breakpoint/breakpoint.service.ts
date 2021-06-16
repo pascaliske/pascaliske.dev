@@ -225,7 +225,7 @@ export class BreakpointService {
                 query.push(`(max-width: ${item.end}px)`)
             }
 
-            if (window.matchMedia && window.matchMedia(query.join(' and ')).matches) {
+            if (window.matchMedia?.(query.join(' and ')).matches) {
                 return item
             }
         }
