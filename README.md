@@ -10,30 +10,28 @@ Have fun discovering the source code! 🙂
 
 ## Used frameworks, libs, tools, services...
 
-| ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Susy Grid][su] | ![Lodash][lo] |
-| :------------: | :---------------: | :---------: | :-------------: | :--------------: | :-----------: |
-|    Angular     |    TypeScript     |    RxJS     |    Prettier     |     SusyGrid     |    Lodash     |
+| ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Lodash][lo] | ![Google Analytics][ga] |
+| :------------: | :---------------: | :---------: | :-------------: | :-----------: | :---------------------: |
+|    Angular     |    TypeScript     |    RxJS     |    Prettier     |    Lodash     |    Google Analytics     |
 
-| ![Firebase][fb] | ![GitHub][gh] | ![Dependabot][db] | ![Yarn][ya] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] | ![now][nw] | ![Google Analytics][ga] |
-| :-------------: | :-----------: | :---------------: | :---------: | :-----------: | :---------------: | :-----------------: | :--------: | :---------------------: |
-|    Firebase     |    GitHub     |    Dependabot     |    Yarn     |    Sentry     |    Lighthouse     |    Bundle Watch     |    Now     |    Google Analytics     |
+| ![Firebase][fb] | ![GitHub][gh] | ![Dependabot][db] | ![Yarn][ya] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] |
+| :-------------: | :-----------: | :---------------: | :---------: | :-----------: | :---------------: | :-----------------: |
+|    Firebase     |    GitHub     |    Dependabot     |    Yarn     |    Sentry     |    Lighthouse     |    Bundle Watch     |
 
 and [more](https://github.com/pascaliske/pascaliske.dev/blob/master/package.json)...
 
 <!-- logos -->
 
 [ng]: https://angular.io/assets/images/logos/angular/angular.svg
-[ts]: https://github.com/remojansen/logo.ts/raw/master/ts.png
-[rx]: https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png
-[pr]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-wide-light.png
-[su]: http://oddbird.net/static/images/susy/susy-logos/logo-knockout.svg
+[ts]: https://github.com/remojansen/logo.ts/raw/master/ts.svg
+[rx]: https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png
+[pr]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-dark.png
 [lo]: https://lodash.com/assets/img/lodash.svg
+[ga]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
 [fb]: https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg
 [gh]: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-[db]: https://avatars3.githubusercontent.com/in/2141?s=200&v=4
-[ya]: https://github.com/yarnpkg/assets/raw/master/yarn-kitten-full.png
-[sy]: https://sentry-brand.storage.googleapis.com/sentry-glyph-black.png
-[lh]: https://raw.githubusercontent.com/GoogleChrome/lighthouse/8b3d7f052b2e64dd857e741d7395647f487697e7/assets/lighthouse-logo.png
-[bw]: https://bundlewatch.io/_assets/logo-large.svg
-[nw]: https://assets.zeit.co/image/upload/front/assets/design/zeit-black-full-logo.svg
-[ga]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
+[db]: https://avatars3.githubusercontent.com/in/2141?s=300&v=4
+[ya]: https://avatars.githubusercontent.com/u/22247014?s=300&v=4
+[sy]: https://avatars.githubusercontent.com/u/1396951?s=300&v=4
+[lh]: https://raw.githubusercontent.com/GoogleChrome/lighthouse/master/assets/lighthouse-logo_512px.png
+[bw]: https://avatars.githubusercontent.com/u/38408933?s=300&v=4
