@@ -1,6 +1,6 @@
 {
   "name": "pascaliske-dev",
-  "description": "Angular Web App built with Travis CI and deployed with Firebase.",
+  "description": "Angular Web App built with GitHub Actions and deployed with Firebase.",
   "version": "2.2.4",
   "license": "MIT",
   "scripts": {
