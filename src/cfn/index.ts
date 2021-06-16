@@ -1,6 +1,6 @@
 import * as cors from 'cors'
 import { config, https } from 'firebase-functions'
-import { Response } from 'express'
+import { Request, Response } from 'express'
 import { createTransport } from 'nodemailer'
 
 // configure cors
@@ -24,8 +24,9 @@ const transport = createTransport({
  * @param {Response} res
  * @returns {HttpsFunction}
  */
-export const sendContactRequest = https.onRequest((req: any, res: Response) => {
+export const sendContactRequest = https.onRequest((req: Request, res: Response) => {
     // only allow same-origin requests
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     security(req, res, () => {})
 
     transport
@@ -51,8 +52,9 @@ export const sendContactRequest = https.onRequest((req: any, res: Response) => {
  * @param {Response} res
  * @returns {HttpsFunction}
  */
-export const sendCspReport = https.onRequest((req: any, res: Response) => {
+export const sendCspReport = https.onRequest((req: Request, res: Response) => {
     // only allow same-origin requests
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     security(req, res, () => {})
 
     // try parsing the data

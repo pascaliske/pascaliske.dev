@@ -6,10 +6,10 @@ import { animations } from './header.animation'
     selector: 'cmp-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
-    animations: animations,
+    animations,
 })
 export class HeaderComponent {
-    public constructor(private router: Router) {}
+    public constructor(private readonly router: Router) {}
 
     /**
      * Go to home page.
@@ -17,6 +17,7 @@ export class HeaderComponent {
      * @returns {void}
      */
     public goHome(): void {
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         this.router.navigate(['/'])
     }
 }

@@ -65,9 +65,9 @@ export class AppComponent implements OnInit, OnDestroy {
      * @param {TrackingService} trackingService
      */
     public constructor(
-        private router: Router,
+        private readonly router: Router,
         private titleService: TitleService,
-        private trackingService: TrackingService,
+        private readonly trackingService: TrackingService,
     ) {}
 
     public ngOnInit(): void {

@@ -26,7 +26,7 @@ export class NetworkService {
     public speed$: Observable<'slow' | 'fast'> = this.share(
         fromEvent((navigator as any).connection, 'change').pipe(
             startWith((navigator as any).connection.effectiveType),
-            map<any, 'slow' | 'fast'>(() => {
+            map<unknown, 'slow' | 'fast'>(() => {
                 switch ((navigator as any).connection.effectiveType) {
                     case 'slow-2g':
                     case '2g':
@@ -46,7 +46,7 @@ export class NetworkService {
      * @param {Observable<T>} observable
      * @returns {Observable<T>}
      */
-    private share<T = any>(observable: Observable<T>): Observable<T> {
+    private share<T = unknown>(observable: Observable<T>): Observable<T> {
         return observable.pipe(distinctUntilChanged(), debounceTime(100), share())
     }
 }

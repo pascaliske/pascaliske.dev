@@ -33,14 +33,16 @@ export class TrackingService {
     /**
      *
      */
-    private status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(null)
+    private readonly status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(
+        null,
+    )
 
     /**
      * Initializes the TrackingService.
      *
      * @param {NgcCookieConsentService} cookieConsentService
      */
-    public constructor(private cookieConsentService: NgcCookieConsentService) {
+    public constructor(private readonly cookieConsentService: NgcCookieConsentService) {
         const events = [
             this.cookieConsentService.initialize$,
             this.cookieConsentService.statusChange$,
@@ -77,7 +79,10 @@ export class TrackingService {
      */
     public track(event: PageViewEvent, data: PageViewEventData): void
     public track(event: CustomEvent, data: CustomEventData): void
-    public track(event: PageViewEvent | CustomEvent, data: PageViewEventData | CustomEventData) {
+    public track(
+        event: PageViewEvent | CustomEvent,
+        data: PageViewEventData | CustomEventData,
+    ): void {
         // track only in production and if cookie consent is given
         if (!environment.production || this.status$.getValue() !== 'allow') {
             return

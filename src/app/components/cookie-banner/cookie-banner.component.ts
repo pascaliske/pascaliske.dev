@@ -13,9 +13,9 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
     private alive: boolean = true
 
     public constructor(
-        private elementRef: ElementRef,
-        private cookieConsentService: NgcCookieConsentService,
-        private trackingService: TrackingService,
+        private readonly elementRef: ElementRef,
+        private readonly cookieConsentService: NgcCookieConsentService,
+        private readonly trackingService: TrackingService,
     ) {}
 
     public ngOnInit(): void {

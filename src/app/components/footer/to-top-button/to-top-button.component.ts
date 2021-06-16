@@ -11,7 +11,7 @@ export class ToTopButtonComponent {
     /**
      * Initializes the component.
      */
-    public constructor(private scrollService: ScrollService) {}
+    public constructor(private readonly scrollService: ScrollService) {}
 
     /**
      * Scrolls the viewport to the top.

@@ -27,10 +27,7 @@ export function MarkdownOptionsFactory(): MarkedOptions {
     }
     renderer.listitem = (text: string): string => `<li class="md-list__item">${text}</li>`
 
-    return {
-        renderer: renderer,
-        gfm: true,
-    }
+    return { renderer, gfm: true }
 }
 
 @NgModule({

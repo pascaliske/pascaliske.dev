@@ -7,8 +7,8 @@ import { ContactFormData } from './typings'
 @Injectable()
 export class ContactService {
     public constructor(
-        private http: HttpClient,
-        private notificationsService: NotificationsService,
+        private readonly http: HttpClient,
+        private readonly notificationsService: NotificationsService,
     ) {}
 
     /**
