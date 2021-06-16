@@ -1,3 +1,12 @@
+## [2.2.4](https://github.com/pascaliske/pascaliske.dev/compare/v2.2.3...v2.2.4) (2021-06-16)
+
+
+### Bug Fixes
+
+* **firebase:** use new permissions policy header ([a51e607](https://github.com/pascaliske/pascaliske.dev/commit/a51e6071c9fc687fc3f945a85cdc2a5e065ed37d))
+
+
+
 ## [2.2.3](https://github.com/pascaliske/pascaliske.dev/compare/v2.2.2...v2.2.3) (2021-06-16)
 
 
