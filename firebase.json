@@ -87,8 +87,8 @@
         "source": "**",
         "headers": [
           {
-            "key": "Feature-Policy",
-            "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'none'; sync-xhr *; usb 'none'; vr 'none';"
+            "key": "Permissions-Policy",
+            "value": "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), sync-xhr=(*), usb=(), interest-cohort=()"
           }
         ]
       },
