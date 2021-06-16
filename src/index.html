@@ -12,7 +12,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://www.google-analytics.com/analytics.js" as="script" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com/gtag/js" as="script" crossorigin />
 </head>
 <body>
     <cmp-root>
@@ -23,35 +23,37 @@
     </cmp-root>
 
     <script type="application/javascript">
-        const property = 'UA-77052352-1'
-        const disable = 'ga-disable-' + property
+        const property = 'G-EX5XE8VJVT';
+        const disable = 'ga-disable-' + property;
 
         if (document.cookie.indexOf(disable + '=true') > -1) {
-            window[disable] = true
+            window[disable] = true;
         }
 
-        function gaOut() {
-            document.cookie = disable + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
-            window[disable] = true
+        function gtagOut() {
+            document.cookie = disable + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[disable] = true;
         }
 
-        function gaInit(window, document) {
-            window.GoogleAnalyticsObject = 'ga'
-            window.ga = window.ga || function() {
-                (window.ga.q = window.ga.q || []).push(arguments)
+        function gtagInit(window, document) {
+            // create script tag
+            const element = document.createElement('script');
+            element.async = 1;
+            element.src = 'https://www.googletagmanager.com/gtag/js?id=' + property;
+
+            // insert script tag
+            const reference = document.getElementsByTagName('script')[0];
+            reference.parentNode.insertBefore(element, reference);
+
+            // init data layer
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
             }
 
-            window.ga.l = 1 * new Date()
-
-            const element = document.createElement('script')
-            element.async = 1
-            element.src = 'https://www.google-analytics.com/analytics.js'
-
-            const reference = document.getElementsByTagName('script')[0]
-            reference.parentNode.insertBefore(element, reference)
-
-            ga('create', property, 'auto')
-            ga('set', 'anonymizeIp', true)
+            gtag('js', new Date());
+            gtag('config', property, { 'anonymize_ip': true });
         }
     </script>
 </body>

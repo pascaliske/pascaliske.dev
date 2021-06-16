@@ -37,7 +37,7 @@ export class TitleService {
      *
      * @param {Title} browserTitle - The angular browser title service.
      */
-    public constructor(private browserTitle: Title) {}
+    public constructor(private readonly browserTitle: Title) {}
 
     /**
      * Sets a new title to the current HTML document.

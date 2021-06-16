@@ -19,9 +19,12 @@ export class SectionComponent implements OnInit {
 
     public activated: boolean = false
 
-    private alive: boolean = true
+    private readonly alive: boolean = true
 
-    public constructor(private element: ElementRef, private viewportService: ViewportService) {}
+    public constructor(
+        private readonly element: ElementRef,
+        private readonly viewportService: ViewportService,
+    ) {}
 
     public ngOnInit(): void {
         this.viewportService

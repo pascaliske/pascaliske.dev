@@ -13,9 +13,7 @@ export class CopyComponent {
 
     @Input() public text: string
 
-    public constructor() {}
-
-    public getThemeModifiers(): object {
+    public getThemeModifiers(): Record<string, unknown> {
         return this.theme
             .replace(/ +/g, '')
             .split(',')

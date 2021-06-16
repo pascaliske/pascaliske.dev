@@ -81,7 +81,7 @@ export class LinkComponent {
      *
      * @param {Router} router - The router.
      */
-    public constructor(private router: Router) {}
+    public constructor(private readonly router: Router) {}
 
     /**
      * Navigates to the internal or external target.
@@ -95,11 +95,9 @@ export class LinkComponent {
         }
 
         if (this.target && this.target.length !== 0) {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
             this.router.navigate(this.target)
-            return
         }
-
-        return
     }
 
     /**

@@ -11,6 +11,4 @@ export class PageHeaderComponent {
     @Input() public title: string
 
     @Input() public copy: string
-
-    public constructor() {}
 }

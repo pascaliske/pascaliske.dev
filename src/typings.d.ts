@@ -8,6 +8,10 @@ declare const APP_ID: string
  */
 declare const APP_VERSION: string
 
-declare var ga: (event: string, options: any) => void
-declare var gaInit: (window: Window, document: Document) => void
-declare var gaOut: () => void
+/**
+ * Google Analytics Functions.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare let gtag: (event: string, eventName: string, options: Record<string, any>) => void
+declare let gtagInit: (window: Window, document: Document) => void
+declare let gtagOut: () => void

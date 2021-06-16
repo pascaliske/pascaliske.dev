@@ -1,3 +1,20 @@
+## [2.2.3](https://github.com/pascaliske/pascaliske.dev/compare/v2.2.2...v2.2.3) (2021-06-16)
+
+
+### Bug Fixes
+
+* allow explicit any for gtag typing ([631b5f7](https://github.com/pascaliske/pascaliske.dev/commit/631b5f727e77121d0c3137c40e9b1f93fba04f35))
+* fix linting issues ([f3dae33](https://github.com/pascaliske/pascaliske.dev/commit/f3dae33484ef8dae6421a983e55b996178fab7ba))
+* fix linting issues ([f2438a8](https://github.com/pascaliske/pascaliske.dev/commit/f2438a8d2dab6bb977265e6f5e3206fd2a3588a8))
+* remove browser support for legacy IE 11 ([d392afb](https://github.com/pascaliske/pascaliske.dev/commit/d392afb7abd89d3723ab1f1f844698690a8a8b3a))
+
+
+### Features
+
+* switch linting to eslint ([e214574](https://github.com/pascaliske/pascaliske.dev/commit/e2145747c9677818f48002f11f5efb15af7e8859))
+
+
+
 ## [2.2.2](https://github.com/pascaliske/pascaliske.dev/compare/v2.2.1...v2.2.2) (2021-06-15)
 
 

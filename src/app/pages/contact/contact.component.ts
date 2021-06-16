@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, AbstractControl, FormGroup } from '@angular/forms'
 import { FValidation } from '@pascaliske/form-elements'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
@@ -29,12 +29,12 @@ export class ContactComponent extends Page implements OnInit {
     }
 
     public constructor(
-        private changeDetectorRef: ChangeDetectorRef,
+        private readonly changeDetectorRef: ChangeDetectorRef,
         protected route: ActivatedRoute,
-        private formBuilder: FormBuilder,
+        private readonly formBuilder: FormBuilder,
         protected titleService: TitleService,
-        private trackingService: TrackingService,
-        private contactService: ContactService,
+        private readonly trackingService: TrackingService,
+        private readonly contactService: ContactService,
     ) {
         super(route, titleService)
     }
@@ -49,19 +49,19 @@ export class ContactComponent extends Page implements OnInit {
         this.changeDetectorRef.detectChanges()
     }
 
-    public get name() {
+    public get name(): AbstractControl {
         return this.contactForm.get('name')
     }
 
-    public get email() {
+    public get email(): AbstractControl {
         return this.contactForm.get('email')
     }
 
-    public get subject() {
+    public get subject(): AbstractControl {
         return this.contactForm.get('subject')
     }
 
-    public get message() {
+    public get message(): AbstractControl {
         return this.contactForm.get('message')
     }
 
@@ -73,8 +73,8 @@ export class ContactComponent extends Page implements OnInit {
         this.contactService.send(this.contactForm.value)
         this.contactForm.reset()
         this.trackingService.track('event', {
-            eventCategory: 'contact-form',
-            eventAction: 'submit',
+            event_category: 'contact-form',
+            event_action: 'submit',
         })
     }
 

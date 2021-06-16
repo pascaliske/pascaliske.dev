@@ -4,20 +4,20 @@ import { first, filter } from 'rxjs/operators'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
 
-export type PageViewEvent = 'pageview'
+export type PageViewEvent = 'page_view'
 export type CustomEvent = 'event'
 
 export interface PageViewEventData {
-    page: string
-    title?: string
-    location?: string
+    page_path: string
+    page_title?: string
+    page_location?: string
 }
 
 export interface CustomEventData {
-    eventCategory: string
-    eventAction: string
-    eventLabel?: string
-    eventValue?: string
+    event_category: string
+    event_action: string
+    event_label?: string
+    value?: string
 }
 
 /**
@@ -33,14 +33,16 @@ export class TrackingService {
     /**
      *
      */
-    private status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(null)
+    private readonly status$: BehaviorSubject<'allow' | 'deny' | 'dismiss'> = new BehaviorSubject(
+        null,
+    )
 
     /**
      * Initializes the TrackingService.
      *
      * @param {NgcCookieConsentService} cookieConsentService
      */
-    public constructor(private cookieConsentService: NgcCookieConsentService) {
+    public constructor(private readonly cookieConsentService: NgcCookieConsentService) {
         const events = [
             this.cookieConsentService.initialize$,
             this.cookieConsentService.statusChange$,
@@ -58,18 +60,18 @@ export class TrackingService {
             .subscribe(status => {
                 switch (status) {
                     case 'allow':
-                        gaInit(window, document)
+                        gtagInit(window, document)
                         break
 
                     case 'deny':
-                        gaOut()
+                        gtagOut()
                         break
                 }
             })
     }
 
     /**
-     * Sends a tracking event to analytics.
+     * Sends a tracking event to Google Analytics.
      *
      * @param {PageViewEvent | CustomEvent} event
      * @param {PageViewEventData | CustomEventData} data
@@ -77,13 +79,16 @@ export class TrackingService {
      */
     public track(event: PageViewEvent, data: PageViewEventData): void
     public track(event: CustomEvent, data: CustomEventData): void
-    public track(event: PageViewEvent | CustomEvent, data: PageViewEventData | CustomEventData) {
+    public track(
+        event: PageViewEvent | CustomEvent,
+        data: PageViewEventData | CustomEventData,
+    ): void {
         // track only in production and if cookie consent is given
         if (!environment.production || this.status$.getValue() !== 'allow') {
             return
         }
 
         // send event
-        ga('send', { ...data, hitType: event })
+        gtag('event', event, data)
     }
 }

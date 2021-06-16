@@ -13,9 +13,9 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
     private alive: boolean = true
 
     public constructor(
-        private elementRef: ElementRef,
-        private cookieConsentService: NgcCookieConsentService,
-        private trackingService: TrackingService,
+        private readonly elementRef: ElementRef,
+        private readonly cookieConsentService: NgcCookieConsentService,
+        private readonly trackingService: TrackingService,
     ) {}
 
     public ngOnInit(): void {
@@ -56,9 +56,9 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
             .pipe(takeWhile(() => this.alive))
             .subscribe(event => {
                 this.trackingService.track('event', {
-                    eventCategory: 'cookie-consent',
-                    eventAction: 'change',
-                    eventValue: event.status,
+                    event_category: 'cookie-consent',
+                    event_action: 'change',
+                    value: event.status,
                 })
             })
     }

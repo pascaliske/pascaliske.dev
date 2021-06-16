@@ -58,8 +58,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * @param {BreakpointService} breakpointService
      */
     public constructor(
-        @Inject(PLATFORM_ID) private platformId,
-        private breakpointService: BreakpointService,
+        @Inject(PLATFORM_ID) private readonly platformId,
+        private readonly breakpointService: BreakpointService,
     ) {}
 
     /**
@@ -105,7 +105,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      */
     public getItemClasses(item: NavigationItem): string {
         return modifiers('cmp-navigation__item', {
-            fixed: item.options && item.options.fixedWidth,
+            fixed: item.options?.fixedWidth,
         })
     }
 
@@ -117,7 +117,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      */
     public getLinkClasses(item: NavigationItem): string {
         return modifiers('cmp-navigation__text', {
-            decorated: item.options && item.options.decorated,
+            decorated: item.options?.decorated,
         })
     }
 }

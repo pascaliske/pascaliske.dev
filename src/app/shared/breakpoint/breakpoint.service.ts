@@ -114,7 +114,7 @@ export class BreakpointService {
     /**
      * Initializes the breakpoint service.
      */
-    public constructor(@Inject(PLATFORM_ID) private platformId) {
+    public constructor(@Inject(PLATFORM_ID) private readonly platformId) {
         if (isPlatformBrowser(this.platformId)) {
             this.handleResize()
         }
@@ -126,7 +126,7 @@ export class BreakpointService {
      * @returns {boolean}
      */
     public isMobile(): boolean {
-        // tslint:disable-next-line:max-line-length
+        // prettier-ignore
         const regex = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i
 
         if (regex.test(navigator.userAgent)) {
@@ -225,7 +225,7 @@ export class BreakpointService {
                 query.push(`(max-width: ${item.end}px)`)
             }
 
-            if (window.matchMedia && window.matchMedia(query.join(' and ')).matches) {
+            if (window.matchMedia?.(query.join(' and ')).matches) {
                 return item
             }
         }
