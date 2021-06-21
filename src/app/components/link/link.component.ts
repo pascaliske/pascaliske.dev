@@ -89,12 +89,12 @@ export class LinkComponent {
      * @returns {void}
      */
     public navigate(): void {
-        if (this.url && this.url !== '') {
+        if (this.url?.length > 0) {
             window.location.href = this.url
             return
         }
 
-        if (this.target && this.target.length !== 0) {
+        if (this.target?.length > 0) {
             // eslint-disable-next-line @typescript-eslint/no-floating-promises
             this.router.navigate(this.target)
         }
