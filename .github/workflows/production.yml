@@ -51,6 +51,11 @@ jobs:
       - run: yarn run build:cfn
       - run: yarn run build:prerender
       - run: yarn run bundlewatch
+        env:
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+          CI_REPO_SLUG: ${{ env.GITHUB_REPOSITORY }}
+          CI_COMMIT_SHA: ${{ env.GITHUB_SHA }}
+          CI_BRANCH: ${{ env.GITHUB_REF }}
 
       # deploy
       - uses: FirebaseExtended/action-hosting-deploy@v0
