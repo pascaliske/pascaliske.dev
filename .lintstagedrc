@@ -1,5 +1,0 @@
-{
-  "**/*.{ts,scss,html,md,json}": [
-    "prettier --write"
-  ]
-}
