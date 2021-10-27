@@ -93,7 +93,7 @@
     "@types/fs-extra": "^9.0.11",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.12.4",
-    "@types/nodemailer": "^6.4.2",
+    "@types/nodemailer": "^6.4.4",
     "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "4.27.0",
     "@typescript-eslint/parser": "4.33.0",
