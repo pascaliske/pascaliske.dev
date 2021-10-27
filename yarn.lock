@@ -23,7 +23,7 @@
     tsconfig-paths "^3.9.0"
     webpack-merge "^5.7.3"
 
-"@angular-devkit/architect@0.1200.4", "@angular-devkit/architect@>=0.1200.0 < 0.1300.0":
+"@angular-devkit/architect@0.1200.4":
   version "0.1200.4"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1200.4.tgz#03b41bf94e39928de0eb35654aa4d2e59ac34418"
   integrity sha512-/BKaVlpbZYb65elZ+xHoKB2J2DuTstMU++dqE9T/7E0CevuMoOdkLQFQm71Kjl3eFI4i6T5d8mlLVPNE/ZWm7w==
@@ -31,7 +31,7 @@
     "@angular-devkit/core" "12.0.4"
     rxjs "6.6.7"
 
-"@angular-devkit/architect@0.1202.11":
+"@angular-devkit/architect@0.1202.11", "@angular-devkit/architect@>=0.1200.0 < 0.1300.0":
   version "0.1202.11"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1202.11.tgz#8501a502095ec87e3cdd4584fea497d9be19f7d4"
   integrity sha512-9veul0Hse+4yGxfQW6AfeWYhxE6CM/EtrvGkv4JCrYJVVkfGW64EVG1p2nJt4yVk69iA2f+On3c4t1uXKtLy/Q==
@@ -253,7 +253,7 @@
     rxjs "6.6.2"
     source-map "0.7.3"
 
-"@angular-devkit/core@12.0.4", "@angular-devkit/core@^12.0.0":
+"@angular-devkit/core@12.0.4":
   version "12.0.4"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.0.4.tgz#23b92b6e9c430107d1ca4e11336d509365e48ee1"
   integrity sha512-gtQkLXuQK7NPkurw49//MFZWoRa9aVCIbxE2uxbDAzzQengx9nLUoezS2xVdM7m/SqVK72YL+ZFfSTXzfiSdnA==
@@ -265,7 +265,7 @@
     rxjs "6.6.7"
     source-map "0.7.3"
 
-"@angular-devkit/core@12.2.11":
+"@angular-devkit/core@12.2.11", "@angular-devkit/core@^12.0.0":
   version "12.2.11"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.2.11.tgz#ea8a4d8932fbf3f4a175ad8ac06497e00023b3c1"
   integrity sha512-JgOKDr6zQu/uVZ5le5shgCeIoq3zQvybZGwxjkdWZdoO8rc5oggoiB2PZrPStolhIjFkQ2/mUvhtqnn7D+w8UA==
@@ -1893,10 +1893,10 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@briebug/cypress-schematic@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@briebug/cypress-schematic/-/cypress-schematic-5.0.0.tgz#4d2310099efab36341205825166f86549bdf820f"
-  integrity sha512-CMjPSihkS9BpI3J4uRs/KINahh7QgG98bv9oIyTjNPQhX+n13iuhQTXgFukxwd6CylPWOTQOLS/mnKqf6LvMGg==
+"@briebug/cypress-schematic@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@briebug/cypress-schematic/-/cypress-schematic-5.0.1.tgz#c1877761af4dc76bb42cc89c90417a7a777c856a"
+  integrity sha512-FYdNwQnKaZTKoVT4cUffSy25v/waDNE6ZThrRLykchjk7fY6sAscdvMiG1LCdQ+95x+4+495rYbaQ3R9MfB0kw==
   dependencies:
     "@angular-devkit/architect" "^0.1001.0"
     "@angular-devkit/core" "^10.1.0"
