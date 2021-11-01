@@ -106,7 +106,7 @@
     "eslint-plugin-cypress": "^2.11.3",
     "esm": "^3.2.25",
     "firebase-admin": "^9.9.0",
-    "firebase-functions": "^3.14.1",
+    "firebase-functions": "^3.16.0",
     "firebase-tools": "^9.13.1",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.4",
