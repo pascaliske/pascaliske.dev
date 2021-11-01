@@ -95,7 +95,7 @@
     "@types/node": "^15.12.4",
     "@types/nodemailer": "^6.4.2",
     "@types/webpack": "^5.28.0",
-    "@typescript-eslint/eslint-plugin": "4.27.0",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "bundlewatch": "^0.3.2",
     "chalk": "^4.1.1",
