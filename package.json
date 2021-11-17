@@ -80,7 +80,7 @@
     "@angular/language-service": "^12.2.11",
     "@briebug/cypress-schematic": "^5.0.0",
     "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@cypress/webpack-preprocessor": "^5.9.0",
     "@packtracker/webpack-plugin": "^2.3.0",
     "@pascaliske/eslint-config": "^2.0.5",
