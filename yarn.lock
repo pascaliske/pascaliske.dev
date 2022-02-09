@@ -2971,10 +2971,10 @@
   resolved "https://registry.yarnpkg.com/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"
   integrity sha512-5tXH6Bx/kNGd3MgffdmP4dy2Z+G4eaXw0SE81Tq3BNadtnMR5/ySMzX4SLEzHJzSmPNn4HIdpQsBvXMUykr58w==
 
-"@types/marked@^2.0.0":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-2.0.3.tgz#c8ea93684e530cc3b667d3e7226556dd0844ad1f"
-  integrity sha512-lbhSN1rht/tQ+dSWxawCzGgTfxe9DB31iLgiT1ZVT5lshpam/nyOA1m3tKHRoNPctB2ukSL22JZI5Fr+WI/zYg==
+"@types/marked@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.2.tgz#cb2dbf10da2f41cf20bd91fb5f89b67540c282f7"
+  integrity sha512-auNrZ/c0w6wsM9DccwVxWHssrMDezHUAXNesdp2RQrCVCyrQbOiSq7yqdJKrUQQpw9VTm7CGYJH2A/YG7jjrjQ==
 
 "@types/mdast@^3.0.0":
   version "3.0.3"
@@ -10199,10 +10199,10 @@ marked@^0.7.0:
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
   integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
-marked@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-2.1.0.tgz#289924c0613f1505a6c2b20b41cd75db96a50efe"
-  integrity sha512-KSdOTs1I/+hrQrFB+e7O/r+AorwdD4XzAi9caoRrbbkRLUS6txr1MZCZQhimm1N5Pg7A/WazC9VrYgqnwGiXMg==
+marked@^4.0.10:
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.12.tgz#2262a4e6fd1afd2f13557726238b69a48b982f7d"
+  integrity sha512-hgibXWrEDNBWgGiK18j/4lkS6ihTe9sxtV4Q1OQppb/0zzyPSzoFANBa5MfsG/zgsWklmNnhm0XACZOH/0HBiQ==
 
 marky@^1.2.0, marky@^1.2.2:
   version "1.2.2"
@@ -10781,15 +10781,15 @@ ngx-cookieconsent@^2.2.3:
   resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.2.3.tgz#52b44f37557b74841cd332905c94b72bb29fdd82"
   integrity sha512-vg7M4XZSTFRAQq20M0YVJdz5OkXIu0t0MSYos0vvu7oblaEivQstA1Mg5bO7OJYp+oFoTEefWhvO2nCiyHn9SQ==
 
-ngx-markdown@^12.0.1:
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-12.0.1.tgz#94345e99176533c17396f93e97ff5dc172d8ebcc"
-  integrity sha512-vMp9SyqmVQZCX374MiCV4sRR1SIv5m3xR2HZ39b3+6/BGjAb46mb4wRXKdIxYUoPba7NYZ8GAt5moUCyVZcCyA==
+ngx-markdown@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-12.1.0.tgz#2dc92b1a7f3b4c22b043f1b7eca6032dba815cfd"
+  integrity sha512-Ut+CqLg+3UbYSix3/e+1PJBdFFbH9d9CyPnPUSnh7euVDbVOWw/cy/kwTW7uV3fX6HtTitmstc++nO38MLUr0Q==
   dependencies:
-    "@types/marked" "^2.0.0"
+    "@types/marked" "^4.0.2"
     emoji-toolkit "^6.5.0"
     katex "^0.13.0"
-    marked "^2.0.0"
+    marked "^4.0.10"
     prismjs "^1.23.0"
     tslib "^2.1.0"
 
