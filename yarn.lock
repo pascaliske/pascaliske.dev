@@ -2549,10 +2549,10 @@
     classnames "^2.3.1"
     tslib "^2.3.1"
 
-"@pascaliske/ngx-notifications@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-2.0.1.tgz#7cbacc7e64ca2ba5528aa7cd3d91476d7590f913"
-  integrity sha512-yITYpXHks7EhBSkJeP00DxJVCLfmmWnTjwqZU/wdPhtwLwHxt6I0IWcDxB0nuI1ojT8DYhUkgr1hQ4kBMx4IcQ==
+"@pascaliske/ngx-notifications@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@pascaliske/ngx-notifications/-/ngx-notifications-2.1.0.tgz#d2552362e257ecd196ef449b52387445d8b74d95"
+  integrity sha512-UBjon+vdP7tnAWfz/HNgF92wqk4SzyiuHIaCWji34NZ5gr7gDbIsTR0BIBvHF7A87A6GC3yYVJWPNKgdAXf3SA==
   dependencies:
     tslib "^2.0.0"
     uuid "^3.3.2"

@@ -47,7 +47,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@pascaliske/form-elements": "^3.0.0",
     "@pascaliske/html-helpers": "^1.5.11",
-    "@pascaliske/ngx-notifications": "^2.0.1",
+    "@pascaliske/ngx-notifications": "^2.1.0",
     "@pascaliske/ngx-sentry": "^3.0.1",
     "@sentry/browser": "^6.7.1",
     "choices.js": "^9.0.1",
