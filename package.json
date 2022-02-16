@@ -45,7 +45,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@pascaliske/form-elements": "^3.0.0",
+    "@pascaliske/form-elements": "^4.0.0",
     "@pascaliske/html-helpers": "^1.5.11",
     "@pascaliske/ngx-notifications": "^2.0.1",
     "@pascaliske/ngx-sentry": "^3.0.1",
