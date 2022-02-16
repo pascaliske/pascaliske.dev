@@ -120,7 +120,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "ts-loader": "^9.2.3",
-    "ts-node": "~10.0.0",
+    "ts-node": "~10.5.0",
     "typescript": "~4.2.4",
     "webpack-dashboard": "^3.3.6",
     "webpack-visualizer-plugin2": "^1.0.0"
