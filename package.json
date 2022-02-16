@@ -48,7 +48,7 @@
     "@pascaliske/form-elements": "^3.0.0",
     "@pascaliske/html-helpers": "^1.5.11",
     "@pascaliske/ngx-notifications": "^2.0.1",
-    "@pascaliske/ngx-sentry": "^3.0.1",
+    "@pascaliske/ngx-sentry": "^4.0.1",
     "@sentry/browser": "^6.7.1",
     "choices.js": "^9.0.1",
     "cookieconsent": "^3.1.1",
