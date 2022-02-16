@@ -2541,10 +2541,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@pascaliske/html-helpers@^1.5.11":
-  version "1.5.11"
-  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.5.11.tgz#2df26811a0088bc2daeb0aa8ed20c7f95dd082eb"
-  integrity sha512-11/icXCL5/L36zxiJAt2mVM4j0fqs7WBQ+j6R+HPaFNqC+a/atxPa78Vsr7xbXfHSnp90asrFGkinmkBAdjsmA==
+"@pascaliske/html-helpers@^1.5.12":
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/@pascaliske/html-helpers/-/html-helpers-1.5.12.tgz#33c8d1cb06561a8cd7c13a5aef8e46dd693a22bc"
+  integrity sha512-kf9mONymWbYSr199/Xo2/UG2NOdy4Lqi0N35syxffjyhp5TDp3Ei8H5YL10J4ohSayR6cSdSIHVGZkjMPG5Qug==
   dependencies:
     classnames "^2.3.1"
     tslib "^2.3.1"
