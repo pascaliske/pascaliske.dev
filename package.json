@@ -1,7 +1,7 @@
 {
   "name": "pascaliske-dev",
   "description": "Angular Web App built with GitHub Actions and deployed with Firebase.",
-  "version": "2.2.4",
+  "version": "2.3.0",
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
