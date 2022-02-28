@@ -55,6 +55,10 @@ jobs:
           CI_BRANCH: ${{ env.GITHUB_REF }}
 
       # deploy
+      - uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: production
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           projectId: pascaliske-dev
