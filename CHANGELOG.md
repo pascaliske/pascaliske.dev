@@ -1,3 +1,12 @@
+## [2.3.1](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.0...v2.3.1) (2022-02-28)
+
+
+### Bug Fixes
+
+* fix eslint issues with typescript typings ([9cb0ff0](https://github.com/pascaliske/pascaliske.dev/commit/9cb0ff0b54d59fa7a1f605318dea4b48e5a574a6))
+
+
+
 # [2.3.0](https://github.com/pascaliske/pascaliske.dev/compare/v2.2.4...v2.3.0) (2022-02-28)
 
 
