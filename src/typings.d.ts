@@ -15,3 +15,10 @@ declare const APP_VERSION: string
 declare let gtag: (event: string, eventName: string, options: Record<string, any>) => void
 declare let gtagInit: (window: Window, document: Document) => void
 declare let gtagOut: () => void
+
+/**
+ * Patch effective network type into {@link NetworkInformation}.
+ */
+interface NetworkInformation extends EventTarget {
+    readonly effectiveType?: '2g' | '3g' | '4g' | 'slow-2g'
+}

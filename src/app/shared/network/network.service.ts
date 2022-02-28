@@ -24,10 +24,10 @@ export class NetworkService {
      * @param {Observable<'slow' | 'fast'>}
      */
     public speed$: Observable<'slow' | 'fast'> = this.share(
-        fromEvent((navigator as any).connection, 'change').pipe(
-            startWith((navigator as any).connection.effectiveType),
+        fromEvent(navigator.connection, 'change').pipe(
+            startWith(navigator.connection.effectiveType),
             map<unknown, 'slow' | 'fast'>(() => {
-                switch ((navigator as any).connection.effectiveType) {
+                switch (navigator.connection.effectiveType) {
                     case 'slow-2g':
                     case '2g':
                         return 'slow'

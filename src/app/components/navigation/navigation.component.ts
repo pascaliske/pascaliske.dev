@@ -58,7 +58,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
      * @param {BreakpointService} breakpointService
      */
     public constructor(
-        @Inject(PLATFORM_ID) private readonly platformId,
+        @Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>,
         private readonly breakpointService: BreakpointService,
     ) {}
 

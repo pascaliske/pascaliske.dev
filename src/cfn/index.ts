@@ -58,7 +58,7 @@ export const sendCspReport = https.onRequest((req: Request, res: Response) => {
     security(req, res, () => {})
 
     // try parsing the data
-    const data = JSON.parse(req.body)
+    const data = JSON.parse(req.body as string)
 
     if (!data || data.length === 0) {
         res.status(204).send()

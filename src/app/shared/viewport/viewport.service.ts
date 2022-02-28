@@ -38,9 +38,9 @@ export class ViewportService {
     /**
      * Initializes the ViewportService.
      */
-    public constructor(@Inject(PLATFORM_ID) private readonly platformId) {
+    public constructor(@Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>) {
         if (isPlatformBrowser(this.platformId)) {
-            this.observer = new IntersectionObserver(this.handler.bind(this), this.options)
+            this.observer = new IntersectionObserver(entries => this.handler(entries), this.options)
         }
     }
 

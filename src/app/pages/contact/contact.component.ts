@@ -4,8 +4,9 @@ import { FormBuilder, AbstractControl, FormGroup } from '@angular/forms'
 import { FValidation } from '@pascaliske/form-elements'
 import { TitleService } from '../../shared/title/title.service'
 import { TrackingService } from '../../shared/tracking/tracking.service'
-import { ContactService } from './contact.service'
 import { Page } from '../page'
+import { ContactService } from './contact.service'
+import { ContactFormData } from './typings'
 
 @Component({
     selector: 'cmp-contact',
@@ -70,7 +71,7 @@ export class ContactComponent extends Page implements OnInit {
             return
         }
 
-        this.contactService.send(this.contactForm.value)
+        this.contactService.send(this.contactForm.value as ContactFormData)
         this.contactForm.reset()
         this.trackingService.track('event', {
             event_category: 'contact-form',

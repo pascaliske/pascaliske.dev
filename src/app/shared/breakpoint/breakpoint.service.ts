@@ -114,7 +114,7 @@ export class BreakpointService {
     /**
      * Initializes the breakpoint service.
      */
-    public constructor(@Inject(PLATFORM_ID) private readonly platformId) {
+    public constructor(@Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>) {
         if (isPlatformBrowser(this.platformId)) {
             this.handleResize()
         }

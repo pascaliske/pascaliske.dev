@@ -28,7 +28,7 @@ export class SectionComponent implements OnInit {
 
     public ngOnInit(): void {
         this.viewportService
-            .observe(this.element.nativeElement)
+            .observe(this.element.nativeElement as Element)
             .pipe(takeWhile(() => this.alive))
             .subscribe((entry: IntersectionObserverEntry) => {
                 if (entry.isIntersecting) {
