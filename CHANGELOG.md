@@ -1,3 +1,7 @@
+## [2.3.2](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.1...v2.3.2) (2022-02-28)
+
+
+
 ## [2.3.1](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.0...v2.3.1) (2022-02-28)
 
 
