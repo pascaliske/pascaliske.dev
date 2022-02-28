@@ -37,7 +37,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/app",
+            "outputPath": "dist/pascaliske-dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,7 +64,10 @@
                 "output": "/"
               }
             ],
-            "styles": ["src/scss/common.scss"],
+            "styles": [
+              "node_modules/@pascaliske/form-elements/styles.scss",
+              "src/scss/common.scss"
+            ],
             "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": ["src/scss"]

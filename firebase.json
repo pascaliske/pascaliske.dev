@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/app",
+    "public": "dist/pascaliske-dev",
     "cleanUrls": true,
     "trailingSlash": false,
     "ignore": [

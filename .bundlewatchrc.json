@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "path": "dist/app/*.js",
+      "path": "dist/pascaliske-dev/*.js",
       "maxSize": "250kB"
     }
   ]

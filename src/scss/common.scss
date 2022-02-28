@@ -8,10 +8,9 @@
 @import 'shared';
 
 // external libraries
-@import '~@pascaliske/form-elements/styles';
 @import '~modern-normalize/modern-normalize';
-@import '~flatpickr/dist/flatpickr.min.css';
-@import '~cookieconsent/build/cookieconsent.min.css';
+@import '~flatpickr/dist/flatpickr.min';
+@import '~cookieconsent/build/cookieconsent.min';
 
 // app related stuff
 @import 'base/base';
