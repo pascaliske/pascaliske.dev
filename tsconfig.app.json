@@ -2,12 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist/out-tsc/app",
-    "baseUrl": "./",
-    "module": "esnext",
-    "types": [],
-    "typeRoots": ["src/typings.d.ts"]
+    "types": []
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
-  "include": ["src/typings.d.ts"],
+  "include": ["src/**/*.d.ts"],
   "exclude": ["src/prerender.ts", "src/cfn/index.ts"]
 }

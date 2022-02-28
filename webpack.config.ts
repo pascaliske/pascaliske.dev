@@ -1,25 +1,22 @@
 /// <reference types="node" />
 
 import { Configuration, DefinePlugin } from 'webpack'
-import * as DashboardPlugin from 'webpack-dashboard/plugin'
-import * as VisualizerPlugin from 'webpack-visualizer-plugin2'
 import * as PacktrackerPlugin from '@packtracker/webpack-plugin'
 import { name, version } from './package.json'
 
 export default (config: Configuration): Configuration => {
     const command = process.argv?.[2]?.toLowerCase()
 
-    config.plugins.push(new DashboardPlugin())
-
     if (command === 'build') {
+        /* eslint-disable dot-notation */
         config.resolve.alias = {}
         config.resolve.alias['@sentry/browser'] = '@sentry/browser/esm'
         config.resolve.alias['flatpickr'] = 'flatpickr/dist/flatpickr.min'
-        config.resolve.alias['marked'] = 'marked/marked.min'
+        /* eslint-enable dot-notation */
+
+        // plugins
         config.plugins.push(
-            new VisualizerPlugin({
-                filename: './stats.html',
-            }),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             new PacktrackerPlugin({
                 branch: process.env.GITHUB_REF.replace('refs/heads/', ''),
                 upload: process.env.CI === 'true',

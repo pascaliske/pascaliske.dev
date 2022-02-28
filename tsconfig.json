@@ -7,14 +7,28 @@
     "declaration": false,
     "module": "es2020",
     "moduleResolution": "node",
-    "target": "es2015",
+    "target": "es2017",
     "importHelpers": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"]
+    "typeRoots": ["node_modules/@types", "src/typings.d.ts"],
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "environments": ["src/environments"],
+      "environments/*": ["src/environments/*"],
+      "core": ["src/app/core"],
+      "core/*": ["src/app/core/*"],
+      "shared": ["src/app/shared"],
+      "shared/*": ["src/app/shared/*"],
+      "store": ["src/app/store"],
+      "store/*": ["src/app/store/*"],
+      "pages": ["src/app/pages"],
+      "pages/*": ["src/app/pages/*"],
+      "components": ["src/app/components"],
+      "components/*": ["src/app/components/*"]
+    }
   }
 }
