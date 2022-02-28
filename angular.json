@@ -126,33 +126,6 @@
             "lintFilePatterns": ["src/**/*.ts"]
           }
         },
-        "server": {
-          "builder": "@angular-builders/custom-webpack:server",
-          "options": {
-            "outputPath": "dist/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "stylePreprocessorOptions": {
-              "includePaths": ["src/scss"]
-            },
-            "customWebpackConfig": {
-              "path": "webpack.config.ts"
-            }
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "customWebpackConfig": {
-                "path": "webpack.config.ts"
-              }
-            }
-          }
-        },
         "e2e": {
           "builder": "@briebug/cypress-schematic:cypress",
           "options": {

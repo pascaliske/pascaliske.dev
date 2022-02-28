@@ -3,10 +3,6 @@
     {
       "path": "dist/app/*.js",
       "maxSize": "250kB"
-    },
-    {
-      "path": "dist/cfn/*.js",
-      "maxSize": "5kB"
     }
   ]
 }
