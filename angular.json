@@ -130,7 +130,7 @@
           }
         },
         "e2e": {
-          "builder": "@briebug/cypress-schematic:cypress",
+          "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "pascaliske-dev:serve"
           },
@@ -141,7 +141,7 @@
           }
         },
         "cypress": {
-          "builder": "@briebug/cypress-schematic:cypress",
+          "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "pascaliske-dev:serve",
             "watch": true,
