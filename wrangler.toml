@@ -1,0 +1,20 @@
+type = "webpack"
+name = "pascaliske-dev"
+compatibility_date = "2022-02-28"
+workers_dev = true
+
+[site]
+bucket = "./dist/pascaliske-dev"
+entry-point = "./workers"
+
+[build]
+command = ""
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+route = "pascaliske.dev/*"
+
+[env.staging]
+route = "next.pascaliske.dev/*"

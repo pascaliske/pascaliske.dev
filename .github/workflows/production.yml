@@ -59,6 +59,9 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           environment: production
+        env:
+          CF_ACCOUNT_ID: '${{ secrets.CF_ACCOUNT_ID }}'
+          CF_ZONE_ID: '${{ secrets.CF_ZONE_ID }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           projectId: pascaliske-dev

@@ -1,0 +1,8 @@
+{
+  "name": "worker",
+  "description": "Worker function for CloudFlare",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0"
+  }
+}
