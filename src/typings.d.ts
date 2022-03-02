@@ -11,7 +11,8 @@ declare const APP_VERSION: string
 /**
  * Google Analytics Functions.
  */
-declare let gtag: (event: string, eventName: string, options: Record<string, unknown>) => void
+ // eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare let gtag: (event: string, eventName: string, options: Record<string, any>) => void
 declare let gtagInit: (window: Window, document: Document) => void
 declare let gtagOut: () => void
 
