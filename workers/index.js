@@ -64,12 +64,11 @@ async function handleEvent(event) {
     try {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         const page = await getAssetFromKV(event, options)
-        const response = new Response(page.body, page)
 
         // apply headers
-        headers.forEach((value, name) => response.headers.set(name, value))
+        headers.forEach((value, name) => page.headers.set(name, value))
 
-        return response
+        return new Response(page.body, page)
     } catch (error) {
         try {
             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument

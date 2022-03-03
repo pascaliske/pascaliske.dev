@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/workers/worker
 
 # dependencies
 /node_modules
