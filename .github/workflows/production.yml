@@ -32,13 +32,13 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           command: yarn run e2e --headless --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
