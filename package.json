@@ -57,7 +57,7 @@
     "ngx-progressbar": "^8.0.0",
     "rxjs": "^7.5.4",
     "susy": "^3.0.7",
-    "tslib": "^2.3.1",
+    "tslib": "^2.4.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
