@@ -42,7 +42,7 @@
     "@pascaliske/html-helpers": "^1.5.12",
     "@pascaliske/ngx-notifications": "^2.1.0",
     "@pascaliske/ngx-sentry": "^4.0.2",
-    "@sentry/browser": "^6.18.1",
+    "@sentry/browser": "^6.19.7",
     "choices.js": "^10.1.0",
     "cookieconsent": "^3.1.1",
     "flatpickr": "^4.6.13",
