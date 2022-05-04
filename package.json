@@ -111,7 +111,7 @@
     "start-server-and-test": "^1.14.0",
     "stylelint": "^14.5.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
-    "ts-loader": "^9.2.7",
+    "ts-loader": "^9.3.0",
     "ts-node": "~10.6.0",
     "typescript": "~4.5.5"
   }
