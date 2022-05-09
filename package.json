@@ -101,7 +101,7 @@
     "firebase-functions": "^3.18.1",
     "firebase-tools": "^10.2.2",
     "fs-extra": "^10.0.1",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lighthouse": "^9.4.0",
     "lint-staged": "^12.3.8",
     "nodemailer": "^6.7.2",
