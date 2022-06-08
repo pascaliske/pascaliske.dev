@@ -9580,10 +9580,10 @@ ngx-markdown@^13.1.0:
     prismjs "^1.25.0"
     tslib "^2.3.0"
 
-ngx-progressbar@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/ngx-progressbar/-/ngx-progressbar-8.0.0.tgz#eca1d68573d36ddb296c1c1104b4e5a90bb1a9e0"
-  integrity sha512-HqhmbywxzDTo7bxYJRoLvFg6EgGMImNHu1xV0KlYQGj99IAyOfBtH6LwYpYX+ubcrLXsPHknfVFHvdQuvvsZgw==
+ngx-progressbar@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-progressbar/-/ngx-progressbar-9.0.0.tgz#71eabd9bebb67cf887e3e776f6747bd34777badc"
+  integrity sha512-QaDxKY3KNlOdzPgdVzoUZVemZIM4YHmn3XrzbyQHWUaD1Gd6fr3BOJ+tTMKEfrJzjFQte/lszAKCaTrHY0g95w==
   dependencies:
     tslib "^2.0.0"
 
