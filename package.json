@@ -47,7 +47,7 @@
     "cookieconsent": "^3.1.1",
     "flatpickr": "^4.6.13",
     "fuzzysearch": "^1.0.3",
-    "intersection-observer": "^0.12.0",
+    "intersection-observer": "^0.12.2",
     "lodash-es": "^4.17.21",
     "marked": "^4.0.12",
     "modern-normalize": "^1.1.0",
