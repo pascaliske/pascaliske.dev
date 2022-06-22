@@ -93,7 +93,7 @@
     "chalk": "^5.0.0",
     "codelyzer": "^6.0.0",
     "cors": "^2.8.5",
-    "cypress": "^9.5.1",
+    "cypress": "^10.2.0",
     "eslint": "^8.15.0",
     "eslint-plugin-cypress": "^2.12.1",
     "esm": "^3.2.25",
