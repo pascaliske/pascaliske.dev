@@ -77,7 +77,7 @@
     "@cypress/webpack-preprocessor": "^5.11.1",
     "@packtracker/webpack-plugin": "^2.3.0",
     "@pascaliske/eslint-config": "^2.0.6",
-    "@pascaliske/prettier-config": "^1.1.5",
+    "@pascaliske/prettier-config": "^1.2.0",
     "@rstacruz/bump-cli": "^2.0.1",
     "@sentry/cli": "^1.73.2",
     "@types/cors": "^2.8.12",
