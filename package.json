@@ -49,7 +49,7 @@
     "fuzzysearch": "^1.0.3",
     "intersection-observer": "^0.12.0",
     "lodash-es": "^4.17.21",
-    "marked": "^4.0.12",
+    "marked": "^4.0.19",
     "modern-normalize": "^1.1.0",
     "modularscale-sass": "^3.0.10",
     "ngx-cookieconsent": "^2.2.3",
