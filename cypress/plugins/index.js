@@ -1,6 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports,@typescript-eslint/no-var-requires
 const webpack = require('@cypress/webpack-preprocessor')
 
-module.exports = on => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+module.exports = (on, config) => {
     const preprocessor = webpack({
         webpackOptions: {
             resolve: {
