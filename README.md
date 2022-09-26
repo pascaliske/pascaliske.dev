@@ -4,7 +4,7 @@
 
 This is my personal website.
 
-I created this public repository to test some really cool tools I found online. The website is built with Angular and performance in mind. I manage the deployment and hosting automatically through TravisCI and Firebase while all dependencies are automatically managed by Dependabot. For security reasons I test all dependencies with Snyk for vulnerabilities. Error tracking is enabled through Sentry.
+I created this public repository to test some really cool tools I found online. The website is built with Angular and performance in mind. I manage the deployment and hosting automatically through GitHub Actions and Cloudfront while all dependencies are automatically managed by Dependabot. For security reasons I test all dependencies with Snyk for vulnerabilities. Error tracking is enabled through Sentry.
 
 Have fun discovering the source code! 🙂
 
@@ -14,9 +14,9 @@ Have fun discovering the source code! 🙂
 | :------------: | :---------------: | :---------: | :-------------: | :-----------: | :---------------------: |
 |    Angular     |    TypeScript     |    RxJS     |    Prettier     |    Lodash     |    Google Analytics     |
 
-| ![Firebase][fb] | ![GitHub][gh] | ![Dependabot][db] | ![Yarn][ya] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] |
-| :-------------: | :-----------: | :---------------: | :---------: | :-----------: | :---------------: | :-----------------: |
-|    Firebase     |    GitHub     |    Dependabot     |    Yarn     |    Sentry     |    Lighthouse     |    Bundle Watch     |
+| ![Cloudflare][cf] | ![GitHub][gh] | ![Dependabot][db] | ![Yarn][ya] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] |
+| :---------------: | :-----------: | :---------------: | :---------: | :-----------: | :---------------: | :-----------------: |
+|    Cloudflare     |    GitHub     |    Dependabot     |    Yarn     |    Sentry     |    Lighthouse     |    Bundle Watch     |
 
 and [more](https://github.com/pascaliske/pascaliske.dev/blob/master/package.json)...
 
@@ -28,7 +28,7 @@ and [more](https://github.com/pascaliske/pascaliske.dev/blob/master/package.json
 [pr]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-dark.png
 [lo]: https://lodash.com/assets/img/lodash.svg
 [ga]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
-[fb]: https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg
+[cf]: https://avatars.githubusercontent.com/u/314135?s=300&v=4
 [gh]: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 [db]: https://avatars3.githubusercontent.com/in/2141?s=300&v=4
 [ya]: https://avatars.githubusercontent.com/u/22247014?s=300&v=4

@@ -1,14 +1,16 @@
-name: Deploy Preview
-on: pull_request
+name: Deploy Staging
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  preview:
-    name: Preview
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+  deploy:
+    name: Staging
     runs-on: ubuntu-latest
     environment:
-      name: preview
-      url: ${{ steps.firebase.outputs.details_url }}
+      name: staging
+      url: https://next.pascaliske.dev
     steps:
       # checkout
       - uses: actions/checkout@v3
@@ -42,9 +44,9 @@ jobs:
           environment: preview
         env:
           CF_ZONE_ID: '${{ secrets.CF_ZONE_ID }}'
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        id: firebase
-        with:
-          projectId: pascaliske-dev
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PASCALISKE_DEV }}'
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+
+      # clear cache
+      - uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CF_API_TOKEN }}

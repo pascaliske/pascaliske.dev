@@ -1,6 +1,6 @@
 {
   "name": "pascaliske-dev",
-  "description": "Angular Web App built with GitHub Actions and deployed with Firebase.",
+  "description": "Angular Web App built with GitHub Actions and deployed with Cloudflare.",
   "version": "2.3.4",
   "license": "MIT",
   "scripts": {
@@ -71,7 +71,8 @@
     "@angular/cli": "^13.2.5",
     "@angular/compiler-cli": "^13.2.5",
     "@angular/language-service": "^13.2.5",
-    "@commitlint/cli": "^17.1.2",
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@cypress/schematic": "1.6.0",
     "@cypress/webpack-preprocessor": "^5.11.1",
@@ -97,9 +98,6 @@
     "eslint": "^8.15.0",
     "eslint-plugin-cypress": "^2.12.1",
     "esm": "^3.2.25",
-    "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.1",
-    "firebase-tools": "^10.2.2",
     "fs-extra": "^10.0.1",
     "husky": "^8.0.1",
     "lighthouse": "^9.4.0",
