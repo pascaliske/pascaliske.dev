@@ -3,7 +3,7 @@ module.exports = {
     extends: '@pascaliske/eslint-config/angular',
     plugins: ['cypress'],
     parserOptions: {
-        project: `${__dirname}/tsconfig.lint.json`,
+        project: `${__dirname}/tsconfig.json`,
         createDefaultProgram: true,
     },
     env: {
