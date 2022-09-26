@@ -38,6 +38,3 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore
-
-      # build
-      - run: yarn run build
