@@ -1,20 +1,18 @@
-type = "webpack"
 name = "pascaliske-dev"
+main = "workers/index.js"
 compatibility_date = "2022-02-28"
 workers_dev = true
 
 [site]
 bucket = "./dist/pascaliske-dev"
-entry-point = "./workers"
 
 [build]
 command = ""
 
-[build.upload]
-format = "service-worker"
-
 [env.production]
+name = "pascaliske-dev-production"
 route = "pascaliske.dev/*"
 
 [env.staging]
+name = "pascaliske-dev-staging"
 route = "next.pascaliske.dev/*"

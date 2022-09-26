@@ -1,8 +1,0 @@
-{
-  "projectId": "pv7i3c",
-  "baseUrl": "http://localhost:4200",
-  "retries": {
-    "runMode": 2,
-    "openMode": 0
-  }
-}

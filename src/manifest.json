@@ -1,7 +1,7 @@
 {
   "name": "Pascal Iske",
   "short_name": "Pascal Iske",
-  "description": "Angular Web App built with Travis CI and deployed with Firebase.",
+  "description": "Angular Web App built with GitHub Actions and deployed with Cloudflare.",
   "theme_color": "#2d333d",
   "background_color": "#ffffff",
   "display": "minimal-ui",

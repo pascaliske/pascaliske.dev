@@ -11,7 +11,7 @@ declare const APP_VERSION: string
 /**
  * Google Analytics Functions.
  */
- // eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let gtag: (event: string, eventName: string, options: Record<string, any>) => void
 declare let gtagInit: (window: Window, document: Document) => void
 declare let gtagOut: () => void
@@ -21,4 +21,11 @@ declare let gtagOut: () => void
  */
 interface NetworkInformation extends EventTarget {
     readonly effectiveType?: '2g' | '3g' | '4g' | 'slow-2g'
+}
+
+/**
+ * Patch connection into {@link NavigatorNetworkInformation}.
+ */
+declare interface Navigator {
+    readonly connection?: NetworkInformation
 }

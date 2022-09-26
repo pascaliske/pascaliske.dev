@@ -4,16 +4,13 @@ on:
     tags:
       - '*'
 
-env:
-  PROD_DOMAIN: pascaliske.dev
-
 jobs:
   deploy:
     name: Production
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://${{ env.PROD_DOMAIN }}
+      url: https://pascaliske.dev
     steps:
       # checkout
       - uses: actions/checkout@v3
@@ -46,7 +43,7 @@ jobs:
           if-no-files-found: ignore
 
       # build
-      - run: yarn run build --base-href https://${{ env.PROD_DOMAIN }}
+      - run: yarn run build
       - run: yarn run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
@@ -62,12 +59,29 @@ jobs:
           environment: production
         env:
           CF_ZONE_ID: '${{ secrets.CF_ZONE_ID }}'
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+
+      # clear cache
+      - uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CF_API_TOKEN }}
+
+      # generate release notes
+      - name: Generate release notes
+        id: changelog
+        run: |
+          npx standard-changelog -i /dev/null -o CHANGES.md
+
+      # create github release
+      - uses: ncipollo/release-action@v1
         with:
-          projectId: pascaliske-dev
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PASCALISKE_DEV }}'
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          channelId: live
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          bodyFile: CHANGES.md
+          prerelease: ${{ steps.changelog.outputs.status == 'prereleased' }}
+          draft: ${{ steps.changelog.outputs.status == 'unreleased' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: README.md,LICENSE.md
 
       # - run: yarn run lighthouse --output-path=./report.html https://${{ env.PROD_DOMAIN }}
       # - run: yarn run now report.html --token ${{ secrets.NOW_TOKEN }} --no-clipboard --public

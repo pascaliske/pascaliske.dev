@@ -12,7 +12,7 @@ export class ContactService {
     ) {}
 
     /**
-     * Sends the contact form data to firebase cloud function for processing it.
+     * Sends the contact form data to a Cloudfront worker for processing it.
      *
      * @param {ContactFormData} data
      * @returns {void}
