@@ -4,9 +4,6 @@ on:
     branches:
       - master
 
-env:
-  PT_FAIL_BUILD: false
-
 jobs:
   deploy:
     name: Staging

@@ -80,7 +80,6 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@cypress/schematic": "2.1.1",
     "@cypress/webpack-preprocessor": "^5.12.2",
-    "@packtracker/webpack-plugin": "^2.3.0",
     "@pascaliske/eslint-config": "^2.0.6",
     "@pascaliske/prettier-config": "^1.2.0",
     "@rstacruz/bump-cli": "^2.0.1",

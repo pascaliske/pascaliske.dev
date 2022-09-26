@@ -4,9 +4,6 @@ on:
     tags:
       - '*'
 
-env:
-  PT_FAIL_BUILD: false
-
 jobs:
   deploy:
     name: Production

@@ -1,9 +1,6 @@
 name: Test App
 on: [push]
 
-env:
-  PT_FAIL_BUILD: false
-
 jobs:
   test:
     name: Test
