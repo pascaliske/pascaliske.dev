@@ -1641,14 +1641,17 @@
     jsonc-parser "^3.0.0"
     rxjs "~6.6.0"
 
-"@cypress/webpack-preprocessor@^5.12.2":
-  version "5.12.2"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.12.2.tgz#9cc623a5629980d7f2619569bffc8e3f05a701ae"
-  integrity sha512-t29wEFvI87IMnCd8taRunwStNsFjFWg138fGF0hPQOYgSj30fbzCEwFD9cAQLYMMcjjuXcnnw8yOfkzIZBBNVQ==
+"@cypress/webpack-preprocessor@^5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.13.0.tgz#cc40a252cd93351659665be66fc8e4fd8760b763"
+  integrity sha512-SurDdc0h/D1qZAxFodL2VXzF4oeAs4bn/rw5cQUwOD9jjC8Enj1gr83piqKX7/raTkG/Ovz9upy55SlKY5lvhg==
   dependencies:
     bluebird "3.7.1"
     debug "^4.3.2"
+    fs-extra "^10.1.0"
+    loader-utils "^2.0.0"
     lodash "^4.17.20"
+    webpack-virtual-modules "^0.4.4"
 
 "@cypress/xvfb@^1.2.4":
   version "1.2.4"
@@ -5547,10 +5550,10 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
-  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+fs-extra@^10.0.0, fs-extra@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -10248,6 +10251,11 @@ webpack-subresource-integrity@5.1.0:
   integrity sha512-sacXoX+xd8r4WKsy9MvH/q/vBtEHr86cpImXwyg74pFIpERKt6FmB8cXpeuh0ZLgclOlHI4Wcll7+R5L02xk9Q==
   dependencies:
     typed-assert "^1.0.8"
+
+webpack-virtual-modules@^0.4.4:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.5.tgz#e476842dab5eafb7beb844aa2f747fc12ebbf6ec"
+  integrity sha512-8bWq0Iluiv9lVf9YaqWQ9+liNgXSHICm+rg544yRgGYaR8yXZTVBaHZkINZSB2yZSWo4b0F6MIxqJezVfOEAlg==
 
 webpack@5.74.0, webpack@^5:
   version "5.74.0"
