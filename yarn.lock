@@ -7402,10 +7402,12 @@ neo-async@^2.6.0, neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngx-cookieconsent@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-2.2.3.tgz#52b44f37557b74841cd332905c94b72bb29fdd82"
-  integrity sha512-vg7M4XZSTFRAQq20M0YVJdz5OkXIu0t0MSYos0vvu7oblaEivQstA1Mg5bO7OJYp+oFoTEefWhvO2nCiyHn9SQ==
+ngx-cookieconsent@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-cookieconsent/-/ngx-cookieconsent-4.0.0.tgz#b348976b61dd72f5913d3453a487074723bdd3f0"
+  integrity sha512-l9WimehMt0zaBdyQk3Q1P9kBhgavI6f2f05MwS79BmiLZ/rnLUDEdoPRz3Rj2vnXSHpVk1O6APdWogvX0uRMgA==
+  dependencies:
+    tslib "^2.1.0"
 
 ngx-markdown@^14.0.1:
   version "14.0.1"
