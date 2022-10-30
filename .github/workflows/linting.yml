@@ -1,0 +1,24 @@
+name: Linting
+on: push
+
+jobs:
+  lint-angular:
+    name: Angular
+    runs-on: ubuntu-latest
+    steps:
+      # checkout
+      - uses: actions/checkout@v3
+
+      # setup node
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      # lint angular
+      - name: Lint
+        run: yarn run lint
