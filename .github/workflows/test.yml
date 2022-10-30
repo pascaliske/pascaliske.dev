@@ -1,5 +1,5 @@
 name: Test App
-on: [push]
+on: push
 
 jobs:
   test:
@@ -13,19 +13,23 @@ jobs:
       # checkout
       - uses: actions/checkout@v3
 
-      # prepare
+      # setup node
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install --frozen-lockfile
+
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       # test
-      - run: yarn run lint
       - uses: cypress-io/github-action@v2
         with:
           install: false
           command: yarn run e2e --headless --parallel --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      # upload artifacts
       - uses: actions/upload-artifact@v3
         if: failure()
         with:

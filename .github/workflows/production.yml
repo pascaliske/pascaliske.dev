@@ -17,18 +17,22 @@ jobs:
         with:
           fetch-depth: 2
 
-      # prepare
+      # setup node
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install --frozen-lockfile
+
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       # test
-      - run: yarn run lint
       - uses: cypress-io/github-action@v2
         with:
           command: yarn run e2e --headless --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      # upload artifacts
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
@@ -43,8 +47,12 @@ jobs:
           if-no-files-found: ignore
 
       # build
-      - run: yarn run build
-      - run: yarn run bundlewatch
+      - name: Build application
+        run: yarn run build
+
+      # bundlewatch
+      - name: Run bundlewatch
+        run: yarn run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
           CI_REPO_SLUG: ${{ env.GITHUB_REPOSITORY }}
