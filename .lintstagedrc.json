@@ -1,3 +1,4 @@
 {
-  "**/*.{ts,scss,html,md,json}": ["prettier --write"]
+  "**/*.{ts,scss,html,md,json}": ["prettier --write"],
+  "terraform/**/*.{tf,tfvars}": ["task tf:format --"]
 }
