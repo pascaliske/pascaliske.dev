@@ -16,3 +16,13 @@ terraform {
     }
   }
 }
+
+# local variables
+locals {
+  domain = "pascaliske.dev"
+}
+
+# zone
+data "cloudflare_zone" "zone" {
+  name = local.domain
+}

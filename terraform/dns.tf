@@ -1,8 +1,3 @@
-# zone
-data "cloudflare_zone" "zone" {
-  name = "pascaliske.dev"
-}
-
 # production
 resource "cloudflare_record" "production_ipv4" {
   zone_id = data.cloudflare_zone.zone.id
@@ -67,7 +62,7 @@ resource "cloudflare_record" "bimi" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "default._bimi"
-  value   = "v=BIMI1; l=https://pascaliske.dev/assets/logo.svg;"
+  value   = "v=BIMI1; l=https://${local.domain}/assets/logo.svg;"
 }
 
 # dmarc
@@ -75,7 +70,7 @@ resource "cloudflare_record" "dmarc" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "_dmarc"
-  value   = "v=DMARC1; p=quarantine; rua=mailto:info@pascaliske.dev"
+  value   = "v=DMARC1; p=quarantine; rua=mailto:info@${local.domain}"
 }
 
 # dkim
@@ -90,7 +85,7 @@ resource "cloudflare_record" "dkim" {
 resource "cloudflare_record" "spf" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = "pascaliske.dev"
+  name    = local.domain
   value   = "v=spf1 include:spf.uberspace.de ~all"
 }
 
@@ -106,7 +101,7 @@ resource "cloudflare_record" "openpgpkey" {
 resource "cloudflare_record" "google" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = "pascaliske.dev"
+  name    = local.domain
   value   = "google-site-verification=${var.google_verification_token}"
 }
 
@@ -114,6 +109,6 @@ resource "cloudflare_record" "google" {
 resource "cloudflare_record" "have_i_been_pwned" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = "pascaliske.dev"
+  name    = local.domain
   value   = "have-i-been-pwned-verification=${var.have_i_been_pwned_verification_token}"
 }
