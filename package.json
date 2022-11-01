@@ -78,7 +78,7 @@
     "@cloudflare/kv-asset-handler": "^0.2.0",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@cypress/schematic": "2.2.0",
+    "@cypress/schematic": "2.3.0",
     "@cypress/webpack-preprocessor": "^5.12.2",
     "@pascaliske/eslint-config": "^2.0.6",
     "@pascaliske/prettier-config": "^1.2.0",
