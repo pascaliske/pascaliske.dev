@@ -1,7 +1,7 @@
-variable "google_verification_token" {
+variable "GOOGLE_VERIFICATION_TOKEN" {
   type = string
 }
 
-variable "have_i_been_pwned_verification_token" {
+variable "HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN" {
   type = string
 }

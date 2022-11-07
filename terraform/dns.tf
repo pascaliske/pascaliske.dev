@@ -130,7 +130,7 @@ resource "cloudflare_record" "google" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = local.domain
-  value   = "google-site-verification=${var.google_verification_token}"
+  value   = "google-site-verification=${var.GOOGLE_VERIFICATION_TOKEN}"
 }
 
 # have-i-been-pwned
@@ -138,5 +138,5 @@ resource "cloudflare_record" "have_i_been_pwned" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = local.domain
-  value   = "have-i-been-pwned-verification=${var.have_i_been_pwned_verification_token}"
+  value   = "have-i-been-pwned-verification=${var.HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN}"
 }
