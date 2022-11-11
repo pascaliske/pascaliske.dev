@@ -12,6 +12,15 @@ resource "cloudflare_zone_settings_override" "zone_settings" {
     tls_1_3                  = "on"
     automatic_https_rewrites = "on"
 
+    # /ssl-tls/edge-certificates -> HSTS
+    security_header {
+      enabled            = true
+      preload            = false
+      max_age            = 15780000 # 6 months
+      include_subdomains = false
+      nosniff            = false
+    }
+
     # /security/settings
     security_level = "high"
 
