@@ -100,7 +100,7 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "standard-changelog": "^2.0.27",
-    "stylelint": "^14.13.0",
+    "stylelint": "^15.0.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "ts-loader": "^9.4.1",
     "ts-node": "~10.9.1",
