@@ -39,13 +39,6 @@ export class AppComponent implements OnInit, OnDestroy {
             },
         },
         {
-            label: 'Blog',
-            url: 'https://medium.com/pascal-iske',
-            options: {
-                decorated: true,
-            },
-        },
-        {
             label: 'Contact',
             route: 'contact',
             options: {
