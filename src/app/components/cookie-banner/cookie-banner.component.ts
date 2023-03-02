@@ -1,21 +1,16 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core'
-import { takeWhile } from 'rxjs/operators'
+import { Component, OnInit, ElementRef } from '@angular/core'
 import { NgcCookieConsentService } from 'ngx-cookieconsent'
 import { environment } from '../../../environments/environment'
-import { TrackingService } from '../../shared/tracking/tracking.service'
 
 @Component({
     selector: 'cmp-cookie-banner',
     templateUrl: './cookie-banner.component.html',
     styleUrls: ['./cookie-banner.component.scss'],
 })
-export class CookieBannerComponent implements OnInit, OnDestroy {
-    private alive: boolean = true
-
+export class CookieBannerComponent implements OnInit {
     public constructor(
         private readonly elementRef: ElementRef,
         private readonly cookieConsentService: NgcCookieConsentService,
-        private readonly trackingService: TrackingService,
     ) {}
 
     public ngOnInit(): void {
@@ -51,19 +46,5 @@ export class CookieBannerComponent implements OnInit, OnDestroy {
                 link: 'https://pascaliske.dev/en/privacy',
             },
         })
-
-        this.cookieConsentService.statusChange$
-            .pipe(takeWhile(() => this.alive))
-            .subscribe(event => {
-                this.trackingService.track('event', {
-                    event_category: 'cookie-consent',
-                    event_action: 'change',
-                    value: event.status,
-                })
-            })
-    }
-
-    public ngOnDestroy(): void {
-        this.alive = false
     }
 }

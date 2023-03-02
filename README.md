@@ -10,9 +10,9 @@ Have fun discovering the source code! 🙂
 
 ## Used frameworks, libs, tools, services...
 
-| ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Lodash][lo] | ![Google Analytics][ga] |
-| :------------: | :---------------: | :---------: | :-------------: | :-----------: | :---------------------: |
-|    Angular     |    TypeScript     |    RxJS     |    Prettier     |    Lodash     |    Google Analytics     |
+| ![Angular][ng] | ![TypeScript][ts] | ![RxJS][rx] | ![Prettier][pr] | ![Lodash][lo] |
+| :------------: | :---------------: | :---------: | :-------------: | :-----------: |
+|    Angular     |    TypeScript     |    RxJS     |    Prettier     |    Lodash     |
 
 | ![Cloudflare][cf] | ![GitHub][gh] | ![Dependabot][db] | ![Yarn][ya] | ![Sentry][sy] | ![Lighthouse][lh] | ![Bundle Watch][bw] |
 | :---------------: | :-----------: | :---------------: | :---------: | :-----------: | :---------------: | :-----------------: |
@@ -27,7 +27,6 @@ and [more](https://github.com/pascaliske/pascaliske.dev/blob/master/package.json
 [rx]: https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png
 [pr]: https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-dark.png
 [lo]: https://lodash.com/assets/img/lodash.svg
-[ga]: https://www.vectorlogo.zone/logos/google_analytics/google_analytics-official.svg
 [cf]: https://avatars.githubusercontent.com/u/314135?s=300&v=4
 [gh]: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 [db]: https://avatars3.githubusercontent.com/in/2141?s=300&v=4

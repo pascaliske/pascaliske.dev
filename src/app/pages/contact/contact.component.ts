@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router'
 import { FormBuilder, AbstractControl, FormGroup } from '@angular/forms'
 import { FValidation } from '@pascaliske/form-elements'
 import { TitleService } from '../../shared/title/title.service'
-import { TrackingService } from '../../shared/tracking/tracking.service'
 import { Page } from '../page'
 import { ContactService } from './contact.service'
 import { ContactFormData } from './typings'
@@ -34,7 +33,6 @@ export class ContactComponent extends Page implements OnInit {
         protected route: ActivatedRoute,
         private readonly formBuilder: FormBuilder,
         protected titleService: TitleService,
-        private readonly trackingService: TrackingService,
         private readonly contactService: ContactService,
     ) {
         super(route, titleService)
@@ -73,10 +71,6 @@ export class ContactComponent extends Page implements OnInit {
 
         this.contactService.send(this.contactForm.value as ContactFormData)
         this.contactForm.reset()
-        this.trackingService.track('event', {
-            event_category: 'contact-form',
-            event_action: 'submit',
-        })
     }
 
     public reset(): void {

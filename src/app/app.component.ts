@@ -3,7 +3,6 @@ import { Router, NavigationEnd } from '@angular/router'
 import { modifiers } from '@pascaliske/html-helpers'
 import { filter, takeWhile } from 'rxjs/operators'
 import { TitleService } from './shared/title/title.service'
-import { TrackingService } from './shared/tracking/tracking.service'
 import { NavigationItem } from './components/navigation/navigation.component'
 
 /**
@@ -62,13 +61,8 @@ export class AppComponent implements OnInit, OnDestroy {
      *
      * @param {Router} router
      * @param {TitleService} titleService
-     * @param {TrackingService} trackingService
      */
-    public constructor(
-        private readonly router: Router,
-        private titleService: TitleService,
-        private readonly trackingService: TrackingService,
-    ) {}
+    public constructor(private readonly router: Router, private titleService: TitleService) {}
 
     public ngOnInit(): void {
         this.titleService.divider = '//'
@@ -78,11 +72,8 @@ export class AppComponent implements OnInit, OnDestroy {
                 takeWhile(() => this.alive),
                 filter(event => event instanceof NavigationEnd),
             )
-            .subscribe((event: NavigationEnd) => {
+            .subscribe(() => {
                 this.show()
-                this.trackingService.track('page_view', {
-                    page_path: event.urlAfterRedirects,
-                })
             })
     }
 

@@ -3,9 +3,9 @@ import { getAssetFromKV, serveSinglePageApp } from '@cloudflare/kv-asset-handler
 // `Content-Security-Policy` values
 const cspValues = [
     `default-src 'self'`,
-    `connect-src 'self' sentry.io *.sentry.io fonts.googleapis.com fonts.gstatic.com www.googletagmanager.com www.google-analytics.com`,
+    `connect-src 'self' analytics.pascaliske.dev sentry.io *.sentry.io fonts.googleapis.com fonts.gstatic.com`,
     `style-src 'self' 'unsafe-inline' fonts.googleapis.com`,
-    `script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com`,
+    `script-src 'self' 'unsafe-inline' analytics.pascaliske.dev`,
     `img-src 'self'`,
     `font-src fonts.gstatic.com`,
     `object-src 'none'`,
