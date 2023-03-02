@@ -1,3 +1,23 @@
+## [2.3.5](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.4...v2.3.5) (2023-03-02)
+
+
+### Bug Fixes
+
+* remove navigation link to legacy blog ([1e2ef88](https://github.com/pascaliske/pascaliske.dev/commit/1e2ef889eafe63e32e594af9112a8bbde410c69c))
+* **deps:** update dependency zone.js to ~0.12.0 ([95afd7b](https://github.com/pascaliske/pascaliske.dev/commit/95afd7bc78fb4c14bc03122b2050957a858371a2))
+* ignore lint issues for cypress plugin import ([e224ec8](https://github.com/pascaliske/pascaliske.dev/commit/e224ec8f4fff3c190ebd1ebe1c80766c23d91638))
+* ignore lint issues for cypress plugins ([525af51](https://github.com/pascaliske/pascaliske.dev/commit/525af5198f7d8a39615d469c0f612ebc4b7b64db))
+
+
+### Features
+
+* **terraform:** enable hsts security header ([ca5c258](https://github.com/pascaliske/pascaliske.dev/commit/ca5c258ebe2b033c629555f1de8f27ed2a591e38))
+* **terraform:** implement cloudflare zone settings ([af517d0](https://github.com/pascaliske/pascaliske.dev/commit/af517d0352c7bcd36f2d009f997a1adba8e7ad61))
+* **terraform:** implement dns management via terraform ([7644ffb](https://github.com/pascaliske/pascaliske.dev/commit/7644ffb9f2c6b574b5b46f4de630ed82b5faf5e5))
+* **terraform:** implement www redirect ([1575c96](https://github.com/pascaliske/pascaliske.dev/commit/1575c96372bec617921845847dae3c42e2b0c8f0))
+
+
+
 ## [2.3.4](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.3...v2.3.4) (2022-03-02)
 
 
