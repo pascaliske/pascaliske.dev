@@ -1,3 +1,12 @@
+## [2.3.6](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.5...v2.3.6) (2023-03-04)
+
+
+### Features
+
+* upgrade angular to v15 ([9e6f39d](https://github.com/pascaliske/pascaliske.dev/commit/9e6f39d9e9d7ca2f5758f034a6153ab1776049a5))
+
+
+
 ## [2.3.5](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.4...v2.3.5) (2023-03-02)
 
 
