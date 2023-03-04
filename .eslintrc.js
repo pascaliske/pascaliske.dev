@@ -14,23 +14,5 @@ module.exports = {
     globals: {
         APP_ID: 'readonly',
         APP_VERSION: 'readonly',
-        gtag: 'readonly',
-        gtagInit: 'readonly',
-        gtagOut: 'readonly',
-    },
-    rules: {
-        camelcase: [
-            'error',
-            {
-                allow: [
-                    'page_path',
-                    'page_title',
-                    'page_location',
-                    'event_category',
-                    'event_action',
-                    'event_label',
-                ],
-            },
-        ],
     },
 }
