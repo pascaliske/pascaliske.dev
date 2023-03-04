@@ -55,7 +55,10 @@ export class AppComponent implements OnInit, OnDestroy {
      * @param {Router} router
      * @param {TitleService} titleService
      */
-    public constructor(private readonly router: Router, private titleService: TitleService) {}
+    public constructor(
+      private readonly router: Router,
+      private titleService: TitleService,
+    ) {}
 
     public ngOnInit(): void {
         this.titleService.divider = '//'
