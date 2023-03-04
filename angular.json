@@ -24,6 +24,12 @@
     "@schematics/angular:service": {
       "skipTests": true,
       "flat": false
+    },
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
     }
   },
   "projects": {
