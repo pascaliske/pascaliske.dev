@@ -62,7 +62,7 @@ resource "cloudflare_record" "bimi" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "default._bimi"
-  value   = "v=BIMI1; l=https://${local.domain}/assets/logo.svg;"
+  value   = "v=BIMI1; l=https://${local.domain}/assets/icons/bimi.svg;"
 }
 
 # dmarc
@@ -86,7 +86,7 @@ resource "cloudflare_record" "spf" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = local.domain
-  value   = "v=spf1 include:spf.uberspace.de ~all"
+  value   = "v=spf1 include:spf.uberspace.de include:relay.mailchannels.net ~all"
 }
 
 # openpgpkey

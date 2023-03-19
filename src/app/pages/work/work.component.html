@@ -1,0 +1,53 @@
+<cmp-headline [level]="'h1'" [text]="'Work'"></cmp-headline>
+
+<cmp-section [first]="first" *ngFor="let project of projects; let first = first">
+    <cmp-card>
+        <div class="flex max-w-full flex-wrap">
+            <img
+                class="max-h-[350px] w-full object-cover transition motion-safe:saturate-50 motion-safe:group-hover:saturate-100 md:max-h-none md:min-h-full md:w-[560px] md:max-w-[40%] xl:max-w-[50%]"
+                [src]="project.image.url"
+                [title]="project.image.credit"
+                [alt]="project.description"
+                loading="lazy"
+            />
+
+            <div class="flex-1 p-10">
+                <cmp-headline [level]="'h4'" [text]="project.title"></cmp-headline>
+
+                <cmp-copy>{{ project.description }}</cmp-copy>
+
+                <div class="mt-2 flex flex-wrap opacity-75 md:mt-5">
+                    <ng-container *ngFor="let tag of project.tags; let first = first">
+                        <span class="mx-2 opacity-75" *ngIf="!first">&middot;</span>
+                        <span>{{ tag }}</span>
+                    </ng-container>
+                </div>
+
+                <div class="mt-2 flex flex-wrap md:mt-5">
+                    <ng-container *ngFor="let link of project.links; let first = first">
+                        <span class="mx-2 opacity-75" *ngIf="!first">&middot;</span>
+                        <a [href]="link.url" target="_blank">
+                            <fa-icon class="mr-2" [icon]="link.icon"></fa-icon>
+                            <span>{{ link.name }}</span>
+                        </a>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </cmp-card>
+</cmp-section>
+
+<cmp-section>
+    <div class="flex justify-center">
+        <a
+            class="flex content-center text-2xl"
+            href="https://github.com/pascaliske?tab=repositories&type=source"
+            target="_blank"
+        >
+            <span class="mr-2">see more</span>
+            <fa-icon class="mt-0.5" [icon]="icons['faArrowRight']"></fa-icon>
+        </a>
+    </div>
+</cmp-section>
+
+<cmp-socials></cmp-socials>

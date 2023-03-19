@@ -1,30 +1,11 @@
-<div class="cmp-about">
-    <cmp-page-header [title]="title"></cmp-page-header>
-    <cmp-section [id]="'bio'">
-        <cmp-headline-h4 [text]="'Bio'"></cmp-headline-h4>
-        <cmp-copy
-            [text]="
-                'For nearly ten years I\'m developing websites. First beside school, later I registered a small one-man-business, named **PI-Webdesign**. Now I\'m working in a big and renowned digital agency.\n\nIn my opinion modern website designs of course also include Responsive Design for different mobile devices.'
-            "
-        ></cmp-copy>
+<cmp-headline [level]="'h1'" [text]="'About'"></cmp-headline>
 
-        <cmp-headline-h5 [text]="'To technically?'"></cmp-headline-h5>
-        <cmp-copy
-            [text]="
-                'No problem! You do not have to care about these technical terms. Because finally it is my job to build your website with this knowledge.'
-            "
-        ></cmp-copy>
+<div class="flex flex-col items-center lg:flex-row lg:items-start">
+    <cmp-section class="mb-10 max-w-4xl lg:mb-0 lg:mr-20" [first]="true">
+        <cmp-copy [html]="paragraph" *ngFor="let paragraph of paragraphs"></cmp-copy>
+    </cmp-section>
 
-        <cmp-headline-h5 [text]="'Advantages'"></cmp-headline-h5>
-        <cmp-copy
-            [text]="
-                'Benefit from professional experience combined with individual consulting of an independent developer.'
-            "
-        ></cmp-copy>
-    </cmp-section>
-    <cmp-section [id]="'examples'">
-        <cmp-headline-h4 [text]="'Examples'"></cmp-headline-h4>
-        <cmp-copy [text]="'You can find some of my references on this page.'"></cmp-copy>
-    </cmp-section>
-    <cmp-section [id]="'quick-contact'"> <cmp-quick-contact></cmp-quick-contact> </cmp-section>
+    <cmp-timeline class="mt-1"></cmp-timeline>
 </div>
+
+<cmp-socials></cmp-socials>

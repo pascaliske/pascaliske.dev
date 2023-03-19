@@ -1,19 +1,16 @@
-import { Component, OnDestroy } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
-import { TitleService } from '../../shared/title/title.service'
-import { Page } from '../page'
+import { Component, HostBinding } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { GreetingComponent } from 'components/greeting/greeting.component'
+import { SocialsComponent } from 'components/socials/socials.component'
 
 @Component({
+    standalone: true,
     selector: 'cmp-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
+    styleUrls: [],
+    imports: [CommonModule, GreetingComponent, SocialsComponent],
 })
-export class HomeComponent extends Page implements OnDestroy {
-    public constructor(protected route: ActivatedRoute, protected titleService: TitleService) {
-        super(route, titleService)
-    }
-
-    public ngOnDestroy(): void {
-        this.alive = false
-    }
+export class HomeComponent {
+    @HostBinding('class')
+    public classes: string = 'flex flex-1 flex-col justify-center'
 }

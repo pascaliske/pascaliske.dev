@@ -1,4 +1,5 @@
-<div class="cmp-copy" [ngClass]="getThemeModifiers()">
-    <p class="cmp-copy__text" [innerHTML]="text | markdown" *ngIf="text"></p>
-    <p class="cmp-copy__text" *ngIf="!text"><ng-content></ng-content></p>
-</div>
+<ng-container [ngSwitch]="type">
+    <p class="mb-5 font-light" *ngSwitchCase="'text'">{{ text }}</p>
+    <p class="mb-5 font-light" [innerHTML]="html" *ngSwitchCase="'html'"></p>
+    <p class="mb-5 font-light" *ngSwitchCase="'content'"><ng-content></ng-content></p>
+</ng-container>

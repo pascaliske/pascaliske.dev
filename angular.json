@@ -3,23 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "cli": {
+    "schematicCollections": ["@angular-eslint/schematics"],
     "packageManager": "yarn"
   },
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "cmp",
-      "style": "scss",
+      "style": "none",
       "skipTests": true,
+      "standalone": true,
       "export": true
+    },
+    "@schematics/angular:class": {
+      "skipTests": true
     },
     "@schematics/angular:directive": {
       "prefix": "",
       "skipTests": true,
       "export": true
     },
+    "@schematics/angular:guard": {
+      "skipTests": true
+    },
+    "@schematics/angular:interceptor": {
+      "skipTests": true
+    },
     "@schematics/angular:pipe": {
       "skipTests": true,
       "export": true
+    },
+    "@schematics/angular:resolver": {
+      "skipTests": true
     },
     "@schematics/angular:service": {
       "skipTests": true,
@@ -40,91 +54,59 @@
       "prefix": "cmp",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/pascaliske-dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
-              },
-              {
-                "glob": "robots.txt",
-                "input": "src",
-                "output": "/"
-              },
-              {
-                "glob": "manifest.json",
-                "input": "src",
-                "output": "/"
-              },
-              {
-                "glob": "favicon.ico",
-                "input": "src",
-                "output": "/"
-              }
-            ],
-            "styles": [
-              "node_modules/@pascaliske/form-elements/styles.scss",
-              "src/scss/common.scss"
-            ],
-            "scripts": [],
-            "stylePreprocessorOptions": {
-              "includePaths": ["src/scss"]
-            },
-            "customWebpackConfig": {
-              "path": "webpack.config.ts"
-            }
+            "assets": ["src/favicon.png", "src/robots.txt", "src/assets"],
+            "styles": ["src/styles/common.css"],
+            "scripts": []
           },
+          "defaultConfiguration": "production",
           "configurations": {
             "production": {
-              "optimization": {
-                "scripts": true,
-                "styles": {
-                  "minify": true,
-                  "inlineCritical": false
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
-                "fonts": true
-              },
-              "outputHashing": "all",
-              "sourceMap": {
-                "hidden": true,
-                "scripts": true,
-                "styles": false
-              },
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "serviceWorker": true,
-              "subresourceIntegrity": false,
-              "statsJson": true,
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "customWebpackConfig": {
-                "path": "webpack.config.ts"
-              }
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "browserTarget": "pascaliske-dev:build"
-          },
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "defaultConfiguration": "development",
           "configurations": {
             "production": {
               "browserTarget": "pascaliske-dev:build:production"
+            },
+            "development": {
+              "browserTarget": "pascaliske-dev:build:development"
             }
           }
         },
@@ -132,30 +114,6 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts"]
-          }
-        },
-        "e2e": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "devServerTarget": "pascaliske-dev:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "pascaliske-dev:serve:production"
-            }
-          }
-        },
-        "cypress": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "devServerTarget": "pascaliske-dev:serve",
-            "watch": true,
-            "headless": false
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "pascaliske-dev:serve:production"
-            }
           }
         }
       }

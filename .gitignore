@@ -4,10 +4,13 @@
 /dist
 /tmp
 /out-tsc
+/bazel-out
 /workers/worker
 
 # dependencies
 /node_modules
+npm-debug.log
+yarn-error.log
 
 # IDEs and editors
 /.idea
@@ -25,6 +28,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/*
 
 # Terraform
 terraform/.terraform
@@ -35,16 +39,10 @@ terraform/.terraform
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
 testem.log
 /typings
 /docs
-report.html
-cypress/videos
-cypress/screenshots
-
-# e2e
-/e2e
+/legacy
 
 # System Files
 .DS_Store

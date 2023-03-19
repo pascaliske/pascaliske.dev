@@ -1,0 +1,21 @@
+<div class="flex flex-col flex-wrap max-lg:translate-x-[calc(50%_-_10px)]">
+    <ng-container *ngFor="let point of points; let first = first; let last = last">
+        <div class="flex items-center" [class.mt-5]="!first">
+            <div
+                class="mr-5 flex h-5 w-5 items-center justify-center rounded-full border-[1px] border-paynesGray p-2.5 transition-colors dark:border-charcoal"
+            >
+                <span>+</span>
+            </div>
+            <span>{{ point }}</span>
+        </div>
+
+        <div class="mx-2.5 mt-5 h-10 w-0.5 bg-bitterSweet"></div>
+
+        <ng-container *ngIf="last">
+            <div class="mx-2.5 mt-2 h-0.5 w-0.5 rounded-full bg-bitterSweet opacity-80"></div>
+            <div class="mx-2.5 mt-2 h-0.5 w-0.5 rounded-full bg-bitterSweet opacity-60"></div>
+            <div class="mx-2.5 mt-2 h-0.5 w-0.5 rounded-full bg-bitterSweet opacity-40"></div>
+            <div class="mx-2.5 mt-2 h-0.5 w-0.5 rounded-full bg-bitterSweet opacity-20"></div>
+        </ng-container>
+    </ng-container>
+</div>

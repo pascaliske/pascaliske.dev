@@ -1,79 +1,103 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
-import { FormBuilder, AbstractControl, FormGroup } from '@angular/forms'
-import { FValidation } from '@pascaliske/form-elements'
-import { TitleService } from '../../shared/title/title.service'
-import { Page } from '../page'
-import { ContactService } from './contact.service'
-import { ContactFormData } from './typings'
+import { Component, HostBinding } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { RouterModule } from '@angular/router'
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms'
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { faPaperPlane, faTrashAlt } from '@fortawesome/free-regular-svg-icons'
+import {
+    faCircleNotch,
+    faCheck,
+    faExclamationCircle,
+    faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons'
+import { timer } from 'rxjs'
+import { HeadlineComponent } from 'components/headline/headline.component'
+import { CopyComponent } from 'components/copy/copy.component'
+import { InputComponent } from 'components/input/input.component'
+import { SocialsComponent } from 'components/socials/socials.component'
+
+export interface ContactFormGroup {
+    prefix: FormControl
+    name: FormControl
+    email: FormControl
+    subject: FormControl
+    message: FormControl
+}
 
 @Component({
+    standalone: true,
     selector: 'cmp-contact',
     templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss'],
+    styleUrls: [],
+    imports: [
+        CommonModule,
+        RouterModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        FontAwesomeModule,
+        HeadlineComponent,
+        CopyComponent,
+        InputComponent,
+        SocialsComponent,
+    ],
 })
-export class ContactComponent extends Page implements OnInit {
-    public contactForm: FormGroup
+export class ContactComponent {
+    @HostBinding('class')
+    public classes: string = 'flex flex-1 flex-col justify-start'
 
-    public validation: Record<string, FValidation[]> = {
-        email: [
-            {
-                type: 'required',
-                message: 'This field is required!',
-            },
-            {
-                type: 'email',
-                message: 'Please enter a valid email address!',
-            },
-        ],
+    public state: 'initial' | 'loading' | 'success' | 'error' = 'initial'
+
+    public icons: Record<string, IconDefinition> = {
+        faPaperPlane,
+        faTrashAlt,
+        faCircleNotch,
+        faCheck,
+        faExclamationCircle,
+        faInfoCircle,
     }
 
-    public constructor(
-        private readonly changeDetectorRef: ChangeDetectorRef,
-        protected route: ActivatedRoute,
-        private readonly formBuilder: FormBuilder,
-        protected titleService: TitleService,
-        private readonly contactService: ContactService,
-    ) {
-        super(route, titleService)
-    }
+    public contact: FormGroup<ContactFormGroup> = new FormGroup({
+        prefix: new FormControl(''),
+        name: new FormControl(null, [Validators.required]),
+        email: new FormControl(null, [Validators.required, Validators.email]),
+        subject: new FormControl(null, [Validators.required]),
+        message: new FormControl(null, [Validators.required]),
+    })
 
-    public ngOnInit(): void {
-        this.contactForm = this.formBuilder.group({
-            name: null,
-            email: null,
-            subject: null,
-            message: null,
+    public constructor(private readonly http: HttpClient) {}
+
+    public submit(): void {
+        this.state = 'loading'
+
+        const headers: HttpHeaders = new HttpHeaders()
+        headers.set('Content-Type', 'application/json')
+
+        this.http.post('/api/contact', this.contact, { headers }).subscribe({
+            complete: () => {
+                this.state = 'success'
+                this.reset(5000, true)
+            },
+            error: () => {
+                this.state = 'error'
+                this.reset(5000)
+            },
         })
-        this.changeDetectorRef.detectChanges()
     }
 
-    public get name(): AbstractControl {
-        return this.contactForm.get('name')
-    }
+    private reset(after: number = 0, clear: boolean = false): void {
+        if (clear) {
+            this.contact.reset()
+        }
 
-    public get email(): AbstractControl {
-        return this.contactForm.get('email')
-    }
-
-    public get subject(): AbstractControl {
-        return this.contactForm.get('subject')
-    }
-
-    public get message(): AbstractControl {
-        return this.contactForm.get('message')
-    }
-
-    public send(): void {
-        if (!this.contactForm.valid) {
+        if (after === 0) {
+            this.state = 'initial'
             return
         }
 
-        this.contactService.send(this.contactForm.value as ContactFormData)
-        this.contactForm.reset()
-    }
-
-    public reset(): void {
-        this.contactForm.reset()
+        timer(after).subscribe(() => {
+            this.state = 'initial'
+        })
     }
 }

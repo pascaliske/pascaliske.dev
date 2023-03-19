@@ -1,82 +1,110 @@
-<div class="cmp-contact">
-    <cmp-page-header [title]="title"></cmp-page-header>
-    <cmp-section [id]="'contact-form'">
-        <div class="cmp-contact__wrapper">
-            <div class="cmp-contact__information">
-                <cmp-headline-h4 [text]="'Got curious?'"></cmp-headline-h4>
-                <cmp-copy
-                    [text]="
-                        'Let us talk about your project!\n\nYou can contact me by mail at info@pascaliske.dev. Alternatively, you can use the contact form on the right side of this page.'
-                    "
-                ></cmp-copy>
+<cmp-headline [level]="'h1'" [text]="'Want to get in touch?'"></cmp-headline>
 
-                <cmp-headline-h4 [text]="'Social Media'"></cmp-headline-h4>
-                <cmp-copy
-                    [text]="
-                        'You can find me also on:\n\n- [Twitter](https://twitter.com/pascaliske)\n- [Xing](https://www.xing.com/profile/Pascal_Iske)\n- [LinkedIn](https://de.linkedin.com/in/pascaliske)\n- [GitHub](https://github.com/pascaliske)'
-                    "
-                ></cmp-copy>
-            </div>
-            <form class="cmp-contact__form" [formGroup]="contactForm">
-                <cmp-headline-h4 [text]="'Contact form'"></cmp-headline-h4>
-                <cmp-f-row>
-                    <cmp-f-column>
-                        <cmp-f-input
-                            [name]="'name'"
-                            [label]="'Name'"
-                            [fc]="name"
-                            [autocomplete]="'name'"
-                        ></cmp-f-input>
-                    </cmp-f-column>
-                </cmp-f-row>
-                <cmp-f-row>
-                    <cmp-f-column>
-                        <cmp-f-email
-                            [name]="'email'"
-                            [label]="'Mail'"
-                            [fc]="email"
-                            [validation]="validation['email']"
-                            [autocomplete]="'email'"
-                        ></cmp-f-email>
-                    </cmp-f-column>
-                </cmp-f-row>
-                <cmp-f-row>
-                    <cmp-f-column>
-                        <cmp-f-input
-                            [name]="'subject'"
-                            [label]="'Subject'"
-                            [fc]="subject"
-                        ></cmp-f-input>
-                    </cmp-f-column>
-                </cmp-f-row>
-                <cmp-f-row>
-                    <cmp-f-column>
-                        <cmp-f-text-area
-                            [name]="'message'"
-                            [label]="'Message'"
-                            [fc]="message"
-                        ></cmp-f-text-area>
-                    </cmp-f-column>
-                </cmp-f-row>
-                <cmp-f-row>
-                    <cmp-f-column [flex]="true" [align]="'right'">
-                        <cmp-f-button
-                            [label]="'Reset'"
-                            [theme]="'secondary'"
-                            [disabled]="contactForm.invalid"
-                            (click)="reset()"
-                        ></cmp-f-button>
-                        <cmp-f-button
-                            [class]="'plausible-event-name=Contact+Form+Submit'"
-                            [label]="'Submit'"
-                            [type]="'button'"
-                            [theme]="'primary'"
-                            [disabled]="contactForm.invalid"
-                            (clicked)="send()"
-                        ></cmp-f-button>
-                    </cmp-f-column>
-                </cmp-f-row>
-            </form>
+<div class="max-w-3xl">
+    <form class="flex flex-col" [formGroup]="contact" (submit)="submit()">
+        <cmp-copy>
+            You can contact me through the contact form on this page. Alternatively you can find me
+            on the following social platforms. I will get back to you as soon as possible.
+        </cmp-copy>
+
+        <div class="hidden h-0 w-0">
+            <cmp-input
+                [type]="'text'"
+                [fc]="contact.controls.prefix"
+                [id]="'prefix'"
+                [autocomplete]="'off'"
+            ></cmp-input>
         </div>
-    </cmp-section>
+
+        <div class="flex flex-col sm:flex-row sm:gap-5">
+            <cmp-input
+                class="flex-1"
+                [type]="'text'"
+                [fc]="contact.controls.name"
+                [id]="'name'"
+                [label]="'Name'"
+                [autocomplete]="'name'"
+            ></cmp-input>
+
+            <cmp-input
+                class="flex-1"
+                [type]="'email'"
+                [fc]="contact.controls.email"
+                [id]="'email'"
+                [label]="'Mail'"
+                [autocomplete]="'email'"
+            ></cmp-input>
+        </div>
+
+        <cmp-input
+            [type]="'text'"
+            [fc]="contact.controls.subject"
+            [id]="'subject'"
+            [label]="'Subject'"
+        ></cmp-input>
+
+        <cmp-input
+            [type]="'textarea'"
+            [fc]="contact.controls.message"
+            [id]="'message'"
+            [label]="'Message'"
+        ></cmp-input>
+
+        <div class="mt-2">
+            <fa-icon class="mr-2" [icon]="icons['faInfoCircle']"></fa-icon>
+            Please note to process your data the contact form uses external services. More
+            information about the process can be found on the
+            <a [routerLink]="['/legal-notice']" [fragment]="'data-protection'">legal notice</a>
+            page.
+        </div>
+
+        <div class="flex justify-end gap-5">
+            <button
+                class="mt-5 px-4 py-2 text-paynesGray opacity-75 transition-opacity duration-300 hover:opacity-100 disabled:hidden"
+                type="reset"
+                [disabled]="contact.pristine"
+            >
+                <fa-icon class="mr-2" [icon]="icons['faTrashAlt']"></fa-icon>
+                Reset
+            </button>
+
+            <button
+                class="plausible-event-name=Contact+Form+Submit mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:bg-paynesGray"
+                [class.cursor-pointer]="state == 'initial'"
+                [class.pointer-events-none]="state != 'initial'"
+                [class.!bg-opacity-100]="state != 'initial'"
+                [class.!bg-bitterSweet]="state == 'initial'"
+                [class.!bg-paynesGray]="state == 'loading'"
+                [class.!bg-success]="state == 'success'"
+                [class.!bg-error]="state == 'error'"
+                type="submit"
+                [disabled]="contact.invalid"
+            >
+                <fa-icon
+                    class="mr-2"
+                    [icon]="icons['faPaperPlane']"
+                    *ngIf="state == 'initial'"
+                ></fa-icon>
+                <fa-icon
+                    class="mr-2"
+                    [icon]="icons['faCircleNotch']"
+                    [animation]="'spin'"
+                    *ngIf="state == 'loading'"
+                ></fa-icon>
+                <fa-icon
+                    class="mr-2"
+                    [icon]="icons['faCheck']"
+                    *ngIf="state == 'success'"
+                ></fa-icon>
+                <fa-icon
+                    class="mr-2"
+                    [icon]="icons['faExclamationCircle']"
+                    *ngIf="state == 'error'"
+                ></fa-icon>
+                Submit
+            </button>
+        </div>
+    </form>
 </div>
+
+<cmp-socials></cmp-socials>

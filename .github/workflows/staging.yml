@@ -31,23 +31,19 @@ jobs:
       - name: Build application
         run: yarn run build
 
-      # bundlewatch
-      - name: Run bundlewatch
-        run: yarn run bundlewatch
-        env:
-          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
-          CI_REPO_SLUG: ${{ env.GITHUB_REPOSITORY }}
-          CI_COMMIT_SHA: ${{ env.GITHUB_SHA }}
-          CI_BRANCH: ${{ env.GITHUB_REF }}
-
       # deploy
       - uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           environment: staging
+          secrets: |
+            AUTH_USERNAME
+            AUTH_PASSWORD
         env:
           CF_ZONE_ID: '${{ secrets.CF_ZONE_ID }}'
+          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
+          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
 
       # clear cache
       - uses: jakejarvis/cloudflare-purge-action@master

@@ -1,6 +1,6 @@
 name = "pascaliske-dev"
-main = "workers/index.js"
-compatibility_date = "2022-02-28"
+main = "workers/index.ts"
+compatibility_date = "2023-03-31"
 workers_dev = true
 
 [site]
@@ -12,7 +12,9 @@ command = ""
 [env.production]
 name = "pascaliske-dev-production"
 route = "pascaliske.dev/*"
+vars = { ENVIRONMENT = "production" }
 
 [env.staging]
 name = "pascaliske-dev-staging"
 route = "next.pascaliske.dev/*"
+vars = { ENVIRONMENT = "staging" }

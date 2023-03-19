@@ -1,123 +1,100 @@
-import { Component, OnInit, OnDestroy, Input, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
-import { modifiers } from '@pascaliske/html-helpers'
-import { takeWhile } from 'rxjs/operators'
-import { BreakpointService, Breakpoints } from '../../shared/breakpoint/breakpoint.service'
+import { Component, OnInit } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
+import { Observable } from 'rxjs'
+import { filter, map } from 'rxjs/operators'
+import { ThemeService } from 'shared/theme/theme.service'
+import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
+import { ScrollService } from 'shared/scroll/scroll.service'
+import { NavigationButtonComponent } from 'components/navigation-button/navigation-button.component'
+import { ThemeButtonComponent } from 'components/theme-button/theme-button.component'
+import { animations } from './navigation.animation'
 
-/**
- * Representation of an navigation item.
- */
-export interface NavigationItem {
-    label: string
-    route?: string
-    url?: string
-    options?: {
-        decorated?: boolean
-        fixedWidth?: boolean
-    }
+export interface NavigationLink {
+    title: string
+    target: string
 }
 
+@UntilDestroy()
 @Component({
+    standalone: true,
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss'],
+    styleUrls: [],
+    imports: [
+        CommonModule,
+        RouterLink,
+        RouterLinkActive,
+        NavigationButtonComponent,
+        ThemeButtonComponent,
+    ],
+    animations,
 })
-export class NavigationComponent implements OnInit, OnDestroy {
-    /**
-     * Array of navigation items.
-     *
-     * @param {Array<NavigationItem>}
-     */
-    @Input()
-    public items: NavigationItem[] = []
+export class NavigationComponent implements OnInit {
+    public scrolled$: Observable<boolean> = this.scrollService.state$.pipe(
+        map(({ scrollY }) => scrollY > 20),
+    )
 
-    /**
-     * Represents the current breakpoint state of the navigation.
-     *
-     * @param {boolean} mobile
-     */
-    public mobile: boolean = false
-
-    /**
-     * Represents the current open/close state of the mobile navigation.
-     *
-     * @param {boolean} open
-     */
     public open: boolean = false
 
-    /**
-     * Lifecycle control property.
-     *
-     * @param {boolean} alive
-     */
-    private alive: boolean = true
+    public links: NavigationLink[] = [
+        {
+            title: 'home.',
+            target: '/home',
+        },
+        {
+            title: 'about.',
+            target: '/about',
+        },
+        {
+            title: 'skills.',
+            target: '/skills',
+        },
+        {
+            title: 'work.',
+            target: '/work',
+        },
+        {
+            title: 'contact.',
+            target: '/contact',
+        },
+    ]
 
-    /**
-     * Initializes the component.
-     *
-     * @param {BreakpointService} breakpointService
-     */
     public constructor(
-        @Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>,
+        private readonly router: Router,
+        public readonly themeService: ThemeService,
         private readonly breakpointService: BreakpointService,
+        private readonly scrollService: ScrollService,
     ) {}
 
-    /**
-     * Setup logic.
-     *
-     * @returns {void}
-     */
     public ngOnInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
+        this.router.events
+            .pipe(
+                untilDestroyed(this),
+                filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+            )
+            .subscribe(() => {
+                this.open = false
+                document.documentElement.classList.remove('overflow-hidden')
+            })
+    }
+
+    public toggle(): void {
+        this.open = !this.open
+
+        if (this.open) {
+            document.documentElement.classList.add('overflow-hidden')
+        } else {
+            document.documentElement.classList.remove('overflow-hidden')
         }
-
-        this.breakpointService.breakpoint$.pipe(takeWhile(() => this.alive)).subscribe(() => {
-            this.mobile = this.breakpointService.isLarger(Breakpoints.MINI_TABLET) === false
-        })
     }
 
-    /**
-     * Teardown logic.
-     *
-     * @returns {void}
-     */
-    public ngOnDestroy(): void {
-        this.alive = false
+    public get desktop(): boolean {
+        return this.breakpointService.matches('(min-width: 640px)')
     }
 
-    /**
-     * Returns the component classes.
-     *
-     * @returns {string}
-     */
-    public get classes(): string {
-        return modifiers('cmp-navigation', {
-            open: this.mobile && this.open,
-        })
-    }
-
-    /**
-     * Returns the item classes.
-     *
-     * @param {NavigationItem}
-     * @returns {string}
-     */
-    public getItemClasses(item: NavigationItem): string {
-        return modifiers('cmp-navigation__item', {
-            fixed: item.options?.fixedWidth,
-        })
-    }
-
-    /**
-     * Returns the link classes.
-     *
-     * @param {NavigationItem}
-     * @returns {string}
-     */
-    public getLinkClasses(item: NavigationItem): string {
-        return modifiers('cmp-navigation__text', {
-            decorated: item.options?.decorated,
-        })
+    public get icon(): 'menu' | 'close' {
+        return this.open ? 'close' : 'menu'
     }
 }

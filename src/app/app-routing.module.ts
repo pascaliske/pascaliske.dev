@@ -9,23 +9,47 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+        title: 'Home // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/home/home.component').then(m => m.HomeComponent)
+        },
     },
     {
         path: 'about',
-        loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule),
+        title: 'About // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/about/about.component').then(m => m.AboutComponent)
+        },
+    },
+    {
+        path: 'skills',
+        title: 'Skills // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/skills/skills.component').then(m => m.SkillsComponent)
+        },
+    },
+    {
+        path: 'work',
+        title: 'Work // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/work/work.component').then(m => m.WorkComponent)
+        },
     },
     {
         path: 'contact',
-        loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
+        title: 'Contact // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/contact/contact.component').then(m => m.ContactComponent)
+        },
     },
     {
-        path: 'imprint',
-        loadChildren: () => import('./pages/imprint/imprint.module').then(m => m.ImprintModule),
-    },
-    {
-        path: 'privacy',
-        loadChildren: () => import('./pages/privacy/privacy.module').then(m => m.PrivacyModule),
+        path: 'legal-notice',
+        title: 'Legal notice // Pascal Iske',
+        loadComponent: () => {
+            return import('./pages/legal-notice/legal-notice.component').then(
+                m => m.LegalNoticeComponent,
+            )
+        },
     },
     {
         path: '**',
@@ -34,9 +58,13 @@ export const routes: Routes = [
 ]
 
 @NgModule({
-    declarations: [],
-    imports: [RouterModule.forRoot(routes)],
+    imports: [
+        RouterModule.forRoot(routes, {
+            anchorScrolling: 'enabled',
+            scrollPositionRestoration: 'enabled',
+            scrollOffset: [0, 100],
+        }),
+    ],
     exports: [RouterModule],
-    providers: [],
 })
 export class AppRoutingModule {}

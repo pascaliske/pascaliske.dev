@@ -1,6 +1,5 @@
-<section [class]="classes" [id]="id">
-    <a class="cmp-section__anchor" [name]="id" *ngIf="id"></a>
-    <div class="cmp-section__wrapper">
-        <div class="cmp-section__content"><ng-content></ng-content></div>
+<section class="flex leading-loose" [class.mt-10]="!first" [class.max-w-4xl]="!full">
+    <div class="flex-1">
+        <ng-content></ng-content>
     </div>
 </section>

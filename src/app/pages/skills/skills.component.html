@@ -1,0 +1,20 @@
+<cmp-headline [level]="'h1'" [text]="'Skills'"></cmp-headline>
+
+<div class="grid grid-cols-3 gap-10">
+    <cmp-card *ngFor="let group of groups">
+        <div class="p-10">
+            <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
+
+            <cmp-copy [html]="group.description"></cmp-copy>
+
+            <div class="mt-2 flex flex-wrap opacity-75 md:mt-5">
+                <ng-container *ngFor="let tag of group.tags; let i = index">
+                    <span class="mx-2 opacity-75" *ngIf="i > 0">&middot;</span>
+                    <span>{{ tag }}</span>
+                </ng-container>
+            </div>
+        </div>
+    </cmp-card>
+</div>
+
+<cmp-socials></cmp-socials>
