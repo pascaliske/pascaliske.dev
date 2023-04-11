@@ -1,0 +1,29 @@
+name: Build
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      # checkout
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      # setup node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # build
+      - name: Build application
+        run: yarn run build
