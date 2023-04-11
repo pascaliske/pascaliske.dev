@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@ngneat/until-destroy": "^9.2.3",
     "ngx-progressbar": "^9.0.0",
-    "rxjs": "~7.5.0",
+    "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
