@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Lato Thin */
+    @font-face {
+        font-family: 'Lato';
+        font-display: swap;
+        font-style: normal;
+        font-weight: 100;
+        src: url('/assets/fonts/Lato-Thin.woff2') format('woff2'),
+            url('/assets/fonts/Lato-Thin.woff') format('woff');
+    }
+
+    /* Lato Light */
+    @font-face {
+        font-family: 'Lato';
+        font-display: swap;
+        font-style: normal;
+        font-weight: 300;
+        src: url('/assets/fonts/Lato-Light.woff2') format('woff2'),
+            url('/assets/fonts/Lato-Light.woff') format('woff');
+    }
+
+    /* Lato Regular */
+    @font-face {
+        font-family: 'Lato';
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+        src: url('/assets/fonts/Lato-Regular.woff2') format('woff2'),
+            url('/assets/fonts/Lato-Regular.woff') format('woff');
+    }
+
+    /* Lato Bold */
+    @font-face {
+        font-family: 'Lato';
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+        src: url('/assets/fonts/Lato-Bold.woff2') format('woff2'),
+            url('/assets/fonts/Lato-Bold.woff') format('woff');
+    }
+
+    body {
+        @apply font-lato font-light;
+        @apply text-gunmetal dark:text-ghostWhite;
+        @apply bg-ghostWhite dark:bg-gunmetal;
+        @apply transition-[background-color] duration-300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    h1 {
+        @apply text-4xl sm:text-5xl lg:text-6xl;
+        @apply -ml-[0.5px] sm:-ml-[3px] lg:-ml-[4px];
+    }
+
+    h2 {
+        @apply text-3xl sm:text-4xl lg:text-5xl;
+        @apply -ml-[2px] sm:-ml-[2.5px] lg:-ml-[3px];
+    }
+
+    h3 {
+        @apply text-2xl sm:text-3xl lg:text-4xl;
+        @apply -ml-[2px] sm:-ml-[2.5px] lg:-ml-[3px];
+    }
+
+    h4 {
+        @apply text-xl sm:text-2xl lg:text-3xl;
+        @apply -ml-[1.5px] sm:-ml-[2px] lg:-ml-[2.5px];
+    }
+
+    h5 {
+        @apply text-lg sm:text-xl lg:text-2xl;
+        @apply -ml-[1.2px] sm:-ml-[1.5px] lg:-ml-[2px];
+    }
+
+    h6 {
+        @apply text-base;
+        @apply -ml-[1.1px] sm:-ml-[1.5px] lg:-ml-[1.5px];
+    }
+
+    a {
+        @apply text-bitterSweet text-opacity-80 transition-colors duration-300 hover:text-opacity-100;
+    }
+
+    input, textarea, select {
+        @apply border-[0];
+        outline: none;
+    }
+}
+
+@layer components {
+    .nav-button {
+        @apply h-[2px] w-[25px] before:h-[2px] before:w-[25px] after:h-[2px] after:w-[25px];
+        @apply absolute left-[7.5px] top-[20px] before:absolute before:-top-[10px] before:left-0 after:absolute after:left-0 after:top-[10px];
+        @apply bg-gunmetal before:bg-gunmetal after:bg-gunmetal;
+        @apply dark:bg-ghostWhite before:dark:bg-ghostWhite after:dark:bg-ghostWhite;
+        @apply transition-all duration-300 before:transition-all before:duration-300 after:transition-all after:duration-300;
+    }
+
+    .nav-list {
+        @apply fixed sm:relative top-0 left-0 z-40;
+        @apply h-screen w-screen sm:h-auto sm:w-auto;
+        @apply p-5 pt-20 sm:p-0;
+        @apply bg-ghostWhite dark:bg-gunmetal sm:bg-none;
+        @apply transition-colors duration-300;
+    }
+
+    .nav-index {
+        @apply absolute sm:hidden;
+        @apply mb-1 pr-2;
+        @apply text-paynesGray;
+        @apply -translate-x-full;
+    }
+
+    .nav-link {
+        @apply relative;
+        @apply mb-12 sm:mb-0 sm:mr-5;
+        @apply text-4xl sm:text-xl text-gunmetal dark:text-ghostWhite font-regular;
+        @apply after:absolute after:-bottom-[5px] after:left-0 sm:after:bottom-0;
+        @apply after:w-0 after:h-[5px] sm:after:h-[3px];
+        @apply motion-safe:after:transition-[width] motion-safe:after:duration-300;
+        @apply after:bg-bitterSweet;
+    }
+
+    .nav-link-active {
+        @apply after:w-full;
+    }
+}

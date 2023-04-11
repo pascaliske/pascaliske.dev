@@ -1,4 +1,17 @@
-<div class="cmp-footer">
-    <cmp-to-top-button></cmp-to-top-button>
-    <cmp-footer-meta></cmp-footer-meta>
-</div>
+<footer class="flex text-base font-light">
+    <div class="flex flex-wrap content-center leading-loose min-[680px]:leading-relaxed">
+        <span>Made with</span>
+        <fa-icon
+            class="mx-2 h-8 text-bitterSweet motion-safe:animate-heartbeat"
+            [icon]="icons['faHeart']"
+            [size]="'lg'"
+            [fixedWidth]="true"
+        ></fa-icon>
+        <span class="mr-2">by Pascal Iske</span>
+        <span>&copy; {{ year }}</span>
+        <span class="flex w-full content-center min-[680px]:w-auto">
+            <span class="mx-2 hidden opacity-75 min-[680px]:inline">&centerdot;</span>
+            <a [routerLink]="['/legal-notice']">Legal notice</a>
+        </span>
+    </div>
+</footer>

@@ -1,39 +1,31 @@
 import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { HttpClientModule } from '@angular/common/http'
-import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '../environments/environment'
-import { CoreModule } from './core/core.module'
-import { SharedModule } from './shared/shared.module'
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { WebStorageModule } from '@efaps/ngx-store'
+import { NgProgressModule } from 'ngx-progressbar'
+import { NgProgressHttpModule } from 'ngx-progressbar/http'
+import { NgProgressRouterModule } from 'ngx-progressbar/router'
 import { AppRoutingModule } from './app-routing.module'
-import { HeaderModule } from './components/header/header.module'
-import { NavigationModule } from './components/navigation/navigation.module'
-import { FooterModule } from './components/footer/footer.module'
-import { CookieBannerModule } from './components/cookie-banner/cookie-banner.module'
+import { NavigationComponent } from 'components/navigation/navigation.component'
+import { FooterComponent } from 'components/footer/footer.component'
+import { TriangleComponent } from 'components/triangle/triangle.component'
 import { AppComponent } from './app.component'
 
 @NgModule({
     imports: [
-        CommonModule,
-        HttpClientModule,
-        BrowserModule.withServerTransition({
-            appId: 'pascaliske-dev-server',
-        }),
-        BrowserTransferStateModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', {
-            enabled: environment.production,
-        }),
-        CoreModule,
-        SharedModule,
+        BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
-        HeaderModule,
-        NavigationModule,
-        FooterModule,
-        CookieBannerModule,
+        WebStorageModule,
+        NgProgressModule.withConfig({ color: '#ff6666', fixed: true }),
+        NgProgressHttpModule,
+        NgProgressRouterModule,
+        NavigationComponent,
+        FooterComponent,
+        TriangleComponent,
     ],
     declarations: [AppComponent],
-    exports: [AppComponent],
+    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

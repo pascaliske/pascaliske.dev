@@ -1,0 +1,93 @@
+<cmp-headline [level]="'h1'" [text]="'Legal notice'"></cmp-headline>
+
+<cmp-section [first]="true">
+    <cmp-headline
+        [level]="'h3'"
+        [text]="'Information pursuant to &sect; 5 TMG'"
+        [id]="'information-pursuant-to-5-tmg'"
+    ></cmp-headline>
+
+    <cmp-copy>
+        Pascal Iske<br />
+        Nordendstra&szlig;e 12<br />
+        63110 Rodgau<br />
+        <span class="mt-2 inline-block">
+            <a href="mailto:info@pascaliske.dev">info@pascaliske.dev</a>
+            <span class="mx-1">&middot;</span>
+            <a [routerLink]="['/contact']">Contact form</a>
+        </span>
+    </cmp-copy>
+</cmp-section>
+
+<cmp-section>
+    <cmp-headline [level]="'h3'" [text]="'Disclaimer'" [id]="'disclaimer'"></cmp-headline>
+
+    <cmp-headline
+        [level]="'h5'"
+        [text]="'Limitation of liability for internal content'"
+        [id]="'limitation-of-liability-for-internal-content'"
+    ></cmp-headline>
+    <cmp-copy>
+        As a service provider, I am responsible for my own content on these pages in accordance with
+        general legislation pursuant to section 7 (1) of the German Telemedia Act (TMG). According
+        to &sect;&sect; 8 to 10 TMG, however, I am not obligated as a service provider to monitor
+        transmitted or stored third-party information or to investigate circumstances that indicate
+        illegal activity. Obligations to remove or block the use of information under the general
+        laws remain unaffected. However, liability in this regard is only possible from the point in
+        time at which a concrete infringement of the law becomes known. If I become aware of such
+        infringements, I will remove this content immediately.
+    </cmp-copy>
+</cmp-section>
+
+<cmp-section>
+    <cmp-headline
+        [level]="'h5'"
+        [text]="'Limitation of liability for external links'"
+        [id]="'limitation-of-liability-for-external-links'"
+    ></cmp-headline>
+    <cmp-copy>
+        This website may contain links to external websites of third parties, on whose contents I
+        have no influence. Therefore, I cannot assume any liability for these external contents. The
+        respective provider or operator of the pages is always responsible for the content of the
+        linked pages. The linked pages were checked for possible legal violations at the time of
+        linking. Illegal contents were not recognizable at the time of linking. However, a permanent
+        control of the contents of the linked pages is not reasonable without concrete evidence of a
+        violation of the law. If I become aware of any infringements, I will remove such links
+        immediately.
+    </cmp-copy>
+</cmp-section>
+
+<cmp-section>
+    <cmp-headline [level]="'h5'" [text]="'Copyright'" [id]="'copyright'"></cmp-headline>
+    <cmp-copy>
+        The content and works created by the site operators on these pages are subject to German
+        copyright law. Duplication, processing, distribution, or any form of commercialization of
+        such material beyond the scope of the copyright law shall require the prior written consent
+        of its respective author or creator. Insofar as the content on this site was not created by
+        the operator, the copyrights of third parties are respected. In particular, third-party
+        content is identified as such. Should you nevertheless become aware of a copyright
+        infringement, please inform us accordingly. If I become aware of any infringements, we I
+        remove such content immediately.
+    </cmp-copy>
+</cmp-section>
+
+<cmp-section>
+    <cmp-headline [level]="'h5'" [text]="'Data protection'" [id]="'data-protection'"></cmp-headline>
+    <cmp-copy>
+        A visit to this website can result in the storage of information about the access (date,
+        time, page accessed) on my server. This does not represent any analysis of personal data
+        (e.g. name, address or e-mail address). If personal data is collected, this only occurs - to
+        the extent possible - with the prior consent of the user of the website. Any forwarding of
+        the data to third parties without the express consent of the user shall not take place.
+        <br />
+        <br />
+        I would like to expressly point out that the transmission of data via the Internet (e.g. by
+        e-mail) can offer security vulnerabilities. It is therefore impossible to safeguard the data
+        completely against access by third parties. I cannot assume any liability for damages
+        arising as a result of such security vulnerabilities. <br />
+        <br />
+        The use by third parties of all published contact details for the purpose of advertising is
+        expressly excluded. I reserve the right to take legal steps in the case of the unsolicited
+        sending of advertising information; e.g. by means of spam mail.
+    </cmp-copy>
+</cmp-section>

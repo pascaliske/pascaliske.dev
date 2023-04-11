@@ -1,35 +1,47 @@
-<div [class]="classes">
-    <cmp-navigation-button [(state)]="open" *ngIf="mobile"></cmp-navigation-button>
-    <div class="cmp-navigation__wrapper">
-        <ul class="cmp-navigation__list">
+<header class="flex flex-col content-center sm:flex-row-reverse sm:justify-end">
+    <div
+        class="fixed left-[32.5px] top-10 z-50 flex transition-[left] sm:relative sm:left-0 sm:top-0"
+        [class.!left-10]="(scrolled$ | async) && !desktop"
+    >
+        <button
+            class="plausible-event-name=Mobile+Navigation+Toggle mr-2.5 block h-10 w-10 transition-colors sm:hidden"
+            [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
+            [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
+            [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
+            (click)="toggle()"
+        >
+            <cmp-navigation-button [open]="open"></cmp-navigation-button>
+        </button>
+        <button
+            class="plausible-event-name=Theme+Change group block h-10 w-10 transition-colors"
+            [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
+            [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
+            [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
+            (click)="themeService.next()"
+        >
+            <cmp-theme-button [state]="themeService.icon$ | async"></cmp-theme-button>
+        </button>
+    </div>
+    <div
+        class="nav-list flex items-center justify-center"
+        [class.overscroll-contain]="open"
+        [@fade]="open"
+        *ngIf="open || desktop"
+    >
+        <ul class="flex flex-col items-start sm:flex-row">
             <li
-                class="cmp-navigation__item"
-                routerLinkActive="cmp-navigation__item--active"
-                [class]="getItemClasses(item)"
-                *ngFor="let item of items"
+                class="group relative flex flex-col justify-center"
+                *ngFor="let link of links; let i = index"
             >
+                <span class="nav-index"> 0{{ i + 1 }} </span>
                 <a
-                    class="cmp-navigation__link"
-                    [routerLink]="[item.route]"
-                    (click)="open = false"
-                    *ngIf="item.route"
+                    class="nav-link group-hover:nav-link-active"
+                    [routerLink]="[link.target]"
+                    [routerLinkActive]="'nav-link-active'"
                 >
-                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{
-                        item.label
-                    }}</span>
-                </a>
-                <a
-                    class="cmp-navigation__link"
-                    target="_blank"
-                    rel="noopener"
-                    [href]="item.url"
-                    *ngIf="item.url"
-                >
-                    <span class="cmp-navigation__text" [class]="getLinkClasses(item)">{{
-                        item.label
-                    }}</span>
+                    <span>{{ link.title }}</span>
                 </a>
             </li>
         </ul>
     </div>
-</div>
+</header>

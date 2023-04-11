@@ -27,37 +27,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # test
-      - uses: cypress-io/github-action@v2
-        with:
-          command: yarn run e2e --headless --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
-
-      # upload artifacts
-      - uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-          if-no-files-found: ignore
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
-          if-no-files-found: ignore
-
       # build
       - name: Build application
         run: yarn run build
-
-      # bundlewatch
-      - name: Run bundlewatch
-        run: yarn run bundlewatch
-        env:
-          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
-          CI_REPO_SLUG: ${{ env.GITHUB_REPOSITORY }}
-          CI_COMMIT_SHA: ${{ env.GITHUB_SHA }}
-          CI_BRANCH: ${{ env.GITHUB_REF }}
 
       # deploy
       - uses: cloudflare/wrangler-action@2.0.0
@@ -90,11 +62,3 @@ jobs:
           draft: ${{ steps.changelog.outputs.status == 'unreleased' }}
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: README.md,LICENSE.md
-
-      # - run: yarn run lighthouse --output-path=./report.html https://${{ env.PROD_DOMAIN }}
-      # - run: yarn run now report.html --token ${{ secrets.NOW_TOKEN }} --no-clipboard --public
-      # - run: yarn run sentry-cli releases new "$TRAVIS_TAG"
-      # - run: yarn run sentry-cli releases set-commits --auto "$TRAVIS_TAG"
-      # - run: yarn run sentry-cli releases files "$TRAVIS_TAG" upload-sourcemaps ./dist --no-rewrite
-      # - run: yarn run sentry-cli releases deploys "$TRAVIS_TAG" new -e production
-      # - run: yarn run sentry-cli releases finalize "$TRAVIS_TAG"

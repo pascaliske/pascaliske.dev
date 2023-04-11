@@ -1,9 +1,0 @@
-@import 'shared';
-
-$component: 'cmp-link';
-
-@include cmp-base($component, inline-block) {
-    @include link();
-    width: 100%;
-    height: 100%;
-}

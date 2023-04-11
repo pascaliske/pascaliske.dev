@@ -1,7 +1,0 @@
-@import 'shared';
-
-$component: 'cmp-about';
-
-@include cmp-base($component) {
-    @include cmp-page();
-}

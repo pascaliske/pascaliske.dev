@@ -1,16 +1,2 @@
-<div class="cmp-home">
-    <cmp-page-header [title]="title"></cmp-page-header>
-    <cmp-section [id]="'welcome'">
-        <cmp-headline-h4 [text]="'Welcome!'"></cmp-headline-h4>
-        <cmp-copy
-            [text]="
-                'Are you looking for a website for your small business, easy to edit but still in a beautiful and clean design? Do you need an effective, inexpensive web appearance? Then you\'d better watch out for an independent developer.\n\n**You\'re exactly right here!**\n\nI\'m offering websites in modern design with all those useful features, that empower your small business or your club to be present in the internet, even better than before! For your website I\'ll be using [WordPress](https://wordpress.org/) under the hood, one of the most commonly used [Content-Management-Systems](https://en.wikipedia.org/wiki/Content_management_system) in the world. This enables you to easily manage your site\'s contents by yourself after the initial launch.\n\nLong story short: I\'ll combine your individual and unique design-wishes with the comfort and the simplicity of a worldwide acknowledged system.\n\nWhen building a client\'s website, it is really important to me that I can fulfill all requirements and wishes of the client, so that you\'re truly satisfied with the result of my work!\n\nCurious? On this page you\'ll find some of my references and here you may get more information about me.'
-            "
-        ></cmp-copy>
-        <cmp-copy theme="bold">
-            <span>{{ 'Are you ready to start?' }} </span>
-            <cmp-link [target]="['/contact']" [text]="'Click here!'" [inline]="true"></cmp-link>
-        </cmp-copy>
-    </cmp-section>
-    <cmp-section [id]="'quick-contact'"> <cmp-quick-contact></cmp-quick-contact> </cmp-section>
-</div>
+<cmp-greeting></cmp-greeting>
+<cmp-socials [type]="'minimal'"></cmp-socials>

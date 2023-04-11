@@ -1,29 +1,29 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core'
+import { Component, Input } from '@angular/core'
+import { CommonModule } from '@angular/common'
 
 @Component({
+    standalone: true,
     selector: 'cmp-copy',
     templateUrl: './copy.component.html',
-    styleUrls: ['./copy.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrls: [],
+    imports: [CommonModule],
 })
 export class CopyComponent {
-    public static readonly cmpName: string = 'CopyComponent'
+    @Input()
+    public text?: string
 
-    @Input() public theme: string = ''
+    @Input()
+    public html?: string
 
-    @Input() public text: string
+    public get type(): 'text' | 'html' | 'content' {
+        if ((this.text?.length ?? 0) > 0) {
+            return 'text'
+        }
 
-    public getThemeModifiers(): Record<string, unknown> {
-        return this.theme
-            .replace(/ +/g, '')
-            .split(',')
-            .reverse()
-            .reduce(
-                (prev, current) => ({
-                    [`cmp-copy--${current}`]: true,
-                    ...prev,
-                }),
-                {},
-            )
+        if ((this.html?.length ?? 0) > 0) {
+            return 'html'
+        }
+
+        return 'content'
     }
 }

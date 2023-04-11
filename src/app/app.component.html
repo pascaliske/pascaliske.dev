@@ -1,9 +1,13 @@
-<div [class]="classes">
-    <ng-progress></ng-progress>
-    <cmp-header></cmp-header>
-    <cmp-navigation [items]="pages"></cmp-navigation>
-    <div class="cmp-root__wrapper"><router-outlet></router-outlet></div>
-    <cmp-footer></cmp-footer>
-    <cmp-notifications></cmp-notifications>
-    <cmp-cookie-banner></cmp-cookie-banner>
+<ng-progress #progress></ng-progress>
+
+<div [@fade]="true">
+    <div class="flex min-h-[100dvh] w-screen flex-col p-10 sm:px-24 sm:py-12 lg:px-48 lg:py-24">
+        <cmp-navigation></cmp-navigation>
+        <div class="flex flex-1 flex-col py-20">
+            <router-outlet></router-outlet>
+        </div>
+        <cmp-footer></cmp-footer>
+    </div>
+
+    <cmp-triangle></cmp-triangle>
 </div>

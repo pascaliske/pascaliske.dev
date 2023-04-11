@@ -1,6 +1,5 @@
 .github
-.vscode
 dist
+legacy
 src/index.html
-report.html
 CHANGELOG.md

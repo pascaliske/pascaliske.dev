@@ -1,7 +1,0 @@
-@import 'shared';
-
-$component: 'cmp-privacy';
-
-@include cmp-base($component) {
-    @include cmp-page();
-}

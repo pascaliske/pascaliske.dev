@@ -1,5 +1,0 @@
-<a [class]="classes" [title]="title ? title : text" (click)="navigate()">
-    <cmp-icon class="cmp-link__icon" [icon]="icon" *ngIf="icon"></cmp-icon>
-    <span class="cmp-link__text" *ngIf="inline">{{ text }}</span>
-    <ng-content *ngIf="!inline"></ng-content>
-</a>

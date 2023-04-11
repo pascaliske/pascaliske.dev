@@ -1,7 +1,0 @@
-@import 'shared';
-
-$component: 'cmp-icon';
-
-@include cmp-base($component, inline-block) {
-    display: inline;
-}
