@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { cache } from 'hono/cache'
 import { auth } from './middlewares/auth'
 import { headers } from './middlewares/headers'
 import { contact } from './routes/contact'
@@ -16,6 +17,7 @@ const app = new Hono<Environment>()
 
 // middlewares
 app.use('*', auth())
+app.get('*', cache({ cacheName: 'pascaliske-dev', cacheControl: 'max-age=3600' }))
 
 // routes
 app.post('/api/contact', contact())
