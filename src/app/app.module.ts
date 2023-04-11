@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { WebStorageModule } from '@efaps/ngx-store'
 import { NgProgressModule } from 'ngx-progressbar'
 import { NgProgressHttpModule } from 'ngx-progressbar/http'
 import { NgProgressRouterModule } from 'ngx-progressbar/router'
@@ -16,7 +15,6 @@ import { AppComponent } from './app.component'
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        WebStorageModule,
         NgProgressModule.withConfig({ color: '#ff6666', fixed: true }),
         NgProgressHttpModule,
         NgProgressRouterModule,

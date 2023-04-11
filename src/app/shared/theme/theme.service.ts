@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core'
 import { Meta } from '@angular/platform-browser'
-import { LocalStorage, LocalStorageService } from '@efaps/ngx-store'
 import { Observable, BehaviorSubject, map, tap } from 'rxjs'
 import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
+import { StorageService } from 'shared/storage/storage.service'
 
 export const enum Theme {
     DARK = 'dark',
@@ -19,17 +19,14 @@ export const enum ThemeIcon {
     providedIn: 'root',
 })
 export class ThemeService {
-    @LocalStorage('theme')
-    private storage?: Theme
-
     private readonly state$: BehaviorSubject<Theme | null> = new BehaviorSubject<Theme | null>(null)
 
     private readonly query: string = '(prefers-color-scheme: dark)'
 
     public constructor(
         private readonly meta: Meta,
-        private readonly localStorageService: LocalStorageService,
         private readonly breakpointService: BreakpointService,
+        private readonly storageService: StorageService,
     ) {}
 
     public connect(): Observable<void> {
@@ -38,11 +35,11 @@ export class ThemeService {
         return this.state$.pipe(
             map(theme => {
                 if (theme === null) {
-                    this.localStorageService.remove('theme')
+                    this.storageService.remove('theme')
                     return
                 }
 
-                this.storage = theme
+                this.storageService.set('theme', theme)
             }),
             tap(() => this.apply()),
         )
