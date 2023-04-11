@@ -4,9 +4,6 @@ import { AppModule } from './app/app.module'
 import { environment } from './environments/environment'
 
 if (environment.production) {
-    // log app version on startup
-    console.info(`v${environment.version}`)
-
     enableProdMode()
 }
 
