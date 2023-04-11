@@ -8,6 +8,7 @@
             [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
             [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
             [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
+            aria-label="Mobile Navigation Toggle Button"
             (click)="toggle()"
         >
             <cmp-navigation-button [open]="open"></cmp-navigation-button>
@@ -17,6 +18,7 @@
             [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
             [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
             [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
+            aria-label="Theme Change Button"
             (click)="themeService.next()"
         >
             <cmp-theme-button [state]="themeService.icon$ | async"></cmp-theme-button>
