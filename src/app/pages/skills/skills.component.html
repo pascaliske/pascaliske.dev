@@ -1,6 +1,6 @@
 <cmp-headline [level]="'h1'" [text]="'Skills'"></cmp-headline>
 
-<div class="grid grid-cols-3 gap-10">
+<div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
     <cmp-card *ngFor="let group of groups">
         <div class="p-10">
             <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
