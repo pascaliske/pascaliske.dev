@@ -15,6 +15,7 @@ yarn-error.log
 # IDEs and editors
 /.idea
 .envrc
+.dev.vars
 .project
 .classpath
 .c9/
