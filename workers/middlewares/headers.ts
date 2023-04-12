@@ -33,16 +33,16 @@ const ppValues = [
 ]
 
 export const headers: () => MiddlewareHandler<Environment> = () => {
-    return (context: Context<Environment>, next: Next) => {
-        // apply headers
-        context.res.headers.set('Content-Security-Policy', cspValues.join('; '))
-        context.res.headers.set('Permissions-Policy', ppValues.join(', '))
-        context.res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
-        context.res.headers.set('X-Content-Type-Options', 'nosniff')
-        context.res.headers.set('X-Frame-Options', 'SAMEORIGIN')
-        context.res.headers.set('X-XSS-Protection', '1; mode=block')
-
+    return async (context: Context<Environment>, next: Next) => {
         // continue
-        return next()
+        await next()
+
+        // apply headers
+        context.header('Content-Security-Policy', cspValues.join('; '))
+        context.header('Permissions-Policy', ppValues.join(', '))
+        context.header('Referrer-Policy', 'strict-origin-when-cross-origin')
+        context.header('X-Content-Type-Options', 'nosniff')
+        context.header('X-Frame-Options', 'SAMEORIGIN')
+        context.header('X-XSS-Protection', '1; mode=block')
     }
 }

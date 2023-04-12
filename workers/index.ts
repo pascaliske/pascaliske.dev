@@ -18,9 +18,10 @@ const app = new Hono<Environment>()
 // middlewares
 app.use('*', auth())
 app.get('*', cache({ cacheName: 'pascaliske-dev', cacheControl: 'max-age=3600' }))
+app.get('*', headers())
 
 // routes
 app.post('/api/contact', contact())
-app.get('*', headers(), site())
+app.get('*', site())
 
 export default app
