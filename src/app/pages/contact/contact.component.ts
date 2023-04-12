@@ -60,7 +60,7 @@ export class ContactComponent {
 
     public contact: FormGroup<ContactFormGroup> = new FormGroup({
         prefix: new FormControl(''),
-        name: new FormControl(null, [Validators.required]),
+        name: new FormControl(null),
         email: new FormControl(null, [Validators.required, Validators.email]),
         subject: new FormControl(null, [Validators.required]),
         message: new FormControl(null, [Validators.required]),
@@ -74,21 +74,21 @@ export class ContactComponent {
         const headers: HttpHeaders = new HttpHeaders()
         headers.set('Content-Type', 'application/json')
 
-        this.http.post('/api/contact', this.contact, { headers }).subscribe({
+        this.http.post('/api/contact', this.contact.value, { headers }).subscribe({
             complete: () => {
                 this.state = 'success'
-                this.reset(5000, true)
+                this.reset(5000)
             },
             error: () => {
                 this.state = 'error'
-                this.reset(5000)
+                this.reset(5000, false)
             },
         })
     }
 
-    private reset(after: number = 0, clear: boolean = false): void {
+    public reset(after: number = 0, clear: boolean = true): void {
         if (clear) {
-            this.contact.reset()
+            this.contact.reset({ prefix: '' })
         }
 
         if (after === 0) {

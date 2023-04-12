@@ -1,7 +1,7 @@
 <cmp-headline [level]="'h1'" [text]="'Want to get in touch?'"></cmp-headline>
 
 <div class="max-w-3xl">
-    <form class="flex flex-col" [formGroup]="contact" (submit)="submit()">
+    <form class="flex flex-col" [formGroup]="contact">
         <cmp-copy>
             You can contact me through the contact form on this page. Alternatively you can find me
             on the following social platforms. I will get back to you as soon as possible.
@@ -63,13 +63,15 @@
                 class="mt-5 px-4 py-2 text-paynesGray opacity-75 transition-opacity duration-300 hover:opacity-100 disabled:hidden"
                 type="reset"
                 [disabled]="contact.pristine"
+                (click)="reset()"
             >
                 <fa-icon class="mr-2" [icon]="icons['faTrashAlt']"></fa-icon>
-                Reset
+                <span>Reset</span>
             </button>
 
             <button
-                class="plausible-event-name=Contact+Form+Submit mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:bg-paynesGray"
+                class="plausible-event-name=Contact+Form+Submit mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:cursor-not-allowed disabled:!bg-paynesGray"
+                type="submit"
                 [class.cursor-pointer]="state == 'initial'"
                 [class.pointer-events-none]="state != 'initial'"
                 [class.!bg-opacity-100]="state != 'initial'"
@@ -77,8 +79,8 @@
                 [class.!bg-paynesGray]="state == 'loading'"
                 [class.!bg-success]="state == 'success'"
                 [class.!bg-error]="state == 'error'"
-                type="submit"
                 [disabled]="contact.invalid"
+                (click)="submit()"
             >
                 <fa-icon
                     class="mr-2"
@@ -101,7 +103,7 @@
                     [icon]="icons['faExclamationCircle']"
                     *ngIf="state == 'error'"
                 ></fa-icon>
-                Submit
+                <span>Submit</span>
             </button>
         </div>
     </form>
