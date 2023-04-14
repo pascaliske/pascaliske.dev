@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, HostBinding } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -8,4 +8,7 @@ import { CommonModule } from '@angular/common'
     styleUrls: [],
     imports: [CommonModule],
 })
-export class CardComponent {}
+export class CardComponent {
+    @HostBinding('class')
+    public classes: string = `group flex flex-col overflow-hidden bg-opacity-25 bg-gradient-to-br from-ghostWhite to-[#d4d6da] to-90% transition-transform will-change-transform motion-safe:hover:scale-105 dark:from-charcoal dark:to-gunmetal`
+}

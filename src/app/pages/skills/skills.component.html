@@ -2,10 +2,10 @@
 
 <div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
     <cmp-card *ngFor="let group of groups">
-        <div class="p-10">
+        <div class="flex min-h-full flex-col p-10">
             <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
 
-            <cmp-copy [html]="group.description"></cmp-copy>
+            <cmp-copy class="flex-1" [html]="group.description"></cmp-copy>
 
             <div class="mt-2 flex flex-wrap opacity-75 md:mt-5">
                 <ng-container *ngFor="let tag of group.tags; let i = index">
