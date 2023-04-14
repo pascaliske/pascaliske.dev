@@ -1,7 +1,7 @@
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { Injectable } from '@angular/core'
 import { Subject, fromEvent } from 'rxjs'
 import { distinctUntilChanged, share } from 'rxjs/operators'
+import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 
 /**
  * Interface describing the current scroll state.
@@ -37,10 +37,8 @@ export class ScrollService {
     /**
      * Initializes the scroll service.
      */
-    public constructor(@Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>) {
-        if (isPlatformBrowser(this.platformId)) {
-            this.handleScroll()
-        }
+    public constructor(private readonly browserApiService: BrowserApiService) {
+        this.handleScroll()
     }
 
     /**
@@ -53,10 +51,12 @@ export class ScrollService {
      */
     // eslint-disable-next-line id-length
     public scroll(x: number, y: number, behavior: 'auto' | 'smooth' = 'smooth'): void {
-        window.scrollTo({
-            behavior,
-            left: x,
-            top: y,
+        this.browserApiService.with('window', window => {
+            window.scrollTo({
+                behavior,
+                left: x,
+                top: y,
+            })
         })
     }
 
@@ -66,13 +66,15 @@ export class ScrollService {
      * @returns {void}
      */
     private handleScroll(): void {
-        fromEvent(window, 'scroll')
-            .pipe(distinctUntilChanged(), share())
-            .subscribe(() => {
-                this.state$.next({
-                    scrollX: window.scrollX,
-                    scrollY: window.scrollY,
+        this.browserApiService.with('window', window => {
+            fromEvent(window, 'scroll')
+                .pipe(distinctUntilChanged(), share())
+                .subscribe(() => {
+                    this.state$.next({
+                        scrollX: window.scrollX,
+                        scrollY: window.scrollY,
+                    })
                 })
-            })
+        })
     }
 }

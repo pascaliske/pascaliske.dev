@@ -4,6 +4,7 @@ import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/ro
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
 import { Observable } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
+import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { ThemeService } from 'shared/theme/theme.service'
 import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { ScrollService } from 'shared/scroll/scroll.service'
@@ -63,6 +64,7 @@ export class NavigationComponent implements OnInit {
 
     public constructor(
         private readonly router: Router,
+        private readonly browserApiService: BrowserApiService,
         public readonly themeService: ThemeService,
         private readonly breakpointService: BreakpointService,
         private readonly scrollService: ScrollService,
@@ -76,18 +78,21 @@ export class NavigationComponent implements OnInit {
             )
             .subscribe(() => {
                 this.open = false
-                document.documentElement.classList.remove('overflow-hidden')
+                this.browserApiService.with('document', document => {
+                    document.documentElement.classList.remove('overflow-hidden')
+                })
             })
     }
 
     public toggle(): void {
         this.open = !this.open
-
-        if (this.open) {
-            document.documentElement.classList.add('overflow-hidden')
-        } else {
-            document.documentElement.classList.remove('overflow-hidden')
-        }
+        this.browserApiService.with('document', document => {
+            if (this.open) {
+                document.documentElement.classList.add('overflow-hidden')
+            } else {
+                document.documentElement.classList.remove('overflow-hidden')
+            }
+        })
     }
 
     public get desktop(): boolean {

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Meta } from '@angular/platform-browser'
 import { Observable, BehaviorSubject, map, tap } from 'rxjs'
+import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { StorageService } from 'shared/storage/storage.service'
 
@@ -25,6 +26,7 @@ export class ThemeService {
 
     public constructor(
         private readonly meta: Meta,
+        private readonly browserApiService: BrowserApiService,
         private readonly breakpointService: BreakpointService,
         private readonly storageService: StorageService,
     ) {}
@@ -68,25 +70,35 @@ export class ThemeService {
     private apply(): void {
         // light
         if (this.state$.value === Theme.LIGHT) {
-            document.documentElement.classList.remove('dark')
             this.meta.updateTag({ name: 'theme-color', content: '#fffaff' })
+            this.browserApiService.with('document', document => {
+                document.documentElement.classList.remove('dark')
+            })
+
             return
         }
 
         // dark
         if (this.state$.value === Theme.DARK) {
-            document.documentElement.classList.add('dark')
             this.meta.updateTag({ name: 'theme-color', content: '#2d333d' })
+            this.browserApiService.with('document', document => {
+                document.documentElement.classList.add('dark')
+            })
+
             return
         }
 
         // system
         if (this.breakpointService.matches(this.query)) {
-            document.documentElement.classList.add('dark')
             this.meta.updateTag({ name: 'theme-color', content: '#2d333d' })
+            this.browserApiService.with('document', document => {
+                document.documentElement.classList.add('dark')
+            })
         } else {
-            document.documentElement.classList.remove('dark')
             this.meta.updateTag({ name: 'theme-color', content: '#fffaff' })
+            this.browserApiService.with('document', document => {
+                document.documentElement.classList.remove('dark')
+            })
         }
     }
 

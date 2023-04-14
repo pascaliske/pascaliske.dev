@@ -63,6 +63,7 @@ export const routes: Routes = [
             anchorScrolling: 'enabled',
             scrollPositionRestoration: 'enabled',
             scrollOffset: [0, 100],
+            initialNavigation: 'enabledBlocking',
         }),
     ],
     exports: [RouterModule],

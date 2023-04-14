@@ -4,7 +4,7 @@ compatibility_date = "2023-03-31"
 workers_dev = true
 
 [site]
-bucket = "./dist/pascaliske-dev"
+bucket = "./dist/pascaliske-dev/browser"
 
 [build]
 command = ""

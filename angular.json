@@ -56,7 +56,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pascaliske-dev",
+            "outputPath": "dist/pascaliske-dev/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -114,6 +114,49 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts"]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/pascaliske-dev/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "defaultConfiguration": "production",
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": ["/", "/home", "/about", "/skills", "/work", "/contact", "/legal-notice"]
+          },
+          "defaultConfiguration": "production",
+          "configurations": {
+            "production": {
+              "browserTarget": "pascaliske-dev:build:production",
+              "serverTarget": "pascaliske-dev:server:production"
+            },
+            "development": {
+              "browserTarget": "pascaliske-dev:build:development",
+              "serverTarget": "pascaliske-dev:server:development"
+            }
           }
         }
       }

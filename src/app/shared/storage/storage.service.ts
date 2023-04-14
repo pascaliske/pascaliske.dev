@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 
 @Injectable({
     providedIn: 'root',
@@ -6,19 +7,29 @@ import { Injectable } from '@angular/core'
 export class StorageService {
     private readonly prefix: string = 'pi_'
 
+    public constructor(private readonly browserApiService: BrowserApiService) {}
+
     public get(key: string): string | null {
-        return localStorage.getItem(`${this.prefix}${key}`)
+        return this.browserApiService.with('localStorage', localStorage => {
+            return localStorage.getItem(`${this.prefix}${key}`)
+        })
     }
 
     public set(key: string, value: string): void {
-        localStorage.setItem(`${this.prefix}${key}`, value)
+        this.browserApiService.with('localStorage', localStorage => {
+            localStorage.setItem(`${this.prefix}${key}`, value)
+        })
     }
 
     public remove(key: string): void {
-        localStorage.removeItem(`${this.prefix}${key}`)
+        this.browserApiService.with('localStorage', localStorage => {
+            localStorage.removeItem(`${this.prefix}${key}`)
+        })
     }
 
     public clear(): void {
-        localStorage.clear()
+        this.browserApiService.with('localStorage', localStorage => {
+            localStorage.clear()
+        })
     }
 }
