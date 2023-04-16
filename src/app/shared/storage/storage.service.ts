@@ -9,9 +9,9 @@ export class StorageService {
 
     public constructor(private readonly browserApiService: BrowserApiService) {}
 
-    public get(key: string): string | null {
+    public get<T = string>(key: string): T | null {
         return this.browserApiService.with('localStorage', localStorage => {
-            return localStorage.getItem(`${this.prefix}${key}`)
+            return localStorage.getItem(`${this.prefix}${key}`) as T
         })
     }
 
