@@ -20,7 +20,9 @@ export const enum ThemeIcon {
     providedIn: 'root',
 })
 export class ThemeService {
-    private readonly state$: BehaviorSubject<Theme | null> = new BehaviorSubject<Theme | null>(null)
+    private readonly state$: BehaviorSubject<Theme | null> = new BehaviorSubject<Theme | null>(
+        this.storageService.get('theme'),
+    )
 
     private readonly query: string = '(prefers-color-scheme: dark)'
 
