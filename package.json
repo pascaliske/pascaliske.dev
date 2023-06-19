@@ -51,7 +51,7 @@
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@nguniversal/builders": "^15.2.1",
-    "@nguniversal/express-engine": "^15.2.1",
+    "@nguniversal/express-engine": "^16.0.0",
     "@pascaliske/eslint-config": "^2.0.6",
     "@pascaliske/prettier-config": "^1.2.0",
     "@rstacruz/bump-cli": "^2.0.1",
