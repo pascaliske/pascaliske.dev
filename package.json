@@ -50,7 +50,7 @@
     "@cloudflare/workers-types": "^4.20230321.0",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
-    "@nguniversal/builders": "^15.2.1",
+    "@nguniversal/builders": "^16.0.0",
     "@nguniversal/express-engine": "^15.2.1",
     "@pascaliske/eslint-config": "^2.0.6",
     "@pascaliske/prettier-config": "^1.2.0",
