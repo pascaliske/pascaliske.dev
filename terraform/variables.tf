@@ -1,3 +1,7 @@
+variable "DKIM_PUBLIC_KEY" {
+  type = string
+}
+
 variable "GOOGLE_VERIFICATION_TOKEN" {
   type = string
 }

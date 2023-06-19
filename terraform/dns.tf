@@ -73,12 +73,12 @@ resource "cloudflare_record" "dmarc" {
   value   = "v=DMARC1; p=quarantine; rua=mailto:info@${local.domain}"
 }
 
-# dkim
+# dkim, uberspace mail
 resource "cloudflare_record" "dkim" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = "*._domainkey"
-  value   = "v=DKIM1; p="
+  name    = "uberspace._domainkey"
+  value   = "v=DKIM1; t=s; n=core; p=${var.DKIM_PUBLIC_KEY}"
 }
 
 # spf
