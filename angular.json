@@ -136,6 +136,7 @@
             },
             "development": {
               "optimization": false,
+              "buildOptimizer": false,
               "sourceMap": true,
               "extractLicenses": false,
               "vendorChunk": true
