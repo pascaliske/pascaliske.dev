@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, DestroyRef, inject } from '@angular/core'
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { CommonModule } from '@angular/common'
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
 import { Observable } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
@@ -17,7 +17,6 @@ export interface NavigationLink {
     target: string
 }
 
-@UntilDestroy()
 @Component({
     standalone: true,
     selector: 'cmp-navigation',
@@ -33,6 +32,8 @@ export interface NavigationLink {
     animations,
 })
 export class NavigationComponent implements OnInit {
+    private readonly destroy: DestroyRef = inject(DestroyRef)
+
     public scrolled$: Observable<boolean> = this.scrollService.state$.pipe(
         map(({ scrollY }) => scrollY > 20),
     )
@@ -73,7 +74,7 @@ export class NavigationComponent implements OnInit {
     public ngOnInit(): void {
         this.router.events
             .pipe(
-                untilDestroyed(this),
+                takeUntilDestroyed(this.destroy),
                 filter((event): event is NavigationEnd => event instanceof NavigationEnd),
             )
             .subscribe(() => {

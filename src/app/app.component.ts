@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core'
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
+import { Component, OnInit, DestroyRef, inject } from '@angular/core'
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { ThemeService } from 'shared/theme/theme.service'
 import { animations } from './app.animations'
 
-@UntilDestroy()
 @Component({
     selector: 'cmp-root',
     templateUrl: './app.component.html',
@@ -11,9 +10,11 @@ import { animations } from './app.animations'
     animations,
 })
 export class AppComponent implements OnInit {
+    private readonly destroy: DestroyRef = inject(DestroyRef)
+
     public constructor(private readonly themeService: ThemeService) {}
 
     public ngOnInit(): void {
-        this.themeService.connect().pipe(untilDestroyed(this)).subscribe()
+        this.themeService.connect().pipe(takeUntilDestroyed(this.destroy)).subscribe()
     }
 }
