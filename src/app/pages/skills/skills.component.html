@@ -5,9 +5,13 @@
         <div class="flex min-h-full flex-col p-10">
             <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
 
-            <cmp-copy class="flex-1" [html]="group.description"></cmp-copy>
+            <cmp-copy
+                class="flex-1"
+                [html]="group.description"
+                *ngIf="group.description"
+            ></cmp-copy>
 
-            <div class="mt-2 flex flex-wrap opacity-75 md:mt-5">
+            <div class="flex flex-wrap opacity-50">
                 <ng-container *ngFor="let tag of group.tags; let i = index">
                     <span class="mx-2 opacity-75" *ngIf="i > 0">&middot;</span>
                     <span>{{ tag }}</span>
