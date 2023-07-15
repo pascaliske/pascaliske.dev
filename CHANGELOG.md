@@ -1,3 +1,31 @@
+# [3.0.0](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.6...v3.0.0) (2023-07-15)
+
+
+### Bug Fixes
+
+* **app:** split line to fix linting issue ([9514221](https://github.com/pascaliske/pascaliske.dev/commit/9514221d7bbd347fb1f501c54bf6dec5c8e4aee0))
+* **contact:** use correct form value, fix error state, make name optional ([d8480a2](https://github.com/pascaliske/pascaliske.dev/commit/d8480a21a85a4175e3db8ec8be6b60b26694c452))
+* **deps:** update dependency rxjs to ~7.8.0 ([593a4d6](https://github.com/pascaliske/pascaliske.dev/commit/593a4d6bbf3c8e0e2a1330b9207819060c46c8ce))
+* **deps:** update dependency zone.js to ~0.13.0 ([411238b](https://github.com/pascaliske/pascaliske.dev/commit/411238b77b47c8de1657ac82876cd8bf4c940191))
+* improve accessibility using aria-labels ([4197c0c](https://github.com/pascaliske/pascaliske.dev/commit/4197c0c404f0c030d764e53c305f0f5db7e8c1a6))
+* remove unused app version constant ([ee98506](https://github.com/pascaliske/pascaliske.dev/commit/ee985068dcd07e844dcb68004fe75e48bb2ed769))
+* **skills:** optimize card views on mobile viewports ([fd378dd](https://github.com/pascaliske/pascaliske.dev/commit/fd378ddbb238c5ebe0a1fbe93892feb2f977b0ab))
+* **skills:** reduce columns on mobile viewports ([e5cad16](https://github.com/pascaliske/pascaliske.dev/commit/e5cad16c8da0005ab1a21439244083d0f24f6e60))
+* **skills:** remove some space between skill card elements ([64d37d4](https://github.com/pascaliske/pascaliske.dev/commit/64d37d4a2da3a4ee09e6ca3fefcd5e0a4b579cde))
+* **storage:** allow generic return types ([d5706bb](https://github.com/pascaliske/pascaliske.dev/commit/d5706bb2df6616efeaaa5a69b2ab2126a76aceb7))
+* **theme:** ensure initial state is taken from local storage ([fd939e1](https://github.com/pascaliske/pascaliske.dev/commit/fd939e183eb28d8604c37ea2580e51e9d0ddac45))
+* **workers:** correctly apply headers to site responses ([51a8dd3](https://github.com/pascaliske/pascaliske.dev/commit/51a8dd34af819aef896d24a6a3da51e255aa8350))
+
+
+### Features
+
+* hide about page for now using redirect guard ([761be43](https://github.com/pascaliske/pascaliske.dev/commit/761be4333d9a6cf2f4e52508c137b27d279e351f))
+* implement angular universal prerendering ([b889ffe](https://github.com/pascaliske/pascaliske.dev/commit/b889ffec8f2d4ea4ae85bad72e5ecb54ec9a61f7))
+* upgrade to angular v16 ([b58c484](https://github.com/pascaliske/pascaliske.dev/commit/b58c484572d8580aaf96f35bb407ea7d6d094f24))
+* **workers:** implement workers cache ([ad2dce6](https://github.com/pascaliske/pascaliske.dev/commit/ad2dce6880ade8b1bee37e9b823be408e1d66669))
+
+
+
 ## [2.3.6](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.5...v2.3.6) (2023-03-04)
 
 
