@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { RedirectGuardFn } from 'shared/redirect/redirect.guard'
 
 export const routes: Routes = [
     {
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {
         path: 'about',
         title: 'About // Pascal Iske',
+        canActivate: [RedirectGuardFn(['/home'])],
         loadComponent: () => {
             return import('./pages/about/about.component').then(m => m.AboutComponent)
         },

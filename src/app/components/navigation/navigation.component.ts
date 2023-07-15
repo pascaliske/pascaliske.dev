@@ -45,10 +45,10 @@ export class NavigationComponent implements OnInit {
             title: 'home.',
             target: '/home',
         },
-        {
-            title: 'about.',
-            target: '/about',
-        },
+        // {
+        //     title: 'about.',
+        //     target: '/about',
+        // },
         {
             title: 'skills.',
             target: '/skills',
