@@ -12,7 +12,7 @@
     "lint": "ng lint pascaliske-dev --fix",
     "format": "prettier --write \"**/*.{ts,scss,html,md,json}\"",
     "version": "bump --yes package.json",
-    "changelog": "standard-changelog"
+    "changelog": "standard-changelog -r 1"
   },
   "private": true,
   "prettier": "@pascaliske/prettier-config",
