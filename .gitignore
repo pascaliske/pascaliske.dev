@@ -37,6 +37,7 @@ terraform/.terraform
 # misc
 /.angular/cache
 /.sass-cache
+/.wrangler
 /connect.lock
 /coverage
 /libpeerconnection.log

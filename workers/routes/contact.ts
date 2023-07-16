@@ -70,16 +70,25 @@ export const contact: () => Handler = () => {
         // activate dry-run on staging
         if (context.env.ENVIRONMENT === 'staging') {
             url.searchParams.set('dry-run', 'true')
-            log('Activated dry-run mode')
         }
 
         // forward request
         const request: Request = new Request(url, { method: 'POST', headers, body })
-        const { status, statusText, json }: Response = await fetch(request)
-        log(`Forwarded request to ${url}`, { headers, body })
+        const response: Response = await fetch(request)
+
+        // debug forwarded request
+        log(`Forwarded request to ${url}`, {
+            request: JSON.stringify({ headers, body }),
+            response: JSON.stringify({
+                status: response.status,
+                statusText: response.statusText,
+                headers: response.headers,
+                body: await response.text(),
+            }),
+        })
 
         // response
-        switch (status) {
+        switch (response.status) {
             // success
             case 200:
             case 202:
@@ -87,13 +96,14 @@ export const contact: () => Handler = () => {
 
             // bad request
             case 400:
-                log(`Failed to forward request: ${statusText} (${status})`, { body: await json() })
                 return new BadRequestResponse('Invalid request data!')
 
             // error
             default:
-                log(`Failed to forward request: ${statusText} (${status})`, { body: await json() })
-                return new InternalServerErrorResponse('Internal server error!', statusText)
+                return new InternalServerErrorResponse(
+                    'Internal server error!',
+                    response.statusText,
+                )
         }
     }
 }
