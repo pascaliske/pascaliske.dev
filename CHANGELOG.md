@@ -1,3 +1,17 @@
+## [3.0.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.2...v3.0.3) (2023-07-16)
+
+
+### Bug Fixes
+
+* **worker:** use name in contact request subject line ([14057c1](https://github.com/pascaliske/pascaliske.dev/commit/14057c1359a24f2360c6639e19d689cfbca0f0bb))
+
+
+### Features
+
+* **terraform:** implement mail lockdown dns record for contact form ([ac6b80e](https://github.com/pascaliske/pascaliske.dev/commit/ac6b80e22db57b0cc9dce43749635ec544f9bfa9))
+
+
+
 ## [3.0.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.1...v3.0.2) (2023-07-16)
 
 
