@@ -58,7 +58,7 @@ export const contact: () => Handler = () => {
                     to: [{ email: 'info@pascaliske.dev', name: 'Pascal Iske' }],
                 },
             ],
-            subject: `Contact Request from ${data.email}`,
+            subject: `Contact Request from ${data.name}`,
             content: [
                 {
                     type: 'text/plain',
