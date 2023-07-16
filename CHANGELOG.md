@@ -1,3 +1,12 @@
+## [3.0.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.1...v3.0.2) (2023-07-16)
+
+
+### Bug Fixes
+
+* **worker:** correctly parse response body and add debug logs ([acc83d4](https://github.com/pascaliske/pascaliske.dev/commit/acc83d4955e6d7cc4d50d706ed5afe63c3fc2664))
+
+
+
 ## [3.0.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.0...v3.0.1) (2023-07-16)
 
 
