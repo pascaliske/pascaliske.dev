@@ -1,5 +1,6 @@
 import { Handler, Context } from 'hono'
 import type { ContactFormGroup } from 'pages/contact/contact.component'
+import { logger } from '../utils/log'
 import { CreatedResponse, BadRequestResponse, InternalServerErrorResponse } from '../responses'
 import { Environment } from '..'
 
@@ -21,6 +22,8 @@ ${message}
 
 // POST /api/contact
 export const contact: () => Handler = () => {
+    const log = logger('contact')
+
     return async (context: Context<Environment>) => {
         const data: Record<keyof ContactFormGroup, string> = await context.req.json()
 
@@ -67,11 +70,13 @@ export const contact: () => Handler = () => {
         // activate dry-run on staging
         if (context.env.ENVIRONMENT === 'staging') {
             url.searchParams.set('dry-run', 'true')
+            log('Activated dry-run mode')
         }
 
         // forward request
         const request: Request = new Request(url, { method: 'POST', headers, body })
-        const { status, statusText }: Response = await fetch(request)
+        const { status, statusText, json }: Response = await fetch(request)
+        log(`Forwarded request to ${url}`, { headers, body })
 
         // response
         switch (status) {
@@ -82,10 +87,12 @@ export const contact: () => Handler = () => {
 
             // bad request
             case 400:
+                log(`Failed to forward request: ${statusText} (${status})`, { body: await json() })
                 return new BadRequestResponse('Invalid request data!')
 
             // error
             default:
+                log(`Failed to forward request: ${statusText} (${status})`, { body: await json() })
                 return new InternalServerErrorResponse('Internal server error!', statusText)
         }
     }

@@ -1,10 +1,15 @@
 import { MiddlewareHandler, Context, Next } from 'hono'
 import { serveStatic } from 'hono/cloudflare-workers'
+import { logger } from '../utils/log'
 import { Environment } from '..'
 
 // GET /
 export const site: () => MiddlewareHandler<Environment> = () => {
+    const log = logger('site')
+
     return (context: Context<Environment>, next: Next) => {
+        log(`Environment: ${context.env.ENVIRONMENT}`)
+
         // available pages
         const pages: string[] = ['/home', '/about', '/skills', '/work', '/contact', '/legal-notice']
 
