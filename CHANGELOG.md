@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.0...v3.0.1) (2023-07-16)
+
+
+### Features
+
+* **workers:** implement logging to debug worker issues ([1f24902](https://github.com/pascaliske/pascaliske.dev/commit/1f2490273d89d4e30dff7b82a17db53cd969adae))
+
+
+
 # [3.0.0](https://github.com/pascaliske/pascaliske.dev/compare/v2.3.6...v3.0.0) (2023-07-15)
 
 
