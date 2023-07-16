@@ -89,6 +89,14 @@ resource "cloudflare_record" "spf" {
   value   = "v=spf1 include:spf.uberspace.de include:relay.mailchannels.net ~all"
 }
 
+# mail lockdown
+resource "cloudflare_record" "mail_lockdown" {
+  zone_id = data.cloudflare_zone.zone.id
+  type    = "TXT"
+  name    = "_mailchannels"
+  value   = "v=mc1 cfid=pascaliske.dev"
+}
+
 # openpgpkey
 resource "cloudflare_record" "openpgpkey" {
   zone_id = data.cloudflare_zone.zone.id
