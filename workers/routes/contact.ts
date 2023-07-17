@@ -12,11 +12,13 @@ Hi, Pascal!
 
 A new contact request just came in:
 
-Name: ${name?.length > 0 ? name : 'Unknown'}
+Name: ${name?.length > 0 ? name : '[empty]'}
 E-Mail: ${email}
 Subject: ${subject}
 
 ${message}
+
+Simply hit reply to answer this contact request. Over and out. 🤖
 `
 }
 
@@ -50,7 +52,7 @@ export const contact: () => Handler = () => {
         headers.set('Content-Type', 'application/json')
 
         const body: string = JSON.stringify({
-            from: { email: 'no-reply@pascaliske.dev', name: 'Pascal Iske' },
+            from: { email: 'no-reply@pascaliske.dev', name: 'Contact Form @ pascaliske.dev' },
             // eslint-disable-next-line camelcase
             reply_to: { email: data.email, name: data.name },
             personalizations: [
@@ -58,7 +60,7 @@ export const contact: () => Handler = () => {
                     to: [{ email: 'info@pascaliske.dev', name: 'Pascal Iske' }],
                 },
             ],
-            subject: `Contact Request from ${data.name}`,
+            subject: `Contact Request from ${data.name.length > 0 ? data.name : data.email}`,
             content: [
                 {
                     type: 'text/plain',
