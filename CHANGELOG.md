@@ -1,3 +1,12 @@
+## [3.0.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.3...v3.0.4) (2023-07-17)
+
+
+### Features
+
+* **worker:** optimize contact request notification message ([319d165](https://github.com/pascaliske/pascaliske.dev/commit/319d165a2165b5accb2bc82fce1338da50ac2bb4))
+
+
+
 ## [3.0.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.2...v3.0.3) (2023-07-16)
 
 
