@@ -70,12 +70,12 @@
             </button>
 
             <button
-                class="plausible-event-name=Contact+Form+Submit mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:cursor-not-allowed disabled:!bg-paynesGray"
+                class="plausible-event-name=Contact+Form+Submit mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:cursor-not-allowed disabled:bg-paynesGray"
                 type="submit"
                 [class.cursor-pointer]="state == 'initial'"
                 [class.pointer-events-none]="state != 'initial'"
-                [class.!bg-opacity-100]="state != 'initial'"
-                [class.!bg-bitterSweet]="state == 'initial'"
+                [class.bg-opacity-100]="state != 'initial'"
+                [class.bg-bitterSweet]="state == 'initial'"
                 [class.!bg-paynesGray]="state == 'loading'"
                 [class.!bg-success]="state == 'success'"
                 [class.!bg-error]="state == 'error'"
