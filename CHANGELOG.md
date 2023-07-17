@@ -1,3 +1,12 @@
+## [3.0.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.4...v3.0.5) (2023-07-17)
+
+
+### Bug Fixes
+
+* **contact:** only force state related background colors for submit button ([5793632](https://github.com/pascaliske/pascaliske.dev/commit/5793632da6a861c191631f50acac16d3a07d320d))
+
+
+
 ## [3.0.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.3...v3.0.4) (2023-07-17)
 
 
