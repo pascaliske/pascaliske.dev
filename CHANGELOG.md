@@ -1,3 +1,13 @@
+## [3.0.7](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.6...v3.0.7) (2023-07-18)
+
+
+### Bug Fixes
+
+* **contact:** use empty string as default value for name field ([0c0970f](https://github.com/pascaliske/pascaliske.dev/commit/0c0970f2298ce9c8aeb8e915845615692fe85bbe))
+* **worker:** allow sending empty name field for contact request ([eede6d4](https://github.com/pascaliske/pascaliske.dev/commit/eede6d4beb3634e6dd8b4fd3a8bd17a40c35b469))
+
+
+
 ## [3.0.6](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.5...v3.0.6) (2023-07-18)
 
 
