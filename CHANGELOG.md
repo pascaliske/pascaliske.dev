@@ -1,3 +1,18 @@
+## [3.0.8](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.7...v3.0.8) (2023-07-18)
+
+
+### Bug Fixes
+
+* provide meaningful page description for social previews ([47f4ddd](https://github.com/pascaliske/pascaliske.dev/commit/47f4dddba74a554c535f48e362d75dd01d989370))
+* **terraform:** use domain variable for mail lockdown record ([29f3143](https://github.com/pascaliske/pascaliske.dev/commit/29f31437304260350436ccf96df7c6ec67c36342))
+
+
+### Features
+
+* enable client hydration for server side rendering ([6048312](https://github.com/pascaliske/pascaliske.dev/commit/60483124e8f22e02c3a0671dd6364616ade3e5e3))
+
+
+
 ## [3.0.7](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.6...v3.0.7) (2023-07-18)
 
 
