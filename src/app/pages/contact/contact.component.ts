@@ -60,7 +60,7 @@ export class ContactComponent {
 
     public contact: FormGroup<ContactFormGroup> = new FormGroup({
         prefix: new FormControl(''),
-        name: new FormControl(null),
+        name: new FormControl(''),
         email: new FormControl(null, [Validators.required, Validators.email]),
         subject: new FormControl(null, [Validators.required]),
         message: new FormControl(null, [Validators.required]),
