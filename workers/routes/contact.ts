@@ -30,12 +30,12 @@ export const contact: () => Handler = () => {
         const data: Record<keyof ContactFormGroup, string> = await context.req.json()
 
         // check honeypot field
-        if (data.prefix.length > 0) {
+        if (data?.prefix?.length > 0) {
             return new BadRequestResponse('Invalid request data!', ['prefix'])
         }
 
         // check email field
-        if (data.email.length === 0) {
+        if (data?.email?.length === 0) {
             return new BadRequestResponse('Invalid request data!', ['email'])
         }
 
@@ -54,13 +54,13 @@ export const contact: () => Handler = () => {
         const body: string = JSON.stringify({
             from: { email: 'no-reply@pascaliske.dev', name: 'Contact Form | pascaliske.dev' },
             // eslint-disable-next-line camelcase
-            reply_to: { email: data.email, name: data.name },
+            reply_to: { email: data.email, name: data?.name ?? '' },
             personalizations: [
                 {
                     to: [{ email: 'info@pascaliske.dev', name: 'Pascal Iske' }],
                 },
             ],
-            subject: `Contact Request from ${data.name.length > 0 ? data.name : data.email}`,
+            subject: `Contact Request from ${data?.name?.length > 0 ? data.name : data.email}`,
             content: [
                 {
                     type: 'text/plain',
