@@ -94,7 +94,7 @@ resource "cloudflare_record" "mail_lockdown" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "_mailchannels"
-  value   = "v=mc1 cfid=pascaliske.dev"
+  value   = "v=mc1 cfid=${local.domain}"
 }
 
 # openpgpkey
