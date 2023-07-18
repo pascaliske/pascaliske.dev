@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
+import { NgModule, APP_ID } from '@angular/core'
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgProgressModule } from 'ngx-progressbar'
 import { NgProgressHttpModule } from 'ngx-progressbar/http'
@@ -12,18 +12,18 @@ import { AppComponent } from './app.component'
 
 @NgModule({
     imports: [
-        BrowserModule.withServerTransition({ appId: 'pascaliske-dev' }),
+        BrowserModule,
         BrowserAnimationsModule,
-        AppRoutingModule,
         NgProgressModule.withConfig({ color: '#ff6666', fixed: true }),
         NgProgressHttpModule,
         NgProgressRouterModule,
+        AppRoutingModule,
         NavigationComponent,
         FooterComponent,
         TriangleComponent,
     ],
     declarations: [AppComponent],
-    providers: [],
+    providers: [{ provide: APP_ID, useValue: 'pascaliske-dev' }, provideClientHydration()],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
