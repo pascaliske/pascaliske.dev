@@ -52,7 +52,7 @@ export const contact: () => Handler = () => {
         headers.set('Content-Type', 'application/json')
 
         const body: string = JSON.stringify({
-            from: { email: 'no-reply@pascaliske.dev', name: 'Contact Form @ pascaliske.dev' },
+            from: { email: 'no-reply@pascaliske.dev', name: 'Contact Form | pascaliske.dev' },
             // eslint-disable-next-line camelcase
             reply_to: { email: data.email, name: data.name },
             personalizations: [
