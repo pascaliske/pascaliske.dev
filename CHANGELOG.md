@@ -1,3 +1,12 @@
+## [3.0.6](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.5...v3.0.6) (2023-07-18)
+
+
+### Bug Fixes
+
+* **worker:** use different separator symbol to prevent invalid from address ([6c8d30a](https://github.com/pascaliske/pascaliske.dev/commit/6c8d30a16f72f82d5e875eb515d3f5081d75f734))
+
+
+
 ## [3.0.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.4...v3.0.5) (2023-07-17)
 
 
