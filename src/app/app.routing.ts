@@ -1,6 +1,15 @@
-import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import type { RouterFeatures, Routes } from '@angular/router'
+import { withEnabledBlockingInitialNavigation, withInMemoryScrolling } from '@angular/router'
 import { RedirectGuardFn } from 'shared/redirect/redirect.guard'
+
+export const features: RouterFeatures[] = [
+    withEnabledBlockingInitialNavigation(),
+    withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+        // scrollOffset: [0, 100],
+    }),
+]
 
 export const routes: Routes = [
     {
@@ -58,16 +67,3 @@ export const routes: Routes = [
         redirectTo: 'home',
     },
 ]
-
-@NgModule({
-    imports: [
-        RouterModule.forRoot(routes, {
-            anchorScrolling: 'enabled',
-            scrollPositionRestoration: 'enabled',
-            scrollOffset: [0, 100],
-            initialNavigation: 'enabledBlocking',
-        }),
-    ],
-    exports: [RouterModule],
-})
-export class AppRoutingModule {}

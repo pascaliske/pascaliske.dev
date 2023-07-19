@@ -4,9 +4,9 @@ import { ngExpressEngine } from '@nguniversal/express-engine'
 import * as express from 'express'
 import { existsSync } from 'fs'
 import { join } from 'path'
-import { AppServerModule } from './src/main.server'
+import bootstrap from './src/main.server'
 
-export * from './src/main.server'
+export default bootstrap
 
 export function app(): express.Express {
     const server: express.Express = express()
@@ -16,7 +16,7 @@ export function app(): express.Express {
         : 'index'
 
     // prepare view engine
-    server.engine('html', ngExpressEngine({ bootstrap: AppServerModule }))
+    server.engine('html', ngExpressEngine({ bootstrap }))
     server.set('view engine', 'html')
     server.set('views', distFolder)
 

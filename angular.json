@@ -86,7 +86,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "statsJson": true
             },
             "development": {
               "buildOptimizer": false,
@@ -146,7 +147,8 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": ["/", "/home", "/about", "/skills", "/work", "/contact", "/legal-notice"]
+            "routes": ["/", "/home", "/skills", "/work", "/contact", "/legal-notice"],
+            "guessRoutes": false
           },
           "defaultConfiguration": "production",
           "configurations": {
