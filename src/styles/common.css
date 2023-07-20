@@ -50,7 +50,12 @@
         @apply transition-[background-color] duration-300;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-bold;
     }
 
@@ -88,9 +93,25 @@
         @apply text-bitterSweet text-opacity-80 transition-colors duration-300 hover:text-opacity-100;
     }
 
-    input, textarea, select {
+    input,
+    textarea,
+    select {
         @apply border-[0];
         outline: none;
+    }
+
+    fa-icon svg {
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+    }
+
+    fa-icon .fa-2x {
+        font-size: 2em;
+    }
+
+    .svg-inline--fa {
+        vertical-align: -0.125em;
     }
 }
 

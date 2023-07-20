@@ -6,7 +6,6 @@ import { ThemeService } from 'shared/theme/theme.service'
 import { NavigationComponent } from 'components/navigation/navigation.component'
 import { FooterComponent } from 'components/footer/footer.component'
 import { TriangleComponent } from 'components/triangle/triangle.component'
-import { animations } from './app.animations'
 
 @Component({
     standalone: true,
@@ -20,7 +19,6 @@ import { animations } from './app.animations'
         FooterComponent,
         TriangleComponent,
     ],
-    animations,
 })
 export class AppComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
