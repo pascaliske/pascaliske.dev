@@ -24,11 +24,28 @@
             <cmp-theme-button [state]="themeService.icon$ | async"></cmp-theme-button>
         </button>
     </div>
+    <div class="nav-list hidden sm:flex items-center justify-center">
+        <ul class="flex flex-col items-start sm:flex-row">
+            <li
+                class="group relative flex flex-col justify-center"
+                *ngFor="let link of links; let i = index"
+            >
+                <span class="nav-index"> 0{{ i + 1 }} </span>
+                <a
+                    class="nav-link group-hover:nav-link-active"
+                    [routerLink]="[link.target]"
+                    [routerLinkActive]="'nav-link-active'"
+                >
+                    <span>{{ link.title }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     <div
-        class="nav-list flex items-center justify-center"
+        class="nav-list flex items-center justify-center sm:hidden"
         [class.overscroll-contain]="open"
         [@fade]="open"
-        *ngIf="open || desktop"
+        *ngIf="open"
     >
         <ul class="flex flex-col items-start sm:flex-row">
             <li
