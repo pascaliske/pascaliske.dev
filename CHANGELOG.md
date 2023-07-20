@@ -1,3 +1,19 @@
+# [3.1.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.8...v3.1.0) (2023-07-20)
+
+
+### Bug Fixes
+
+* **navigation:** ensure navigation is rendered independent of js execution ([6475226](https://github.com/pascaliske/pascaliske.dev/commit/6475226732110e76dc9a29c4468649b4b893b9ad))
+* remove page fade in to prevent flickering of pre-rendered pages ([73bb801](https://github.com/pascaliske/pascaliske.dev/commit/73bb801bbef270f5c3f6f17fbe06d14d3c3b2821))
+* **triangle:** improve position of triangle for large screens ([5071764](https://github.com/pascaliske/pascaliske.dev/commit/50717641642d9c9c5eb4eeb24006f15746226d22))
+
+
+### Features
+
+* switch to full standalone mode ([040d6f5](https://github.com/pascaliske/pascaliske.dev/commit/040d6f555652b590aa8a87bc54f55440553e116a))
+
+
+
 ## [3.0.8](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.7...v3.0.8) (2023-07-18)
 
 
