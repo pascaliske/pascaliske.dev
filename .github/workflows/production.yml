@@ -29,10 +29,7 @@ jobs:
 
       # build
       - name: Build application
-        run: |
-          yarn run build:app
-          yarn run build:server
-          yarn run prerender
+        run: yarn run prerender
 
       # deploy
       - uses: cloudflare/wrangler-action@2.0.0

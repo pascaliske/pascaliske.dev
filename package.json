@@ -15,6 +15,7 @@
     "changelog": "standard-changelog -r 1"
   },
   "private": true,
+  "sideEffects": false,
   "prettier": "@pascaliske/prettier-config",
   "dependencies": {
     "@angular/animations": "^16.1.1",
