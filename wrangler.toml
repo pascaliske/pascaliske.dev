@@ -5,6 +5,7 @@ workers_dev = true
 
 [site]
 bucket = "./dist/pascaliske-dev/browser"
+exclude = ["stats.json"]
 
 [build]
 command = ""
