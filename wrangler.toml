@@ -1,6 +1,7 @@
 name = "pascaliske-dev"
 main = "workers/index.ts"
 compatibility_date = "2023-03-31"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 
 [site]
