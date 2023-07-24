@@ -8,7 +8,7 @@ export const auth: () => MiddlewareHandler<Environment> = () => {
 
     return (context: Context<Environment>, next: Next) => {
         // skip auth on non-staging environments
-        if (context.env.ENVIRONMENT !== 'staging') {
+        if (context.env.ENVIRONMENT === 'production') {
             log(`Skipped auth due to environment: ${context.env.ENVIRONMENT}`)
             return next()
         }
