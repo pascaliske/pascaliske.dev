@@ -1,3 +1,24 @@
+# [3.2.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.1.1...v3.2.0) (2023-07-24)
+
+
+### Bug Fixes
+
+* darken the accent color a little bit to pass a11y color contrast check ([60576a2](https://github.com/pascaliske/pascaliske.dev/commit/60576a240eaa2cee84e4b3f3ffae201d816e0707))
+* **greeting:** use regular divs to pass a11y headline order check ([04e07a0](https://github.com/pascaliske/pascaliske.dev/commit/04e07a09188cf77a78089d329962228f4de1ace4))
+
+
+### Features
+
+* **terraform:** implement http redirect rules for legacy content pages ([5112260](https://github.com/pascaliske/pascaliske.dev/commit/511226005c875cdb81c020fe555c756972636d7c))
+* **worker:** proxy plausible requests through worker ([cfe2acb](https://github.com/pascaliske/pascaliske.dev/commit/cfe2acb00ae8fa25bf69e1267b1e7131f9f647f3))
+
+
+### Performance Improvements
+
+* use standalone components instead of common module, remove empty style urls ([014d19c](https://github.com/pascaliske/pascaliske.dev/commit/014d19c9df3a82e5895b96652e265cee98cd8a05))
+
+
+
 ## [3.1.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.1.0...v3.1.1) (2023-07-24)
 
 
