@@ -1,6 +1,4 @@
 import { Component, HostBinding } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router'
 import { SectionComponent } from 'components/section/section.component'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
@@ -11,10 +9,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
     standalone: true,
     selector: 'cmp-about',
     templateUrl: './about.component.html',
-    styleUrls: [],
     imports: [
-        CommonModule,
-        RouterModule,
         SectionComponent,
         HeadlineComponent,
         CopyComponent,

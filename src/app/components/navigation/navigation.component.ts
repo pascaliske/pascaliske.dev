@@ -1,6 +1,6 @@
 import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { CommonModule } from '@angular/common'
+import { NgFor, NgIf, AsyncPipe } from '@angular/common'
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
 import { Observable } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
@@ -21,9 +21,10 @@ export interface NavigationLink {
     standalone: true,
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
-    styleUrls: [],
     imports: [
-        CommonModule,
+        NgFor,
+        NgIf,
+        AsyncPipe,
         RouterLink,
         RouterLinkActive,
         NavigationButtonComponent,

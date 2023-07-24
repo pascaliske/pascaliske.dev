@@ -1,12 +1,11 @@
 import { Component } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
 
 @Component({
     standalone: true,
     selector: 'cmp-timeline',
     templateUrl: './timeline.component.html',
-    styleUrls: [],
-    imports: [CommonModule],
+    imports: [NgFor, NgIf],
 })
 export class TimelineComponent {
     public readonly points: string[] = [

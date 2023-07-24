@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
 import { Tags } from 'typings'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { SectionComponent } from 'components/section/section.component'
@@ -11,9 +11,9 @@ import { SocialsComponent } from 'components/socials/socials.component'
     standalone: true,
     selector: 'cmp-skills',
     templateUrl: './skills.component.html',
-    styleUrls: [],
     imports: [
-        CommonModule,
+        NgFor,
+        NgIf,
         HeadlineComponent,
         SectionComponent,
         CopyComponent,

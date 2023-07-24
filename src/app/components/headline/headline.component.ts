@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgSwitch, NgSwitchCase, NgIf, NgTemplateOutlet } from '@angular/common'
 
 @Component({
     standalone: true,
     selector: 'cmp-headline',
     templateUrl: './headline.component.html',
-    styleUrls: [],
-    imports: [CommonModule],
+    imports: [NgSwitch, NgSwitchCase, NgIf, NgTemplateOutlet],
 })
 export class HeadlineComponent {
     @Input()

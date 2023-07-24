@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { NgSwitch, NgSwitchCase } from '@angular/common'
 
 @Component({
     standalone: true,
     selector: 'cmp-copy',
     templateUrl: './copy.component.html',
-    styleUrls: [],
-    imports: [CommonModule],
+    imports: [NgSwitch, NgSwitchCase],
 })
 export class CopyComponent {
     @Input()

@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router'
+import { NgIf } from '@angular/common'
+import { RouterLink } from '@angular/router'
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
@@ -30,10 +30,9 @@ export interface ContactFormGroup {
     standalone: true,
     selector: 'cmp-contact',
     templateUrl: './contact.component.html',
-    styleUrls: [],
     imports: [
-        CommonModule,
-        RouterModule,
+        NgIf,
+        RouterLink,
         ReactiveFormsModule,
         HttpClientModule,
         FontAwesomeModule,

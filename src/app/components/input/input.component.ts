@@ -6,7 +6,6 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms'
     standalone: true,
     selector: 'cmp-input',
     templateUrl: './input.component.html',
-    styleUrls: [],
     imports: [CommonModule, ReactiveFormsModule],
 })
 export class InputComponent {

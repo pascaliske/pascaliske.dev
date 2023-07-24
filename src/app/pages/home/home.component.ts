@@ -1,5 +1,4 @@
 import { Component, HostBinding } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { GreetingComponent } from 'components/greeting/greeting.component'
 import { SocialsComponent } from 'components/socials/socials.component'
 
@@ -7,8 +6,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
     standalone: true,
     selector: 'cmp-home',
     templateUrl: './home.component.html',
-    styleUrls: [],
-    imports: [CommonModule, GreetingComponent, SocialsComponent],
+    imports: [GreetingComponent, SocialsComponent],
 })
 export class HomeComponent {
     @HostBinding('class')

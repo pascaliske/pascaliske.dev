@@ -11,7 +11,6 @@ import { TriangleComponent } from 'components/triangle/triangle.component'
     standalone: true,
     selector: 'cmp-root',
     templateUrl: './app.component.html',
-    styleUrls: [],
     imports: [
         RouterOutlet,
         NgProgressModule,
