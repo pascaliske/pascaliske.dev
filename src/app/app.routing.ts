@@ -1,6 +1,5 @@
 import type { RouterFeatures, Routes } from '@angular/router'
 import { withEnabledBlockingInitialNavigation, withInMemoryScrolling } from '@angular/router'
-import { RedirectGuardFn } from 'shared/redirect/redirect.guard'
 
 export const features: RouterFeatures[] = [
     withEnabledBlockingInitialNavigation(),
@@ -22,14 +21,6 @@ export const routes: Routes = [
         title: 'Home // Pascal Iske',
         loadComponent: () => {
             return import('./pages/home/home.component').then(m => m.HomeComponent)
-        },
-    },
-    {
-        path: 'about',
-        title: 'About // Pascal Iske',
-        canActivate: [RedirectGuardFn(['/home'])],
-        loadComponent: () => {
-            return import('./pages/about/about.component').then(m => m.AboutComponent)
         },
     },
     {
