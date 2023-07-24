@@ -1,5 +1,5 @@
 import { importProvidersFrom, ApplicationConfig, ValueProvider, APP_ID } from '@angular/core'
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser'
+import { provideClientHydration } from '@angular/platform-browser'
 import { provideAnimations } from '@angular/platform-browser/animations'
 import { provideRouter } from '@angular/router'
 import { NgProgressModule } from 'ngx-progressbar'
@@ -15,7 +15,6 @@ export const provideAppId: () => ValueProvider = (): ValueProvider => ({
 export const appConfig: ApplicationConfig = {
     providers: [
         importProvidersFrom(
-            BrowserModule,
             NgProgressModule.withConfig({ color: '#ff6666', fixed: true }),
             NgProgressHttpModule,
             NgProgressRouterModule,
