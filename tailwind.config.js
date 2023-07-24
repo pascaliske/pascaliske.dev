@@ -8,7 +8,7 @@ module.exports = {
             charcoal: '#464c59',
             paynesGray: '#69707d',
             ghostWhite: '#fffaff',
-            bitterSweet: '#ff6666',
+            bitterSweet: '#ff5858',
             aquamarine: '#4ce0b3',
             success: '#42ba96',
             error: '#ff4444',
