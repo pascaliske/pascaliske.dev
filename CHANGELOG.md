@@ -1,3 +1,12 @@
+## [3.2.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.2.0...v3.2.1) (2023-07-24)
+
+
+### Bug Fixes
+
+* **worker:** clone proxy responses to allow modifying them ([0608c7a](https://github.com/pascaliske/pascaliske.dev/commit/0608c7a11d7a616217b46df570a3e7dbe8d496bc))
+
+
+
 # [3.2.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.1.1...v3.2.0) (2023-07-24)
 
 
