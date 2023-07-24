@@ -1,3 +1,17 @@
+## [3.1.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.1.0...v3.1.1) (2023-07-24)
+
+
+### Bug Fixes
+
+* **worker:** only skip auth middleware on production ([858ec88](https://github.com/pascaliske/pascaliske.dev/commit/858ec88a82ad0c2b0820e8505b7b888493afa9c7))
+
+
+### Features
+
+* **worker:** configure http cache differently for static files ([e320a1e](https://github.com/pascaliske/pascaliske.dev/commit/e320a1e32eab4ed274bcdfb39502b92b304d3a32))
+
+
+
 # [3.1.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.0.8...v3.1.0) (2023-07-20)
 
 
