@@ -22,8 +22,8 @@ app.use('*', cache())
 app.get('*', headers())
 
 // routes
-app.post('/api/event', event())
 app.post('/api/contact', contact())
+app.post('/api/event', event())
 app.get('/insights.js', script())
 app.get('*', site())
 

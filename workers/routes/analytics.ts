@@ -7,7 +7,7 @@ const baseUrl = 'https://analytics.pascaliske.dev'
 export const event: () => Handler = () => {
     const log = logger('analytics')
 
-    return (context: Context<Environment>) => {
+    return async (context: Context<Environment>) => {
         log(`Proxying analytics events for ${context.env.ENVIRONMENT}`)
 
         // clone request
@@ -17,17 +17,23 @@ export const event: () => Handler = () => {
         request.headers.delete('cookie')
 
         // forward request
-        return fetch(`${baseUrl}/api/event`, request)
+        const response = await fetch(`${baseUrl}/api/event`, request)
+
+        // clone response
+        return new Response(response.body, response)
     }
 }
 
 export const script: () => Handler = () => {
     const log = logger('analytics')
 
-    return (context: Context<Environment>) => {
+    return async (context: Context<Environment>) => {
         log(`Proxying analytics script for ${context.env.ENVIRONMENT}`)
 
         // forward request
-        return fetch(`${baseUrl}/js/script.tagged-events.outbound-links.js`)
+        const response = await fetch(`${baseUrl}/js/script.tagged-events.outbound-links.js`)
+
+        // clone response
+        return new Response(response.body, response)
     }
 }
