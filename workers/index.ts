@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 import { auth } from './middlewares/auth'
 import { cache } from './middlewares/cache'
 import { headers } from './middlewares/headers'
+import { event, script } from './routes/analytics'
 import { contact } from './routes/contact'
 import { site } from './routes/site'
 
@@ -21,7 +22,9 @@ app.use('*', cache())
 app.get('*', headers())
 
 // routes
+app.post('/api/event', event())
 app.post('/api/contact', contact())
+app.get('/insights.js', script())
 app.get('*', site())
 
 export default app
