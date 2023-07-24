@@ -8,7 +8,7 @@ export const site: () => MiddlewareHandler<Environment> = () => {
     const log = logger('site')
 
     return (context: Context<Environment>, next: Next) => {
-        log(`Environment: ${context.env.ENVIRONMENT}`)
+        log(`Serving site for environment: ${context.env.ENVIRONMENT}`)
 
         // available pages
         const pages: string[] = ['/home', '/about', '/skills', '/work', '/contact', '/legal-notice']

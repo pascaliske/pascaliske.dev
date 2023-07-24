@@ -1,4 +1,5 @@
 import { MiddlewareHandler, Context, Next } from 'hono'
+import { logger } from '../utils/log'
 import { Environment } from '..'
 
 // `Content-Security-Policy` values
@@ -33,7 +34,11 @@ const ppValues = [
 ]
 
 export const headers: () => MiddlewareHandler<Environment> = () => {
+    const log = logger('headers')
+
     return async (context: Context<Environment>, next: Next) => {
+        log('Applying custom headers for security')
+
         // continue
         await next()
 
