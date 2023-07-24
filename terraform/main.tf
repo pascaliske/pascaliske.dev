@@ -20,4 +20,6 @@ terraform {
 # local variables
 locals {
   domain = "pascaliske.dev"
+
+  redirect_prefix = replace(local.domain, ".", "_")
 }

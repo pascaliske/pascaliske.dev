@@ -10,38 +10,66 @@ resource "cloudflare_page_rule" "redirect_www" {
   }
 }
 
-resource "cloudflare_page_rule" "redirect_about" {
-  zone_id = data.cloudflare_zone.zone.id
-  target  = "www.${local.domain}/about"
+resource "cloudflare_list" "redirect_pages" {
+  account_id = data.cloudflare_zone.zone.account_id
+  kind       = "redirect"
+  name       = "${local.redirect_prefix}_redirects"
 
-  actions {
-    forwarding_url {
-      status_code = 301
-      url         = "https://${local.domain}/home"
+  # /about -> /home
+  item {
+    comment = "/about -> /home"
+    value {
+      redirect {
+        source_url  = "${local.domain}/about"
+        target_url  = "https://${local.domain}/home"
+        status_code = 301
+      }
+    }
+  }
+
+  # /imprint -> /legal-notice
+  item {
+    comment = "/imprint -> /legal-notice"
+    value {
+      redirect {
+        source_url  = "${local.domain}/imprint"
+        target_url  = "https://${local.domain}/legal-notice"
+        status_code = 301
+      }
+    }
+  }
+
+  # /privacy -> /legal-notice
+  item {
+    comment = "/privacy -> /legal-notice"
+    value {
+      redirect {
+        source_url  = "${local.domain}/privacy"
+        target_url  = "https://${local.domain}/legal-notice"
+        status_code = 301
+      }
     }
   }
 }
 
-resource "cloudflare_page_rule" "redirect_imprint" {
-  zone_id = data.cloudflare_zone.zone.id
-  target  = "www.${local.domain}/imprint"
+resource "cloudflare_ruleset" "redirect_pages" {
+  account_id = data.cloudflare_zone.zone.account_id
+  kind       = "root"
+  name       = "${local.redirect_prefix}_redirects"
+  phase      = "http_request_redirect"
 
-  actions {
-    forwarding_url {
-      status_code = 301
-      url         = "https://${local.domain}/legal-notice"
+  rules {
+    enabled    = true
+    action     = "redirect"
+    expression = "http.request.full_uri in ${format("$%s", local.redirect_prefix)}_redirects"
+
+    action_parameters {
+      from_list {
+        name = "${local.redirect_prefix}_redirects"
+        key  = "http.request.full_uri"
+      }
     }
   }
-}
 
-resource "cloudflare_page_rule" "redirect_privacy" {
-  zone_id = data.cloudflare_zone.zone.id
-  target  = "www.${local.domain}/privacy"
-
-  actions {
-    forwarding_url {
-      status_code = 301
-      url         = "https://${local.domain}/legal-notice"
-    }
-  }
+  depends_on = [cloudflare_list.redirect_pages]
 }
