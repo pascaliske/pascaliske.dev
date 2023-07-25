@@ -1,3 +1,25 @@
+# [3.3.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.2.1...v3.3.0) (2023-07-25)
+
+
+### Bug Fixes
+
+* remove browser module from app providers ([18a9483](https://github.com/pascaliske/pascaliske.dev/commit/18a94831e2116ec6abf57fc514e8569ae5914b1f))
+* **terraform:** use bulk list and ruleset for page redirects ([34f7dfb](https://github.com/pascaliske/pascaliske.dev/commit/34f7dfb4f91f9ca1477908e232757d8cea0b7eab))
+* **worker:** remove about page from available pages ([285d2b5](https://github.com/pascaliske/pascaliske.dev/commit/285d2b5c6ec30fabe3f8d9a06d716b71f43cf31f))
+
+
+### Features
+
+* implement social card meta tags ([5c824e0](https://github.com/pascaliske/pascaliske.dev/commit/5c824e09fe5419343954c5c058584c2492b80a70))
+* **navigation:** implement keyboard shortcuts for navigation ([56bd42c](https://github.com/pascaliske/pascaliske.dev/commit/56bd42c392ce81780783e50cc45800433e99624b))
+
+
+### Performance Improvements
+
+* **navigation:** replace angular animation with css only animation ([6095222](https://github.com/pascaliske/pascaliske.dev/commit/6095222bd44c90459d2969ce113a8d6a07425c42))
+
+
+
 ## [3.2.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.2.0...v3.2.1) (2023-07-24)
 
 
