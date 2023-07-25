@@ -2,7 +2,7 @@ import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { NgFor, NgIf, AsyncPipe } from '@angular/common'
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
-import { Observable, timer } from 'rxjs'
+import { Observable, fromEvent, timer } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { ThemeService } from 'shared/theme/theme.service'
@@ -75,6 +75,7 @@ export class NavigationComponent implements OnInit {
 
     public ngOnInit(): void {
         this.watchNavigationEnd()
+        this.watchKeyboard()
     }
 
     public toggle(): void {
@@ -117,6 +118,32 @@ export class NavigationComponent implements OnInit {
             .subscribe(() => {
                 this.close()
             })
+    }
+
+    private watchKeyboard(): void {
+        this.browserApiService.with('document', document => {
+            fromEvent<KeyboardEvent>(document, 'keypress')
+                .pipe(takeUntilDestroyed(this.destroy))
+                .subscribe((event: KeyboardEvent) => {
+                    // toggle mobile navigation
+                    if (event.key === 'm' && this.isMobile) {
+                        this.toggle()
+                        return
+                    }
+
+                    // toggle color scheme
+                    if (event.key === 't') {
+                        this.themeService.next()
+                        return
+                    }
+
+                    // go to page
+                    const link: NavigationLink = this.links?.[parseInt(event.key ?? '', 10) - 1]
+                    if (link && (!this.isMobile || this.isOpen)) {
+                        this.router.navigate([link.target]).catch(() => {})
+                    }
+                })
+        })
     }
 
     public get icon(): 'menu' | 'close' {
