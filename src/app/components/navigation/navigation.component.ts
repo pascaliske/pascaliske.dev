@@ -74,14 +74,7 @@ export class NavigationComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
-        this.router.events
-            .pipe(
-                takeUntilDestroyed(this.destroy),
-                filter((event): event is NavigationEnd => event instanceof NavigationEnd),
-            )
-            .subscribe(() => {
-                this.close()
-            })
+        this.watchNavigationEnd()
     }
 
     public toggle(): void {
@@ -113,6 +106,17 @@ export class NavigationComponent implements OnInit {
                 document.documentElement.classList.remove('overflow-hidden')
             })
         })
+    }
+
+    private watchNavigationEnd(): void {
+        this.router.events
+            .pipe(
+                takeUntilDestroyed(this.destroy),
+                filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+            )
+            .subscribe(() => {
+                this.close()
+            })
     }
 
     public get icon(): 'menu' | 'close' {
