@@ -11,7 +11,7 @@ export const site: () => MiddlewareHandler<Environment> = () => {
         log(`Serving site for environment: ${context.env.ENVIRONMENT}`)
 
         // available pages
-        const pages: string[] = ['/home', '/about', '/skills', '/work', '/contact', '/legal-notice']
+        const pages: string[] = ['/home', '/skills', '/work', '/contact', '/legal-notice']
 
         // serve static files, matching page or root index.html
         const handler: MiddlewareHandler<Environment> = context.req.path.includes('.')
