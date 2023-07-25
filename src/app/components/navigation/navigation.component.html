@@ -1,24 +1,25 @@
 <header class="flex flex-col content-center sm:flex-row-reverse sm:justify-end">
     <div
         class="fixed left-[32.5px] top-10 z-50 flex transition-[left] sm:relative sm:left-0 sm:top-0"
-        [class.!left-10]="(scrolled$ | async) && !desktop"
+        [class.!left-10]="(scrolled$ | async) && isMobile"
     >
         <button
             class="plausible-event-name=Mobile+Navigation+Toggle mr-2.5 block h-10 w-10 transition-colors sm:hidden"
-            [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
-            [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
-            [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
             aria-label="Mobile Navigation Toggle Button"
+            [class.text-ghostWhite]="(scrolled$ | async) && isClosed && isMobile"
+            [class.bg-paynesGray]="(scrolled$ | async) && isClosed && isMobile"
+            [class.dark:bg-charcoal]="(scrolled$ | async) && isClosed && isMobile"
+            [disabled]="isAnimating"
             (click)="toggle()"
         >
-            <cmp-navigation-button [open]="open"></cmp-navigation-button>
+            <cmp-navigation-button [open]="isOpen || isFadingIn"></cmp-navigation-button>
         </button>
         <button
             class="plausible-event-name=Theme+Change group block h-10 w-10 transition-colors"
-            [class.text-ghostWhite]="(scrolled$ | async) && !open && !desktop"
-            [class.bg-paynesGray]="(scrolled$ | async) && !open && !desktop"
-            [class.dark:bg-charcoal]="(scrolled$ | async) && !open && !desktop"
             aria-label="Theme Change Button"
+            [class.text-ghostWhite]="(scrolled$ | async) && isClosed && isMobile"
+            [class.bg-paynesGray]="(scrolled$ | async) && isClosed && isMobile"
+            [class.dark:bg-charcoal]="(scrolled$ | async) && isClosed && isMobile"
             (click)="themeService.next()"
         >
             <cmp-theme-button [state]="themeService.icon$ | async"></cmp-theme-button>
@@ -42,10 +43,16 @@
         </ul>
     </div>
     <div
-        class="nav-list flex items-center justify-center sm:hidden"
-        [class.overscroll-contain]="open"
-        [@fade]="open"
-        *ngIf="open"
+        class="nav-list items-center justify-center sm:hidden"
+        [class.overscroll-contain]="isOpen"
+        [class.hidden]="isClosed"
+        [class.flex]="isOpen || isFadingIn || isFadingOut"
+        [class.invisible]="isClosed"
+        [class.visible]="isOpen || isFadingIn || isFadingOut"
+        [class.opacity-0]="isClosed || isFadingOut"
+        [class.opacity-100]="isOpen || isFadingIn"
+        [class.animate-fadeOut]="isFadingOut"
+        [class.animate-fadeIn]="isFadingIn"
     >
         <ul class="flex flex-col items-start sm:flex-row">
             <li

@@ -1,6 +1,5 @@
 import { importProvidersFrom, ApplicationConfig, ValueProvider, APP_ID } from '@angular/core'
 import { provideClientHydration } from '@angular/platform-browser'
-import { provideAnimations } from '@angular/platform-browser/animations'
 import { provideRouter } from '@angular/router'
 import { NgProgressModule } from 'ngx-progressbar'
 import { NgProgressHttpModule } from 'ngx-progressbar/http'
@@ -20,7 +19,6 @@ export const appConfig: ApplicationConfig = {
             NgProgressRouterModule,
         ),
         provideClientHydration(),
-        provideAnimations(),
         provideRouter(routes, ...features),
         provideAppId(),
     ],

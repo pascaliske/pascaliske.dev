@@ -2,7 +2,7 @@ import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { NgFor, NgIf, AsyncPipe } from '@angular/common'
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
-import { Observable } from 'rxjs'
+import { Observable, timer } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { ThemeService } from 'shared/theme/theme.service'
@@ -10,7 +10,13 @@ import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { ScrollService } from 'shared/scroll/scroll.service'
 import { NavigationButtonComponent } from 'components/navigation-button/navigation-button.component'
 import { ThemeButtonComponent } from 'components/theme-button/theme-button.component'
-import { animations } from './navigation.animation'
+
+export const enum NavigationState {
+    CLOSED = 'closed',
+    FADE_IN = 'fade-in',
+    FADE_OUT = 'fade-out',
+    OPEN = 'open',
+}
 
 export interface NavigationLink {
     title: string
@@ -30,7 +36,6 @@ export interface NavigationLink {
         NavigationButtonComponent,
         ThemeButtonComponent,
     ],
-    animations,
 })
 export class NavigationComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
@@ -39,17 +44,13 @@ export class NavigationComponent implements OnInit {
         map(({ scrollY }) => scrollY > 20),
     )
 
-    public open: boolean = false
+    public state: NavigationState = NavigationState.CLOSED
 
     public links: NavigationLink[] = [
         {
             title: 'home.',
             target: '/home',
         },
-        // {
-        //     title: 'about.',
-        //     target: '/about',
-        // },
         {
             title: 'skills.',
             target: '/skills',
@@ -79,29 +80,70 @@ export class NavigationComponent implements OnInit {
                 filter((event): event is NavigationEnd => event instanceof NavigationEnd),
             )
             .subscribe(() => {
-                this.open = false
-                this.browserApiService.with('document', document => {
-                    document.documentElement.classList.remove('overflow-hidden')
-                })
+                this.close()
             })
     }
 
     public toggle(): void {
-        this.open = !this.open
-        this.browserApiService.with('document', document => {
-            if (this.open) {
+        if (this.state === NavigationState.OPEN) {
+            this.close()
+            return
+        }
+
+        this.open()
+    }
+
+    public open(): void {
+        this.state = NavigationState.FADE_IN
+
+        timer(200).subscribe(() => {
+            this.state = NavigationState.OPEN
+            this.browserApiService.with('document', document => {
                 document.documentElement.classList.add('overflow-hidden')
-            } else {
-                document.documentElement.classList.remove('overflow-hidden')
-            }
+            })
         })
     }
 
-    public get desktop(): boolean {
-        return this.breakpointService.matches('(min-width: 640px)')
+    public close(): void {
+        this.state = NavigationState.FADE_OUT
+
+        timer(200).subscribe(() => {
+            this.state = NavigationState.CLOSED
+            this.browserApiService.with('document', document => {
+                document.documentElement.classList.remove('overflow-hidden')
+            })
+        })
     }
 
     public get icon(): 'menu' | 'close' {
-        return this.open ? 'close' : 'menu'
+        if (this.state === NavigationState.CLOSED || this.state === NavigationState.FADE_OUT) {
+            return 'close'
+        }
+
+        return 'menu'
+    }
+
+    public get isClosed(): boolean {
+        return this.state === NavigationState.CLOSED
+    }
+
+    public get isFadingIn(): boolean {
+        return this.state === NavigationState.FADE_IN
+    }
+
+    public get isFadingOut(): boolean {
+        return this.state === NavigationState.FADE_OUT
+    }
+
+    public get isOpen(): boolean {
+        return this.state === NavigationState.OPEN
+    }
+
+    public get isAnimating(): boolean {
+        return this.state === NavigationState.FADE_IN || this.state === NavigationState.FADE_OUT
+    }
+
+    public get isMobile(): boolean {
+        return !this.breakpointService.matches('(min-width: 640px)')
     }
 }

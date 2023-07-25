@@ -24,6 +24,14 @@ module.exports = {
                 lato: ['"Lato"', 'sans-serif'],
             },
             keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                    '0%': { opacity: '1' },
+                    '100%': { opacity: '0' },
+                },
                 blink: {
                     '0%, 100%': { opacity: '1' },
                     '50%': { opacity: '0' },
@@ -34,6 +42,8 @@ module.exports = {
                 },
             },
             animation: {
+                fadeIn: 'fadeIn .2s ease-in-out',
+                fadeOut: 'fadeOut .2s ease-in-out',
                 blink: 'blink .75s linear infinite',
                 heartbeat: 'heartbeat 1s ease-in infinite',
             },
