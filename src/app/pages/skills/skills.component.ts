@@ -1,6 +1,7 @@
 import { Component, HostBinding } from '@angular/core'
 import { NgFor, NgIf } from '@angular/common'
 import { Tags } from 'typings'
+import { MetadataService } from 'shared/metadata/metadata.service'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { SectionComponent } from 'components/section/section.component'
 import { CopyComponent } from 'components/copy/copy.component'
@@ -20,6 +21,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
         CardComponent,
         SocialsComponent,
     ],
+    providers: [MetadataService],
 })
 export class SkillsComponent {
     @HostBinding('class')
@@ -62,4 +64,6 @@ export class SkillsComponent {
             tags: [Tags.ANGULAR, Tags.TYPESCRIPT, Tags.NODEJS, Tags.GOLANG],
         },
     ]
+
+    public constructor(private readonly metadata: MetadataService) {}
 }

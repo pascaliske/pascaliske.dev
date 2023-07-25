@@ -13,6 +13,7 @@ import {
     faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons'
 import { timer } from 'rxjs'
+import { MetadataService } from 'shared/metadata/metadata.service'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
 import { InputComponent } from 'components/input/input.component'
@@ -41,6 +42,7 @@ export interface ContactFormGroup {
         InputComponent,
         SocialsComponent,
     ],
+    providers: [MetadataService],
 })
 export class ContactComponent {
     @HostBinding('class')
@@ -65,7 +67,10 @@ export class ContactComponent {
         message: new FormControl(null, [Validators.required]),
     })
 
-    public constructor(private readonly http: HttpClient) {}
+    public constructor(
+        private readonly http: HttpClient,
+        private readonly metadata: MetadataService,
+    ) {}
 
     public submit(): void {
         this.state = 'loading'

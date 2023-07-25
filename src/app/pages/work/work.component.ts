@@ -5,6 +5,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Tags } from 'typings'
+import { MetadataService } from 'shared/metadata/metadata.service'
 import { SectionComponent } from 'components/section/section.component'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
@@ -36,6 +37,7 @@ export interface Project {
         CardComponent,
         SocialsComponent,
     ],
+    providers: [MetadataService],
 })
 export class WorkComponent {
     @HostBinding('class')
@@ -166,4 +168,6 @@ export class WorkComponent {
             ],
         },
     ]
+
+    public constructor(private readonly metadata: MetadataService) {}
 }
