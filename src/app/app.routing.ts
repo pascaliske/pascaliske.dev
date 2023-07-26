@@ -1,8 +1,8 @@
 import type { RouterFeatures, Routes } from '@angular/router'
-import { withEnabledBlockingInitialNavigation, withInMemoryScrolling } from '@angular/router'
+import { withDisabledInitialNavigation, withInMemoryScrolling } from '@angular/router'
 
 export const features: RouterFeatures[] = [
-    withEnabledBlockingInitialNavigation(),
+    withDisabledInitialNavigation(),
     withInMemoryScrolling({
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',

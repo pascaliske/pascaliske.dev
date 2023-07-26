@@ -1,6 +1,6 @@
 import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { RouterOutlet } from '@angular/router'
+import { Router, RouterOutlet } from '@angular/router'
 import { NgProgressModule } from 'ngx-progressbar'
 import { ThemeService } from 'shared/theme/theme.service'
 import { NavigationComponent } from 'components/navigation/navigation.component'
@@ -22,9 +22,17 @@ import { TriangleComponent } from 'components/triangle/triangle.component'
 export class AppComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
 
-    public constructor(private readonly themeService: ThemeService) {}
+    public constructor(
+        private readonly router: Router,
+        private readonly themeService: ThemeService,
+    ) {}
 
     public ngOnInit(): void {
         this.themeService.connect().pipe(takeUntilDestroyed(this.destroy)).subscribe()
+
+        setTimeout(() => {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+            this.router.navigate([])
+        })
     }
 }
