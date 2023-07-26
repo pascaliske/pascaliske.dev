@@ -25,13 +25,12 @@
             <cmp-theme-button [state]="themeService.icon$ | async"></cmp-theme-button>
         </button>
     </div>
-    <div class="nav-list hidden items-center justify-center sm:flex">
-        <ul class="flex flex-col items-start sm:flex-row">
+    <div class="hidden items-center justify-center sm:flex">
+        <ul class="flex flex-row items-start">
             <li
                 class="group relative flex flex-col justify-center"
                 *ngFor="let link of links; let i = index"
             >
-                <span class="nav-index"> 0{{ i + 1 }} </span>
                 <a
                     class="nav-link group-hover:nav-link-active"
                     [routerLink]="[link.target]"
@@ -43,7 +42,7 @@
         </ul>
     </div>
     <div
-        class="nav-list items-center justify-center sm:hidden"
+        class="fixed left-0 top-0 z-40 h-screen w-screen items-center justify-center bg-ghostWhite p-5 pt-20 transition-colors duration-300 dark:bg-gunmetal sm:hidden"
         [class.overscroll-contain]="isOpen"
         [class.hidden]="isClosed"
         [class.flex]="isOpen || isFadingIn || isFadingOut"
@@ -54,12 +53,12 @@
         [class.animate-fadeOut]="isFadingOut"
         [class.animate-fadeIn]="isFadingIn"
     >
-        <ul class="flex flex-col items-start sm:flex-row">
+        <ul class="flex flex-col items-start">
             <li
                 class="group relative flex flex-col justify-center"
                 *ngFor="let link of links; let i = index"
             >
-                <span class="nav-index"> 0{{ i + 1 }} </span>
+                <div class="absolute mb-1 -translate-x-full pr-2 text-paynesGray">0{{ i + 1 }}</div>
                 <a
                     class="nav-link group-hover:nav-link-active"
                     [routerLink]="[link.target]"
