@@ -1,3 +1,18 @@
+## [3.3.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.0...v3.3.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* **navigation:** only perform toggle if it would actually change the state ([5079615](https://github.com/pascaliske/pascaliske.dev/commit/50796153f4197406feab19fc3d830f8dd1d834fa))
+* **navigation:** optimize navigation styles for all viewports ([7d78087](https://github.com/pascaliske/pascaliske.dev/commit/7d780876c175d2594ac2b908a54c98f3c91a0b77))
+
+
+### Performance Improvements
+
+* schedule bootstrap and initial navigation on separate tasks ([d270e3e](https://github.com/pascaliske/pascaliske.dev/commit/d270e3e5b634240b19cd5a99e4af0adc2185d63c))
+
+
+
 # [3.3.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.2.1...v3.3.0) (2023-07-25)
 
 
