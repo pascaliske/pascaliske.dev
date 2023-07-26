@@ -79,15 +79,22 @@ export class NavigationComponent implements OnInit {
     }
 
     public toggle(): void {
-        if (this.state === NavigationState.OPEN) {
-            this.close()
-            return
-        }
+        switch (this.state) {
+            case NavigationState.OPEN:
+                this.close()
+                break
 
-        this.open()
+            case NavigationState.CLOSED:
+                this.open()
+                break
+        }
     }
 
     public open(): void {
+        if (this.state === NavigationState.OPEN) {
+            return
+        }
+
         this.state = NavigationState.FADE_IN
 
         timer(200).subscribe(() => {
@@ -99,6 +106,10 @@ export class NavigationComponent implements OnInit {
     }
 
     public close(): void {
+        if (this.state === NavigationState.CLOSED) {
+            return
+        }
+
         this.state = NavigationState.FADE_OUT
 
         timer(200).subscribe(() => {
