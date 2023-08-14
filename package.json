@@ -64,7 +64,7 @@
     "express": "^4.15.2",
     "hono": "^3.1.5",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
+    "lint-staged": "^14.0.0",
     "postcss": "^8.4.21",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.0",
