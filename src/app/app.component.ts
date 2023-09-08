@@ -28,11 +28,10 @@ export class AppComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
+        // connect theme service to local storage
         this.themeService.connect().pipe(takeUntilDestroyed(this.destroy)).subscribe()
 
-        setTimeout(() => {
-            // eslint-disable-next-line @typescript-eslint/no-floating-promises
-            this.router.navigate([])
-        })
+        // delayed initial navigation
+        setTimeout(() => this.router.initialNavigation())
     }
 }
