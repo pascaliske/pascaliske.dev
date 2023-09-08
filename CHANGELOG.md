@@ -1,3 +1,12 @@
+## [3.3.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.1...v3.3.2) (2023-09-08)
+
+
+### Bug Fixes
+
+* use manual initial navigation function to allow deep linking to all pages ([ebb0c15](https://github.com/pascaliske/pascaliske.dev/commit/ebb0c158dff9e574b146b0af21b1c06c1f557b38))
+
+
+
 ## [3.3.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.0...v3.3.1) (2023-07-26)
 
 
