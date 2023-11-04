@@ -136,6 +136,12 @@ export class NavigationComponent implements OnInit {
             fromEvent<KeyboardEvent>(document, 'keypress')
                 .pipe(takeUntilDestroyed(this.destroy))
                 .subscribe((event: KeyboardEvent) => {
+                    // skip keyboard navigation if focus is inside form fields
+                    const nodeName: string = (event?.target as Element)?.nodeName ?? ''
+                    if (['input', 'textarea'].includes(nodeName.toLowerCase())) {
+                        return
+                    }
+
                     // toggle mobile navigation
                     if (event.key === 'm' && this.isMobile) {
                         this.toggle()
