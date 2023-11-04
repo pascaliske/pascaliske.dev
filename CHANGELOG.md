@@ -1,3 +1,14 @@
+## [3.3.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.2...v3.3.3) (2023-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zone.js to ~0.14.0 ([c8ba502](https://github.com/pascaliske/pascaliske.dev/commit/c8ba502e73ee150f094b02b39e2e1e0590c32f5d))
+* **navigation:** ignore keyboard events if focus is inside form fields ([9084227](https://github.com/pascaliske/pascaliske.dev/commit/9084227220262d47b7d7950215ce41ca16f85cb7))
+* **polyfills:** remove deprecated zone import ([6bc368d](https://github.com/pascaliske/pascaliske.dev/commit/6bc368de3712a0b7352ae37161159aa7342c4764))
+
+
+
 ## [3.3.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.1...v3.3.2) (2023-09-08)
 
 
