@@ -1,3 +1,14 @@
+## [3.3.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.3...v3.3.4) (2023-11-10)
+
+
+### Features
+
+* allow manual tracking of custom events using plausible ([5a0e4fe](https://github.com/pascaliske/pascaliske.dev/commit/5a0e4fe5aa385d7deba1ec16ed5f946bb588a9c0))
+* use manual tracking for contact form submits ([55e6be9](https://github.com/pascaliske/pascaliske.dev/commit/55e6be9c0d5284681629b901085df86de8c56864))
+* use manual tracking for theme changes ([cc68f16](https://github.com/pascaliske/pascaliske.dev/commit/cc68f16fd2ea3cf7635185b491967f9f1313edb0))
+
+
+
 ## [3.3.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.2...v3.3.3) (2023-11-04)
 
 
