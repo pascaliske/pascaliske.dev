@@ -18,6 +18,7 @@ import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
 import { InputComponent } from 'components/input/input.component'
 import { SocialsComponent } from 'components/socials/socials.component'
+import { plausible } from 'typings'
 
 export interface ContactFormGroup {
     prefix: FormControl
@@ -82,10 +83,12 @@ export class ContactComponent {
             complete: () => {
                 this.state = 'success'
                 this.reset(5000)
+                plausible('Contact Form Submit', { props: { type: 'success' } })
             },
             error: () => {
                 this.state = 'error'
                 this.reset(5000, false)
+                plausible('Contact Form Submit', { props: { type: 'error' } })
             },
         })
     }
