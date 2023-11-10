@@ -4,6 +4,7 @@ import { Observable, BehaviorSubject, map, tap } from 'rxjs'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { StorageService } from 'shared/storage/storage.service'
+import { plausible } from 'typings'
 
 export const enum Theme {
     SYSTEM = 'system',
@@ -56,16 +57,19 @@ export class ThemeService {
             // light
             case Theme.LIGHT:
                 this.state$.next(Theme.DARK)
+                plausible('Theme Change', { props: { from: Theme.LIGHT, to: Theme.DARK } })
                 break
 
             // dark
             case Theme.DARK:
                 this.state$.next(Theme.SYSTEM)
+                plausible('Theme Change', { props: { from: Theme.DARK, to: Theme.SYSTEM } })
                 break
 
             // system
             default:
                 this.state$.next(Theme.LIGHT)
+                plausible('Theme Change', { props: { from: Theme.SYSTEM, to: Theme.LIGHT } })
                 break
         }
     }

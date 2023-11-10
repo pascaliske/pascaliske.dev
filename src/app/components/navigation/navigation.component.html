@@ -15,7 +15,7 @@
             <cmp-navigation-button [open]="isOpen || isFadingIn"></cmp-navigation-button>
         </button>
         <button
-            class="plausible-event-name=Theme+Change group block h-10 w-10 transition-colors"
+            class="group block h-10 w-10 transition-colors"
             aria-label="Theme Change Button"
             [class.text-ghostWhite]="(scrolled$ | async) && isClosed && isMobile"
             [class.bg-paynesGray]="(scrolled$ | async) && isClosed && isMobile"
