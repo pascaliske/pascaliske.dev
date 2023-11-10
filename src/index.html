@@ -11,6 +11,10 @@
     <link rel="icon" href="favicon.png" />
     <script defer data-domain="pascaliske.dev" data-api="/api/event" src="/insights.js"></script>
     <script>
+    window.plausible = window.plausible || function() {
+        (window.plausible.q = window.plausible.q || []).push(arguments)
+    }
+
     if (localStorage.getItem('pi_theme') === 'dark' || (!('pi_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
     } else {
