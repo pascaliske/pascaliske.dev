@@ -6,6 +6,7 @@ import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { StorageService } from 'shared/storage/storage.service'
 
 export const enum Theme {
+    SYSTEM = 'system',
     DARK = 'dark',
     LIGHT = 'light',
 }
@@ -20,8 +21,8 @@ export const enum ThemeIcon {
     providedIn: 'root',
 })
 export class ThemeService {
-    private readonly state$: BehaviorSubject<Theme | null> = new BehaviorSubject<Theme | null>(
-        this.storageService.get('theme'),
+    private readonly state$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(
+        this.storageService.get('theme') ?? Theme.SYSTEM,
     )
 
     private readonly query: string = '(prefers-color-scheme: dark)'
@@ -38,7 +39,7 @@ export class ThemeService {
 
         return this.state$.pipe(
             map(theme => {
-                if (theme === null) {
+                if (theme === Theme.SYSTEM) {
                     this.storageService.remove('theme')
                     return
                 }
@@ -59,7 +60,7 @@ export class ThemeService {
 
             // dark
             case Theme.DARK:
-                this.state$.next(null)
+                this.state$.next(Theme.SYSTEM)
                 break
 
             // system
@@ -104,7 +105,7 @@ export class ThemeService {
         }
     }
 
-    public get preference$(): Observable<Theme | null> {
+    public get preference$(): Observable<Theme> {
         return this.state$.asObservable()
     }
 
