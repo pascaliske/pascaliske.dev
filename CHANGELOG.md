@@ -1,3 +1,12 @@
+# [3.4.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.5...v3.4.0) (2023-11-11)
+
+
+### Features
+
+* upgrade to angular v17 ([6b8a83c](https://github.com/pascaliske/pascaliske.dev/commit/6b8a83c252f9714ad9caac960d618be54094a886))
+
+
+
 ## [3.3.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.4...v3.3.5) (2023-11-11)
 
 
