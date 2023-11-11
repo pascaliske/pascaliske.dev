@@ -4,10 +4,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import {
     faGithub,
-    faTwitter,
+    faXTwitter,
+    faMastodon,
     faXing,
     faLinkedinIn,
-    faMastodon,
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -36,7 +36,12 @@ export class SocialsComponent {
         {
             name: 'Twitter',
             href: 'https://twitter.com/pascaliske',
-            icon: faTwitter,
+            icon: faXTwitter,
+        },
+        {
+            name: 'Mastodon',
+            href: 'https://hachyderm.io/@pascaliske',
+            icon: faMastodon,
         },
         {
             name: 'Xing',
@@ -47,11 +52,6 @@ export class SocialsComponent {
             name: 'LinkedIn',
             href: 'https://www.linkedin.com/in/pascaliske',
             icon: faLinkedinIn,
-        },
-        {
-            name: 'Mastodon',
-            href: 'https://hachyderm.io/@pascaliske',
-            icon: faMastodon,
         },
         {
             name: 'Mail',
