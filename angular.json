@@ -104,10 +104,10 @@
           "defaultConfiguration": "development",
           "configurations": {
             "production": {
-              "browserTarget": "pascaliske-dev:build:production"
+              "buildTarget": "pascaliske-dev:build:production"
             },
             "development": {
-              "browserTarget": "pascaliske-dev:build:development"
+              "buildTarget": "pascaliske-dev:build:development"
             }
           }
         },
@@ -145,10 +145,10 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "routes": ["/", "/home", "/skills", "/work", "/contact", "/legal-notice"],
-            "guessRoutes": false
+            "discoverRoutes": false
           },
           "defaultConfiguration": "production",
           "configurations": {
