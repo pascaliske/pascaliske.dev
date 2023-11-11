@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core'
 import { NgFor, NgIf } from '@angular/common'
-import { Tags } from 'typings'
+import { Tags } from 'shared/tags/tags'
 import { MetadataService } from 'shared/metadata/metadata.service'
 import { HeadlineComponent } from 'components/headline/headline.component'
 import { SectionComponent } from 'components/section/section.component'
