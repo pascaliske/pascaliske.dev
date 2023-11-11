@@ -1,3 +1,13 @@
+## [3.3.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.4...v3.3.5) (2023-11-11)
+
+
+### Bug Fixes
+
+* add typings file as type root to fix build ([b91b422](https://github.com/pascaliske/pascaliske.dev/commit/b91b422742f8a1df202be7001ef15ce30f01b183))
+* **socials:** switch to twitter/x icon, re-order socials ([9065b67](https://github.com/pascaliske/pascaliske.dev/commit/9065b67f12c1e3448897868308eeb048a53f4419))
+
+
+
 ## [3.3.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.3...v3.3.4) (2023-11-10)
 
 
