@@ -18,7 +18,6 @@ import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
 import { InputComponent } from 'components/input/input.component'
 import { SocialsComponent } from 'components/socials/socials.component'
-import { plausible } from 'typings'
 
 export interface ContactFormGroup {
     prefix: FormControl

@@ -4,7 +4,6 @@ import { Observable, BehaviorSubject, map, tap } from 'rxjs'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 import { BreakpointService } from 'shared/breakpoint/breakpoint.service'
 import { StorageService } from 'shared/storage/storage.service'
-import { plausible } from 'typings'
 
 export const enum Theme {
     SYSTEM = 'system',

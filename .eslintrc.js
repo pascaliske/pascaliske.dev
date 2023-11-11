@@ -9,4 +9,7 @@ module.exports = {
         browser: true,
         node: true,
     },
+    globals: {
+        plausible: 'readonly',
+    },
 }
