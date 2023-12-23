@@ -1948,10 +1948,10 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.0.0.tgz#f22824caff3ae506b18207bad4126dbc6ccdb6b8"
   integrity sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==
 
-"@fortawesome/angular-fontawesome@0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.14.0.tgz#33b39f191de15b8b2fe35f733b30c51981bea0e8"
-  integrity sha512-nB7an9t66nY0m/1MIBOIvi+vKyZaTskhtGtQwGTiMyte3Bmy9080pFpXguyox68/vxGVmLxZkRxYIgjMCvm7QQ==
+"@fortawesome/angular-fontawesome@0.14.1":
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.14.1.tgz#9b711b2f4e8df3ec18e29a0abc720a96fa029b78"
+  integrity sha512-Yb5HLiEOAxjSLEcaOM51CKIrzdfvoDafXVJERm9vufxfZkVZPZJgrZRgqwLVpejgq4/Ez6TqHZ6SqmJwdtRF6g==
   dependencies:
     tslib "^2.6.2"
 
