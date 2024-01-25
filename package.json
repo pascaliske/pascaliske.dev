@@ -62,7 +62,7 @@
     "eslint": "^8.53.0",
     "express": "^4.15.2",
     "hono": "^3.9.2",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "lint-staged": "^15.1.0",
     "postcss": "^8.4.29",
     "prettier": "^3.0.3",
