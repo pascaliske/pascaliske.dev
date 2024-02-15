@@ -40,7 +40,7 @@ function getCacheControl(path: string): CACHE {
 export const cache: () => MiddlewareHandler<Environment> = () => {
     const log = logger('cache')
 
-    return (context: Context<Environment>, next: Next) => {
+    return (context: Context<Environment, string>, next: Next) => {
         // skip cache on staging environment
         if (context.env.ENVIRONMENT !== 'production') {
             log(`Skipped cache setup due to environment: ${context.env.ENVIRONMENT}`)

@@ -7,7 +7,7 @@ import { Environment } from '..'
 export const site: () => MiddlewareHandler<Environment> = () => {
     const log = logger('site')
 
-    return (context: Context<Environment>, next: Next) => {
+    return (context: Context<Environment, string>, next: Next) => {
         log(`Serving site for environment: ${context.env.ENVIRONMENT}`)
 
         // available pages
