@@ -1,5 +1,4 @@
 .github
 dist
-legacy
 src/index.html
 CHANGELOG.md

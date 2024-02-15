@@ -26,4 +26,4 @@ jobs:
 
       # build
       - name: Build application
-        run: yarn run prerender
+        run: yarn run build

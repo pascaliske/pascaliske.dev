@@ -6,16 +6,13 @@
   "scripts": {
     "prepare": "husky",
     "start": "ng serve",
-    "build:app": "ng build",
-    "build:server": "ng run pascaliske-dev:server",
-    "prerender": "ng run pascaliske-dev:prerender",
+    "build": "ng build",
     "lint": "ng lint pascaliske-dev --fix",
     "format": "prettier --write \"**/*.{ts,scss,html,md,json}\"",
     "version": "bump --yes package.json",
     "changelog": "standard-changelog -r 1"
   },
   "private": true,
-  "sideEffects": false,
   "prettier": "@pascaliske/prettier-config/tailwind",
   "dependencies": {
     "@angular/animations": "^17.2.1",
@@ -60,7 +57,7 @@
     "@typescript-eslint/parser": "^7.0.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
-    "express": "^4.15.2",
+    "express": "^4.18.2",
     "hono": "^3.12.8",
     "husky": "^9.0.7",
     "lint-staged": "^15.2.0",

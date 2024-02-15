@@ -54,16 +54,23 @@
       "prefix": "cmp",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pascaliske-dev/browser",
+            "outputPath": {
+              "base": "dist/pascaliske-dev"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.png", "src/robots.txt", "src/assets"],
             "styles": ["src/styles/common.css"],
-            "scripts": []
+            "scripts": [],
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "defaultConfiguration": "production",
           "configurations": {
@@ -90,9 +97,7 @@
               "statsJson": true
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -115,51 +120,6 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts"]
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/pascaliske-dev/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "buildOptimizer": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "routes": ["/", "/home", "/skills", "/work", "/contact", "/legal-notice"],
-            "discoverRoutes": false
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "production": {
-              "browserTarget": "pascaliske-dev:build:production",
-              "serverTarget": "pascaliske-dev:server:production"
-            },
-            "development": {
-              "browserTarget": "pascaliske-dev:build:development",
-              "serverTarget": "pascaliske-dev:server:development"
-            }
           }
         }
       }
