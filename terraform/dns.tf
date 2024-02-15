@@ -62,7 +62,7 @@ resource "cloudflare_record" "bimi" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "default._bimi"
-  value   = "v=BIMI1; l=https://${local.domain}/assets/icons/bimi.svg;"
+  value   = "v=BIMI1; l=https://${var.DOMAIN}/assets/icons/bimi.svg;"
 }
 
 # dmarc
@@ -70,7 +70,7 @@ resource "cloudflare_record" "dmarc" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "_dmarc"
-  value   = "v=DMARC1; p=quarantine; rua=mailto:info@${local.domain}"
+  value   = "v=DMARC1; p=quarantine; rua=mailto:info@${var.DOMAIN}"
 }
 
 # dkim, uberspace mail
@@ -85,7 +85,7 @@ resource "cloudflare_record" "dkim" {
 resource "cloudflare_record" "spf" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = local.domain
+  name    = var.DOMAIN
   value   = "v=spf1 include:spf.uberspace.de include:relay.mailchannels.net ~all"
 }
 
@@ -94,7 +94,7 @@ resource "cloudflare_record" "mail_lockdown" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
   name    = "_mailchannels"
-  value   = "v=mc1 cfid=${local.domain}"
+  value   = "v=mc1 cfid=${var.DOMAIN}"
 }
 
 # openpgpkey
@@ -109,7 +109,7 @@ resource "cloudflare_record" "openpgpkey" {
 resource "cloudflare_record" "google" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = local.domain
+  name    = var.DOMAIN
   value   = "google-site-verification=${var.GOOGLE_VERIFICATION_TOKEN}"
 }
 
@@ -117,6 +117,6 @@ resource "cloudflare_record" "google" {
 resource "cloudflare_record" "have_i_been_pwned" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "TXT"
-  name    = local.domain
+  name    = var.DOMAIN
   value   = "have-i-been-pwned-verification=${var.HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN}"
 }

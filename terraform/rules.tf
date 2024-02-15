@@ -1,11 +1,11 @@
 resource "cloudflare_page_rule" "redirect_www" {
   zone_id = data.cloudflare_zone.zone.id
-  target  = "www.${local.domain}*"
+  target  = "www.${var.DOMAIN}*"
 
   actions {
     forwarding_url {
       status_code = 301
-      url         = "https://${local.domain}/$1"
+      url         = "https://${var.DOMAIN}/$1"
     }
   }
 }
@@ -13,15 +13,15 @@ resource "cloudflare_page_rule" "redirect_www" {
 resource "cloudflare_list" "redirect_pages" {
   account_id = data.cloudflare_zone.zone.account_id
   kind       = "redirect"
-  name       = "${local.redirect_prefix}_redirects"
+  name       = "${replace(var.DOMAIN, ".", "_")}_redirects"
 
   # /about -> /home
   item {
     comment = "/about -> /home"
     value {
       redirect {
-        source_url  = "${local.domain}/about"
-        target_url  = "https://${local.domain}/home"
+        source_url  = "${var.DOMAIN}/about"
+        target_url  = "https://${var.DOMAIN}/home"
         status_code = 301
       }
     }
@@ -32,8 +32,8 @@ resource "cloudflare_list" "redirect_pages" {
     comment = "/imprint -> /legal-notice"
     value {
       redirect {
-        source_url  = "${local.domain}/imprint"
-        target_url  = "https://${local.domain}/legal-notice"
+        source_url  = "${var.DOMAIN}/imprint"
+        target_url  = "https://${var.DOMAIN}/legal-notice"
         status_code = 301
       }
     }
@@ -44,8 +44,8 @@ resource "cloudflare_list" "redirect_pages" {
     comment = "/privacy -> /legal-notice"
     value {
       redirect {
-        source_url  = "${local.domain}/privacy"
-        target_url  = "https://${local.domain}/legal-notice"
+        source_url  = "${var.DOMAIN}/privacy"
+        target_url  = "https://${var.DOMAIN}/legal-notice"
         status_code = 301
       }
     }
@@ -55,17 +55,17 @@ resource "cloudflare_list" "redirect_pages" {
 resource "cloudflare_ruleset" "redirect_pages" {
   account_id = data.cloudflare_zone.zone.account_id
   kind       = "root"
-  name       = "${local.redirect_prefix}_redirects"
+  name       = "${replace(var.DOMAIN, ".", "_")}_redirects"
   phase      = "http_request_redirect"
 
   rules {
     enabled    = true
     action     = "redirect"
-    expression = "http.request.full_uri in ${format("$%s", local.redirect_prefix)}_redirects"
+    expression = "http.request.full_uri in ${format("$%s", replace(var.DOMAIN, ".", "_"))}_redirects"
 
     action_parameters {
       from_list {
-        name = "${local.redirect_prefix}_redirects"
+        name = "${replace(var.DOMAIN, ".", "_")}_redirects"
         key  = "http.request.full_uri"
       }
     }

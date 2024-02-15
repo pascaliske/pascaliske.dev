@@ -1,3 +1,7 @@
+variable "DOMAIN" {
+  type = string
+}
+
 variable "DKIM_PUBLIC_KEY" {
   type = string
 }

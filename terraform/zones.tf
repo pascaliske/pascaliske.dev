@@ -1,6 +1,6 @@
 # zone
 data "cloudflare_zone" "zone" {
-  name = local.domain
+  name = var.DOMAIN
 }
 
 # zone settings
