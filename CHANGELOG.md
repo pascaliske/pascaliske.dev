@@ -1,3 +1,19 @@
+# [3.5.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.4.0...v3.5.0) (2024-02-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @fortawesome/angular-fontawesome to v0.14.1 ([f85bd63](https://github.com/pascaliske/pascaliske.dev/commit/f85bd63aabcc8f73773b582c125cf044fe877629))
+
+
+### Features
+
+* switch to new application builder ([09f066f](https://github.com/pascaliske/pascaliske.dev/commit/09f066feb1b5e8431ed1c86d9fbe9610db8682bb))
+* upgrade to angular v17.2 ([40d9cfa](https://github.com/pascaliske/pascaliske.dev/commit/40d9cfa80359c216191df95b01ac345288b28eab))
+* upgrade to hono v4 ([3b60546](https://github.com/pascaliske/pascaliske.dev/commit/3b605461dbb6333f364940406a26be8bcee3e453))
+
+
+
 # [3.4.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.3.5...v3.4.0) (2023-11-11)
 
 
