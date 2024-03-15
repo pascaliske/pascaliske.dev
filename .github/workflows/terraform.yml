@@ -2,12 +2,12 @@ name: Terraform
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'terraform/**'
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - 'terraform/**'
 
@@ -114,5 +114,5 @@ jobs:
 
       # apply
       - name: Terraform Apply
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: task tf:apply -- --auto-approve
