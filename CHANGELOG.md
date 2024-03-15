@@ -1,3 +1,17 @@
+## [3.5.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.0...v3.5.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* **workers:** ensure to always safely access contact form request data ([b2afa6e](https://github.com/pascaliske/pascaliske.dev/commit/b2afa6e859906230bb8f1f0b1a63110933569f88))
+
+
+### Features
+
+* upgrade to angular v17.3 ([acf92ea](https://github.com/pascaliske/pascaliske.dev/commit/acf92ead9cbf7af0c352620df74086814c6d3a02))
+
+
+
 # [3.5.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.4.0...v3.5.0) (2024-02-15)
 
 
