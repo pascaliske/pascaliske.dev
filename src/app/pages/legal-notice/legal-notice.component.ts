@@ -12,7 +12,7 @@ import { CopyComponent } from 'components/copy/copy.component'
     imports: [RouterLink, SectionComponent, HeadlineComponent, CopyComponent],
     providers: [MetadataService],
 })
-export class LegalNoticeComponent {
+export default class LegalNoticeComponent {
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 

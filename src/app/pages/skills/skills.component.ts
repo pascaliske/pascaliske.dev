@@ -23,7 +23,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
     ],
     providers: [MetadataService],
 })
-export class SkillsComponent {
+export default class SkillsComponent {
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 

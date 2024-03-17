@@ -39,7 +39,7 @@ export interface Project {
     ],
     providers: [MetadataService],
 })
-export class WorkComponent {
+export default class WorkComponent {
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 

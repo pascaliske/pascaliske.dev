@@ -6,7 +6,6 @@ export const features: RouterFeatures[] = [
     withInMemoryScrolling({
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',
-        // scrollOffset: [0, 100],
     }),
 ]
 
@@ -19,53 +18,41 @@ export const routes: Routes = [
     {
         path: 'home',
         title: 'Home // Pascal Iske',
+        loadComponent: () => import('./pages/home/home.component'),
         data: {
-            description: `Hi there, I'm a Cloud Engineer from Frankfurt/Main, Germany.`,
-        },
-        loadComponent: () => {
-            return import('./pages/home/home.component').then(m => m.HomeComponent)
+            description: `Hi there, I'm a Cloud & DevOps Engineer from Frankfurt/Main, Germany.`,
         },
     },
     {
         path: 'skills',
         title: 'Skills // Pascal Iske',
+        loadComponent: () => import('./pages/skills/skills.component'),
         data: {
             description: 'Container & Orchestration, Infrastructure as Code, GitOps and more...',
-        },
-        loadComponent: () => {
-            return import('./pages/skills/skills.component').then(m => m.SkillsComponent)
         },
     },
     {
         path: 'work',
         title: 'Work // Pascal Iske',
+        loadComponent: () => import('./pages/work/work.component'),
         data: {
             description: `A list of projects I am currently working on and have worked on in the past...`,
-        },
-        loadComponent: () => {
-            return import('./pages/work/work.component').then(m => m.WorkComponent)
         },
     },
     {
         path: 'contact',
         title: 'Contact // Pascal Iske',
+        loadComponent: () => import('./pages/contact/contact.component'),
         data: {
             description: 'Want to get in touch? You can contact me through the contact form.',
-        },
-        loadComponent: () => {
-            return import('./pages/contact/contact.component').then(m => m.ContactComponent)
         },
     },
     {
         path: 'legal-notice',
         title: 'Legal notice // Pascal Iske',
+        loadComponent: () => import('./pages/legal-notice/legal-notice.component'),
         data: {
             description: 'Legal information pursuant to § 5 TMG.',
-        },
-        loadComponent: () => {
-            return import('./pages/legal-notice/legal-notice.component').then(
-                m => m.LegalNoticeComponent,
-            )
         },
     },
     {

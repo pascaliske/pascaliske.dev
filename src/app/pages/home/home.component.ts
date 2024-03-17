@@ -10,7 +10,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
     imports: [GreetingComponent, SocialsComponent],
     providers: [MetadataService],
 })
-export class HomeComponent {
+export default class HomeComponent {
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-center'
 

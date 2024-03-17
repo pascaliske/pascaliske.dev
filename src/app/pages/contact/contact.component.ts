@@ -44,7 +44,7 @@ export interface ContactFormGroup {
     ],
     providers: [MetadataService],
 })
-export class ContactComponent {
+export default class ContactComponent {
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 
