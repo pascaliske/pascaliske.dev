@@ -1,3 +1,13 @@
+## [3.5.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.1...v3.5.2) (2024-03-17)
+
+
+### Features
+
+* **greeting:** update subtitle text contents and size ([3e0f38d](https://github.com/pascaliske/pascaliske.dev/commit/3e0f38df2e3b5fd6fc62886f6489197712c3cd60))
+* **routing:** switch to shorter default imports for pages ([2e287de](https://github.com/pascaliske/pascaliske.dev/commit/2e287de34fbb3060f51292c0cb8637fc826949a8))
+
+
+
 ## [3.5.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.0...v3.5.1) (2024-03-15)
 
 
