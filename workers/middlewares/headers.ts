@@ -5,8 +5,8 @@ import { Environment } from '..'
 // `Content-Security-Policy` values
 const cspValues = [
     `default-src 'self'`,
-    `connect-src 'self' analytics.pascaliske.dev`,
-    `script-src 'self' 'unsafe-inline' analytics.pascaliske.dev`,
+    `connect-src 'self'`,
+    `script-src 'self' 'unsafe-inline'`,
     `style-src 'self' 'unsafe-inline'`,
     `font-src 'self'`,
     `img-src 'self'`,
