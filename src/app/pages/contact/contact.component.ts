@@ -2,7 +2,7 @@ import { Component, HostBinding } from '@angular/core'
 import { NgIf } from '@angular/common'
 import { RouterLink } from '@angular/router'
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms'
-import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faPaperPlane, faTrashAlt } from '@fortawesome/free-regular-svg-icons'
@@ -35,7 +35,6 @@ export interface ContactFormGroup {
         NgIf,
         RouterLink,
         ReactiveFormsModule,
-        HttpClientModule,
         FontAwesomeModule,
         HeadlineComponent,
         CopyComponent,
