@@ -1,0 +1,6 @@
+/
+/home
+/skills
+/work
+/contact
+/legal-notice
