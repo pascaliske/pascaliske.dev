@@ -34,8 +34,8 @@ export class SocialsComponent {
             icon: faGithub,
         },
         {
-            name: 'Twitter',
-            href: 'https://twitter.com/pascaliske',
+            name: 'X / Twitter',
+            href: 'https://x.com/pascaliske',
             icon: faXTwitter,
         },
         {
