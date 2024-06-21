@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { RouterLink } from '@angular/router'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
@@ -8,7 +8,7 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons'
     standalone: true,
     selector: 'cmp-footer',
     templateUrl: './footer.component.html',
-    imports: [RouterLink, FontAwesomeModule],
+    imports: [RouterLink, FaIconComponent],
 })
 export class FooterComponent {
     public year: number = new Date().getFullYear()

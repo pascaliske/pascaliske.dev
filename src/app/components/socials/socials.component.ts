@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { NgFor } from '@angular/common'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import {
     faGithub,
@@ -21,7 +21,7 @@ export interface SocialChannel {
     standalone: true,
     selector: 'cmp-socials',
     templateUrl: './socials.component.html',
-    imports: [NgFor, FontAwesomeModule],
+    imports: [NgFor, FaIconComponent],
 })
 export class SocialsComponent {
     @Input()

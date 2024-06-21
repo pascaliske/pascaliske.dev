@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core'
 import { NgFor, NgIf } from '@angular/common'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -30,7 +30,7 @@ export interface Project {
     imports: [
         NgFor,
         NgIf,
-        FontAwesomeModule,
+        FaIconComponent,
         SectionComponent,
         HeadlineComponent,
         CopyComponent,
