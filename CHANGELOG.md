@@ -1,3 +1,22 @@
+# [3.6.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.2...v3.6.0) (2024-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @fortawesome/angular-fontawesome to v0.15.0 ([fa61e6e](https://github.com/pascaliske/pascaliske.dev/commit/fa61e6e8ae0abffdfb80dc82c678f74435e00b2d))
+* explicitly define prerender routes for angular builder ([4ef5949](https://github.com/pascaliske/pascaliske.dev/commit/4ef594999dafc73f3fc86b0bc6ede7ca4f4cff96))
+* **socials:** update twitter url to x ([c6e50ca](https://github.com/pascaliske/pascaliske.dev/commit/c6e50ca608650ec16da4ca0a34311897e942da3f))
+* update robots.txt ([6b20eb6](https://github.com/pascaliske/pascaliske.dev/commit/6b20eb6ba19f1841630f46fd339f72a963c8084a))
+* **worker:** remove unnecessary csp values for tracking ([8d383b9](https://github.com/pascaliske/pascaliske.dev/commit/8d383b91484c572b8c1dd766b2fa5c5df0c9a6ab))
+
+
+### Features
+
+* update angular to v18 ([a31a5f6](https://github.com/pascaliske/pascaliske.dev/commit/a31a5f6dbbb55ec8c1edb4e593ac6363bc247b20))
+* update angular to v18.1.x ([352e5bb](https://github.com/pascaliske/pascaliske.dev/commit/352e5bb16ee68b58fbfc13714306a2283854f420))
+
+
+
 ## [3.5.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.1...v3.5.2) (2024-03-17)
 
 
