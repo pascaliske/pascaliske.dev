@@ -14,6 +14,7 @@
   },
   "private": true,
   "prettier": "@pascaliske/prettier-config/tailwind",
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "@angular/animations": "^18.0.3",
     "@angular/common": "^18.0.3",
