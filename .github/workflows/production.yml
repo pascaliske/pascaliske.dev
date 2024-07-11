@@ -61,4 +61,4 @@ jobs:
           prerelease: ${{ steps.changelog.outputs.status == 'prereleased' }}
           draft: ${{ steps.changelog.outputs.status == 'unreleased' }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: README.md,LICENSE.md
+          artifacts: README.md
