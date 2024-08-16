@@ -43,7 +43,7 @@
     "@angular-eslint/schematics": "18.1.0",
     "@angular-eslint/template-parser": "18.1.0",
     "@angular/build": "^18.1.0",
-    "@angular/cli": "~18.1.0",
+    "@angular/cli": "~18.2.0",
     "@angular/compiler-cli": "^18.1.0",
     "@cloudflare/kv-asset-handler": "^0.3.4",
     "@cloudflare/workers-types": "^4.20240620.0",
