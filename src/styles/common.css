@@ -139,3 +139,7 @@
         @apply after:w-full;
     }
 }
+
+:root {
+    --ng-progress-color: #ff6666;
+}

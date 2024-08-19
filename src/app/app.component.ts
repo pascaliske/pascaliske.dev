@@ -1,7 +1,8 @@
 import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { Router, RouterOutlet } from '@angular/router'
-import { NgProgressModule } from 'ngx-progressbar'
+import { NgProgressbar } from 'ngx-progressbar'
+import { NgProgressRouter } from 'ngx-progressbar/router'
 import { ThemeService } from 'shared/theme/theme.service'
 import { NavigationComponent } from 'components/navigation/navigation.component'
 import { FooterComponent } from 'components/footer/footer.component'
@@ -13,7 +14,8 @@ import { TriangleComponent } from 'components/triangle/triangle.component'
     templateUrl: './app.component.html',
     imports: [
         RouterOutlet,
-        NgProgressModule,
+        NgProgressbar,
+        NgProgressRouter,
         NavigationComponent,
         FooterComponent,
         TriangleComponent,
