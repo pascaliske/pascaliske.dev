@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
         provideRouter(routes, ...features),
         provideHttpClient(),
         provideNgProgressOptions({ spinner: true }),
-        provideNgProgressRouter({ minDuration: 600 }),
+        provideNgProgressRouter({ minDuration: 200 }),
         provideAppId(),
     ],
 }
