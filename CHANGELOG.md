@@ -1,3 +1,12 @@
+## [3.7.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.0...v3.7.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* decrease progressbar minimum duration ([7ba9a0d](https://github.com/pascaliske/pascaliske.dev/commit/7ba9a0da3bf865753c5ca820aef822f5eb10249e))
+
+
+
 # [3.7.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.6.0...v3.7.0) (2024-08-24)
 
 
