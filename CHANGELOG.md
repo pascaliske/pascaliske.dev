@@ -1,3 +1,19 @@
+# [3.7.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.6.0...v3.7.0) (2024-08-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ngx-progressbar to v12 ([d227cad](https://github.com/pascaliske/pascaliske.dev/commit/d227cadad9ed13605e25f217c0bbb9eee0f53ba6))
+
+
+### Features
+
+* update angular to v18.2.1 ([229dc20](https://github.com/pascaliske/pascaliske.dev/commit/229dc20cc5a912206d58fc5541a758849b5bfa5e))
+* update angular to v18.2.x ([060237a](https://github.com/pascaliske/pascaliske.dev/commit/060237ab860b8de72e5ee8d94d6137ae7a26571c))
+* update angular-eslint stack to latest versions ([f1c24c6](https://github.com/pascaliske/pascaliske.dev/commit/f1c24c663b673468154775a52b681b602dd9e3f6))
+
+
+
 # [3.6.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.5.2...v3.6.0) (2024-07-11)
 
 
