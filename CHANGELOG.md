@@ -1,3 +1,12 @@
+## [3.7.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.1...v3.7.2) (2024-09-30)
+
+
+### Bug Fixes
+
+* remove status bar background on iphones ([3349c75](https://github.com/pascaliske/pascaliske.dev/commit/3349c75c2ae09e22aede5e68ca5578445d1d6df8))
+
+
+
 ## [3.7.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.0...v3.7.1) (2024-08-24)
 
 
