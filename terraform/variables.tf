@@ -13,3 +13,7 @@ variable "GOOGLE_VERIFICATION_TOKEN" {
 variable "HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN" {
   type = string
 }
+
+variable "BLUESKY_VERIFICATION_TOKEN" {
+  type = string
+}

@@ -120,3 +120,11 @@ resource "cloudflare_record" "have_i_been_pwned" {
   name    = var.DOMAIN
   content = "have-i-been-pwned-verification=${var.HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN}"
 }
+
+# bluesky
+resource "cloudflare_record" "bluesky" {
+  zone_id = data.cloudflare_zone.zone.id
+  type    = "TXT"
+  name    = "_atproto"
+  content = "did=${var.BLUESKY_VERIFICATION_TOKEN}"
+}
