@@ -1,3 +1,12 @@
+# [3.8.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.3...v3.8.0) (2024-11-16)
+
+
+### Features
+
+* **socials:** add link to bluesky profile ([29bfede](https://github.com/pascaliske/pascaliske.dev/commit/29bfeded155b5b91639338e54af2a1b97ed762a4))
+
+
+
 ## [3.7.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.2...v3.7.3) (2024-11-16)
 
 
