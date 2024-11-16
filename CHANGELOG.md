@@ -1,3 +1,17 @@
+## [3.7.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.2...v3.7.3) (2024-11-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ngx-progressbar to v13 ([c359f0c](https://github.com/pascaliske/pascaliske.dev/commit/c359f0c6d8b52bb48dafad59c14f0c42f1558731))
+
+
+### Features
+
+* configure bluesky domain verification ([a622179](https://github.com/pascaliske/pascaliske.dev/commit/a622179ee3add724568141e26fec5657342e1191))
+
+
+
 ## [3.7.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.1...v3.7.2) (2024-09-30)
 
 
