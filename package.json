@@ -57,7 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.15.0",
+    "eslint": "9.14.0",
     "express": "^4.21.1",
     "hono": "^4.6.10",
     "husky": "^9.1.6",
