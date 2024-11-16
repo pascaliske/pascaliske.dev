@@ -6,6 +6,7 @@ import {
     faGithub,
     faXTwitter,
     faMastodon,
+    faBluesky,
     faXing,
     faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons'
@@ -42,6 +43,11 @@ export class SocialsComponent {
             name: 'Mastodon',
             href: 'https://hachyderm.io/@pascaliske',
             icon: faMastodon,
+        },
+        {
+            name: 'Bluesky',
+            href: 'https://bsky.app/profile/pascaliske.dev',
+            icon: faBluesky,
         },
         {
             name: 'Xing',
