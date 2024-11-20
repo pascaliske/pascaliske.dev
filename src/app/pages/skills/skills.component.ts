@@ -9,7 +9,6 @@ import { CardComponent } from 'components/card/card.component'
 import { SocialsComponent } from 'components/socials/socials.component'
 
 @Component({
-    standalone: true,
     selector: 'cmp-skills',
     templateUrl: './skills.component.html',
     imports: [

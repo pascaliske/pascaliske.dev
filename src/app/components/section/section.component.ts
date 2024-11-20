@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, input } from '@angular/core'
 
 @Component({
     standalone: true,
@@ -6,9 +6,7 @@ import { Component, Input } from '@angular/core'
     templateUrl: './section.component.html',
 })
 export class SectionComponent {
-    @Input()
-    public first: boolean = false
+    public readonly first = input<boolean>(false)
 
-    @Input()
-    public full: boolean = false
+    public readonly full = input<boolean>(false)
 }

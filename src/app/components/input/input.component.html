@@ -1,35 +1,35 @@
-<ng-container [ngSwitch]="type">
-    <label class="group relative my-5 flex" for="{{ id }}">
+<ng-container [ngSwitch]="type()">
+    <label class="group relative my-5 flex" for="{{ id() }}">
         <span
             class="absolute top-1/2 -translate-y-1/2 group-focus-within:-top-4 group-focus-within:translate-y-0 group-focus-within:text-xs motion-safe:transition-all motion-safe:duration-200"
             [class.!-top-4]="filled"
             [class.!translate-y-0]="filled"
             [class.!text-xs]="filled"
-            *ngIf="label"
+            *ngIf="label()"
         >
-            {{ label }}
+            {{ label() }}
         </span>
 
         <textarea
             class="h-10 min-h-[2.5rem] w-full resize-none bg-[transparent] text-gunmetal caret-bitterSweet group-focus-within:min-h-[150px] motion-safe:transition-[min-height] motion-safe:duration-150 dark:text-ghostWhite"
             [class.!min-h-[150px]]="filled"
-            [formControl]="fc"
-            [id]="id"
+            [formControl]="fc()"
+            [id]="id()"
             *ngSwitchCase="'textarea'"
         ></textarea>
 
         <input
             class="h-10 w-full bg-[transparent] text-gunmetal caret-bitterSweet dark:text-ghostWhite"
-            [type]="type"
-            [formControl]="fc"
-            [id]="id"
-            [autocomplete]="autocomplete"
+            [type]="type()"
+            [formControl]="fc()"
+            [id]="id()"
+            [autocomplete]="autocomplete()"
             *ngSwitchDefault
         />
 
         <span
             class="absolute bottom-0 left-0 h-[5px] w-full before:absolute before:-bottom-[5px] before:left-0 before:h-[5px] before:w-full before:bg-paynesGray before:bg-opacity-50 after:absolute after:-bottom-[5px] after:left-0 after:h-[5px] after:w-0 after:bg-bitterSweet group-focus-within:after:w-full motion-safe:after:transition-[width] motion-safe:after:duration-150 sm:before:bottom-0 sm:before:h-[3px] sm:after:bottom-0 sm:after:h-[3px]"
-            *ngIf="label"
+            *ngIf="label()"
         ></span>
     </label>
 </ng-container>

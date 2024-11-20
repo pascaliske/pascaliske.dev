@@ -9,7 +9,6 @@ import { FooterComponent } from 'components/footer/footer.component'
 import { TriangleComponent } from 'components/triangle/triangle.component'
 
 @Component({
-    standalone: true,
     selector: 'cmp-root',
     templateUrl: './app.component.html',
     imports: [

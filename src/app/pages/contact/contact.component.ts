@@ -28,7 +28,6 @@ export interface ContactFormGroup {
 }
 
 @Component({
-    standalone: true,
     selector: 'cmp-contact',
     templateUrl: './contact.component.html',
     imports: [

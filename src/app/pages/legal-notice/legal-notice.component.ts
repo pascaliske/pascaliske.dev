@@ -6,7 +6,6 @@ import { HeadlineComponent } from 'components/headline/headline.component'
 import { CopyComponent } from 'components/copy/copy.component'
 
 @Component({
-    standalone: true,
     selector: 'cmp-legal-notice',
     templateUrl: './legal-notice.component.html',
     imports: [RouterLink, SectionComponent, HeadlineComponent, CopyComponent],

@@ -24,7 +24,6 @@ export interface Project {
 }
 
 @Component({
-    standalone: true,
     selector: 'cmp-work',
     templateUrl: './work.component.html',
     imports: [
