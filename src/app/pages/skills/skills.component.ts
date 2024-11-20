@@ -3,7 +3,6 @@ import { NgFor, NgIf } from '@angular/common'
 import { Tags } from 'shared/tags/tags'
 import { MetadataService } from 'shared/metadata/metadata.service'
 import { HeadlineComponent } from 'components/headline/headline.component'
-import { SectionComponent } from 'components/section/section.component'
 import { CopyComponent } from 'components/copy/copy.component'
 import { CardComponent } from 'components/card/card.component'
 import { SocialsComponent } from 'components/socials/socials.component'
@@ -11,15 +10,7 @@ import { SocialsComponent } from 'components/socials/socials.component'
 @Component({
     selector: 'cmp-skills',
     templateUrl: './skills.component.html',
-    imports: [
-        NgFor,
-        NgIf,
-        HeadlineComponent,
-        SectionComponent,
-        CopyComponent,
-        CardComponent,
-        SocialsComponent,
-    ],
+    imports: [NgFor, NgIf, HeadlineComponent, CopyComponent, CardComponent, SocialsComponent],
     providers: [MetadataService],
 })
 export default class SkillsComponent {
