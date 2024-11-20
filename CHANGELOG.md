@@ -1,3 +1,19 @@
+# [3.9.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.8.0...v3.9.0) (2024-11-20)
+
+
+### Bug Fixes
+
+* update meta tag description ([709c7a5](https://github.com/pascaliske/pascaliske.dev/commit/709c7a5743b54c6c6ef5dcf2bd3dfaed979b4e6a))
+* use vendor neutral meta tag ([7d7b5e4](https://github.com/pascaliske/pascaliske.dev/commit/7d7b5e44c3e75cfdf3114c5083f7228fea465b0e))
+
+
+### Features
+
+* migrate to experimental zoneless change detection ([741ae1b](https://github.com/pascaliske/pascaliske.dev/commit/741ae1b92f8ceb80c01e225bb407f7bea92322e7))
+* upgrade angular to v19 ([e1dd6ee](https://github.com/pascaliske/pascaliske.dev/commit/e1dd6ee3665825b1f9cb9addcf19d9a600c214c3))
+
+
+
 # [3.8.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.7.3...v3.8.0) (2024-11-16)
 
 
