@@ -1,30 +1,24 @@
-import { Component, Input } from '@angular/core'
+import { Component, input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule, FormControl } from '@angular/forms'
 
 @Component({
-    standalone: true,
     selector: 'cmp-input',
     templateUrl: './input.component.html',
     imports: [CommonModule, ReactiveFormsModule],
 })
 export class InputComponent {
-    @Input()
-    public type: 'text' | 'email' | 'textarea' = 'text'
+    public readonly type = input<'text' | 'email' | 'textarea'>('text')
 
-    @Input()
-    public fc: FormControl = new FormControl()
+    public readonly fc = input<FormControl>(new FormControl())
 
-    @Input()
-    public id!: string
+    public readonly id = input.required<string>()
 
-    @Input()
-    public label?: string
+    public readonly label = input<string>()
 
-    @Input()
-    public autocomplete?: string
+    public readonly autocomplete = input<string>()
 
     public get filled(): boolean {
-        return (this.fc?.dirty ?? false) && this.fc?.value?.length > 0
+        return (this.fc()?.dirty ?? false) && this.fc()?.value?.length > 0
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, input } from '@angular/core'
 
 @Component({
     standalone: true,
@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core'
     templateUrl: './navigation-button.component.html',
 })
 export class NavigationButtonComponent {
-    @Input()
-    public open: boolean = false
+    public readonly open = input<boolean>(false)
 }

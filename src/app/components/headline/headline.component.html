@@ -1,25 +1,25 @@
-<ng-container [ngSwitch]="level">
+<ng-container [ngSwitch]="level()">
     <ng-template #content>
-        <span>{{ text }}</span>
-        <span class="text-bitterSweet motion-safe:animate-blink" *ngIf="level == 'h1'">_</span>
+        <span>{{ text() }}</span>
+        <span class="text-bitterSweet motion-safe:animate-blink" *ngIf="level() == 'h1'">_</span>
     </ng-template>
 
     <h1 class="mb-5 lg:mb-10" *ngSwitchCase="'h1'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h1>
-    <h2 class="mb-5 lg:mb-8" [id]="id" *ngSwitchCase="'h2'">
+    <h2 class="mb-5 lg:mb-8" [id]="id()" *ngSwitchCase="'h2'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h2>
-    <h3 class="mb-5 lg:mb-7" [id]="id" *ngSwitchCase="'h3'">
+    <h3 class="mb-5 lg:mb-7" [id]="id()" *ngSwitchCase="'h3'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h3>
-    <h4 class="mb-4 lg:mb-6" [id]="id" *ngSwitchCase="'h4'">
+    <h4 class="mb-4 lg:mb-6" [id]="id()" *ngSwitchCase="'h4'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h4>
-    <h5 class="mb-3 lg:mb-5" [id]="id" *ngSwitchCase="'h5'">
+    <h5 class="mb-3 lg:mb-5" [id]="id()" *ngSwitchCase="'h5'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h5>
-    <h6 class="mt-2 lg:mt-4" [id]="id" *ngSwitchCase="'h6'">
+    <h6 class="mt-2 lg:mt-4" [id]="id()" *ngSwitchCase="'h6'">
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </h6>
 </ng-container>

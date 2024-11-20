@@ -24,7 +24,6 @@ export interface NavigationLink {
 }
 
 @Component({
-    standalone: true,
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
     imports: [

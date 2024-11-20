@@ -5,7 +5,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 @Component({
-    standalone: true,
     selector: 'cmp-footer',
     templateUrl: './footer.component.html',
     imports: [RouterLink, FaIconComponent],
