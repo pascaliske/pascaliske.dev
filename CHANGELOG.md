@@ -1,3 +1,13 @@
+## [3.9.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.0...v3.9.1) (2024-11-21)
+
+
+### Bug Fixes
+
+* **workers:** remove outdated permission policy value ([4054db3](https://github.com/pascaliske/pascaliske.dev/commit/4054db3d10de7cdeb5a707db4f2e573986ba2b85))
+* **workers:** use csr based index file as root path ([02dfd34](https://github.com/pascaliske/pascaliske.dev/commit/02dfd3465437b7d53d6a243ba6045d5cee79e6bd))
+
+
+
 # [3.9.0](https://github.com/pascaliske/pascaliske.dev/compare/v3.8.0...v3.9.0) (2024-11-20)
 
 
