@@ -16,7 +16,6 @@ const cspValues = [
 // `Permissions-Policy` values
 const ppValues = [
     'accelerometer=()',
-    'ambient-light-sensor=()',
     'autoplay=()',
     'camera=()',
     'encrypted-media=()',
