@@ -21,7 +21,7 @@ export const site: () => MiddlewareHandler<Environment> = () => {
                   manifest,
                   path: pages.includes(context.req.path)
                       ? `${context.req.path}/index.html`
-                      : './index.html',
+                      : './index.csr.html',
               })
 
         // response
