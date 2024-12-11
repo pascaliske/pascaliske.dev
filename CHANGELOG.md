@@ -1,3 +1,17 @@
+## [3.9.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.1...v3.9.2) (2024-12-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @fortawesome/angular-fontawesome to v1 ([42d9f39](https://github.com/pascaliske/pascaliske.dev/commit/42d9f39f5a7be708ebb89ccc96a57b937780c733))
+
+
+### Features
+
+* upgrade angular to v19.0.3 ([4982311](https://github.com/pascaliske/pascaliske.dev/commit/4982311fce31803bf2d9ea3eda66a86740147ad0))
+
+
+
 ## [3.9.1](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.0...v3.9.1) (2024-11-21)
 
 
