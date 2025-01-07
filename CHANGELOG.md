@@ -1,3 +1,17 @@
+## [3.9.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.2...v3.9.3) (2025-01-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ngx-progressbar to v14 ([7e637ee](https://github.com/pascaliske/pascaliske.dev/commit/7e637ee55b9e9ce596d7b94e975e4267bb2feb4b))
+
+
+### Features
+
+* upgrade angular to v19.0.5 ([e3a1c3b](https://github.com/pascaliske/pascaliske.dev/commit/e3a1c3bf213ebf5f4a156fabb78714a384ed6abe))
+
+
+
 ## [3.9.2](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.1...v3.9.2) (2024-12-11)
 
 
