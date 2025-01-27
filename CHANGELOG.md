@@ -1,3 +1,12 @@
+## [3.9.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.3...v3.9.4) (2025-01-27)
+
+
+### Features
+
+* upgrade angular to v19.1.3 ([a41786d](https://github.com/pascaliske/pascaliske.dev/commit/a41786da62a68924e49b853292f43d0b421a37a9))
+
+
+
 ## [3.9.3](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.2...v3.9.3) (2025-01-07)
 
 
