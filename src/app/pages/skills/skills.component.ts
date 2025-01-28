@@ -36,7 +36,7 @@ export default class SkillsComponent {
         {
             name: 'Cloud',
             description: '',
-            tags: [Tags.AWS, Tags.GCP, Tags.CLOUDFLARE],
+            tags: [Tags.AWS, Tags.GCP, Tags.CLOUDFLARE, Tags.VSPHERE],
         },
         {
             name: 'Monitoring',

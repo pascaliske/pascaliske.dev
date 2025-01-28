@@ -18,4 +18,5 @@ export const enum Tags {
     PROMETHEUS = 'Prometheus',
     TERRAFORM = 'Terraform',
     TYPESCRIPT = 'TypeScript/JavaScript',
+    VSPHERE = 'VMware vSphere',
 }
