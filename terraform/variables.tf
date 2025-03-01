@@ -1,3 +1,7 @@
+variable "ACCOUNT_NAME" {
+  type = string
+}
+
 variable "DOMAIN" {
   type = string
 }

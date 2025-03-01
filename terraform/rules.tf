@@ -1,75 +1,84 @@
+# redirect www to non-www
 resource "cloudflare_page_rule" "redirect_www" {
-  zone_id = data.cloudflare_zone.zone.id
-  target  = "www.${var.DOMAIN}*"
+  zone_id = data.cloudflare_zone.zone.zone_id
+  status  = "active"
 
-  actions {
-    forwarding_url {
+  target = "www.${var.DOMAIN}*"
+
+  actions = {
+    forwarding_url = {
       status_code = 301
       url         = "https://${var.DOMAIN}/$1"
     }
   }
 }
 
-resource "cloudflare_list" "redirect_pages" {
-  account_id = data.cloudflare_zone.zone.account_id
+# redirect legacy page paths
+resource "cloudflare_list" "redirect_legacy_pages" {
+  account_id = data.cloudflare_account.account.account_id
   kind       = "redirect"
-  name       = "${replace(var.DOMAIN, ".", "_")}_redirects"
+  name       = "${replace(var.DOMAIN, ".", "_")}_legacy_pages"
+}
 
-  # /about -> /home
-  item {
-    comment = "/about -> /home"
-    value {
-      redirect {
-        source_url  = "${var.DOMAIN}/about"
-        target_url  = "https://${var.DOMAIN}/home"
-        status_code = 301
-      }
-    }
-  }
+# /about -> /home
+resource "cloudflare_list_item" "redirect_legacy_about" {
+  account_id = data.cloudflare_account.account.account_id
+  list_id    = cloudflare_list.redirect_legacy_pages.id
 
-  # /imprint -> /legal-notice
-  item {
-    comment = "/imprint -> /legal-notice"
-    value {
-      redirect {
-        source_url  = "${var.DOMAIN}/imprint"
-        target_url  = "https://${var.DOMAIN}/legal-notice"
-        status_code = 301
-      }
-    }
-  }
-
-  # /privacy -> /legal-notice
-  item {
-    comment = "/privacy -> /legal-notice"
-    value {
-      redirect {
-        source_url  = "${var.DOMAIN}/privacy"
-        target_url  = "https://${var.DOMAIN}/legal-notice"
-        status_code = 301
-      }
-    }
+  comment = "/about -> /home"
+  redirect = {
+    source_url  = "${var.DOMAIN}/about"
+    target_url  = "https://${var.DOMAIN}/home"
+    status_code = 301
   }
 }
 
-resource "cloudflare_ruleset" "redirect_pages" {
-  account_id = data.cloudflare_zone.zone.account_id
-  kind       = "root"
-  name       = "${replace(var.DOMAIN, ".", "_")}_redirects"
-  phase      = "http_request_redirect"
+# /imprint -> /legal-notice
+resource "cloudflare_list_item" "redirect_legacy_imprint" {
+  account_id = data.cloudflare_account.account.account_id
+  list_id    = cloudflare_list.redirect_legacy_pages.id
 
-  rules {
-    enabled    = true
-    action     = "redirect"
-    expression = "http.request.full_uri in ${format("$%s", replace(var.DOMAIN, ".", "_"))}_redirects"
+  comment = "/imprint -> /legal-notice"
+  redirect = {
+    source_url  = "${var.DOMAIN}/imprint"
+    target_url  = "https://${var.DOMAIN}/legal-notice"
+    status_code = 301
+  }
+}
 
-    action_parameters {
-      from_list {
-        name = "${replace(var.DOMAIN, ".", "_")}_redirects"
-        key  = "http.request.full_uri"
+# /privacy -> /legal-notice
+resource "cloudflare_list_item" "redirect_legacy_privacy" {
+  account_id = data.cloudflare_account.account.account_id
+  list_id    = cloudflare_list.redirect_legacy_pages.id
+
+  comment = "/privacy -> /legal-notice"
+  redirect = {
+    source_url  = "${var.DOMAIN}/privacy"
+    target_url  = "https://${var.DOMAIN}/legal-notice"
+    status_code = 301
+  }
+}
+
+resource "cloudflare_ruleset" "redirect_legacy_pages" {
+  account_id = data.cloudflare_account.account.account_id
+
+  kind  = "root"
+  phase = "http_request_redirect"
+  name  = "${cloudflare_list.redirect_legacy_pages.name}_redirects"
+
+  rules = [
+    {
+      enabled     = true
+      action      = "redirect"
+      expression  = "http.request.full_uri in ${format("$%s", cloudflare_list.redirect_legacy_pages.name)}"
+      description = "${cloudflare_list.redirect_legacy_pages.name}_redirects"
+
+      action_parameters = {
+        from_list = {
+          name = cloudflare_list.redirect_legacy_pages.name
+          key  = "http.request.full_uri"
+        }
       }
     }
-  }
-
-  depends_on = [cloudflare_list.redirect_pages]
+  ]
 }
