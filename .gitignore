@@ -34,6 +34,7 @@ yarn-error.log
 
 # Terraform
 terraform/.terraform
+terraform/*tfstate*
 
 # misc
 /.angular/cache
