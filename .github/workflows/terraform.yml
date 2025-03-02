@@ -18,6 +18,7 @@ permissions:
 env:
   TF_INPUT: false
   TF_IN_AUTOMATION: true
+  TF_VAR_ACCOUNT_NAME: Pascal Iske
   TF_VAR_DOMAIN: pascaliske.dev
   TF_VAR_DKIM_PUBLIC_KEY: ${{ secrets.DKIM_PUBLIC_KEY }}
   TF_VAR_GOOGLE_VERIFICATION_TOKEN: ${{ secrets.GOOGLE_VERIFICATION_TOKEN }}
