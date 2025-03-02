@@ -7,5 +7,6 @@ import { Component, HostBinding } from '@angular/core'
 })
 export class CardComponent {
     @HostBinding('class')
-    public classes: string = `group flex flex-col overflow-hidden bg-opacity-25 bg-gradient-to-br from-ghostWhite to-[#d4d6da] to-90% transition-transform will-change-transform motion-safe:hover:scale-105 dark:from-charcoal dark:to-gunmetal`
+    public classes: string =
+        `group flex flex-col overflow-hidden bg-opacity-25 bg-linear-to-br from-ghost-white to-[#d4d6da] to-90% transition-transform will-change-transform motion-safe:hover:scale-105 dark:from-charcoal dark:to-gunmetal`
 }

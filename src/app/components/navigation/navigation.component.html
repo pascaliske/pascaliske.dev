@@ -1,13 +1,13 @@
 <header class="flex flex-col content-center sm:flex-row-reverse sm:justify-end">
     <div
-        class="fixed left-[32.5px] top-10 z-50 flex transition-[left] sm:relative sm:left-0 sm:top-0"
+        class="fixed top-10 left-[32.5px] z-50 flex transition-[left] sm:relative sm:top-0 sm:left-0"
         [class.!left-10]="(scrolled$ | async) && isMobile"
     >
         <button
             class="plausible-event-name=Mobile+Navigation+Toggle mr-2.5 block h-10 w-10 transition-colors sm:hidden"
             aria-label="Mobile Navigation Toggle Button"
-            [class.text-ghostWhite]="(scrolled$ | async) && isClosed && isMobile"
-            [class.bg-paynesGray]="(scrolled$ | async) && isClosed && isMobile"
+            [class.text-ghost-white]="(scrolled$ | async) && isClosed && isMobile"
+            [class.bg-paynes-gray]="(scrolled$ | async) && isClosed && isMobile"
             [class.dark:bg-charcoal]="(scrolled$ | async) && isClosed && isMobile"
             [disabled]="isAnimating"
             (click)="toggle()"
@@ -17,8 +17,8 @@
         <button
             class="group block h-10 w-10 transition-colors"
             aria-label="Theme Change Button"
-            [class.text-ghostWhite]="(scrolled$ | async) && isClosed && isMobile"
-            [class.bg-paynesGray]="(scrolled$ | async) && isClosed && isMobile"
+            [class.text-ghost-white]="(scrolled$ | async) && isClosed && isMobile"
+            [class.bg-paynes-gray]="(scrolled$ | async) && isClosed && isMobile"
             [class.dark:bg-charcoal]="(scrolled$ | async) && isClosed && isMobile"
             (click)="themeService.next()"
         >
@@ -42,7 +42,7 @@
         </ul>
     </div>
     <div
-        class="fixed left-0 top-0 z-40 h-screen w-screen items-center justify-center bg-ghostWhite p-5 pt-20 transition-colors duration-300 dark:bg-gunmetal sm:hidden"
+        class="bg-ghost-white dark:bg-gunmetal fixed top-0 left-0 z-40 h-screen w-screen items-center justify-center p-5 pt-20 transition-colors duration-300 sm:hidden"
         [class.overscroll-contain]="isOpen"
         [class.hidden]="isClosed"
         [class.flex]="isOpen || isFadingIn || isFadingOut"
@@ -58,7 +58,9 @@
                 class="group relative flex flex-col justify-center"
                 *ngFor="let link of links; let i = index"
             >
-                <div class="absolute mb-1 -translate-x-full pr-2 text-paynesGray">0{{ i + 1 }}</div>
+                <div class="text-paynes-gray absolute mb-1 -translate-x-full pr-2">
+                    0{{ i + 1 }}
+                </div>
                 <a
                     class="nav-link group-hover:nav-link-active"
                     [routerLink]="[link.target]"
