@@ -1,7 +1,7 @@
 <ng-container [ngSwitch]="level()">
     <ng-template #content>
         <span>{{ text() }}</span>
-        <span class="text-bitterSweet motion-safe:animate-blink" *ngIf="level() == 'h1'">_</span>
+        <span class="text-bitter-sweet motion-safe:animate-blink" *ngIf="level() == 'h1'">_</span>
     </ng-template>
 
     <h1 class="mb-5 lg:mb-10" *ngSwitchCase="'h1'">

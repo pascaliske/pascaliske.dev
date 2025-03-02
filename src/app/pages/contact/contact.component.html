@@ -60,7 +60,7 @@
 
         <div class="flex justify-end gap-5">
             <button
-                class="mt-5 px-4 py-2 text-paynesGray opacity-75 transition-opacity duration-300 hover:opacity-100 disabled:hidden"
+                class="text-paynes-gray mt-5 px-4 py-2 opacity-75 transition-opacity duration-300 hover:opacity-100 disabled:hidden"
                 type="reset"
                 [disabled]="contact.pristine"
                 (click)="reset()"
@@ -70,13 +70,13 @@
             </button>
 
             <button
-                class="mt-5 min-w-[150px] bg-opacity-75 px-4 py-2 text-ghostWhite transition-colors duration-300 hover:bg-opacity-100 disabled:cursor-not-allowed disabled:bg-paynesGray"
+                class="bg-opacity-75 text-ghost-white hover:bg-opacity-100 disabled:bg-paynes-gray mt-5 min-w-[150px] px-4 py-2 transition-colors duration-300 disabled:cursor-not-allowed"
                 type="submit"
                 [class.cursor-pointer]="state == 'initial'"
                 [class.pointer-events-none]="state != 'initial'"
                 [class.bg-opacity-100]="state != 'initial'"
-                [class.bg-bitterSweet]="state == 'initial'"
-                [class.!bg-paynesGray]="state == 'loading'"
+                [class.bg-bitter-sweet]="state == 'initial'"
+                [class.!bg-paynes-gray]="state == 'loading'"
                 [class.!bg-success]="state == 'success'"
                 [class.!bg-error]="state == 'error'"
                 [disabled]="contact.invalid"
