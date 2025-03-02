@@ -1,3 +1,13 @@
+## [3.9.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.4...v3.9.5) (2025-03-02)
+
+
+### Features
+
+* **skills:** add vsphere to skill list ([01d5cb3](https://github.com/pascaliske/pascaliske.dev/commit/01d5cb34b66c8e1895b468ffa293c2ea99dc03ee))
+* upgrade angular to v19.2.0 ([b6df209](https://github.com/pascaliske/pascaliske.dev/commit/b6df209e14a78c4adffa4987b11b0f36178831d2))
+
+
+
 ## [3.9.4](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.3...v3.9.4) (2025-01-27)
 
 
