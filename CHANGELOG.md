@@ -1,3 +1,12 @@
+## [3.9.6](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.5...v3.9.6) (2025-03-03)
+
+
+### Bug Fixes
+
+* **socials:** break socials into multiple lines on mobile screens ([bff2561](https://github.com/pascaliske/pascaliske.dev/commit/bff25619a4175ab88b5eb1fb483915014219b31b))
+
+
+
 ## [3.9.5](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.4...v3.9.5) (2025-03-02)
 
 
