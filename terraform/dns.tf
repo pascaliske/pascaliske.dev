@@ -2,7 +2,7 @@
 resource "cloudflare_dns_record" "production_ipv4" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "A"
-  name    = "@"
+  name    = var.DOMAIN
   content = "192.0.2.1"
   proxied = true
   ttl     = 1
@@ -11,7 +11,7 @@ resource "cloudflare_dns_record" "production_ipv4" {
 resource "cloudflare_dns_record" "production_ipv6" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "AAAA"
-  name    = "@"
+  name    = var.DOMAIN
   content = "2001:db8::"
   proxied = true
   ttl     = 1
@@ -20,7 +20,7 @@ resource "cloudflare_dns_record" "production_ipv6" {
 resource "cloudflare_dns_record" "production_www_ipv4" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "A"
-  name    = "www"
+  name    = "www.${var.DOMAIN}"
   content = "192.0.2.1"
   proxied = true
   ttl     = 1
@@ -29,7 +29,7 @@ resource "cloudflare_dns_record" "production_www_ipv4" {
 resource "cloudflare_dns_record" "production_www_ipv6" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "AAAA"
-  name    = "www"
+  name    = "www.${var.DOMAIN}"
   content = "2001:db8::"
   proxied = true
   ttl     = 1
@@ -39,7 +39,7 @@ resource "cloudflare_dns_record" "production_www_ipv6" {
 resource "cloudflare_dns_record" "next_ipv4" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "A"
-  name    = "next"
+  name    = "next.${var.DOMAIN}"
   content = "192.0.2.1"
   proxied = true
   ttl     = 1
@@ -48,7 +48,7 @@ resource "cloudflare_dns_record" "next_ipv4" {
 resource "cloudflare_dns_record" "next_ipv6" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "AAAA"
-  name    = "next"
+  name    = "next.${var.DOMAIN}"
   content = "2001:db8::"
   proxied = true
   ttl     = 1
@@ -58,7 +58,7 @@ resource "cloudflare_dns_record" "next_ipv6" {
 resource "cloudflare_dns_record" "mail" {
   zone_id  = data.cloudflare_zone.zone.zone_id
   type     = "MX"
-  name     = "@"
+  name     = var.DOMAIN
   content  = "tempel.uberspace.de"
   priority = 0
   ttl      = 1
@@ -68,7 +68,7 @@ resource "cloudflare_dns_record" "mail" {
 resource "cloudflare_dns_record" "bimi" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "default._bimi"
+  name    = "default._bimi.${var.DOMAIN}"
   content = "v=BIMI1; l=https://${var.DOMAIN}/assets/icons/bimi.svg;"
   ttl     = 1
 }
@@ -77,7 +77,7 @@ resource "cloudflare_dns_record" "bimi" {
 resource "cloudflare_dns_record" "dmarc" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "_dmarc"
+  name    = "_dmarc.${var.DOMAIN}"
   content = "v=DMARC1; p=quarantine; rua=mailto:info@${var.DOMAIN}"
   ttl     = 1
 }
@@ -86,7 +86,7 @@ resource "cloudflare_dns_record" "dmarc" {
 resource "cloudflare_dns_record" "dkim" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "uberspace._domainkey"
+  name    = "uberspace._domainkey.${var.DOMAIN}"
   content = "v=DKIM1; t=s; n=core; p=${var.DKIM_PUBLIC_KEY}"
   ttl     = 1
 }
@@ -104,7 +104,7 @@ resource "cloudflare_dns_record" "spf" {
 resource "cloudflare_dns_record" "mail_lockdown" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "_mailchannels"
+  name    = "_mailchannels.${var.DOMAIN}"
   content = "v=mc1 cfid=${var.DOMAIN}"
   ttl     = 1
 }
@@ -113,7 +113,7 @@ resource "cloudflare_dns_record" "mail_lockdown" {
 resource "cloudflare_dns_record" "openpgpkey" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "openpgpkey"
+  name    = "openpgpkey.${var.DOMAIN}"
   content = "noop"
   ttl     = 1
 }
@@ -140,7 +140,7 @@ resource "cloudflare_dns_record" "have_i_been_pwned" {
 resource "cloudflare_dns_record" "bluesky" {
   zone_id = data.cloudflare_zone.zone.zone_id
   type    = "TXT"
-  name    = "_atproto"
+  name    = "_atproto.${var.DOMAIN}"
   content = "did=${var.BLUESKY_VERIFICATION_TOKEN}"
   ttl     = 1
 }
