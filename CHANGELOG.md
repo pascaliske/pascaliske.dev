@@ -1,3 +1,13 @@
+## [3.9.7](https://github.com/pascaliske/pascaliske/compare/v3.9.6...v3.9.7) (2025-07-20)
+
+
+### Features
+
+* upgrade angular to v20 ([3500a62](https://github.com/pascaliske/pascaliske/commit/3500a62))
+* upgrade eslint stack ([89b1ebe](https://github.com/pascaliske/pascaliske/commit/89b1ebe))
+
+
+
 ## [3.9.6](https://github.com/pascaliske/pascaliske.dev/compare/v3.9.5...v3.9.6) (2025-03-03)
 
 
