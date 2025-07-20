@@ -1,5 +1,11 @@
-<ng-container [ngSwitch]="type">
-    <p class="mb-5 font-light" *ngSwitchCase="'text'">{{ text() }}</p>
-    <p class="mb-5 font-light" [innerHTML]="html()" *ngSwitchCase="'html'"></p>
-    <p class="mb-5 font-light" *ngSwitchCase="'content'"><ng-content></ng-content></p>
-</ng-container>
+@switch (type) {
+    @case ('text') {
+        <p class="mb-5 font-light">{{ text() }}</p>
+    }
+    @case ('html') {
+        <p class="mb-5 font-light" [innerHTML]="html()"></p>
+    }
+    @case ('content') {
+        <p class="mb-5 font-light"><ng-content></ng-content></p>
+    }
+}

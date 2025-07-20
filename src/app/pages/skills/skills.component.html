@@ -1,24 +1,24 @@
 <cmp-headline [level]="'h1'" [text]="'Skills'"></cmp-headline>
 
 <div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-    <cmp-card *ngFor="let group of groups">
-        <div class="flex min-h-full flex-col p-10">
-            <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
-
-            <cmp-copy
-                class="flex-1"
-                [html]="group.description"
-                *ngIf="group.description"
-            ></cmp-copy>
-
-            <div class="flex flex-wrap opacity-50">
-                <ng-container *ngFor="let tag of group.tags; let i = index">
-                    <span class="mx-2 opacity-75" *ngIf="i > 0">&middot;</span>
-                    <span>{{ tag }}</span>
-                </ng-container>
+    @for (group of groups; track group) {
+        <cmp-card>
+            <div class="flex min-h-full flex-col p-10">
+                <cmp-headline [level]="'h5'" [text]="group.name"></cmp-headline>
+                @if (group.description) {
+                    <cmp-copy class="flex-1" [html]="group.description"></cmp-copy>
+                }
+                <div class="flex flex-wrap opacity-50">
+                    @for (tag of group.tags; track tag; let i = $index) {
+                        @if (i > 0) {
+                            <span class="mx-2 opacity-75">&middot;</span>
+                        }
+                        <span>{{ tag }}</span>
+                    }
+                </div>
             </div>
-        </div>
-    </cmp-card>
+        </cmp-card>
+    }
 </div>
 
 <cmp-socials></cmp-socials>

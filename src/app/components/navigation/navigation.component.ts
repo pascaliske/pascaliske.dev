@@ -1,6 +1,6 @@
 import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { NgFor, AsyncPipe } from '@angular/common'
+import { AsyncPipe } from '@angular/common'
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router'
 import { Observable, fromEvent, timer } from 'rxjs'
 import { filter, map } from 'rxjs/operators'
@@ -27,7 +27,6 @@ export interface NavigationLink {
     selector: 'cmp-navigation',
     templateUrl: './navigation.component.html',
     imports: [
-        NgFor,
         AsyncPipe,
         RouterLink,
         RouterLinkActive,

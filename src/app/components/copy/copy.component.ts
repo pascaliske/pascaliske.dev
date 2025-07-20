@@ -1,10 +1,8 @@
 import { Component, input } from '@angular/core'
-import { NgSwitch, NgSwitchCase } from '@angular/common'
 
 @Component({
     selector: 'cmp-copy',
     templateUrl: './copy.component.html',
-    imports: [NgSwitch, NgSwitchCase],
 })
 export class CopyComponent {
     public readonly text = input<string>()

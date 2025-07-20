@@ -1,5 +1,4 @@
 import { Component, HostBinding } from '@angular/core'
-import { NgFor, NgIf } from '@angular/common'
 import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -27,8 +26,6 @@ export interface Project {
     selector: 'cmp-work',
     templateUrl: './work.component.html',
     imports: [
-        NgFor,
-        NgIf,
         FaIconComponent,
         SectionComponent,
         HeadlineComponent,

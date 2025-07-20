@@ -27,18 +27,17 @@
     </div>
     <div class="hidden items-center justify-center sm:flex">
         <ul class="flex flex-row items-start">
-            <li
-                class="group relative flex flex-col justify-center"
-                *ngFor="let link of links; let i = index"
-            >
-                <a
-                    class="nav-link group-hover:nav-link-active"
-                    [routerLink]="[link.target]"
-                    [routerLinkActive]="'nav-link-active'"
-                >
-                    <span>{{ link.title }}</span>
-                </a>
-            </li>
+            @for (link of links; track link; let i = $index) {
+                <li class="group relative flex flex-col justify-center">
+                    <a
+                        class="nav-link group-hover:nav-link-active"
+                        [routerLink]="[link.target]"
+                        [routerLinkActive]="'nav-link-active'"
+                    >
+                        <span>{{ link.title }}</span>
+                    </a>
+                </li>
+            }
         </ul>
     </div>
     <div
@@ -54,21 +53,20 @@
         [class.animate-fadeIn]="isFadingIn"
     >
         <ul class="flex flex-col items-start">
-            <li
-                class="group relative flex flex-col justify-center"
-                *ngFor="let link of links; let i = index"
-            >
-                <div class="text-paynes-gray absolute mb-1 -translate-x-full pr-2">
-                    0{{ i + 1 }}
-                </div>
-                <a
-                    class="nav-link group-hover:nav-link-active"
-                    [routerLink]="[link.target]"
-                    [routerLinkActive]="'nav-link-active'"
-                >
-                    <span>{{ link.title }}</span>
-                </a>
-            </li>
+            @for (link of links; track link; let i = $index) {
+                <li class="group relative flex flex-col justify-center">
+                    <div class="text-paynes-gray absolute mb-1 -translate-x-full pr-2">
+                        0{{ i + 1 }}
+                    </div>
+                    <a
+                        class="nav-link group-hover:nav-link-active"
+                        [routerLink]="[link.target]"
+                        [routerLinkActive]="'nav-link-active'"
+                    >
+                        <span>{{ link.title }}</span>
+                    </a>
+                </li>
+            }
         </ul>
     </div>
 </header>

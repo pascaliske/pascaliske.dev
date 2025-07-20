@@ -1,5 +1,4 @@
 import { Component, HostBinding } from '@angular/core'
-import { NgIf } from '@angular/common'
 import { RouterLink } from '@angular/router'
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
@@ -31,7 +30,6 @@ export interface ContactFormGroup {
     selector: 'cmp-contact',
     templateUrl: './contact.component.html',
     imports: [
-        NgIf,
         RouterLink,
         ReactiveFormsModule,
         FaIconComponent,

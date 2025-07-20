@@ -82,27 +82,22 @@
                 [disabled]="contact.invalid"
                 (click)="submit()"
             >
-                <fa-icon
-                    class="mr-2"
-                    [icon]="icons['faPaperPlane']"
-                    *ngIf="state == 'initial'"
-                ></fa-icon>
-                <fa-icon
-                    class="mr-2"
-                    [icon]="icons['faCircleNotch']"
-                    [animation]="'spin'"
-                    *ngIf="state == 'loading'"
-                ></fa-icon>
-                <fa-icon
-                    class="mr-2"
-                    [icon]="icons['faCheck']"
-                    *ngIf="state == 'success'"
-                ></fa-icon>
-                <fa-icon
-                    class="mr-2"
-                    [icon]="icons['faExclamationCircle']"
-                    *ngIf="state == 'error'"
-                ></fa-icon>
+                @if (state == 'initial') {
+                    <fa-icon class="mr-2" [icon]="icons['faPaperPlane']"></fa-icon>
+                }
+                @if (state == 'loading') {
+                    <fa-icon
+                        class="mr-2"
+                        [icon]="icons['faCircleNotch']"
+                        [animation]="'spin'"
+                    ></fa-icon>
+                }
+                @if (state == 'success') {
+                    <fa-icon class="mr-2" [icon]="icons['faCheck']"></fa-icon>
+                }
+                @if (state == 'error') {
+                    <fa-icon class="mr-2" [icon]="icons['faExclamationCircle']"></fa-icon>
+                }
                 <span>Submit</span>
             </button>
         </div>

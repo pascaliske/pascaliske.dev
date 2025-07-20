@@ -1,5 +1,4 @@
 import { Component, input } from '@angular/core'
-import { NgFor } from '@angular/common'
 import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -21,7 +20,7 @@ export interface SocialChannel {
 @Component({
     selector: 'cmp-socials',
     templateUrl: './socials.component.html',
-    imports: [NgFor, FaIconComponent],
+    imports: [FaIconComponent],
 })
 export class SocialsComponent {
     public readonly type = input<'box' | 'minimal'>('box')
