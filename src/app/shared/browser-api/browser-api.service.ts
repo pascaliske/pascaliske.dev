@@ -1,4 +1,4 @@
-import { Injectable, Inject, PLATFORM_ID, DOCUMENT } from '@angular/core'
+import { Injectable, PLATFORM_ID, DOCUMENT, inject } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
 
 export interface Globals {
@@ -11,16 +11,15 @@ export interface Globals {
     providedIn: 'root',
 })
 export class BrowserApiService {
+    private readonly platformId: object = inject<object>(PLATFORM_ID)
+
+    private readonly doc: Document = inject<Document>(DOCUMENT)
+
     private readonly globals: Globals = {
         document: this.doc,
         window: this.doc.defaultView as Window,
         localStorage: this.doc.defaultView?.localStorage as Storage,
     }
-
-    public constructor(
-        @Inject(PLATFORM_ID) private readonly platformId: Record<string, unknown>,
-        @Inject(DOCUMENT) private readonly doc: Document,
-    ) {}
 
     /**
      * Ensure a Browser API global is defined.

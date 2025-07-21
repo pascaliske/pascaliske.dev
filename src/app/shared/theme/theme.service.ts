@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable, inject } from '@angular/core'
 import { Meta } from '@angular/platform-browser'
 import { Observable, BehaviorSubject, map, tap } from 'rxjs'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
@@ -21,18 +21,19 @@ export const enum ThemeIcon {
     providedIn: 'root',
 })
 export class ThemeService {
+    private readonly meta: Meta = inject(Meta)
+
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
+
+    private readonly breakpointService: BreakpointService = inject(BreakpointService)
+
+    private readonly storageService: StorageService = inject(StorageService)
+
     private readonly state$: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(
         this.storageService.get('theme') ?? Theme.SYSTEM,
     )
 
     private readonly query: string = '(prefers-color-scheme: dark)'
-
-    public constructor(
-        private readonly meta: Meta,
-        private readonly browserApiService: BrowserApiService,
-        private readonly breakpointService: BreakpointService,
-        private readonly storageService: StorageService,
-    ) {}
 
     public connect(): Observable<void> {
         this.breakpointService.watch(this.query, () => this.apply())

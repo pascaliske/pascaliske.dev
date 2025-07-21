@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core'
+import { Injectable, inject } from '@angular/core'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 
 @Injectable({
     providedIn: 'root',
 })
 export class BreakpointService {
-    public constructor(private readonly browserApiService: BrowserApiService) {}
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
 
     public matches(query: string): boolean {
         return this.browserApiService.with('window', window => {

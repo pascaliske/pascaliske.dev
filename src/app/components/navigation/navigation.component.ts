@@ -37,6 +37,16 @@ export interface NavigationLink {
 export class NavigationComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
 
+    private readonly router: Router = inject(Router)
+
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
+
+    protected readonly themeService: ThemeService = inject(ThemeService)
+
+    private readonly breakpointService: BreakpointService = inject(BreakpointService)
+
+    private readonly scrollService: ScrollService = inject(ScrollService)
+
     public scrolled$: Observable<boolean> = this.scrollService.state$.pipe(
         map(({ scrollY }) => scrollY > 20),
     )
@@ -61,14 +71,6 @@ export class NavigationComponent implements OnInit {
             target: '/contact',
         },
     ]
-
-    public constructor(
-        private readonly router: Router,
-        private readonly browserApiService: BrowserApiService,
-        public readonly themeService: ThemeService,
-        private readonly breakpointService: BreakpointService,
-        private readonly scrollService: ScrollService,
-    ) {}
 
     public ngOnInit(): void {
         this.watchNavigationEnd()

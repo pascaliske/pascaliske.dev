@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core'
+import { Injectable, inject } from '@angular/core'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
 
 @Injectable({
     providedIn: 'root',
 })
 export class StorageService {
-    private readonly prefix: string = 'pi_'
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
 
-    public constructor(private readonly browserApiService: BrowserApiService) {}
+    private readonly prefix: string = 'pi_'
 
     public get<T = string>(key: string): T | null {
         return this.browserApiService.with('localStorage', localStorage => {

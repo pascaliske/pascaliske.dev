@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core'
+import { Component, HostBinding, inject } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { MetadataService } from 'shared/metadata/metadata.service'
 import { SectionComponent } from 'components/section/section.component'
@@ -12,8 +12,8 @@ import { CopyComponent } from 'components/copy/copy.component'
     providers: [MetadataService],
 })
 export default class LegalNoticeComponent {
+    private readonly metadata: MetadataService = inject(MetadataService)
+
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
-
-    public constructor(private readonly metadata: MetadataService) {}
 }

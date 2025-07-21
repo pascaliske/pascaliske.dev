@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core'
+import { Component, HostBinding, inject } from '@angular/core'
 import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -36,6 +36,8 @@ export interface Project {
     providers: [MetadataService],
 })
 export default class WorkComponent {
+    private readonly metadata: MetadataService = inject(MetadataService)
+
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 
@@ -164,6 +166,4 @@ export default class WorkComponent {
             ],
         },
     ]
-
-    public constructor(private readonly metadata: MetadataService) {}
 }

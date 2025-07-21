@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable, inject } from '@angular/core'
 import { Meta } from '@angular/platform-browser'
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import type { ActivatedRouteSnapshot, Event } from '@angular/router'
@@ -14,12 +14,15 @@ export interface ActivatedRouteSnapshotWithMetadata extends ActivatedRouteSnapsh
 
 @Injectable()
 export class MetadataService {
-    public constructor(
-        private readonly meta: Meta,
-        private readonly router: Router,
-        private readonly route: ActivatedRoute,
-        private readonly browserApiService: BrowserApiService,
-    ) {
+    private readonly meta: Meta = inject(Meta)
+
+    private readonly router: Router = inject(Router)
+
+    private readonly route: ActivatedRoute = inject(ActivatedRoute)
+
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
+
+    public constructor() {
         this.router.events
             .pipe(filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd))
             .subscribe(() => {

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable, inject } from '@angular/core'
 import { Subject, fromEvent } from 'rxjs'
 import { distinctUntilChanged, share } from 'rxjs/operators'
 import { BrowserApiService } from 'shared/browser-api/browser-api.service'
@@ -27,6 +27,8 @@ export interface ScrollState {
     providedIn: 'root',
 })
 export class ScrollService {
+    private readonly browserApiService: BrowserApiService = inject(BrowserApiService)
+
     /**
      * Subject for scroll changes.
      *
@@ -37,7 +39,7 @@ export class ScrollService {
     /**
      * Initializes the scroll service.
      */
-    public constructor(private readonly browserApiService: BrowserApiService) {
+    public constructor() {
         this.handleScroll()
     }
 

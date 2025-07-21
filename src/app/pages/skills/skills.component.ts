@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core'
+import { Component, HostBinding, inject } from '@angular/core'
 import { Tags } from 'shared/tags/tags'
 import { MetadataService } from 'shared/metadata/metadata.service'
 import { HeadlineComponent } from 'components/headline/headline.component'
@@ -13,6 +13,8 @@ import { SocialsComponent } from 'components/socials/socials.component'
     providers: [MetadataService],
 })
 export default class SkillsComponent {
+    private readonly metadata: MetadataService = inject(MetadataService)
+
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 
@@ -53,6 +55,4 @@ export default class SkillsComponent {
             tags: [Tags.ANGULAR, Tags.TYPESCRIPT, Tags.NODEJS, Tags.GOLANG],
         },
     ]
-
-    public constructor(private readonly metadata: MetadataService) {}
 }

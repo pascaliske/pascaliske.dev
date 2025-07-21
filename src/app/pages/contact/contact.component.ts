@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core'
+import { Component, HostBinding, inject } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
@@ -41,6 +41,10 @@ export interface ContactFormGroup {
     providers: [MetadataService],
 })
 export default class ContactComponent {
+    private readonly http: HttpClient = inject(HttpClient)
+
+    private readonly metadata: MetadataService = inject(MetadataService)
+
     @HostBinding('class')
     public classes: string = 'flex flex-1 flex-col justify-start'
 
@@ -62,11 +66,6 @@ export default class ContactComponent {
         subject: new FormControl(null, [Validators.required]),
         message: new FormControl(null, [Validators.required]),
     })
-
-    public constructor(
-        private readonly http: HttpClient,
-        private readonly metadata: MetadataService,
-    ) {}
 
     public submit(): void {
         this.state = 'loading'

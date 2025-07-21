@@ -23,10 +23,9 @@ import { TriangleComponent } from 'components/triangle/triangle.component'
 export class AppComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
 
-    public constructor(
-        private readonly router: Router,
-        private readonly themeService: ThemeService,
-    ) {}
+    private readonly router = inject(Router)
+
+    private readonly themeService = inject(ThemeService)
 
     public ngOnInit(): void {
         // connect theme service to local storage
