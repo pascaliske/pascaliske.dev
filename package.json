@@ -42,7 +42,7 @@
     "@angular-eslint/schematics": "20.1.1",
     "@angular-eslint/template-parser": "20.1.1",
     "@angular/build": "^20.1.1",
-    "@angular/cli": "~20.1.1",
+    "@angular/cli": "~20.3.0",
     "@angular/compiler-cli": "^20.1.2",
     "@cloudflare/kv-asset-handler": "^0.4.0",
     "@cloudflare/workers-types": "^4.20250719.0",
