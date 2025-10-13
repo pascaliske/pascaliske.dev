@@ -1,3 +1,18 @@
+## [3.9.8](https://github.com/pascaliske/pascaliske/compare/v3.9.7...v3.9.8) (2025-10-13)
+
+
+### Bug Fixes
+
+* **deps:** update font awesome to v7 ([a3a9a1c](https://github.com/pascaliske/pascaliske/commit/a3a9a1c))
+
+
+### Features
+
+* upgrade angular to v20.3 ([03f1744](https://github.com/pascaliske/pascaliske/commit/03f1744))
+* upgrade eslint stack ([8043cb6](https://github.com/pascaliske/pascaliske/commit/8043cb6))
+
+
+
 ## [3.9.7](https://github.com/pascaliske/pascaliske/compare/v3.9.6...v3.9.7) (2025-07-20)
 
 
