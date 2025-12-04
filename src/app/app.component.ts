@@ -1,6 +1,6 @@
 import { Component, OnInit, DestroyRef, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { Router, RouterOutlet } from '@angular/router'
+import { RouterOutlet } from '@angular/router'
 import { NgProgressbar } from 'ngx-progressbar'
 import { NgProgressRouter } from 'ngx-progressbar/router'
 import { ThemeService } from 'shared/theme/theme.service'
@@ -23,15 +23,10 @@ import { TriangleComponent } from 'components/triangle/triangle.component'
 export class AppComponent implements OnInit {
     private readonly destroy: DestroyRef = inject(DestroyRef)
 
-    private readonly router = inject(Router)
-
     private readonly themeService = inject(ThemeService)
 
     public ngOnInit(): void {
         // connect theme service to local storage
         this.themeService.connect().pipe(takeUntilDestroyed(this.destroy)).subscribe()
-
-        // delayed initial navigation
-        setTimeout(() => this.router.initialNavigation())
     }
 }
