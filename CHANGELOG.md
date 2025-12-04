@@ -1,3 +1,19 @@
+## [3.9.10](https://github.com/pascaliske/pascaliske/compare/v3.9.9...v3.9.10) (2025-12-04)
+
+
+### Bug Fixes
+
+* remove delayed application bootstrap ([e31f213](https://github.com/pascaliske/pascaliske/commit/e31f213))
+* remove delayed initial navigation which prevented prerendering ([fe253ee](https://github.com/pascaliske/pascaliske/commit/fe253ee))
+
+
+### Features
+
+* upgrade angular to v21.0.3 ([a600d3a](https://github.com/pascaliske/pascaliske/commit/a600d3a))
+* upgrade eslint stack ([884037a](https://github.com/pascaliske/pascaliske/commit/884037a))
+
+
+
 ## [3.9.9](https://github.com/pascaliske/pascaliske/compare/v3.9.8...v3.9.9) (2025-11-24)
 
 
