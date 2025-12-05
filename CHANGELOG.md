@@ -1,3 +1,12 @@
+# [3.10.0](https://github.com/pascaliske/pascaliske/compare/v3.9.10...v3.10.0) (2025-12-05)
+
+
+### Features
+
+* **skills:** update skills with serverless and auth cards ([c35bd6e](https://github.com/pascaliske/pascaliske/commit/c35bd6e))
+
+
+
 ## [3.9.10](https://github.com/pascaliske/pascaliske/compare/v3.9.9...v3.9.10) (2025-12-04)
 
 
