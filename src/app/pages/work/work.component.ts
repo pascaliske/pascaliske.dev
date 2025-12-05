@@ -130,7 +130,7 @@ export default class WorkComponent {
         },
         {
             title: 'pascaliske.dev',
-            description: `Angular Web App built with GitHub Actions and deployed with Cloudflare.`,
+            description: `Static Angular Web App built with GitHub Actions and deployed with Cloudflare Workers.`,
             image: {
                 url: '/assets/images/project-pascaliske-dev.jpg',
                 credit: 'Photo by Giorgio Trovato on Unsplash.',
