@@ -3,7 +3,6 @@ import { FaIconComponent } from '@fortawesome/angular-fontawesome'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import {
     faGithub,
-    faXTwitter,
     faMastodon,
     faBluesky,
     faXing,
@@ -32,9 +31,9 @@ export class SocialsComponent {
             icon: faGithub,
         },
         {
-            name: 'X / Twitter',
-            href: 'https://x.com/pascaliske',
-            icon: faXTwitter,
+            name: 'Bluesky',
+            href: 'https://bsky.app/profile/pascaliske.dev',
+            icon: faBluesky,
         },
         {
             name: 'Mastodon',
@@ -42,19 +41,14 @@ export class SocialsComponent {
             icon: faMastodon,
         },
         {
-            name: 'Bluesky',
-            href: 'https://bsky.app/profile/pascaliske.dev',
-            icon: faBluesky,
+            name: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/pascaliske',
+            icon: faLinkedinIn,
         },
         {
             name: 'Xing',
             href: 'https://www.xing.com/profile/Pascal_Iske',
             icon: faXing,
-        },
-        {
-            name: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/pascaliske',
-            icon: faLinkedinIn,
         },
         {
             name: 'Mail',
