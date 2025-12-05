@@ -37,7 +37,12 @@ export default class SkillsComponent {
         {
             name: 'Cloud',
             description: '',
-            tags: [Tags.AWS, Tags.GCP, Tags.CLOUDFLARE, Tags.VSPHERE],
+            tags: [Tags.AWS, Tags.GCP, Tags.VSPHERE, Tags.PROXMOX],
+        },
+        {
+            name: 'Serverless',
+            description: '',
+            tags: [Tags.AWS, Tags.CLOUDFLARE],
         },
         {
             name: 'Monitoring',
@@ -50,9 +55,14 @@ export default class SkillsComponent {
             tags: [Tags.GITHUB_ACTIONS, Tags.GITLAB_CI],
         },
         {
+            name: 'AuthN & AuthZ',
+            description: '',
+            tags: [Tags.KEYCLOAK, Tags.OIDC, Tags.LDAP],
+        },
+        {
             name: 'Development',
             description: '',
-            tags: [Tags.ANGULAR, Tags.TYPESCRIPT, Tags.NODEJS, Tags.GOLANG],
+            tags: [Tags.ANGULAR, Tags.TYPESCRIPT, Tags.NODEJS, Tags.GOLANG, Tags.TAILWIND],
         },
     ]
 }
