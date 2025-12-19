@@ -144,3 +144,20 @@ resource "cloudflare_dns_record" "bluesky" {
   content = "did=${var.BLUESKY_VERIFICATION_TOKEN}"
   ttl     = 1
 }
+
+# nabu casa
+resource "cloudflare_dns_record" "nabu_casa" {
+  zone_id = data.cloudflare_zone.zone.zone_id
+  type    = "CNAME"
+  name    = "home"
+  content = var.NABU_CASA_VERIFICATION_TOKEN
+  ttl     = 1
+}
+
+resource "cloudflare_dns_record" "nabu_casa_acme" {
+  zone_id = data.cloudflare_zone.zone.zone_id
+  type    = "CNAME"
+  name    = "_acme-challenge.home"
+  content = "_acme-challenge.${var.NABU_CASA_VERIFICATION_TOKEN}"
+  ttl     = 1
+}

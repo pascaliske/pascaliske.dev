@@ -21,3 +21,7 @@ variable "HAVE_I_BEEN_PWNED_VERIFICATION_TOKEN" {
 variable "BLUESKY_VERIFICATION_TOKEN" {
   type = string
 }
+
+variable "NABU_CASA_VERIFICATION_TOKEN" {
+  type = string
+}
