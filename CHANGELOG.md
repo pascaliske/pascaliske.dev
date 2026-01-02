@@ -1,3 +1,15 @@
+# [3.11.0](https://github.com/pascaliske/pascaliske/compare/v3.10.0...v3.11.0) (2026-01-02)
+
+
+### Features
+
+* **footer:** display link to public analytics dashboard of this website ([7bb1757](https://github.com/pascaliske/pascaliske/commit/7bb1757))
+* setup dns records for nabu casa verification ([7ba3e10](https://github.com/pascaliske/pascaliske/commit/7ba3e10))
+* upgrade angular to v21.0.6 ([47284e7](https://github.com/pascaliske/pascaliske/commit/47284e7))
+* upgrade eslint stack ([a39c546](https://github.com/pascaliske/pascaliske/commit/a39c546))
+
+
+
 # [3.10.0](https://github.com/pascaliske/pascaliske/compare/v3.9.10...v3.10.0) (2025-12-05)
 
 
