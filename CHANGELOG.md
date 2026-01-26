@@ -1,3 +1,15 @@
+## [3.11.1](https://github.com/pascaliske/pascaliske/compare/v3.11.0...v3.11.1) (2026-01-26)
+
+
+### Features
+
+* upgrade angular to v21.0.8 ([4e931ee](https://github.com/pascaliske/pascaliske/commit/4e931ee))
+* upgrade angular to v21.1.1 ([5df9229](https://github.com/pascaliske/pascaliske/commit/5df9229))
+* upgrade eslint stack ([226f9cc](https://github.com/pascaliske/pascaliske/commit/226f9cc))
+* upgrade eslint stack ([d68895f](https://github.com/pascaliske/pascaliske/commit/d68895f))
+
+
+
 # [3.11.0](https://github.com/pascaliske/pascaliske/compare/v3.10.0...v3.11.0) (2026-01-02)
 
 
