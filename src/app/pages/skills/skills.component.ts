@@ -22,7 +22,7 @@ export default class SkillsComponent {
         {
             name: 'Container & Orchestration',
             description: '',
-            tags: [Tags.KUBERNETES, Tags.DOCKER, Tags.OCI],
+            tags: [Tags.KUBERNETES, Tags.TALOS, Tags.DOCKER, Tags.OCI],
         },
         {
             name: 'Infrastructure as Code',

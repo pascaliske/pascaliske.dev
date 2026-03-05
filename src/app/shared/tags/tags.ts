@@ -21,6 +21,7 @@ export const enum Tags {
     PROMETHEUS = 'Prometheus',
     PROXMOX = 'Proxmox',
     TAILWIND = 'Tailwind',
+    TALOS = 'Talos',
     TERRAFORM = 'Terraform',
     TYPESCRIPT = 'TypeScript/JavaScript',
     VSPHERE = 'VMware vSphere',
