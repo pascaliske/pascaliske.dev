@@ -1,3 +1,14 @@
+# [3.12.0](https://github.com/pascaliske/pascaliske/compare/v3.11.2...v3.12.0) (2026-03-06)
+
+
+### Features
+
+* **skills:** include talos into skills ([489dbcf](https://github.com/pascaliske/pascaliske/commit/489dbcf))
+* upgrade angular to v21.2.1 ([b8145a3](https://github.com/pascaliske/pascaliske/commit/b8145a3))
+* upgrade eslint stack ([393b1ff](https://github.com/pascaliske/pascaliske/commit/393b1ff))
+
+
+
 ## [3.11.2](https://github.com/pascaliske/pascaliske/compare/v3.11.1...v3.11.2) (2026-02-27)
 
 
