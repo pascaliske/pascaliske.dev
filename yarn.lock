@@ -379,9 +379,9 @@
     tslib "^2.3.0"
 
 "@angular/platform-server@^21.2.4":
-  version "21.2.4"
-  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-21.2.4.tgz#5fa6cf995d20c61af235afbcf8fd0c4f5f23fed7"
-  integrity sha512-3xc06g4tSiPs7R4YnOITaALzoZECaxyzTX9eVNCh5bVJF2NxxdkDNXnyEtwocCqoleJmphVCaZTMMFbdJngmIw==
+  version "21.2.11"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-21.2.11.tgz#366f05fde36270d67ece2391ed451d725ce8242c"
+  integrity sha512-EN8aKMQjacyzVoceytLxWYGPqk0VtfEkLyWSBMpVOxQ6uO5ozo6Iifr66syGLA3KsW5sO1zKHtAbNK2mLFwd2A==
   dependencies:
     tslib "^2.3.0"
     xhr2 "^0.2.0"
