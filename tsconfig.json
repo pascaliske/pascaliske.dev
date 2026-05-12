@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
@@ -20,15 +19,15 @@
     "module": "es2022",
     "typeRoots": ["node_modules/@types", "src/typings.d.ts", "workers/typings.d.ts"],
     "paths": {
-      "typings": ["src/typings"],
-      "environments": ["src/environments"],
-      "environments/*": ["src/environments/*"],
-      "shared": ["src/app/shared"],
-      "shared/*": ["src/app/shared/*"],
-      "components": ["src/app/components"],
-      "components/*": ["src/app/components/*"],
-      "pages": ["src/app/pages"],
-      "pages/*": ["src/app/pages/*"]
+      "typings": ["./src/typings"],
+      "environments": ["./src/environments"],
+      "environments/*": ["./src/environments/*"],
+      "shared": ["./src/app/shared"],
+      "shared/*": ["./src/app/shared/*"],
+      "components": ["./src/app/components"],
+      "components/*": ["./src/app/components/*"],
+      "pages": ["./src/app/pages"],
+      "pages/*": ["./src/app/pages/*"]
     }
   },
   "angularCompilerOptions": {
