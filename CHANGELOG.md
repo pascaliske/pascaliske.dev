@@ -1,3 +1,14 @@
+# [3.13.0](https://github.com/pascaliske/pascaliske/compare/v3.12.0...v3.13.0) (2026-05-12)
+
+
+### Features
+
+* upgrade angular to v21.2.11 ([a3d0d0b](https://github.com/pascaliske/pascaliske/commit/a3d0d0b2ed1ad2784c8fcee534b3edbc2570399a))
+* upgrade angular to v21.2.12 ([18e60d9](https://github.com/pascaliske/pascaliske/commit/18e60d97143e6c5f3775b27196a357a07b3e7863))
+* upgrade angular to v21.2.4 ([cfa9f89](https://github.com/pascaliske/pascaliske/commit/cfa9f89462a60e7fc93652e9b229060d54c920ca))
+* upgrade eslint stack ([a87f252](https://github.com/pascaliske/pascaliske/commit/a87f25212aff757d2fb34a07b908a70c241b8520))
+* upgrade typescript to v6 ([0eb093b](https://github.com/pascaliske/pascaliske/commit/0eb093b3a28dc3fa6ea42588e562883e78771c82))
+
 # [3.12.0](https://github.com/pascaliske/pascaliske/compare/v3.11.2...v3.12.0) (2026-03-06)
 
 
